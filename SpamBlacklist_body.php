@@ -39,7 +39,7 @@ class SpamBlacklist {
 		$recache = false;
 		foreach ( $this->files as $fileName ) {
 			if ( preg_match( '/^DB: (\w*) (.*)$/', $fileName, $matches ) ) {
-				if ( $wgDBname == $matches[0] && $title->getPrefixedDBkey() == $matches[1] ) {
+				if ( $wgDBname == $matches[1] && $title->getPrefixedDBkey() == $matches[2] ) {
 					$recache = true;
 					break;
 				}
@@ -59,7 +59,7 @@ class SpamBlacklist {
 						if ( $wgDBname == $matches[1] && $title->getPrefixedDBkey() == $matches[2] ) {
 							$lines += explode( "\n", $text );
 						} else {
-							$lines += $this->getArticleLines( $matches[0], $matches[1] );
+							$lines += $this->getArticleLines( $matches[1], $matches[2] );
 						}
 					} else {
 						$lines += file( $fileName );
