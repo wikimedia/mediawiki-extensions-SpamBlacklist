@@ -100,7 +100,7 @@ class SpamBlacklist {
 	function getArticleLines( $db, $article ) {
 		$dbr = wfGetDB( DB_READ );
 		$cur = $dbr->tableName( 'cur' );
-		$res = $dbr->query( "SELECT cur_text FROM $db.$cur WHERE cur_namespace=0 AND cur_title='Spam_blacklist'" );
+		$res = $dbr->query( "SELECT cur_text FROM $db.$cur WHERE cur_namespace=0 AND cur_title='$article'" );
 		$row = $dbr->fetchObject( $res );
 		if ( $row ) {
 			return explode( "\n", $row->cur_text );
