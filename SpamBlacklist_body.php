@@ -56,7 +56,7 @@ class SpamBlacklist {
 				$lines = array();
 				foreach ( $this->files as $fileName ) {
 					if ( preg_match( '/^DB: (\w*) (.*)$/', $fileName, $matches ) ) {
-						if ( $wgDBname == $matches[0] && $title->getPrefixedDBkey() == $matches[1] ) {
+						if ( $wgDBname == $matches[1] && $title->getPrefixedDBkey() == $matches[2] ) {
 							$lines += explode( "\n", $text );
 						} else {
 							$lines += $this->getArticleLines( $matches[0], $matches[1] );
