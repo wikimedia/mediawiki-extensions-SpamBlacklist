@@ -78,7 +78,7 @@ class SpamBlacklist {
 					$this->regex = 'http://[a-z0-9\-.]*(' . implode( '|', $lines ) . ')';
 					$this->regex = '/' . str_replace( '/', '\/', $this->regex ) . '/Si';
 				}
-				$wgMemc->set( "spamb_blacklist_regex", $this->regex, 3600 );
+				$wgMemc->set( "spam_blacklist_regex", $this->regex, 3600 );
 			}
 		}
 		if ( $this->regex !== true ) {
