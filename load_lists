@@ -1,0 +1,6 @@
+#!/bin/bash
+
+dir=${0%load_lists}
+
+wget -O $dir/wikimedia_blacklist 'http://meta.wikimedia.org/wiki/Spam_blacklist?action=raw'
+
