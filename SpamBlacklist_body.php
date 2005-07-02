@@ -81,9 +81,7 @@ class SpamBlacklist {
 
 						if ( !is_string( $httpText ) || ( !$warning && !mt_rand( 0, $this->warningChance ) ) ) {
 							wfDebug( "Loading spam blacklist from $fileName\n" );
-							$url_fopen = ini_set( 'allow_url_fopen', 1 );
-							$httpText = file_get_contents( $fileName );
-							ini_set( 'allow_url_fopen', $url_fopen );
+							$httpText = $this->getHTTP( $fileName );
 							$messageMemc->set( $warningKey, 1, $this->warningTime );
 							$messageMemc->set( $key, $httpText, $this->expiryTime );
 						}
@@ -138,6 +136,19 @@ class SpamBlacklist {
 		} else {
 			return array();
 		}
+	}
+
+	function getHTTP( $url ) {
+		// Use wfGetHTTP from MW 1.5 if it is available
+		include_once( 'HttpFunctions.php' );
+		if ( function_exists( 'wfGetHTTP' ) ) {
+			$text = wfGetHTTP( $url );
+		} else {
+			$url_fopen = ini_set( 'allow_url_fopen', 1 );
+			$text = file_get_contents( $url );
+			ini_set( 'allow_url_fopen', $url_fopen );
+		}
+		return $text;
 	}
 }
 
