@@ -10,10 +10,15 @@ class SpamBlacklist {
 	var $expiryTime = 900;
 	var $warningChance = 100;
 	
-	function SpamBlacklist() {
+	function SpamBlacklist( $settings = array() ) {
 		global $IP;
-		$this->files = array( "http://meta.wikimedia.org/wiki/Spam_blacklist?action=raw&sb_ver=1" );
+		$this->files = array( "http://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1" );
+
+		foreach ( $settings as $name => $value ) {
+			$this->$name = $value;
+		}
 	}
+
 	function filter( &$title, $text, $section ) {
 		global $wgArticle, $wgDBname, $wgMemc, $messageMemc, $wgVersion, $wgOut;
 

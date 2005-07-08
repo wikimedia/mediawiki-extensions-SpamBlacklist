@@ -7,8 +7,10 @@ if ( defined( 'MEDIAWIKI' ) ) {
 
 global $wgFilterCallback, $wgPreSpamFilterCallback;
 global $wgSpamBlacklistFiles;
+global $wgSpamBlacklistSettings;
 
 $wgSpamBlacklistFiles = false;
+$wgSpamBlacklistSettings = array();
 
 if ( $wgFilterCallback ) {
 	$wgPreSpamFilterCallback = $wgFilterCallback;
@@ -21,10 +23,10 @@ $wgFilterCallback = 'wfSpamBlacklistLoader';
 function wfSpamBlacklistLoader( &$title, $text, $section ) {
 	require_once( "SpamBlacklist_body.php" );
 	static $spamObj = false;
-	global $wgSpamBlacklistFiles, $wgPreSpamFilterCallback;
+	global $wgSpamBlacklistFiles, $wgSpamBlacklistSettings, $wgPreSpamFilterCallback;
 
 	if ( $spamObj === false ) {
-		$spamObj = new SpamBlacklist;
+		$spamObj = new SpamBlacklist( $wgSpamBlacklistSettings );
 		if ( $wgSpamBlacklistFiles ) {
 			$spamObj->files = $wgSpamBlacklistFiles;
 			$spamObj->previousFilter = $wgPreSpamFilterCallback;
