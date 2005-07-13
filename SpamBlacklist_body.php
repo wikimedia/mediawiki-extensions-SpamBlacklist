@@ -113,7 +113,7 @@ class SpamBlacklist {
 				$wgMemc->set( "spam_blacklist_regex", $this->regex, 3600 );
 			}
 		}
-		if ( $this->regex !== true ) {
+		if ( $this->regex{0} == '/' ) {
 			# Do the match
 			wfDebug( "Checking text against regex: {$this->regex}\n" );
 			if ( preg_match( $this->regex, $text, $matches ) ) {
