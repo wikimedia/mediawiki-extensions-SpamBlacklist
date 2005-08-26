@@ -19,6 +19,9 @@ if ( $wgFilterCallback ) {
 }
 
 $wgFilterCallback = 'wfSpamBlacklistLoader';
+$wgExtensionCredits['other'][] = array(
+	'name' => 'SpamBlacklist',
+);
 
 function wfSpamBlacklistLoader( &$title, $text, $section ) {
 	require_once( "SpamBlacklist_body.php" );
