@@ -16,8 +16,8 @@ The list of bad URLs can be drawn from multiple sources. These sources are
 configured with the $wgSpamBlacklistFiles global variable. This global variable
 can be set in LocalSettings.php, AFTER including SpamBlacklist.php. 
 
-$wgSpamBlacklistFiles is an array, each value containing either a filename or a
-database location. Specifying a database location allows you to draw the
+$wgSpamBlacklistFiles is an array, each value containing either a URL, a filename 
+or a database location. Specifying a database location allows you to draw the
 blacklist from a page on your wiki. The format of the database location
 specifier is "DB: <db name> <title>".
 
@@ -81,10 +81,8 @@ spam blacklist on meta:
 
     http://meta.wikimedia.org/wiki/Spam_blacklist
 
-Included with this extension is a one-line shell script which uses wget to
-download the current blacklist to a file named "wikimedia_blacklist". This
-filename is also the default for $wgSpamBlacklistFiles. I suggest you run this
-script from a cron job, roughly once per hour, to update your list. 
+In the default configuration, the extension loads this list from our site 
+once every 10-15 minutes.
 
 The Wikimedia spam blacklist can only be edited by trusted administrators. 
 Wikimedia hosts large, diverse wikis with many thousands of external links, 
