@@ -66,9 +66,9 @@ class SpamBlacklist {
 				foreach ( $this->files as $fileName ) {
 					if ( preg_match( '/^DB: (\w*) (.*)$/', $fileName, $matches ) ) {
 						if ( $wgDBname == $matches[1] && $title->getPrefixedDBkey() == $matches[2] ) {
-							$lines += explode( "\n", $text );
+							$lines = array_merge( $lines, explode( "\n", $text ) );
 						} else {
-							$lines += $this->getArticleLines( $matches[1], $matches[2] );
+							$lines = array_merge( $lines, $this->getArticleLines( $matches[1], $matches[2] ) );
 						}
 					} elseif ( preg_match( '/^http:\/\//', $fileName ) ) {
 						# HTTP request
@@ -91,9 +91,9 @@ class SpamBlacklist {
 							$messageMemc->set( $key, $httpText, $this->expiryTime );
 						}
 						
-						$lines += explode( "\n", $httpText );
+						$lines = array_merge( $lines, explode( "\n", $httpText ) );
 					} else {
-						$lines += file( $fileName );
+						$lines = array_merge( $lines, file( $fileName ) );
 					}
 				}
 
