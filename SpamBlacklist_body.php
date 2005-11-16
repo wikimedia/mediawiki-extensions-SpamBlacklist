@@ -107,7 +107,7 @@ class SpamBlacklist {
 				} else {
 					# Make regex
 					# It's faster using the S modifier even though it will usually only be run once
-					$this->regex = 'http://[a-z0-9\-.]*(' . implode( '|', $lines ) . ')';
+					$this->regex = 'http://[a-z0-9_\-.]*(' . implode( '|', $lines ) . ')';
 					$this->regex = '/' . str_replace( '/', '\/', preg_replace('|\\\*/|', '/', $this->regex) ) . '/Si';
 				}
 				$wgMemc->set( "spam_blacklist_regex", $this->regex, 3600 );
