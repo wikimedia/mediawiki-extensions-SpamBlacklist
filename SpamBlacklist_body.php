@@ -19,26 +19,23 @@ class SpamBlacklist {
 		}
 	}
 
-	function filter( &$title, $text, $section ) {
-		global $wgArticle, $wgDBname, $wgMemc, $messageMemc, $wgVersion, $wgOut;
-
-		$fname = 'wfSpamBlacklistFilter';
+	function &getRegex() {
+		global $wgMemc, $wgDBname, $messageMemc;
+		$fname = 'SpamBlacklist::getRegex';
 		wfProfileIn( $fname );
 
-		# Call the rest of the hook chain first
-		if ( $this->previousFilter ) {
-			$f = $this->previousFilter;
-			if ( $f( $title, $text, $section ) ) {
-				wfProfileOut( $fname );
-				return true;
-			}
+		if ( $this->regex !== false ) {
+			return $this->regex;
 		}
 
+		wfDebug( "Loading spam regex..." );
+		
 		if ( !is_array( $this->files ) ) {
 			$this->files = array( $this->files );
 		}
 		if ( count( $this->files ) == 0 ){ 
 			# No lists
+			wfDebug( "no files specified\n" );
 			wfProfileOut( $fname );
 			return false;
 		}
@@ -53,7 +50,6 @@ class SpamBlacklist {
 				}
 			}
 		}
-
 
 		if ( $this->regex === false || $recache ) {
 			if ( !$recache ) {
@@ -70,6 +66,7 @@ class SpamBlacklist {
 						} else {
 							$lines = array_merge( $lines, $this->getArticleLines( $matches[1], $matches[2] ) );
 						}
+						wfDebug( "got from DB\n" );
 					} elseif ( preg_match( '/^http:\/\//', $fileName ) ) {
 						# HTTP request
 						# To keep requests to a minimum, we save results into $messageMemc, which is
@@ -89,11 +86,13 @@ class SpamBlacklist {
 							$httpText = $this->getHTTP( $fileName );
 							$messageMemc->set( $warningKey, 1, $this->warningTime );
 							$messageMemc->set( $key, $httpText, $this->expiryTime );
-						}
-						
+						} else {
+							wfDebug( "got from HTTP cache\n" );
+						}						
 						$lines = array_merge( $lines, explode( "\n", $httpText ) );
 					} else {
 						$lines = array_merge( $lines, file( $fileName ) );
+						wfDebug( "got from file\n" );
 					}
 				}
 
@@ -111,12 +110,40 @@ class SpamBlacklist {
 					$this->regex = '/' . str_replace( '/', '\/', preg_replace('|\\\*/|', '/', $this->regex) ) . '/Si';
 				}
 				$wgMemc->set( "spam_blacklist_regex", $this->regex, 3600 );
+			} else {
+				wfDebug( "got from cache\n" );
+			}
+		} 
+		if ( $this->regex[0] != '/' ) {
+			// Corrupt regex
+			wfDebug( "Corrupt regex\n" );
+			$this->regex = false;
+		}
+		wfProfileOut( $fname );
+		return $this->regex;
+	}
+	
+	function filter( &$title, $text, $section ) {
+		global $wgArticle, $wgVersion, $wgOut;
+
+		$fname = 'wfSpamBlacklistFilter';
+		wfProfileIn( $fname );
+
+		# Call the rest of the hook chain first
+		if ( $this->previousFilter ) {
+			$f = $this->previousFilter;
+			if ( $f( $title, $text, $section ) ) {
+				wfProfileOut( $fname );
+				return true;
 			}
 		}
-		if ( $this->regex{0} == '/' ) {
+
+		$regex =& $this->getRegex();
+
+		if ( $regex && $regex[0] == '/' ) {
 			# Do the match
-			wfDebug( "Checking text against regex: {$this->regex}\n" );
-			if ( preg_match( $this->regex, $text, $matches ) ) {
+			wfDebug( "Checking text against regex: $regex\n" );
+			if ( preg_match( $regex, $text, $matches ) ) {
 				wfDebug( "Match!\n" );
 				EditPage::spamPage( $matches[0] );
 				$retVal = true;
