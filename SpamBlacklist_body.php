@@ -160,4 +160,3 @@ class SpamBlacklist {
 	
 } # End invocation guard
 ?>
-
