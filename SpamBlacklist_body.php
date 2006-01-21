@@ -114,7 +114,7 @@ class SpamBlacklist {
 				wfDebug( "got from cache\n" );
 			}
 		} 
-		if ( $this->regex[0] != '/' ) {
+		if ( $this->regex[0] != '/' || substr( $this->regex, -3 ) != '/Si' ) {
 			// Corrupt regex
 			wfDebug( "Corrupt regex\n" );
 			$this->regex = false;

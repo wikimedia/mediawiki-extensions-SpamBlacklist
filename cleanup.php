@@ -30,9 +30,17 @@ function cleanupArticle( $rev, $regex ) {
 	$dbw->immediateBegin();
 	if ( !$rev ) {
 		// Didn't find a non-spammy revision, delete the page
+/*
 		print "All revisions are spam, deleting...\n";
 		$article = new Article( $title );
 		$article->doDeleteArticle( "All revisions matched the spam blacklist" );
+*/
+		// Too scary, blank instead
+		print "All revisions are spam, blanking...\n";
+		$article = new Article( $title );
+		$article->updateArticle( '', 'All revisions matched the spam blacklist, blanking',
+			false, false );
+
 	} else {
 		// Revert to this revision
 		$article = new Article( $title );
@@ -65,6 +73,11 @@ if ( !function_exists( 'wfDoUpdates' ) ) {
 //------------------------------------------------------------------------------
 
 $wgUser = User::newFromName( 'Spam cleanup script' );
+if ( isset( $options['n'] ) ) {
+	$dryRun = true;
+} else {
+	$dryRun = false;
+}
 
 $sb = new SpamBlacklist( $wgSpamBlacklistSettings );
 if ( $wgSpamBlacklistFiles ) {
@@ -81,7 +94,14 @@ $maxID = $dbr->selectField( 'page', 'MAX(page_id)' );
 $reportingInterval = 100;
 
 print "Regex is " . strlen( $regex ) . " bytes\n";
+if ( strlen( $regex ) < 10000 || strlen( $regex ) > 32000 ) {
+	print "wrong size, exiting\n";
+	exit(1);
+}
 print "Searching for spam in $maxID pages...\n";
+if ( $dryRun ) {
+	print "Dry run only\n";
+}
 
 for ( $id=1; $id <= $maxID; $id++ ) {
 	if ( $id % $reportingInterval == 0 ) {
@@ -94,12 +114,16 @@ for ( $id=1; $id <= $maxID; $id++ ) {
 			if ( preg_match( $regex, $text, $matches ) ) {
 				$title = $revision->getTitle();
 				$titleText = $title->getPrefixedText();
-				print "\nCleaning up links to {$matches[0]} in [[$titleText]]\n";
-				cleanupArticle( $revision, $regex );
+				if ( $dryRun ) {
+					print "\nFound spam in [[$titleText]]\n";
+				} else {
+					print "\nCleaning up links to {$matches[0]} in [[$titleText]]\n";
+					cleanupArticle( $revision, $regex );
+				}
 			}
 		}
 	}
 }
 // Just for satisfaction
-printf( "%-8d  %-5.2f%%\r", $id-1, ($id-1) / $maxID * 100 );
+printf( "%-8d  %-5.2f%%\n", $id-1, ($id-1) / $maxID * 100 );
 
