@@ -44,7 +44,7 @@ class SpamBlacklist {
 		$recache = false;
 		foreach ( $this->files as $fileName ) {
 			if ( preg_match( '/^DB: (\w*) (.*)$/', $fileName, $matches ) ) {
-				if ( $wgDBname == $matches[1] && $title->getPrefixedDBkey() == $matches[2] ) {
+				if ( $wgDBname == $matches[1] && $this->title && $this->title->getPrefixedDBkey() == $matches[2] ) {
 					$recache = true;
 					break;
 				}
@@ -61,8 +61,8 @@ class SpamBlacklist {
 				wfDebug( "Constructing spam blacklist\n" );
 				foreach ( $this->files as $fileName ) {
 					if ( preg_match( '/^DB: (\w*) (.*)$/', $fileName, $matches ) ) {
-						if ( $wgDBname == $matches[1] && $title->getPrefixedDBkey() == $matches[2] ) {
-							$lines = array_merge( $lines, explode( "\n", $text ) );
+						if ( $wgDBname == $matches[1] && $this->title && $this->title->getPrefixedDBkey() == $matches[2] ) {
+							$lines = array_merge( $lines, explode( "\n", $this->text ) );
 						} else {
 							$lines = array_merge( $lines, $this->getArticleLines( $matches[1], $matches[2] ) );
 						}
@@ -109,7 +109,7 @@ class SpamBlacklist {
 					$this->regex = 'http://[a-z0-9_\-.]*(' . implode( '|', $lines ) . ')';
 					$this->regex = '/' . str_replace( '/', '\/', preg_replace('|\\\*/|', '/', $this->regex) ) . '/Si';
 				}
-				$wgMemc->set( "spam_blacklist_regex", $this->regex, 3600 );
+				$wgMemc->set( "spam_blacklist_regex", $this->regex, $this->expiryTime );
 			} else {
 				wfDebug( "got from cache\n" );
 			}
@@ -138,6 +138,10 @@ class SpamBlacklist {
 			}
 		}
 
+		$this->title = $title;
+		$this->text = $text;
+		$this->section = $section;
+
 		$regex =& $this->getRegex();
 
 		if ( $regex && $regex[0] == '/' ) {
@@ -159,12 +163,29 @@ class SpamBlacklist {
 	}
 
 	function getArticleLines( $db, $article ) {
+		global $wgDBname;
 		$dbr = wfGetDB( DB_READ );
-		$cur = $dbr->tableName( 'cur' );
-		$res = $dbr->query( "SELECT cur_text FROM $db.$cur WHERE cur_namespace=0 AND cur_title='$article'" );
-		$row = $dbr->fetchObject( $res );
-		if ( $row ) {
-			return explode( "\n", $row->cur_text );
+		$dbr->selectDB( $db );
+		$text = false;
+		if ( $dbr->tableExists( 'page' ) ) {
+			// 1.5 schema
+			$dbw =& wfGetDB( DB_READ );
+			$dbw->selectDB( $db );
+			$revision = Revision::newFromTitle( Title::newFromText( $article ) );
+			if ( $revision ) {
+				$text = $revision->getText();
+			}
+			$dbw->selectDB( $wgDBname );
+		} else {
+			// 1.4 schema
+			$cur = $dbr->tableName( 'cur' );
+			$title = Title::newFromText( $article );
+			$text = $dbr->selectField( 'cur', 'cur_text', array( 'cur_namespace' => $title->getNamespace(),
+				'cur_title' => $title->getDBkey() ), 'SpamBlacklist::getArticleLines' );
+		}
+		$dbr->selectDB( $wgDBname );
+		if ( $text !== false ) {
+			return explode( "\n", $text );
 		} else {
 			return array();
 		}
