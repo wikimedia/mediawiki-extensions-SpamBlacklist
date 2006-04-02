@@ -12,7 +12,7 @@ require_once( 'SpamBlacklist_body.php' );
 /** 
  * Find the latest revision of the article that does not contain spam and revert to it
  */
-function cleanupArticle( $rev, $regex ) {
+function cleanupArticle( $rev, $regex, $match ) {
 	$title = $rev->getTitle();
 	$reverted = false;
 	$revId = $rev->getId();
@@ -38,13 +38,13 @@ function cleanupArticle( $rev, $regex ) {
 		// Too scary, blank instead
 		print "All revisions are spam, blanking...\n";
 		$article = new Article( $title );
-		$article->updateArticle( '', 'All revisions matched the spam blacklist, blanking',
+		$article->updateArticle( '', "All revisions matched the spam blacklist ($match), blanking",
 			false, false );
 
 	} else {
 		// Revert to this revision
 		$article = new Article( $title );
-		$article->updateArticle( $rev->getText(), "Revert spam", false, false );
+		$article->updateArticle( $rev->getText(), "Cleaning up links to $match", false, false );
 	}
 	$dbw->immediateCommit();
 	wfDoUpdates();
@@ -72,7 +72,16 @@ if ( !function_exists( 'wfDoUpdates' ) ) {
 
 //------------------------------------------------------------------------------
 
-$wgUser = User::newFromName( 'Spam cleanup script' );
+$username = 'Spam cleanup script';
+$wgUser = User::newFromName( $username );
+if ( $wgUser->idForName() == 0 ) {
+	// Create the user
+	$wgUser->addToDatabase();
+	$dbw =& wfGetDB( DB_MASTER );
+	$dbw->update( 'user', array( 'user_password' => 'nologin' ), 
+		array( 'user_name' => $username ), $username );
+}
+
 if ( isset( $options['n'] ) ) {
 	$dryRun = true;
 } else {
@@ -118,7 +127,8 @@ for ( $id=1; $id <= $maxID; $id++ ) {
 					print "\nFound spam in [[$titleText]]\n";
 				} else {
 					print "\nCleaning up links to {$matches[0]} in [[$titleText]]\n";
-					cleanupArticle( $revision, $regex );
+					$match = str_replace('http://', '', $matches[0] );
+					cleanupArticle( $revision, $regex, $match );
 				}
 			}
 		}
