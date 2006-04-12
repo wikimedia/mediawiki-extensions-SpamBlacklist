@@ -145,6 +145,10 @@ class SpamBlacklist {
 		$regex =& $this->getRegex();
 
 		if ( $regex && $regex[0] == '/' ) {
+			# Strip SGML comments out of the markup
+			# This was being used to circumvent the filter (see bug 5185)
+			$text = preg_replace( '/<\!--.*-->/', '', $text );
+
 			# Do the match
 			wfDebug( "Checking text against regex: $regex\n" );
 			if ( preg_match( $regex, $text, $matches ) ) {
