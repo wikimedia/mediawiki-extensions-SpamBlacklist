@@ -60,7 +60,7 @@ class SpamBlacklist {
 				$lines = array();
 				wfDebug( "Constructing spam blacklist\n" );
 				foreach ( $this->files as $fileName ) {
-					if ( preg_match( '/^DB: (\w*) (.*)$/', $fileName, $matches ) ) {
+					if ( preg_match( '/^DB: ([\w-]*) (.*)$/', $fileName, $matches ) ) {
 						if ( $wgDBname == $matches[1] && $this->title && $this->title->getPrefixedDBkey() == $matches[2] ) {
 							$lines = array_merge( $lines, explode( "\n", $this->text ) );
 						} else {
