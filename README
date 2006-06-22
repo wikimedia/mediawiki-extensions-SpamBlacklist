@@ -99,6 +99,16 @@ Besides the obvious danger that someone may add a regex that matches everything,
 please note that an attacker with the ability to input arbitrary regular
 expressions may be able to generate segfaults in the PCRE library.
 
+Whitelisting
+------------
+
+You may sometimes find that a site listed in a centrally-maintained blacklist
+contains something you nonetheless want to link to.
+
+A local whitelist can be maintained by creating a [[MediaWiki:Spam-whitelist]]
+page and listing hostnames in it, using the same format as the blacklists.
+URLs matching the whitelist will be ignored locally.
+
 Copyright
 ---------
 This extension and this documentation was written by Tim Starling and is 

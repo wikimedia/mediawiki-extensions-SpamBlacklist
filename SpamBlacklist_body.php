@@ -95,20 +95,8 @@ class SpamBlacklist {
 						wfDebug( "got from file\n" );
 					}
 				}
-
-				# Strip comments and whitespace, then remove blanks
-				$lines = array_filter( array_map( 'trim', preg_replace( '/#.*$/', '', $lines ) ) );
-
-				# No lines, don't make a regex which will match everything
-				if ( count( $lines ) == 0 ) {
-					wfDebug( "No lines\n" );
-					$this->regex = true;
-				} else {
-					# Make regex
-					# It's faster using the S modifier even though it will usually only be run once
-					$this->regex = 'http://+[a-z0-9_\-.]*(' . implode( '|', $lines ) . ')';
-					$this->regex = '/' . str_replace( '/', '\/', preg_replace('|\\\*/|', '/', $this->regex) ) . '/Si';
-				}
+				
+				$this->regex = $this->buildRegex( $lines );
 				$wgMemc->set( "spam_blacklist_regex", $this->regex, $this->expiryTime );
 			} else {
 				wfDebug( "got from cache\n" );
@@ -121,6 +109,31 @@ class SpamBlacklist {
 		}
 		wfProfileOut( $fname );
 		return $this->regex;
+	}
+	
+	function getWhitelist() {
+		$source = wfMsgForContent( 'spam-whitelist' );
+		if( $source && $source != '&lt;spam-whitelist&gt;' ) {
+			return $this->buildRegex( explode( "\n", $source ) );
+		}
+		// Empty
+		return true;
+	}
+	
+	function buildRegex( $lines ) {
+		# Strip comments and whitespace, then remove blanks
+		$lines = array_filter( array_map( 'trim', preg_replace( '/#.*$/', '', $lines ) ) );
+
+		# No lines, don't make a regex which will match everything
+		if ( count( $lines ) == 0 ) {
+			wfDebug( "No lines\n" );
+			return true;
+		} else {
+			# Make regex
+			# It's faster using the S modifier even though it will usually only be run once
+			$regex = 'http://+[a-z0-9_\-.]*(' . implode( '|', $lines ) . ')';
+			return '/' . str_replace( '/', '\/', preg_replace('|\\\*/|', '/', $regex) ) . '/Si';
+		}
 	}
 	
 	function filter( &$title, $text, $section ) {
@@ -143,11 +156,18 @@ class SpamBlacklist {
 		$this->section = $section;
 
 		$regex =& $this->getRegex();
+		$whitelist = $this->getWhitelist();
 
 		if ( $regex && $regex[0] == '/' ) {
 			# Strip SGML comments out of the markup
 			# This was being used to circumvent the filter (see bug 5185)
 			$text = preg_replace( '/<\!--.*-->/', '', $text );
+			
+			# Strip whitelisted URLs from the match
+			if( is_string( $whitelist ) ) {
+				wfDebug( "Excluding whitelisted URLs from regex: $whitelist\n" );
+				$text = preg_replace( $whitelist, ' ', $text );
+			}
 
 			# Do the match
 			wfDebug( "Checking text against regex: $regex\n" );
