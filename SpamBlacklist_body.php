@@ -137,7 +137,7 @@ class SpamBlacklist {
 	}
 	
 	function filter( &$title, $text, $section ) {
-		global $wgArticle, $wgVersion, $wgOut, $wgParser;
+		global $wgArticle, $wgVersion, $wgOut, $wgParser, $wgUser;
 
 		$fname = 'wfSpamBlacklistFilter';
 		wfProfileIn( $fname );
@@ -161,7 +161,9 @@ class SpamBlacklist {
 		if ( $regex && $regex[0] == '/' ) {
 			# Run parser to strip SGML comments and such out of the markup
 			# This was being used to circumvent the filter (see bug 5185)
-			$out = $wgParser->parse( $text, $title, new ParserOptions() );
+			$options = new ParserOptions();
+			$text = $wgParser->preSaveTransform( $text, $title, $wgUser, $options );
+			$out = $wgParser->parse( $text, $title, $options );
 			$links = implode( "\n", array_keys( $out->getExternalLinks() ) );
 			
 			# Strip whitelisted URLs from the match
