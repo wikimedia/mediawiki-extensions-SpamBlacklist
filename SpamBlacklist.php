@@ -21,6 +21,8 @@ if ( $wgFilterCallback ) {
 $wgFilterCallback = 'wfSpamBlacklistLoader';
 $wgExtensionCredits['other'][] = array(
 	'name' => 'SpamBlacklist',
+	'author' => 'Tim Starling',
+	'url' => 'http://meta.wikimedia.org/wiki/SpamBlacklist_extension',
 );
 
 function wfSpamBlacklistLoader( &$title, $text, $section ) {
