@@ -12,11 +12,19 @@ require_once( 'SpamBlacklist_body.php' );
 /** 
  * Find the latest revision of the article that does not contain spam and revert to it
  */
-function cleanupArticle( $rev, $regex, $match ) {
+function cleanupArticle( $rev, $regexes, $match ) {
 	$title = $rev->getTitle();
 	$reverted = false;
 	$revId = $rev->getId();
-	while ( $rev && preg_match( $regex, $rev->getText() ) ) {
+	while ( $rev ) {
+		$matches = false;
+		foreach( $regexes as $regex ) {
+			$matches = $matches || preg_match( $regex, $rev->getText() );
+		}
+		if( !$matches ) {
+			// Didn't find any spam
+			break;
+		}
 		# Revision::getPrevious can't be used in this way before MW 1.6 (Revision.php 1.26)
 		#$rev = $rev->getPrevious();
 		$revId = $title->getPreviousRevisionID( $revId );
@@ -92,8 +100,8 @@ $sb = new SpamBlacklist( $wgSpamBlacklistSettings );
 if ( $wgSpamBlacklistFiles ) {
 	$sb->files = $wgSpamBlacklistFiles;
 }
-$regex = $sb->getRegex();
-if ( !$regex ) {
+$regexes = $sb->getregexes();
+if ( !$regexes ) {
 	print "Invalid regex, can't clean up spam\n";
 	exit(1);
 }
@@ -102,11 +110,7 @@ $dbr =& wfGetDB( DB_SLAVE );
 $maxID = $dbr->selectField( 'page', 'MAX(page_id)' );
 $reportingInterval = 100;
 
-print "Regex is " . strlen( $regex ) . " bytes\n";
-if ( strlen( $regex ) < 10000 || strlen( $regex ) > 32000 ) {
-	print "wrong size, exiting\n";
-	exit(1);
-}
+print "Regexes are " . implode( ', ', array_map( 'count', $regexes ) ) . " bytes\n";
 print "Searching for spam in $maxID pages...\n";
 if ( $dryRun ) {
 	print "Dry run only\n";
@@ -120,15 +124,17 @@ for ( $id=1; $id <= $maxID; $id++ ) {
 	if ( $revision ) {
 		$text = $revision->getText();
 		if ( $text ) {
-			if ( preg_match( $regex, $text, $matches ) ) {
-				$title = $revision->getTitle();
-				$titleText = $title->getPrefixedText();
-				if ( $dryRun ) {
-					print "\nFound spam in [[$titleText]]\n";
-				} else {
-					print "\nCleaning up links to {$matches[0]} in [[$titleText]]\n";
-					$match = str_replace('http://', '', $matches[0] );
-					cleanupArticle( $revision, $regex, $match );
+			foreach( $regexes as $regex ) {
+				if ( preg_match( $regex, $text, $matches ) ) {
+					$title = $revision->getTitle();
+					$titleText = $title->getPrefixedText();
+					if ( $dryRun ) {
+						print "\nFound spam in [[$titleText]]\n";
+					} else {
+						print "\nCleaning up links to {$matches[0]} in [[$titleText]]\n";
+						$match = str_replace('http://', '', $matches[0] );
+						cleanupArticle( $revision, $regexes, $match );
+					}
 				}
 			}
 		}

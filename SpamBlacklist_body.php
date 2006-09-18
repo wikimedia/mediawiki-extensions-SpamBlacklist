@@ -3,7 +3,7 @@
 if ( defined( 'MEDIAWIKI' ) ) {
 
 class SpamBlacklist {
-	var $regex = false;
+	var $regexes = false;
 	var $previousFilter = false;
 	var $files = array();
 	var $warningTime = 600;
@@ -19,13 +19,13 @@ class SpamBlacklist {
 		}
 	}
 
-	function &getRegex() {
+	function getRegexes() {
 		global $wgMemc, $wgDBname, $messageMemc;
 		$fname = 'SpamBlacklist::getRegex';
 		wfProfileIn( $fname );
 
-		if ( $this->regex !== false ) {
-			return $this->regex;
+		if ( $this->regexes !== false ) {
+			return $this->regexes;
 		}
 
 		wfDebug( "Loading spam regex..." );
@@ -50,20 +50,22 @@ class SpamBlacklist {
 				}
 			}
 		}
-
-		if ( $this->regex === false || $recache ) {
+		
+		if ( $this->regexes === false || $recache ) {
 			if ( !$recache ) {
-				$this->regex = $wgMemc->get( "spam_blacklist_regex" );
+				$this->regexes = $wgMemc->get( "spam_blacklist_regexes" );
 			}
-			if ( !$this->regex ) {
+			if ( $this->regexes === false || $this->regexes === null ) {
 				# Load lists
 				$lines = array();
 				wfDebug( "Constructing spam blacklist\n" );
 				foreach ( $this->files as $fileName ) {
 					if ( preg_match( '/^DB: ([\w-]*) (.*)$/', $fileName, $matches ) ) {
 						if ( $wgDBname == $matches[1] && $this->title && $this->title->getPrefixedDBkey() == $matches[2] ) {
+							wfDebug( "Fetching default local spam blacklist...\n" );
 							$lines = array_merge( $lines, explode( "\n", $this->text ) );
 						} else {
+							wfDebug( "Fetching local spam blackist from '{$matches[2]}' on '{$matches[1]}'...\n" );
 							$lines = array_merge( $lines, $this->getArticleLines( $matches[1], $matches[2] ) );
 						}
 						wfDebug( "got from DB\n" );
@@ -96,31 +98,31 @@ class SpamBlacklist {
 					}
 				}
 				
-				$this->regex = $this->buildRegex( $lines );
-				$wgMemc->set( "spam_blacklist_regex", $this->regex, $this->expiryTime );
+				$this->regexes = $this->buildRegexes( $lines );
+				$wgMemc->set( "spam_blacklist_regexes", $this->regexes, $this->expiryTime );
 			} else {
 				wfDebug( "got from cache\n" );
 			}
 		} 
-		if ( $this->regex[0] != '/' || substr( $this->regex, -3 ) != '/Si' ) {
+		if( $this->regexes !== true && !is_array( $this->regexes ) ) {
 			// Corrupt regex
 			wfDebug( "Corrupt regex\n" );
-			$this->regex = false;
+			$this->regexes = false;
 		}
 		wfProfileOut( $fname );
-		return $this->regex;
+		return $this->regexes;
 	}
 	
-	function getWhitelist() {
+	function getWhitelists() {
 		$source = wfMsgForContent( 'spam-whitelist' );
 		if( $source && $source != '&lt;spam-whitelist&gt;' ) {
-			return $this->buildRegex( explode( "\n", $source ) );
+			return $this->buildRegexes( explode( "\n", $source ) );
 		}
 		// Empty
 		return true;
 	}
 	
-	function buildRegex( $lines ) {
+	function buildRegexes( $lines ) {
 		# Strip comments and whitespace, then remove blanks
 		$lines = array_filter( array_map( 'trim', preg_replace( '/#.*$/', '', $lines ) ) );
 
@@ -131,8 +133,33 @@ class SpamBlacklist {
 		} else {
 			# Make regex
 			# It's faster using the S modifier even though it will usually only be run once
-			$regex = 'http://+[a-z0-9_\-.]*(' . implode( '|', $lines ) . ')';
-			return '/' . str_replace( '/', '\/', preg_replace('|\\\*/|', '/', $regex) ) . '/Si';
+			//$regex = 'http://+[a-z0-9_\-.]*(' . implode( '|', $lines ) . ')';
+			//return '/' . str_replace( '/', '\/', preg_replace('|\\\*/|', '/', $regex) ) . '/Si';
+			$regexes = array();
+			$regexStart = '/http:\/\/+[a-z0-9_\-.]*(';
+			$regexEnd = ')/Si';
+			$regexMax = 20000;
+			$build = false;
+			foreach( $lines as $line ) {
+				// FIXME: not very robust size check, but should work. :)
+				if( $build === false ) {
+					$build = $line;
+				} elseif( strlen( $build ) + strlen( $line ) > $regexMax ) {
+					$regexes[] = $regexStart .
+						str_replace( '/', '\/', preg_replace('|\\\*/|', '/', $build) ) .
+						$regexEnd;
+					$build = $line;
+				} else {
+					$build .= '|';
+					$build .= $line;
+				}
+			}
+			if( $build !== false ) {
+				$regexes[] = $regexStart .
+					str_replace( '/', '\/', preg_replace('|\\\*/|', '/', $build) ) .
+					$regexEnd;
+			}
+			return $regexes;
 		}
 	}
 	
@@ -155,10 +182,10 @@ class SpamBlacklist {
 		$this->text = $text;
 		$this->section = $section;
 
-		$regex =& $this->getRegex();
-		$whitelist = $this->getWhitelist();
-
-		if ( $regex && $regex[0] == '/' ) {
+		$regexes = $this->getRegexes();
+		$whitelists = $this->getWhitelists();
+		
+		if ( is_array( $regexes ) ) {
 			# Run parser to strip SGML comments and such out of the markup
 			# This was being used to circumvent the filter (see bug 5185)
 			$options = new ParserOptions();
@@ -167,19 +194,25 @@ class SpamBlacklist {
 			$links = implode( "\n", array_keys( $out->getExternalLinks() ) );
 			
 			# Strip whitelisted URLs from the match
-			if( is_string( $whitelist ) ) {
-				wfDebug( "Excluding whitelisted URLs from regex: $whitelist\n" );
-				$links = preg_replace( $whitelist, '', $links );
+			if( is_array( $whitelists ) ) {
+				wfDebug( "Excluding whitelisted URLs from " . count( $whitelists ) .
+					" regexes: " . implode( ', ', $whitelists ) . "\n" );
+				foreach( $whitelists as $regex ) {
+					$links = preg_replace( $regex, '', $links );
+				}
 			}
 
 			# Do the match
-			wfDebug( "Checking text against regex: $regex\n" );
-			if ( preg_match( $regex, $links, $matches ) ) {
-				wfDebug( "Match!\n" );
-				EditPage::spamPage( $matches[0] );
-				$retVal = true;
-			} else {
-				$retVal = false;
+			wfDebug( "Checking text against " . count( $regexes ) .
+				" regexes: " . implode( ', ', $regexes ) . "\n" );
+			$retVal = false;
+			foreach( $regexes as $regex ) {
+				if ( preg_match( $regex, $links, $matches ) ) {
+					wfDebug( "Match!\n" );
+					EditPage::spamPage( $matches[0] );
+					$retVal = true;
+					break;
+				}
 			}
 		} else {
 			$retVal = false;
