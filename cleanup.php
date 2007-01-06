@@ -9,7 +9,7 @@
 require_once( '../../maintenance/commandLine.inc' );
 require_once( 'SpamBlacklist_body.php' );
 
-/** 
+/**
  * Find the latest revision of the article that does not contain spam and revert to it
  */
 function cleanupArticle( $rev, $regexes, $match ) {

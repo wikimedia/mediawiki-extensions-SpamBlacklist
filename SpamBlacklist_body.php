@@ -9,7 +9,7 @@ class SpamBlacklist {
 	var $warningTime = 600;
 	var $expiryTime = 900;
 	var $warningChance = 100;
-	
+
 	function SpamBlacklist( $settings = array() ) {
 		global $IP;
 		$this->files = array( "http://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1" );
@@ -29,11 +29,11 @@ class SpamBlacklist {
 		}
 
 		wfDebug( "Loading spam regex..." );
-		
+
 		if ( !is_array( $this->files ) ) {
 			$this->files = array( $this->files );
 		}
-		if ( count( $this->files ) == 0 ){ 
+		if ( count( $this->files ) == 0 ){
 			# No lists
 			wfDebug( "no files specified\n" );
 			wfProfileOut( $fname );
@@ -50,7 +50,7 @@ class SpamBlacklist {
 				}
 			}
 		}
-		
+
 		if ( $this->regexes === false || $recache ) {
 			if ( !$recache ) {
 				$this->regexes = $wgMemc->get( "spam_blacklist_regexes" );
@@ -90,20 +90,20 @@ class SpamBlacklist {
 							$messageMemc->set( $key, $httpText, $this->expiryTime );
 						} else {
 							wfDebug( "got from HTTP cache\n" );
-						}						
+						}
 						$lines = array_merge( $lines, explode( "\n", $httpText ) );
 					} else {
 						$lines = array_merge( $lines, file( $fileName ) );
 						wfDebug( "got from file\n" );
 					}
 				}
-				
+
 				$this->regexes = $this->buildRegexes( $lines );
 				$wgMemc->set( "spam_blacklist_regexes", $this->regexes, $this->expiryTime );
 			} else {
 				wfDebug( "got from cache\n" );
 			}
-		} 
+		}
 		if( $this->regexes !== true && !is_array( $this->regexes ) ) {
 			// Corrupt regex
 			wfDebug( "Corrupt regex\n" );
@@ -112,7 +112,7 @@ class SpamBlacklist {
 		wfProfileOut( $fname );
 		return $this->regexes;
 	}
-	
+
 	function getWhitelists() {
 		$source = wfMsgForContent( 'spam-whitelist' );
 		if( $source && $source != '&lt;spam-whitelist&gt;' ) {
@@ -121,7 +121,7 @@ class SpamBlacklist {
 		// Empty
 		return true;
 	}
-	
+
 	function buildRegexes( $lines ) {
 		# Strip comments and whitespace, then remove blanks
 		$lines = array_filter( array_map( 'trim', preg_replace( '/#.*$/', '', $lines ) ) );
@@ -162,7 +162,7 @@ class SpamBlacklist {
 			return $regexes;
 		}
 	}
-	
+
 	function filter( &$title, $text, $section ) {
 		global $wgArticle, $wgVersion, $wgOut, $wgParser, $wgUser;
 
@@ -184,7 +184,7 @@ class SpamBlacklist {
 
 		$regexes = $this->getRegexes();
 		$whitelists = $this->getWhitelists();
-		
+
 		if ( is_array( $regexes ) ) {
 			# Run parser to strip SGML comments and such out of the markup
 			# This was being used to circumvent the filter (see bug 5185)
@@ -192,7 +192,7 @@ class SpamBlacklist {
 			$text = $wgParser->preSaveTransform( $text, $title, $wgUser, $options );
 			$out = $wgParser->parse( $text, $title, $options );
 			$links = implode( "\n", array_keys( $out->getExternalLinks() ) );
-			
+
 			# Strip whitelisted URLs from the match
 			if( is_array( $whitelists ) ) {
 				wfDebug( "Excluding whitelisted URLs from " . count( $whitelists ) .
@@ -265,6 +265,6 @@ class SpamBlacklist {
 	}
 }
 
-	
+
 } # End invocation guard
 ?>

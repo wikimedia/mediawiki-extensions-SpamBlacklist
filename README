@@ -1,10 +1,10 @@
-MediaWiki extension: SpamBlacklist 
+MediaWiki extension: SpamBlacklist
 ----------------------------------
 
 SpamBlacklist is a simple edit filter extension. When someone tries to save the
 page, it checks the text against a potentially very large list of "bad"
 hostnames. If there is a match, it displays an error message to the user and 
-refuses to save the page. 
+refuses to save the page.
 
 To enable it, first download a copy of the SpamBlacklist directory and put it
 into your extensions directory. Then put the following at the end of your 
@@ -14,7 +14,7 @@ require_once( "$IP/extensions/SpamBlacklist/SpamBlacklist.php" );
 
 The list of bad URLs can be drawn from multiple sources. These sources are
 configured with the $wgSpamBlacklistFiles global variable. This global variable
-can be set in LocalSettings.php, AFTER including SpamBlacklist.php. 
+can be set in LocalSettings.php, AFTER including SpamBlacklist.php.
 
 $wgSpamBlacklistFiles is an array, each value containing either a URL, a filename 
 or a database location. Specifying a database location allows you to draw the
@@ -28,7 +28,7 @@ $wgSpamBlacklistFiles = array(
 	"$IP/extensions/SpamBlacklist/wikimedia_blacklist", // Wikimedia's list
 
 //          database    title
-	"DB: wikidb My_spam_blacklist",    
+	"DB: wikidb My_spam_blacklist",
 );
 
 File format
@@ -62,7 +62,7 @@ or the database, and constructing the regex, may take a significant amount of
 time depending on your hardware. If you find that enabling this extension slows
 down saves excessively, try installing MemCached or another supported data
 caching solution. The SpamBlacklist extension will cache the constructed regex 
-if such a system is present. 
+if such a system is present.
 
 Stability
 ---------
@@ -87,7 +87,7 @@ once every 10-15 minutes.
 The Wikimedia spam blacklist can only be edited by trusted administrators. 
 Wikimedia hosts large, diverse wikis with many thousands of external links, 
 hence the Wikimedia blacklist is comparatively conservative in the links it 
-blocks. You may want to add your own keyword blocks or even ccTLD blocks. 
+blocks. You may want to add your own keyword blocks or even ccTLD blocks.
 You may suggest modifications to the Wikimedia blacklist at:
 
     http://meta.wikimedia.org/wiki/Talk:Spam_blacklist
