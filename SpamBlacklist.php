@@ -23,6 +23,7 @@ $wgExtensionCredits['other'][] = array(
 	'name' => 'SpamBlacklist',
 	'author' => 'Tim Starling',
 	'url' => 'http://meta.wikimedia.org/wiki/SpamBlacklist_extension',
+	'description' => 'Regex based anti spam tool',
 );
 
 function wfSpamBlacklistLoader( &$title, $text, $section ) {
