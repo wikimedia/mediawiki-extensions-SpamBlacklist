@@ -138,7 +138,7 @@ class SpamBlacklist {
 			$regexes = array();
 			$regexStart = '/http:\/\/+[a-z0-9_\-.]*(';
 			$regexEnd = ')/Si';
-			$regexMax = 20000;
+			$regexMax = 4096;
 			$build = false;
 			foreach( $lines as $line ) {
 				// FIXME: not very robust size check, but should work. :)
