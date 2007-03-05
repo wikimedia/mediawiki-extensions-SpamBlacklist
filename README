@@ -31,6 +31,20 @@ $wgSpamBlacklistFiles = array(
 	"DB: wikidb My_spam_blacklist",
 );
 
+Compatibility
+-----------
+
+This extension is primarily maintained to run on the latest release version
+of MediaWiki (1.9.x as of this writing) and development versions.
+
+The current version *may* work as far back as 1.6.x, but will *not* work
+with 1.5.x or older. You may be able to dig older versions out of the
+Subversion repository which work with those versions, but if using
+Wikimedia's blacklist file you will likely have problems with failure
+due to the large size of the blacklist not being handled by old versions
+of the code.
+
+
 File format
 -----------
 
