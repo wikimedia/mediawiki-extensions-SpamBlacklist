@@ -22,7 +22,7 @@ $wgFilterCallback = 'wfSpamBlacklistLoader';
 $wgExtensionCredits['other'][] = array(
 	'name' => 'SpamBlacklist',
 	'author' => 'Tim Starling',
-	'url' => 'http://meta.wikimedia.org/wiki/SpamBlacklist_extension',
+	'url' => 'http://www.mediawiki.org/wiki/Extension:SpamBlacklist',
 	'description' => 'Regex based anti spam tool',
 );
 
