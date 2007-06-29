@@ -43,4 +43,4 @@ function wfSpamBlacklistLoader( &$title, $text, $section ) {
 }
 
 } # End invocation guard
-?>
+
