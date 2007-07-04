@@ -26,6 +26,16 @@ $wgExtensionCredits['other'][] = array(
 	'description' => 'Regex based anti spam tool',
 );
 
+$wgExtensionFunctions[] = 'wfSpamBlacklistMessageLoader';
+
+function wfSpamBlacklistMessageLoader() {
+	global $wgMessageCache;
+	require_once( 'SpamBlacklist.i18n.php' );
+	foreach( efSpamBlacklistMessages() as $lang => $messages ) {
+		$wgMessageCache->addMessages( $messages, $lang );
+	}
+}
+
 function wfSpamBlacklistLoader( &$title, $text, $section ) {
 	require_once( "SpamBlacklist_body.php" );
 	static $spamObj = false;
@@ -43,4 +53,5 @@ function wfSpamBlacklistLoader( &$title, $text, $section ) {
 }
 
 } # End invocation guard
+
 
