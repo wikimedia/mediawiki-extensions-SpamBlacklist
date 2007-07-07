@@ -19,13 +19,26 @@ class SpamBlacklist {
 		}
 	}
 
+	/**
+	 * @deprecated back-compat
+	 */
 	function getRegexes() {
+		return $this->getBlacklists();
+	}
+	
+	function getBlacklists() {
+		return array_merge(
+			$this->getLocalBlacklists(),
+			$this->getSharedBlacklists() );
+	}
+	
+	function getSharedBlacklists() {
 		global $wgMemc, $wgDBname, $messageMemc;
 		$fname = 'SpamBlacklist::getRegex';
 		wfProfileIn( $fname );
 
 		if ( $this->regexes !== false ) {
-			return $this->regexes;
+			return $this->pureArray( $this->regexes );
 		}
 
 		wfDebug( "Loading spam regex..." );
@@ -37,7 +50,7 @@ class SpamBlacklist {
 			# No lists
 			wfDebug( "no files specified\n" );
 			wfProfileOut( $fname );
-			return false;
+			return array();
 		}
 
 		# Refresh cache if we are saving the blacklist
@@ -56,8 +69,8 @@ class SpamBlacklist {
 				$this->regexes = $wgMemc->get( "spam_blacklist_regexes" );
 			}
 			if ( $this->regexes === false || $this->regexes === null ) {
-				# Load lists
 				$lines = array();
+				# Load lists
 				wfDebug( "Constructing spam blacklist\n" );
 				foreach ( $this->files as $fileName ) {
 					if ( preg_match( '/^DB: ([\w-]*) (.*)$/', $fileName, $matches ) ) {
@@ -110,16 +123,41 @@ class SpamBlacklist {
 			$this->regexes = false;
 		}
 		wfProfileOut( $fname );
-		return $this->regexes;
+		return $this->pureArray( $this->regexes );
+	}
+	
+	function getLocalBlacklists() {
+		return $this->regexesFromMessage( 'spam-blacklist' );
+	}
+	
+	function getWhitelists() {
+		return $this->regexesFromMessage( 'spam-whitelist' );
+	}
+	
+	function regexesFromMessage( $message ) {
+		$lines = $this->linesFromMessage( $message );
+		$regexes = $this->buildRegexes( $lines );
+		return $this->pureArray( $regexes );
+	}
+	
+	/// There's some wackiness where booleans are used for
+	/// indicating empty or invalid input to aid in caching,
+	/// but when we're called all we want is a damn array.
+	function pureArray( $regexes ) {
+		if( is_array( $regexes ) ) {
+			return $regexes;
+		} else {
+			return array();
+		}
 	}
 
-	function getWhitelists() {
-		$source = wfMsgForContent( 'spam-whitelist' );
-		if( $source && $source != '&lt;spam-whitelist&gt;' ) {
-			return $this->buildRegexes( explode( "\n", $source ) );
+	function linesFromMessage( $message ) {
+		$source = wfMsgForContent( $message );
+		if( $source && !wfEmptyMsg( $message, $source ) ) {
+			return array_filter( explode( "\n", $source ) );
+		} else {
+			return array();
 		}
-		// Empty
-		return true;
 	}
 
 	function buildRegexes( $lines ) {
@@ -182,10 +220,10 @@ class SpamBlacklist {
 		$this->text = $text;
 		$this->section = $section;
 
-		$regexes = $this->getRegexes();
+		$blacklists = $this->getBlacklists();
 		$whitelists = $this->getWhitelists();
 
-		if ( is_array( $regexes ) ) {
+		if ( count( $blacklists ) ) {
 			# Run parser to strip SGML comments and such out of the markup
 			# This was being used to circumvent the filter (see bug 5185)
 			$options = new ParserOptions();
@@ -203,10 +241,10 @@ class SpamBlacklist {
 			}
 
 			# Do the match
-			wfDebug( "Checking text against " . count( $regexes ) .
-				" regexes: " . implode( ', ', $regexes ) . "\n" );
+			wfDebug( "Checking text against " . count( $blacklists ) .
+				" regexes: " . implode( ', ', $blacklists ) . "\n" );
 			$retVal = false;
-			foreach( $regexes as $regex ) {
+			foreach( $blacklists as $regex ) {
 				if ( preg_match( $regex, $links, $matches ) ) {
 					wfDebug( "Match!\n" );
 					EditPage::spamPage( $matches[0] );
@@ -253,7 +291,8 @@ class SpamBlacklist {
 
 	function getHTTP( $url ) {
 		// Use wfGetHTTP from MW 1.5 if it is available
-		include_once( 'HttpFunctions.php' );
+		global $IP;
+		include_once( "$IP/includes/HttpFunctions.php" );
 		if ( function_exists( 'wfGetHTTP' ) ) {
 			$text = wfGetHTTP( $url );
 		} else {
