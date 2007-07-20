@@ -31,6 +31,9 @@ $wgSpamBlacklistFiles = array(
 	"DB: wikidb My_spam_blacklist",
 );
 
+The local pages [[MediaWiki:Spam-blacklist]] and [[MediaWiki:Spam-whitelist]]
+will always be used, whatever additional files are listed.
+
 Compatibility
 -----------
 
@@ -77,6 +80,22 @@ time depending on your hardware. If you find that enabling this extension slows
 down saves excessively, try installing MemCached or another supported data
 caching solution. The SpamBlacklist extension will cache the constructed regex 
 if such a system is present.
+
+Caching behavior
+----------------
+
+Blacklist files loaded from remote web sites are cached locally, in the cache
+subsystem used for MediaWiki's localization. (This usually means the objectcache
+table on a default install.)
+
+By default, the list is cached for 15 minutes (if successfully fetched) or
+10 minutes (if the network fetch failed), after which point it will be fetched
+again when next requested. This should be a decent balance between avoiding
+too-frequent fetches if your site is frequently used and staying up to date.
+
+Fully-processed blacklist data may be cached in memcached or another shared
+memory cache if it's been configured in MediaWiki.
+
 
 Stability
 ---------

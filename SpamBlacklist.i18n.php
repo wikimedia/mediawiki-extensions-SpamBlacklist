@@ -35,6 +35,10 @@ function efSpamBlacklistMessages() {
 #   * Every non-blank line is a regex fragment which will only match hosts inside URLs
 
  #</pre> <!-- leave this line exactly as it is -->',
+	'spam-invalid-lines' =>
+	"The following spam blacklist {{PLURAL:$1|line is an|lines are}} " .
+	" invalid regular {{PLURAL:$1|expression|expressions}} " .
+	" and {{PLURAL:$1|needs|need}} to be corrected before saving the page:\n",
 ),
 
 'id' => array(
