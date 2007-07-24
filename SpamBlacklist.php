@@ -72,9 +72,9 @@ function wfSpamBlacklistValidate( $editPage, $text, $section, &$hookError ) {
 		wfDebug( "Spam blacklist validator: [[$thisPageName]] not a local blacklist\n" );
 		return true;
 	}
-	
+
 	$lines = explode( "\n", $text );
-	
+
 	$badLines = SpamRegexBatch::getBadLines( $lines );
 	if( $badLines ) {
 		wfDebug( "Spam blacklist validator: [[$thisPageName]] given invalid input lines: " .
@@ -86,7 +86,7 @@ function wfSpamBlacklistValidate( $editPage, $text, $section, &$hookError ) {
 			"</tt>\n";
 		$hookError =
 			"<div class='errorbox'>" .
-			wfMsgExt( 'spam-invalid-lines', array( 'parsemag' ), count( $badList ) ) .
+			wfMsgExt( 'spam-invalid-lines', array( 'parsemag' ), count( $badLines ) ) .
 			$badList .
 			"</div>\n" .
 			"<br clear='all' />\n";
