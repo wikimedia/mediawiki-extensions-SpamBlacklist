@@ -215,7 +215,9 @@ class SpamBlacklist {
 				wfDebug( "Excluding whitelisted URLs from " . count( $whitelists ) .
 					" regexes: " . implode( ', ', $whitelists ) . "\n" );
 				foreach( $whitelists as $regex ) {
+					wfSuppressWarnings();
 					$links = preg_replace( $regex, '', $links );
+					wfRestoreWarnings();
 				}
 			}
 
