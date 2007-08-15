@@ -71,6 +71,27 @@ function efSpamBlacklistMessages() {
 	| Die folgenden Zeilen in der Spam-Blacklist sind ungültige reguläre Ausdrücke. Sie müssen vor dem Speichern der Seite korrigiert werden}}:\n",
 ),
 
+'fr' => array(
+	'spam-blacklist'     => ' # Les liens externes faisant partie de cette liste seront bloqués lors de leur insertion dans une page.
+ # Cette liste ne concerne que Wikinews ; référez vous aussi à la liste noire générale de Méta.
+ # La documentation se trouve à l’adresse suivante : http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # <!--Laissez cette ligne telle quelle --> <pre>
+#
+# La syntaxe est la suivante
+#   * Tout texte qui suit le « # » est considéré comme un commentaire.
+#   * Toute ligne non vide est un fragment regex qui ne concerne que les liens hypertextes.
+ #</pre> <!--Laissez cette ligne telle quelle -->',
+	'spam-whitelist'     => ' #<!-- Laissez cette ligne telle quelle--> <pre>
+# Les liens externes faisant partie de cette liste ne seront pas bloqués même
+# si elles ont été bloquées en vertu d’une liste noire.
+#
+# La syntaxe est la suivante
+#   * Tout texte qui suit le « # » est considéré comme un commentaire.
+#   * Toute ligne non vide est un fragment regex qui ne concerne que les liens hypertextes.
+ #</pre> <!--Laissez cette ligne telle quelle -->',
+	'spam-invalid-lines' => '{{PLURAL:$1|La ligne suivante |Les lignes suivantes}} de la liste des spams {{PLURAL:$1|est rédigée|sont rédigées}} de manière incorrecte et {{PLURAL:$1|nécessite|nécessitent}} les corrections nécessaires avant toute sauvegarde de la page :',
+),
+
 'id' => array(
 	'spam-blacklist' => '
  # Pranala luar yang cocok dengan daftar ini akan diblok ketika ditambahkan ke suatu halaman.
