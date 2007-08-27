@@ -115,6 +115,37 @@ function efSpamBlacklistMessages() {
  #</pre> <!-- jangan ubah baris ini -->'
 ),
 
+'nl' => array(
+	'spam-blacklist' => '
+ # Externe URL\'s die voldoen aan deze lijst worden geweigerd bij het
+ # toevoegen aan een pagina. Deze lijst heeft alleen invloed op deze wiki.
+ # Er bestaat ook een globale zwarte lijst.
+ # Documentatie: http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- leave this line exactly as it is --> <pre>
+#
+# De syntaxis is als volgt:
+#   * Alles vanaf het karakter "#" tot het einde van de regel is opmerking
+#   * Iedere niet-lege regel is een fragment van een regulier expressie die
+#     alleen van toepassing is op hosts binnen URL\'s.
+
+ #</pre> <!-- leave this line exactly as it is -->',
+	'spam-whitelist' => '
+ #<!-- leave this line exactly as it is --> <pre>
+# Externe URL\'s die voldoen aan deze lijst, worden *nooit* geweigerd, al
+# zouden ze geblokkeerd moeten worden door regels uit de zwarte lijst.
+#
+# De syntaxis is als volgt:
+#   * Alles vanaf het karakter "#" tot het einde van de regel is opmerking
+#   * Iedere niet-lege regel is een fragment van een regulier expressie die
+#     alleen van toepassing is op hosts binnen URL\'s.
+
+ #</pre> <!-- leave this line exactly as it is -->',
+	'spam-invalid-lines' =>
+	"De volgende {{PLURAL:$1|regel|regels}} van de zwarte lijst{{PLURAL:$1|is een|zijn}} " .
+	" onjuiste reguliere {{PLURAL:$1|expressie|expressies}} " .
+	" en {{PLURAL:$1|moet|moeten}} gecorrigeerd worden alvorens de pagina kan worden opgeslagen:\n",
+),
+
 );
 
 return $messages;
