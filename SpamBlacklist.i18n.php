@@ -92,6 +92,20 @@ function efSpamBlacklistMessages() {
 	'spam-invalid-lines' => '{{PLURAL:$1|La ligne suivante |Les lignes suivantes}} de la liste des spams {{PLURAL:$1|est rédigée|sont rédigées}} de manière incorrecte et {{PLURAL:$1|nécessite|nécessitent}} les corrections nécessaires avant toute sauvegarde de la page :',
 ),
 
+'hsb' => array(
+'blacklistedusername' => 'Wužiwarske mjeno na lisćinje zawrjenjow',
+'blacklistedusernametext' => 'Wubrane wužiwarske mjeno steji na [[MediaWiki:Usernameblacklist|lisćinje zawrjenych wužiwarskich mjenow]]. Prošu wubjer druhe mjeno.',
+'usernameblacklist' => '<pre>
+# Zapiski w tutej lisćinje budu so jako dźěl regularneho wuraza wužiwać, 
+# hdyž so wužiwarske mjena z registracije blokuja. Kóždy zapisk měł dźěl
+# nječisłowaneje lisćiny być, na př.
+#
+# * Foo
+# * [Bb]ar
+</pre>',
+'usernameblacklist-invalid-lines' => '{{PLURAL:$1|slědowaca linka|slědowacej lince|slědowace linki|slědowacych linkow}} {{PLURAL:$1|je|stej|su|je}}w lisćinje njewitanych wužiwarskich mjenow je {{PLURAL:$1|njepłaćiwa|njepłaćiwje|njepłaćiwe|njepłaćiwe}}; prošu skoriguj {{PLURAL:$1|ju|jej|je|je}} před składowanjom:',
+),
+
 'id' => array(
 	'spam-blacklist' => '
  # Pranala luar yang cocok dengan daftar ini akan diblok ketika ditambahkan ke suatu halaman.
