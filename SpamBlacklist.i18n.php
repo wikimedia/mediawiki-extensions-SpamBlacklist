@@ -160,7 +160,95 @@ function efSpamBlacklistMessages() {
 	" en {{PLURAL:$1|moet|moeten}} gecorrigeerd worden alvorens de pagina kan worden opgeslagen:\n",
 ),
 
-);
+'yue' => array(
+	'spam-blacklist' => '
+ # 同呢個表合符嘅外部 URL 當加入嗰陣會被封鎖。
+ # 呢個表只係會影響到呢個wiki；請同時參閱全域黑名單。
+ # 要睇註解請睇 http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- 請完全噉留番呢行 --> <pre>
+#
+# 語法好似下面噉:
+#   * 每一個由 "#" 字元開頭嘅行，到最尾係一個註解
+#   * 每個非空白行係一個標準表示式碎片，只係會同入面嘅URL端核對
+
+ #</pre> <!-- 請完全噉留番呢行 -->',
+	'spam-whitelist' => '
+ #<!-- 請完全噉留番呢行 --> <pre>
+# 同呢個表合符嘅外部 URL ，即使響黑名單項目度封鎖，
+# 都*唔會*被封鎖。
+#
+# 語法好似下面噉:
+#   * 每一個由 "#" 字元開頭嘅行，到最尾係一個註解
+#   * 每個非空白行係一個標準表示式碎片，只係會同入面嘅URL端核對
+
+ #</pre> <!-- 請完全噉留番呢行 -->',
+	'spam-invalid-lines' =>
+	"下面響灌水黑名單嘅{{PLURAL:$1|一行|多行}}有無效嘅表示式，" .
+	"請響保存呢版之前先將{{PLURAL:$1|佢|佢哋}}修正:\n",
+),
+
+'zh-hans' => array(
+	'spam-blacklist' => '
+ # 跟这个表合符的外部 URL 当加入时会被封锁。
+ # 这个表只是会影响到这个wiki；请同时参阅全域黑名单。
+ # 要参看注解请看 http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- 请完全地留下这行 --> <pre>
+#
+# 语法像下面这样:
+#   * 每一个由 "#" 字元开头的行，到结尾是一个注解
+#   * 每个非空白行是一个标准表示式碎片，只是跟里面的URL端核对
+
+ #</pre> <!-- 请完全地留下这行 -->',
+	'spam-whitelist' => '
+ #<!-- 请完全地留下这行 --> <pre>
+# 跟这个表合符的外部 URL ，即使在黑名单项目中封锁，
+# 都*不会*被封锁。
+#
+# 语法像下面这样:
+#   * 每一个由 "#" 字元开头的行，到结尾是一个注解
+#   * 每个非空白行是一个标准表示式碎片，只是跟里面的URL端核对
+
+ #</pre> <!-- 请完全地留下这行 -->',
+	'spam-invalid-lines' =>
+	"以下在灌水黑名单的{{PLURAL:$1|一行|多行}}有无效的表示式，" .
+	"请在保存这页前先将{{PLURAL:$1|它|它们}}修正:\n",
+),
+
+'zh-hant' => array(
+	'spam-blacklist' => '
+ # 跟這個表合符的外部 URL 當加入時會被封鎖。
+ # 這個表只是會影響到這個wiki；請同時參閱全域黑名單。
+ # 要參看註解請看 http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- 請完全地留下這行 --> <pre>
+#
+# 語法像下面這樣:
+#   * 每一個由 "#" 字元開頭的行，到結尾是一個註解
+#   * 每個非空白行是一個標準表示式碎片，只是跟裡面的URL端核對
+
+ #</pre> <!-- 請完全地留下這行 -->',
+	'spam-whitelist' => '
+ #<!-- 請完全地留下這行 --> <pre>
+# 跟這個表合符的外部 URL ，即使在黑名單項目中封鎖，
+# 都*不會*被封鎖。
+#
+# 語法像下面這樣:
+#   * 每一個由 "#" 字元開頭的行，到結尾是一個註解
+#   * 每個非空白行是一個標準表示式碎片，只是跟裡面的URL端核對
+
+ #</pre> <!-- 請完全地留下這行 -->',
+	'spam-invalid-lines' =>
+	"以下在灌水黑名單的{{PLURAL:$1|一行|多行}}有無效的表示式，" .
+	"請在保存這頁前先將{{PLURAL:$1|它|它們}}修正:\n",
+),
+
+	);
+
+	$messages['zh'] = $messages['zh-hans'];
+	$messages['zh-cn'] = $messages['zh-hans'];
+	$messages['zh-hk'] = $messages['zh-hant'];
+	$messages['zh-sg'] = $messages['zh-hans'];
+	$messages['zh-tw'] = $messages['zh-hant'];
+	$messages['zh-yue'] = $messages['yue'];
 
 return $messages;
 }
