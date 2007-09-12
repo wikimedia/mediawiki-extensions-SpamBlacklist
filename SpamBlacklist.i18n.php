@@ -160,6 +160,34 @@ function efSpamBlacklistMessages() {
 	" en {{PLURAL:$1|moet|moeten}} gecorrigeerd worden alvorens de pagina kan worden opgeslagen:\n",
 ),
 
+'sv' => array(
+	'spam-blacklist' => '
+ # Den här listan stoppar matchande externa URL:er från att läggas till på sidor.
+ # Listan påverkar bara den här wikin; se även den globala svarta listan för spam.
+ # För dokumentation se http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- ändra inte den här raden --> <pre>
+#
+# Syntaxen är följande:
+#   * All text från ett #-tecken till radens slut är en kommentar
+#   * Alla icke-tomma rader används som reguljära uttryck för att matcha domännamn i URL:er
+
+ #</pre> <!-- ändra inte den här raden -->',
+	'spam-whitelist' => '
+ #<!-- ändra inte den här raden --> <pre>
+# Externa URL:er som matchar den här listan blockeras *inte*,
+# inte ens om de är blockerade genom den svarta listan för spam.
+#
+# Syntaxen är följande:
+#   * All text från ett #-tecken till radens slut är en kommentar
+#   * Alla icke-tomma rader används som reguljära uttryck för att matcha domännamn i URL:er
+
+ #</pre> <!-- ändra inte den här raden -->',
+	'spam-invalid-lines' =>
+	"Följande {{PLURAL:$1|rad|rader}} i svarta listan för spam" .
+	" innehåller inte något giltigt reguljärt uttryck " .
+	" och måste rättas innan sidan sparas:\n",
+),
+
 'yue' => array(
 	'spam-blacklist' => '
  # 同呢個表合符嘅外部 URL 當加入嗰陣會被封鎖。
