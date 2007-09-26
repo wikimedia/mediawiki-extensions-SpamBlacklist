@@ -93,17 +93,26 @@ function efSpamBlacklistMessages() {
 ),
 
 'hsb' => array(
-'blacklistedusername' => 'Wužiwarske mjeno na lisćinje zawrjenjow',
-'blacklistedusernametext' => 'Wubrane wužiwarske mjeno steji na [[MediaWiki:Usernameblacklist|lisćinje zawrjenych wužiwarskich mjenow]]. Prošu wubjer druhe mjeno.',
-'usernameblacklist' => '<pre>
-# Zapiski w tutej lisćinje budu so jako dźěl regularneho wuraza wužiwać, 
-# hdyž so wužiwarske mjena z registracije blokuja. Kóždy zapisk měł dźěl
-# nječisłowaneje lisćiny być, na př.
+'spam-blacklist' => ' # Eksterne URL, kotrež su w lisćinje wobsahowane, blokuja składowanje strony.
+ # Tuta lisćina nastupa jenož tutón Wiki; hlej tež globalnu čornu lisćinu.
+ # Za dokumentaciju hlej http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- Tuta linka njesmě so změnić! --> <pre>
 #
-# * Foo
-# * [Bb]ar
-</pre>',
-'usernameblacklist-invalid-lines' => '{{PLURAL:$1|slědowaca linka|slědowacej lince|slědowace linki|slědowacych linkow}} {{PLURAL:$1|je|stej|su|je}}w lisćinje njewitanych wužiwarskich mjenow je {{PLURAL:$1|njepłaćiwa|njepłaćiwje|njepłaćiwe|njepłaćiwe}}; prošu skoriguj {{PLURAL:$1|ju|jej|je|je}} před składowanjom:',
+# Syntaksa:
+#   * Wšitko wot znamjenja "#" hač ke kóncej linki je komentar
+#   * Kóžda njeprózdna linka je regularny wuraz, kotryž so přećiwo mjenu hosta w URL pruwuje.
+
+ #</pre> <!-- Tuta linka njesmě so změnić! -->',
+'spam-whitelist' => ' #<!-- Tuta linka njesmě so změnić! --> <pre>
+# Eksterne URL, kotrež su w tutej lisćinje wobsahowane, njeblokuja składowanje strony, byrnjež
+# w globalnej abo lokalnej čornej lisćinje wobsahowane byli.
+#
+# Syntaksa:
+#   * Wšitko wot znamjenja "#" hač ke kóncej linki je komentar
+#   * Kóžda njeprózdna linka je regularny wuraz, kotryž so přećiwo mjenu hosta w URL pruwuje.
+
+ #</pre> <!-- Tuta linka njesmě so změnić! -->',
+'spam-invalid-lines' => '{{PLURAL:$1|slědowaca linka je njepłaćiwy regularny wuraz|slědowacych linkow je regularny wuraz|slědowace linki su regularne wurazy|slědowacej lince stej regularnej wurazaj}} a {{PLURAL:$1|dyrbi|dyrbi|dyrbja|dyrbjetej}} so korigować, prjedy hač so strona składuje:',
 ),
 
 'id' => array(
