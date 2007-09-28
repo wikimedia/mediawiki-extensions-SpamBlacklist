@@ -115,29 +115,6 @@ function efSpamBlacklistMessages() {
 'spam-invalid-lines' => '{{PLURAL:$1|slědowaca linka je njepłaćiwy regularny wuraz|slědowacych linkow je regularny wuraz|slědowace linki su regularne wurazy|slědowacej lince stej regularnej wurazaj}} a {{PLURAL:$1|dyrbi|dyrbi|dyrbja|dyrbjetej}} so korigować, prjedy hač so strona składuje:',
 ),
 
-'id' => array(
-	'spam-blacklist' => '
- # Pranala luar yang cocok dengan daftar ini akan diblok ketika ditambahkan ke suatu halaman.
- # Daftar ini hanya mempengaruhi wiki ini saja; lihat pula daftar hitam global.
- # Untuk dokumentasi lihat http://www.mediawiki.org/wiki/Extension:SpamBlacklist
- # <!-- jangan ubah baris ini --> <pre>
-#
-# Sintaks:
-# * Semua baris yang dimulai dengan sebuah karakter "#" akan dianggap sebagai komentar
-# * Semua baris yang tidak kosong adalah sebuah fragmen regex yang hanya cocok dengan host di dalam URL.
-
- #</pre> <!-- jangan ubah baris ini -->',
-	'spam-whitelist' => '
- #<!-- jangan ubah baris ini --> <pre>
-# Pranala luar yang cocok dengan daftar ini *tidak* akan diblok walaupun terdaftar dalam daftar hitam.
-#
-# Sintaks:
-#   * Semua baris yang dimulai dengan sebuah karakter "#" akan dianggap sebagai komentar
-#   * Semua baris yang tidak kosong adalah sebuah fragmen regex yang hanya cocok dengan host di dalam URL.
-
- #</pre> <!-- jangan ubah baris ini -->'
-),
-
 'nl' => array(
 	'spam-blacklist' => '
  # Externe URL\'s die voldoen aan deze lijst worden geweigerd bij het
