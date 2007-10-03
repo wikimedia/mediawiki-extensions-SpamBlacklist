@@ -69,7 +69,7 @@ function wfSpamBlacklistValidate( $editPage, $text, $section, &$hookError ) {
 	
 	$spamObj = wfSpamBlacklistObject();
 	if( !$spamObj->isLocalSource( $editPage->mTitle ) ) {
-		wfDebug( "Spam blacklist validator: [[$thisPageName]] not a local blacklist\n" );
+		wfDebugLog( 'SpamBlacklist', "Spam blacklist validator: [[$thisPageName]] not a local blacklist\n" );
 		return true;
 	}
 
@@ -77,7 +77,7 @@ function wfSpamBlacklistValidate( $editPage, $text, $section, &$hookError ) {
 
 	$badLines = SpamRegexBatch::getBadLines( $lines );
 	if( $badLines ) {
-		wfDebug( "Spam blacklist validator: [[$thisPageName]] given invalid input lines: " .
+		wfDebugLog( 'SpamBlacklist', "Spam blacklist validator: [[$thisPageName]] given invalid input lines: " .
 			implode( ', ', $badLines ) . "\n" );
 
 		$badList = "*<tt>" .
@@ -92,7 +92,7 @@ function wfSpamBlacklistValidate( $editPage, $text, $section, &$hookError ) {
 			"<br clear='all' />\n";
 		return true;
 	} else {
-		wfDebug( "Spam blacklist validator: [[$thisPageName]] ok or empty blacklist\n" );
+		wfDebugLog( 'SpamBlacklist', "Spam blacklist validator: [[$thisPageName]] ok or empty blacklist\n" );
 		return true;
 	}
 }

@@ -86,11 +86,11 @@ class SpamBlacklist {
 		$fname = 'SpamBlacklist::getRegex';
 		wfProfileIn( $fname );
 
-		wfDebug( "Loading spam regex..." );
+		wfDebugLog( 'SpamBlacklist', "Loading spam regex..." );
 
 		if ( count( $this->files ) == 0 ){
 			# No lists
-			wfDebug( "no files specified\n" );
+			wfDebugLog( 'SpamBlacklist', "no files specified\n" );
 			wfProfileOut( $fname );
 			return array();
 		}
@@ -99,7 +99,7 @@ class SpamBlacklist {
 		// server where not all wikis have the same configuration.
 		$cachedRegexes = $wgMemc->get( "$wgDBname:spam_blacklist_regexes" );
 		if( is_array( $cachedRegexes ) ) {
-			wfDebug( "Got shared spam regexes from cache\n" );
+			wfDebugLog( 'SpamBlacklist', "Got shared spam regexes from cache\n" );
 			wfProfileOut( $fname );
 			return $cachedRegexes;
 		}
@@ -113,13 +113,13 @@ class SpamBlacklist {
 	function clearCache() {
 		global $wgMemc, $wgDBname;
 		$wgMemc->delete( "$wgDBname:spam_blacklist_regexes" );
-		wfDebug( "Spam blacklist local cache cleared.\n" );
+		wfDebugLog( 'SpamBlacklist', "Spam blacklist local cache cleared.\n" );
 	}
 	
 	function buildSharedBlacklists() {
 		$regexes = array();
 		# Load lists
-		wfDebug( "Constructing spam blacklist\n" );
+		wfDebugLog( 'SpamBlacklist', "Constructing spam blacklist\n" );
 		foreach ( $this->files as $fileName ) {
 			if ( preg_match( '/^DB: ([\w-]*) (.*)$/', $fileName, $matches ) ) {
 				$text = $this->getArticleText( $matches[1], $matches[2] );
@@ -127,7 +127,7 @@ class SpamBlacklist {
 				$text = $this->getHttpText( $fileName );
 			} else {
 				$text = file_get_contents( $fileName );
-				wfDebug( "got from file $fileName\n" );
+				wfDebugLog( 'SpamBlacklist', "got from file $fileName\n" );
 			}
 			
 			// Build a separate batch of regexes from each source.
@@ -159,15 +159,15 @@ class SpamBlacklist {
 		$warning = $messageMemc->get( $warningKey );
 
 		if ( !is_string( $httpText ) || ( !$warning && !mt_rand( 0, $this->warningChance ) ) ) {
-			wfDebug( "Loading spam blacklist from $fileName\n" );
+			wfDebugLog( 'SpamBlacklist', "Loading spam blacklist from $fileName\n" );
 			$httpText = $this->getHTTP( $fileName );
 			if( $httpText === false ) {
-				wfDebug( "Error loading blacklist from $fileName\n" );
+				wfDebugLog( 'SpamBlacklist', "Error loading blacklist from $fileName\n" );
 			}
 			$messageMemc->set( $warningKey, 1, $this->warningTime );
 			$messageMemc->set( $key, $httpText, $this->expiryTime );
 		} else {
-			wfDebug( "Got spam blacklist from HTTP cache for $fileName\n" );
+			wfDebugLog( 'SpamBlacklist', "Got spam blacklist from HTTP cache for $fileName\n" );
 		}
 		return $httpText;
 	}
@@ -212,7 +212,7 @@ class SpamBlacklist {
 
 			# Strip whitelisted URLs from the match
 			if( is_array( $whitelists ) ) {
-				wfDebug( "Excluding whitelisted URLs from " . count( $whitelists ) .
+				wfDebugLog( 'SpamBlacklist', "Excluding whitelisted URLs from " . count( $whitelists ) .
 					" regexes: " . implode( ', ', $whitelists ) . "\n" );
 				foreach( $whitelists as $regex ) {
 					wfSuppressWarnings();
@@ -222,7 +222,7 @@ class SpamBlacklist {
 			}
 
 			# Do the match
-			wfDebug( "Checking text against " . count( $blacklists ) .
+			wfDebugLog( 'SpamBlacklist', "Checking text against " . count( $blacklists ) .
 				" regexes: " . implode( ', ', $blacklists ) . "\n" );
 			$retVal = false;
 			foreach( $blacklists as $regex ) {
@@ -230,7 +230,7 @@ class SpamBlacklist {
 				$check = preg_match( $regex, $links, $matches );
 				wfRestoreWarnings();
 				if( $check ) {
-					wfDebug( "Match!\n" );
+					wfDebugLog( 'SpamBlacklist', "Match!\n" );
 					EditPage::spamPage( $matches[0] );
 					$retVal = true;
 					break;
@@ -251,7 +251,7 @@ class SpamBlacklist {
 	 * @param string $article
 	 */
 	function getArticleText( $db, $article ) {
-		wfDebug( "Fetching local spam blacklist from '$article' on '$db'...\n" );
+		wfDebugLog( 'SpamBlacklist', "Fetching local spam blacklist from '$article' on '$db'...\n" );
 		global $wgDBname;
 		$dbr = wfGetDB( DB_READ );
 		$dbr->selectDB( $db );
@@ -386,7 +386,7 @@ class SpamRegexBatch {
 			// slower if there's a lot of blacklist lines, but one
 			// broken line won't take out hundreds of its brothers.
 			if( $fileName ) {
-				wfDebug( "Spam blacklist warning: bogus line in $fileName\n" );
+				wfDebugLog( 'SpamBlacklist', "Spam blacklist warning: bogus line in $fileName\n" );
 			}
 			return SpamRegexBatch::buildRegexes( $lines, 0 );
 		}
