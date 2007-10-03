@@ -216,8 +216,12 @@ class SpamBlacklist {
 					" regexes: " . implode( ', ', $whitelists ) . "\n" );
 				foreach( $whitelists as $regex ) {
 					wfSuppressWarnings();
-					$links = preg_replace( $regex, '', $links );
+					$newLinks = preg_replace( $regex, '', $links );
 					wfRestoreWarnings();
+					if( is_string( $newLinks ) ) {
+						// If there wasn't a regex error, strip the matching URLs
+						$links = $newLinks;
+					}
 				}
 			}
 
