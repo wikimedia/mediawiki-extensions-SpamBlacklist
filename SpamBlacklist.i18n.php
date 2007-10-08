@@ -41,6 +41,29 @@ function efSpamBlacklistMessages() {
 	" and {{PLURAL:$1|needs|need}} to be corrected before saving the page:\n",
 ),
 
+'ar' => array(
+'spam-blacklist' => ' # الوصلات الخارجية التي تطابق هذه القائمة سيتم منعها عند إضافتها لصفحة.
+ # هذه القائمة تؤثر فقط على هذه الويكي؛ ارجع أيضا للقائمة السوداء العامة.
+ # للوثائق انظر http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- leave this line exactly as it is --> <pre>
+#
+# الصيغة كالتالي:
+#   * كل شيء من علامة "#" إلى آخر السطر هو تعليق
+#   * كل سطر غير فارغ هو تعبير منتظم يوافق فقط المضيفين داخل الوصلات الخارجية
+
+ #</pre> <!-- leave this line exactly as it is -->',
+'spam-whitelist' => ' #<!-- leave this line exactly as it is --> <pre>
+# الوصلات الخارجية التي تطابق هذه القائمة *لن* يتم منعها حتى لو
+# كانت ممنوعة بواسطة مدخلات القائمة السوداء.
+#
+# الصيغة كالتالي:
+#   * كل شيء من علامة "#" إلى آخر السطر هو تعليق
+#   * كل سطر غير فارغ هو تعبير منتظم يطابق فقط المضيفين داخل الوصلات الخارجية
+
+ #</pre> <!-- leave this line exactly as it is -->',
+'spam-invalid-lines' => '{{PLURAL:$1|السطر التالي|السطور التالية}}  في قائمة السبام السوداء هي {{PLURAL:$1|تعبير منتظم غير صحيح|تعبيرات منتظمة غير صحيحة}}  و {{PLURAL:$1|يحتاج|تحتاج}} أن يتم تصحيحها قبل حفظ الصفحة:',
+),
+
 'de' => array(
 	'spam-blacklist' => '
  # Externe URLs, die in dieser Liste enthalten sind, blockieren das Speichern der Seite.
