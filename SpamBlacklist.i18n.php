@@ -169,6 +169,21 @@ function efSpamBlacklistMessages() {
 	" en {{PLURAL:$1|moet|moeten}} gecorrigeerd worden alvorens de pagina kan worden opgeslagen:\n",
 ),
 
+'sk' => array(
+'spam-whitelist' => '#<!-- leave this line exactly as it is --> 
+<pre> 
+
+# Externé URL zodpovedajúce výrazom v tomto zozname *nebudú* zablokované, ani keby
+# ich zablokovali položky z čiernej listiny.
+#
+# Syntax je nasledovná: 
+#   * Všetko od znaku # do konca riadka je komentár
+#   * Každý neprázdny riadok je regulárny výraz, podľa ktorého sa budú kontrolovať názvy domén
+
+
+</pre> <!-- leave this line exactly as it is -->',
+),
+
 'sv' => array(
 	'spam-blacklist' => '
  # Den här listan stoppar matchande externa URL:er från att läggas till på sidor.
