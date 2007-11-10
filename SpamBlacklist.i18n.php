@@ -192,6 +192,12 @@ function efSpamBlacklistMessages() {
 	" en {{PLURAL:$1|moet|moeten}} gecorrigeerd worden alvorens de pagina kan worden opgeslagen:\n",
 ),
 
+'oc' => array(
+	'spam-blacklist' => '# Los ligams extèrnes que fan partida d\'aquesta lista seràn blocats al moment de lor insercion dins una pagina. # Aquesta lista concernís pas que Wikinews ; referissetz-vos tanben a la lista negra generala de Meta. # La documentacion se tròba a l’adreça seguenta : http://www.mediawiki.org/wiki/Extension:SpamBlacklist # <!--Daissatz aquesta linha tala coma es --> <pre> # # La sintaxi es la seguenta # * Tot tèxt que seguís lo « # » es considerat coma un comentari. # * Tota linha pas voida es un fragment regex que concernís pas que los ligams ipertèxtes. #</pre> <!--Daissatz aquesta linha tala coma es -->',
+	'spam-whitelist' => '# Los ligams extèrnes que fan partida d\'aquesta lista seràn blocas al moment de lor insercion dins una pagina. # Aquesta lista concernís pas que Wikinews ; referissetz-vos tanben a la lista negra generala de Meta. # La documentacion se tròba a l’adreça seguenta : http://www.mediawiki.org/wiki/Extension:SpamBlacklist # <!--Daissatz aquesta linha tala coma es --> <pre> # # La sintaxi es la seguenta # * Tot tèxt que seguís lo « # » es considerat coma un comentari. # * Tota linha pas voida es un fragment regex que concernís pas que los ligams ipertèxtes. #</pre> <!--Daissatz aquesta linha tala coma es -->',
+	'spam-invalid-lines' => '{{PLURAL:$1|La linha seguenta |Las linhas seguentas}} de la lista dels spams {{PLURAL:$1|es redigida|son redigidas}} de biais incorrècte e {{PLURAL:$1|necessita|necessitan}} las correccions necessàrias abans tota salvagarda de la pagina :',
+),
+
 'pl' => array(
 	'spam-blacklist' => ' # Linki zewnętrzne pasujące do tej listy będą blokowane przed dodawaniem do stron.
  # Ta lista dotyczy tylko tej wiki; istnieje też globalna czarna lista.
