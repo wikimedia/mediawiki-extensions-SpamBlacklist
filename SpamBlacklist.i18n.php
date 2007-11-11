@@ -119,14 +119,14 @@ function efSpamBlacklistMessages() {
 	'spam-blacklist' => ' # As ligazóns externas que coincidan con esta listaxe serán bloqueadas cando se engadan a unha páxina.
  # Esta listaxe afecta unicamente a este wiki; consulte tamén a lista negra global.
  # Para documentación vexa http://www.mediawiki.org/wiki/Extension:SpamBlacklist
- #<!-- leave this line exactly as it is --> <pre>
+ #<!-- deixe esta liña exactamente como está --> <pre>
 #
 # A sintaxe é a que segue:
 #   * Todo, desde o carácter "#" até o final da liña é un comentario
 #   * Toda liña que non estea en branco é un fragmento de expresión regular que só coincide con hosts dentro de URLs
 
- #</pre> <!-- leave this line exactly as it is -->',
-	'spam-whitelist' => ' #<!-- leave this line exactly as it is --> <pre>
+ #</pre> <!-- deixe esta liña exactamente como está -->',
+	'spam-whitelist' => ' #<!-- deixe esta liña exactamente como está --> <pre>
  # As ligazóns externas que coincidan con esta listaxe *non* serán bloqueadas mesmo se
  # foren bloqueadas mediante entradas na lista negra.
 #
@@ -134,7 +134,7 @@ function efSpamBlacklistMessages() {
 #   * Todo, desde o carácter "#" até o final da liña é un comentario
 #   * Toda liña que non estea en branco é un fragmento de expresión regular que só coincide con hosts dentro de URLs
 
- #</pre> <!-- leave this line exactly as it is -->',
+ #</pre> <!-- deixe esta liña exactamente como está -->',
 	'spam-invalid-lines' => '{{PLURAL:$1|A liña seguinte da lista negra de spam é|As liñas seguintes da lista negra de spam son}} {{PLURAL:$1|unha expresión regular|expresións regulares}} e {{PLURAL:$1|haina|hainas}} que corrixir antes de gardar a páxina:',
 ),
 
