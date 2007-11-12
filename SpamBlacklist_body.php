@@ -1,6 +1,8 @@
 <?php
 
-if ( defined( 'MEDIAWIKI' ) ) {
+if ( !defined( 'MEDIAWIKI' ) ) {
+	exit;
+}
 
 class SpamBlacklist {
 	var $regexes = false;
@@ -11,8 +13,6 @@ class SpamBlacklist {
 	var $warningChance = 100;
 
 	function SpamBlacklist( $settings = array() ) {
-		global $IP;
-
 		foreach ( $settings as $name => $value ) {
 			$this->$name = $value;
 		}
@@ -180,7 +180,15 @@ class SpamBlacklist {
 		return SpamRegexBatch::regexesFromMessage( 'spam-whitelist' );
 	}
 
-	function filter( &$title, $text, $section ) {
+	/**
+	 * @param Title $title
+	 * @param string $text Text of section, or entire text if $editPage!=false
+	 * @param string $section Section number or name
+	 * @param EditPage $editPage EditPage if EditFilterMerged was called, false otherwise
+	 * @return True if the edit should not be allowed, false otherwise
+	 * If the return value is true, an error will have been sent to $wgOut
+	 */
+	function filter( &$title, $text, $section, $editPage = false ) {
 		global $wgArticle, $wgVersion, $wgOut, $wgParser, $wgUser;
 
 		$fname = 'wfSpamBlacklistFilter';
@@ -205,9 +213,14 @@ class SpamBlacklist {
 		if ( count( $blacklists ) ) {
 			# Run parser to strip SGML comments and such out of the markup
 			# This was being used to circumvent the filter (see bug 5185)
-			$options = new ParserOptions();
-			$text = $wgParser->preSaveTransform( $text, $title, $wgUser, $options );
-			$out = $wgParser->parse( $text, $title, $options );
+			if ( $editPage ) {
+				$editInfo = $editPage->mArticle->prepareTextForEdit( $text );
+				$out = $editInfo->output;
+			} else {
+				$options = new ParserOptions();
+				$text = $wgParser->preSaveTransform( $text, $title, $wgUser, $options );
+				$out = $wgParser->parse( $text, $title, $options );
+			}
 			$links = implode( "\n", array_keys( $out->getExternalLinks() ) );
 
 			# Strip whitelisted URLs from the match
@@ -235,7 +248,11 @@ class SpamBlacklist {
 				wfRestoreWarnings();
 				if( $check ) {
 					wfDebugLog( 'SpamBlacklist', "Match!\n" );
-					EditPage::spamPage( $matches[0] );
+					if ( $editPage ) {
+						$editPage->spamPage( $matches[0] );
+					} else {
+						EditPage::spamPage( $matches[0] );
+					}
 					$retVal = true;
 					break;
 				}
@@ -293,6 +310,50 @@ class SpamBlacklist {
 		}
 		wfRestoreWarnings();
 		return $text;
+	}
+
+	/**
+	 * Confirm that a local blacklist page being saved is valid,
+	 * and toss back a warning to the user if it isn't.
+	 * This is an EditFilter hook.
+	 */
+	function validate( $editPage, $text, $section, &$hookError ) {
+		$thisPageName = $editPage->mTitle->getPrefixedDBkey();
+		
+		if( !$this->isLocalSource( $editPage->mTitle ) ) {
+			wfDebugLog( 'SpamBlacklist', "Spam blacklist validator: [[$thisPageName]] not a local blacklist\n" );
+			return true;
+		}
+
+		$lines = explode( "\n", $text );
+
+		$badLines = SpamRegexBatch::getBadLines( $lines );
+		if( $badLines ) {
+			wfDebugLog( 'SpamBlacklist', "Spam blacklist validator: [[$thisPageName]] given invalid input lines: " .
+				implode( ', ', $badLines ) . "\n" );
+
+			$badList = "*<tt>" .
+				implode( "</tt>\n*<tt>",
+					array_map( 'wfEscapeWikiText', $badLines ) ) .
+				"</tt>\n";
+			$hookError =
+				"<div class='errorbox'>" .
+				wfMsgExt( 'spam-invalid-lines', array( 'parsemag' ), count( $badLines ) ) .
+				$badList .
+				"</div>\n" .
+				"<br clear='all' />\n";
+			return true;
+		} else {
+			wfDebugLog( 'SpamBlacklist', "Spam blacklist validator: [[$thisPageName]] ok or empty blacklist\n" );
+			return true;
+		}
+	}
+
+	function onArticleSave( &$article, &$user, $text, $summary, $isminor, $iswatch, $section ) {
+		if( $this->isLocalSource( $article->getTitle() ) ) {
+			$this->clearCache();
+		}
+		return true;
 	}
 }
 
@@ -449,6 +510,4 @@ class SpamRegexBatch {
 		}
 	}
 }
-
-} # End invocation guard
 

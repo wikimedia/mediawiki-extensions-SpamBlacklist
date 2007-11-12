@@ -3,15 +3,9 @@
  * Internationalisation file for SpamBlacklist extension.
  *
  * @addtogroup Extensions
-*/
-
-/**
- * Prepare extension messages
- *
- * @return array
  */
-function efSpamBlacklistMessages() {
-	$messages = array(
+
+$messages = array(
 
 'en' => array(
 	'spam-blacklist' => '
@@ -351,14 +345,11 @@ function efSpamBlacklistMessages() {
 	"請在保存這頁前先將{{PLURAL:$1|它|它們}}修正:\n",
 ),
 
-	);
+);
 
-	$messages['zh'] = $messages['zh-hans'];
-	$messages['zh-cn'] = $messages['zh-hans'];
-	$messages['zh-hk'] = $messages['zh-hant'];
-	$messages['zh-sg'] = $messages['zh-hans'];
-	$messages['zh-tw'] = $messages['zh-hant'];
-	$messages['zh-yue'] = $messages['yue'];
-
-return $messages;
-}
+$messages['zh'] = $messages['zh-hans'];
+$messages['zh-cn'] = $messages['zh-hans'];
+$messages['zh-hk'] = $messages['zh-hant'];
+$messages['zh-sg'] = $messages['zh-hans'];
+$messages['zh-tw'] = $messages['zh-hant'];
+$messages['zh-yue'] = $messages['yue'];
