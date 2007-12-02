@@ -132,6 +132,29 @@ $messages = array(
 	'spam-invalid-lines' => '{{PLURAL:$1|A liña seguinte da lista negra de spam é|As liñas seguintes da lista negra de spam son}} {{PLURAL:$1|unha expresión regular|expresións regulares}} e {{PLURAL:$1|haina|hainas}} que corrixir antes de gardar a páxina:',
 ),
 
+'hr' => array(
+	'spam-blacklist' => ' # Vanjske URLovi koji budu pronađeni pomoću ovog popisa nije moguće snimiti na stranicu wikija.
+ # Ovaj popis utiče samo na ovaj wiki; provjerite globalnu "crnu listu".
+ # Za dokumentaciju pogledajte http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- leave this line exactly as it is --> <pre>
+#
+# Rabi se slijedeća sintaksa:
+#   * Sve poslije "#" znaka do kraja linije je komentar
+#   * svaki neprazni redak je dio regularnog izraza (\'\'regex fragment\'\') koji odgovara imenu poslužitelja u URL-u
+
+ #</pre> <!-- leave this line exactly as it is -->',
+	'spam-whitelist' => ' #<!-- leave this line exactly as it is --> <pre>
+# Vanjski URLovi koji budu pronađeni pomoću ovog popisa nisu blokirani
+# čak iako se nalaze na "crnom popisu".
+#
+# Rabi se slijedeća sintaksa:
+#   * Sve poslije "#" znaka do kraja linije je komentar
+#   * svaki neprazni redak je dio regularnog izraza (\'\'regex fragment\'\') koji odgovara imenu poslužitelja u URL-u
+
+ #</pre> <!-- leave this line exactly as it is -->',
+	'spam-invalid-lines' => '{{PLURAL:$1|Slijedeći redak|Slijedeći redovi|Slijedeći redovi}} "crnog popisa" spama {{PLURAL:$1|je|su}} nevaljani {{PLURAL:$1|regularan izraz|regularni izrazi|regularni izrazi}} i {{PLURAL:$1|mora|moraju|moraju}} biti ispravljeni prije snimanja ove stranice:',
+),
+
 'hsb' => array(
 	'spam-blacklist' => ' # Eksterne URL, kotrež su w lisćinje wobsahowane, blokuja składowanje strony.
  # Tuta lisćina nastupa jenož tutón Wiki; hlej tež globalnu čornu lisćinu.
