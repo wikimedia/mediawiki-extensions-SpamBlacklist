@@ -27,7 +27,6 @@ if ( defined( 'MW_SUPPORTS_EDITFILTERMERGED' ) ) {
 
 $wgExtensionCredits['other'][] = array(
 	'name' => 'SpamBlacklist',
-	'version'     => '1.1',
 	'author' => 'Tim Starling',
 	'url' => 'http://www.mediawiki.org/wiki/Extension:SpamBlacklist',
 	'description' => 'Regex-based anti-spam tool',
@@ -112,3 +111,4 @@ function wfSpamBlacklistArticleSave( &$article, &$user, $text, $summary, $ismino
 	$spamObj = wfSpamBlacklistObject();
 	return $spamObj->onArticleSave( &$article, &$user, $text, $summary, $isminor, $iswatch, $section );
 }
+
