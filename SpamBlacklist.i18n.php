@@ -178,35 +178,33 @@ $messages = array(
 'spam-invalid-lines' => '{{PLURAL:$1|slědowaca linka je njepłaćiwy regularny wuraz|slědowacych linkow je regularny wuraz|slědowace linki su regularne wurazy|slědowacej lince stej regularnej wurazaj}} a {{PLURAL:$1|dyrbi|dyrbi|dyrbja|dyrbjetej}} so korigować, prjedy hač so strona składuje:',
 ),
 
+/** Dutch (Nederlands)
+ * @author SPQRobin
+ */
 'nl' => array(
-	'spam-blacklist' => '
- # Externe URL\'s die voldoen aan deze lijst worden geweigerd bij het
+	'spam-blacklist'     => ' # Externe URL\'s die voldoen aan deze lijst worden geweigerd bij het
  # toevoegen aan een pagina. Deze lijst heeft alleen invloed op deze wiki.
  # Er bestaat ook een globale zwarte lijst.
  # Documentatie: http://www.mediawiki.org/wiki/Extension:SpamBlacklist
- #<!-- leave this line exactly as it is --> <pre>
+ #<!-- laat deze lijn zoals hij is --> <pre>
 #
-# De syntaxis is als volgt:
+# De syntax is als volgt:
 #   * Alles vanaf het karakter "#" tot het einde van de regel is opmerking
-#   * Iedere niet-lege regel is een fragment van een regulier expressie die
+#   * Iedere niet-lege regel is een fragment van een reguliere uitdrukking die
 #     alleen van toepassing is op hosts binnen URL\'s.
 
- #</pre> <!-- leave this line exactly as it is -->',
-	'spam-whitelist' => '
- #<!-- leave this line exactly as it is --> <pre>
+ #</pre> <!-- laat deze lijn zoals hij is -->',
+	'spam-whitelist'     => ' #<!-- laat deze lijn zoals hij is --> <pre>
 # Externe URL\'s die voldoen aan deze lijst, worden *nooit* geweigerd, al
 # zouden ze geblokkeerd moeten worden door regels uit de zwarte lijst.
 #
 # De syntaxis is als volgt:
 #   * Alles vanaf het karakter "#" tot het einde van de regel is opmerking
-#   * Iedere niet-lege regel is een fragment van een regulier expressie die
+#   * Iedere niet-lege regel is een fragment van een reguliere uitdrukking die
 #     alleen van toepassing is op hosts binnen URL\'s.
 
- #</pre> <!-- leave this line exactly as it is -->',
-	'spam-invalid-lines' =>
-	"De volgende {{PLURAL:$1|regel|regels}} van de zwarte lijst{{PLURAL:$1|is een|zijn}} " .
-	" onjuiste reguliere {{PLURAL:$1|expressie|expressies}} " .
-	" en {{PLURAL:$1|moet|moeten}} gecorrigeerd worden alvorens de pagina kan worden opgeslagen:\n",
+ #</pre> <!-- laat deze lijn zoals hij is -->',
+	'spam-invalid-lines' => 'De volgende {{PLURAL:$1|regel|regels}} van de zwarte lijst {{PLURAL:$1|is een|zijn}} onjuiste reguliere {{PLURAL:$1|uitdrukking|uitdrukkingen}}  en {{PLURAL:$1|moet|moeten}} verbeterd worden alvorens de pagina kan worden opgeslagen:',
 ),
 
 'oc' => array(
