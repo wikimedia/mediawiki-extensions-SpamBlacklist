@@ -318,8 +318,21 @@ $messages = array(
 	'spam-invalid-lines' => '{{PLURAL:$1|Следующая строка чёрного списка ссылок содержит ошибочное регулярное выражение и должна быть исправлена|||Следующие строки чёрного списка ссылок содержат ошибочные регулярные выражения и должны быть исправлены}} перед сохранением:',
 ),
 
+/** Slovak (Slovenčina)
+ * @author Helix84
+ */
 'sk' => array(
-	'spam-whitelist' => '#<!-- leave this line exactly as it is --> 
+	'spam-blacklist'     => '# Externé URLs zodpovedajúce tomuto zoznamu budú zablokované pri pokuse pridať ichna stránku.
+# Tento zoznam ovplyvňuje iba túto wiki; pozrite sa tiež na globálnu čiernu listinu.
+# Dokumentáciu nájdete na  http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+#<!-- nechajte tento riadok presne ako je --> <pre>
+#
+# Syntax je nasledovná:
+#  * Všetko od znaku „#“ do konca riadka je komentár
+#  * Každý neprázdny riadok je časť regulárneho výrazu, ktorému budú zodpovedať iba domény z URL
+
+#</pre> <!-- nechajte tento riadok presne ako je -->',
+	'spam-whitelist'     => '#<!-- leave this line exactly as it is --> 
 <pre> 
 
 # Externé URL zodpovedajúce výrazom v tomto zozname *nebudú* zablokované, ani keby
@@ -331,6 +344,7 @@ $messages = array(
 
 
 </pre> <!-- leave this line exactly as it is -->',
+	'spam-invalid-lines' => '{{PLURAL:$1|Nasledovný riadok|Nasledovné riadky}} čiernej listiny spamu {{PLURAL:$1|je neplatný regulárny výraz|sú neplatné regulárne výrazy}} a je potrebné {{PLURAL:$1|ho|ich}} opraviť pred uložením stránky:',
 ),
 
 /** Seeltersk (Seeltersk)
