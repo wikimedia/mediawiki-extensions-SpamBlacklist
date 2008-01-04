@@ -58,6 +58,13 @@ $messages = array(
 'spam-invalid-lines' => '{{PLURAL:$1|السطر التالي|السطور التالية}}  في قائمة السبام السوداء هي {{PLURAL:$1|تعبير منتظم غير صحيح|تعبيرات منتظمة غير صحيحة}}  و {{PLURAL:$1|يحتاج|تحتاج}} أن يتم تصحيحها قبل حفظ الصفحة:',
 ),
 
+/** Czech (Česky)
+ * @author Li-sung
+ */
+'cs' => array(
+	'spam-invalid-lines' => 'Na černé listině spamu {{PLURAL:$1|je následující řádka neplatný regulární výraz|jsou následující řádky neplatné regulární výrazy|jsou následující řádky regulární výrazy}} a je nutné {{PLURAL:$1|ji|je|je}} před uložením stránky opravit :',
+),
+
 'de' => array(
 	'spam-blacklist' => '
  # Externe URLs, die in dieser Liste enthalten sind, blockieren das Speichern der Seite.
