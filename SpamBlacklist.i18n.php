@@ -185,6 +185,30 @@ $messages = array(
 'spam-invalid-lines' => '{{PLURAL:$1|slědowaca linka je njepłaćiwy regularny wuraz|slědowacych linkow je regularny wuraz|slědowace linki su regularne wurazy|slědowacej lince stej regularnej wurazaj}} a {{PLURAL:$1|dyrbi|dyrbi|dyrbja|dyrbjetej}} so korigować, prjedy hač so strona składuje:',
 ),
 
+/** Hungarian (Magyar)
+ * @author Bdanee
+ */
+'hu' => array(
+	'spam-blacklist'     => '  # A lista elemeire illeszkedő külső hivatkozások blokkolva lesznek
+  # A lista csak erre a wikire vonatkozik; a globális feketelistába is tedd bele.
+  # Dokumentációhoz lásd a http://www.mediawiki.org/wiki/Extension:SpamBlacklist oldalt (angolul)
+  #<!-- ezen a soron ne változtass --> <pre>
+#
+# A szintaktika a következő:
+#  * Minden a „#” karaktertől a sor végéig megjegyzésnek számít
+#  * Minden nem üres sor egy reguláris kifejezés darabja, amely csak az URL-ekben található kiszolgálókra illeszkedik',
+	'spam-whitelist'     => '  #<!-- ezen a soron ne változtass --> <pre>
+# A lista elemeire illeszkedő külső hivatkozások *nem* lesznek blokkolva, még
+# akkor sem, ha illeszkedik egy feketelistás elemre.
+#
+# A szintaktika a következő:
+#  * Minden a „#” karaktertől a sor végéig megjegyzésnek számít
+#  * Minden nem üres sor egy reguláris kifejezés darabja, amely csak az URL-ekben található kiszolgálókra illeszkedik
+
+  #</pre> <!-- ezen a soron ne változtass -->',
+	'spam-invalid-lines' => 'Az alábbi {{PLURAL:$1|sor hibás|sorok hibásak}} a spam elleni feketelistájában; {{PLURAL:$1|javítsd|javítsd őket}} mentés előtt:',
+),
+
 /** Italian (Italiano)
  * @author BrokenArrow
  */
