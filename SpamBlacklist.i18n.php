@@ -95,6 +95,30 @@ $messages = array(
 	| Die folgenden Zeilen in der Spam-Blacklist sind ungültige reguläre Ausdrücke. Sie müssen vor dem Speichern der Seite korrigiert werden}}:\n",
 ),
 
+# فارسی (Huji)
+'fa' => array(
+	'spam-blacklist'     => '  # از درج پیوندهای بیرونی که با این فهرست مطابقت کنند جلوگیری می‌شود.
+  # این فهرست فقط روی همین ویکی اثر دارد؛ به فهرست سیاه سراسری نیز مراجعه کنید.
+  # برای مستندات به http://www.mediawiki.org/wiki/Extension:SpamBlacklist مراجعه کنید
+  #<!-- این سطر را همان‌گونه که هست رها کنید --> <pre>
+# دستورات به این شکل هستند:
+#  * همه چیز از «#» تا پایان سطر به عنوان توضیح در نظر گرفته می‌شود
+#  * هر سطر از متن به عنوان یک دستور regex در نظر گرفته می‌شود که فقط  با نام میزبان در نشانی اینترنتی مطابقت داده می‌شود
+
+  #</pre> <!-- این سطر را همان‌گونه که هست رها کنید -->',
+	'spam-whitelist'     => '  #<!-- این سطر را همان‌گونه که هست رها کنید --> <pre>
+# از درج پیوندهای بیرونی که با این فهرست مطابقت کنند جلوگیری نمی‌شود حتی اگر
+# در فهرست سیاه قرار داشته باشند.
+#
+# دستورات به این شکل هستند:
+#  * همه چیز از «#» تا پایان سطر به عنوان توضیح در نظر گرفته می‌شود
+#  * هر سطر از متن به عنوان یک دستور regex در نظر گرفته می‌شود که فقط  با نام میزبان در نشانی اینترنتی مطابقت داده می‌شود
+
+  #</pre> <!-- این سطر را همان‌گونه که هست رها کنید -->',
+	'spam-invalid-lines' => '{{PLURAL:$1|سطر|سطرهای}} زیر در فهرست سیاه هرزنگاری دستورات regular expression غیرمجازی {{PLURAL:$1|است|هستند}} و قبل از ذخیره کردن صفحه باید اصلاح {{PLURAL:$1|شود|شوند}}:',
+
+),
+
 'fr' => array(
 	'spam-blacklist'     => ' # Les liens externes faisant partie de cette liste seront bloqués lors de leur insertion dans une page.
  # Cette liste ne concerne que Wikinews ; référez vous aussi à la liste noire générale de Méta.
