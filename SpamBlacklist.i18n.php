@@ -376,7 +376,7 @@ $messages['ru'] = array(
  * @author Helix84
  */
 $messages['sk'] = array(
-	'spam-blacklist'     => '# Externé URLs zodpovedajúce tomuto zoznamu budú zablokované pri pokuse pridať ichna stránku.
+	'spam-blacklist'     => '# Externé URLs zodpovedajúce tomuto zoznamu budú zablokované pri pokuse pridať ich na stránku.
 # Tento zoznam ovplyvňuje iba túto wiki; pozrite sa tiež na globálnu čiernu listinu.
 # Dokumentáciu nájdete na  http://www.mediawiki.org/wiki/Extension:SpamBlacklist
 #<!-- nechajte tento riadok presne ako je --> <pre>
@@ -386,13 +386,13 @@ $messages['sk'] = array(
 #  * Každý neprázdny riadok je časť regulárneho výrazu, ktorému budú zodpovedať iba domény z URL
 
 #</pre> <!-- nechajte tento riadok presne ako je -->',
-	'spam-whitelist'     => '#<!-- leave this line exactly as it is -->
-<pre>
+	'spam-whitelist'     => '#<!-- leave this line exactly as it is --> 
+<pre> 
 
 # Externé URL zodpovedajúce výrazom v tomto zozname *nebudú* zablokované, ani keby
 # ich zablokovali položky z čiernej listiny.
 #
-# Syntax je nasledovná:
+# Syntax je nasledovná: 
 #   * Všetko od znaku # do konca riadka je komentár
 #   * Každý neprázdny riadok je regulárny výraz, podľa ktorého sa budú kontrolovať názvy domén
 
