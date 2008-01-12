@@ -256,6 +256,77 @@ $messages['it'] = array(
 	'spam-invalid-lines' => "{{PLURAL:$1|La seguente riga|Le seguenti righe}} della blacklist dello spam {{PLURAL:$1|non è un'espressione regolare valida|non sono espressioni regolari valide}}; si prega di correggere {{PLURAL:$1|l'errore|gli errori}} prima di salvare la pagina.",
 );
 
+/** Kazakh (Қазақша)
+ * @author AlefZet
+ */
+$messages['kk-cyrl'] = array(
+	'spam-blacklist'     => '  # Осы тізімге сәйкес сыртқы URL жайлар бетке үстеуден бұғатталады. 
+  # Бұл тізім тек мындағы уикиге әсер етеді; тағы да ғаламдық қара тізімді қарап шығыңыз. 
+  # Құжаттама үшін http://www.mediawiki.org/wiki/Extension:SpamBlacklist бетін қараңыз
+  #<!-- бұл жолды болған жағдайымен қалдырыңыз --> <pre> 
+# 
+# Синтаксисі келесідей: 
+#  * «#» нышанынан бастап жол аяғына дейінгілерінің бүкілі мәндеме деп саналады
+#  * Бос емес әр жол тек URL жайлардың ішіндегі хосттарға сәйкес жүйелі айтылымдың (regex) бөлігі деп саналады
+
+  #</pre> <!-- бұл жолды болған жағдайымен қалдырыңыз -->',
+	'spam-whitelist'     => '  #<!-- бұл жолды болған жағдайымен қалдырыңыз --> <pre>
+# Осы тізімге сәйкес сыртқы URL жайлар *бұғатталмайды*,
+# (қара тізімдегі жазбамен бұғатталған болса да). 
+# 
+# Синтаксисі келесідей: 
+#  * «#» нышанынан бастап жол аяғына дейінгілерінің бүкілі мәндеме деп саналады
+#  * Бос емес әр жол тек URL жайлардың ішіндегі хосттарға сәйкес жүйелі айтылымдың (regex) бөлігі деп саналады
+
+  #</pre> <!-- бұл жолды болған жағдайымен қалдырыңыз -->',
+	'spam-invalid-lines' => 'Спам қара тізіміндегі келесі {{PLURAL:$1|жолда|жолдарда}} жарамсыз жүйелі {{PLURAL:$1|айтылым|айтылымдар}} бар, және бетті сақтаудың {{PLURAL:$1|бұны|бұларды}}  дұрыстау керек.',
+);
+$messages['kk-latn'] = array(
+	'spam-blacklist'     => '  # Osı tizimge säýkes sırtqı URL jaýlar betke üstewden buğattaladı. 
+  # Bul tizim tek mındağı wïkïge äser etedi; tağı da ğalamdıq qara tizimdi qarap şığıñız. 
+  # Qujattama üşin http://www.mediawiki.org/wiki/Extension:SpamBlacklist betin qarañız
+  #<!-- bul joldı bolğan jağdaýımen qaldırıñız --> <pre>
+# 
+# Sïntaksïsi kelesideý: 
+#  * «#» nışanınan bastap jol ayağına deýingileriniñ bükili mändeme dep sanaladı
+#  * Bos emes är jol tek URL jaýlardıñ işindegi xosttarğa säýkes jüýeli aýtılımdıñ (regex) böligi dep sanaladı
+
+  #</pre> <!-- bul joldı bolğan jağdaýımen qaldırıñız -->',
+	'spam-whitelist'     => '  #<!-- bul joldı bolğan jağdaýımen qaldırıñız --> <pre> 
+# Osı tizimge säýkes sırtqı URL jaýlar *buğattalmaýdı*,
+# (qara tizimdegi jazbamen buğattalğan bolsa da). 
+# 
+# Sïntaksïsi kelesideý: 
+#  * «#» nışanınan bastap jol ayağına deýingileriniñ bükili mändeme dep sanaladı
+#  * Bos emes är jol tek URL jaýlardıñ işindegi xosttarğa säýkes jüýeli aýtılımdıñ (regex) böligi dep sanaladı
+
+  #</pre> <!-- bul joldı bolğan jağdaýımen qaldırıñız -->',
+	'spam-invalid-lines' => 'Spam qara tizimindegi kelesi {{PLURAL:$1|jolda|joldarda}} jaramsız jüýeli {{PLURAL:$1|aýtılım|aýtılımdar}} bar, jäne betti saqtawdıñ {{PLURAL:$1|bunı|bulardı}}  durıstaw kerek.',
+);
+
+$messages['kk-arab'] = array(
+	'spam-blacklist'     => '  # وسى تىزىمگە سايكەس سىرتقى URL جايلار بەتكە ۇستەۋدەن بۇعاتتالادى. 
+  # بۇل ٴتىزىم تەك مىنداعى ۋىيكىيگە اسەر ەتەدى; تاعى دا عالامدىق قارا ٴتىزىمدى قاراپ شىعىڭىز. 
+  # قۇجاتتاما ٴۇشىن http://www.mediawiki.org/wiki/Extension:SpamBlacklist بەتىن قاراڭىز
+  #<!-- بۇل جولدى بولعان جاعدايىمەن قالدىرىڭىز --> <pre> 
+# 
+# سىينتاكسىيسى كەلەسىدەي: 
+#  * «#» نىشانىنان باستاپ جول اياعىنا دەيىنگىلەرىنىڭ بۇكىلى ماندەمە دەپ سانالادى
+#  * بوس ەمەس ٴار جول تەك URL جايلاردىڭ ىشىندەگى حوستتارعا سايكەس جۇيەلى ايتىلىمدىڭ (regex) بولىگى دەپ سانالادى
+
+  #</pre> <!-- بۇل جولدى بولعان جاعدايىمەن قالدىرىڭىز -->',
+	'spam-whitelist'     => '  #<!-- بۇل جولدى بولعان جاعدايىمەن قالدىرىڭىز --> <pre>
+# وسى تىزىمگە سايكەس سىرتقى URL جايلار *بۇعاتتالمايدى*,
+# (قارا تىزىمدەگى جازبامەن بۇعاتتالعان بولسا دا). 
+# 
+# سىينتاكسىيسى كەلەسىدەي: 
+#  * «#» نىشانىنان باستاپ جول اياعىنا دەيىنگىلەرىنىڭ بۇكىلى ماندەمە دەپ سانالادى
+#  * بوس ەمەس ٴار جول تەك URL جايلاردىڭ ىشىندەگى حوستتارعا سايكەس جۇيەلى ايتىلىمدىڭ (regex) بولىگى دەپ سانالادى
+
+  #</pre> <!-- بۇل جولدى بولعان جاعدايىمەن قالدىرىڭىز -->',
+	'spam-invalid-lines' => 'سپام قارا تىزىمىندەگى كەلەسى {{PLURAL:$1|جولدا|جولداردا}} جارامسىز جۇيەلى {{PLURAL:$1|ايتىلىم|ايتىلىمدار}} بار, جانە بەتتى ساقتاۋدىڭ {{PLURAL:$1|بۇنى|بۇلاردى}}  دۇرىستاۋ كەرەك.',
+);
+
 /** Dutch (Nederlands)
  * @author SPQRobin
  */
@@ -537,6 +608,11 @@ $messages['zh-hant'] = array(
 	"以下在灌水黑名單的{{PLURAL:$1|一行|多行}}有無效的表示式，" .
 	"請在保存這頁前先將{{PLURAL:$1|它|它們}}修正:\n",
 );
+
+$messages['kk-kz'] = $messages['kk-cyrl'];
+$messages['kk-tr'] = $messages['kk-latn'];
+$messages['kk-cn'] = $messages['kk-arab'];
+$messages['kk'] = $messages['kk-cyrl'];
 
 $messages['zh'] = $messages['zh-hans'];
 $messages['zh-cn'] = $messages['zh-hans'];
