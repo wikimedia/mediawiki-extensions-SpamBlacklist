@@ -30,7 +30,7 @@ class SpamBlacklist {
 			$sources = array(
 				"Spam-blacklist",
 				"Spam-whitelist" );
-			if( in_array( $title->getDbKey(), $sources ) ) {
+			if( in_array( $title->getDBkey(), $sources ) ) {
 				return true;
 			}
 		}
