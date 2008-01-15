@@ -609,11 +609,12 @@ $messages['zh-hant'] = array(
 	"請在保存這頁前先將{{PLURAL:$1|它|它們}}修正:\n",
 );
 
+# Fallbacks:
+$messages['de-formal'] = $messages['de'];
 $messages['kk-kz'] = $messages['kk-cyrl'];
 $messages['kk-tr'] = $messages['kk-latn'];
 $messages['kk-cn'] = $messages['kk-arab'];
 $messages['kk'] = $messages['kk-cyrl'];
-
 $messages['zh'] = $messages['zh-hans'];
 $messages['zh-cn'] = $messages['zh-hans'];
 $messages['zh-hk'] = $messages['zh-hant'];
