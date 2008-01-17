@@ -256,6 +256,29 @@ $messages['it'] = array(
 	'spam-invalid-lines' => "{{PLURAL:$1|La seguente riga|Le seguenti righe}} della blacklist dello spam {{PLURAL:$1|non è un'espressione regolare valida|non sono espressioni regolari valide}}; si prega di correggere {{PLURAL:$1|l'errore|gli errori}} prima di salvare la pagina.",
 );
 
+$messages['kk-arab'] = array(
+	'spam-blacklist'     => '  # وسى تىزىمگە سايكەس سىرتقى URL جايلار بەتكە ۇستەۋدەن بۇعاتتالادى. 
+  # بۇل ٴتىزىم تەك مىنداعى ۋىيكىيگە اسەر ەتەدى; تاعى دا عالامدىق قارا ٴتىزىمدى قاراپ شىعىڭىز. 
+  # قۇجاتتاما ٴۇشىن http://www.mediawiki.org/wiki/Extension:SpamBlacklist بەتىن قاراڭىز
+  #<!-- بۇل جولدى بولعان جاعدايىمەن قالدىرىڭىز --> <pre> 
+# 
+# سىينتاكسىيسى كەلەسىدەي: 
+#  * «#» نىشانىنان باستاپ جول اياعىنا دەيىنگىلەرىنىڭ بۇكىلى ماندەمە دەپ سانالادى
+#  * بوس ەمەس ٴار جول تەك URL جايلاردىڭ ىشىندەگى حوستتارعا سايكەس جۇيەلى ايتىلىمدىڭ (regex) بولىگى دەپ سانالادى
+
+  #</pre> <!-- بۇل جولدى بولعان جاعدايىمەن قالدىرىڭىز -->',
+	'spam-whitelist'     => '  #<!-- بۇل جولدى بولعان جاعدايىمەن قالدىرىڭىز --> <pre>
+# وسى تىزىمگە سايكەس سىرتقى URL جايلار *بۇعاتتالمايدى*,
+# (قارا تىزىمدەگى جازبامەن بۇعاتتالعان بولسا دا). 
+# 
+# سىينتاكسىيسى كەلەسىدەي: 
+#  * «#» نىشانىنان باستاپ جول اياعىنا دەيىنگىلەرىنىڭ بۇكىلى ماندەمە دەپ سانالادى
+#  * بوس ەمەس ٴار جول تەك URL جايلاردىڭ ىشىندەگى حوستتارعا سايكەس جۇيەلى ايتىلىمدىڭ (regex) بولىگى دەپ سانالادى
+
+  #</pre> <!-- بۇل جولدى بولعان جاعدايىمەن قالدىرىڭىز -->',
+	'spam-invalid-lines' => 'سپام قارا تىزىمىندەگى كەلەسى {{PLURAL:$1|جولدا|جولداردا}} جارامسىز جۇيەلى {{PLURAL:$1|ايتىلىم|ايتىلىمدار}} بار, جانە بەتتى ساقتاۋدىڭ {{PLURAL:$1|بۇنى|بۇلاردى}}  دۇرىستاۋ كەرەك.',
+);
+
 /** Kazakh (Қазақша)
  * @author AlefZet
  */
@@ -302,29 +325,6 @@ $messages['kk-latn'] = array(
 
   #</pre> <!-- bul joldı bolğan jağdaýımen qaldırıñız -->',
 	'spam-invalid-lines' => 'Spam qara tizimindegi kelesi {{PLURAL:$1|jolda|joldarda}} jaramsız jüýeli {{PLURAL:$1|aýtılım|aýtılımdar}} bar, jäne betti saqtawdıñ {{PLURAL:$1|bunı|bulardı}}  durıstaw kerek.',
-);
-
-$messages['kk-arab'] = array(
-	'spam-blacklist'     => '  # وسى تىزىمگە سايكەس سىرتقى URL جايلار بەتكە ۇستەۋدەن بۇعاتتالادى. 
-  # بۇل ٴتىزىم تەك مىنداعى ۋىيكىيگە اسەر ەتەدى; تاعى دا عالامدىق قارا ٴتىزىمدى قاراپ شىعىڭىز. 
-  # قۇجاتتاما ٴۇشىن http://www.mediawiki.org/wiki/Extension:SpamBlacklist بەتىن قاراڭىز
-  #<!-- بۇل جولدى بولعان جاعدايىمەن قالدىرىڭىز --> <pre> 
-# 
-# سىينتاكسىيسى كەلەسىدەي: 
-#  * «#» نىشانىنان باستاپ جول اياعىنا دەيىنگىلەرىنىڭ بۇكىلى ماندەمە دەپ سانالادى
-#  * بوس ەمەس ٴار جول تەك URL جايلاردىڭ ىشىندەگى حوستتارعا سايكەس جۇيەلى ايتىلىمدىڭ (regex) بولىگى دەپ سانالادى
-
-  #</pre> <!-- بۇل جولدى بولعان جاعدايىمەن قالدىرىڭىز -->',
-	'spam-whitelist'     => '  #<!-- بۇل جولدى بولعان جاعدايىمەن قالدىرىڭىز --> <pre>
-# وسى تىزىمگە سايكەس سىرتقى URL جايلار *بۇعاتتالمايدى*,
-# (قارا تىزىمدەگى جازبامەن بۇعاتتالعان بولسا دا). 
-# 
-# سىينتاكسىيسى كەلەسىدەي: 
-#  * «#» نىشانىنان باستاپ جول اياعىنا دەيىنگىلەرىنىڭ بۇكىلى ماندەمە دەپ سانالادى
-#  * بوس ەمەس ٴار جول تەك URL جايلاردىڭ ىشىندەگى حوستتارعا سايكەس جۇيەلى ايتىلىمدىڭ (regex) بولىگى دەپ سانالادى
-
-  #</pre> <!-- بۇل جولدى بولعان جاعدايىمەن قالدىرىڭىز -->',
-	'spam-invalid-lines' => 'سپام قارا تىزىمىندەگى كەلەسى {{PLURAL:$1|جولدا|جولداردا}} جارامسىز جۇيەلى {{PLURAL:$1|ايتىلىم|ايتىلىمدار}} بار, جانە بەتتى ساقتاۋدىڭ {{PLURAL:$1|بۇنى|بۇلاردى}}  دۇرىستاۋ كەرەك.',
 );
 
 /** Dutch (Nederlands)
@@ -609,12 +609,11 @@ $messages['zh-hant'] = array(
 	"請在保存這頁前先將{{PLURAL:$1|它|它們}}修正:\n",
 );
 
-# Fallbacks:
 $messages['de-formal'] = $messages['de'];
+$messages['kk'] = $messages['kk-cyrl'];
+$messages['kk-cn'] = $messages['kk-arab'];
 $messages['kk-kz'] = $messages['kk-cyrl'];
 $messages['kk-tr'] = $messages['kk-latn'];
-$messages['kk-cn'] = $messages['kk-arab'];
-$messages['kk'] = $messages['kk-cyrl'];
 $messages['zh'] = $messages['zh-hans'];
 $messages['zh-cn'] = $messages['zh-hans'];
 $messages['zh-hk'] = $messages['zh-hant'];
