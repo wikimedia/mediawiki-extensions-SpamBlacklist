@@ -139,6 +139,30 @@ $messages['fr'] = array(
 	'spam-invalid-lines' => '{{PLURAL:$1|La ligne suivante |Les lignes suivantes}} de la liste des spams {{PLURAL:$1|est rédigée|sont rédigées}} de manière incorrecte et {{PLURAL:$1|nécessite|nécessitent}} les corrections nécessaires avant toute sauvegarde de la page :',
 );
 
+/** Franco-Provençal (Arpetan)
+ * @author ChrisPtDe
+ */
+$messages['frp'] = array(
+	'spam-blacklist'     => '  # Los lims de defôr étent dens ceta lista seront blocâs pendent lor entrebetâ dens una pâge.
+  # Ceta lista regârde ren que Vouiquinovèles ; refèrâd-vos asse-ben a la lista nêre g·ènèrala de Meta-Wiki.
+  # La documentacion sè trove a l’adrèce siuventa : http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- lèssiéd ceta legne justo d’ense --> <pre>
+#
+# La sintaxa est la siuventa :
+#  * Tot caractèro siuvent « # » tant qu’a la fin de la legne serat entèrprètâ coment un comentèro.
+#  * Tota legne pas voueda est un bocon de RegEx que serat utilisâ ren qu’u dedens des lims hipèrtèxte.
+  #</pre> <!-- lèssiéd ceta legne justo d’ense -->',
+	'spam-whitelist'     => '  #<!-- lèssiéd ceta legne justo d’ense --> <pre>
+# Los lims de defôr étent dens ceta lista seront pas blocâs mémo
+# s’ils ont étâ blocâs en vèrtu d’una lista nêre.
+#
+# La sintaxa est la siuventa :
+#  * Tot caractèro siuvent « # » tant qu’a la fin de la legne serat entèrprètâ coment un comentèro.
+#  * Tota legne pas voueda est un bocon de RegEx que serat utilisâ ren qu’u dedens des lims hipèrtèxte.
+  #</pre> <!-- lèssiéd ceta legne justo d’ense -->',
+	'spam-invalid-lines' => '{{PLURAL:$1|La legne siuventa|Les legnes siuventes}} de la lista des spames {{PLURAL:$1|est rèdigiê|sont rèdigiês}} de maniére fôssa et {{PLURAL:$1|at|ont}} fôta de les corrèccions nècèssères devant que sôvar la pâge :',
+);
+
 $messages['gl'] = array(
 	'spam-blacklist' => ' # As ligazóns externas que coincidan con esta listaxe serán bloqueadas cando se engadan a unha páxina.
  # Esta listaxe afecta unicamente a este wiki; consulte tamén a lista negra global.
