@@ -58,6 +58,21 @@ $messages['ar'] = array(
 'spam-invalid-lines' => '{{PLURAL:$1|السطر التالي|السطور التالية}}  في قائمة السبام السوداء هي {{PLURAL:$1|تعبير منتظم غير صحيح|تعبيرات منتظمة غير صحيحة}}  و {{PLURAL:$1|يحتاج|تحتاج}} أن يتم تصحيحها قبل حفظ الصفحة:',
 );
 
+/** Bengali (বাংলা)
+ * @author Bellayet
+ */
+$messages['bn'] = array(
+	'spam-whitelist' => '  #<!-- এই লাইন যেমন আছে ঠিক তেমনই ছেড়ে দিন --> <pre>
+# External URLs matching this list will *not* be blocked even if they would
+# have been blocked by blacklist entries.
+#
+# Syntax is as follows:
+#  * Everything from a "#" character to the end of the line is a comment
+#  * Every non-blank line is a regex fragment which will only match hosts inside URLs
+
+  #</pre> <!-- এই লাইন যেমন আছে ঠিক তেমনই ছেড়ে দিন -->',
+);
+
 /** Czech (Česky)
  * @author Li-sung
  */
