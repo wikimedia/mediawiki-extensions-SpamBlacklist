@@ -278,16 +278,16 @@ $messages['it'] = array(
 	'spam-blacklist'     => '  # Le URL esterne al sito che corrispondono alla lista seguente verranno bloccate.
   # La lista è valida solo per questo sito; fare riferimento anche alla blacklist globale.
   # Per la documentazione si veda http://www.mediawiki.org/wiki/Extension:SpamBlacklist
-  #<!-- non modificare in alcun modo questa riga --> <pre>
-# La sintassi è la seguente:
+  #<!-- non modificare in alcun modo questa riga --> <pre>  
+# La sintassi è la seguente:  
 #  * Tutto ciò che segue un carattere "#" è un commento, fino al termine della riga
 #  * Tutte le righe non vuote sono frammenti di espressioni regolari che si applicano al solo nome dell\'host nelle URL
   #</pre> <!-- non modificare in alcun modo questa riga -->',
-	'spam-whitelist'     => '  #<!-- non modificare in alcun modo questa riga --> <pre>
+	'spam-whitelist'     => '  #<!-- non modificare in alcun modo questa riga --> <pre>  
 # Le URL esterne al sito che corrispondono alla lista seguente *non* verranno
 # bloccate, anche nel caso corrispondano a delle voci della blacklist
 #
-# La sintassi è la seguente:
+# La sintassi è la seguente:  
 #  * Tutto ciò che segue un carattere "#" è un commento, fino al termine della riga
 #  * Tutte le righe non vuote sono frammenti di espressioni regolari che si applicano al solo nome dell\'host nelle URL
 
