@@ -516,6 +516,7 @@ $messages['sk'] = array(
 
 /** Seeltersk (Seeltersk)
  * @author Pyt
+ * @author Siebrand
  */
 $messages['stq'] = array(
 	'spam-blacklist'     => ' # Externe URLs, do der in disse Lieste äntheelden sunt, blokkierje dät Spiekerjen fon ju Siede.
@@ -528,15 +529,15 @@ $messages['stq'] = array(
 #   * Älke nit-loose Riege is n regulären Uutdruk, ju der juun do Host-Noomen in do URLs wröiged wäd.
 
  #</pre> <!-- Disse Riege duur nit ferannerd wäide! -->',
-	'spam-whitelist'     => ' #<!-- Disse Riege duur nit ferannerd wäide! --> <pre>
+	'spam-whitelist'     => '  #<!-- Disse Riege duur nit ferannerd wäide! --> <pre>
 # Externe URLs, do der in disse Lieste äntheelden sunt, blokkierje dät Spiekerjen fon ju Siede nit,
 # uk wan jo in ju globoale of lokoale swotte Lieste äntheelden sunt.
 #
 # Syntax:
-#   * Alles fon dät "#"-Teeken ou bit tou Eende fon ju Riege is n Kommentoar
-#   * Älke nit-loose Riege is n regulären Uutdruk, die der juun do Host-Noomen in do URLs wröided wäd.
+#  * Alles fon dät "#"-Teeken ou bit tou Eende fon ju Riege is n Kommentoar
+#  * Älke nit-loose Riege is n regulären Uutdruk, die der juun do Host-Noomen in do URLs wröided wäd.
 
- #</pre> <!-- Disse Riege duur nit ferannerd wäide! -->',
+  #</pre> <!-- Disse Riege duur nit ferannerd wäide! -->',
 	'spam-invalid-lines' => '{{PLURAL:$1
 	| Ju foulgjende Siede in ju Spam-Blacklist is n uungultigen regulären Uutdruk. Ju mout foar dät Spiekerjen fon ju Siede korrigierd wäide
 	| Do foulgjende Sieden in ju Spam-Blacklist sunt uungultige reguläre Uutdrukke. Do mouten foar dät Spiekerjen fon ju Siede korrigierd wäide}}:',
