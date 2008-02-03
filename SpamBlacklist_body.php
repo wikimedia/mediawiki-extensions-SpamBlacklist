@@ -206,6 +206,7 @@ class SpamBlacklist {
 		$this->title = $title;
 		$this->text = $text;
 		$this->section = $section;
+		$text = str_replace( '．', '.', $text ); //@bug 12896
 
 		$blacklists = $this->getBlacklists();
 		$whitelists = $this->getWhitelists();
@@ -319,7 +320,7 @@ class SpamBlacklist {
 	 */
 	function validate( $editPage, $text, $section, &$hookError ) {
 		$thisPageName = $editPage->mTitle->getPrefixedDBkey();
-		
+
 		if( !$this->isLocalSource( $editPage->mTitle ) ) {
 			wfDebugLog( 'SpamBlacklist', "Spam blacklist validator: [[$thisPageName]] not a local blacklist\n" );
 			return true;
@@ -429,8 +430,8 @@ class SpamRegexBatch {
 	function stripLines( $lines ) {
 		return array_filter(
 			array_map( 'trim',
-				preg_replace( '/#.*$/', '',
-					$lines ) ) );
+					preg_replace( '/#.*$/', '',
+						$lines ) ) );
 	}
 	
 	/**
