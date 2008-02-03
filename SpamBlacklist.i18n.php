@@ -58,6 +58,32 @@ $messages['ar'] = array(
 'spam-invalid-lines' => '{{PLURAL:$1|السطر التالي|السطور التالية}}  في قائمة السبام السوداء هي {{PLURAL:$1|تعبير منتظم غير صحيح|تعبيرات منتظمة غير صحيحة}}  و {{PLURAL:$1|يحتاج|تحتاج}} أن يتم تصحيحها قبل حفظ الصفحة:',
 );
 
+/** Asturian (Asturianu)
+ * @author Esbardu
+ */
+$messages['ast'] = array(
+	'spam-blacklist'     => "  # Les URLs esternes d'esta llista sedrán bloquiaes cuando s'añadan a una páxina.
+  # Esta llista afeuta namái a esta wiki; mira tamién la llista negra global.
+  # Pa obtener documentación vete a http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- dexa esta llinia exautamente como ta --> <pre>
+#
+# La sintaxis ye ésta:
+#  * Tol testu dende un caráuter \"#\" hasta lo cabero la llina ye un comentariu
+#  * Toa llinia non vacia ye un fragmentu regex qu'afeuta namái a les URLs especificaes
+
+  #</pre> <!-- dexa esta llinia exautamente como ta -->",
+	'spam-whitelist'     => "  #<!-- dexa esta llinia exautamente como ta --> <pre>
+# Les URLs esternes d'esta llista *nun* sedrán bloquiaes inda si lo fueron per aciu
+# d'una entrada na llista negra.
+#
+# La sintaxis ye ésta:
+#  * Tol testu dende un caráuter \"#\" hasta lo cabero la llina ye un comentariu
+#  * Toa llinia non vacia ye un fragmentu regex qu'afeuta namái a les URLs especificaes
+
+  #</pre> <!-- dexa esta llinia exautamente como ta -->",
+	'spam-invalid-lines' => '{{PLURAL:$1|La siguiente llinia|Les siguientes llinies}} de la llista negra de spam {{PLURAL:$1|ye una espresión regular non válida|son espresiones regulares non válides}} y {{PLURAL:$1|necesita ser correxida|necesiten ser correxíes}} enantes de guardar la páxina:',
+);
+
 /** Bengali (বাংলা)
  * @author Bellayet
  */
@@ -482,7 +508,7 @@ $messages['ru'] = array(
 #   * Каждая непуская строка является фрагментом регулярного выражениея, применяемого только к узлу в URL
 
  #</pre> <!-- не изменяйте эту строку -->',
-	'spam-invalid-lines' => '{{PLURAL:$1|Следующая строка чёрного списка ссылок содержит ошибочное регулярное выражение и должна быть исправлена|||Следующие строки чёрного списка ссылок содержат ошибочные регулярные выражения и должны быть исправлены}} перед сохранением:',
+	'spam-invalid-lines' => '{{PLURAL:$1|Следующая строка чёрного списка ссылок содержит ошибочное регулярное выражение и должна быть исправлена|Следующие строки чёрного списка ссылок содержат ошибочные регулярные выражения и должны быть исправлены}} перед сохранением:',
 );
 
 /** Slovak (Slovenčina)
