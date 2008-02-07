@@ -103,6 +103,26 @@ $messages['bn'] = array(
  * @author Li-sung
  */
 $messages['cs'] = array(
+	'spam-blacklist'     => ' # Externí URL odpovídající tomuto seznamu budou zablokovány při pokusu přidat je na stránku.
+ # Tento seznam ovlivňuje jen tuto wiki; podívejte se také na globální černou listinu.
+ # Dokumentaci najdete na http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- Nechte tento řádek přesně tak jak je --> <pre>
+#
+# Syntaxe je následující:
+#  * Všechno od znaku „#“ do konce řádku je komentář
+#  * Každý neprázdný řádek je část regulárního výrazu, kterému budou odpovídat pouze domény z URL
+
+ #</pre> <!-- Nechte tento řádek přesně tak jak je -->',
+	'spam-whitelist'     => '  #<!-- nechejte tento řádek přesně tak jak je --> <pre>  
+
+# Externí URL odpovídající výrazům v tomto seznamu *nebudou* zablokovány, ani kdyby
+# je zablokovaly položky z černé listiny.
+#
+# Syntaxe je následující:
+#  * Všechno od znaku „#“ do konce řádku je komentář
+#  * Každý neprázdný řádek je část regulárního výrazu, kterému budou odpovídat pouze domény z URL
+
+  #</pre> <!-- nechejte tento řádek přesně tak jak je -->',
 	'spam-invalid-lines' => 'Na černé listině spamu {{PLURAL:$1|je následující řádka neplatný regulární výraz|jsou následující řádky neplatné regulární výrazy|jsou následující řádky regulární výrazy}} a je nutné {{PLURAL:$1|ji|je|je}} před uložením stránky opravit :',
 );
 
@@ -390,6 +410,13 @@ $messages['kk-latn'] = array(
 
   #</pre> <!-- bul joldı bolğan jağdaýımen qaldırıñız -->',
 	'spam-invalid-lines' => 'Spam qara tizimindegi kelesi {{PLURAL:$1|jolda|joldarda}} jaramsız jüýeli {{PLURAL:$1|aýtılım|aýtılımdar}} bar, jäne betti saqtawdıñ {{PLURAL:$1|bunı|bulardı}}  durıstaw kerek.',
+);
+
+/** Limburgish (Limburgs)
+ * @author Ooswesthoesbes
+ */
+$messages['li'] = array(
+	'spam-invalid-lines' => "De volgende {{PLURAL:$1|regel|regel}} van de zwarte lies {{PLURAL:$1|is 'n|zeen}} onzjuuste reguliere {{PLURAL:$1|oetdrukking|oetdrukkinge}}  en {{PLURAL:$1|mót|mótte}} verbaeterd waere alveures de pazjena kin waere opgeslage:",
 );
 
 /** Dutch (Nederlands)
