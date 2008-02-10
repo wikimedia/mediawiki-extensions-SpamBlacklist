@@ -416,6 +416,28 @@ $messages['kk-latn'] = array(
  * @author Ooswesthoesbes
  */
 $messages['li'] = array(
+	'spam-blacklist'     => " # Externe URL's die voldoen aan deze lijst waere geweigerd bie 't
+  # toevoege aan 'n pagina. Deze lijst haet allein invloed op deze wiki.
+  # Er bestaot ouk 'n globale zwarte lijst.
+  # Documentatie: http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- laot deze lien --> <pre>
+#
+# De syntax is as volg:
+#  * Alles vanaaf 't karakter \"#\" tot 't einde van de regel is opmerking
+#  * Iedere niet-lege regel is 'n fragment van 'n reguliere oetdrukking die
+#    alleen van toepassing is op hosts binne URL's.
+
+  #</pre> <!-- laot deze lien -->",
+	'spam-whitelist'     => "  #<!-- laot deze lien --> <pre>
+# Externe URL's die voldoen aan deze lijst, waere *nooit* geweigerd, al
+# zoude ze geblokkeerd motte waere door regels oet de zwarte lijst.
+#
+# De syntaxis is es volg:
+#  * Alles vanaaf 't karakter \"#\" tot 't einde van de regel is opmerking
+#  * Iddere neet-lege regel is 'n fragment van 'n reguliere oetdrukking die
+#    allein van toepassing is op hosts binne URL's.
+
+  #</pre> <!-- laot deze lien -->",
 	'spam-invalid-lines' => "De volgende {{PLURAL:$1|regel|regel}} van de zwarte lies {{PLURAL:$1|is 'n|zeen}} onzjuuste reguliere {{PLURAL:$1|oetdrukking|oetdrukkinge}}  en {{PLURAL:$1|mót|mótte}} verbaeterd waere alveures de pazjena kin waere opgeslage:",
 );
 
@@ -730,3 +752,4 @@ $messages['zh-hant'] = array(
 	"以下在灌水黑名單的{{PLURAL:$1|一行|多行}}有無效的表示式，" .
 	"請在保存這頁前先將{{PLURAL:$1|它|它們}}修正:\n",
 );
+
