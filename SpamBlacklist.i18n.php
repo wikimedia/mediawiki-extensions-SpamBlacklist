@@ -33,6 +33,7 @@ $messages['en'] = array(
 	"The following spam blacklist {{PLURAL:$1|line is an|lines are}} " .
 	" invalid regular {{PLURAL:$1|expression|expressions}} " .
 	" and {{PLURAL:$1|needs|need}} to be corrected before saving the page:\n",
+	'spam-blacklist-desc' => 'Regex-based anti-spam tool',
 );
 
 $messages['ar'] = array(
@@ -198,6 +199,7 @@ $messages['fr'] = array(
 #   * Toute ligne non vide est un fragment regex qui ne concerne que les liens hypertextes.
  #</pre> <!--Laissez cette ligne telle quelle -->',
 	'spam-invalid-lines' => '{{PLURAL:$1|La ligne suivante |Les lignes suivantes}} de la liste des spams {{PLURAL:$1|est rédigée|sont rédigées}} de manière incorrecte et {{PLURAL:$1|nécessite|nécessitent}} les corrections nécessaires avant toute sauvegarde de la page :',
+	'spam-blacklist-desc' => 'Outil anti-pourriel basé sur des expressions régulières',
 );
 
 /** Franco-Provençal (Arpetan)

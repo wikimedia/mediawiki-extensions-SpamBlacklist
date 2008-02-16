@@ -7,9 +7,22 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit;
 }
 
+$wgExtensionCredits['other'][] = array(
+	'name'           => 'SpamBlacklist',
+	'author'         => 'Tim Starling',
+	'version'        => '2008-02-13',
+	'url'            => 'http://www.mediawiki.org/wiki/Extension:SpamBlacklist',
+	'description'    => 'Regex-based anti-spam tool',
+	'descriptionmsg' => 'spam-blacklist-desc',
+);
+
+$dir = dirname(__FILE__) . '/';
+$wgExtensionMessagesFiles['SpamBlackList'] = $dir . 'SpamBlacklist.i18n.php';
+
 global $wgFilterCallback, $wgPreSpamFilterCallback;
 global $wgSpamBlacklistFiles;
 global $wgSpamBlacklistSettings;
+
 
 $wgSpamBlacklistFiles = false;
 $wgSpamBlacklistSettings = array();
@@ -25,35 +38,15 @@ if ( defined( 'MW_SUPPORTS_EDITFILTERMERGED' ) ) {
 	$wgFilterCallback = 'wfSpamBlacklistFilter';
 }
 
-$wgExtensionCredits['other'][] = array(
-	'name' => 'SpamBlacklist',
-	'author' => 'Tim Starling',
-	'url' => 'http://www.mediawiki.org/wiki/Extension:SpamBlacklist',
-	'description' => 'Regex-based anti-spam tool',
-);
 
 $wgHooks['EditFilter'][] = 'wfSpamBlacklistValidate';
 $wgHooks['ArticleSaveComplete'][] = 'wfSpamBlacklistArticleSave';
 
 /**
- * Load SpamBlacklist.i18n.php
+ * Internationalization messages
  */
 function wfSpamBlacklistLoadMessages() {
-	global $wgMessageCache;
-	static $done = false;
-	if ( $done ) {
-		return;
-	}
-	$done = true;
-
-	require( 'SpamBlacklist.i18n.php' );
-	if ( is_callable( array( $wgMessageCache, 'addMessagesByLang' ) ) ) {
-		$wgMessageCache->addMessagesByLang( $messages );
-	} else {
-		foreach( $messages as $lang => $langMessages ) {
-			$wgMessageCache->addMessages( $langMessages, $lang );
-		}
-	}
+	wfLoadExtensionMessage ('SpamBlackList');
 }
 
 /**
