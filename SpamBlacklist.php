@@ -46,7 +46,7 @@ $wgHooks['ArticleSaveComplete'][] = 'wfSpamBlacklistArticleSave';
  * Internationalization messages
  */
 function wfSpamBlacklistLoadMessages() {
-	wfLoadExtensionMessage ('SpamBlackList');
+	wfLoadExtensionMessages('SpamBlackList');
 }
 
 /**
