@@ -36,8 +36,11 @@ $messages['en'] = array(
 	'spam-blacklist-desc' => 'Regex-based anti-spam tool',
 );
 
+/** Arabic (العربية)
+ * @author Meno25
+ */
 $messages['ar'] = array(
-'spam-blacklist' => ' # الوصلات الخارجية التي تطابق هذه القائمة سيتم منعها عند إضافتها لصفحة.
+	'spam-blacklist'      => ' # الوصلات الخارجية التي تطابق هذه القائمة سيتم منعها عند إضافتها لصفحة.
  # هذه القائمة تؤثر فقط على هذه الويكي؛ ارجع أيضا للقائمة السوداء العامة.
  # للوثائق انظر http://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- leave this line exactly as it is --> <pre>
@@ -47,7 +50,7 @@ $messages['ar'] = array(
 #   * كل سطر غير فارغ هو تعبير منتظم يوافق فقط المضيفين داخل الوصلات الخارجية
 
  #</pre> <!-- leave this line exactly as it is -->',
-'spam-whitelist' => ' #<!-- leave this line exactly as it is --> <pre>
+	'spam-whitelist'      => ' #<!-- leave this line exactly as it is --> <pre>
 # الوصلات الخارجية التي تطابق هذه القائمة *لن* يتم منعها حتى لو
 # كانت ممنوعة بواسطة مدخلات القائمة السوداء.
 #
@@ -56,7 +59,8 @@ $messages['ar'] = array(
 #   * كل سطر غير فارغ هو تعبير منتظم يطابق فقط المضيفين داخل الوصلات الخارجية
 
  #</pre> <!-- leave this line exactly as it is -->',
-'spam-invalid-lines' => '{{PLURAL:$1|السطر التالي|السطور التالية}}  في قائمة السبام السوداء هي {{PLURAL:$1|تعبير منتظم غير صحيح|تعبيرات منتظمة غير صحيحة}}  و {{PLURAL:$1|يحتاج|تحتاج}} أن يتم تصحيحها قبل حفظ الصفحة:',
+	'spam-invalid-lines'  => '{{PLURAL:$1|السطر التالي|السطور التالية}}  في قائمة السبام السوداء هي {{PLURAL:$1|تعبير منتظم غير صحيح|تعبيرات منتظمة غير صحيحة}}  و {{PLURAL:$1|يحتاج|تحتاج}} أن يتم تصحيحها قبل حفظ الصفحة:',
+	'spam-blacklist-desc' => 'أداة ضد السبام تعتمد على التعبيرات المنتظمة',
 );
 
 /** Asturian (Asturianu)
@@ -86,10 +90,22 @@ $messages['ast'] = array(
 );
 
 /** Bengali (বাংলা)
+ * @author Zaheen
  * @author Bellayet
  */
 $messages['bn'] = array(
-	'spam-whitelist' => '  #<!-- এই লাইন যেমন আছে ঠিক তেমনই ছেড়ে দিন --> <pre>
+	'spam-blacklist'      => '
+  # এই তালিকার সাথে মিলে যায় এমন বহিঃসংযোগ URLগুলি পাতায় যোগ করতে বাধা দেয়া হবে।
+  # এই তালিকাটি কেবল এই উইকির ক্ষেত্রে প্রযোজ্য; সামগ্রিক কালোতালিকাও দেখতে পারেন।
+  # ডকুমেন্টেশনের জন্য http://www.mediawiki.org/wiki/Extension:SpamBlacklist দেখুন
+  #<!-- leave this line exactly as it is --> <pre>
+#
+# সিনট্যাক্স নিচের মত:
+#  * "#" ক্যারেক্টার থেকে শুরু করে লাইনের শেষ পর্যন্ত সবকিছু একটি মন্তব্য
+#  * প্রতিটি অশূন্য লাইন একটি রেজেক্স খণ্ডাংশ যেটি কেবল URLগুলির ভেতরের hostগুলির সাথে মিলে যাবে
+
+  #</pre> <!-- leave this line exactly as it is -->',
+	'spam-whitelist'      => '  #<!-- এই লাইন যেমন আছে ঠিক তেমনই ছেড়ে দিন --> <pre>
 # External URLs matching this list will *not* be blocked even if they would
 # have been blocked by blacklist entries.
 #
@@ -98,13 +114,16 @@ $messages['bn'] = array(
 #  * Every non-blank line is a regex fragment which will only match hosts inside URLs
 
   #</pre> <!-- এই লাইন যেমন আছে ঠিক তেমনই ছেড়ে দিন -->',
+	'spam-invalid-lines'  => 'নিচের স্প্যাম কালোতালিকার {{PLURAL:$1|লাইন|লাইনগুলি}} অবৈধ রেগুলার {{PLURAL:$1|এক্সপ্রেশন|এক্সপ্রেশন}} ধারণ করছে এবং পাতাটি সংরক্ষণের আগে এগুলি ঠিক করা {{PLURAL:$1|প্রয়োজন|প্রয়োজন}}:',
+	'spam-blacklist-desc' => 'রেজেক্স-ভিত্তিক স্প্যামরোধী সরঞ্জাম',
 );
 
 /** Czech (Česky)
  * @author Li-sung
+ * @author Matěj Grabovský
  */
 $messages['cs'] = array(
-	'spam-blacklist'     => ' # Externí URL odpovídající tomuto seznamu budou zablokovány při pokusu přidat je na stránku.
+	'spam-blacklist'      => ' # Externí URL odpovídající tomuto seznamu budou zablokovány při pokusu přidat je na stránku.
  # Tento seznam ovlivňuje jen tuto wiki; podívejte se také na globální černou listinu.
  # Dokumentaci najdete na http://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Nechte tento řádek přesně tak jak je --> <pre>
@@ -114,7 +133,7 @@ $messages['cs'] = array(
 #  * Každý neprázdný řádek je část regulárního výrazu, kterému budou odpovídat pouze domény z URL
 
  #</pre> <!-- Nechte tento řádek přesně tak jak je -->',
-	'spam-whitelist'     => '  #<!-- nechejte tento řádek přesně tak jak je --> <pre>  
+	'spam-whitelist'      => '  #<!-- nechejte tento řádek přesně tak jak je --> <pre>  
 
 # Externí URL odpovídající výrazům v tomto seznamu *nebudou* zablokovány, ani kdyby
 # je zablokovaly položky z černé listiny.
@@ -124,7 +143,8 @@ $messages['cs'] = array(
 #  * Každý neprázdný řádek je část regulárního výrazu, kterému budou odpovídat pouze domény z URL
 
   #</pre> <!-- nechejte tento řádek přesně tak jak je -->',
-	'spam-invalid-lines' => 'Na černé listině spamu {{PLURAL:$1|je následující řádka neplatný regulární výraz|jsou následující řádky neplatné regulární výrazy|jsou následující řádky regulární výrazy}} a je nutné {{PLURAL:$1|ji|je|je}} před uložením stránky opravit :',
+	'spam-invalid-lines'  => 'Na černé listině spamu {{PLURAL:$1|je následující řádka neplatný regulární výraz|jsou následující řádky neplatné regulární výrazy|jsou následující řádky regulární výrazy}} a je nutné {{PLURAL:$1|ji|je|je}} před uložením stránky opravit :',
+	'spam-blacklist-desc' => 'Antispamový nástroj na základě regulárních výrazů',
 );
 
 $messages['de'] = array(
@@ -226,8 +246,12 @@ $messages['frp'] = array(
 	'spam-invalid-lines' => '{{PLURAL:$1|La legne siuventa|Les legnes siuventes}} de la lista des spames {{PLURAL:$1|est rèdigiê|sont rèdigiês}} de maniére fôssa et {{PLURAL:$1|at|ont}} fôta de les corrèccions nècèssères devant que sôvar la pâge :',
 );
 
+/** Galician (Galego)
+ * @author Xosé
+ * @author Alma
+ */
 $messages['gl'] = array(
-	'spam-blacklist' => ' # As ligazóns externas que coincidan con esta listaxe serán bloqueadas cando se engadan a unha páxina.
+	'spam-blacklist'      => ' # As ligazóns externas que coincidan con esta listaxe serán bloqueadas cando se engadan a unha páxina.
  # Esta listaxe afecta unicamente a este wiki; consulte tamén a lista negra global.
  # Para documentación vexa http://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- deixe esta liña exactamente como está --> <pre>
@@ -237,7 +261,7 @@ $messages['gl'] = array(
 #   * Toda liña que non estea en branco é un fragmento de expresión regular que só coincide con hosts dentro de URLs
 
  #</pre> <!-- deixe esta liña exactamente como está -->',
-	'spam-whitelist' => ' #<!-- deixe esta liña exactamente como está --> <pre>
+	'spam-whitelist'      => ' #<!-- deixe esta liña exactamente como está --> <pre>
  # As ligazóns externas que coincidan con esta listaxe *non* serán bloqueadas mesmo se
  # foren bloqueadas mediante entradas na lista negra.
 #
@@ -246,7 +270,8 @@ $messages['gl'] = array(
 #   * Toda liña que non estea en branco é un fragmento de expresión regular que só coincide con hosts dentro de URLs
 
  #</pre> <!-- deixe esta liña exactamente como está -->',
-	'spam-invalid-lines' => '{{PLURAL:$1|A liña seguinte da lista negra de spam é|As liñas seguintes da lista negra de spam son}} {{PLURAL:$1|unha expresión regular|expresións regulares}} e {{PLURAL:$1|haina|hainas}} que corrixir antes de gardar a páxina:',
+	'spam-invalid-lines'  => '{{PLURAL:$1|A liña seguinte da lista negra de spam é|As liñas seguintes da lista negra de spam son}} {{PLURAL:$1|unha expresión regular|expresións regulares}} e {{PLURAL:$1|haina|hainas}} que corrixir antes de gardar a páxina:',
+	'spam-blacklist-desc' => 'Ferramenta anti-spam baseada en expresións regulares',
 );
 
 $messages['hr'] = array(
@@ -445,9 +470,10 @@ $messages['li'] = array(
 
 /** Dutch (Nederlands)
  * @author SPQRobin
+ * @author Siebrand
  */
 $messages['nl'] = array(
-	'spam-blacklist'     => ' # Externe URL\'s die voldoen aan deze lijst worden geweigerd bij het
+	'spam-blacklist'      => ' # Externe URL\'s die voldoen aan deze lijst worden geweigerd bij het
  # toevoegen aan een pagina. Deze lijst heeft alleen invloed op deze wiki.
  # Er bestaat ook een globale zwarte lijst.
  # Documentatie: http://www.mediawiki.org/wiki/Extension:SpamBlacklist
@@ -459,7 +485,7 @@ $messages['nl'] = array(
 #     alleen van toepassing is op hosts binnen URL\'s.
 
  #</pre> <!-- laat deze lijn zoals hij is -->',
-	'spam-whitelist'     => ' #<!-- laat deze lijn zoals hij is --> <pre>
+	'spam-whitelist'      => ' #<!-- laat deze lijn zoals hij is --> <pre>
 # Externe URL\'s die voldoen aan deze lijst, worden *nooit* geweigerd, al
 # zouden ze geblokkeerd moeten worden door regels uit de zwarte lijst.
 #
@@ -469,7 +495,35 @@ $messages['nl'] = array(
 #     alleen van toepassing is op hosts binnen URL\'s.
 
  #</pre> <!-- laat deze lijn zoals hij is -->',
-	'spam-invalid-lines' => 'De volgende {{PLURAL:$1|regel|regels}} van de zwarte lijst {{PLURAL:$1|is een|zijn}} onjuiste reguliere {{PLURAL:$1|uitdrukking|uitdrukkingen}}  en {{PLURAL:$1|moet|moeten}} verbeterd worden alvorens de pagina kan worden opgeslagen:',
+	'spam-invalid-lines'  => 'De volgende {{PLURAL:$1|regel|regels}} van de zwarte lijst {{PLURAL:$1|is een|zijn}} onjuiste reguliere {{PLURAL:$1|uitdrukking|uitdrukkingen}}  en {{PLURAL:$1|moet|moeten}} verbeterd worden alvorens de pagina kan worden opgeslagen:',
+	'spam-blacklist-desc' => 'Antispamfunctionaliteit via reguliere expressies',
+);
+
+/** Norwegian (‪Norsk (bokmål)‬)
+ * @author Jon Harald Søby
+ */
+$messages['no'] = array(
+	'spam-blacklist'      => '  # Eksterne URL-er som finnes på denne lista vil ikke kunne legges til på en side.
+  # Denne listen gjelder kun denne wikien; se også den globale svartelistinga.
+  # For dokumentasjon, se http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- La denne linja være nøyaktig som den er --> <pre>
+#
+# Syntaksen er som følgende:
+#  * Alle linjer som begynner med «#» er kommentarer
+#  * Alle ikke-blanke linjer er et regex-fragment som kun vil passe med domenenavn i URL-er
+
+  #</pre> <!-- la denne linja være nøyaktig som den er -->',
+	'spam-whitelist'      => '  #<!-- la denne linja være nøyaktig som den er --> <pre>
+# Eksterne URL-er på denne lista vil *ikke* blokkeres, selv om
+# de ellers ville vært blokkert av svartelista.
+#
+# Syntaksen er som følger:
+#  * Alle linjer som begynner med «#» er kommentarer
+#  * Alle ikke-blanke linjer er et regex-fragment som kun vil passe med domenenavn i URL-er
+
+  #</pre> <!-- la denne linja være nøyaktig som den er -->',
+	'spam-invalid-lines'  => 'Følgende {{PLURAL:$1|linje|linjer}} i spamsvartelista er {{PLURAL:$1|et ugyldig regulært uttrykk|ugyldige regulære uttrykk}} og må rettes før lagring av siden:',
+	'spam-blacklist-desc' => 'Regex-basert antisøppelverktøy',
 );
 
 /** Occitan (Occitan)
@@ -592,7 +646,7 @@ $messages['sah'] = array(
  * @author Helix84
  */
 $messages['sk'] = array(
-	'spam-blacklist'     => '# Externé URLs zodpovedajúce tomuto zoznamu budú zablokované pri pokuse pridať ich na stránku.
+	'spam-blacklist'      => '# Externé URLs zodpovedajúce tomuto zoznamu budú zablokované pri pokuse pridať ich na stránku.
 # Tento zoznam ovplyvňuje iba túto wiki; pozrite sa tiež na globálnu čiernu listinu.
 # Dokumentáciu nájdete na  http://www.mediawiki.org/wiki/Extension:SpamBlacklist
 #<!-- nechajte tento riadok presne ako je --> <pre>
@@ -602,7 +656,7 @@ $messages['sk'] = array(
 #  * Každý neprázdny riadok je časť regulárneho výrazu, ktorému budú zodpovedať iba domény z URL
 
 #</pre> <!-- nechajte tento riadok presne ako je -->',
-	'spam-whitelist'     => '#<!-- leave this line exactly as it is --> 
+	'spam-whitelist'      => '#<!-- leave this line exactly as it is --> 
 <pre> 
 
 # Externé URL zodpovedajúce výrazom v tomto zozname *nebudú* zablokované, ani keby
@@ -614,7 +668,8 @@ $messages['sk'] = array(
 
 
 </pre> <!-- leave this line exactly as it is -->',
-	'spam-invalid-lines' => '{{PLURAL:$1|Nasledovný riadok|Nasledovné riadky}} čiernej listiny spamu {{PLURAL:$1|je neplatný regulárny výraz|sú neplatné regulárne výrazy}} a je potrebné {{PLURAL:$1|ho|ich}} opraviť pred uložením stránky:',
+	'spam-invalid-lines'  => '{{PLURAL:$1|Nasledovný riadok|Nasledovné riadky}} čiernej listiny spamu {{PLURAL:$1|je neplatný regulárny výraz|sú neplatné regulárne výrazy}} a je potrebné {{PLURAL:$1|ho|ich}} opraviť pred uložením stránky:',
+	'spam-blacklist-desc' => 'Antispamový nástroj na základe regulárnych výrazov',
 );
 
 /** Seeltersk (Seeltersk)
@@ -646,8 +701,11 @@ $messages['stq'] = array(
 	| Do foulgjende Sieden in ju Spam-Blacklist sunt uungultige reguläre Uutdrukke. Do mouten foar dät Spiekerjen fon ju Siede korrigierd wäide}}:',
 );
 
+/** Swedish (Svenska)
+ * @author Lejonel
+ */
 $messages['sv'] = array(
-	'spam-blacklist' => '
+	'spam-blacklist'      => '
  # Den här listan stoppar matchande externa URL:er från att läggas till på sidor.
  # Listan påverkar bara den här wikin; se även den globala svarta listan för spam.
  # För dokumentation se http://www.mediawiki.org/wiki/Extension:SpamBlacklist
@@ -658,7 +716,7 @@ $messages['sv'] = array(
 #   * Alla icke-tomma rader används som reguljära uttryck för att matcha domännamn i URL:er
 
  #</pre> <!-- ändra inte den här raden -->',
-	'spam-whitelist' => '
+	'spam-whitelist'      => '
  #<!-- ändra inte den här raden --> <pre>
 # Externa URL:er som matchar den här listan blockeras *inte*,
 # inte ens om de är blockerade genom den svarta listan för spam.
@@ -668,10 +726,38 @@ $messages['sv'] = array(
 #   * Alla icke-tomma rader används som reguljära uttryck för att matcha domännamn i URL:er
 
  #</pre> <!-- ändra inte den här raden -->',
-	'spam-invalid-lines' =>
-	"Följande {{PLURAL:$1|rad|rader}} i svarta listan för spam" .
-	" innehåller inte något giltigt reguljärt uttryck " .
-	" och måste rättas innan sidan sparas:\n",
+	'spam-invalid-lines'  => 'Följande {{PLURAL:$1|rad|rader}} i svarta listan för spam innehåller inte något giltigt reguljärt uttryck  och måste rättas innan sidan sparas:
+',
+	'spam-blacklist-desc' => 'Antispamverktyg baserat på reguljära uttryck',
+);
+
+/** Telugu (తెలుగు)
+ * @author Veeven
+ */
+$messages['te'] = array(
+	'spam-blacklist'      => '
+  # ఓ పేజీకి చేర్చిన బయటి లింకులు గనక ఈ జాబితాతో సరిపోలితే వాటిని నిరోధిస్తాం.
+  # ఈ జాబితా ఈ వికీకి మాత్రమే సంబంధించినది; మహా నిరోధపు జాబితాని కూడా చూడండి.
+  # పత్రావళి కొరకు ఇక్కడ చూడండి: http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- leave this line exactly as it is --> <pre>
+#
+# Syntax is as follows:
+#  * "#" అన్న అక్షరం నుండి లైను చివరివరకూ ఉన్నదంతా వ్యాఖ్య
+#  * ఖాళీగా లేని ప్రతీలైనూ URLలలోని హోస్ట్ పేరుని మాత్రమే సరిపోల్చే ఒక regex తునక
+
+  #</pre> <!-- leave this line exactly as it is -->',
+	'spam-whitelist'      => '
+  #<!-- leave this line exactly as it is --> <pre>
+# ఈ జాబితాకి సరిపోలిన బయటి లింకులని *నిరోధించము*,
+# అవి నిరోధపు జాబితాలోని పద్దులతో సరిపోలినా గానీ.
+#
+# ఛందస్సు ఇదీ:
+#  * "#" అక్షరం నుండి లైను చివరివరకూ ప్రతీదీ ఓ వ్యాఖ్యే
+#  * ఖాళీగా లేని ప్రతీ లైనూ URLలలో హోస్ట్ పేరుని సరిపోల్చే regex తునక
+
+  #</pre> <!-- leave this line exactly as it is -->',
+	'spam-invalid-lines'  => 'స్పామ్ నిరోధపు జాబితాలోని క్రింద పేర్కొన్న {{PLURAL:$1|లైను|లైన్లు}} తప్పుగా {{PLURAL:$1|ఉంది|ఉన్నాయి}}, పేజీని భద్రపరిచేముందు {{PLURAL:$1|దాన్ని|వాటిని}} సరిదిద్దండి:',
+	'spam-blacklist-desc' => 'Regex ఆధారిత స్పామ్ నిరోధక పనిముట్టు',
 );
 
 $messages['yue'] = array(
