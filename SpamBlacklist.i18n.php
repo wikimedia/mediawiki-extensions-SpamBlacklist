@@ -33,7 +33,7 @@ $messages['en'] = array(
 	"The following spam blacklist {{PLURAL:$1|line is an|lines are}} " .
 	" invalid regular {{PLURAL:$1|expression|expressions}} " .
 	" and {{PLURAL:$1|needs|need}} to be corrected before saving the page:\n",
-	'spam-blacklist-desc' => 'Regex-based anti-spam tool',
+	'spam-blacklist-desc' => 'Regex-based anti-spam tool: [[MediaWiki:Spam-blacklist]] and [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Arabic (العربية)
@@ -147,6 +147,9 @@ $messages['cs'] = array(
 	'spam-blacklist-desc' => 'Antispamový nástroj na základě regulárních výrazů',
 );
 
+/** German (Deutsch)
+ * @author Raimond Spekking
+ */
 $messages['de'] = array(
 	'spam-blacklist' => '
  # Externe URLs, die in dieser Liste enthalten sind, blockieren das Speichern der Seite.
@@ -175,6 +178,7 @@ $messages['de'] = array(
 	"{{PLURAL:$1
 	| Die folgende Zeile in der Spam-Blacklist ist ein ungültiger regulärer Ausdruck. Sie muss vor dem Speichern der Seite korrigiert werden
 	| Die folgenden Zeilen in der Spam-Blacklist sind ungültige reguläre Ausdrücke. Sie müssen vor dem Speichern der Seite korrigiert werden}}:\n",
+	'spam-blacklist-desc' => 'Regex-basiertes Anti-Spam-Werkzeug: [[MediaWiki:Spam-blacklist]] und [[MediaWiki:Spam-whitelist]]',
 );
 
 # فارسی (Huji)
