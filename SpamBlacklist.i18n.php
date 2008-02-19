@@ -60,7 +60,7 @@ $messages['ar'] = array(
 
  #</pre> <!-- leave this line exactly as it is -->',
 	'spam-invalid-lines'  => '{{PLURAL:$1|السطر التالي|السطور التالية}}  في قائمة السبام السوداء هي {{PLURAL:$1|تعبير منتظم غير صحيح|تعبيرات منتظمة غير صحيحة}}  و {{PLURAL:$1|يحتاج|تحتاج}} أن يتم تصحيحها قبل حفظ الصفحة:',
-	'spam-blacklist-desc' => 'أداة ضد السبام تعتمد على التعبيرات المنتظمة',
+	'spam-blacklist-desc' => 'أداة ضد السبام تعتمد على التعبيرات المنتظمة: [[MediaWiki:Spam-blacklist]] و [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Asturian (Asturianu)
@@ -505,7 +505,7 @@ $messages['nl'] = array(
 
  #</pre> <!-- laat deze lijn zoals hij is -->',
 	'spam-invalid-lines'  => 'De volgende {{PLURAL:$1|regel|regels}} van de zwarte lijst {{PLURAL:$1|is een|zijn}} onjuiste reguliere {{PLURAL:$1|uitdrukking|uitdrukkingen}}  en {{PLURAL:$1|moet|moeten}} verbeterd worden alvorens de pagina kan worden opgeslagen:',
-	'spam-blacklist-desc' => 'Antispamfunctionaliteit via reguliere expressies',
+	'spam-blacklist-desc' => 'Antispamfunctionaliteit via reguliere expressies: [[MediaWiki:Spam-blacklist]] en [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Norwegian (‪Norsk (bokmål)‬)
@@ -575,6 +575,7 @@ $messages['pms'] = array(
 
 /** Portuguese (Português)
  * @author 555
+ * @author Malafaya
  */
 $messages['pt'] = array(
 	'spam-blacklist'      => '  # URLs externas que coincidam com esta lista serão bloqueadas quando
@@ -598,7 +599,7 @@ $messages['pt'] = array(
 
   #</pre> <!-- mantenha esta linha exatamente assim -->',
 	'spam-invalid-lines'  => '{{PLURAL:$1|A entrada|As entradas}} a seguir {{PLURAL:$1|é uma expressão regular|são expressões regulares}}  (regex) {{PLURAL:$1|inválida e precisa|inválidas e precisam}} ser {{PLURAL:$1|corrigida|corrigidas}} antes de salvar a página:',
-	'spam-blacklist-desc' => 'Ferramenta anti-"spam" baseada em Regex',
+	'spam-blacklist-desc' => 'Ferramenta anti-"spam" baseada em Regex: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Russian (Русский)
@@ -625,7 +626,7 @@ $messages['ru'] = array(
 
  #</pre> <!-- не изменяйте эту строку -->',
 	'spam-invalid-lines'  => '{{PLURAL:$1|Следующая строка чёрного списка ссылок содержит ошибочное регулярное выражение и должна быть исправлена|Следующие строки чёрного списка ссылок содержат ошибочные регулярные выражения и должны быть исправлены}} перед сохранением:',
-	'spam-blacklist-desc' => 'Основанный на регулярных выражениях анти-спам инструмент',
+	'spam-blacklist-desc' => 'Основанный на регулярных выражениях анти-спам инструмент: [[MediaWiki:Spam-blacklist]] и [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Yakut (Саха тыла)
@@ -680,7 +681,7 @@ $messages['sk'] = array(
 
 </pre> <!-- leave this line exactly as it is -->',
 	'spam-invalid-lines'  => '{{PLURAL:$1|Nasledovný riadok|Nasledovné riadky}} čiernej listiny spamu {{PLURAL:$1|je neplatný regulárny výraz|sú neplatné regulárne výrazy}} a je potrebné {{PLURAL:$1|ho|ich}} opraviť pred uložením stránky:',
-	'spam-blacklist-desc' => 'Antispamový nástroj na základe regulárnych výrazov',
+	'spam-blacklist-desc' => 'Antispamový nástroj na základe regulárnych výrazov: [[MediaWiki:Spam-blacklist|Čierna listina]] a [[MediaWiki:Spam-whitelist|Biela listina]]',
 );
 
 /** Seeltersk (Seeltersk)
