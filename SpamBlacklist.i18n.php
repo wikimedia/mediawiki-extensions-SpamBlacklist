@@ -144,7 +144,7 @@ $messages['cs'] = array(
 
   #</pre> <!-- nechejte tento řádek přesně tak jak je -->',
 	'spam-invalid-lines'  => 'Na černé listině spamu {{PLURAL:$1|je následující řádka neplatný regulární výraz|jsou následující řádky neplatné regulární výrazy|jsou následující řádky regulární výrazy}} a je nutné {{PLURAL:$1|ji|je|je}} před uložením stránky opravit :',
-	'spam-blacklist-desc' => 'Antispamový nástroj na základě regulárních výrazů',
+	'spam-blacklist-desc' => 'Antispamový nástroj na základě regulárních výrazů: [[MediaWiki:Spam-blacklist]] a [[MediaWiki:Spam-whitelist]]',
 );
 
 /** German (Deutsch)
@@ -275,7 +275,7 @@ $messages['gl'] = array(
 
  #</pre> <!-- deixe esta liña exactamente como está -->',
 	'spam-invalid-lines'  => '{{PLURAL:$1|A liña seguinte da lista negra de spam é|As liñas seguintes da lista negra de spam son}} {{PLURAL:$1|unha expresión regular|expresións regulares}} e {{PLURAL:$1|haina|hainas}} que corrixir antes de gardar a páxina:',
-	'spam-blacklist-desc' => 'Ferramenta anti-spam baseada en expresións regulares',
+	'spam-blacklist-desc' => 'Ferramenta anti-spam baseada en expresións regulares: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Croatian (Hrvatski)
@@ -375,6 +375,33 @@ $messages['it'] = array(
 
   #</pre> <!-- non modificare in alcun modo questa riga -->',
 	'spam-invalid-lines' => "{{PLURAL:$1|La seguente riga|Le seguenti righe}} della blacklist dello spam {{PLURAL:$1|non è un'espressione regolare valida|non sono espressioni regolari valide}}; si prega di correggere {{PLURAL:$1|l'errore|gli errori}} prima di salvare la pagina.",
+);
+
+/** Japanese (日本語)
+ * @author JtFuruhata
+ */
+$messages['ja'] = array(
+	'spam-blacklist'      => '  # このリストに掲載されている外部URLに一致する送信元からのページ編集をブロックします。
+  # リストはこのウィキでのみ有効で、この他に広域ブラックリストも参照されます
+  # 利用方法は http://www.mediawiki.org/wiki/Extension:SpamBlacklist をご覧ください。
+  #<!-- この行は変更しないでください --> <pre>
+#
+# 構文は以下のとおりです:
+#  * "#"文字から行末まではコメントとして扱われます
+#  * 空白を含んでいない行は、URLに含まれるホスト名との一致を検出する正規表現です
+
+  #</pre> <!-- この行は変更しないでください -->',
+	'spam-whitelist'      => '   #<!-- この行は変更しないでください --> <pre>
+# このリストに掲載されている外部URLに一致する送信元からのページ編集は、
+# 例えブラックリストに掲載されていたとしても、ブロック*されません*。
+#
+# 構文は以下のとおりです:
+#  * "#"文字から行末まではコメントとして扱われます
+#  * 空白を含んでいない行は、URLに含まれるホスト名との一致を検出する正規表現です
+
+   #</pre> <!-- この行は変更しないでください -->',
+	'spam-invalid-lines'  => 'このスパムブラックリストには、不正な正規{{PLURAL:$1|表現|表現}}の含まれている{{PLURAL:$1|行が|行が複数}}あるため、保存する前に{{PLURAL:$1|これ|これら}}を修正してください:',
+	'spam-blacklist-desc' => '正規表現を用いたスパム対策ツール: [[MediaWiki:Spam-blacklist|スパムブラックリスト]] および [[MediaWiki:Spam-whitelist|スパムホワイトリスト]]',
 );
 
 $messages['kk-arab'] = array(
@@ -532,7 +559,7 @@ $messages['no'] = array(
 
   #</pre> <!-- la denne linja være nøyaktig som den er -->',
 	'spam-invalid-lines'  => 'Følgende {{PLURAL:$1|linje|linjer}} i spamsvartelista er {{PLURAL:$1|et ugyldig regulært uttrykk|ugyldige regulære uttrykk}} og må rettes før lagring av siden:',
-	'spam-blacklist-desc' => 'Regex-basert antisøppelverktøy',
+	'spam-blacklist-desc' => 'Regex-basert antisøppelverktøy: [[MediaWiki:Spam-blacklist]] og [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Occitan (Occitan)
@@ -770,6 +797,32 @@ $messages['te'] = array(
   #</pre> <!-- leave this line exactly as it is -->',
 	'spam-invalid-lines'  => 'స్పామ్ నిరోధపు జాబితాలోని క్రింద పేర్కొన్న {{PLURAL:$1|లైను|లైన్లు}} తప్పుగా {{PLURAL:$1|ఉంది|ఉన్నాయి}}, పేజీని భద్రపరిచేముందు {{PLURAL:$1|దాన్ని|వాటిని}} సరిదిద్దండి:',
 	'spam-blacklist-desc' => 'Regex ఆధారిత స్పామ్ నిరోధక పనిముట్టు',
+);
+
+/** Vietnamese (Tiếng Việt)
+ * @author Minh Nguyen
+ */
+$messages['vi'] = array(
+	'spam-blacklist'      => '  # Các đị chỉ URL ngoài trùng với một khoản trong danh sách này bị cấm không được thêm vào trang nào.
+  # Danh sách này chỉ có hiệu lực ở wiki này; hãy xem thêm “danh sách đen toàn cầu”.
+  # Có tài liệu hướng dẫn tại http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- leave this line exactly as it is --> <pre>
+#
+# Cú pháp:
+#  * Các lời ghi chú bắt đầu với ký tự “#” và tiếp tục cho đến cuối dòng.
+#  * Các dòng không để trống là một mảnh biểu thức chính quy, nó chỉ trùng với tên máy chủ trong địa chỉ URL.
+
+  #</pre> <!-- leave this line exactly as it is -->',
+	'spam-whitelist'      => '  #<!-- leave this line exactly as it is --> <pre>
+# Các địa chỉ URL ngoài trùng với một khoản trong danh sách này *không* bị cấm, dù có nó trong danh sách đen.
+#
+# Cú pháp:
+#  * Các lời ghi chú bắt đầu với ký tự “#” và tiếp tục cho đến cuối dòng.
+#  * Các dòng không để trống là một mảnh biểu thức chính quy, nó chỉ trùng với tên máy chủ trong địa chỉ URL.
+
+  #</pre> <!-- leave this line exactly as it is -->',
+	'spam-invalid-lines'  => 'Những dòng sau đây trong danh sách đen về spam không hợp lệ; xin hãy sửa chữa chúng để tuân theo cú pháp biểu thức chính quy trước khi lưu trang:',
+	'spam-blacklist-desc' => 'Công cụ dùng biểu thức chính quy để chống spam: [[MediaWiki:Spam-blacklist]] và [[MediaWiki:Spam-whitelist]]',
 );
 
 $messages['yue'] = array(
