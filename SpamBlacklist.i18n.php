@@ -234,7 +234,7 @@ $messages['fr'] = array(
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
-	'spam-blacklist'     => '  # Los lims de defôr étent dens ceta lista seront blocâs pendent lor entrebetâ dens una pâge.
+	'spam-blacklist'      => '  # Los lims de defôr étent dens ceta lista seront blocâs pendent lor entrebetâ dens una pâge.
   # Ceta lista regârde ren que Vouiquinovèles ; refèrâd-vos asse-ben a la lista nêre g·ènèrala de Meta-Wiki.
   # La documentacion sè trove a l’adrèce siuventa : http://www.mediawiki.org/wiki/Extension:SpamBlacklist
   #<!-- lèssiéd ceta legne justo d’ense --> <pre>
@@ -243,7 +243,7 @@ $messages['frp'] = array(
 #  * Tot caractèro siuvent « # » tant qu’a la fin de la legne serat entèrprètâ coment un comentèro.
 #  * Tota legne pas voueda est un bocon de RegEx que serat utilisâ ren qu’u dedens des lims hipèrtèxte.
   #</pre> <!-- lèssiéd ceta legne justo d’ense -->',
-	'spam-whitelist'     => '  #<!-- lèssiéd ceta legne justo d’ense --> <pre>
+	'spam-whitelist'      => '  #<!-- lèssiéd ceta legne justo d’ense --> <pre>
 # Los lims de defôr étent dens ceta lista seront pas blocâs mémo
 # s’ils ont étâ blocâs en vèrtu d’una lista nêre.
 #
@@ -251,7 +251,8 @@ $messages['frp'] = array(
 #  * Tot caractèro siuvent « # » tant qu’a la fin de la legne serat entèrprètâ coment un comentèro.
 #  * Tota legne pas voueda est un bocon de RegEx que serat utilisâ ren qu’u dedens des lims hipèrtèxte.
   #</pre> <!-- lèssiéd ceta legne justo d’ense -->',
-	'spam-invalid-lines' => '{{PLURAL:$1|La legne siuventa|Les legnes siuventes}} de la lista des spames {{PLURAL:$1|est rèdigiê|sont rèdigiês}} de maniére fôssa et {{PLURAL:$1|at|ont}} fôta de les corrèccions nècèssères devant que sôvar la pâge :',
+	'spam-invalid-lines'  => '{{PLURAL:$1|La legne siuventa|Les legnes siuventes}} de la lista des spames {{PLURAL:$1|est rèdigiê|sont rèdigiês}} de maniére fôssa et {{PLURAL:$1|at|ont}} fôta de les corrèccions nècèssères devant que sôvar la pâge :',
+	'spam-blacklist-desc' => 'Outil antispame basâ sur des èxprèssions règuliéres : [[MediaWiki:Spam-blacklist]] et [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Galician (Galego)
