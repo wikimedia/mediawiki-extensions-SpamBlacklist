@@ -313,6 +313,7 @@ $messages['gl'] = array(
 
 /** Croatian (Hrvatski)
  * @author SpeedyGonsales
+ * @author Dnik
  */
 $messages['hr'] = array(
 	'spam-blacklist'      => ' # Vanjske URLovi koji budu pronađeni pomoću ovog popisa nije moguće snimiti na stranicu wikija.
@@ -335,7 +336,7 @@ $messages['hr'] = array(
 
  #</pre> <!-- leave this line exactly as it is -->',
 	'spam-invalid-lines'  => '{{PLURAL:$1|Slijedeći redak|Slijedeći redovi|Slijedeći redovi}} "crnog popisa" spama {{PLURAL:$1|je|su}} nevaljani {{PLURAL:$1|regularan izraz|regularni izrazi|regularni izrazi}} i {{PLURAL:$1|mora|moraju|moraju}} biti ispravljeni prije snimanja ove stranice:',
-	'spam-blacklist-desc' => 'Anti-spam alat zasnovan na reg. izrazima',
+	'spam-blacklist-desc' => 'Anti-spam alat zasnovan na reg. izrazima: [[MediaWiki:Spam-blacklist]] i [[MediaWiki:Spam-whitelist]]',
 );
 
 $messages['hsb'] = array(
@@ -383,7 +384,7 @@ $messages['hu'] = array(
 
   #</pre> <!-- ezen a soron ne változtass -->',
 	'spam-invalid-lines'  => 'Az alábbi {{PLURAL:$1|sor hibás|sorok hibásak}} a spam elleni feketelistájában; {{PLURAL:$1|javítsd|javítsd őket}} mentés előtt:',
-	'spam-blacklist-desc' => 'Regex-alapú spamellenes eszköz',
+	'spam-blacklist-desc' => 'Regex-alapú spamellenes eszköz: [[MediaWiki:Spam-blacklist]] és [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Italian (Italiano)
@@ -510,9 +511,10 @@ $messages['kk-latn'] = array(
 
 /** Limburgish (Limburgs)
  * @author Ooswesthoesbes
+ * @author Matthias
  */
 $messages['li'] = array(
-	'spam-blacklist'     => " # Externe URL's die voldoen aan deze lijst waere geweigerd bie 't
+	'spam-blacklist'      => " # Externe URL's die voldoen aan deze lijst waere geweigerd bie 't
   # toevoege aan 'n pagina. Deze lijst haet allein invloed op deze wiki.
   # Er bestaot ouk 'n globale zwarte lijst.
   # Documentatie: http://www.mediawiki.org/wiki/Extension:SpamBlacklist
@@ -524,7 +526,7 @@ $messages['li'] = array(
 #    alleen van toepassing is op hosts binne URL's.
 
   #</pre> <!-- laot deze lien -->",
-	'spam-whitelist'     => "  #<!-- laot deze lien --> <pre>
+	'spam-whitelist'      => "  #<!-- laot deze lien --> <pre>
 # Externe URL's die voldoen aan deze lijst, waere *nooit* geweigerd, al
 # zoude ze geblokkeerd motte waere door regels oet de zwarte lijst.
 #
@@ -534,7 +536,8 @@ $messages['li'] = array(
 #    allein van toepassing is op hosts binne URL's.
 
   #</pre> <!-- laot deze lien -->",
-	'spam-invalid-lines' => "De volgende {{PLURAL:$1|regel|regel}} van de zwarte lies {{PLURAL:$1|is 'n|zeen}} onzjuuste reguliere {{PLURAL:$1|oetdrukking|oetdrukkinge}}  en {{PLURAL:$1|mót|mótte}} verbaeterd waere alveures de pazjena kin waere opgeslage:",
+	'spam-invalid-lines'  => "De volgende {{PLURAL:$1|regel|regel}} van de zwarte lies {{PLURAL:$1|is 'n|zeen}} onzjuuste reguliere {{PLURAL:$1|oetdrukking|oetdrukkinge}}  en {{PLURAL:$1|mót|mótte}} verbaeterd waere alveures de pazjena kin waere opgeslage:",
+	'spam-blacklist-desc' => 'Antispamfunctionaliteit via reguliere expressies: [[MediaWiki:Spam-blacklist]] en [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Dutch (Nederlands)
