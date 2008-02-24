@@ -339,8 +339,11 @@ $messages['hr'] = array(
 	'spam-blacklist-desc' => 'Anti-spam alat zasnovan na reg. izrazima: [[MediaWiki:Spam-blacklist]] i [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Upper Sorbian (Hornjoserbsce)
+ * @author Michawiki
+ */
 $messages['hsb'] = array(
-	'spam-blacklist' => ' # Eksterne URL, kotrež su w lisćinje wobsahowane, blokuja składowanje strony.
+	'spam-blacklist'      => ' # Eksterne URL, kotrež su w lisćinje wobsahowane, blokuja składowanje strony.
  # Tuta lisćina nastupa jenož tutón Wiki; hlej tež globalnu čornu lisćinu.
  # Za dokumentaciju hlej http://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Tuta linka njesmě so změnić! --> <pre>
@@ -350,7 +353,7 @@ $messages['hsb'] = array(
 #   * Kóžda njeprózdna linka je regularny wuraz, kotryž so přećiwo mjenu hosta w URL pruwuje.
 
  #</pre> <!-- Tuta linka njesmě so změnić! -->',
-	'spam-whitelist' => ' #<!-- Tuta linka njesmě so změnić! --> <pre>
+	'spam-whitelist'      => ' #<!-- Tuta linka njesmě so změnić! --> <pre>
 # Eksterne URL, kotrež su w tutej lisćinje wobsahowane, njeblokuja składowanje strony, byrnjež
 # w globalnej abo lokalnej čornej lisćinje wobsahowane byli.
 #
@@ -359,7 +362,8 @@ $messages['hsb'] = array(
 #   * Kóžda njeprózdna linka je regularny wuraz, kotryž so přećiwo mjenu hosta w URL pruwuje.
 
  #</pre> <!-- Tuta linka njesmě so změnić! -->',
-'spam-invalid-lines' => '{{PLURAL:$1|slědowaca linka je njepłaćiwy regularny wuraz|slědowacych linkow je regularny wuraz|slědowace linki su regularne wurazy|slědowacej lince stej regularnej wurazaj}} a {{PLURAL:$1|dyrbi|dyrbi|dyrbja|dyrbjetej}} so korigować, prjedy hač so strona składuje:',
+	'spam-invalid-lines'  => '{{PLURAL:$1|slědowaca linka je njepłaćiwy regularny wuraz|slědowacych linkow je regularny wuraz|slědowace linki su regularne wurazy|slědowacej lince stej regularnej wurazaj}} a {{PLURAL:$1|dyrbi|dyrbi|dyrbja|dyrbjetej}} so korigować, prjedy hač so strona składuje:',
+	'spam-blacklist-desc' => 'Přećiwospamowej nastroj na zakładźe Regex: [[MediaWiki:Spam-blacklist]] a [[MediaWiki:Spam-whitelsit]]',
 );
 
 /** Hungarian (Magyar)
@@ -391,7 +395,7 @@ $messages['hu'] = array(
  * @author BrokenArrow
  */
 $messages['it'] = array(
-	'spam-blacklist'     => '  # Le URL esterne al sito che corrispondono alla lista seguente verranno bloccate.
+	'spam-blacklist'      => '  # Le URL esterne al sito che corrispondono alla lista seguente verranno bloccate.
   # La lista è valida solo per questo sito; fare riferimento anche alla blacklist globale.
   # Per la documentazione si veda http://www.mediawiki.org/wiki/Extension:SpamBlacklist
   #<!-- non modificare in alcun modo questa riga --> <pre>  
@@ -399,7 +403,7 @@ $messages['it'] = array(
 #  * Tutto ciò che segue un carattere "#" è un commento, fino al termine della riga
 #  * Tutte le righe non vuote sono frammenti di espressioni regolari che si applicano al solo nome dell\'host nelle URL
   #</pre> <!-- non modificare in alcun modo questa riga -->',
-	'spam-whitelist'     => '  #<!-- non modificare in alcun modo questa riga --> <pre>  
+	'spam-whitelist'      => '  #<!-- non modificare in alcun modo questa riga --> <pre>  
 # Le URL esterne al sito che corrispondono alla lista seguente *non* verranno
 # bloccate, anche nel caso corrispondano a delle voci della blacklist
 #
@@ -408,7 +412,8 @@ $messages['it'] = array(
 #  * Tutte le righe non vuote sono frammenti di espressioni regolari che si applicano al solo nome dell\'host nelle URL
 
   #</pre> <!-- non modificare in alcun modo questa riga -->',
-	'spam-invalid-lines' => "{{PLURAL:$1|La seguente riga|Le seguenti righe}} della blacklist dello spam {{PLURAL:$1|non è un'espressione regolare valida|non sono espressioni regolari valide}}; si prega di correggere {{PLURAL:$1|l'errore|gli errori}} prima di salvare la pagina.",
+	'spam-invalid-lines'  => "{{PLURAL:$1|La seguente riga|Le seguenti righe}} della blacklist dello spam {{PLURAL:$1|non è un'espressione regolare valida|non sono espressioni regolari valide}}; si prega di correggere {{PLURAL:$1|l'errore|gli errori}} prima di salvare la pagina.",
+	'spam-blacklist-desc' => 'Strumento antispam basato sulle espressioni regolari [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Japanese (日本語)
