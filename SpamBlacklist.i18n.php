@@ -161,7 +161,7 @@ $messages['cs'] = array(
 #  * Každý neprázdný řádek je část regulárního výrazu, kterému budou odpovídat pouze domény z URL
 
  #</pre> <!-- Nechte tento řádek přesně tak jak je -->',
-	'spam-whitelist'      => '  #<!-- nechejte tento řádek přesně tak jak je --> <pre>  
+	'spam-whitelist'      => '  #<!-- nechejte tento řádek přesně tak jak je --> <pre>
 
 # Externí URL odpovídající výrazům v tomto seznamu *nebudou* zablokovány, ani kdyby
 # je zablokovaly položky z černé listiny.
@@ -391,6 +391,38 @@ $messages['hu'] = array(
 	'spam-blacklist-desc' => 'Regex-alapú spamellenes eszköz: [[MediaWiki:Spam-blacklist]] és [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Indonesian (Bahasa Indonesia)
+ * @author IvanLanin
+ */
+$messages['id'] = array(
+	'spam-blacklist' => '
+ # URL eksternal yang cocok dengan daftar berikut akan diblokir jika ditambahkan pada suatu halaman.
+ # Daftar ini hanya berpengaruh pada wiki ini; rujuklah juga daftar hitam global.
+ # Untuk dokumentasi, lihat http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- biarkan baris ini seperti adanya --> <pre>
+#
+# Sintaksnya adalah sebagai berikut:
+#   * Semua yang diawali dengan karakter "#" hingga akhir baris adalah komentar
+#   * Semua baris yang tidak kosong adalah fragmen regex yang hanya akan dicocokkan dengan nama host di dalam URL
+
+ #</pre> <!-- biarkan baris ini seperti adanya -->',
+	'spam-whitelist' => '
+ #<!-- biarkan baris ini seperti adanya --> <pre>
+ # URL eksternal yang cocok dengan daftar berikut *tidak* akan diblokir bahkan
+# jika telah diblokir oleh entri pada daftar hitam
+#
+# Sintaksnya adalah sebagai berikut:
+#   * Semua yang diawali dengan karakter "#" hingga akhir baris adalah komentar
+#   * Semua baris yang tidak kosong adalah fragmen regex yang hanya akan dicocokkan dengan nama host di dalam URL
+
+ #</pre> <!-- biarkan baris ini seperti adanya -->',
+	'spam-invalid-lines' =>
+	"{{PLURAL:$1|Baris|Baris-baris}} daftar hitam spam berikut adalah" .
+	" {{PLURAL:$1|ekspresi|ekspresi}} regular yang tak valid" .
+	" dan {{PLURAL:$1|perlu|perlu}} dikoreksi sebelum disimpan:\n",
+	'spam-blacklist-desc' => 'Perkakas anti-spam berbasis regex: [[MediaWiki:Spam-blacklist]] dan [[MediaWiki:Spam-whitelist]]',
+);
+
 /** Italian (Italiano)
  * @author BrokenArrow
  */
@@ -398,16 +430,16 @@ $messages['it'] = array(
 	'spam-blacklist'      => '  # Le URL esterne al sito che corrispondono alla lista seguente verranno bloccate.
   # La lista è valida solo per questo sito; fare riferimento anche alla blacklist globale.
   # Per la documentazione si veda http://www.mediawiki.org/wiki/Extension:SpamBlacklist
-  #<!-- non modificare in alcun modo questa riga --> <pre>  
-# La sintassi è la seguente:  
+  #<!-- non modificare in alcun modo questa riga --> <pre>
+# La sintassi è la seguente:
 #  * Tutto ciò che segue un carattere "#" è un commento, fino al termine della riga
 #  * Tutte le righe non vuote sono frammenti di espressioni regolari che si applicano al solo nome dell\'host nelle URL
   #</pre> <!-- non modificare in alcun modo questa riga -->',
-	'spam-whitelist'      => '  #<!-- non modificare in alcun modo questa riga --> <pre>  
+	'spam-whitelist'      => '  #<!-- non modificare in alcun modo questa riga --> <pre>
 # Le URL esterne al sito che corrispondono alla lista seguente *non* verranno
 # bloccate, anche nel caso corrispondano a delle voci della blacklist
 #
-# La sintassi è la seguente:  
+# La sintassi è la seguente:
 #  * Tutto ciò che segue un carattere "#" è un commento, fino al termine della riga
 #  * Tutte le righe non vuote sono frammenti di espressioni regolari che si applicano al solo nome dell\'host nelle URL
 
@@ -444,21 +476,21 @@ $messages['ja'] = array(
 );
 
 $messages['kk-arab'] = array(
-	'spam-blacklist'     => '  # وسى تىزىمگە سايكەس سىرتقى URL جايلار بەتكە ۇستەۋدەن بۇعاتتالادى. 
-  # بۇل ٴتىزىم تەك مىنداعى ۋىيكىيگە اسەر ەتەدى; تاعى دا عالامدىق قارا ٴتىزىمدى قاراپ شىعىڭىز. 
+	'spam-blacklist'     => '  # وسى تىزىمگە سايكەس سىرتقى URL جايلار بەتكە ۇستەۋدەن بۇعاتتالادى.
+  # بۇل ٴتىزىم تەك مىنداعى ۋىيكىيگە اسەر ەتەدى; تاعى دا عالامدىق قارا ٴتىزىمدى قاراپ شىعىڭىز.
   # قۇجاتتاما ٴۇشىن http://www.mediawiki.org/wiki/Extension:SpamBlacklist بەتىن قاراڭىز
-  #<!-- بۇل جولدى بولعان جاعدايىمەن قالدىرىڭىز --> <pre> 
-# 
-# سىينتاكسىيسى كەلەسىدەي: 
+  #<!-- بۇل جولدى بولعان جاعدايىمەن قالدىرىڭىز --> <pre>
+#
+# سىينتاكسىيسى كەلەسىدەي:
 #  * «#» نىشانىنان باستاپ جول اياعىنا دەيىنگىلەرىنىڭ بۇكىلى ماندەمە دەپ سانالادى
 #  * بوس ەمەس ٴار جول تەك URL جايلاردىڭ ىشىندەگى حوستتارعا سايكەس جۇيەلى ايتىلىمدىڭ (regex) بولىگى دەپ سانالادى
 
   #</pre> <!-- بۇل جولدى بولعان جاعدايىمەن قالدىرىڭىز -->',
 	'spam-whitelist'     => '  #<!-- بۇل جولدى بولعان جاعدايىمەن قالدىرىڭىز --> <pre>
 # وسى تىزىمگە سايكەس سىرتقى URL جايلار *بۇعاتتالمايدى*,
-# (قارا تىزىمدەگى جازبامەن بۇعاتتالعان بولسا دا). 
-# 
-# سىينتاكسىيسى كەلەسىدەي: 
+# (قارا تىزىمدەگى جازبامەن بۇعاتتالعان بولسا دا).
+#
+# سىينتاكسىيسى كەلەسىدەي:
 #  * «#» نىشانىنان باستاپ جول اياعىنا دەيىنگىلەرىنىڭ بۇكىلى ماندەمە دەپ سانالادى
 #  * بوس ەمەس ٴار جول تەك URL جايلاردىڭ ىشىندەگى حوستتارعا سايكەس جۇيەلى ايتىلىمدىڭ (regex) بولىگى دەپ سانالادى
 
@@ -470,21 +502,21 @@ $messages['kk-arab'] = array(
  * @author AlefZet
  */
 $messages['kk-cyrl'] = array(
-	'spam-blacklist'     => '  # Осы тізімге сәйкес сыртқы URL жайлар бетке үстеуден бұғатталады. 
-  # Бұл тізім тек мындағы уикиге әсер етеді; тағы да ғаламдық қара тізімді қарап шығыңыз. 
+	'spam-blacklist'     => '  # Осы тізімге сәйкес сыртқы URL жайлар бетке үстеуден бұғатталады.
+  # Бұл тізім тек мындағы уикиге әсер етеді; тағы да ғаламдық қара тізімді қарап шығыңыз.
   # Құжаттама үшін http://www.mediawiki.org/wiki/Extension:SpamBlacklist бетін қараңыз
-  #<!-- бұл жолды болған жағдайымен қалдырыңыз --> <pre> 
-# 
-# Синтаксисі келесідей: 
+  #<!-- бұл жолды болған жағдайымен қалдырыңыз --> <pre>
+#
+# Синтаксисі келесідей:
 #  * «#» нышанынан бастап жол аяғына дейінгілерінің бүкілі мәндеме деп саналады
 #  * Бос емес әр жол тек URL жайлардың ішіндегі хосттарға сәйкес жүйелі айтылымдың (regex) бөлігі деп саналады
 
   #</pre> <!-- бұл жолды болған жағдайымен қалдырыңыз -->',
 	'spam-whitelist'     => '  #<!-- бұл жолды болған жағдайымен қалдырыңыз --> <pre>
 # Осы тізімге сәйкес сыртқы URL жайлар *бұғатталмайды*,
-# (қара тізімдегі жазбамен бұғатталған болса да). 
-# 
-# Синтаксисі келесідей: 
+# (қара тізімдегі жазбамен бұғатталған болса да).
+#
+# Синтаксисі келесідей:
 #  * «#» нышанынан бастап жол аяғына дейінгілерінің бүкілі мәндеме деп саналады
 #  * Бос емес әр жол тек URL жайлардың ішіндегі хосттарға сәйкес жүйелі айтылымдың (regex) бөлігі деп саналады
 
@@ -492,21 +524,21 @@ $messages['kk-cyrl'] = array(
 	'spam-invalid-lines' => 'Спам қара тізіміндегі келесі {{PLURAL:$1|жолда|жолдарда}} жарамсыз жүйелі {{PLURAL:$1|айтылым|айтылымдар}} бар, және бетті сақтаудың {{PLURAL:$1|бұны|бұларды}}  дұрыстау керек.',
 );
 $messages['kk-latn'] = array(
-	'spam-blacklist'     => '  # Osı tizimge säýkes sırtqı URL jaýlar betke üstewden buğattaladı. 
-  # Bul tizim tek mındağı wïkïge äser etedi; tağı da ğalamdıq qara tizimdi qarap şığıñız. 
+	'spam-blacklist'     => '  # Osı tizimge säýkes sırtqı URL jaýlar betke üstewden buğattaladı.
+  # Bul tizim tek mındağı wïkïge äser etedi; tağı da ğalamdıq qara tizimdi qarap şığıñız.
   # Qujattama üşin http://www.mediawiki.org/wiki/Extension:SpamBlacklist betin qarañız
   #<!-- bul joldı bolğan jağdaýımen qaldırıñız --> <pre>
-# 
-# Sïntaksïsi kelesideý: 
+#
+# Sïntaksïsi kelesideý:
 #  * «#» nışanınan bastap jol ayağına deýingileriniñ bükili mändeme dep sanaladı
 #  * Bos emes är jol tek URL jaýlardıñ işindegi xosttarğa säýkes jüýeli aýtılımdıñ (regex) böligi dep sanaladı
 
   #</pre> <!-- bul joldı bolğan jağdaýımen qaldırıñız -->',
-	'spam-whitelist'     => '  #<!-- bul joldı bolğan jağdaýımen qaldırıñız --> <pre> 
+	'spam-whitelist'     => '  #<!-- bul joldı bolğan jağdaýımen qaldırıñız --> <pre>
 # Osı tizimge säýkes sırtqı URL jaýlar *buğattalmaýdı*,
-# (qara tizimdegi jazbamen buğattalğan bolsa da). 
-# 
-# Sïntaksïsi kelesideý: 
+# (qara tizimdegi jazbamen buğattalğan bolsa da).
+#
+# Sïntaksïsi kelesideý:
 #  * «#» nışanınan bastap jol ayağına deýingileriniñ bükili mändeme dep sanaladı
 #  * Bos emes är jol tek URL jaýlardıñ işindegi xosttarğa säýkes jüýeli aýtılımdıñ (regex) böligi dep sanaladı
 
@@ -712,7 +744,7 @@ $messages['sah'] = array(
 
   #</pre> <!-- бу строканы уларытыма -->",
 	'spam-whitelist'     => '  #<!-- бу строканы уларытыма --> <pre>
-# Манна киирбит тас сигэлэр хара испииһэккэ киирбит да буоллахтарына син биир *бобуллуохтара суоҕа*. 
+# Манна киирбит тас сигэлэр хара испииһэккэ киирбит да буоллахтарына син биир *бобуллуохтара суоҕа*.
 #
 # Синтаксис:
 #  * Бу "#" бэлиэттэн саҕалаан строка бүтүөр дылы барыта хос быһаарыыннан ааҕыллар
@@ -736,13 +768,13 @@ $messages['sk'] = array(
 #  * Každý neprázdny riadok je časť regulárneho výrazu, ktorému budú zodpovedať iba domény z URL
 
 #</pre> <!-- nechajte tento riadok presne ako je -->',
-	'spam-whitelist'      => '#<!-- leave this line exactly as it is --> 
-<pre> 
+	'spam-whitelist'      => '#<!-- leave this line exactly as it is -->
+<pre>
 
 # Externé URL zodpovedajúce výrazom v tomto zozname *nebudú* zablokované, ani keby
 # ich zablokovali položky z čiernej listiny.
 #
-# Syntax je nasledovná: 
+# Syntax je nasledovná:
 #   * Všetko od znaku # do konca riadka je komentár
 #   * Každý neprázdny riadok je regulárny výraz, podľa ktorého sa budú kontrolovať názvy domén
 
