@@ -869,7 +869,7 @@ $messages['te'] = array(
 
   #</pre> <!-- leave this line exactly as it is -->',
 	'spam-invalid-lines'  => 'స్పామ్ నిరోధపు జాబితాలోని క్రింద పేర్కొన్న {{PLURAL:$1|లైను|లైన్లు}} తప్పుగా {{PLURAL:$1|ఉంది|ఉన్నాయి}}, పేజీని భద్రపరిచేముందు {{PLURAL:$1|దాన్ని|వాటిని}} సరిదిద్దండి:',
-	'spam-blacklist-desc' => 'Regex ఆధారిత స్పామ్ నిరోధక పనిముట్టు',
+	'spam-blacklist-desc' => 'Regex-ఆధారిత స్పామ్ నిరోధక పనిముట్టు: [[MediaWiki:Spam-blacklist]] మరియు [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Vietnamese (Tiếng Việt)
