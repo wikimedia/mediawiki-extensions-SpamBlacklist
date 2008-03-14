@@ -93,7 +93,7 @@ function wfSpamBlacklistFilterMerged( $editPage, $text ) {
  */
 function wfSpamBlacklistValidate( $editPage, $text, $section, &$hookError ) {
 	$spamObj = wfSpamBlacklistObject();
-	return $spamObj->validate( $editPage, $text, $section, &$hookError );
+	return $spamObj->validate( $editPage, $text, $section, $hookError );
 }
 
 /**
@@ -102,6 +102,6 @@ function wfSpamBlacklistValidate( $editPage, $text, $section, &$hookError ) {
  */
 function wfSpamBlacklistArticleSave( &$article, &$user, $text, $summary, $isminor, $iswatch, $section ) {
 	$spamObj = wfSpamBlacklistObject();
-	return $spamObj->onArticleSave( &$article, &$user, $text, $summary, $isminor, $iswatch, $section );
+	return $spamObj->onArticleSave( $article, $user, $text, $summary, $isminor, $iswatch, $section );
 }
 
