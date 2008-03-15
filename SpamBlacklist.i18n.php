@@ -452,11 +452,12 @@ $messages['it'] = array(
 
 /** Japanese (日本語)
  * @author JtFuruhata
+ * @author Marine-Blue
  */
 $messages['ja'] = array(
 	'spam-blacklist'      => '  # このリストに掲載されている外部URLに一致する送信元からのページ編集をブロックします。
-  # リストはこのウィキでのみ有効で、この他に広域ブラックリストも参照されます
-  # 利用方法は http://www.mediawiki.org/wiki/Extension:SpamBlacklist をご覧ください。
+  # リストはこのウィキでのみ有効で、この他広域ブラックリストも参照されます。
+  # 利用方法は http://www.mediawiki.org/wiki/Extension:SpamBlacklist/ja をご覧ください。
   #<!-- この行は変更しないでください --> <pre>
 #
 # 構文は以下のとおりです:
@@ -473,7 +474,7 @@ $messages['ja'] = array(
 #  * 空白を含んでいない行は、URLに含まれるホスト名との一致を検出する正規表現です
 
    #</pre> <!-- この行は変更しないでください -->',
-	'spam-invalid-lines'  => 'このスパムブラックリストには、不正な正規{{PLURAL:$1|表現|表現}}の含まれている{{PLURAL:$1|行が|行が複数}}あるため、保存する前に{{PLURAL:$1|これ|これら}}を修正してください:',
+	'spam-invalid-lines'  => 'このスパムブラックリストには、不正な正規表現の含まれている行があります。保存する前に問題部分を修正してください:',
 	'spam-blacklist-desc' => '正規表現を用いたスパム対策ツール: [[MediaWiki:Spam-blacklist|スパムブラックリスト]] および [[MediaWiki:Spam-whitelist|スパムホワイトリスト]]',
 );
 
@@ -577,6 +578,34 @@ $messages['li'] = array(
   #</pre> <!-- laot deze lien -->",
 	'spam-invalid-lines'  => "De volgende {{PLURAL:$1|regel|regel}} van de zwarte lies {{PLURAL:$1|is 'n|zeen}} onzjuuste reguliere {{PLURAL:$1|oetdrukking|oetdrukkinge}}  en {{PLURAL:$1|mót|mótte}} verbaeterd waere alveures de pazjena kin waere opgeslage:",
 	'spam-blacklist-desc' => 'Antispamfunctionaliteit via reguliere expressies: [[MediaWiki:Spam-blacklist]] en [[MediaWiki:Spam-whitelist]]',
+);
+
+/** Marathi (मराठी)
+ * @author Kaustubh
+ */
+$messages['mr'] = array(
+	'spam-blacklist'      => '  # या यादीशी जुळणारे बाह्य दुवे एखाद्या पानावर दिल्यास ब्लॉक केले जातील.
+  # ही यादी फक्त या विकिसाठी आहे, सर्व विकिंसाठीची यादी सुद्धा तपासा.
+  # अधिक माहिती साठी पहा http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- leave this line exactly as it is --> <pre>
+#
+# रुपरेषा खालीलप्रमाणे:
+#  * "#" ने सुरु होणारी ओळ शेरा आहे
+#  * प्रत्येक रिकामी नसलेली ओळ अंतर्गत URL जुळविणारी regex फ्रॅगमेंट आहे
+
+  #</pre> <!-- leave this line exactly as it is -->',
+	'spam-whitelist'      => '  # या यादीशी जुळणारे बाह्य दुवे एखाद्या पानावर दिल्यास ब्लॉक केले *जाणार नाहीत*.
+  # ही यादी फक्त या विकिसाठी आहे, सर्व विकिंसाठीची यादी सुद्धा तपासा.
+  # अधिक माहिती साठी पहा http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- leave this line exactly as it is --> <pre>
+#
+# रुपरेषा खालीलप्रमाणे:
+#  * "#" ने सुरु होणारी ओळ शेरा आहे
+#  * प्रत्येक रिकामी नसलेली ओळ अंतर्गत URL जुळविणारी regex फ्रॅगमेंट आहे
+
+  #</pre> <!-- leave this line exactly as it is -->',
+	'spam-invalid-lines'  => 'हे पान जतन करण्यापूर्वी खालील {{PLURAL:$1|ओळ जी चुकीची|ओळी ज्या चुकीच्या}} एक्स्प्रेशन {{PLURAL:$1|आहे|आहेत}}, दुरुस्त करणे गरजेचे आहे:',
+	'spam-blacklist-desc' => 'रेजएक्स वर चालणारे स्पॅम थांबविणारे उपकरण: [[MediaWiki:Spam-blacklist]] व [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Dutch (Nederlands)
