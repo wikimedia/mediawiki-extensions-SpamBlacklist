@@ -955,7 +955,7 @@ $messages['vi'] = array(
 #  * Các dòng không để trống là một mảnh biểu thức chính quy, nó chỉ trùng với tên máy chủ trong địa chỉ URL.
 
   #</pre> <!-- leave this line exactly as it is -->',
-	'spam-invalid-lines'  => 'Những dòng sau đây trong danh sách đen về spam không hợp lệ; xin hãy sửa chữa chúng để tuân theo cú pháp biểu thức chính quy trước khi lưu trang:',
+	'spam-invalid-lines'  => '{{PLURAL:$1|Dòng|Những dòng}} sau đây trong danh sách đen về spam không hợp lệ; xin hãy sửa chữa {{PLURAL:$1|nó|chúng}} để tuân theo cú pháp biểu thức chính quy trước khi lưu trang:',
 	'spam-blacklist-desc' => 'Công cụ dùng biểu thức chính quy để chống spam: [[MediaWiki:Spam-blacklist]] và [[MediaWiki:Spam-whitelist]]',
 );
 
