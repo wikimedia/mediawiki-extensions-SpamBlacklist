@@ -478,6 +478,13 @@ $messages['ja'] = array(
 	'spam-blacklist-desc' => '正規表現を用いたスパム対策ツール: [[MediaWiki:Spam-blacklist|スパムブラックリスト]] および [[MediaWiki:Spam-whitelist|スパムホワイトリスト]]',
 );
 
+/** Jutish (Jysk)
+ * @author Ælsån
+ */
+$messages['jut'] = array(
+	'spam-blacklist-desc' => 'Regex-basærn anti-spem tø: [[MediaWiki:Spam-blacklist]] og [[MediaWiki:Spam-whitelist]]',
+);
+
 $messages['kk-arab'] = array(
 	'spam-blacklist'     => '  # وسى تىزىمگە سايكەس سىرتقى URL جايلار بەتكە ۇستەۋدەن بۇعاتتالادى.
   # بۇل ٴتىزىم تەك مىنداعى ۋىيكىيگە اسەر ەتەدى; تاعى دا عالامدىق قارا ٴتىزىمدى قاراپ شىعىڭىز.
@@ -676,8 +683,12 @@ $messages['oc'] = array(
 	'spam-blacklist-desc' => "Esplech antispam basat sus d'expressions regularas",
 );
 
+/** Polish (Polski)
+ * @author Derbeth
+ * @author Sp5uhe
+ */
 $messages['pl'] = array(
-	'spam-blacklist' => ' # Linki zewnętrzne pasujące do tej listy będą blokowane przed dodawaniem do stron.
+	'spam-blacklist'      => ' # Linki zewnętrzne pasujące do tej listy będą blokowane przed dodawaniem do stron.
  # Ta lista dotyczy tylko tej wiki; istnieje też globalna czarna lista.
  # Dokumentacja tej funkcji znajduje się na stronie http://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- zostaw tę linię dokładnie tak, jak jest --> <pre>
@@ -687,7 +698,7 @@ $messages['pl'] = array(
 #   * Każda niepusta linia jest fragmentem wyrażenia regularnego, które będzie dopasowywane jedynie do hostów wewnątrz linków
 
  #</pre> <!-- zostaw tę linię dokładnie tak, jak jest -->',
-	'spam-whitelist' => ' #<!-- zostaw tę linię dokładnie tak, jak jest --> <pre>
+	'spam-whitelist'      => ' #<!-- zostaw tę linię dokładnie tak, jak jest --> <pre>
 # Linki zewnętrzne pasujące do tej listy *nie będą* blokowane nawet jeśli
 # zostałyby zablokowane przez czarną listę.
 #
@@ -696,7 +707,8 @@ $messages['pl'] = array(
 #   * Każda niepusta linia jest fragmentem wyrażenia regularnego, które będzie dopasowywane jedynie do hostów wewnątrz linków
 
  #</pre> <!-- zostaw tę linię dokładnie tak, jak jest -->',
-	'spam-invalid-lines' => '{{PLURAL:$1|Następująca linia jest niepoprawnym wyrażeniem regularnym i musi być poprawiona przed zapisaniem strony:|Następujące linie są niepoprawnymi wyrażeniami regularnymi i muszą być poprawione przed zapisaniem strony:}}',
+	'spam-invalid-lines'  => '{{PLURAL:$1|Następująca linia jest niepoprawnym wyrażeniem regularnym i musi być poprawiona przed zapisaniem strony:|Następujące linie są niepoprawnymi wyrażeniami regularnymi i muszą być poprawione przed zapisaniem strony:}}',
+	'spam-blacklist-desc' => 'Narzędzie antyspamowe oparte o wyrażenia regularne: [[MediaWiki:Spam-blacklist|Spam-czarna lista]] oraz [[MediaWiki:Spam-whitelist|Spam-biała lista]]',
 );
 
 $messages['pms'] = array(
