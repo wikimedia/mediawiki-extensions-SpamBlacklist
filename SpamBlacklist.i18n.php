@@ -775,6 +775,7 @@ $messages['ru'] = array(
 
 /** Yakut (Саха тыла)
  * @author HalanTul
+ * @author Siebrand
  */
 $messages['sah'] = array(
 	'spam-blacklist'     => "  # Бу испииһэккэ баар тас сигэлэр бобуллуохтара.
@@ -787,19 +788,20 @@ $messages['sah'] = array(
 #  * Каждая непустая строка является фрагментом регулярного выражения, применяемого только к узлу в URL
 
   #</pre> <!-- бу строканы уларытыма -->",
-	'spam-whitelist'     => '  #<!-- бу строканы уларытыма --> <pre>
+	'spam-whitelist'     => ' #<!-- бу строканы уларытыма --> <pre>
 # Манна киирбит тас сигэлэр хара испииһэккэ киирбит да буоллахтарына син биир *бобуллуохтара суоҕа*.
 #
 # Синтаксис:
 #  * Бу "#" бэлиэттэн саҕалаан строка бүтүөр дылы барыта хос быһаарыыннан ааҕыллар
 #  * Каждая непустая строка является фрагментом регулярного выражения, применяемого только к узлу в URL
 
-  #</pre> <!-- бу строканы уларытыма -->#',
+  #</pre> <!-- бу строканы уларытыма -->',
 	'spam-invalid-lines' => 'Хара испииһэк манна көрдөрүллүбүт {{PLURAL:$1|строкаата сыыһалаах|строкаалара сыыһалаахтар}}, уларытыах иннинэ ол көннөрүллүөхтээх:',
 );
 
 /** Slovak (Slovenčina)
  * @author Helix84
+ * @author Siebrand
  */
 $messages['sk'] = array(
 	'spam-blacklist'      => '# Externé URLs zodpovedajúce tomuto zoznamu budú zablokované pri pokuse pridať ich na stránku.
@@ -812,18 +814,15 @@ $messages['sk'] = array(
 #  * Každý neprázdny riadok je časť regulárneho výrazu, ktorému budú zodpovedať iba domény z URL
 
 #</pre> <!-- nechajte tento riadok presne ako je -->',
-	'spam-whitelist'      => '#<!-- leave this line exactly as it is -->
-<pre>
-
+	'spam-whitelist'      => ' #<!-- leave this line exactly as it is --> <pre> 
 # Externé URL zodpovedajúce výrazom v tomto zozname *nebudú* zablokované, ani keby
 # ich zablokovali položky z čiernej listiny.
 #
 # Syntax je nasledovná:
-#   * Všetko od znaku # do konca riadka je komentár
+#   * Všetko od znaku "#" do konca riadka je komentár
 #   * Každý neprázdny riadok je regulárny výraz, podľa ktorého sa budú kontrolovať názvy domén
 
-
-</pre> <!-- leave this line exactly as it is -->',
+ #</pre> <!-- leave this line exactly as it is -->',
 	'spam-invalid-lines'  => '{{PLURAL:$1|Nasledovný riadok|Nasledovné riadky}} čiernej listiny spamu {{PLURAL:$1|je neplatný regulárny výraz|sú neplatné regulárne výrazy}} a je potrebné {{PLURAL:$1|ho|ich}} opraviť pred uložením stránky:',
 	'spam-blacklist-desc' => 'Antispamový nástroj na základe regulárnych výrazov: [[MediaWiki:Spam-blacklist|Čierna listina]] a [[MediaWiki:Spam-whitelist|Biela listina]]',
 );
