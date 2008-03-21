@@ -369,7 +369,7 @@ $messages['hsb'] = array(
 );
 
 /** Hungarian (Magyar)
- * @author Bdanee
+ * @author Dani
  */
 $messages['hu'] = array(
 	'spam-blacklist'      => '  # A lista elemeire illeszkedő külső hivatkozások blokkolva lesznek
