@@ -8,8 +8,7 @@
 $messages = array();
 
 $messages['en'] = array(
-	'spam-blacklist' => '
- # External URLs matching this list will be blocked when added to a page.
+	'spam-blacklist' => ' # External URLs matching this list will be blocked when added to a page.
  # This list affects only this wiki; refer also to the global blacklist.
  # For documentation see http://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- leave this line exactly as it is --> <pre>
@@ -19,8 +18,7 @@ $messages['en'] = array(
 #   * Every non-blank line is a regex fragment which will only match hosts inside URLs
 
  #</pre> <!-- leave this line exactly as it is -->',
-	'spam-whitelist' => '
- #<!-- leave this line exactly as it is --> <pre>
+	'spam-whitelist' => ' #<!-- leave this line exactly as it is --> <pre>
 # External URLs matching this list will *not* be blocked even if they would
 # have been blocked by blacklist entries.
 #
@@ -29,10 +27,7 @@ $messages['en'] = array(
 #   * Every non-blank line is a regex fragment which will only match hosts inside URLs
 
  #</pre> <!-- leave this line exactly as it is -->',
-	'spam-invalid-lines' =>
-	"The following spam blacklist {{PLURAL:$1|line is an|lines are}} " .
-	" invalid regular {{PLURAL:$1|expression|expressions}} " .
-	" and {{PLURAL:$1|needs|need}} to be corrected before saving the page:\n",
+	'spam-invalid-lines' =>	"The following spam blacklist {{PLURAL:$1|line is an|lines are}} invalid regular {{PLURAL:$1|expression|expressions}} and {{PLURAL:$1|needs|need}} to be corrected before saving the page:\n",
 	'spam-blacklist-desc' => 'Regex-based anti-spam tool: [[MediaWiki:Spam-blacklist]] and [[MediaWiki:Spam-whitelist]]',
 );
 
@@ -814,7 +809,7 @@ $messages['sk'] = array(
 #  * Každý neprázdny riadok je časť regulárneho výrazu, ktorému budú zodpovedať iba domény z URL
 
 #</pre> <!-- nechajte tento riadok presne ako je -->',
-	'spam-whitelist'      => ' #<!-- leave this line exactly as it is --> <pre> 
+	'spam-whitelist'      => ' #<!-- leave this line exactly as it is --> <pre>
 # Externé URL zodpovedajúce výrazom v tomto zozname *nebudú* zablokované, ani keby
 # ich zablokovali položky z čiernej listiny.
 #
@@ -919,7 +914,7 @@ $messages['te'] = array(
  * @author Ibrahim
  */
 $messages['tg'] = array(
-	'spam-blacklist'      => ' # Нишониҳои URL берунаи ба ин феҳрист мутобиқатшуда вақте, ки ба саҳифае илова мешаванд, 
+	'spam-blacklist'      => ' # Нишониҳои URL берунаи ба ин феҳрист мутобиқатшуда вақте, ки ба саҳифае илова мешаванд,
  # баста хоҳанд шуд.
  # Ин феҳрист фақат рӯи ҳамин вики таъсир мекунад; ба феҳристи сиёҳи саросар низ муроҷиат кунед.
  # Барои мустанадот, нигаред ба http://www.mediawiki.org/wiki/Extension:SpamBlacklist
@@ -927,17 +922,17 @@ $messages['tg'] = array(
 #
  # Дастурот ба ин шакл ҳастанд:
  #  * Ҳама чиз аз аломати "#" то поёни сатр ба унвони тавзеҳ ба назар гирифта мешавад
- #  * Ҳар сатр аз матн ба унвони як дастур regex ба назар гирифта мешавад, 
+ #  * Ҳар сатр аз матн ба унвони як дастур regex ба назар гирифта мешавад,
  #  ки фақат бо номи мизбон дар нишонии интернетии URL мутобиқат дода мешавад
 
  #</pre> <!-- ин сатрро ҳамонгуна, ки ҳаст раҳо кунед -->',
 	'spam-whitelist'      => '  #<!-- ин сатрро ҳамонгуна, ки ҳаст раҳо кунед --> <pre>
-# Нишониҳои URL берунаи ба ин феҳрист мутобиқатбуда, баста нахоҳанд шуд, 
+# Нишониҳои URL берунаи ба ин феҳрист мутобиқатбуда, баста нахоҳанд шуд,
 # ҳатто агар дар феҳристи сиёҳ қарор дошта бошад.
 #
 # Дастурот ба ин шакл ҳастанд:
 #  * Ҳама чиз аз аломати "#" то поёни сатр ба унвони тавзеҳ ба назар гирифта мешавад
-#  * Ҳар сатр аз матн ба унвони як дастур regex ба назар гирифта мешавад, ки фақат бо номи мизбон дар 
+#  * Ҳар сатр аз матн ба унвони як дастур regex ба назар гирифта мешавад, ки фақат бо номи мизбон дар
 # нишонии интернетии URL мутобиқат дода мешавад
   #</pre> <!-- ин сатрро ҳамонгуна, ки ҳаст раҳо кунед -->',
 	'spam-invalid-lines'  => '{{PLURAL:$1|Сатри|Сатрҳои}} зерин дар феҳристи сиёҳи ҳарзнигорӣ дастуроти ғайри миҷозе regular expressions  {{PLURAL:$1|аст|ҳастанд}} ва қабл аз захира кардани саҳифа ба ислоҳ кардан ниёз {{PLURAL:$1|дорад|доранд}}:',
