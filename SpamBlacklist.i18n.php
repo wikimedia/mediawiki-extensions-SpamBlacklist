@@ -641,7 +641,7 @@ $messages['nl'] = array(
 	'spam-blacklist-desc' => 'Antispamfunctionaliteit via reguliere expressies: [[MediaWiki:Spam-blacklist]] en [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Norwegian (‪Norsk (bokmål)‬)
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Jon Harald Søby
  */
 $messages['no'] = array(
@@ -665,7 +665,7 @@ $messages['no'] = array(
 
   #</pre> <!-- la denne linja være nøyaktig som den er -->',
 	'spam-invalid-lines'  => 'Følgende {{PLURAL:$1|linje|linjer}} i spamsvartelista er {{PLURAL:$1|et ugyldig regulært uttrykk|ugyldige regulære uttrykk}} og må rettes før lagring av siden:',
-	'spam-blacklist-desc' => 'Regex-basert antisøppelverktøy: [[MediaWiki:Spam-blacklist]] og [[MediaWiki:Spam-whitelist]]',
+	'spam-blacklist-desc' => 'Antispamverktøy basert på regulære uttrykk: [[MediaWiki:Spam-blacklist]] og [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Occitan (Occitan)
