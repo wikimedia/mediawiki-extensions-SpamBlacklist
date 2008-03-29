@@ -990,6 +990,7 @@ $messages['yue'] = array(
 	'spam-invalid-lines' =>
 	"下面響灌水黑名單嘅{{PLURAL:$1|一行|多行}}有無效嘅表示式，" .
 	"請響保存呢版之前先將{{PLURAL:$1|佢|佢哋}}修正:\n",
+	'spam-blacklist-desc' => '以正規表達式為本嘅防灌水工具: [[MediaWiki:Spam-blacklist]] 同 [[MediaWiki:Spam-whitelist]]',
 );
 
 $messages['zh-hans'] = array(
@@ -1017,6 +1018,7 @@ $messages['zh-hans'] = array(
 	'spam-invalid-lines' =>
 	"以下在灌水黑名单的{{PLURAL:$1|一行|多行}}有无效的表示式，" .
 	"请在保存这页前先将{{PLURAL:$1|它|它们}}修正:\n",
+	'spam-blacklist-desc' => '以正则表达式为本的防灌水工具: [[MediaWiki:Spam-blacklist]] 与 [[MediaWiki:Spam-whitelist]]',
 );
 
 $messages['zh-hant'] = array(
@@ -1044,5 +1046,6 @@ $messages['zh-hant'] = array(
 	'spam-invalid-lines' =>
 	"以下在灌水黑名單的{{PLURAL:$1|一行|多行}}有無效的表示式，" .
 	"請在保存這頁前先將{{PLURAL:$1|它|它們}}修正:\n",
+	'spam-blacklist-desc' => '以正則表達式為本的防灌水工具: [[MediaWiki:Spam-blacklist]] 與 [[MediaWiki:Spam-whitelist]]',
 );
 
