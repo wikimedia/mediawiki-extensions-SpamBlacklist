@@ -156,8 +156,7 @@ $messages['cs'] = array(
 #  * Každý neprázdný řádek je část regulárního výrazu, kterému budou odpovídat pouze domény z URL
 
  #</pre> <!-- Nechte tento řádek přesně tak jak je -->',
-	'spam-whitelist'      => '  #<!-- nechejte tento řádek přesně tak jak je --> <pre>
-
+	'spam-whitelist'      => ' #<!-- nechejte tento řádek přesně tak jak je --> <pre>
 # Externí URL odpovídající výrazům v tomto seznamu *nebudou* zablokovány, ani kdyby
 # je zablokovaly položky z černé listiny.
 #
@@ -306,6 +305,13 @@ $messages['gl'] = array(
  #</pre> <!-- deixe esta liña exactamente como está -->',
 	'spam-invalid-lines'  => '{{PLURAL:$1|A liña seguinte da lista negra de spam é|As liñas seguintes da lista negra de spam son}} {{PLURAL:$1|unha expresión regular|expresións regulares}} e {{PLURAL:$1|haina|hainas}} que corrixir antes de gardar a páxina:',
 	'spam-blacklist-desc' => 'Ferramenta anti-spam baseada en expresións regulares: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
+);
+
+/** Hindi (हिन्दी)
+ * @author Kaustubh
+ */
+$messages['hi'] = array(
+	'spam-blacklist-desc' => 'रेजएक्स पर आधारित स्पॅम रोकनेवाला उपकरण:[[MediaWiki:Spam-blacklist]] और [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Croatian (Hrvatski)
