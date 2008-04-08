@@ -946,6 +946,31 @@ $messages['tg-cyrl'] = array(
 	'spam-blacklist-desc' => 'Абзори зидди ҳарзнигорӣ дар асоси Regex: [[MediaWiki:Spam-blacklist]] ва [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Vèneto (Vèneto)
+ * @author Candalua
+ */
+$messages['vec'] = array(
+	'spam-blacklist'      => '   # Le URL esterne al sito che corisponde a la lista seguente le vegnarà blocà.
+   # La lista la xe valida solo par sto sito qua; far riferimento anca a la blacklist globale.
+   # Par la documentazion vardar http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+   #<!-- no sta modificar in alcun modo sta riga --> <pre>
+# La sintassi la xe la seguente:
+#  * Tuto quel che segue un caràtere "#" el xe un comento, fin a la fine de la riga
+#  * Tute le righe mìa vode le xe framenti de espressioni regolari che se àplica al solo nome de l\'host ne le URL
+   #</pre> <!-- no sta modificar in alcun modo sta riga -->',
+	'spam-whitelist'      => '   #<!-- no sta modificar in alcun modo sta riga --> <pre>
+# Le URL esterne al sito che corisponde a la lista seguente *no* le vegnarà
+# mìa blocà, anca nel caso che le corisponda a de le voçi de la lista nera
+#
+# La sintassi la xe la seguente:
+#  * Tuto quel che segue un caràtere "#" el xe un comento, fin a la fine de la riga
+#  * Tute le righe mìa vode le xe framenti de espressioni regolari che se àplica al solo nome de l\'host ne le URL
+
+   #</pre> <!-- no sta modificar in alcun modo sta riga -->',
+	'spam-invalid-lines'  => "{{PLURAL:$1|La seguente riga|Le seguenti righe}} de la lista nera del spam {{PLURAL:$1|no la xe na espression regolare valida|no le xe espressioni regolari valide}}; se prega de corègiar {{PLURAL:$1|l'eror|i erori}} prima de salvar la pagina.",
+	'spam-blacklist-desc' => 'Strumento antispam basà su le espressioni regolari [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
  */
