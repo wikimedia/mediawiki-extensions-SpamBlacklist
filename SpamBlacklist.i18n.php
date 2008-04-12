@@ -229,6 +229,22 @@ $messages['fa'] = array(
 	'spam-blacklist-desc' => 'ابزار ضد هرزنگاری مبتنی بر regular expressions: [[MediaWiki:Spam-blacklist]] و [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Finnish (Suomi)
+ * @author Cimon Avaro
+ */
+$messages['fi'] = array(
+	'spam-blacklist' => '  # Ulkopuolelle viittaavat URL:it jotka ovat listalla, pois-suljetaan sivuun lisättäessä.
+  # Tämä lista koskee vain tätä wikiä; tutustu myös globaaliin mustaan listaan.
+  # Dokumentointina lue http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- Älä koske tähän riviin lainkaan --> <pre>
+#
+# Syntaksi on seuraavankaltainen:
+#  * Kaikki "#" merkistä lähtien, rivin loppuun asti, on kommenttia
+#  * Jokainen ei-tyhjä rivi on regex fragmentti joka tunnistaa vain URL:ien sisällä olevat domaininimet
+
+  #</pre> <!-- Älä koske tähän riviin lainkaan -->',
+);
+
 /** French (Français)
  * @author Urhixidur
  */
