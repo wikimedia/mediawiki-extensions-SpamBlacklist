@@ -231,16 +231,17 @@ $messages['fa'] = array(
 
 /** Finnish (Suomi)
  * @author Cimon Avaro
+ * @author Nike
  */
 $messages['fi'] = array(
-	'spam-blacklist' => '  # Ulkopuolelle viittaavat URL:it jotka ovat listalla, pois-suljetaan sivuun lisättäessä.
-  # Tämä lista koskee vain tätä wikiä; tutustu myös globaaliin mustaan listaan.
-  # Dokumentointina lue http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+	'spam-blacklist' => '  # Tämän listan säännöillä voi estää ulkopuolisiin sivustoihin viittaavien osoitteiden lisäämisen.
+  # Tämä lista koskee vain tätä wikiä. Tutustu myös globaaliin mustaan listaan.
+  # Lisätietoja on osoitteessa http://www.mediawiki.org/wiki/Extension:SpamBlacklist
   #<!-- Älä koske tähän riviin lainkaan --> <pre>
 #
 # Syntaksi on seuraavankaltainen:
-#  * Kaikki "#" merkistä lähtien, rivin loppuun asti, on kommenttia
-#  * Jokainen ei-tyhjä rivi on regex fragmentti joka tunnistaa vain URL:ien sisällä olevat domaininimet
+#  * Kaikki #-merkistä lähtien rivin loppuun asti on kommenttia
+#  * Jokainen ei-tyhjä rivi on säännöllisen lausekkeen osa, joka tunnistaa vain osoitteissa olevat verkkotunnukset.
 
   #</pre> <!-- Älä koske tähän riviin lainkaan -->',
 );
