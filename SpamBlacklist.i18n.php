@@ -703,8 +703,8 @@ $messages['oc'] = array(
 );
 
 /** Polish (Polski)
- * @author Derbeth
  * @author Sp5uhe
+ * @author Derbeth
  */
 $messages['pl'] = array(
 	'spam-blacklist'      => ' # Linki zewnętrzne pasujące do tej listy będą blokowane przed dodawaniem do stron.
@@ -713,7 +713,7 @@ $messages['pl'] = array(
  #<!-- zostaw tę linię dokładnie tak, jak jest --> <pre>
 #
 # Składnia jest następująca:
-#   * Wszystko od znaku "#" do końca linii jest komentarzem
+#   * Wszystko od znaku „#” do końca linii jest komentarzem
 #   * Każda niepusta linia jest fragmentem wyrażenia regularnego, które będzie dopasowywane jedynie do hostów wewnątrz linków
 
  #</pre> <!-- zostaw tę linię dokładnie tak, jak jest -->',
@@ -722,7 +722,7 @@ $messages['pl'] = array(
 # zostałyby zablokowane przez czarną listę.
 #
 # Składnia jest następująca:
-#   * Wszystko od znaku "#" do końca linii jest komentarzem
+#   * Wszystko od znaku „#” do końca linii jest komentarzem
 #   * Każda niepusta linia jest fragmentem wyrażenia regularnego, które będzie dopasowywane jedynie do hostów wewnątrz linków
 
  #</pre> <!-- zostaw tę linię dokładnie tak, jak jest -->',
