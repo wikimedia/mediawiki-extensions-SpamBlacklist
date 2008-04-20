@@ -234,7 +234,7 @@ $messages['fa'] = array(
  * @author Nike
  */
 $messages['fi'] = array(
-	'spam-blacklist' => '  # Tämän listan säännöillä voi estää ulkopuolisiin sivustoihin viittaavien osoitteiden lisäämisen.
+	'spam-blacklist'      => '  # Tämän listan säännöillä voi estää ulkopuolisiin sivustoihin viittaavien osoitteiden lisäämisen.
   # Tämä lista koskee vain tätä wikiä. Tutustu myös globaaliin mustaan listaan.
   # Lisätietoja on osoitteessa http://www.mediawiki.org/wiki/Extension:SpamBlacklist
   #<!-- Älä koske tähän riviin lainkaan --> <pre>
@@ -244,6 +244,16 @@ $messages['fi'] = array(
 #  * Jokainen ei-tyhjä rivi on säännöllisen lausekkeen osa, joka tunnistaa vain osoitteissa olevat verkkotunnukset.
 
   #</pre> <!-- Älä koske tähän riviin lainkaan -->',
+	'spam-whitelist'      => '  #<!-- älä koske tähän riviin --> <pre>
+# Tällä sivulla on säännöt, joihin osuvia ulkoisia osoitteita ei estetä, vaikka ne olisivat estolistalla.
+#
+# Syntaksi on seuraava:
+#  * Kommentti alkaa #-merkistä ja jatkuu rivin loppuun
+#  * Muut ei-tyhjät rivit tulkitaan säännöllisen lausekkeen osaksi, joka tutkii vain osoitteissa olevia verkko-osoitteita.
+
+  #</pre> <!-- älä koske tähän riviin -->',
+	'spam-invalid-lines'  => 'Listalla on {{PLURAL:$1|seuraava virheellinen säännöllinen lauseke, joka|seuraavat virheelliset säännölliset lausekkeet, jotka}} on korjattava ennen tallentamista:',
+	'spam-blacklist-desc' => 'Säännöllisiä lausekkeita tukeva mainossuodatin: [[MediaWiki:Spam-blacklist|estolista]] ja [[MediaWiki:Spam-whitelist|poikkeuslista]].',
 );
 
 /** French (Français)
@@ -704,7 +714,16 @@ $messages['no'] = array(
  */
 $messages['oc'] = array(
 	'spam-blacklist'      => "# Los ligams extèrnes que fan partida d'aquesta lista seràn blocats al moment de lor insercion dins una pagina. # Aquesta lista concernís pas que Wikinews ; referissetz-vos tanben a la lista negra generala de Meta. # La documentacion se tròba a l’adreça seguenta : http://www.mediawiki.org/wiki/Extension:SpamBlacklist # <!--Daissatz aquesta linha tala coma es --> <pre> # # La sintaxi es la seguenta # * Tot tèxt que seguís lo « # » es considerat coma un comentari. # * Tota linha pas voida es un fragment regex que concernís pas que los ligams ipertèxtes. #</pre> <!--Daissatz aquesta linha tala coma es -->",
-	'spam-whitelist'      => "# Los ligams extèrnes que fan partida d'aquesta lista seràn blocas al moment de lor insercion dins una pagina. # Aquesta lista concernís pas que Wikinews ; referissetz-vos tanben a la lista negra generala de Meta. # La documentacion se tròba a l’adreça seguenta : http://www.mediawiki.org/wiki/Extension:SpamBlacklist # <!--Daissatz aquesta linha tala coma es --> <pre> # # La sintaxi es la seguenta # * Tot tèxt que seguís lo « # » es considerat coma un comentari. # * Tota linha pas voida es un fragment regex que concernís pas que los ligams ipertèxtes. #</pre> <!--Daissatz aquesta linha tala coma es -->",
+	'spam-whitelist'      => " #<!--Daissatz aquesta linha tala coma es --> <pre>
+# Los ligams extèrnes que fan partida d'aquesta lista seràn blocas al moment de lor insercion dins una pagina. 
+# Aquesta lista concernís pas que Wikinews ; referissetz-vos tanben a la lista negra generala de Meta. 
+# La documentacion se tròba a l’adreça seguenta : http://www.mediawiki.org/wiki/Extension:SpamBlacklist 
+#
+# La sintaxi es la seguenta :
+# * Tot tèxt que seguís lo « # » es considerat coma un comentari.
+# * Tota linha pas voida es un fragment regex que concernís pas que los ligams ipertèxtes.
+
+ #</pre> <!--Daissatz aquesta linha tala coma es -->",
 	'spam-invalid-lines'  => "{{PLURAL:$1|La linha seguenta |Las linhas seguentas}} de la lista dels spams {{PLURAL:$1|es redigida|son redigidas}} d'un biais incorrècte e {{PLURAL:$1|necessita|necessitan}} las correccions necessàrias abans tota salvagarda de la pagina :",
 	'spam-blacklist-desc' => "Esplech antispam basat sus d'expressions regularas",
 );
