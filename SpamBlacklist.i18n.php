@@ -424,9 +424,10 @@ $messages['hu'] = array(
 
 /** Indonesian (Bahasa Indonesia)
  * @author IvanLanin
+ * @author Meursault2004
  */
 $messages['id'] = array(
-	'spam-blacklist' => '
+	'spam-blacklist'      => '
  # URL eksternal yang cocok dengan daftar berikut akan diblokir jika ditambahkan pada suatu halaman.
  # Daftar ini hanya berpengaruh pada wiki ini; rujuklah juga daftar hitam global.
  # Untuk dokumentasi, lihat http://www.mediawiki.org/wiki/Extension:SpamBlacklist
@@ -437,20 +438,17 @@ $messages['id'] = array(
 #   * Semua baris yang tidak kosong adalah fragmen regex yang hanya akan dicocokkan dengan nama host di dalam URL
 
  #</pre> <!-- biarkan baris ini seperti adanya -->',
-	'spam-whitelist' => '
- #<!-- biarkan baris ini seperti adanya --> <pre>
- # URL eksternal yang cocok dengan daftar berikut *tidak* akan diblokir bahkan
-# jika telah diblokir oleh entri pada daftar hitam
+	'spam-whitelist'      => ' #<!-- biarkan baris ini seperti adanya --> <pre>
+ # URL eksternal yang cocok dengan daftar berikut *tidak* akan diblokir walaupun
+# pasti akan diblokir oleh entri pada daftar hitam
 #
 # Sintaksnya adalah sebagai berikut:
 #   * Semua yang diawali dengan karakter "#" hingga akhir baris adalah komentar
 #   * Semua baris yang tidak kosong adalah fragmen regex yang hanya akan dicocokkan dengan nama host di dalam URL
 
  #</pre> <!-- biarkan baris ini seperti adanya -->',
-	'spam-invalid-lines' =>
-	"{{PLURAL:$1|Baris|Baris-baris}} daftar hitam spam berikut adalah" .
-	" {{PLURAL:$1|ekspresi|ekspresi}} regular yang tak valid" .
-	" dan {{PLURAL:$1|perlu|perlu}} dikoreksi sebelum disimpan:\n",
+	'spam-invalid-lines'  => '{{PLURAL:$1|Baris|Baris-baris}} daftar hitam spam berikut adalah {{PLURAL:$1|ekspresi|ekspresi}} regular yang tak valid dan {{PLURAL:$1|perlu|perlu}} dikoreksi sebelum disimpan:
+',
 	'spam-blacklist-desc' => 'Perkakas anti-spam berbasis regex: [[MediaWiki:Spam-blacklist]] dan [[MediaWiki:Spam-whitelist]]',
 );
 
@@ -518,6 +516,26 @@ $messages['jut'] = array(
  * @author Meursault2004
  */
 $messages['jv'] = array(
+	'spam-blacklist'      => '  # URL eksternal sing cocog karo daftar iki bakal diblokir yèn ditambahaké ing sawijining kaca.
+  # Daftar iki namung nduwé pangaruh ing wiki iki; ngrujuka uga daftar ireng global.
+  # Kanggo dokumentasi, delengen http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- lirwakna baris iki apa anané --> <pre>
+#
+# Sintaksisé kaya mengkéné:
+#  * Kabèh sing diawali mawa karakter "#" nganti tekaning akir baris iku komentar
+#  * Kabèh baris sing ora kosong iku fragmèn regex sing namung bakal dicocogaké karo jeneng host sajroning URL-URL
+
+  #</pre> <!-- lirwakna baris iki apa anané -->',
+	'spam-whitelist'      => '  #<!-- lirwakna baris iki apa anané --> <pre>
+  # URL èksternal sing cocog karo daftar iki *ora* bakal diblokir senadyan
+# bakal diblokir déning èntri ing daftar ireng
+#
+# Sintaksisé kaya mengkéné:
+#  * Kabèh sing diawali mawa karakter "#" nganti tekaning akir baris iku komentar
+#  * Kabèh baris sing ora kosong iku fragmèn regex sing namung bakal dicocogaké karo jeneng host sajroning URL-URL
+
+  #</pre> <!-- lirwakna baris iki apa anané -->',
+	'spam-invalid-lines'  => '{{PLURAL:$1|Baris|Baris-baris}} daftar ireng spam ing ngisor iki yaiku {{PLURAL:$1|èksprèsi|èksprèsi}} regulèr sing ora absah lan {{PLURAL:$1|perlu|perlu}} dikorèksi sadurungé disimpen:',
 	'spam-blacklist-desc' => 'Piranti anti-spam adhedhasar regex: [[MediaWiki:Spam-blacklist]] lan [[MediaWiki:Spam-whitelist]]',
 );
 
