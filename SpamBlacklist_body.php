@@ -222,7 +222,15 @@ class SpamBlacklist {
 				$text = $wgParser->preSaveTransform( $text, $title, $wgUser, $options );
 				$out = $wgParser->parse( $text, $title, $options );
 			}
-			$links = implode( "\n", array_keys( $out->getExternalLinks() ) );
+			$newLinks = array_keys( $out->getExternalLinks() );
+			$oldLinks = $this->getCurrentLinks( $title );
+			$addedLinks = array_diff( $newLinks, $oldLinks );
+			
+			wfDebugLog( 'SpamBlacklist', "Old URLs: " . implode( ', ', $oldLinks ) );
+			wfDebugLog( 'SpamBlacklist', "New URLs: " . implode( ', ', $newLinks ) );
+			wfDebugLog( 'SpamBlacklist', "Added URLs: " . implode( ', ', $addedLinks ) );
+			
+			$links = implode( "\n", $addedLinks );
 
 			# Strip whitelisted URLs from the match
 			if( is_array( $whitelists ) ) {
@@ -264,6 +272,24 @@ class SpamBlacklist {
 
 		wfProfileOut( $fname );
 		return $retVal;
+	}
+	
+	/**
+	 * Look up the links currently in the article, so we can
+	 * ignore them on a second run.
+	 *
+	 * WARNING: I can add more *of the same link* with no problem here.
+	 */
+	function getCurrentLinks( $title ) {
+		$dbr =& wfGetDB( DB_SLAVE );
+		$id = $title->getArticleId(); // should be zero queries
+		$res = $dbr->select( 'externallinks', array( 'el_to' ), 
+			array( 'el_from' => $id ), __METHOD__ );
+		$links = array();
+		while ( $row = $dbr->fetchObject( $res ) ) {
+			$links[] = $row->el_to;
+		}
+		return $links;
 	}
 
 	/**
