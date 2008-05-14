@@ -172,11 +172,11 @@ class SpamBlacklist {
 		return $httpText;
 	}
 	
-	function getLocalBlacklists() {
+	static function getLocalBlacklists() {
 		return SpamRegexBatch::regexesFromMessage( 'spam-blacklist' );
 	}
 	
-	function getWhitelists() {
+	static function getWhitelists() {
 		return SpamRegexBatch::regexesFromMessage( 'spam-whitelist' );
 	}
 
@@ -397,7 +397,7 @@ class SpamRegexBatch {
 	 * @private
 	 * @static
 	 */
-	function buildRegexes( $lines, $batchSize=4096 ) {
+	static function buildRegexes( $lines, $batchSize=4096 ) {
 		# Make regex
 		# It's faster using the S modifier even though it will usually only be run once
 		//$regex = 'https?://+[a-z0-9_\-.]*(' . implode( '|', $lines ) . ')';
@@ -435,7 +435,7 @@ class SpamRegexBatch {
 	 * @private
 	 * @static
 	 */
-	function validateRegexes( $regexes ) {
+	static function validateRegexes( $regexes ) {
 		foreach( $regexes as $regex ) {
 			wfSuppressWarnings();
 			$ok = preg_match( $regex, '' );
@@ -453,7 +453,7 @@ class SpamRegexBatch {
 	 * @private
 	 * @static
 	 */
-	function stripLines( $lines ) {
+	static function stripLines( $lines ) {
 		return array_filter(
 			array_map( 'trim',
 					preg_replace( '/#.*$/', '',
@@ -468,7 +468,7 @@ class SpamRegexBatch {
 	 * @private
 	 * @static
 	 */
-	function buildSafeRegexes( $lines, $fileName=false ) {
+	static function buildSafeRegexes( $lines, $fileName=false ) {
 		$lines = SpamRegexBatch::stripLines( $lines );
 		$regexes = SpamRegexBatch::buildRegexes( $lines );
 		if( SpamRegexBatch::validateRegexes( $regexes ) ) {
@@ -489,7 +489,7 @@ class SpamRegexBatch {
 	 * @return array of input lines which produce invalid input, or empty array if no problems
 	 * @static
 	 */
-	function getBadLines( $lines ) {
+	static function getBadLines( $lines ) {
 		$lines = SpamRegexBatch::stripLines( $lines );
 		$regexes = SpamRegexBatch::buildRegexes( $lines );
 		if( SpamRegexBatch::validateRegexes( $regexes ) ) {
@@ -516,7 +516,7 @@ class SpamRegexBatch {
 	 * @return array of regular expressions, potentially empty
 	 * @static
 	 */
-	function regexesFromText( $source, $fileName=false ) {
+	static function regexesFromText( $source, $fileName=false ) {
 		$lines = explode( "\n", $source );
 		return SpamRegexBatch::buildSafeRegexes( $lines, $fileName );
 	}
@@ -528,7 +528,7 @@ class SpamRegexBatch {
 	 * @return array of regular expressions, potentially empty
 	 * @static
 	 */
-	function regexesFromMessage( $message ) {
+	static function regexesFromMessage( $message ) {
 		$source = wfMsgForContent( $message );
 		if( $source && !wfEmptyMsg( $message, $source ) ) {
 			return SpamRegexBatch::regexesFromText( $source );
