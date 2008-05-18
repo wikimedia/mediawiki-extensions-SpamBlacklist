@@ -169,6 +169,35 @@ $messages['cs'] = array(
 	'spam-blacklist-desc' => 'Antispamový nástroj na základě regulárních výrazů: [[MediaWiki:Spam-blacklist]] a [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Welsh (Cymraeg)
+ * @author Lloffiwr
+ */
+$messages['cy'] = array(
+	'spam-blacklist'      => "# Dyma restr o gyfeiriadau URL allanol; os osodir un o'r rhain ar dudalen fe gaiff ei flocio.
+ # Ar gyfer y wici hwn yn unig mae'r rhestr hon; mae rhestr gwaharddedig led-led yr holl wicïau i'w gael.
+ # Gweler http://www.mediawiki.org/wiki/Extension:SpamBlacklist am ragor o wybodaeth.
+ #<!-- leave this line exactly as it is --> <pre>
+#
+# Dyma'r gystrawen:
+#   * Mae popeth o nod \"#\" hyd at ddiwedd y llinell yn sylwad
+#   * Mae pob llinell nad yw'n wag yn ddarn regex sydd ddim ond yn cydweddu 
+#   * gwesteiwyr tu mewn i gyfeiriadau URL
+
+ #</pre> <!-- leave this line exactly as it is -->",
+	'spam-whitelist'      => '  #<!-- leave this line exactly as it is --> <pre>
+# *Ni fydd* cyfeiriadau URL allanol sydd ar y rhestr hon yn cael eu blocio
+# hyd yn oed pan ydynt ar restr arall o gyfeiriadau URL gwaharaddedig.
+#
+# Dyma\'r gystrawen:
+#   * Mae popeth o nod "#" hyd at ddiwedd y llinell yn sylwad
+#   * Mae pob llinell nad yw\'n wag yn ddarn regex sydd ddim ond yn cydweddu 
+#   * gwesteiwyr tu mewn i gyfeiriadau URL
+
+ #</pre> <!-- leave this line exactly as it is -->',
+	'spam-invalid-lines'  => "Mae'r {{PLURAL:$1|llinell|llinell|llinellau|llinellau|llinellau|llinellau}} canlynol ar y rhestr spam gwaharddedig yn {{PLURAL:$1|fynegiad|fynegiad|fynegiadau|fynegiadau|fynegiadau|fynegiadau}} rheolaidd annilys; rhaid {{PLURAL:ei gywiro|ei gywiro|eu cywiro|eu cywiro|eu cywiro|eu cywiro}} cyn rhoi'r dudalen ar gadw:",
+	'spam-blacklist-desc' => 'Teclyn gwrth-spam yn seiliedig ar regex: [[MediaWiki:Spam-blacklist]] a [[MediaWiki:Spam-whitelist]]',
+);
+
 /** German (Deutsch)
  * @author Raimond Spekking
  */
