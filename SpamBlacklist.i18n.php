@@ -792,7 +792,7 @@ $messages['oc'] = array(
 # * Tota linha pas voida es un fragment regex que concernís pas que los ligams ipertèxtes.
 
  #</pre> <!--Daissatz aquesta linha tala coma es -->",
-	'spam-invalid-lines'  => "{{PLURAL:$1|La linha seguenta |Las linhas seguentas}} de la lista dels spams {{PLURAL:$1|es redigida|son redigidas}} d'un biais incorrècte e {{PLURAL:$1|necessita|necessitan}} las correccions necessàrias abans tota salvagarda de la pagina :",
+	'spam-invalid-lines'  => "{{PLURAL:$1|La linha seguenta |Las linhas seguentas}} de la lista dels spams {{PLURAL:$1|es redigida|son redigidas}} d'un biais incorrècte e {{PLURAL:$1|necessita|necessitan}} las correccions necessàrias abans tot salvament de la pagina :",
 	'spam-blacklist-desc' => "Esplech antispam basat sus d'expressions regularas",
 );
 
