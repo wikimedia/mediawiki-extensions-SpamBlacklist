@@ -141,6 +141,13 @@ $messages['bn'] = array(
 	'spam-blacklist-desc' => 'রেজেক্স-ভিত্তিক স্প্যামরোধী সরঞ্জাম',
 );
 
+/** Catalan (Català)
+ * @author Jordi Roqué
+ */
+$messages['ca'] = array(
+	'spam-invalid-lines' => "{{PLURAL:$1|La línia següent no es considera una expressió correcta|Les línies següents no es consideren expressions correctes}} {{PLURAL:$1|perquè recull|perquè recullen}} SPAM que està vetat. Heu d'esmenar-ho abans de salvar la pàgina:",
+);
+
 /** Czech (Česky)
  * @author Li-sung
  * @author Matěj Grabovský
