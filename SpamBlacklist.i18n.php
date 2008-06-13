@@ -379,6 +379,33 @@ $messages['gl'] = array(
 	'spam-blacklist-desc' => 'Ferramenta anti-spam baseada en expresións regulares: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Hebrew (עברית)
+ * @author Rotem Liss
+ */
+$messages['he'] = array(
+	'spam-blacklist'      => ' # כתובות URL חיצוניות התואמות לרשימה זו ייחסמו בעת הוספתן לדף.
+ # רשימה זו משפיעה על אתר זה בלבד; שימו לב גם לרשימה הכללית.
+ # לתיעוד ראו http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- נא להשאיר שורה זו בדיוק כפי שהיא --> <pre>
+#
+# התחביר הוא כדלקמן:
+#   * כל דבר מתו "#" לסוף השורה הוא הערה
+#   * כל שורה לא ריקה היא קטע מביטוי רגולרי שיתאים לשמות המתחם של כתובות URL
+
+ #</pre> <!-- נא להשאיר שורה זו בדיוק כפי שהיא -->',
+	'spam-whitelist'      => ' #<!-- נא להשאיר שורה זו בדיוק כפי שהיא --> <pre>
+# כתובות URL חיצוניות המופיעות ברשימה זו *לא* ייחסמו אפילו אם יש להן ערך ברשימת הכתובות האסורות.
+#
+# התחביר הוא כדלקמן:
+#   * כל דבר מתו "#" לסוף השורה הוא הערה
+#   * כל שורה לא ריקה היא קטע מביטוי רגולרי שיתאים לשמות המתחם של כתובות URL
+
+ #</pre> <!-- נא להשאיר שורה זו בדיוק כפי שהיא -->',
+	'spam-invalid-lines'  => "{{PLURAL:$1|השורה הבאה|השורות הבאות}} ברשימת כתובות ה־URL האסורות
+	{{PLURAL:$1|היא ביטוי רגולרי בלתי תקין ויש לתקנה|הן ביטויים רגולריים בלתי תקינים ויש לתקנן}} לפני שמירת הדף:",
+	'spam-blacklist-desc' => 'כלי אנטי־ספאם מבוסס ביטוי רגולרי: [[MediaWiki:Spam-blacklist]] ו־[[MediaWiki:Spam-whitelist]]',
+);
+
 /** Hindi (हिन्दी)
  * @author Shyam
  * @author Kaustubh
