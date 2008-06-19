@@ -185,10 +185,11 @@ class SpamBlacklist {
 	 * @param string $text Text of section, or entire text if $editPage!=false
 	 * @param string $section Section number or name
 	 * @param EditPage $editPage EditPage if EditFilterMerged was called, false otherwise
+	 * @param EditSummary $editSummary Edit summary if one exists, some people use urls there too
 	 * @return True if the edit should not be allowed, false otherwise
 	 * If the return value is true, an error will have been sent to $wgOut
 	 */
-	function filter( &$title, $text, $section, $editPage = false ) {
+	function filter( &$title, $text, $section, $editPage = false, $editsummary = '' ) {
 		global $wgArticle, $wgVersion, $wgOut, $wgParser, $wgUser;
 
 		$fname = 'wfSpamBlacklistFilter';
@@ -225,6 +226,9 @@ class SpamBlacklist {
 			$newLinks = array_keys( $out->getExternalLinks() );
 			$oldLinks = $this->getCurrentLinks( $title );
 			$addedLinks = array_diff( $newLinks, $oldLinks );
+			
+			// We add the edit summary if one exists
+			if ( !empty( $editsummary ) ) $addedLinks[] = $editsummary;
 			
 			wfDebugLog( 'SpamBlacklist', "Old URLs: " . implode( ', ', $oldLinks ) );
 			wfDebugLog( 'SpamBlacklist', "New URLs: " . implode( ', ', $newLinks ) );
