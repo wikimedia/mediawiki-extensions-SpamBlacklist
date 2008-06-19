@@ -261,6 +261,8 @@ class SpamBlacklist {
 				wfRestoreWarnings();
 				if( $check ) {
 					wfDebugLog( 'SpamBlacklist', "Match!\n" );
+					$ip = wfGetIP();
+					wfDebugLog( 'SpamBlacklistHit', "$ip caught submitting spam: {$matches[0]}\n" );
 					if ( $editPage ) {
 						$editPage->spamPage( $matches[0] );
 					} else {
