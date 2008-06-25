@@ -243,6 +243,25 @@ $messages['de'] = array(
  * @author Yekrats
  */
 $messages['eo'] = array(
+	'spam-blacklist'      => '
+  #<!-- ne ŝanĝu ĉi tiun linion iel ajn --> <pre>
+# Eksteraj URL-oj kongruante al ĉi tiuj listanoj estos forbarita kiam aldonita al paĝo.
+# Ĉi tiu listo nur regnas ĉi tiun vikion; ankaux aktivas la ĝenerala nigralisto.
+# Por dokumentaro, rigardu http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+#
+# Jen la sintakso:
+#  * Ĉio ekde "#" signo al la fino de linio estas komento
+#  * Ĉiu ne-malplena linio estas regex kodero kiu nur kongruas retnodojn ene de URL-oj
+
+  #</pre> <!-- ne ŝanĝu ĉi tiun linion iel ajn -->',
+	'spam-whitelist'      => '  #<!-- ne ŝanĝu ĉi tiun linion iel ajn --> <pre>
+# Eksteraj URL-oj kongruante al ĉi tiuj listanoj *NE* estos forbarita eĉ se ili estus
+# forbarita de nigralisto
+#
+# Jen la sintakso:
+#  * Ĉio ekde "#" signo al la fino de linio estas komento
+#  * Ĉiu nemalplena linio estas regex kodero kiu nur kongruas retnodojn ene de URL-oj
+  #</pre> <!-- ne ŝanĝu ĉi tiun linion iel ajn -->',
 	'spam-invalid-lines'  => 'La {{PLURAL:$1|jena linio|jenaj linioj}} de spama nigralisto estas {{PLURAL:$1|nevlidaj regularaj esprimoj|nevlidaj regularaj esprimoj}} kaj devas esti {{PLURAL:$1|korektigita|korektigitaj}} antaŭ savante la paĝon:',
 	'spam-blacklist-desc' => 'Regex-bazita kontraŭspamilo: [[MediaWiki:Spam-blacklist]] kaj [[MediaWiki:Spam-whitelist]]',
 );
