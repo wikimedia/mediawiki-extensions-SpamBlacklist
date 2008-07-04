@@ -330,12 +330,9 @@ class SpamBlacklist {
 	}
 
 	function getHTTP( $url ) {
-		// Use wfGetHTTP from MW 1.5 if it is available
-		global $IP;
-		include_once( "$IP/includes/HttpFunctions.php" );
 		wfSuppressWarnings();
-		if ( function_exists( 'wfGetHTTP' ) ) {
-			$text = wfGetHTTP( $url );
+		if ( function_exists( 'Http::get' ) ) {
+			$text = Http::get( $url );
 		} else {
 			$url_fopen = ini_set( 'allow_url_fopen', 1 );
 			$text = file_get_contents( $url );
