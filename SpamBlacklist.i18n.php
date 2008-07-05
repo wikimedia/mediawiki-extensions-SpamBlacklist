@@ -505,7 +505,7 @@ $messages['hsb'] = array(
 
  #</pre> <!-- Tuta linka njesmě so změnić! -->',
 	'spam-invalid-lines'  => '{{PLURAL:$1|slědowaca linka je njepłaćiwy regularny wuraz|slědowacych linkow je regularny wuraz|slědowace linki su regularne wurazy|slědowacej lince stej regularnej wurazaj}} a {{PLURAL:$1|dyrbi|dyrbi|dyrbja|dyrbjetej}} so korigować, prjedy hač so strona składuje:',
-	'spam-blacklist-desc' => 'Přećiwospamowej nastroj na zakładźe Regex: [[MediaWiki:Spam-blacklist]] a [[MediaWiki:Spam-whitelsit]]',
+	'spam-blacklist-desc' => 'Přećiwospamowy nastroj na zakładźe Regex: [[MediaWiki:Spam-blacklist]] a [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Hungarian (Magyar)
