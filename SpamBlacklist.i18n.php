@@ -780,6 +780,33 @@ $messages['mr'] = array(
 	'spam-blacklist-desc' => 'रेजएक्स वर चालणारे स्पॅम थांबविणारे उपकरण: [[MediaWiki:Spam-blacklist]] व [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Aviator
+ */
+$messages['ms'] = array(
+	'spam-blacklist'      => '  # URL luar yang sepadan dengan mana-mana entri dalam senarai ini akan disekat
+  # daripada ditambah ke dalam sesebuah laman. Senarai ini digunakan pada wiki
+  # ini sahaja. Anda juga boleh merujuk senarai hitam sejagat. Sila baca
+  # dokumentasi di http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- jangan ubah baris ini --> <pre>
+#
+# Sintaks:
+#  * Aksara "#" sampai akhir baris diabaikan
+#  * Ungkapan nalar dibaca daripada setiap baris dan dipadankan dengan nama hos sahaja
+
+  #</pre> <!-- jangan ubah baris ini -->',
+	'spam-whitelist'      => '  #<!-- jangan ubah baris ini --> <pre>
+# URL luar yang sepadan dengan mana-mana entri dalam senarai ini tidak akan
+# disekat walaupun terdapat juga dalam senarai hitam.
+#
+# Sintaks:
+#  * Aksara "#" sampai akhir baris diabaikan
+#  * Ungkapan nalar dibaca daripada setiap baris dan dipadankan dengan nama hos sahaja
+
+  #</pre> <!-- jangan ubah baris ini -->',
+	'spam-blacklist-desc' => 'Alat anti-spam berdasarkan ungkapan nalar: [[MediaWiki:Spam-blacklist]] dan [[MediaWiki:Spam-whitelist]]',
+);
+
 /** Dutch (Nederlands)
  * @author SPQRobin
  * @author Siebrand
