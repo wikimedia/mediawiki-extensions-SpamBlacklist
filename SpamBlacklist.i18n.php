@@ -209,8 +209,7 @@ $messages['cy'] = array(
  * @author Raimond Spekking
  */
 $messages['de'] = array(
-	'spam-blacklist' => '
- # Externe URLs, die in dieser Liste enthalten sind, blockieren das Speichern der Seite.
+	'spam-blacklist'      => ' # Externe URLs, die in dieser Liste enthalten sind, blockieren das Speichern der Seite.
  # Diese Liste betrifft nur dieses Wiki; siehe auch die globale Blacklist.
  # Zur Dokumenation siehe http://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Diese Zeile darf nicht verändert werden! --> <pre>
@@ -220,9 +219,7 @@ $messages['de'] = array(
 #   * Jede nicht-leere Zeile ist ein regulärer Ausdruck, der gegen die Host-Namen in den URLs geprüft wird.
 
  #</pre> <!-- Diese Zeile darf nicht verändert werden! -->',
-
-	'spam-whitelist' => '
- #<!-- Diese Zeile darf nicht verändert werden! --> <pre>
+	'spam-whitelist'      => ' #<!-- Diese Zeile darf nicht verändert werden! --> <pre>
 # Externe URLs, die in dieser Liste enthalten sind, blockieren das Speichern der Seite nicht, auch wenn sie
 # in der globalen oder lokalen schwarzen Liste enthalten sind.
 #
@@ -231,11 +228,9 @@ $messages['de'] = array(
 #   * Jede nicht-leere Zeile ist ein regulärer Ausdruck, der gegen die Host-Namen in den URLs geprüft wird.
 
  #</pre> <!-- Diese Zeile darf nicht verändert werden! -->',
-
-	'spam-invalid-lines' =>
-	"{{PLURAL:$1
+	'spam-invalid-lines'  => '{{PLURAL:$1
 	| Die folgende Zeile in der Spam-Blacklist ist ein ungültiger regulärer Ausdruck. Sie muss vor dem Speichern der Seite korrigiert werden
-	| Die folgenden Zeilen in der Spam-Blacklist sind ungültige reguläre Ausdrücke. Sie müssen vor dem Speichern der Seite korrigiert werden}}:\n",
+	| Die folgenden Zeilen in der Spam-Blacklist sind ungültige reguläre Ausdrücke. Sie müssen vor dem Speichern der Seite korrigiert werden}}:',
 	'spam-blacklist-desc' => 'Regex-basiertes Anti-Spam-Werkzeug: [[MediaWiki:Spam-blacklist]] und [[MediaWiki:Spam-whitelist]]',
 );
 
@@ -266,7 +261,7 @@ $messages['eo'] = array(
 	'spam-blacklist-desc' => 'Regex-bazita kontraŭspamilo: [[MediaWiki:Spam-blacklist]] kaj [[MediaWiki:Spam-whitelist]]',
 );
 
-/** فارسی (فارسی)
+/** Persian (فارسی)
  * @author Huji
  */
 $messages['fa'] = array(
@@ -420,8 +415,8 @@ $messages['he'] = array(
 #   * כל שורה לא ריקה היא קטע מביטוי רגולרי שיתאים לשמות המתחם של כתובות URL
 
  #</pre> <!-- נא להשאיר שורה זו בדיוק כפי שהיא -->',
-	'spam-invalid-lines'  => "{{PLURAL:$1|השורה הבאה|השורות הבאות}} ברשימת כתובות ה־URL האסורות
-	{{PLURAL:$1|היא ביטוי רגולרי בלתי תקין ויש לתקנה|הן ביטויים רגולריים בלתי תקינים ויש לתקנן}} לפני שמירת הדף:",
+	'spam-invalid-lines'  => '{{PLURAL:$1|השורה הבאה|השורות הבאות}} ברשימת כתובות ה־URL האסורות
+	{{PLURAL:$1|היא ביטוי רגולרי בלתי תקין ויש לתקנה|הן ביטויים רגולריים בלתי תקינים ויש לתקנן}} לפני שמירת הדף:',
 	'spam-blacklist-desc' => 'כלי אנטי־ספאם מבוסס ביטוי רגולרי: [[MediaWiki:Spam-blacklist]] ו־[[MediaWiki:Spam-whitelist]]',
 );
 
@@ -650,6 +645,7 @@ $messages['jv'] = array(
 	'spam-blacklist-desc' => 'Piranti anti-spam adhedhasar regex: [[MediaWiki:Spam-blacklist]] lan [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Kazakh (Arabic script) (‫قازاقشا (تٴوتە)‬) */
 $messages['kk-arab'] = array(
 	'spam-blacklist'     => '  # وسى تىزىمگە سايكەس سىرتقى URL جايلار بەتكە ۇستەۋدەن بۇعاتتالادى.
   # بۇل ٴتىزىم تەك مىنداعى ۋىيكىيگە اسەر ەتەدى; تاعى دا عالامدىق قارا ٴتىزىمدى قاراپ شىعىڭىز.
@@ -673,7 +669,7 @@ $messages['kk-arab'] = array(
 	'spam-invalid-lines' => 'سپام قارا تىزىمىندەگى كەلەسى {{PLURAL:$1|جولدا|جولداردا}} جارامسىز جۇيەلى {{PLURAL:$1|ايتىلىم|ايتىلىمدار}} بار, جانە بەتتى ساقتاۋدىڭ {{PLURAL:$1|بۇنى|بۇلاردى}}  دۇرىستاۋ كەرەك.',
 );
 
-/** Kazakh (Қазақша)
+/** Kazakh (Cyrillic) (Қазақша (Cyrillic))
  * @author AlefZet
  */
 $messages['kk-cyrl'] = array(
@@ -698,6 +694,8 @@ $messages['kk-cyrl'] = array(
   #</pre> <!-- бұл жолды болған жағдайымен қалдырыңыз -->',
 	'spam-invalid-lines' => 'Спам қара тізіміндегі келесі {{PLURAL:$1|жолда|жолдарда}} жарамсыз жүйелі {{PLURAL:$1|айтылым|айтылымдар}} бар, және бетті сақтаудың {{PLURAL:$1|бұны|бұларды}}  дұрыстау керек.',
 );
+
+/** Kazakh (Latin) (Қазақша (Latin)) */
 $messages['kk-latn'] = array(
 	'spam-blacklist'     => '  # Osı tizimge säýkes sırtqı URL jaýlar betke üstewden buğattaladı.
   # Bul tizim tek mındağı wïkïge äser etedi; tağı da ğalamdıq qara tizimdi qarap şığıñız.
@@ -913,10 +911,13 @@ $messages['pl'] = array(
 	'spam-blacklist-desc' => 'Narzędzie antyspamowe oparte o wyrażenia regularne: [[MediaWiki:Spam-blacklist|spam-lista zabronionych]] oraz [[MediaWiki:Spam-whitelist|spam-lista dozwolonych]]',
 );
 
+/** Piedmontese (Piemontèis)
+ * @author Bèrto 'd Sèra
+ */
 $messages['pms'] = array(
-	'spam-blacklist' => '# J\'adrësse esterne ch\'as treuva ant sta lista-sì a vniran blocà se cheidun a jë gionta ansima a na pàgina. # Sta lista a l\'ha valor mach an sta wiki-sì; ch\'a-j fasa arferiment ëdcò a la lista nèira global. # Për dla documentassion ch\'a varda http://www.mediawiki.org/wiki/Extension:SpamBlacklist #<!-- ch\'a lassa sta riga-sì giusta \'me ch\'a l\'é --> <pre> # # La sintassi a l\'é: # * Tut lòn ch\'as anandia con na "#" fin a la fin dla riga as ten coma coment # * Qualsëssìa riga nen veuja a resta un tòch d\'espression regolar ch\'as paragon-a a ij nòm ëd servent andrinta a j\'adrësse #</pre> <!-- ch\'a lassa sta riga-sì giusta \'me ch\'a l\'é -->',
-	'spam-whitelist' => '#<!-- ch\'a lassa sta riga-sì giusta \'me ch\'a l\'é --> <pre> # J\'adrësse esterne coma cole dë sta lista a vniran NEN blocà, ëdcò fin-a # s\'a fusso da bloché conforma a le régole dla lista nèira. # # La sintassi a l\'é: # * Tut lòn ch\'as anandia con na "#" fin a la fin dla riga as ten coma coment # * Qualsëssìa riga nen veuja a resta un tòch d\'espression regolar ch\'as paragon-a a ij nòm ëd servent andrinta a j\'adrësse #</pre> <!-- ch\'a lassa sta riga-sì giusta \'me ch\'a l\'é -->',
-	'spam-invalid-lines' => '{{PLURAL:$1|St\'|Sti}} element dla lista nèira dla rumenta ëd reclam a {{PLURAL:$1|l\'é|son}} {{PLURAL:$1|n\'|dj\'}}espression regolar nen {{PLURAL:$1|bon-a|bon-e}} e a l\'{{PLURAL:$1|ha|han}} da manca d\'esse coregiùe anans che salvé la pàgina:',
+	'spam-blacklist'     => "# J'adrësse esterne ch'as treuva ant sta lista-sì a vniran blocà se cheidun a jë gionta ansima a na pàgina. # Sta lista a l'ha valor mach an sta wiki-sì; ch'a-j fasa arferiment ëdcò a la lista nèira global. # Për dla documentassion ch'a varda http://www.mediawiki.org/wiki/Extension:SpamBlacklist #<!-- ch'a lassa sta riga-sì giusta 'me ch'a l'é --> <pre> # # La sintassi a l'é: # * Tut lòn ch'as anandia con na \"#\" fin a la fin dla riga as ten coma coment # * Qualsëssìa riga nen veuja a resta un tòch d'espression regolar ch'as paragon-a a ij nòm ëd servent andrinta a j'adrësse #</pre> <!-- ch'a lassa sta riga-sì giusta 'me ch'a l'é -->",
+	'spam-whitelist'     => "#<!-- ch'a lassa sta riga-sì giusta 'me ch'a l'é --> <pre> # J'adrësse esterne coma cole dë sta lista a vniran NEN blocà, ëdcò fin-a # s'a fusso da bloché conforma a le régole dla lista nèira. # # La sintassi a l'é: # * Tut lòn ch'as anandia con na \"#\" fin a la fin dla riga as ten coma coment # * Qualsëssìa riga nen veuja a resta un tòch d'espression regolar ch'as paragon-a a ij nòm ëd servent andrinta a j'adrësse #</pre> <!-- ch'a lassa sta riga-sì giusta 'me ch'a l'é -->",
+	'spam-invalid-lines' => "{{PLURAL:$1|St'|Sti}} element dla lista nèira dla rumenta ëd reclam a {{PLURAL:$1|l'é|son}} {{PLURAL:$1|n'|dj'}}espression regolar nen {{PLURAL:$1|bon-a|bon-e}} e a l'{{PLURAL:$1|ha|han}} da manca d'esse coregiùe anans che salvé la pàgina:",
 );
 
 /** Portuguese (Português)
@@ -1017,7 +1018,7 @@ $messages['sk'] = array(
 #  * Každý neprázdny riadok je časť regulárneho výrazu, ktorému budú zodpovedať iba domény z URL
 
 #</pre> <!-- nechajte tento riadok presne ako je -->',
-	'spam-whitelist'      => ' #<!-- leave this line exactly as it is --> <pre>
+	'spam-whitelist'      => ' #<!-- leave this line exactly as it is --> <pre> 
 # Externé URL zodpovedajúce výrazom v tomto zozname *nebudú* zablokované, ani keby
 # ich zablokovali položky z čiernej listiny.
 #
@@ -1118,11 +1119,11 @@ $messages['te'] = array(
 	'spam-blacklist-desc' => 'Regex-ఆధారిత స్పామ్ నిరోధక పనిముట్టు: [[MediaWiki:Spam-blacklist]] మరియు [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Tajik (Тоҷикӣ)
+/** Tajik (Cyrillic) (Тоҷикӣ/tojikī (Cyrillic))
  * @author Ibrahim
  */
 $messages['tg-cyrl'] = array(
-	'spam-blacklist'      => ' # Нишониҳои URL берунаи ба ин феҳрист мутобиқатшуда вақте, ки ба саҳифае илова мешаванд,
+	'spam-blacklist'      => ' # Нишониҳои URL берунаи ба ин феҳрист мутобиқатшуда вақте, ки ба саҳифае илова мешаванд, 
  # баста хоҳанд шуд.
  # Ин феҳрист фақат рӯи ҳамин вики таъсир мекунад; ба феҳристи сиёҳи саросар низ муроҷиат кунед.
  # Барои мустанадот, нигаред ба http://www.mediawiki.org/wiki/Extension:SpamBlacklist
@@ -1130,17 +1131,17 @@ $messages['tg-cyrl'] = array(
 #
  # Дастурот ба ин шакл ҳастанд:
  #  * Ҳама чиз аз аломати "#" то поёни сатр ба унвони тавзеҳ ба назар гирифта мешавад
- #  * Ҳар сатр аз матн ба унвони як дастур regex ба назар гирифта мешавад,
+ #  * Ҳар сатр аз матн ба унвони як дастур regex ба назар гирифта мешавад, 
  #  ки фақат бо номи мизбон дар нишонии интернетии URL мутобиқат дода мешавад
 
  #</pre> <!-- ин сатрро ҳамонгуна, ки ҳаст раҳо кунед -->',
 	'spam-whitelist'      => '  #<!-- ин сатрро ҳамонгуна, ки ҳаст раҳо кунед --> <pre>
-# Нишониҳои URL берунаи ба ин феҳрист мутобиқатбуда, баста нахоҳанд шуд,
+# Нишониҳои URL берунаи ба ин феҳрист мутобиқатбуда, баста нахоҳанд шуд, 
 # ҳатто агар дар феҳристи сиёҳ қарор дошта бошад.
 #
 # Дастурот ба ин шакл ҳастанд:
 #  * Ҳама чиз аз аломати "#" то поёни сатр ба унвони тавзеҳ ба назар гирифта мешавад
-#  * Ҳар сатр аз матн ба унвони як дастур regex ба назар гирифта мешавад, ки фақат бо номи мизбон дар
+#  * Ҳар сатр аз матн ба унвони як дастур regex ба назар гирифта мешавад, ки фақат бо номи мизбон дар 
 # нишонии интернетии URL мутобиқат дода мешавад
   #</pre> <!-- ин сатрро ҳамонгуна, ки ҳаст раҳо кунед -->',
 	'spam-invalid-lines'  => '{{PLURAL:$1|Сатри|Сатрҳои}} зерин дар феҳристи сиёҳи ҳарзнигорӣ дастуроти ғайри миҷозе regular expressions  {{PLURAL:$1|аст|ҳастанд}} ва қабл аз захира кардани саҳифа ба ислоҳ кардан ниёз {{PLURAL:$1|дорад|доранд}}:',
@@ -1198,9 +1199,9 @@ $messages['vi'] = array(
 	'spam-blacklist-desc' => 'Công cụ dùng biểu thức chính quy để chống spam: [[MediaWiki:Spam-blacklist]] và [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Yue (粵語) */
 $messages['yue'] = array(
-	'spam-blacklist' => '
- # 同呢個表合符嘅外部 URL 當加入嗰陣會被封鎖。
+	'spam-blacklist'      => ' # 同呢個表合符嘅外部 URL 當加入嗰陣會被封鎖。
  # 呢個表只係會影響到呢個wiki；請同時參閱全域黑名單。
  # 要睇註解請睇 http://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- 請完全噉留番呢行 --> <pre>
@@ -1210,8 +1211,7 @@ $messages['yue'] = array(
 #   * 每個非空白行係一個標準表示式碎片，只係會同入面嘅URL端核對
 
  #</pre> <!-- 請完全噉留番呢行 -->',
-	'spam-whitelist' => '
- #<!-- 請完全噉留番呢行 --> <pre>
+	'spam-whitelist'      => ' #<!-- 請完全噉留番呢行 --> <pre>
 # 同呢個表合符嘅外部 URL ，即使響黑名單項目度封鎖，
 # 都*唔會*被封鎖。
 #
@@ -1220,15 +1220,13 @@ $messages['yue'] = array(
 #   * 每個非空白行係一個標準表示式碎片，只係會同入面嘅URL端核對
 
  #</pre> <!-- 請完全噉留番呢行 -->',
-	'spam-invalid-lines' =>
-	"下面響灌水黑名單嘅{{PLURAL:$1|一行|多行}}有無效嘅表示式，" .
-	"請響保存呢版之前先將{{PLURAL:$1|佢|佢哋}}修正:\n",
+	'spam-invalid-lines'  => '下面響灌水黑名單嘅{{PLURAL:$1|一行|多行}}有無效嘅表示式，請響保存呢版之前先將{{PLURAL:$1|佢|佢哋}}修正:',
 	'spam-blacklist-desc' => '以正規表達式為本嘅防灌水工具: [[MediaWiki:Spam-blacklist]] 同 [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Simplified Chinese (‪中文(简体)‬) */
 $messages['zh-hans'] = array(
-	'spam-blacklist' => '
- # 跟这个表合符的外部 URL 当加入时会被封锁。
+	'spam-blacklist'      => ' # 跟这个表合符的外部 URL 当加入时会被封锁。
  # 这个表只是会影响到这个wiki；请同时参阅全域黑名单。
  # 要参看注解请看 http://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- 请完全地留下这行 --> <pre>
@@ -1238,8 +1236,7 @@ $messages['zh-hans'] = array(
 #   * 每个非空白行是一个标准表示式碎片，只是跟里面的URL端核对
 
  #</pre> <!-- 请完全地留下这行 -->',
-	'spam-whitelist' => '
- #<!-- 请完全地留下这行 --> <pre>
+	'spam-whitelist'      => ' #<!-- 请完全地留下这行 --> <pre>
 # 跟这个表合符的外部 URL ，即使在黑名单项目中封锁，
 # 都*不会*被封锁。
 #
@@ -1248,15 +1245,13 @@ $messages['zh-hans'] = array(
 #   * 每个非空白行是一个标准表示式碎片，只是跟里面的URL端核对
 
  #</pre> <!-- 请完全地留下这行 -->',
-	'spam-invalid-lines' =>
-	"以下在灌水黑名单的{{PLURAL:$1|一行|多行}}有无效的表示式，" .
-	"请在保存这页前先将{{PLURAL:$1|它|它们}}修正:\n",
+	'spam-invalid-lines'  => '以下在灌水黑名单的{{PLURAL:$1|一行|多行}}有无效的表示式，请在保存这页前先将{{PLURAL:$1|它|它们}}修正:',
 	'spam-blacklist-desc' => '以正则表达式为本的防灌水工具: [[MediaWiki:Spam-blacklist]] 与 [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Traditional Chinese (‪中文(繁體)‬) */
 $messages['zh-hant'] = array(
-	'spam-blacklist' => '
- # 跟這個表合符的外部 URL 當加入時會被封鎖。
+	'spam-blacklist'      => ' # 跟這個表合符的外部 URL 當加入時會被封鎖。
  # 這個表只是會影響到這個wiki；請同時參閱全域黑名單。
  # 要參看註解請看 http://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- 請完全地留下這行 --> <pre>
@@ -1266,8 +1261,7 @@ $messages['zh-hant'] = array(
 #   * 每個非空白行是一個標準表示式碎片，只是跟裡面的URL端核對
 
  #</pre> <!-- 請完全地留下這行 -->',
-	'spam-whitelist' => '
- #<!-- 請完全地留下這行 --> <pre>
+	'spam-whitelist'      => ' #<!-- 請完全地留下這行 --> <pre>
 # 跟這個表合符的外部 URL ，即使在黑名單項目中封鎖，
 # 都*不會*被封鎖。
 #
@@ -1276,9 +1270,7 @@ $messages['zh-hant'] = array(
 #   * 每個非空白行是一個標準表示式碎片，只是跟裡面的URL端核對
 
  #</pre> <!-- 請完全地留下這行 -->',
-	'spam-invalid-lines' =>
-	"以下在灌水黑名單的{{PLURAL:$1|一行|多行}}有無效的表示式，" .
-	"請在保存這頁前先將{{PLURAL:$1|它|它們}}修正:\n",
+	'spam-invalid-lines'  => '以下在灌水黑名單的{{PLURAL:$1|一行|多行}}有無效的表示式，請在保存這頁前先將{{PLURAL:$1|它|它們}}修正:',
 	'spam-blacklist-desc' => '以正則表達式為本的防灌水工具: [[MediaWiki:Spam-blacklist]] 與 [[MediaWiki:Spam-whitelist]]',
 );
 
