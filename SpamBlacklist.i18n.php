@@ -382,7 +382,7 @@ $messages['gl'] = array(
  #</pre> <!-- deixe esta liña exactamente como está -->',
 	'spam-whitelist'      => ' #<!-- deixe esta liña exactamente como está --> <pre>
  # As ligazóns externas que coincidan con esta listaxe *non* serán bloqueadas mesmo se
- # foren bloqueadas mediante entradas na lista negra.
+ # fosen bloqueadas mediante entradas na lista negra.
 #
 # A sintaxe é a que segue:
 #   * Todo, desde o carácter "#" até o final da liña é un comentario
