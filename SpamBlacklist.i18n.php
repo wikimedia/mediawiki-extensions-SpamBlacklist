@@ -112,6 +112,13 @@ $messages['ast'] = array(
 	'spam-invalid-lines' => '{{PLURAL:$1|La siguiente llinia|Les siguientes llinies}} de la llista negra de spam {{PLURAL:$1|ye una espresión regular non válida|son espresiones regulares non válides}} y {{PLURAL:$1|necesita ser correxida|necesiten ser correxíes}} enantes de guardar la páxina:',
 );
 
+/** Southern Balochi (بلوچی مکرانی)
+ * @author Mostafadaneshvar
+ */
+$messages['bcc'] = array(
+	'spam-blacklist-desc' => 'Regex-based anti-spam tool: [[MediaWiki:لیست سیاه اسپم]] و [[MediaWiki:لیست اسپیت اسپم]]',
+);
+
 /** Bengali (বাংলা)
  * @author Zaheen
  * @author Bellayet
