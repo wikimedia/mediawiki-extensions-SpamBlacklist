@@ -145,7 +145,7 @@ $messages['bn'] = array(
 
   #</pre> <!-- এই লাইন যেমন আছে ঠিক তেমনই ছেড়ে দিন -->',
 	'spam-invalid-lines'  => 'নিচের স্প্যাম কালোতালিকার {{PLURAL:$1|লাইন|লাইনগুলি}} অবৈধ রেগুলার {{PLURAL:$1|এক্সপ্রেশন|এক্সপ্রেশন}} ধারণ করছে এবং পাতাটি সংরক্ষণের আগে এগুলি ঠিক করা {{PLURAL:$1|প্রয়োজন|প্রয়োজন}}:',
-	'spam-blacklist-desc' => 'রেজেক্স-ভিত্তিক স্প্যামরোধী সরঞ্জাম',
+	'spam-blacklist-desc' => 'রেজেক্স-ভিত্তিক স্প্যামরোধী সরঞ্জাম: [[MediaWiki:Spam-blacklist]] এবং [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Catalan (Català)
@@ -533,6 +533,33 @@ $messages['hu'] = array(
   #</pre> <!-- ezen a soron ne változtass -->',
 	'spam-invalid-lines'  => 'Az alábbi {{PLURAL:$1|sor hibás|sorok hibásak}} a spam elleni feketelistában; {{PLURAL:$1|javítsd|javítsd őket}} mentés előtt:',
 	'spam-blacklist-desc' => 'Regex-alapú spamellenes eszköz: [[MediaWiki:Spam-blacklist]] és [[MediaWiki:Spam-whitelist]]',
+);
+
+/** Interlingua (Interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'spam-blacklist'      => '  # Le adresses URL externe correspondente a iste lista es blocate de esser addite a un pagina.
+  # Iste lista ha effecto solmente in iste wiki; refere te etiam al lista nigre global.
+  # Pro documentation vide http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- non modificar in alcun modo iste linea --> <pre>
+#
+# Le syntaxe es lo sequente:
+#  * Toto a partir de un character "#" usque al fin del linea es un commento
+#  * Cata linea non vacue es un fragmento de regex que se applica solmente al nomines de hospite intra adresses URL
+
+  #</pre> <!-- non modificar in alcun modo iste linea -->',
+	'spam-whitelist'      => '  #<!-- non modificar in alcun modo iste linea --> <pre>
+# Le adresses URL correspondente a iste lista *non* essera blocate mesmo si illos
+# haberea essite blocate per entratas in le lista nigre.
+#
+# Le syntaxe es lo sequente:
+#  * Toto a partir de un character "#" usque al fin del linea es un commento
+#  * Omne linea non vacue es un fragmento de regex que se applica solmente al nomines de hospite intra adresses URL
+
+  #</pre> <!-- non modificar in alcun modo iste linea -->',
+	'spam-invalid-lines'  => 'Le sequente {{PLURAL:$1|linea|lineas}} del lista nigre antispam es {{PLURAL:$1|un expression|expressiones}} regular invalide e debe esser corrigite ante que tu immagazina le pagina:',
+	'spam-blacklist-desc' => 'Instrumento antispam a base de regex: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Indonesian (Bahasa Indonesia)
@@ -959,6 +986,7 @@ $messages['pt'] = array(
 /** Russian (Русский)
  * @author Александр Сигачёв
  * @author HalanTul
+ * @author Ahonc
  */
 $messages['ru'] = array(
 	'spam-blacklist'      => ' # Внешние ссылки, соответствующие этому списку, будут запрещены для внесения на страницы.
@@ -976,7 +1004,7 @@ $messages['ru'] = array(
 #
 # Синтаксис:
 #   * Всё, начиная с символа "#" и до конца строки, считается комментарием
-#   * Каждая непуская строка является фрагментом регулярного выражениея, применяемого только к узлу в URL
+#   * Каждая непуская строка является фрагментом регулярного выражения, применяемого только к узлу в URL
 
  #</pre> <!-- не изменяйте эту строку -->',
 	'spam-invalid-lines'  => '{{PLURAL:$1|Следующая строка чёрного списка ссылок содержит ошибочное регулярное выражение и должна быть исправлена|Следующие строки чёрного списка ссылок содержат ошибочные регулярные выражения и должны быть исправлены}} перед сохранением:',
@@ -1160,6 +1188,30 @@ $messages['tg-cyrl'] = array(
   #</pre> <!-- ин сатрро ҳамонгуна, ки ҳаст раҳо кунед -->',
 	'spam-invalid-lines'  => '{{PLURAL:$1|Сатри|Сатрҳои}} зерин дар феҳристи сиёҳи ҳарзнигорӣ дастуроти ғайри миҷозе regular expressions  {{PLURAL:$1|аст|ҳастанд}} ва қабл аз захира кардани саҳифа ба ислоҳ кардан ниёз {{PLURAL:$1|дорад|доранд}}:',
 	'spam-blacklist-desc' => 'Абзори зидди ҳарзнигорӣ дар асоси Regex: [[MediaWiki:Spam-blacklist]] ва [[MediaWiki:Spam-whitelist]]',
+);
+
+/** Ukrainian (Українська)
+ * @author Ahonc
+ */
+$messages['uk'] = array(
+	'spam-blacklist' => '# Зовнішні посилання, що відповідають цьому списку, будуть заборонені для внесення на стоірнки.
+  # Цей список діє лише для цієї вікі, існує також загальний чорний список.
+  # Докладніше на сторінці http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- не змінюйте цей рядок --> <pre>
+#
+# Синтаксис:
+#  * Все, починаючи із символу "#" і до кінця рядка, вважається коментарем
+#  * Кожен непорожній рядок є фрагментом регулярного виразу, який застосовується тільки до вузла в URL
+
+  #</pre> <!-- не змінюйте цей рядок -->',
+	'spam-whitelist' => '  #<!-- не змінюйте це рядок --> <pre>
+# Зовнішні посилання, що відповідають цьому списку, *не* будуть блокуватися, навіть якщо вони потрапили до чорного списку.
+#
+# Синтаксис:
+#  * Усе, починаючи з символу "#" і до кінця рядка, вважається коментарем
+#  * Кожен непорожній рядок є фрагментом регулярного виразу, який застосовується тільки до вузла в URL
+
+  #</pre> <!-- не изменяйте эту строку -->',
 );
 
 /** Vèneto (Vèneto)
