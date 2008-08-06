@@ -620,6 +620,7 @@ $messages['it'] = array(
 /** Japanese (日本語)
  * @author JtFuruhata
  * @author Marine-Blue
+ * @author Aotake
  */
 $messages['ja'] = array(
 	'spam-blacklist'      => '  # このリストに掲載されている外部URLに一致する送信元からのページ編集をブロックします。
