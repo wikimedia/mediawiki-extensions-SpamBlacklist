@@ -90,7 +90,7 @@ $messages['ar'] = array(
  * @author Esbardu
  */
 $messages['ast'] = array(
-	'spam-blacklist'     => "  # Les URLs esternes d'esta llista sedrán bloquiaes cuando s'añadan a una páxina.
+	'spam-blacklist'      => "  # Les URLs esternes d'esta llista sedrán bloquiaes cuando s'añadan a una páxina.
   # Esta llista afeuta namái a esta wiki; mira tamién la llista negra global.
   # Pa obtener documentación vete a http://www.mediawiki.org/wiki/Extension:SpamBlacklist
   #<!-- dexa esta llinia exautamente como ta --> <pre>
@@ -100,7 +100,7 @@ $messages['ast'] = array(
 #  * Toa llinia non vacia ye un fragmentu regex qu'afeuta namái a les URLs especificaes
 
   #</pre> <!-- dexa esta llinia exautamente como ta -->",
-	'spam-whitelist'     => "  #<!-- dexa esta llinia exautamente como ta --> <pre>
+	'spam-whitelist'      => "  #<!-- dexa esta llinia exautamente como ta --> <pre>
 # Les URLs esternes d'esta llista *nun* sedrán bloquiaes inda si lo fueron per aciu
 # d'una entrada na llista negra.
 #
@@ -109,7 +109,8 @@ $messages['ast'] = array(
 #  * Toa llinia non vacia ye un fragmentu regex qu'afeuta namái a les URLs especificaes
 
   #</pre> <!-- dexa esta llinia exautamente como ta -->",
-	'spam-invalid-lines' => '{{PLURAL:$1|La siguiente llinia|Les siguientes llinies}} de la llista negra de spam {{PLURAL:$1|ye una espresión regular non válida|son espresiones regulares non válides}} y {{PLURAL:$1|necesita ser correxida|necesiten ser correxíes}} enantes de guardar la páxina:',
+	'spam-invalid-lines'  => '{{PLURAL:$1|La siguiente llinia|Les siguientes llinies}} de la llista negra de spam {{PLURAL:$1|ye una espresión regular non válida|son espresiones regulares non válides}} y {{PLURAL:$1|necesita ser correxida|necesiten ser correxíes}} enantes de guardar la páxina:',
+	'spam-blacklist-desc' => "Ferramienta antispam basada n'espresiones regulares: [[Mediawiki:Spam-blacklist]] y [[MediaWiki:Spam-whitelist]]",
 );
 
 /** Southern Balochi (بلوچی مکرانی)
