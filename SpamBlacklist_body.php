@@ -413,6 +413,13 @@ class SpamRegexBatch {
 		$regexEnd = ($batchSize > 0 ) ? ')/Si' : ')/i';
 		$build = false;
 		foreach( $lines as $line ) {
+			if( substr( $line, -1, 1 ) == "\\" ) {
+				// Final \ will break silently on the batched regexes.
+				// Skip it here to avoid breaking the next line;
+				// warnings from getBadLines() will still trigger on
+				// edit to keep new ones from floating in.
+				continue;
+			}
 			// FIXME: not very robust size check, but should work. :)
 			if( $build === false ) {
 				$build = $line;
@@ -497,13 +504,22 @@ class SpamRegexBatch {
 	 */
 	static function getBadLines( $lines ) {
 		$lines = SpamRegexBatch::stripLines( $lines );
-		$regexes = SpamRegexBatch::buildRegexes( $lines );
-		if( SpamRegexBatch::validateRegexes( $regexes ) ) {
-			// No problems!
-			return array();
-		}
 		
 		$badLines = array();
+		foreach( $lines as $line ) {
+			if( substr( $line, -1, 1 ) == "\\" ) {
+				// Final \ will break silently on the batched regexes.
+				$badLines[] = $line;
+			}
+		}
+		
+		$regexes = SpamRegexBatch::buildRegexes( $lines );
+		if( SpamRegexBatch::validateRegexes( $regexes ) ) {
+			// No other problems!
+			return $badLines;
+		}
+		
+		// Something failed in the batch, so check them one by one.
 		foreach( $lines as $line ) {
 			$regexes = SpamRegexBatch::buildRegexes( array( $line ) );
 			if( !SpamRegexBatch::validateRegexes( $regexes ) ) {
