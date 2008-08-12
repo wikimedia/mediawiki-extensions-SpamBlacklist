@@ -31,6 +31,14 @@ $messages['en'] = array(
 	'spam-blacklist-desc' => 'Regex-based anti-spam tool: [[MediaWiki:Spam-blacklist]] and [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Message documentation (Message documentation)
+ * @author Purodha
+ */
+$messages['qqq'] = array(
+	'spam-blacklist' => 'See also: [[MediaWiki:spam-whitelist]] and [[MediaWiki:captcha-addurl-whitelist]].',
+	'spam-whitelist' => 'See also: [[MediaWiki:spam-blacklist]] and [[MediaWiki:captcha-addurl-whitelist]].',
+);
+
 /** Aragonese (Aragonés)
  * @author Juanpabl
  */
@@ -753,6 +761,28 @@ $messages['kk-latn'] = array(
 
   #</pre> <!-- bul joldı bolğan jağdaýımen qaldırıñız -->',
 	'spam-invalid-lines' => 'Spam qara tizimindegi kelesi {{PLURAL:$1|jolda|joldarda}} jaramsız jüýeli {{PLURAL:$1|aýtılım|aýtılımdar}} bar, jäne betti saqtawdıñ {{PLURAL:$1|bunı|bulardı}}  durıstaw kerek.',
+);
+
+/** Ripoarisch (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'spam-blacklist' => ' # URLs noh ußerhallef uß dä Leß wäde nit zojelohße, wann se einer in en Sigg erin don well.
+ # He di Liß eß bloß för dat Wiki joot. Loor Der och de jemeinsame „schwazze Leß“ aan.
+ # Dokkementeet is dat op http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- Loß di Reih hee jenou esu wi se es --> <pre>
+# Dä Opbou es:
+# * Alles fun enem #-Zeiche bes an et Engk fun ene Reih es ene Kommentaa för de Minsche
+# * Jede Reih met jet dren es en Stöck regular Expression, wat alleins Domains en URLs treffe kann
+
+ #</pre> <!-- Lohß di Reih he jenou esu wi se es -->',
+	'spam-whitelist' => ' #<!-- Loß di Reih hee jenou esu wi se es --> <pre>
+# URLs noh ußerhallef uß dä Leß wäde dorschjelohße,
+# sellefts wann se op en „schwazze Leß“ shtonn
+# Dä Opbou es:
+# * Alles fun enem #-Zeiche bes an et Engk fun ene Reih es ene Kommentaa för de Minsche
+# * Jede Reih met jet dren es en Stöck regular Expression, wat alleins Domains en URLs treffe kann
+ #</pre> <!-- Lohß di Reih he jenou esu wi se es -->',
 );
 
 /** Limburgish (Limburgs)
