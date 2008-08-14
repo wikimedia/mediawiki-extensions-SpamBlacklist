@@ -783,6 +783,10 @@ $messages['ksh'] = array(
 # * Alles fun enem #-Zeiche bes an et Engk fun ene Reih es ene Kommentaa för de Minsche
 # * Jede Reih met jet dren es en Stöck regular Expression, wat alleins Domains en URLs treffe kann
  #</pre> <!-- Lohß di Reih he jenou esu wi se es -->',
+	'spam-invalid-lines' => 'Mer han Fääler en <i lang="en">regular expressions</i> jefonge.
+{{PLURAL:$1|De Reih unge stemmp nit un moß|Di $1 Reije unge stimme nit un möße|Dat he sull}}
+för em Afspeichere eets en Odenung jebraat wäde:',
+	'spam-blacklist-desc' => 'Jäje SPAM met <i lang="en">regular expressions</i> — övver en [[MediaWiki:Spam-blacklist|„schwazze Leß“]] un en [[MediaWiki:Spam-whitelist|Leß met Ußnahme dofun]].',
 );
 
 /** Limburgish (Limburgs)
