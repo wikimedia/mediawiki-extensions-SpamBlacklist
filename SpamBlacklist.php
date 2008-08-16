@@ -80,10 +80,10 @@ function wfSpamBlacklistFilter( &$title, $text, $section, &$hookErr, $editSummar
 /**
  * Hook function for EditFilterMerged, replaces wfSpamBlacklistFilter
  */
-function wfSpamBlacklistFilterMerged( $editPage, $text, &$hookErr, $editSummary ) {
+function wfSpamBlacklistFilterMerged( &$editPage, $text, &$hookErr, $editSummary ) {
 	$spamObj = wfSpamBlacklistObject();
 	$title = $editPage->mArticle->getTitle();
-	$ret = $spamObj->filter( $title, $text, '', $editPage, $editSummary );
+	$ret = $spamObj->filter( $title, $text, '', $editSummary, $editPage );
 	// Return convention for hooks is the inverse of $wgFilterCallback
 	return !$ret;
 }

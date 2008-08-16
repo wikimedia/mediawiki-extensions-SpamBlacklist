@@ -184,12 +184,12 @@ class SpamBlacklist {
 	 * @param Title $title
 	 * @param string $text Text of section, or entire text if $editPage!=false
 	 * @param string $section Section number or name
-	 * @param EditPage $editPage EditPage if EditFilterMerged was called, false otherwise
 	 * @param EditSummary $editSummary Edit summary if one exists, some people use urls there too
+	 * @param EditPage $editPage EditPage if EditFilterMerged was called, null otherwise
 	 * @return True if the edit should not be allowed, false otherwise
 	 * If the return value is true, an error will have been sent to $wgOut
 	 */
-	function filter( &$title, $text, $section, $editPage = false, $editsummary = '' ) {
+	function filter( &$title, $text, $section, $editsummary = '', EditPage &$editPage = null ) {
 		global $wgArticle, $wgVersion, $wgOut, $wgParser, $wgUser;
 
 		$fname = 'wfSpamBlacklistFilter';
