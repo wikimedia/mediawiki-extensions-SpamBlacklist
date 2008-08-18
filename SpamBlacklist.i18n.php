@@ -125,7 +125,7 @@ $messages['ast'] = array(
  * @author Mostafadaneshvar
  */
 $messages['bcc'] = array(
-	'spam-blacklist-desc' => 'Regex-based anti-spam tool: [[MediaWiki:لیست سیاه اسپم]] و [[MediaWiki:لیست اسپیت اسپم]]',
+	'spam-blacklist-desc' => 'وسیله په ضد اسپم په اساس عبارات منظم:  [[MediaWiki:Spam-blacklist]] و [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Bengali (বাংলা)
