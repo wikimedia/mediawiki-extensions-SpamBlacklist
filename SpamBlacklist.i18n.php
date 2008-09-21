@@ -194,9 +194,20 @@ $messages['bn'] = array(
 );
 
 /** Catalan (Català)
+ * @author Aleator
  * @author Jordi Roqué
  */
 $messages['ca'] = array(
+	'spam-blacklist' => '  # Les URLs externes coincidents amb aquesta llista seran bloquejades en ser afegides a una pàgina.
+  # Aquesta llista afecta només a aquesta wiki; vegeu també la llista negra global.
+  # Per a més informació vegeu http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- deixeu aquesta línia exactament com està --> <pre>
+#
+# La sintaxi és com segueix:
+#  * Tot allò des d\'un caràcter "#" fins al final de la línia és un comentari
+#  * Cada línia que no estigui en blanc és un fragment regex que només coincidirà amb amfitrions dintre d\'URLs
+
+  #</pre> <!-- deixeu aquesta línia exactament com està -->',
 	'spam-invalid-lines' => "{{PLURAL:$1|La línia següent no es considera una expressió correcta|Les línies següents no es consideren expressions correctes}} {{PLURAL:$1|perquè recull|perquè recullen}} SPAM que està vetat. Heu d'esmenar-ho abans de salvar la pàgina:",
 );
 
@@ -311,6 +322,13 @@ $messages['eo'] = array(
   #</pre> <!-- ne ŝanĝu ĉi tiun linion iel ajn -->',
 	'spam-invalid-lines' => 'La {{PLURAL:$1|jena linio|jenaj linioj}} de spama nigralisto estas {{PLURAL:$1|nevlidaj regularaj esprimoj|nevlidaj regularaj esprimoj}} kaj devas esti {{PLURAL:$1|korektigita|korektigitaj}} antaŭ savante la paĝon:',
 	'spam-blacklist-desc' => 'Regex-bazita kontraŭspamilo: [[MediaWiki:Spam-blacklist]] kaj [[MediaWiki:Spam-whitelist]]',
+);
+
+/** Spanish (Español)
+ * @author Sanbec
+ */
+$messages['es'] = array(
+	'spam-invalid-lines' => '{{PLURAL:$1|La siguiente línea|Las siguientes líneas}} de la lista negra de spam {{PLURAL:$1|es una expresión regular inválida|son expresiones regulares inválidas}} y es necesario {{PLURAL:$1|corregirla|corregirlas}} antes de guardar la página:',
 );
 
 /** Persian (فارسی)
