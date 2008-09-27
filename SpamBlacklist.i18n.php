@@ -37,6 +37,7 @@ $messages['en'] = array(
 $messages['qqq'] = array(
 	'spam-blacklist' => 'See also: [[MediaWiki:spam-whitelist]] and [[MediaWiki:captcha-addurl-whitelist]].',
 	'spam-whitelist' => 'See also: [[MediaWiki:spam-blacklist]] and [[MediaWiki:captcha-addurl-whitelist]].',
+	'spam-blacklist-desc' => 'Short description of the Spam-blacklist extension, shown in [[Special:Version]]. Do not translate or change links.',
 );
 
 /** Aragonese (Aragonés)
