@@ -961,6 +961,31 @@ $messages['nl'] = array(
 	'spam-blacklist-desc' => 'Antispamfunctionaliteit via reguliere expressies: [[MediaWiki:Spam-blacklist]] en [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+ * @author Frokor
+ */
+$messages['nn'] = array(
+	'spam-blacklist' => '   # Eksterne URL-ar som finnst på denne lista vil ikkje kunne leggast til på ei side.
+   # Denne lista gjeld berre denne wikien; sjå òg den globale svartelistinga.
+   # For dokumentasjon, sjå http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+   #<!-- La denne linja vere nøyaktig som ho er --> <pre>
+#
+# Syntaksen er som følgjer:
+#  * Alle linjer som byrjar med «#» er kommentarar
+#  * Alle ikkje-blanke linjer er eit regex-fragment som berre vil passe med domenenavn i URL-ar
+
+   #</pre> <!-- la denne linja vere nøyaktig som ho er -->',
+	'spam-whitelist' => '   #<!-- la denne linja vere nøyaktig som ho er --> <pre>
+# Eksterne URL-ar på denne lista vil *ikkje* blokkerast, sjølv om
+# dei elles ville vorte blokkert av svartelista.
+#
+# Syntaksen er som følgjer:
+#  * Alle linjer som byrjar med «#» er kommentarar
+#  * Alle ikkje-blanke linjer er eit regex-fragment som berre vil passe med domenenamn i URL-ar
+
+   #</pre> <!-- la denne linja vere nøyaktig som ho er -->',
+);
+
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Jon Harald Søby
  */
