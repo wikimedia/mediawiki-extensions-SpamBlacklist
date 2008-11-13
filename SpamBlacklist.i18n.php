@@ -984,6 +984,8 @@ $messages['nn'] = array(
 #  * Alle ikkje-blanke linjer er eit regex-fragment som berre vil passe med domenenamn i URL-ar
 
    #</pre> <!-- la denne linja vere nøyaktig som ho er -->',
+	'spam-invalid-lines' => 'Følgjande {{PLURAL:$1|linje|linjer}} i spamsvartelista er {{PLURAL:$1|eit ugyldig regulært uttrykk|ugyldige regulære uttrykk}} og må rettast før lagring av sida:',
+	'spam-blacklist-desc' => 'Antispamverktøy basert på regulære uttrykk: [[MediaWiki:Spam-blacklist]] og [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
