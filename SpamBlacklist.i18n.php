@@ -817,6 +817,13 @@ $messages['kk-latn'] = array(
 	'spam-invalid-lines' => 'Spam qara tizimindegi kelesi {{PLURAL:$1|jolda|joldarda}} jaramsız jüýeli {{PLURAL:$1|aýtılım|aýtılımdar}} bar, jäne betti saqtawdıñ {{PLURAL:$1|bunı|bulardı}}  durıstaw kerek.',
 );
 
+/** Korean (한국어)
+ * @author Kwj2772
+ */
+$messages['ko'] = array(
+	'spam-invalid-lines' => '스팸 블랙리스트의 다음 줄에 잘못된 정규 표현식이 사용되어 저장하기 전에 바르게 고쳐져야 합니다:',
+);
+
 /** Ripoarisch (Ripoarisch)
  * @author Purodha
  */
