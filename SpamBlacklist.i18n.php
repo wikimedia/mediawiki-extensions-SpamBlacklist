@@ -822,6 +822,7 @@ $messages['kk-latn'] = array(
  */
 $messages['ko'] = array(
 	'spam-invalid-lines' => '스팸 블랙리스트의 다음 줄에 잘못된 정규 표현식이 사용되어 저장하기 전에 바르게 고쳐져야 합니다:',
+	'spam-blacklist-desc' => '정규 표현식을 이용해 스팸을 막습니다: [[MediaWiki:Spam-blacklist]]와 [[MediaWiki:Spam-whitelist]]를 사용합니다.',
 );
 
 /** Ripoarisch (Ripoarisch)
