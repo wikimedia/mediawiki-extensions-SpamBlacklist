@@ -821,6 +821,24 @@ $messages['kk-latn'] = array(
  * @author Kwj2772
  */
 $messages['ko'] = array(
+	'spam-blacklist' => '  # 이 목록과 일치하는 외부 링크는 문서에 추가하는 것이 차단됩니다.
+  # 이 목록에는 이 위키에서만 적용됩니다; 글로벌 블랙리스트도 참고하십시오.
+  # 자세한 내용은 http://www.mediawiki.org/wiki/Extension:SpamBlacklist 을 참고하십시오.
+  # <!-- 이 줄은 그대로 두십시오.--> <pre>
+#
+# 문법은 다음과 같습니다.
+# * "#"에서 그 줄의 끝까지는 주석입니다.
+# * 모든 줄은 URL의 호스트와 일치하는 정규 표현식의 일부분입니다.
+
+  #</pre> <!--이 줄은 그대로 두십시오.-->',
+	'spam-whitelist' => '  # <!-- 이 줄은 그대로 두십시오.--> <pre>
+# 이 목록과 일치하는 외부 링크는 블랙리스트에 올랐더라도 문서에 추가하는 것이 차단되지 않습니다.
+#
+# 문법은 다음과 같습니다.
+# * "#"에서 그 줄의 끝까지는 주석입니다.
+# * 모든 줄은 URL의 호스트와 일치하는 정규 표현식의 일부분입니다.
+
+  #</pre> <!--이 줄은 그대로 두십시오.-->',
 	'spam-invalid-lines' => '스팸 블랙리스트의 다음 줄에 잘못된 정규 표현식이 사용되어 저장하기 전에 바르게 고쳐져야 합니다:',
 	'spam-blacklist-desc' => '정규 표현식을 이용해 스팸을 막습니다: [[MediaWiki:Spam-blacklist]]와 [[MediaWiki:Spam-whitelist]]를 사용합니다.',
 );
@@ -1160,6 +1178,20 @@ $messages['sah'] = array(
   #</pre> <!-- бу строканы уларытыма -->',
 	'spam-invalid-lines' => 'Хара испииһэк манна көрдөрүллүбүт {{PLURAL:$1|строкаата сыыһалаах|строкаалара сыыһалаахтар}}, уларытыах иннинэ ол көннөрүллүөхтээх:',
 	'spam-blacklist-desc' => 'Анти-спам үстүрүмүөнэ: [[MediaWiki:Spam-blacklist]] уонна [[MediaWiki:Spam-whitelist]]',
+);
+
+/** Sicilian (Sicilianu)
+ * @author Santu
+ */
+$messages['scn'] = array(
+	'spam-blacklist' => ' # Li URL fora dû sito ca currispùnnunu a la lista di sècutu vènunu bluccati.
+   # La lista vali sulu pi stu situ; fari rifirimentu macari a la blacklist glubbali.
+   # Pâ ducumentazzioni talìa http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+   #<!-- nun mudificari pi nenti chista riga --> <pre>
+# La sintassi è  chista:
+#  * Tuttu chiddu ca veni doppu nu caràttiri "#" è nu cummentu, nzinu ca finisci la riga
+#  * Tutti li righi non vacanti sunnu frammenti di sprissioni riulari ca s\'àpplicanu sulu ô nomu di l\'host nti li URL
+   #</pre> <!-- non mudificari nenti di sta riga -->',
 );
 
 /** Slovak (Slovenčina)
