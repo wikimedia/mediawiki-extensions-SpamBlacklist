@@ -194,6 +194,33 @@ $messages['bn'] = array(
 	'spam-blacklist-desc' => 'রেজেক্স-ভিত্তিক স্প্যামরোধী সরঞ্জাম: [[MediaWiki:Spam-blacklist]] এবং [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Bosnian (Bosanski)
+ * @author CERminator
+ */
+$messages['bs'] = array(
+	'spam-blacklist' => '# Vanjski URLovi koji odgovaraju ovom spisku će biti blokirani ako se dodaju na stranicu.
+  # Ovaj spisak će biti aktivan samo na ovoj wiki; a poziva se i na globalni zabranjeni spisak.
+  # Za objašenjenja i dokumentaciju pogledajte http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- ostavite ovaj red tačno onako kakav je --> <pre>
+#
+# Sintaksa je slijedeća:
+#  * Sve od znaka "#" do kraja reda je komentar
+#  * Svi neprazni redovi su fragmenti regexa koji će odgovarati samo domaćinima unutar URLova
+
+  #</pre> <!-- ostavite ovaj red tačno onako kakav je -->',
+	'spam-whitelist' => '#<!-- ostavite ovaj red onakav kakav je --> <pre>
+# Vanjski URLovi koji odgovaraju nekoj od stavki na ovom spisku *neće* biti blokirani čak iako
+# budu blokirani preko spisak nepoželjnih stavki.
+#
+# Sintaksa je slijedeća:
+#  * Sve od znaka "#" do kraja reda je komentar
+#  * Svaki neprazni red je fragment regexa koji će odgovarati samo domaćinima unutar URLa
+
+  #</pre> <!-- ostavite ovaj red onakav kakav je -->',
+	'spam-invalid-lines' => 'Slijedeći {{PLURAL:$1|red|redovi}} u spisku spam nepoželjnih stavki {{PLURAL:$1|je nevalidan izraz|su nevalidni izrazi}} i {{PLURAL:$1|treba|trebaju}} se ispraviti prije spremanja stranice:',
+	'spam-blacklist-desc' => 'Alati protiv spama zasnovani na regexu: [[MediaWiki:Spam-blacklist]] i [[MediaWiki:Spam-whitelist]]',
+);
+
 /** Catalan (Català)
  * @author Aleator
  * @author Jordi Roqué
@@ -271,6 +298,7 @@ $messages['cy'] = array(
 
 /** German (Deutsch)
  * @author Raimond Spekking
+ * @author Umherirrender
  */
 $messages['de'] = array(
 	'spam-blacklist' => ' # Externe URLs, die in dieser Liste enthalten sind, blockieren das Speichern der Seite.
@@ -292,9 +320,7 @@ $messages['de'] = array(
 #   * Jede nicht-leere Zeile ist ein regulärer Ausdruck, der gegen die Host-Namen in den URLs geprüft wird.
 
  #</pre> <!-- Diese Zeile darf nicht verändert werden! -->',
-	'spam-invalid-lines' => '{{PLURAL:$1
-	| Die folgende Zeile in der Spam-Blacklist ist ein ungültiger regulärer Ausdruck. Sie muss vor dem Speichern der Seite korrigiert werden
-	| Die folgenden Zeilen in der Spam-Blacklist sind ungültige reguläre Ausdrücke. Sie müssen vor dem Speichern der Seite korrigiert werden}}:',
+	'spam-invalid-lines' => 'Die {{PLURAL:$1|folgende Zeile|folgenden Zeilen}} in der Spam-Blacklist {{PLURAL:$1|ist ein ungültiger regulärer Ausdruck|sind ungültige reguläre Ausdrücke}}. Sie {{PLURAL:$1|muss|müssen}} vor dem Speichern der Seite korrigiert werden:',
 	'spam-blacklist-desc' => 'Regex-basiertes Anti-Spam-Werkzeug: [[MediaWiki:Spam-blacklist]] und [[MediaWiki:Spam-whitelist]]',
 );
 
