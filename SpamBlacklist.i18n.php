@@ -159,6 +159,7 @@ $messages['bcc'] = array(
 
 /** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
  * @author EugeneZelenko
+ * @author Jim-by
  */
 $messages['be-tarask'] = array(
 	'spam-blacklist' => '  # Вонкавыя спасылкі, якія будуць адпавядаць гэтаму сьпісу, будуць блякавацца пры 
@@ -184,6 +185,7 @@ $messages['be-tarask'] = array(
 
   #</pre> <!-- пакіньце гэты радок такім, які ён ёсьць -->',
 	'spam-invalid-lines' => '{{PLURAL:$1|Наступны радок чорнага сьпісу ўтрымлівае няслушны рэгулярны выраз|Наступныя радкі чорнага сьпісу ўтрымліваюць няслушныя рэгулярныя выразы}} і {{PLURAL:$1|павінен быць|павінныя быць}} выпраўлены перад захаваньнем старонкі:',
+	'spam-blacklist-desc' => 'Антыспамавая прылада, якая базуецца на рэгулярных выразах: [[MediaWiki:Spam-blacklist]] і [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Bulgarian (Български)
