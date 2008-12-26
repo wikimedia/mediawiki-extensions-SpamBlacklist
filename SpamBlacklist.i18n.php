@@ -1249,6 +1249,17 @@ $messages['scn'] = array(
 #  * Tuttu chiddu ca veni doppu nu caràttiri "#" è nu cummentu, nzinu ca finisci la riga
 #  * Tutti li righi non vacanti sunnu frammenti di sprissioni riulari ca s\'àpplicanu sulu ô nomu di l\'host nti li URL
    #</pre> <!-- non mudificari nenti di sta riga -->',
+	'spam-whitelist' => '   #<!-- non mudificari nta nudda manera sta riga --> <pre>
+# Li URL fora ô situ ca currispùnninu a la lista ccà di sècutu *non* vèninu
+# bluccati, macari ntô casu avìssiru a currispùnniri a arcuni vuci di la blacklist
+#
+# La sintassi è chista:
+#  * Tuttu chiddu ca veni doppu un caràttiri "#" è nu cummentu, nzinu a la fini dâ riga
+#  * Tutti li righi non vacanti sunnu frammenti di sprissioni riulari ca s\'applìcanu sulu  ô nomu di l\'host ntê URL
+
+   #</pre> <!-- non mudificari nta nudda manera sta riga -->',
+	'spam-invalid-lines' => '{{PLURAL:$1|La riga di sècutu|Li righi di sècutu}} di la blacklist dô spam {{PLURAL:$1|nun è na sprissioni riulari boni|nun sunnu sprissioni riulari boni}}; currèggiri {{PLURAL:$1|lu sbagghiu|li sbagghi}} prima di sarvari la pàggina.',
+	'spam-blacklist-desc' => 'Strumentu antispam basatu supra li sprissioni riulari [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Slovak (Slovenčina)
