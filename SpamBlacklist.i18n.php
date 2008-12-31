@@ -359,6 +359,25 @@ $messages['de'] = array(
  * @author Michawiki
  */
 $messages['dsb'] = array(
+	'spam-blacklist' => '  # Eksterne URL, kótarež su w toś tej lisćinje, blokěruju se, gaž pśidawaju se bokoju.
+  # Toś ta lisćina nastupa jano toś ten wiki; glědaj teke globalnu cornu lisćinu.
+  # Za dokumentaciju glědaj http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- Wóstaj toś tu smužka rowno tak ako jo --><pre>
+#
+# Syntaksa jo ako slědujo:
+#  * Wšykno wót znamuška "#" až ku kóńcoju smužki jo komentar
+# Kužda smužka, kótaraž njejo prozna, jo fragment regularnego wuraza, kótaryž wótpowědujo hostam w URL
+
+  #</pre> <!-- wóstaj toś tu smužku rowno ako jo -->',
+	'spam-whitelist' => '   #<!-- wóstaj toś tu smužka rowno tak ako jo --> <pre>
+ # Eksterne URL, kótarež sw toś tej lisćinje se *nje*blokěruju, samo jolic wone by
+ # se blokěrowali pśez zapiski corneje lisćiny.
+ #
+ # Syntaksa jo ako slědujo:
+ #  * Wšykno wót znamuška "#" ku kóńcoju smužki jo komentar
+ #  * Kužda smužka, kótaraž njejo prozna, jo fragment regularanego wuraza, kótaryž wótpowědujo jano hostam w URL
+
+   #</pre> <!-- wóstaj toś tu smužku rowno tak ako jo -->',
 	'spam-invalid-lines' => '{{PLURAL:$1|Slědujuca smužka|Slědujucej smužce|Slědujuce smužki|Slědujuce smužki}} corneje lisćiny spama {{PLURAL:$1|jo njepłaśiwy regularny wuraz|stej njepłaśiwej regularnej wuraza|su njepłaśiwe regularne wuraze|su njepłaśiwe regularne wuraze}} a {{PLURAL:$1|musy|musytej|muse|muse}} se korigěrowaś, pjerwjej až składujoš bok:',
 	'spam-blacklist-desc' => 'Antispamowy rěd na zakłaźe regularnych wurazow: [[MediaWiki:Spam-blacklist]] a [[MediaWiki:Spam-whitelist]]',
 );
