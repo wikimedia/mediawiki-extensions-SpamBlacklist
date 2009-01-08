@@ -549,6 +549,32 @@ $messages['gl'] = array(
 	'spam-blacklist-desc' => 'Ferramenta anti-spam baseada en expresións regulares: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Swiss German (Alemannisch)
+ * @author Als-Holder
+ */
+$messages['gsw'] = array(
+	'spam-blacklist' => '  # Externi URL, wu in däre Lischt sin, blockiere s Spychere vu dr Syte.
+  # Die Lischt giltet nume fir des Wiki; lueg au di wältwyt Blacklist.
+  # Fir d Dokumentation lueg http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- Die Zyylete derf nit gänderet wäre! --> <pre>
+#
+# Syntax:
+#  * Alles ab em "#"-Zeiche bis zum Änd vu dr Zyylete isch e Kommentar
+#  * Jede Zyylete, wu nit läär isch, isch e reguläre Usdruck, wu gege d Host-Näme in dr URL prieft wird.
+
+  #</pre> <!-- Die Zyylete derf nit gänderet wäre! -->',
+	'spam-whitelist' => '  #</pre> <!-- Die Zyylete derf nit gänderet wäre! -->
+# Externi URL, wu in däre Lischt sin, blockiere s Spychere vu dr Syte nit, au wänn si in dr wältwyte oder lokale Schwarze Lischt din sin.
+#
+# Syntax:
+#  * Alles ab em "#"-Zeiche bis zum Änd vu dr Zyylete isch e Kommentar
+#  * Jede Zyylete, wu nit läär isch, isch e reguläre Usdruck, wu gege d Host-Näme in dr URL prieft wird.
+
+  #</pre> <!-- Die Zyylete derf nit gänderet wäre! -->',
+	'spam-invalid-lines' => 'Die {{PLURAL:$1|Zyylete|Zyylete}} in dr Spam-Blacklist {{PLURAL:$1|isch e nit giltige reguläre Usdruck|sin nit giltigi reguläri Usdrick}}. Si {{PLURAL:$1|muess|mien}} vor em Spychere vu dr Syte korrigiert wäre:',
+	'spam-blacklist-desc' => 'Regex-basiert Anti-Spam-Wärchzyyg: [[MediaWiki:Spam-blacklist]] un [[MediaWiki:Spam-whitelist]]',
+);
+
 /** Hebrew (עברית)
  * @author Rotem Liss
  */
@@ -1365,6 +1391,7 @@ $messages['stq'] = array(
 	'spam-invalid-lines' => '{{PLURAL:$1
 	| Ju foulgjende Siede in ju Spam-Blacklist is n uungultigen regulären Uutdruk. Ju mout foar dät Spiekerjen fon ju Siede korrigierd wäide
 	| Do foulgjende Sieden in ju Spam-Blacklist sunt uungultige reguläre Uutdrukke. Do mouten foar dät Spiekerjen fon ju Siede korrigierd wäide}}:',
+	'spam-blacklist-desc' => 'Regex-basierde Anti-Spam-Reewe: [[MediaWiki:Spam-blacklist]] un [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Swedish (Svenska)
