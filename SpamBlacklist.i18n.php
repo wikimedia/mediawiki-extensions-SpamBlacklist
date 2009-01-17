@@ -338,7 +338,7 @@ $messages['de'] = array(
  #<!-- Diese Zeile darf nicht verändert werden! --> <pre>
 #
 # Syntax:
-#   * Alles ab dem "#"-Zeichen bis zum Ende der Zeile ist ein Kommentar
+#   * Alles ab dem „#“-Zeichen bis zum Ende der Zeile ist ein Kommentar
 #   * Jede nicht-leere Zeile ist ein regulärer Ausdruck, der gegen die Host-Namen in den URLs geprüft wird.
 
  #</pre> <!-- Diese Zeile darf nicht verändert werden! -->',
@@ -347,7 +347,7 @@ $messages['de'] = array(
 # in der globalen oder lokalen schwarzen Liste enthalten sind.
 #
 # Syntax:
-#   * Alles ab dem "#"-Zeichen bis zum Ende der Zeile ist ein Kommentar
+#   * Alles ab dem „#“-Zeichen bis zum Ende der Zeile ist ein Kommentar
 #   * Jede nicht-leere Zeile ist ein regulärer Ausdruck, der gegen die Host-Namen in den URLs geprüft wird.
 
  #</pre> <!-- Diese Zeile darf nicht verändert werden! -->',
