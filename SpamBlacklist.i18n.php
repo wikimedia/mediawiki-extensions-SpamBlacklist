@@ -1508,6 +1508,33 @@ $messages['tl'] = array(
 	'spam-blacklist-desc' => "Kasangkapang panlaban sa \"manlulusob\" (''spam'') na nakabatay sa karaniwang pagsasaad (''regex''): [[MediaWiki:Spam-blacklist]] at [[MediaWiki:Spam-whitelist]]",
 );
 
+/** Turkish (Türkçe)
+ * @author Joseph
+ */
+$messages['tr'] = array(
+	'spam-blacklist' => '  # Bu listeyle eşleşen dış bağlantılar, bir sayfaya eklendiğinde engellenecektir. 
+  # Bu liste sadece bu vikiyi etkiler; ayrıca küresel karalisteye de bakın.
+  # Dokümantasyon için http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- bu satırı olduğu gibi bırakın --> <pre>
+#
+# Sözdizimi aşağıdaki gibidir:
+#  * "#" karakterinden satır sonuna kadar her şey bir yorumdur
+#  * Her boş olmayan satır, sadece URLlerin içindeki sunucularla eşleşen regex parçasıdır
+
+  #</pre> <!-- bu satırı olduğu gibi bırakın -->',
+	'spam-whitelist' => '  #<!-- bu satırı olduğu gibi bırakın --> <pre>
+# Bu listeyle eşlenen dış bağlantılar *engellenmeyecektir*,
+# karaliste girdileriyle engellenmiş olsalar bile.
+#
+# Sözdizimi aşağıdaki gibidir:
+#  * "#" karakterinden satır sonuna kadar her şey bir yorumdur
+#  * Her boş olmayan satır, sadece URLlerin içindeki sunucularla eşleşen regex parçasıdır
+
+  #</pre> <!--bu satırı olduğu gibi bırakın -->',
+	'spam-invalid-lines' => 'Şu spam karaliste {{PLURAL:$1|satırı|satırları}} geçersiz düzenli {{PLURAL:$1|tanımdır|tanımlardır}} ve sayfayı kaydetmeden düzeltilmesi gerekmektedir:',
+	'spam-blacklist-desc' => 'Regex-tabanlı anti-spam aracı: [[MediaWiki:Spam-blacklist]] ve [[MediaWiki:Spam-whitelist]]',
+);
+
 /** Ukrainian (Українська)
  * @author AS
  * @author Ahonc
