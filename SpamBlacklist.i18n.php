@@ -934,7 +934,7 @@ $messages['kk-latn'] = array(
 $messages['ko'] = array(
 	'spam-blacklist' => '  # 이 목록과 일치하는 외부 링크는 문서에 추가하는 것이 차단됩니다.
  # 이 목록에는 이 위키에서만 적용됩니다; 글로벌 블랙리스트도 참고하십시오.
- # 자세한 내용은 http://www.mediawiki.org/wiki/Extension:SpamBlacklist 을 참고하십시오.
+ # 자세한 내용은 http://www.mediawiki.org/wiki/Extension:SpamBlacklist 를 참고하십시오.
  # <!-- 이 줄은 그대로 두십시오.--> <pre>
 #
 # 문법은 다음과 같습니다.
