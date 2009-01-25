@@ -365,7 +365,7 @@ class SpamBlacklist {
 				"</tt>\n";
 			$hookError =
 				"<div class='errorbox'>" .
-				wfMsgExt( 'spam-invalid-lines', array( 'parsemag' ), count( $badLines ) ) .
+				wfMsgExt( 'spam-invalid-lines', array( 'parsemag' ), count( $badLines ) ) . "<br />" .
 				$badList .
 				"</div>\n" .
 				"<br clear='all' />\n";
