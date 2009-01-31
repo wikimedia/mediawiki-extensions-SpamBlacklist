@@ -1192,7 +1192,7 @@ $messages['oc'] = array(
  * @author Sp5uhe
  */
 $messages['pl'] = array(
-	'spam-blacklist' => ' # Linki zewnętrzne pasujące do tej listy będą blokowane przed dodawaniem do stron.
+	'spam-blacklist' => ' # Dodawanie do stron linków zewnętrznych pasujących do tej listy będzie blokowane.
  # Ta lista dotyczy tylko tej wiki; istnieje też globalna czarna lista.
  # Dokumentacja tej funkcji znajduje się na stronie http://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- zostaw tę linię dokładnie tak, jak jest --> <pre>
