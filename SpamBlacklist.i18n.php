@@ -1253,6 +1253,34 @@ $messages['pt'] = array(
 	'spam-blacklist-desc' => 'Ferramenta anti-"spam" baseada em Regex: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Brazilian Portuguese (Português do Brasil)
+ * @author Eduardo.mps
+ */
+$messages['pt-br'] = array(
+	'spam-blacklist' => '# URLs externas que coincidam com esta lista serão bloqueadas quando
+  # quando alguém tentar adicioná-las em alguma página.
+  # Esta lista refere-se apenas a este wiki. Consulte também a lista-negra global.
+  # Veja a documentação em http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- mantenha esta linha exatamente assim --> <pre>
+#
+# A sintaxe é a seguinte:
+#  * Tudo o que estiver após um "#" até o final de uma linha será tido como um comentário
+#  * Todas as linhas que não estiverem em branco são um fragmento de expressão regular (regex) que abrangem apenas a URL especificada
+
+  #</pre> <!-- mantenha esta linha exatamente assim -->',
+	'spam-whitelist' => ' #<!-- mantenha esta linha exatamente assim --> <pre>
+# URLs externas que coincidam com esta lista *não* serão bloqueadas mesmo
+# se tiverem sido bloqueadas por entradas presentes nas listas negras.
+#
+# A sintaxe é a seguinte:
+#  * Tudo o que estiver após um "#" até o final de uma linha será tido como um comentário
+#  * Todas as linhas que não estiverem em branco são um fragmento de expressão regular (regex) que abrangem apenas a URL especificada
+
+  #</pre> <!-- mantenha esta linha exatamente assim -->',
+	'spam-invalid-lines' => '{{PLURAL:$1|A entrada|As entradas}} a seguir {{PLURAL:$1|é uma expressão regular|são expressões regulares}}  (regex) {{PLURAL:$1|inválida e precisa|inválidas e precisam}} ser {{PLURAL:$1|corrigida|corrigidas}} antes de salvar a página:',
+	'spam-blacklist-desc' => 'Ferramenta anti-"spam" baseada em Regex: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
+);
+
 /** Russian (Русский)
  * @author Ahonc
  * @author HalanTul
