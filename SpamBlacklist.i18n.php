@@ -255,6 +255,7 @@ $messages['bs'] = array(
 /** Catalan (Català)
  * @author Aleator
  * @author Jordi Roqué
+ * @author SMP
  */
 $messages['ca'] = array(
 	'spam-blacklist' => '  # Les URLs externes coincidents amb aquesta llista seran bloquejades en ser afegides a una pàgina.
@@ -268,6 +269,7 @@ $messages['ca'] = array(
 
  #</pre> <!-- deixeu aquesta línia exactament com està -->',
 	'spam-invalid-lines' => "{{PLURAL:$1|La línia següent no es considera una expressió correcta|Les línies següents no es consideren expressions correctes}} {{PLURAL:$1|perquè recull|perquè recullen}} SPAM que està vetat. Heu d'esmenar-ho abans de salvar la pàgina:",
+	'spam-blacklist-desc' => 'Eina anti-spam basada en regexp: [[MediaWiki:Spam-blacklist]] i [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Czech (Česky)
