@@ -384,6 +384,35 @@ $messages['dsb'] = array(
 	'spam-blacklist-desc' => 'Antispamowy rěd na zakłaźe regularnych wurazow: [[MediaWiki:Spam-blacklist]] a [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Greek (Ελληνικά)
+ * @author Dead3y3
+ */
+$messages['el'] = array(
+	'spam-blacklist' => '  # Εξωτερικά URLs που ταιριάζουν σε αυτή τη λίστα θα φραγούν όταν προστίθενται σε μία σελίδα.
+  # Αυτή η λίστα επηρεάζει μόνο αυτό το wiki· αναφερθείτε επίσης στην καθολική μαύρη λίστα.
+  # Για τεκμηρίωση δείτε τον σύνδεσμο http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- leave this line exactly as it is --> <pre>
+#
+# Η σύνταξη είναι ως ακολούθως:
+#  * Οτιδήποτε από τον χαρακτήρα «#» μέχρι το τέλος της γραμμής είναι ένα σχόλιο
+#  * Οποιαδήποτε μη κενή γραμμή είναι ένα κομμάτι κανονικής έκφρασης το οποίο θα ταιριάξει μόνο hosts
+#    μέσα σε URLs
+
+  #</pre> <!-- leave this line exactly as it is -->',
+	'spam-whitelist' => '  #<!-- leave this line exactly as it is --> <pre>
+# Εξωτερικά URLs που ταιριάζουν σε αυτή τη λίστα _δεν_ θα φραγούν ακόμα και αν είχαν
+# φραγεί από εγγραφές της μαύρης λίστας.
+#
+# Η σύνταξη είναι ως ακολούθως:
+#  * Οτιδήποτε από τον χαρακτήρα «#» μέχρι το τέλος της γραμμής είναι ένα σχόλιο
+#  * Οποιαδήποτε μη κενή γραμμή είναι ένα κομμάτι κανονικής έκφρασης το οποίο θα ταιριάξει μόνο hosts
+#    μέσα σε URLs
+
+  #</pre> <!-- leave this line exactly as it is -->',
+	'spam-invalid-lines' => '{{PLURAL:$1|Η ακόλουθη γραμμή|Οι ακόλουθες γραμμές}} της μαύρης λίστας spam είναι {{PLURAL:$1|άκυρη κανονική έκφραση|άκυρες κανονικές εκφράσεις}} και {{PLURAL:$1|χρειάζεται|χρειάζονται}} διόρθωση πριν την αποθήκευση της σελίδας:',
+	'spam-blacklist-desc' => 'Εργαλείο anti-spam βασισμένο σε κανονικές εκφράσεις: [[MediaWiki:Spam-blacklist]] και [[MediaWiki:Spam-whitelist]]',
+);
+
 /** Esperanto (Esperanto)
  * @author Yekrats
  */
@@ -528,25 +557,25 @@ $messages['frp'] = array(
  * @author Xosé
  */
 $messages['gl'] = array(
-	'spam-blacklist' => ' # As ligazóns externas que coincidan con esta listaxe serán bloqueadas cando se engadan a unha páxina.
- # Esta listaxe afecta unicamente a este wiki; consulte tamén a lista negra global.
- # Para documentación vexa http://www.mediawiki.org/wiki/Extension:SpamBlacklist
- #<!-- deixe esta liña exactamente como está --> <pre>
+	'spam-blacklist' => ' # As ligazóns externas que coincidan na súa totalidade ou en parte con algún rexistro desta lista serán bloqueadas cando se intenten engadir a unha páxina.
+ # Esta lista afecta unicamente a este wiki; tamén existe unha lista global.
+ # Para obter máis documentación vaia a http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- Deixe esta liña tal e como está --> <pre>
 #
-# A sintaxe é a que segue:
-#   * Todo, desde o carácter "#" até o final da liña é un comentario
-#   * Toda liña que non estea en branco é un fragmento de expresión regular que só coincide con hosts dentro de URLs
+# A sintaxe é a seguinte:
+#   * Todo o que vaia despois dun carácter "#" ata o final da liña é un comentario
+#   * Toda liña que non estea en branco é un fragmento de expresión regular que só coincide con dominios dentro de enderezos URL
 
- #</pre> <!-- deixe esta liña exactamente como está -->',
-	'spam-whitelist' => ' #<!-- deixe esta liña exactamente como está --> <pre>
- # As ligazóns externas que coincidan con esta listaxe *non* serán bloqueadas mesmo se
+ #</pre> <!-- Deixe esta liña tal e como está -->',
+	'spam-whitelist' => ' #<!-- Deixe esta liña tal e como está --> <pre>
+ # As ligazóns externas que coincidan con esta lista *non* serán bloqueadas mesmo se
  # fosen bloqueadas mediante entradas na lista negra.
 #
 # A sintaxe é a que segue:
-#   * Todo, desde o carácter "#" até o final da liña é un comentario
-#   * Toda liña que non estea en branco é un fragmento de expresión regular que só coincide con hosts dentro de URLs
+#   * Todo o que vaia despois dun carácter "#" ata o final da liña é un comentario
+#   * Toda liña que non estea en branco é un fragmento de expresión regular que só coincide con dominios dentro de enderezos URL
 
- #</pre> <!-- deixe esta liña exactamente como está -->',
+ #</pre> <!-- Deixe esta liña tal e como está -->',
 	'spam-invalid-lines' => '{{PLURAL:$1|A seguinte liña da listaxe negra de spam é|As seguintes liñas da listaxe negra de spam son}} {{PLURAL:$1|unha expresión regular inválida|expresións regulares inválidas}} e {{PLURAL:$1|haina|hainas}} que corrixir antes de gardar a páxina:',
 	'spam-blacklist-desc' => 'Ferramenta anti-spam baseada en expresións regulares: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
 );
