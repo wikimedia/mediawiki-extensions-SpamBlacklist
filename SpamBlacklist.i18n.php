@@ -503,27 +503,30 @@ $messages['fi'] = array(
 
 /** French (Français)
  * @author Urhixidur
+ * @author Verdy p
  */
 $messages['fr'] = array(
 	'spam-blacklist' => ' # Les liens externes faisant partie de cette liste seront bloqués lors de leur insertion dans une page.
- # Cette liste ne concerne que Wikinews ; référez vous aussi à la liste noire générale de Méta.
+ # Cette liste n’affecte que ce wiki ; référez-vous aussi à la liste noire globale.
  # La documentation se trouve à l’adresse suivante : http://www.mediawiki.org/wiki/Extension:SpamBlacklist
- # <!--Laissez cette ligne telle quelle --> <pre>
+ #<!-- Laissez cette ligne telle quelle --><pre>
 #
-# La syntaxe est la suivante
-#   * Tout texte qui suit le « # » est considéré comme un commentaire.
-#   * Toute ligne non vide est un fragment regex qui ne concerne que les liens hypertextes.
- #</pre> <!--Laissez cette ligne telle quelle -->',
-	'spam-whitelist' => ' #<!-- Laissez cette ligne telle quelle--> <pre>
-# Les liens externes faisant partie de cette liste ne seront pas bloqués même
-# si elles ont été bloquées en vertu d’une liste noire.
+# La syntaxe est la suivante :
+#  * tout texte qui suit un « # » est considéré comme un commentaire ;
+#  * toute ligne non vide est un fragment d’expression régulière qui n’analysera que les hôtes dans les liens hypertextes.
+
+ #</pre><!-- Laissez cette ligne telle quelle -->',
+	'spam-whitelist' => ' #<!-- Laissez cette ligne telle quelle--><pre>
+# Les liens hypertextes externes correspondant à cette liste ne seront *pas* bloqués
+# même s’ils auraient été bloquées par les entrées de la liste noire.
 #
-# La syntaxe est la suivante
-#   * Tout texte qui suit le « # » est considéré comme un commentaire.
-#   * Toute ligne non vide est un fragment regex qui ne concerne que les liens hypertextes.
+# La syntaxe est la suivante :
+#  * tout texte qui suit un « # » est considéré comme un commentaire ;
+#  * toute ligne non vide est un fragment d’expression régulière qui n’analysera que les hôtes dans les liens hypertextes.
+
  #</pre> <!--Laissez cette ligne telle quelle -->',
-	'spam-invalid-lines' => '{{PLURAL:$1|La ligne suivante |Les lignes suivantes}} de la liste des pourriels {{PLURAL:$1|est rédigée|sont rédigées}} de manière incorrecte et {{PLURAL:$1|nécessite|nécessitent}} les corrections nécessaires avant toute sauvegarde de la page :',
-	'spam-blacklist-desc' => 'Outil anti-pourriel basé sur des expressions régulières',
+	'spam-invalid-lines' => '{{PLURAL:$1|La ligne suivante|Les lignes suivantes}} de la liste noire des pourriels {{PLURAL:$1|est une expression régulière invalide|sont des expressions régulières invalides}} et doi{{PLURAL:$1||ven}}t être corrigé{{PLURAL:$1||es}} avant d’enregistrer la page :',
+	'spam-blacklist-desc' => "Outil anti-pourriel basé sur des expressions régulières : ''[[MediaWiki:Spam-blacklist]]'' et ''[[MediaWiki:Spam-whitelist]]''",
 );
 
 /** Franco-Provençal (Arpetan)
