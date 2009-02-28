@@ -441,9 +441,29 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Drini
  * @author Sanbec
  */
 $messages['es'] = array(
+	'spam-blacklist' => '  # Enlaces externos que coincidan con esta lista serán bloqueados al añadirse a una página
+  # Esta lista afecta sólo a esta wiki; 
+  # Para documentación mire http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- Deje esta línea exactamente como está --> <pre>
+#
+# La sintaxis es:
+#  * Todo lo que aparezca desde un caracter "#" hasta el fin de la línea es un comentario
+#  * Toda línea que no esté en blanco es una expresión regular que sólo se cotejará con URLs
+
+  #</pre> <!-- Deje esta línea exactamente como está -->',
+	'spam-whitelist' => '  #<!-- Deje esta línea exactamente como está --> <pre>
+# URLs externas que coincidan con esta lista *no* serán bloqueadas incluso si coincidiesen
+# con una entrada en la lista negra.
+#
+## La sintaxis es:
+#  * Todo lo que aparezca desde un caracter "#" hasta el fin de la línea es un comentario
+#  * Toda línea que no esté en blanco es una expresión regular que sólo se cotejará con URLs
+
+  #</pre> <!-- Deje esta línea exactamente como está -->',
 	'spam-invalid-lines' => '{{PLURAL:$1|La siguiente línea|Las siguientes líneas}} de la lista negra de spam {{PLURAL:$1|es una expresión regular inválida|son expresiones regulares inválidas}} y es necesario {{PLURAL:$1|corregirla|corregirlas}} antes de guardar la página:',
 	'spam-blacklist-desc' => 'Herramienta anti-spam basada en expresiones regulares [[MediaWiki:Spam-blacklist]] y [[MediaWiki:Spam-whitelist]]',
 );
