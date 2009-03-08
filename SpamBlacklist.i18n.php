@@ -1134,6 +1134,25 @@ $messages['ms'] = array(
  * @author Slomox
  */
 $messages['nds'] = array(
+	'spam-blacklist' => '  # URLs na buten de Websteed in disse List stoppt dat Spiekern vun de Sied.
+  # Disse List gellt blot för dit Wiki; kiek ok na de globale Swartlist.
+  # För mehr Infos kiek op http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- Disse Reeg dröff nich ännert warrn! --> <pre>
+#
+# Syntax:
+#  * Allens vun dat „#“-Teken af an bet to dat Enn vun de Reeg is en Kommentar
+#  * Elkeen Reeg, de nich leddig is, is en regulären Utdruck, bi den nakeken warrt, wat he op de Host-Naams in de URLs passt
+
+  #</pre> <!-- Disse Reeg dröff nich ännert warrn! -->',
+	'spam-whitelist' => '  #<!-- Disse Reeg dröff nich ännert warrn! --> <pre>
+# URLs na buten de Websteed in disse List stoppt dat Spiekern vun de Sied nich, ok wenn se
+# in de globale oder lokale swarte List in sünd.
+#
+# Syntax:
+#  * Allens vun dat „#“-Teken af an bet to dat Enn vun de Reeg is en Kommentar
+#  * Elkeen Reeg, de nich leddig is, is en regulären Utdruck, bi den nakeken warrt, wat he op de Host-Naams in de URLs passt
+
+  #</pre> <!-- Disse Reeg dröff nich ännert warrn! -->',
 	'spam-invalid-lines' => 'Disse {{PLURAL:$1|Reeg|Regen}} in de Spam-Swartlist {{PLURAL:$1|is en ungülligen regulären Utdruck|sünd ungüllige reguläre Utdrück}}. De {{PLURAL:$1|mutt|mööt}} utbetert warrn, ehrdat de Sied spiekert warrn kann:',
 	'spam-blacklist-desc' => 'Regex-baseert Anti-Spam-Warktüüch: [[MediaWiki:Spam-blacklist]] un [[MediaWiki:Spam-whitelist]]',
 );
