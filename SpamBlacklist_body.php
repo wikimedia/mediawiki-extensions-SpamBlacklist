@@ -161,7 +161,7 @@ class SpamBlacklist {
 
 		if ( !is_string( $httpText ) || ( !$warning && !mt_rand( 0, $this->warningChance ) ) ) {
 			wfDebugLog( 'SpamBlacklist', "Loading spam blacklist from $fileName\n" );
-			$httpText = $this->getHTTP( $fileName );
+			$httpText = Http::get( $fileName );
 			if( $httpText === false ) {
 				wfDebugLog( 'SpamBlacklist', "Error loading blacklist from $fileName\n" );
 			}
@@ -322,22 +322,6 @@ class SpamBlacklist {
 		}
 		$dbr->selectDB( $wgDBname );
 		return strval( $text );
-	}
-
-	function getHTTP( $url ) {
-		// Use wfGetHTTP from MW 1.5 if it is available
-		global $IP;
-		include_once( "$IP/includes/HttpFunctions.php" );
-		wfSuppressWarnings();
-		if ( function_exists( 'wfGetHTTP' ) ) {
-			$text = wfGetHTTP( $url );
-		} else {
-			$url_fopen = ini_set( 'allow_url_fopen', 1 );
-			$text = file_get_contents( $url );
-			ini_set( 'allow_url_fopen', $url_fopen );
-		}
-		wfRestoreWarnings();
-		return $text;
 	}
 
 	/**
