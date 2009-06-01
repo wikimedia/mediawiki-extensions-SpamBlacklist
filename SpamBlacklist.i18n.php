@@ -555,27 +555,27 @@ $messages['fr'] = array(
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
-	'spam-blacklist' => ' # Los lims de defôr que sont dens ceta lista seront blocâs pendent lor entrebetâ dens una pâge.
+	'spam-blacklist' => ' # Los lims hipèrtèxtos de defôr que sont dens ceta lista seront blocâs pendent lor entrebetâ dens una pâge.
  # Ceta lista afècte ren que ceti vouiqui ; refèrâd-vos asse-ben a la lista nêre globala.
  # La documentacion sè trove a ceta adrèce : http://www.mediawiki.org/wiki/Extension:SpamBlacklist
- #<!-- lèssiéd ceta legne d’ense --> <pre>
+ #<!-- lèssiéd ceta legne justo d’ense --> <pre>
 #
 # La sintaxa est ceta :
-#  * Tot tèxte que siut un « # » est considèrâ coment un comentèro.
-#  * Tota legne pas voueda est un bocon d’èxprèssion règuliére (*RegEx*) qu’analiserat ren que los hôtos dedens los lims hipèrtèxtes.
+#  * Tot tèxto que siut un « # » est considèrâ coment un comentèro.
+#  * Tota legne pas voueda est un bocon d’èxprèssion règuliére (*RegEx*) qu’analiserat ren que los hôtos dedens los lims hipèrtèxtos.
 
-  #</pre> <!-- lèssiéd ceta legne d’ense -->',
-	'spam-whitelist' => ' #<!-- lèssiéd ceta legne d’ense --> <pre>
-# Los lims de defôr que sont dens ceta lista seront *pas* blocâs mémo
+  #</pre> <!-- lèssiéd ceta legne justo d’ense -->',
+	'spam-whitelist' => ' #<!-- lèssiéd ceta legne justo d’ense --> <pre>
+# Los lims hipèrtèxtos de defôr que sont dens ceta lista seront *pas* blocâs mémo
 # s’ils ont étâ blocâs per les entrâs de la lista nêre.
 #
 # La sintaxa est ceta :
-#  * Tot tèxte que siut un « # » est considèrâ coment un comentèro.
-#  * Tota legne pas voueda est un bocon d’èxprèssion règuliére (*RegEx*) qu’analiserat ren que los hôtos dedens los lims hipèrtèxtes.
+#  * Tot tèxto que siut un « # » est considèrâ coment un comentèro.
+#  * Tota legne pas voueda est un bocon d’èxprèssion règuliére (*RegEx*) qu’analiserat ren que los hôtos dedens los lims hipèrtèxtos.
 
-  #</pre> <!-- lèssiéd ceta legne d’ense -->',
+  #</pre> <!-- lèssiéd ceta legne justo d’ense -->',
 	'spam-invalid-lines' => "{{PLURAL:$1|Ceta legne|Cetes legnes}} de la lista nêre des spames {{PLURAL:$1|est una èxprèssion règuliére (''RegEx'') envalida|sont des èxprèssions règuliéres (''RegEx'') envalides}} et dê{{PLURAL:$1||von}}t étre corregiê{{PLURAL:$1||s}} devant que sôvar la pâge :",
-	'spam-blacklist-desc' => "Outil antispame bâsâ sur des èxprèssions règuliéres (''RegEx'') : ''[[MediaWiki:Spam-blacklist]]'' et ''[[MediaWiki:Spam-whitelist]]''.",
+	'spam-blacklist-desc' => "Outil anti-spame basâ sur des èxprèssions règuliéres (''RegEx'') : ''[[MediaWiki:Spam-blacklist]]'' et ''[[MediaWiki:Spam-whitelist]]''.",
 );
 
 /** Galician (Galego)
