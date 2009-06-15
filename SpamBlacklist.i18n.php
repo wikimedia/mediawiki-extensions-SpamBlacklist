@@ -851,6 +851,7 @@ $messages['it'] = array(
 
 /** Japanese (日本語)
  * @author Aotake
+ * @author Fryed-peach
  * @author JtFuruhata
  * @author Marine-Blue
  */
@@ -875,7 +876,7 @@ $messages['ja'] = array(
 
  #</pre> <!-- この行は変更しないでください -->',
 	'spam-invalid-lines' => 'このスパムブラックリストには、不正な正規表現の含まれている行があります。保存する前に問題部分を修正してください:',
-	'spam-blacklist-desc' => '正規表現を用いたスパム対策ツール: [[MediaWiki:Spam-blacklist|スパムブラックリスト]] および [[MediaWiki:Spam-whitelist|スパムホワイトリスト]]',
+	'spam-blacklist-desc' => '正規表現を用いたスパム対策ツール: [[MediaWiki:Spam-blacklist|スパムブラックリスト]]および[[MediaWiki:Spam-whitelist|スパムホワイトリスト]]',
 );
 
 /** Jutish (Jysk)
