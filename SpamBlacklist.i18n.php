@@ -535,20 +535,20 @@ $messages['fr'] = array(
 #
 # La syntaxe est la suivante :
 #  * tout texte qui suit un « # » est considéré comme un commentaire ;
-#  * toute ligne non vide est un fragment d’expression régulière qui n’analysera que les hôtes dans les liens hypertextes.
+#  * toute ligne non vide est un fragment d’expression rationnelle qui n’analysera que les hôtes dans les liens hypertextes.
 
  #</pre><!-- Laissez cette ligne telle quelle -->',
 	'spam-whitelist' => ' #<!-- Laissez cette ligne telle quelle--><pre>
 # Les liens hypertextes externes correspondant à cette liste ne seront *pas* bloqués
-# même s’ils auraient été bloquées par les entrées de la liste noire.
+# même s’ils auraient été bloqués par les entrées de la liste noire.
 #
 # La syntaxe est la suivante :
 #  * tout texte qui suit un « # » est considéré comme un commentaire ;
-#  * toute ligne non vide est un fragment d’expression régulière qui n’analysera que les hôtes dans les liens hypertextes.
+#  * toute ligne non vide est un fragment d’expression rationnelle qui n’analysera que les hôtes dans les liens hypertextes.
 
  #</pre> <!--Laissez cette ligne telle quelle -->',
-	'spam-invalid-lines' => '{{PLURAL:$1|La ligne suivante|Les lignes suivantes}} de la liste noire des pourriels {{PLURAL:$1|est une expression régulière invalide|sont des expressions régulières invalides}} et doi{{PLURAL:$1||ven}}t être corrigé{{PLURAL:$1||es}} avant d’enregistrer la page :',
-	'spam-blacklist-desc' => "Outil anti-pourriel basé sur des expressions régulières : ''[[MediaWiki:Spam-blacklist]]'' et ''[[MediaWiki:Spam-whitelist]]''",
+	'spam-invalid-lines' => '{{PLURAL:$1|La ligne suivante|Les lignes suivantes}} de la liste noire des pourriels {{PLURAL:$1|est une expression rationnelle invalide|sont des expressions rationnelles invalides}} et doi{{PLURAL:$1||ven}}t être corrigée{{PLURAL:$1||s}} avant d’enregistrer la page :',
+	'spam-blacklist-desc' => "Outil anti-pourriel basé sur des expressions rationnelles : ''[[MediaWiki:Spam-blacklist]]'' et ''[[MediaWiki:Spam-whitelist]]''",
 );
 
 /** Franco-Provençal (Arpetan)
