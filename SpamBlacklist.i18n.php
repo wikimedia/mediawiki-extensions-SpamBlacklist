@@ -1037,7 +1037,7 @@ $messages['ko'] = array(
 # * 모든 줄은 URL의 호스트와 일치하는 정규 표현식의 일부분입니다.
 
  #</pre> <!--이 줄은 그대로 두십시오.-->',
-	'spam-invalid-lines' => '스팸 블랙리스트의 다음 줄에 잘못된 정규 표현식이 사용되어 저장하기 전에 바르게 고쳐져야 합니다:',
+	'spam-invalid-lines' => '스팸 블랙리스트의 다음 {{PLURAL:$1|줄}}에 잘못된 정규 표현식이 사용되어 저장하기 전에 바르게 고쳐져야 합니다:',
 	'spam-blacklist-desc' => '정규 표현식을 이용해 스팸을 막습니다: [[MediaWiki:Spam-blacklist]]와 [[MediaWiki:Spam-whitelist]]를 사용합니다.',
 );
 
