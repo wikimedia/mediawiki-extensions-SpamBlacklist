@@ -1112,6 +1112,33 @@ $messages['li'] = array(
 	'spam-blacklist-desc' => 'Antispamfunctionaliteit via reguliere expressies: [[MediaWiki:Spam-blacklist]] en [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Macedonian (Македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'spam-blacklist' => '# Надворешните URL адреси кои одговараат на наведеното на оваа листа ќе бидат блокирани кога ќе се постават на страница.
+  # Оваа листа важи само за ова вики; погледајте ја и глобалната црна листа.
+  # За документација, видете http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- leave this line exactly as it is --> <pre>
+#
+# Синтаксата е следнава:
+#  * Сè од знакот „#“ до крајот на редот е коментар
+#  * Секој ред кој не е празен е фрагмент од регуларен израз кој се совпаѓа само со домаќини во URL адреси
+
+  #</pre> <!-- leave this line exactly as it is -->',
+	'spam-whitelist' => '  #<!-- leave this line exactly as it is --> <pre>
+# Надворешните URL адреси одговараат на листата *нема* да бидат блокирани дури и во случај да
+# се блокирани од ставки на црната листа.
+#
+# Синтаксата е следнава:
+#  * Сè од знакот „#“ до крајот на редот е коментар
+#  * Секој ред кој не е празен е фрагмент од регуларен израз кој се совпаѓа само со домаќини во URL адреси
+
+  #</pre> <!-- leave this line exactly as it is -->',
+	'spam-invalid-lines' => 'Следнава {{PLURAL:$1|ред во црната листа на спам е|редови во црната листа на спам се}} {{PLURAL:$1|погршен регуларен израз|погрешни регуларни изрази}} и {{PLURAL:$1|треба да се поправи|треба да се поправат}} пред да се зачува страницата:',
+	'spam-blacklist-desc' => 'Анти-спам алатка на база на регуларни изрази: [[MediaWiki:Spam-blacklist]] и [[MediaWiki:Spam-whitelist]]',
+);
+
 /** Marathi (मराठी)
  * @author Kaustubh
  */
