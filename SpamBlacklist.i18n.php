@@ -1815,7 +1815,9 @@ $messages['yue'] = array(
 	'spam-blacklist-desc' => '以正規表達式為本嘅防灌水工具: [[MediaWiki:Spam-blacklist]] 同 [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Simplified Chinese (‪中文(简体)‬) */
+/** Simplified Chinese (‪中文(简体)‬)
+ * @author PhiLiP
+ */
 $messages['zh-hans'] = array(
 	'spam-blacklist' => ' # 跟这个表合符的外部 URL 当加入时会被封锁。
  # 这个表只是会影响到这个wiki；请同时参阅全域黑名单。
@@ -1827,17 +1829,17 @@ $messages['zh-hans'] = array(
 #   * 每个非空白行是一个标准表示式碎片，只是跟里面的URL端核对
 
  #</pre> <!-- 请完全地留下这行 -->',
-	'spam-whitelist' => ' #<!-- 请完全地留下这行 --> <pre>
-# 跟这个表合符的外部 URL ，即使在黑名单项目中封锁，
-# 都*不会*被封锁。
+	'spam-whitelist' => ' #<!-- 请完整地保留此行 --> <pre>
+# 与本列表匹配的外部链接，即使已被黑名单的规则禁止
+# 也*不会*被封锁。
 #
-# 语法像下面这样:
-#   * 每一个由 "#" 字元开头的行，到结尾是一个注解
-#   * 每个非空白行是一个标准表示式碎片，只是跟里面的URL端核对
+# 语法如下:
+#  * 由“#”字符开头的每行均为注释
+#  * 非空白的每行则是正则表达式片段，将只与内含该URL的链接相匹配
 
- #</pre> <!-- 请完全地留下这行 -->',
-	'spam-invalid-lines' => '以下在灌水黑名单的{{PLURAL:$1|一行|多行}}有无效的表示式，请在保存这页前先将{{PLURAL:$1|它|它们}}修正:',
-	'spam-blacklist-desc' => '以正则表达式为本的防灌水工具: [[MediaWiki:Spam-blacklist]] 与 [[MediaWiki:Spam-whitelist]]',
+ #</pre> <!-- 请完整地保留此行 -->',
+	'spam-invalid-lines' => '下列垃圾链接黑名单有{{PLURAL:$1|一行|多行}}含有无效的正则表示式，请在保存该页前修正之：',
+	'spam-blacklist-desc' => '基于正则表达式的反垃圾链接工具：[[MediaWiki:Spam-blacklist]]和[[MediaWiki:Spam-whitelist]]',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬) */
