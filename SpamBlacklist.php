@@ -80,7 +80,7 @@ function wfSpamBlacklistFilter( &$title, $text, $section, &$hookErr, $editSummar
 /**
  * Hook function for EditFilterMerged, replaces wfSpamBlacklistFilter
  */
-function wfSpamBlacklistFilterMerged( &$editPage, $text, &$hookErr, $editSummary ) {
+function wfSpamBlacklistFilterMerged( $editPage, $text, &$hookErr, $editSummary ) {
 	global $wgTitle;
 	if( is_null( $wgTitle ) ) {
 		# API mode
@@ -99,7 +99,7 @@ function wfSpamBlacklistFilterMerged( &$editPage, $text, &$hookErr, $editSummary
 /**
  * Hook function for APIEditBeforeSave
  */
-function wfSpamBlacklistFilterAPIEditBeforeSave( &$editPage, $text, &$resultArr ) {
+function wfSpamBlacklistFilterAPIEditBeforeSave( $editPage, $text, &$resultArr ) {
 	$spamObj = wfSpamBlacklistObject();
 	$title = $editPage->mArticle->getTitle();
 	$ret = $spamObj->filter( $title, $text, '', '', $editPage );
