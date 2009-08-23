@@ -1528,14 +1528,14 @@ $messages['sk'] = array(
 	'spam-blacklist-desc' => 'Antispamový nástroj na základe regulárnych výrazov: [[MediaWiki:Spam-blacklist|Čierna listina]] a [[MediaWiki:Spam-whitelist|Biela listina]]',
 );
 
-/** Serbian Cyrillic ekavian (ћирилица)
+/** Serbian Cyrillic ekavian (Српски (ћирилица))
  * @author Millosh
  */
 $messages['sr-ec'] = array(
 	'spam-blacklist-desc' => 'Антиспам оруђе засновано на регуларним изразима: [[MediaWiki:Spam-blacklist]] и [[MediaWiki:Spam-whitelist]]',
 );
 
-/** latinica (latinica)
+/** Serbian Latin ekavian (Srpski (latinica))
  * @author Michaello
  */
 $messages['sr-el'] = array(
