@@ -227,6 +227,33 @@ $messages['bn'] = array(
 	'spam-blacklist-desc' => 'রেজেক্স-ভিত্তিক স্প্যামরোধী সরঞ্জাম: [[MediaWiki:Spam-blacklist]] এবং [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Breton (Brezhoneg)
+ * @author Fulup
+ */
+$messages['br'] = array(
+	'spam-blacklist' => '  # Stanket e vo an URLoù diavaez a glot gant ar roll-mañ ma vezont ouzhpennet en ur bajenn.
+  # Ne sell ar roll-mañ nemet ouzh ar wiki-mañ ; sellit ivez ouzh al listenn zu hollek.
+  # Aze emañ an titouroù http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- leave this line exactly as it is --> <pre>
+#
+# Setu doare an ereadur :
+#  * Pep tra adalek un arouezenn "#" betek dibenn al linenn zo un evezhiadenn
+#  * Kement linenn anc\'houllo zo un darnad lavarenn reoliek na gloto nemet gant an ostizien el liammoù gourskrid
+
+  #</pre> <!-- lezel al linenn-mañ tre evel m\'emañ -->',
+	'spam-whitelist' => "  #<!-- lezel al linenn-mañ tre evel m'emañ --> <pre>
+# *Ne vo ket* stanket al liammoù gourskrid a glot gant al listenn-mañ
+# ha pa vijent bet stanket gant monedoù ar listenn zu.
+#
+# Setu an eredur :
+#  * Pep tra adalek un arouezenn \"#\" betek dibenn al linenn zo un ev evezhiadenn
+#  * Kement linenn anc'houllo zo un darnad skrid poellek na zielfennno nemet an ostizien el liammoù gourskrid
+
+  #</pre> <!-- lezel al linenn-mañ tre evel m'emañ -->",
+	'spam-invalid-lines' => '{{PLURAL:$1|Ul lavarenn|Lavarennoù}} reoliek direizh eo {{PLURAL:$1|al linenn|al linennoù}} da-heul eus roll du ar stroboù ha ret eo {{PLURAL:$1|he reizhañ|o reizhañ}} a-raok enrollañ ar bajenn :',
+	'spam-blacklist-desc' => 'Ostilh enep-strob diazezet war lavarennoù reoliek (Regex) : [[MediaWiki:Spam-blacklist]] ha [[MediaWiki:Spam-whitelist]]',
+);
+
 /** Bosnian (Bosanski)
  * @author CERminator
  */
