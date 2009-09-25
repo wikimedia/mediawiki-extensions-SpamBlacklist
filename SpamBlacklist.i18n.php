@@ -591,7 +591,7 @@ $messages['fr'] = array(
  */
 $messages['frp'] = array(
 	'spam-blacklist' => ' # Los lims hipèrtèxtos de defôr que sont dens ceta lista seront blocâs pendent lor entrebetâ dens una pâge.
- # Ceta lista afècte ren que ceti vouiqui ; refèrâd-vos asse-ben a la lista nêre globala.
+ # Ceta lista afècte ren que ceti vouiqui ; refèrâd-vos asse-ben a la lista nêre globâla.
  # La documentacion sè trove a ceta adrèce : http://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- lèssiéd ceta legne justo d’ense --> <pre>
 #
