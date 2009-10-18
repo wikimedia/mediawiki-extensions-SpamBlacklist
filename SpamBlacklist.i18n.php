@@ -386,6 +386,33 @@ $messages['de'] = array(
 	'spam-blacklist-desc' => 'Regex-basiertes Anti-Spam-Werkzeug: [[MediaWiki:Spam-blacklist]] und [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Zazaki (Zazaki)
+ * @author Aspar
+ */
+$messages['diq'] = array(
+	'spam-blacklist' => '  #gıreyê teber ê ke na liste de zêpi bi bloke beni.
+  # na liste tena no wiki re tesir beno.
+  # Dokümantasyon: http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- no satır zey xo verdê --> <pre>
+#
+# rêzvateyê ey zey cêr o.:
+#  * "#" karakteri ra heta satıro peyin her çi mışoreyo
+#  * Her satıro dekerde, pêşkeşwan ê ke zerreyê URLlyi de tena parçeyê regexê .
+
+  #</pre> <!-- no satır zey xo verdê -->',
+	'spam-whitelist' => '  #<!-- no satır zey xo verdê --> <pre>
+# gıreyê teber ê ke na liste de zêpi yê *bloke nêbeni*,
+# wazeno pê listeya siya zi bloke bıbo.
+#
+# rêzvate zey cêr o:
+#  * "#" karakteri raheta satıro peyin her çi mışoreyo
+#  * Her satıro dekerde, pêşkeşwan ê ke zerreyê URLlyi de tena parçeyê regexê .
+
+  #</pre> <!--no satır zey xo verdê -->',
+	'spam-invalid-lines' => 'na qerelisteya spami {{PLURAL:$1|satır|satıran}}  {{PLURAL:$1|nemeqbulo|nemeqbuli}};',
+	'spam-blacklist-desc' => 'Regex-tabanlı anti-spam aracı: [[MediaWiki:Spam-blacklist]] ve [[MediaWiki:Spam-whitelist]]',
+);
+
 /** Lower Sorbian (Dolnoserbski)
  * @author Michawiki
  */
