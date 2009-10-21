@@ -1194,6 +1194,22 @@ $messages['mk'] = array(
 	'spam-blacklist-desc' => 'Анти-спам алатка на база на регуларни изрази: [[MediaWiki:Spam-blacklist]] и [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Malayalam (മലയാളം)
+ * @author Praveenp
+ */
+$messages['ml'] = array(
+	'spam-blacklist' => '# ഈ ലിസ്റ്റുമായി ഒത്തുപോകുന്ന പുറത്തേയ്ക്കുള്ള യൂ.ആർ.എല്ലുകൾ താളിൽ ചേർക്കപ്പെട്ടാൽ തടയുന്നതായിരിക്കും.
+  # ഈ ലിസ്റ്റ് ഈ വിക്കിയ്ക്കു മാത്രം ബാധകമായ ഒന്നാണ്; ആഗോള കരിമ്പട്ടികയും പരിശോധിക്കുക.
+  # ഉപയോഗ സഹായിയ്ക്കായി http://www.mediawiki.org/wiki/Extension:SpamBlacklist കാണുക
+  #<!-- ഈ വരിയിൽ മാറ്റം വരുത്തരുത് --> <pre>
+#
+# എഴുതേണ്ട രീതി താഴെ കൊടുക്കുന്നു:
+#  * "#" ലിപിയിൽ തുടങ്ങി വരിയുടെ അവസാനം വരെയുള്ള എന്തും കുറിപ്പ് (comment) ആയി കണക്കാക്കും
+#  * Every non-blank line is a regex fragment which will only match hosts inside URLs
+
+  #</pre> <!-- ഈ വരിയിൽ മാറ്റം വരുത്തരുത് -->',
+);
+
 /** Marathi (मराठी)
  * @author Kaustubh
  */
