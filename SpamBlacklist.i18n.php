@@ -1402,16 +1402,16 @@ $messages['oc'] = array(
  * @author Sp5uhe
  */
 $messages['pl'] = array(
-	'spam-blacklist' => ' # Dodawanie do stron linków zewnętrznych pasujących do tej listy będzie blokowane.
- # Ta lista dotyczy tylko tej wiki; istnieje też globalna czarna lista.
- # Dokumentacja tej funkcji znajduje się na stronie http://www.mediawiki.org/wiki/Extension:SpamBlacklist
- #<!-- zostaw tę linię dokładnie tak, jak jest --> <pre>
+	'spam-blacklist' => '  # Dodawanie w treści stron linków zewnętrznych pasujących do tej listy będzie blokowane.
+  # Lista dotyczy wyłącznie tej wiki; istnieje też globalna czarna lista.
+  # Dokumentacja znajduje się na stronie http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- zostaw tę linię dokładnie tak, jak jest --> <pre>
 #
 # Składnia jest następująca:
 #   * Wszystko od znaku „#” do końca linii jest komentarzem
 #   * Każda niepusta linia jest fragmentem wyrażenia regularnego, które będzie dopasowywane jedynie do hostów wewnątrz linków
 
- #</pre> <!-- zostaw tę linię dokładnie tak, jak jest -->',
+  #</pre> <!-- zostaw tę linię dokładnie tak, jak jest -->',
 	'spam-whitelist' => ' #<!-- zostaw tę linię dokładnie tak, jak jest --> <pre>
 # Linki zewnętrzne pasujące do tej listy *nie będą* blokowane nawet jeśli
 # zostałyby zablokowane przez czarną listę.
