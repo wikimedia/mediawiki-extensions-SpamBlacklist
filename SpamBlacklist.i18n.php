@@ -1448,20 +1448,22 @@ $messages['pms'] = array(
 
 /** Portuguese (Português)
  * @author 555
+ * @author Hamilton Abreu
  * @author Malafaya
  */
 $messages['pt'] = array(
-	'spam-blacklist' => ' # URLs externas que coincidam com esta lista serão bloqueadas quando
- # quando alguém as tentar adicionar em alguma página.
- # Esta lista refere-se apenas a este wiki. Consulte também a lista-negra global.
- # Veja a documentação em http://www.mediawiki.org/wiki/Extension:SpamBlacklist
- #<!-- mantenha esta linha exatamente assim --> <pre>
+	'spam-blacklist' => '  # URLs externas que coincidam com esta lista serão bloqueadas quando forem
+  # adicionadas a uma página.
+  # Esta lista aplica-se apenas a esta wiki. Consulte também a lista-negra global.
+  # Veja a documentação em http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- mantenha esta linha exatamente assim --> <pre>
 #
 # A sintaxe é a seguinte:
-#  * Tudo o que estiver após um "#" até o final de uma linha será tido como um comentário
-#  * Todas as linhas que não estiverem em branco são um fragmento de expressão regular (regex) que abrangem apenas a URL especificada
+#  * Tudo o que estiver após um "#" até o final de uma linha é um comentário
+#  * Todas as linhas que não estiverem em branco são um fragmento de expressão regular
+#    (regex) de busca, que só poderão coincidir com hosts na URL
 
- #</pre> <!-- mantenha esta linha exatamente assim -->',
+  #</pre> <!-- mantenha esta linha exatamente assim -->',
 	'spam-whitelist' => ' #<!-- mantenha esta linha exatamente assim --> <pre>
 # URLs externas que coincidam com esta lista *não* serão bloqueadas mesmo
 # se tiverem sido bloqueadas por entradas presentes nas listas negras.
@@ -1501,6 +1503,14 @@ $messages['pt-br'] = array(
  #</pre> <!-- mantenha esta linha exatamente assim -->',
 	'spam-invalid-lines' => '{{PLURAL:$1|A entrada|As entradas}} a seguir {{PLURAL:$1|é uma expressão regular|são expressões regulares}}  (regex) {{PLURAL:$1|inválida e precisa|inválidas e precisam}} ser {{PLURAL:$1|corrigida|corrigidas}} antes de salvar a página:',
 	'spam-blacklist-desc' => 'Ferramenta anti-"spam" baseada em Regex: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
+);
+
+/** Tarandíne (Tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'spam-invalid-lines' => "{{PLURAL:$1|'A seguende linèe d'a blacklist de spam jè|Le seguende linèe d'a blacklist de spam sonde}} {{PLURAL:$1|espressione|espressiune}} regolare invalide e {{PLURAL:$1|abbesogne|abbesognane}} de avenè corrette apprime de reggistrà 'a pàgene:",
+	'spam-blacklist-desc' => "'U strumende andi-spam basate sus a le regex: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]",
 );
 
 /** Russian (Русский)
