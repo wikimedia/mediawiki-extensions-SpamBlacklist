@@ -1509,6 +1509,27 @@ $messages['pt-br'] = array(
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
+	'spam-blacklist' => " # Le URL esterne ca se iacchiane jndr'à st'elenghe avènene bloccate quanne avènene aggiunde jndr'à 'na pàgene.
+  # St'elenghe tène effette sulamende sus a sta Uicchi; se pò refèrì pure a 'a lista gnore globale.
+  # Pe documendazione vide http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- leave this line exactly as it is --> <pre>
+#
+# 'A sindasse jè a cumme segue:
+#  * Ognecose ca tène 'u carattere \"#\" 'mbonde a fine d'a linèe jè 'nu commende
+#  * Ogne linèe ca non g'è vacande jè 'nu frammende de regex ca vè face le combronde cu le host jndr'à l'URL
+
+  #</pre> <!-- leave this line exactly as it is -->",
+	'spam-whitelist' => "  #<!-- leave this line exactly as it is --> <pre>
+ # Le URL esterne ca se iacchiane jndr'à st'elenghe *non* g'avènene bloccate pure ca lore sonde mise 
+ # jndr'à l'elenghe d'a lista gnore.
+ #
+
+#
+# 'A sindasse jè a cumme segue:
+#  * Ognecose ca tène 'u carattere \"#\" 'mbonde a fine d'a linèe jè 'nu commende
+#  * Ogne linèe ca non g'è vacande jè 'nu frammende de regex ca vè face le combronde cu le host jndr'à l'URL
+
+  #</pre> <!-- leave this line exactly as it is -->",
 	'spam-invalid-lines' => "{{PLURAL:$1|'A seguende linèe d'a blacklist de spam jè|Le seguende linèe d'a blacklist de spam sonde}} {{PLURAL:$1|espressione|espressiune}} regolare invalide e {{PLURAL:$1|abbesogne|abbesognane}} de avenè corrette apprime de reggistrà 'a pàgene:",
 	'spam-blacklist-desc' => "'U strumende andi-spam basate sus a le regex: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]",
 );
