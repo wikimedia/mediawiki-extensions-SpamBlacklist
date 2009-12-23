@@ -624,20 +624,20 @@ $messages['frp'] = array(
 #
 # La sintaxa est ceta :
 #  * Tot tèxto que siut un « # » est considèrâ coment un comentèro.
-#  * Tota legne pas voueda est un bocon d’èxprèssion règuliére (*RegEx*) qu’analiserat ren que los hôtos dedens los lims hipèrtèxtos.
+#  * Tota legne pas voueda est un bocon d’èxprèssion racionèla (*RegEx*) qu’analiserat ren que los hôtos dedens los lims hipèrtèxtos.
 
   #</pre> <!-- lèssiéd ceta legne justo d’ense -->',
 	'spam-whitelist' => ' #<!-- lèssiéd ceta legne justo d’ense --> <pre>
 # Los lims hipèrtèxtos de defôr que sont dens ceta lista seront *pas* blocâs mémo
-# s’ils ont étâ blocâs per les entrâs de la lista nêre.
+# s’ils ariant étâ blocâs per les entrâs de la lista nêre.
 #
 # La sintaxa est ceta :
 #  * Tot tèxto que siut un « # » est considèrâ coment un comentèro.
-#  * Tota legne pas voueda est un bocon d’èxprèssion règuliére (*RegEx*) qu’analiserat ren que los hôtos dedens los lims hipèrtèxtos.
+#  * Tota legne pas voueda est un bocon d’èxprèssion racionèla (*RegEx*) qu’analiserat ren que los hôtos dedens los lims hipèrtèxtos.
 
   #</pre> <!-- lèssiéd ceta legne justo d’ense -->',
-	'spam-invalid-lines' => "{{PLURAL:$1|Ceta legne|Cetes legnes}} de la lista nêre des spames {{PLURAL:$1|est una èxprèssion règuliére (''RegEx'') envalida|sont des èxprèssions règuliéres (''RegEx'') envalides}} et dê{{PLURAL:$1||von}}t étre corregiê{{PLURAL:$1||s}} devant que sôvar la pâge :",
-	'spam-blacklist-desc' => "Outil anti-spame basâ sur des èxprèssions règuliéres (''RegEx'') : ''[[MediaWiki:Spam-blacklist]]'' et ''[[MediaWiki:Spam-whitelist]]''.",
+	'spam-invalid-lines' => "{{PLURAL:$1|Ceta legne|Cetes legnes}} de la lista nêre des spames {{PLURAL:$1|est una èxprèssion racionèla (''RegEx'') envalida|sont des èxprèssions racionèles (''RegEx'') envalides}} et dê{{PLURAL:$1||von}}t étre corregiê{{PLURAL:$1||s}} devant que sôvar la pâge :",
+	'spam-blacklist-desc' => "Outil anti-spame basâ sur des èxprèssions racionèles (''RegEx'') : ''[[MediaWiki:Spam-blacklist]]'' et ''[[MediaWiki:Spam-whitelist]]''.",
 );
 
 /** Galician (Galego)
