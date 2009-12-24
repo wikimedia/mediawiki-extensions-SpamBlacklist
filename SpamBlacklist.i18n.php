@@ -636,7 +636,7 @@ $messages['frp'] = array(
 #  * Tota legne pas voueda est un bocon d’èxprèssion racionèla (*RegEx*) qu’analiserat ren que los hôtos dedens los lims hipèrtèxtos.
 
   #</pre> <!-- lèssiéd ceta legne justo d’ense -->',
-	'spam-invalid-lines' => "{{PLURAL:$1|Ceta legne|Cetes legnes}} de la lista nêre des spames {{PLURAL:$1|est una èxprèssion racionèla (''RegEx'') envalida|sont des èxprèssions racionèles (''RegEx'') envalides}} et dê{{PLURAL:$1||von}}t étre corregiê{{PLURAL:$1||s}} devant que sôvar la pâge :",
+	'spam-invalid-lines' => '{{PLURAL:$1|Ceta legne|Cetes legnes}} de la lista nêre des spames {{PLURAL:$1|est una èxprèssion racionèla envalida|sont des èxprèssions racionèles envalides}} et dê{{PLURAL:$1||von}}t étre corregiê{{PLURAL:$1||s}} devant que sôvar la pâge :',
 	'spam-blacklist-desc' => "Outil anti-spame basâ sur des èxprèssions racionèles (''RegEx'') : ''[[MediaWiki:Spam-blacklist]]'' et ''[[MediaWiki:Spam-whitelist]]''.",
 );
 
