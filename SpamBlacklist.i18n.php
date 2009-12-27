@@ -1770,6 +1770,35 @@ $messages['tg-cyrl'] = array(
 	'spam-blacklist-desc' => 'Абзори зидди ҳарзнигорӣ дар асоси Regex: [[MediaWiki:Spam-blacklist]] ва [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Tajik (Latin) (Тоҷикӣ (Latin))
+ * @author Liangent
+ */
+$messages['tg-latn'] = array(
+	'spam-blacklist' => ' # Nişonihoi URL berunai ba in fehrist mutobiqatşuda vaqte, ki ba sahifae ilova meşavand, 
+ # basta xohand şud.
+ # In fehrist faqat rūi hamin viki ta\'sir mekunad; ba fehristi sijohi sarosar niz muroçiat kuned.
+ # Baroi mustanadot, nigared ba http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!--  in satrro hamonguna, ki hast raho kuned --> <pre>
+#
+ # Dasturot ba in şakl hastand:
+ #  * Hama ciz az alomati "#" to pojoni satr ba unvoni tavzeh ba nazar girifta meşavad
+ #  * Har satr az matn ba unvoni jak dastur regex ba nazar girifta meşavad, 
+ #  ki faqat bo nomi mizbon dar nişoniji internetiji URL mutobiqat doda meşavad
+
+ #</pre> <!-- in satrro hamonguna, ki hast raho kuned -->',
+	'spam-whitelist' => ' #<!-- in satrro hamonguna, ki hast raho kuned --> <pre>
+# Nişonihoi URL berunai ba in fehrist mutobiqatbuda, basta naxohand şud, 
+# hatto agar dar fehristi sijoh qaror doşta boşad.
+#
+# Dasturot ba in şakl hastand:
+#  * Hama ciz az alomati "#" to pojoni satr ba unvoni tavzeh ba nazar girifta meşavad
+#  * Har satr az matn ba unvoni jak dastur regex ba nazar girifta meşavad, ki faqat bo nomi mizbon dar 
+# nişoniji internetiji URL mutobiqat doda meşavad
+ #</pre> <!-- in satrro hamonguna, ki hast raho kuned -->',
+	'spam-invalid-lines' => '{{PLURAL:$1|Satri|Satrhoi}} zerin dar fehristi sijohi harznigorī dasturoti ƣajri miçoze regular expressions  {{PLURAL:$1|ast|hastand}} va qabl az zaxira kardani sahifa ba isloh kardan nijoz {{PLURAL:$1|dorad|dorand}}:',
+	'spam-blacklist-desc' => 'Abzori ziddi harznigorī dar asosi Regex: [[MediaWiki:Spam-blacklist]] va [[MediaWiki:Spam-whitelist]]',
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  */
