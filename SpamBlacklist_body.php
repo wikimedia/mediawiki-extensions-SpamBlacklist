@@ -386,10 +386,10 @@ class SpamRegexBatch {
 		# Make regex
 		# It's faster using the S modifier even though it will usually only be run once
 		//$regex = 'https?://+[a-z0-9_\-.]*(' . implode( '|', $lines ) . ')';
-		//return '/' . str_replace( '/', '\/', preg_replace('|\\\*/|', '/', $regex) ) . '/Si';
+		//return '/' . str_replace( '/', '\/', preg_replace('|\\\*/|', '/', $regex) ) . '/Sim';
 		$regexes = array();
 		$regexStart = '/https?:\/\/+[a-z0-9_\-.]*(';
-		$regexEnd = ($batchSize > 0 ) ? ')/Si' : ')/i';
+		$regexEnd = ($batchSize > 0 ) ? ')/Sim' : ')/im';
 		$build = false;
 		foreach( $lines as $line ) {
 			if( substr( $line, -1, 1 ) == "\\" ) {
