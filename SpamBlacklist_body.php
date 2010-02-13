@@ -282,7 +282,7 @@ class SpamBlacklist {
 	 * WARNING: I can add more *of the same link* with no problem here.
 	 */
 	function getCurrentLinks( $title ) {
-		$dbr =& wfGetDB( DB_SLAVE );
+		$dbr = wfGetDB( DB_SLAVE );
 		$id = $title->getArticleId(); // should be zero queries
 		$res = $dbr->select( 'externallinks', array( 'el_to' ),
 			array( 'el_from' => $id ), __METHOD__ );
@@ -307,7 +307,7 @@ class SpamBlacklist {
 		$text = false;
 		if ( $dbr->tableExists( 'page' ) ) {
 			// 1.5 schema
-			$dbw =& wfGetDB( DB_READ );
+			$dbw = wfGetDB( DB_READ );
 			$dbw->selectDB( $db );
 			$revision = Revision::newFromTitle( Title::newFromText( $article ) );
 			if ( $revision ) {
