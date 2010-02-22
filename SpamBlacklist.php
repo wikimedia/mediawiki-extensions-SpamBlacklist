@@ -12,7 +12,6 @@ $wgExtensionCredits['other'][] = array(
 	'name'           => 'SpamBlacklist',
 	'author'         => 'Tim Starling',
 	'url'            => 'http://www.mediawiki.org/wiki/Extension:SpamBlacklist',
-	'description'    => 'Regex-based anti-spam tool',
 	'descriptionmsg' => 'spam-blacklist-desc',
 );
 
