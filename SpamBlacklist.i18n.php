@@ -1103,7 +1103,7 @@ $messages['ko'] = array(
 	'spam-blacklist-desc' => '정규 표현식을 이용해 스팸을 막습니다: [[MediaWiki:Spam-blacklist]]와 [[MediaWiki:Spam-whitelist]]를 사용합니다.',
 );
 
-/** Ripoarisch (Ripoarisch)
+/** Colognian (Ripoarisch)
  * @author Purodha
  */
 $messages['ksh'] = array(
@@ -1931,7 +1931,7 @@ $messages['vi'] = array(
 	'spam-blacklist-desc' => 'Công cụ dùng biểu thức chính quy để chống spam: [[MediaWiki:Spam-blacklist]] và [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Yue (粵語) */
+/** Cantonese (粵語) */
 $messages['yue'] = array(
 	'spam-blacklist' => ' # 同呢個表合符嘅外部 URL 當加入嗰陣會被封鎖。
  # 呢個表只係會影響到呢個wiki；請同時參閱全域黑名單。
