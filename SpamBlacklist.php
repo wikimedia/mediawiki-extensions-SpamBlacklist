@@ -41,6 +41,13 @@ $wgHooks['ArticleSaveComplete'][] = 'wfSpamBlacklistArticleSave';
 $wgHooks['APIEditBeforeSave'][] = 'wfSpamBlacklistFilterAPIEditBeforeSave';
 
 /**
+ * Internationalization messages
+ */
+function wfSpamBlacklistLoadMessages() {
+	wfLoadExtensionMessages('SpamBlackList');
+}
+
+/**
  * Get an instance of SpamBlacklist and do some first-call initialisation.
  * All actual functionality is implemented in that object
  */
@@ -54,6 +61,7 @@ function wfSpamBlacklistObject() {
 			$spamObj->files = $wgSpamBlacklistFiles;
 		}
 		$spamObj->previousFilter = $wgPreSpamFilterCallback;
+		wfSpamBlacklistLoadMessages();
 	}
 	return $spamObj;
 }
