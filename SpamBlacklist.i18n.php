@@ -359,6 +359,7 @@ $messages['cy'] = array(
 );
 
 /** German (Deutsch)
+ * @author Kghbln
  * @author Raimond Spekking
  * @author Umherirrender
  */
@@ -383,7 +384,7 @@ $messages['de'] = array(
 
  #</pre> <!-- Diese Zeile darf nicht verändert werden! -->',
 	'spam-invalid-lines' => 'Die {{PLURAL:$1|folgende Zeile|folgenden Zeilen}} in der Spam-Blacklist {{PLURAL:$1|ist ein ungültiger regulärer Ausdruck|sind ungültige reguläre Ausdrücke}}. Sie {{PLURAL:$1|muss|müssen}} vor dem Speichern der Seite korrigiert werden:',
-	'spam-blacklist-desc' => 'Regex-basiertes Anti-Spam-Werkzeug: [[MediaWiki:Spam-blacklist]] und [[MediaWiki:Spam-whitelist]]',
+	'spam-blacklist-desc' => 'Ergänzt ein Regex-basiertes Anti-Spam-Werkzeug: [[MediaWiki:Spam-blacklist]] und [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Zazaki (Zazaki)
