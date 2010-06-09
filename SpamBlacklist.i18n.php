@@ -46,28 +46,27 @@ $messages['qqq'] = array(
  * @author Juanpabl
  */
 $messages['an'] = array(
-	'spam-blacklist' => "
- # As URLs esternas que concuerden con ista lista serán bloqueyatas cuan s'encluyan en una pachina.
- # Ista lista afeuta sólo ta ista wiki; mire-se tamién a lista negra global.
- # Más decumentazión en http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+	'spam-blacklist' => " # As URLs externas que concuerden con ista lista serán bloqueyatas quan s'encluyan en una pachina.
+ # Ista lista afecta sólo ta ista wiki; mire-se tamién a lista negra global.
+ # Más decumentación en http://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- leave this line exactly as it is --> <pre>
 #
-# A sintaxis ye asinas:
-#  * Tot o que bi ha dende un caráuter \"#\" dica a fin d'a linia ye un comentario
-#  * As linias no buedas son fragmentos d'espresions regulars que sólo concordarán con hosts aintro d'as URLs
+# A sintaxi ye asinas:
+#  * Tot o que bi ha dende un carácter \"#\" dica a fin d'a linia ye un comentario
+#  * As linias no buedas son fragmentos d'expresions regulars que sólo concordarán con hosts adintro d'as URLs
 
  #</pre> <!-- leave this line exactly as it is -->",
 	'spam-whitelist' => " #<!-- leave this line exactly as it is --> <pre>
-# As URLs esternas que concuerden con ista lista *no* serán bloqueyatas
+# As URLs externas que concuerden con ista lista *no* serán bloqueyatas
 # mesmo si han estato bloqueyatas por dentradas d'a lista negra.
 #
-#  A sintaxis ye asinas:
-#  * Tot o que bi ha dende o caráuter \"#\" dica a fin d'a linia ye un comentario
-#  * As linias no buedas ye un fragmento d'espresión regular que sólo concordarán con hosts aintro d'as URLs
+#  A sintaxi ye asinas:
+#  * Tot o que bi ha dende o carácter \"#\" dica a fin d'a linia ye un comentario
+#  * As linias no buedas ye un fragmento d'expresión regular que sólo concordarán con hosts adintro d'as URLs
 
  #</pre> <!-- leave this line exactly as it is -->",
-	'spam-invalid-lines' => "{{PLURAL:$1|A linia siguient ye una|As linias siguients son}} {{PLURAL:$1|espresión regular|espresions regulars}} y {{PLURAL:$1|ha|han}} d'estar correchitas antes d'alzar a pachina:",
-	'spam-blacklist-desc' => 'Ferramienta anti-spam basata en espresions regulars (regex): [[MediaWiki:Spam-blacklist]] y [[MediaWiki:Spam-whitelist]]',
+	'spam-invalid-lines' => "{{PLURAL:$1|A linia siguient ye una|As linias siguients son}} {{PLURAL:$1|expresión regular|expresions regulars}} y {{PLURAL:$1|ha|han}} d'estar correchitas antes d'alzar a pachina:",
+	'spam-blacklist-desc' => 'Ferramienta anti-spam basata en expresions regulars (regex): [[MediaWiki:Spam-blacklist]] y [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Arabic (العربية)
