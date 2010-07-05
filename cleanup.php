@@ -35,7 +35,7 @@ function cleanupArticle( $rev, $regexes, $match ) {
 		}
 	}
 	$dbw = wfGetDB( DB_MASTER );
-	$dbw->immediateBegin();
+	$dbw->begin();
 	$article = new Article( $title );
 	if ( !$rev ) {
 		// Didn't find a non-spammy revision, delete the page
@@ -55,7 +55,7 @@ function cleanupArticle( $rev, $regexes, $match ) {
 		$article->doEdit( $rev->getText(), "Cleaning up links to $match", EDIT_UPDATE
 			| EDIT_DEFER_UPDATES | EDIT_AUTOSUMMARY, false, null, false, false, '', true );
 	}
-	$dbw->immediateCommit();
+	$dbw->commit();
 	wfDoUpdates();
 }
 
