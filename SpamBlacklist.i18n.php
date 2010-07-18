@@ -42,6 +42,13 @@ $messages['qqq'] = array(
 	'spam-blacklist-desc' => 'Short description of the Spam-blacklist extension, shown in [[Special:Version]]. Do not translate or change links.',
 );
 
+/** Bahasa Banjar (Bahasa Banjar)
+ * @author Alamnirvana
+ */
+$messages['bjn'] = array(
+	'spam-invalid-lines' => 'Baris-baris nang maumpati ini manggunaakan ungkapan nalar nang kahada sah. Silakan dibaiki daptar hirang ini sabalum manyimpannya:',
+);
+
 /** Aragonese (Aragonés)
  * @author Juanpabl
  */
