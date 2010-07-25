@@ -190,7 +190,7 @@ class SpamBlacklist {
 	 * @return Matched text if the edit should not be allowed, false otherwise
 	 */
 	function filter( &$title, $text, $section, $editsummary = '', EditPage &$editPage = null ) {
-		global $wgVersion, $wgOut, $wgParser, $wgUser;
+		global $wgParser, $wgUser;
 
 		$fname = 'wfSpamBlacklistFilter';
 		wfProfileIn( $fname );
