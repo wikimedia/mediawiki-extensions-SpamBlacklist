@@ -14,7 +14,6 @@ require_once( 'SpamBlacklist_body.php' );
  */
 function cleanupArticle( $rev, $regexes, $match ) {
 	$title = $rev->getTitle();
-	$reverted = false;
 	$revId = $rev->getId();
 	while ( $rev ) {
 		$matches = false;
