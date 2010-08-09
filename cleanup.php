@@ -35,7 +35,6 @@ function cleanupArticle( $rev, $regexes, $match ) {
 	}
 	$dbw = wfGetDB( DB_MASTER );
 	$dbw->begin();
-	$article = new Article( $title );
 	if ( !$rev ) {
 		// Didn't find a non-spammy revision, delete the page
 /*
@@ -45,14 +44,14 @@ function cleanupArticle( $rev, $regexes, $match ) {
 */
 		// Too scary, blank instead
 		print "All revisions are spam, blanking...\n";
-		$article->doEdit( '', "All revisions matched the spam blacklist ($match), blanking",
-			EDIT_UPDATE | EDIT_DEFER_UPDATES | EDIT_AUTOSUMMARY, false, null, false, false,
-			'', true );
+		$article = new Article( $title );
+		$article->updateArticle( '', "All revisions matched the spam blacklist ($match), blanking",
+			false, false );
 
 	} else {
 		// Revert to this revision
-		$article->doEdit( $rev->getText(), "Cleaning up links to $match", EDIT_UPDATE
-			| EDIT_DEFER_UPDATES | EDIT_AUTOSUMMARY, false, null, false, false, '', true );
+		$article = new Article( $title );
+		$article->updateArticle( $rev->getText(), "Cleaning up links to $match", false, false );
 	}
 	$dbw->commit();
 	wfDoUpdates();
