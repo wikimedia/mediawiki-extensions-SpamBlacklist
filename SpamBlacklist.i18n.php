@@ -42,13 +42,6 @@ $messages['qqq'] = array(
 	'spam-blacklist-desc' => 'Short description of the Spam-blacklist extension, shown in [[Special:Version]]. Do not translate or change links.',
 );
 
-/** Bahasa Banjar (Bahasa Banjar)
- * @author Alamnirvana
- */
-$messages['bjn'] = array(
-	'spam-invalid-lines' => 'Baris-baris nang maumpati ini manggunaakan ungkapan nalar nang kahada sah. Silakan dibaiki daptar hirang ini sabalum manyimpannya:',
-);
-
 /** Aragonese (Aragonés)
  * @author Juanpabl
  */
@@ -203,6 +196,13 @@ $messages['be-tarask'] = array(
 $messages['bg'] = array(
 	'spam-invalid-lines' => '{{PLURAL:$1|Следният запис|Следните записи}} от черния списък на спама {{PLURAL:$1|е невалиден регулярен израз|са невалидни регулярни изрази}} и  трябва да {{PLURAL:$1|бъде коригиран|бъдат коригирани}} преди съхраняване на страницата:',
 	'spam-blacklist-desc' => 'Инструмент за защита от спам, използващ регулярни изрази: [[МедияУики:Spam-blacklist]] и [[МедияУики:Spam-whitelist]]',
+);
+
+/** Bahasa Banjar (Bahasa Banjar)
+ * @author Alamnirvana
+ */
+$messages['bjn'] = array(
+	'spam-invalid-lines' => 'Baris-baris nang maumpati ini manggunaakan ungkapan nalar nang kahada sah. Silakan dibaiki daptar hirang ini sabalum manyimpannya:',
 );
 
 /** Bengali (বাংলা)
