@@ -13,7 +13,7 @@ class SpamBlacklist {
 	var $warningChance = 100;
     var $ignoreEditSummary = false;
 
-	function SpamBlacklist( $settings = array() ) {
+	function __construct( $settings = array() ) {
 		foreach ( $settings as $name => $value ) {
 			$this->$name = $value;
 		}
