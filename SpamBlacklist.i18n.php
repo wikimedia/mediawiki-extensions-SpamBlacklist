@@ -1415,7 +1415,7 @@ $messages['oc'] = array(
 
  #</pre> <!--Daissatz aquesta linha tala coma es -->",
 	'spam-invalid-lines' => "{{PLURAL:$1|La linha seguenta |Las linhas seguentas}} de la lista dels spams {{PLURAL:$1|es redigida|son redigidas}} d'un biais incorrècte e {{PLURAL:$1|necessita|necessitan}} las correccions necessàrias abans tot salvament de la pagina :",
-	'spam-blacklist-desc' => "Esplech antispam basat sus d'expressions regularas",
+	'spam-blacklist-desc' => "Aisina antispam basada sus d'expressions regularas : ''[[MediaWiki:Spam-blacklist]]'' et ''[[MediaWiki:Spam-whitelist]]''",
 );
 
 /** Polish (Polski)
