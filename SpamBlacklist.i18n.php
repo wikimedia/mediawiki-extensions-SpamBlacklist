@@ -305,6 +305,15 @@ $messages['ca'] = array(
 #  * Cada línia que no estigui en blanc és un fragment regex que només coincidirà amb amfitrions dintre d\'URLs
 
  #</pre> <!-- deixeu aquesta línia exactament com està -->',
+	'spam-whitelist' => " #<!-- deixeu aquesta línia tal com està --> <pre>
+# Les adreces URL externes que apareguin en aquesta llista no seran blocades
+# fins i tot si haurien estat blocades per aparèixer a la llista negra.
+#
+# La sintaxi és la següent:
+#   * Tot allò que hi hagi des d'un símbol '#' fins a la fi de línia és un comentari
+#   * Cada línia no buida és un fragment d'expressió regular (regex) que només marcarà hosts dins les URL
+
+ #</pre> <!-- deixeu aquesta línia tal com està -->",
 	'spam-invalid-lines' => "{{PLURAL:$1|La línia següent no es considera una expressió correcta|Les línies següents no es consideren expressions correctes}} {{PLURAL:$1|perquè recull|perquè recullen}} SPAM que està vetat. Heu d'esmenar-ho abans de salvar la pàgina:",
 	'spam-blacklist-desc' => 'Eina anti-spam basada en regexp: [[MediaWiki:Spam-blacklist]] i [[MediaWiki:Spam-whitelist]]',
 );
