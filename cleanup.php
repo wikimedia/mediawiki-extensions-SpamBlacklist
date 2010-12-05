@@ -57,26 +57,6 @@ function cleanupArticle( $rev, $regexes, $match ) {
 	wfDoUpdates();
 }
 
-
-/**
- * Do any deferred updates and clear the list
- * TODO: This could be in Wiki.php if that class made any sense at all
- */
-if ( !function_exists( 'wfDoUpdates' ) ) {
-	function wfDoUpdates()
-	{
-		global $wgPostCommitUpdateList, $wgDeferredUpdateList;
-		foreach ( $wgDeferredUpdateList as $update ) { 
-			$update->doUpdate();
-		}
-		foreach ( $wgPostCommitUpdateList as $update ) {
-			$update->doUpdate();
-		}
-		$wgDeferredUpdateList = array();
-		$wgPostCommitUpdateList = array();
-	}
-}
-
 //------------------------------------------------------------------------------
 
 $username = 'Spam cleanup script';
