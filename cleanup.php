@@ -44,17 +44,16 @@ function cleanupArticle( $rev, $regexes, $match ) {
 */
 		// Too scary, blank instead
 		print "All revisions are spam, blanking...\n";
-		$article = new Article( $title );
-		$article->updateArticle( '', "All revisions matched the spam blacklist ($match), blanking",
-			false, false );
-
+		$text = '';
+		$comment = "All revisions matched the spam blacklist ($match), blanking";
 	} else {
 		// Revert to this revision
-		$article = new Article( $title );
-		$article->updateArticle( $rev->getText(), "Cleaning up links to $match", false, false );
+		$text = $rev->getText();
+		$comment = "Cleaning up links to $match";
 	}
+	$article = new Article( $title );
+	$article->doEdit( $text, $comment );
 	$dbw->commit();
-	wfDoUpdates();
 }
 
 //------------------------------------------------------------------------------
