@@ -2117,28 +2117,30 @@ $messages['zh-hans'] = array(
 	'spam-blacklist-desc' => '基于正则表达式的反垃圾链接工具：[[MediaWiki:Spam-blacklist]]和[[MediaWiki:Spam-whitelist]]',
 );
 
-/** Traditional Chinese (‪中文(繁體)‬) */
+/** Traditional Chinese (‪中文(繁體)‬)
+ * @author Mark85296341
+ */
 $messages['zh-hant'] = array(
-	'spam-blacklist' => ' # 跟這個表合符的外部 URL 當加入時會被封鎖。
- # 這個表只是會影響到這個wiki；請同時參閱全域黑名單。
+	'spam-blacklist' => ' # 跟這個表符合的外部 URL 當加入時會被封鎖。
+ # 這個表只是會影響到這個 wiki；請同時參閱全域黑名單。
  # 要參看註解請看 http://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- 請完全地留下這行 --> <pre>
 #
 # 語法像下面這樣:
-#   * 每一個由 "#" 字元開頭的行，到結尾是一個註解
-#   * 每個非空白行是一個標準表示式碎片，只是跟裡面的URL端核對
+#   * 每一個由「#」字元開頭的行，到結尾是一個註解
+#   * 每個非空白行是一個標準表示式碎片，只是跟裡面的 URL 端核對
 
  #</pre> <!-- 請完全地留下這行 -->',
 	'spam-whitelist' => ' #<!-- 請完全地留下這行 --> <pre>
-# 跟這個表合符的外部 URL ，即使在黑名單項目中封鎖，
+# 跟這個表符合的外部 URL ，即使在黑名單項目中封鎖，
 # 都*不會*被封鎖。
 #
 # 語法像下面這樣:
-#   * 每一個由 "#" 字元開頭的行，到結尾是一個註解
-#   * 每個非空白行是一個標準表示式碎片，只是跟裡面的URL端核對
+#   * 每一個由「#」字元開頭的行，到結尾是一個註解
+#   * 每個非空白行是一個標準表示式碎片，只是跟裡面的 URL 端核對
 
  #</pre> <!-- 請完全地留下這行 -->',
-	'spam-invalid-lines' => '以下在灌水黑名單的{{PLURAL:$1|一行|多行}}有無效的表示式，請在保存這頁前先將{{PLURAL:$1|它|它們}}修正:',
-	'spam-blacklist-desc' => '以正則表達式為本的防灌水工具: [[MediaWiki:Spam-blacklist]] 與 [[MediaWiki:Spam-whitelist]]',
+	'spam-invalid-lines' => '以下在灌水黑名單的{{PLURAL:$1|一行|多行}}有無效的表示式，請在儲存這頁前先將{{PLURAL:$1|它|它們}}修正：',
+	'spam-blacklist-desc' => '以正則表達式為本的防灌水工具：[[MediaWiki:Spam-blacklist]] 與 [[MediaWiki:Spam-whitelist]]',
 );
 
