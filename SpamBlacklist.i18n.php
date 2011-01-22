@@ -153,7 +153,7 @@ $messages['ast'] = array(
 	'spam-blacklist-desc' => "Ferramienta antispam basada n'espresiones regulares: [[MediaWiki:Spam-blacklist]] y [[MediaWiki:Spam-whitelist]]",
 );
 
-/** Bashkir (Башҡорт)
+/** Bashkir (Башҡортса)
  * @author Assele
  */
 $messages['ba'] = array(
@@ -185,7 +185,7 @@ $messages['bcc'] = array(
 	'spam-blacklist-desc' => 'وسیله په ضد اسپم په اساس عبارات منظم:  [[MediaWiki:Spam-blacklist]] و [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  */
@@ -1766,14 +1766,14 @@ $messages['sl'] = array(
 	'spam-blacklist-desc' => 'Orodje proti smetju, temelječe na regularnih izrazih: [[MediaWiki:Spam-blacklist]] in [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Serbian Cyrillic ekavian (Српски (ћирилица))
+/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
  * @author Millosh
  */
 $messages['sr-ec'] = array(
 	'spam-blacklist-desc' => 'Антиспам оруђе засновано на регуларним изразима: [[MediaWiki:Spam-blacklist]] и [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Serbian Latin ekavian (Srpski (latinica))
+/** Serbian Latin ekavian (‪Srpski (latinica)‬)
  * @author Michaello
  */
 $messages['sr-el'] = array(
