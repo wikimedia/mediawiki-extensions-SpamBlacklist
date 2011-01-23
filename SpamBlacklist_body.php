@@ -40,9 +40,9 @@ class SpamBlacklist {
 		$thisHttpRegex = '/^' . preg_quote( $thisHttp, '/' ) . '(?:&.*)?$/';
 
 		foreach( $this->files as $fileName ) {
+			$matches = array();
 			if ( preg_match( '/^DB: (\w*) (.*)$/', $fileName, $matches ) ) {
 				if ( $wgDBname == $matches[1] ) {
-					$sources[] = $matches[2];
 					if( $matches[2] == $title->getPrefixedDbKey() ) {
 						// Local DB fetch of this page...
 						return true;
@@ -122,6 +122,7 @@ class SpamBlacklist {
 		# Load lists
 		wfDebugLog( 'SpamBlacklist', "Constructing spam blacklist\n" );
 		foreach ( $this->files as $fileName ) {
+			$matches = array();
 			if ( preg_match( '/^DB: ([\w-]*) (.*)$/', $fileName, $matches ) ) {
 				$text = $this->getArticleText( $matches[1], $matches[2] );
 			} elseif ( preg_match( '/^http:\/\//', $fileName ) ) {
@@ -228,7 +229,9 @@ class SpamBlacklist {
 			$addedLinks = array_diff( $newLinks, $oldLinks );
 
 			// We add the edit summary if one exists
-			if ( !$this->ignoreEditSummary && !empty( $editsummary ) ) $addedLinks[] = $editsummary;
+			if ( !$this->ignoreEditSummary && !empty( $editsummary ) ) {
+				$addedLinks[] = $editsummary;
+			}
 
 			wfDebugLog( 'SpamBlacklist', "Old URLs: " . implode( ', ', $oldLinks ) );
 			wfDebugLog( 'SpamBlacklist', "New URLs: " . implode( ', ', $newLinks ) );
@@ -257,6 +260,7 @@ class SpamBlacklist {
 			$retVal = false;
 			foreach( $blacklists as $regex ) {
 				wfSuppressWarnings();
+				$matches = array();
 				$check = preg_match( $regex, $links, $matches );
 				wfRestoreWarnings();
 				if( $check ) {
