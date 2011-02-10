@@ -885,7 +885,7 @@ $messages['ia'] = array(
 #
 # Le syntaxe es lo sequente:
 #  * Toto a partir de un character "#" usque al fin del linea es un commento
-#  * Cata linea non vacue es un fragmento de regex que se applica solmente al nomines de hospite intra adresses URL
+#  * Cata linea non vacue es un fragmento de regex que se applica solmente al nomines de host intra adresses URL
 
  #</pre> <!-- non modificar in alcun modo iste linea -->',
 	'spam-whitelist' => ' #<!-- non modificar in alcun modo iste linea --> <pre>
@@ -894,7 +894,7 @@ $messages['ia'] = array(
 #
 # Le syntaxe es lo sequente:
 #  * Toto a partir de un character "#" usque al fin del linea es un commento
-#  * Omne linea non vacue es un fragmento de regex que se applica solmente al nomines de hospite intra adresses URL
+#  * Omne linea non vacue es un fragmento de regex que se applica solmente al nomines de host intra adresses URL
 
  #</pre> <!-- non modificar in alcun modo iste linea -->',
 	'spam-invalid-lines' => 'Le sequente {{PLURAL:$1|linea|lineas}} del lista nigre antispam es {{PLURAL:$1|un expression|expressiones}} regular invalide e debe esser corrigite ante que tu immagazina le pagina:',
