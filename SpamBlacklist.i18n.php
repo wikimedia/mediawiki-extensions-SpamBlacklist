@@ -1766,6 +1766,33 @@ $messages['sl'] = array(
 	'spam-blacklist-desc' => 'Orodje proti smetju, temelječe na regularnih izrazih: [[MediaWiki:Spam-blacklist]] in [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Albanian (Shqip)
+ * @author Olsi
+ */
+$messages['sq'] = array(
+	'spam-blacklist' => ' # URL-të e jashtme që përputhen me këtë listë do të bllokohen kur shtohen tek një faqe.
+ # Kjo listë ndikon vetëm në këtë wiki; referojuni gjithashtu listës së zezë globale.
+ # Për dokumentacionin shiko http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- leave this line exactly as it is --> <pre>
+#
+# Sintaksa është si më poshtë:
+#  * Çdo gjë nga një karakter "#" në fund të rreshtit është një koment
+#  * Çdo rresht jobosh është një fragment që do të përputhë vetëm hostet brenda URL-ve
+
+ #</pre> <!-- leave this line exactly as it is -->',
+	'spam-whitelist' => ' #<!-- leave this line exactly as it is --> <pre>
+# URL-të e jashtme që përputhen më këtë listë *nuk* nuk do të bllokohen edhe nëse ato do të
+# kishin qenë të bllokuara nga shënimet e listës së zezë.
+#
+# Sintaksa është si më poshtë:
+#   * Çdo gjë nga një karakter "#" në fund të rreshtit është një koment
+#   * Çdo rresht jobosh është një fragment që vetëm do të përputhë hostet brenda URL-ve
+
+ #</pre> <!-- leave this line exactly as it is -->',
+	'spam-invalid-lines' => 'Lista e zezë e mëposhtme spam {{PLURAL:$1|rreshti është një|rreshtat janë}} {{PLURAL:$1|shprehje|shprehje}} të rregullta të pavlefshme dhe {{PLURAL:$1|nevojitet|nevojitet}} të korrigjohen përpara ruajtjes së faqes:',
+	'spam-blacklist-desc' => 'Mjeti anti-spam regex i bazuar: [[MediaWiki:Spam-blacklist]] dhe [[MediaWiki:Spam-whitelist]]',
+);
+
 /** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
  * @author Millosh
  */
