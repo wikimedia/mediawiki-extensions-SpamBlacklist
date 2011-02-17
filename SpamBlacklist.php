@@ -84,8 +84,13 @@ function wfSpamBlacklistFilterMerged( $editPage, $text, &$hookErr, $editSummary 
 	$spamObj = wfSpamBlacklistObject();
 	$title = $editPage->mArticle->getTitle();
 	$ret = $spamObj->filter( $title, $text, '', $editSummary, $editPage );
-	if ( $ret !== false ){
-		$editPage->spamPageWithContent( $ret );
+	if ( $ret !== false ) {
+		// spamPageWithContent() method was added in MW 1.17
+		if ( method_exists( $editPage, 'spamPageWithContent' ) ) {
+			$editPage->spamPageWithContent( $ret );
+		} else {
+			$editPage->spamPage( $ret );
+		}
 	}
 	// Return convention for hooks is the inverse of $wgFilterCallback
 	return ( $ret === false );
