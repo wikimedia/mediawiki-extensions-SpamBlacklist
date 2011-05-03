@@ -11,7 +11,7 @@ class SpamBlacklist {
 	var $warningTime = 600;
 	var $expiryTime = 900;
 	var $warningChance = 100;
-    var $ignoreEditSummary = false;
+	var $ignoreEditSummary = false;
 
 	function __construct( $settings = array() ) {
 		foreach ( $settings as $name => $value ) {
@@ -408,7 +408,7 @@ class SpamRegexBatch {
 				$build = $line;
 			} elseif( strlen( $build ) + strlen( $line ) > $batchSize ) {
 				$regexes[] = $regexStart .
-					str_replace( '/', '\/', preg_replace('|\\\*/|', '/', $build) ) .
+					str_replace( '/', '\/', preg_replace('|\\\*/|u', '/', $build) ) .
 					$regexEnd;
 				$build = $line;
 			} else {
@@ -418,7 +418,7 @@ class SpamRegexBatch {
 		}
 		if( $build !== false ) {
 			$regexes[] = $regexStart .
-				str_replace( '/', '\/', preg_replace('|\\\*/|', '/', $build) ) .
+				str_replace( '/', '\/', preg_replace('|\\\*/|u', '/', $build) ) .
 				$regexEnd;
 		}
 		return $regexes;
