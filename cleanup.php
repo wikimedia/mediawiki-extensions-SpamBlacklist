@@ -78,7 +78,7 @@ $sb = new SpamBlacklist( $wgSpamBlacklistSettings );
 if ( $wgSpamBlacklistFiles ) {
 	$sb->files = $wgSpamBlacklistFiles;
 }
-$regexes = $sb->getregexes();
+$regexes = $sb->getBlacklists();
 if ( !$regexes ) {
 	print "Invalid regex, can't clean up spam\n";
 	exit(1);

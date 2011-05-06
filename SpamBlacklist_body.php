@@ -58,13 +58,6 @@ class SpamBlacklist {
 	}
 
 	/**
-	 * @deprecated back-compat
-	 */
-	function getRegexes() {
-		return $this->getBlacklists();
-	}
-
-	/**
 	 * Fetch local and (possibly cached) remote blacklists.
 	 * Will be cached locally across multiple invocations.
 	 * @return array set of regular expressions, potentially empty.
