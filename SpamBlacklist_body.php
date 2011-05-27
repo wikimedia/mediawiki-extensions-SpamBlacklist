@@ -6,7 +6,6 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 class SpamBlacklist {
 	var $regexes = false;
-	var $previousFilter = false;
 	var $files = array( "http://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1" );
 	var $warningTime = 600;
 	var $expiryTime = 900;
@@ -188,15 +187,6 @@ class SpamBlacklist {
 
 		$fname = 'wfSpamBlacklistFilter';
 		wfProfileIn( $fname );
-
-		# Call the rest of the hook chain first
-		if ( $this->previousFilter ) {
-			$f = $this->previousFilter;
-			if ( $f( $title, $text, $section ) ) {
-				wfProfileOut( $fname );
-				return true;
-			}
-		}
 
 		$this->title = $title;
 		$this->text = $text;

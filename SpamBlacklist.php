@@ -18,24 +18,13 @@ $wgExtensionCredits[version_compare($wgVersion, '1.17alpha', '>=') ? 'antispam' 
 $dir = dirname(__FILE__) . '/';
 $wgExtensionMessagesFiles['SpamBlackList'] = $dir . 'SpamBlacklist.i18n.php';
 
-global $wgFilterCallback, $wgPreSpamFilterCallback;
 global $wgSpamBlacklistFiles;
 global $wgSpamBlacklistSettings;
 
 $wgSpamBlacklistFiles = false;
 $wgSpamBlacklistSettings = array();
 
-$wgPreSpamFilterCallback = false;
-
-if ( defined( 'MW_SUPPORTS_EDITFILTERMERGED' ) ) {
-	$wgHooks['EditFilterMerged'][] = 'wfSpamBlacklistFilterMerged';
-} else {
-	if ( $wgFilterCallback ) {
-		$wgPreSpamFilterCallback = $wgFilterCallback;
-	}
-	$wgFilterCallback = 'wfSpamBlacklistFilter';
-}
-
+$wgHooks['EditFilterMerged'][] = 'wfSpamBlacklistFilterMerged';
 $wgHooks['EditFilter'][] = 'wfSpamBlacklistValidate';
 $wgHooks['ArticleSaveComplete'][] = 'wfSpamBlacklistArticleSave';
 $wgHooks['APIEditBeforeSave'][] = 'wfSpamBlacklistFilterAPIEditBeforeSave';
@@ -45,7 +34,7 @@ $wgHooks['APIEditBeforeSave'][] = 'wfSpamBlacklistFilterAPIEditBeforeSave';
  * All actual functionality is implemented in that object
  */
 function wfSpamBlacklistObject() {
-	global $wgSpamBlacklistFiles, $wgSpamBlacklistSettings, $wgPreSpamFilterCallback;
+	global $wgSpamBlacklistFiles, $wgSpamBlacklistSettings;
 	static $spamObj;
 	if ( !$spamObj ) {
 		require_once( "SpamBlacklist_body.php" );
@@ -53,25 +42,12 @@ function wfSpamBlacklistObject() {
 		if( $wgSpamBlacklistFiles ) {
 			$spamObj->files = $wgSpamBlacklistFiles;
 		}
-		$spamObj->previousFilter = $wgPreSpamFilterCallback;
 	}
 	return $spamObj;
 }
 
 /**
- * Hook function for $wgFilterCallback
- */
-function wfSpamBlacklistFilter( &$title, $text, $section, &$hookErr, $editSummary ) {
-	$spamObj = wfSpamBlacklistObject();
-	$ret = $spamObj->filter( $title, $text, $section, $editSummary );
-	if ( $ret !== false ){
-		EditPage::spamPage( $ret );
-	}
-	return ( $ret !== false );
-}
-
-/**
- * Hook function for EditFilterMerged, replaces wfSpamBlacklistFilter
+ * Hook function for EditFilterMerged
  */
 function wfSpamBlacklistFilterMerged( $editPage, $text, &$hookErr, $editSummary ) {
 	global $wgTitle;
