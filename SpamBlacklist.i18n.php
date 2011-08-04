@@ -1262,7 +1262,7 @@ $messages['ml'] = array(
 
   #</pre> <!-- ഈ വരി ഇതുപോലെ തന്നെ സൂക്ഷിക്കുക -->',
 	'spam-invalid-lines' => 'താഴെ കൊടുത്തിരിക്കുന്ന പാഴെഴുത്ത് കരിമ്പട്ടികയിലെ {{PLURAL:$1|വരി ഒരു|വരികൾ}} അസാധുവായ റെഗുലർ {{PLURAL:$1|എക്സ്‌‌പ്രെഷൻ|എക്സ്‌‌പ്രെഷനുകൾ}} ആണ്, താൾ സേവ് ചെയ്യുന്നതിനു മുമ്പ് {{PLURAL:$1|അത്|അവ}} ശരിയാക്കേണ്ടതുണ്ട്:',
-	'spam-blacklist-desc' => 'റെജെക്സ്-അധിഷ്ഠിത സ്പാം വിരുദ്ധ ഉപകരണം: [[MediaWiki:Spam-blacklist]] ഒപ്പം [[MediaWiki:Spam-whitelist]]',
+	'spam-blacklist-desc' => 'റെജെക്സ്-അധിഷ്ഠിത പാഴെഴുത്ത് തടയൽ ഉപകരണം: [[MediaWiki:Spam-blacklist]] ഒപ്പം [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Marathi (मराठी)
