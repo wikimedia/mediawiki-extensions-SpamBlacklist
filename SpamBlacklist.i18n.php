@@ -709,8 +709,8 @@ $messages['gl'] = array(
 #   * Toda liña que non estea en branco é un fragmento de expresión regular que só coincide con dominios dentro de enderezos URL
 
  #</pre> <!-- Deixe esta liña tal e como está -->',
-	'spam-invalid-lines' => '{{PLURAL:$1|A seguinte liña da lista negra de spam é|As seguintes liñas da lista negra de spam son}} {{PLURAL:$1|unha expresión regular inválida|expresións regulares inválidas}} e {{PLURAL:$1|haina|hainas}} que corrixir antes de gardar a páxina:',
-	'spam-blacklist-desc' => 'Ferramenta anti-spam baseada en expresións regulares: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
+	'spam-invalid-lines' => '{{PLURAL:$1|A seguinte liña|As seguintes}} da lista negra de spam {{PLURAL:$1|é unha expresión regular inválida|son expresións regulares inválidas}} e {{PLURAL:$1|haina|hainas}} que corrixir antes de gardar a páxina:',
+	'spam-blacklist-desc' => 'Ferramenta antispam baseada en expresións regulares: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Swiss German (Alemannisch)
