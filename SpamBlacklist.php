@@ -11,7 +11,7 @@ $wgExtensionCredits[version_compare($wgVersion, '1.17alpha', '>=') ? 'antispam' 
 	'path'           => __FILE__,
 	'name'           => 'SpamBlacklist',
 	'author'         => 'Tim Starling',
-	'url'            => 'http://www.mediawiki.org/wiki/Extension:SpamBlacklist',
+	'url'            => 'https://www.mediawiki.org/wiki/Extension:SpamBlacklist',
 	'descriptionmsg' => 'spam-blacklist-desc',
 );
 
