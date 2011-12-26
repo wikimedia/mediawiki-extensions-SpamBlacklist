@@ -571,6 +571,26 @@ $messages['es'] = array(
  * @author Pikne
  */
 $messages['et'] = array(
+	'spam-blacklist' => ' # Sellele nimekirjale vastavad internetiaadressid blokeeritakse.
+ # See nimekiri puudutab ainult seda vikit; uuri ka globaalse musta nimekirja kohta.
+ # Dokumentatsioon on asukohas http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- Jäta see rida muutmata kujule. --> <pre>
+#
+# Süntaks on järgmine:
+#   * Kõik alates märgist "#" kuni rea lõpuni on kommentaar
+#   * Iga rida, mis ei ole tühi, on regulaaravaldise osa, milleks sobib internetiaadressi osadest ainult hostinimi
+
+ #</pre> <!-- Jäta see rida muutmata kujule. -->',
+	'spam-whitelist' => ' #<!-- Jäta see rida muutmata kujule. --> <pre>
+# Sellele nimekirjale vastavaid internetiaadresse *ei* blokeerita isegi mitte siis
+# kui musta nimekirja sissekande järgi võiks nad olla blokeeritud.
+#
+# Süntaks on järgmine:
+#   * Kõik alates märgist "#" kuni rea lõpuni on kommentaar
+#   * Iga rida, mis ei ole tühi, on regulaaravaldise osa, milleks sobib internetiaadressi osadest ainult hostinimi
+
+ #</pre> <!-- Jäta see rida muutmata kujule. -->',
+	'spam-invalid-lines' => '{{PLURAL:$1|Järgmine rida|Järgmised read}} rämpspostituste mustas nimekirjas on {{PLURAL:$1|vigane regulaaravaldis|vigased regulaaravaldised}} ja {{PLURAL:$1|see|need}} tuleb enne lehekülje salvestamist parandada:',
 	'spam-blacklist-desc' => 'Regulaaravaldisel põhinev tööriist: [[MediaWiki:Spam-blacklist]] ja [[MediaWiki:Spam-whitelist]]',
 );
 
@@ -1321,6 +1341,33 @@ $messages['ms'] = array(
 	'spam-blacklist-desc' => 'Alat anti-spam berdasarkan ungkapan nalar: [[MediaWiki:Spam-blacklist]] dan [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Jon Harald Søby
+ */
+$messages['nb'] = array(
+	'spam-blacklist' => ' # Eksterne URL-er som finnes på denne lista vil ikke kunne legges til på en side.
+ # Denne listen gjelder kun denne wikien; se også den globale svartelistinga.
+ # For dokumentasjon, se http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- La denne linja være nøyaktig som den er --> <pre>
+#
+# Syntaksen er som følgende:
+#  * Alle linjer som begynner med «#» er kommentarer
+#  * Alle ikke-blanke linjer er et regex-fragment som kun vil passe med domenenavn i URL-er
+
+ #</pre> <!-- la denne linja være nøyaktig som den er -->',
+	'spam-whitelist' => ' #<!-- la denne linja være nøyaktig som den er --> <pre>
+# Eksterne URL-er på denne lista vil *ikke* blokkeres, selv om
+# de ellers ville vært blokkert av svartelista.
+#
+# Syntaksen er som følger:
+#  * Alle linjer som begynner med «#» er kommentarer
+#  * Alle ikke-blanke linjer er et regex-fragment som kun vil passe med domenenavn i URL-er
+
+ #</pre> <!-- la denne linja være nøyaktig som den er -->',
+	'spam-invalid-lines' => 'Følgende {{PLURAL:$1|linje|linjer}} i spamsvartelista er {{PLURAL:$1|et ugyldig regulært uttrykk|ugyldige regulære uttrykk}} og må rettes før lagring av siden:',
+	'spam-blacklist-desc' => 'Antispamverktøy basert på regulære uttrykk: [[MediaWiki:Spam-blacklist]] og [[MediaWiki:Spam-whitelist]]',
+);
+
 /** Low German (Plattdüütsch)
  * @author Slomox
  */
@@ -1403,33 +1450,6 @@ $messages['nn'] = array(
 
  #</pre> <!-- la denne linja vere nøyaktig som ho er -->',
 	'spam-invalid-lines' => 'Følgjande {{PLURAL:$1|linje|linjer}} i spamsvartelista er {{PLURAL:$1|eit ugyldig regulært uttrykk|ugyldige regulære uttrykk}} og må rettast før lagring av sida:',
-	'spam-blacklist-desc' => 'Antispamverktøy basert på regulære uttrykk: [[MediaWiki:Spam-blacklist]] og [[MediaWiki:Spam-whitelist]]',
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Jon Harald Søby
- */
-$messages['nb'] = array(
-	'spam-blacklist' => ' # Eksterne URL-er som finnes på denne lista vil ikke kunne legges til på en side.
- # Denne listen gjelder kun denne wikien; se også den globale svartelistinga.
- # For dokumentasjon, se http://www.mediawiki.org/wiki/Extension:SpamBlacklist
- #<!-- La denne linja være nøyaktig som den er --> <pre>
-#
-# Syntaksen er som følgende:
-#  * Alle linjer som begynner med «#» er kommentarer
-#  * Alle ikke-blanke linjer er et regex-fragment som kun vil passe med domenenavn i URL-er
-
- #</pre> <!-- la denne linja være nøyaktig som den er -->',
-	'spam-whitelist' => ' #<!-- la denne linja være nøyaktig som den er --> <pre>
-# Eksterne URL-er på denne lista vil *ikke* blokkeres, selv om
-# de ellers ville vært blokkert av svartelista.
-#
-# Syntaksen er som følger:
-#  * Alle linjer som begynner med «#» er kommentarer
-#  * Alle ikke-blanke linjer er et regex-fragment som kun vil passe med domenenavn i URL-er
-
- #</pre> <!-- la denne linja være nøyaktig som den er -->',
-	'spam-invalid-lines' => 'Følgende {{PLURAL:$1|linje|linjer}} i spamsvartelista er {{PLURAL:$1|et ugyldig regulært uttrykk|ugyldige regulære uttrykk}} og må rettes før lagring av siden:',
 	'spam-blacklist-desc' => 'Antispamverktøy basert på regulære uttrykk: [[MediaWiki:Spam-blacklist]] og [[MediaWiki:Spam-whitelist]]',
 );
 
