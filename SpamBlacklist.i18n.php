@@ -950,6 +950,33 @@ $messages['id'] = array(
 	'spam-blacklist-desc' => 'Perkakas anti-spam berbasis regex: [[MediaWiki:Spam-blacklist]] dan [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Iloko (Ilokano)
+ * @author Lam-ang
+ */
+$messages['ilo'] = array(
+	'spam-blacklist' => ' # Dagiti akinruar a URL a maipada iti daytoy a listaan ket maserraan to no mainayon ditoy a panid.
+ # Daytoy a listaan ket tignayen na laeng daytoy a wiki; kitaen pay ti sangalubongan a blacklist.
+ # Para iti dokumentasion kitaen ti http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- baybayan daytoy a linia --> <pre>
+#
+# Ti gramatika ket kasla dagiti sumaganad:
+#   * Amin manipud iti "#" a karakter iti gibus ti linia ket komentario
+#   * Amin ti saan a blanko a linia ket regex a fragment a maipada laeng ti nagsangaili iti uneg dagiti URL
+
+ #</pre> <!-- baybayan daytoy a linia -->',
+	'spam-whitelist' => ' #<!-- baybayan daytoy a linia --> <pre>
+# Dagiti akinruar a panilpo a maipada iti daytoy a listaan ket *saan* a maserraan uray no
+# naseraanen babaen ti blacklista naikabil.
+#
+# Ti gramatika ket kasla dagitii sumaganad:
+#   * Amin manipud iti  "#" a karakter iti gibus ti linia ket komentario
+#   * Amin a saan a blanko a linia ket regex a fragment a maipada laeng ti nagsangaili ti uneg dagiti URL
+
+ #</pre> <!-- baybayan daytoy a linia -->',
+	'spam-invalid-lines' => 'Ti sumaganad a spam blacklist {{PLURAL:$1|linia ket|dagiti linia ket}} imbalido a kadawyan {{PLURAL:$1|panangisao|dagiti panangisao}} ken {{PLURAL:$1|masapsapol|masapol}} a mapudnuan sakbay nga idulin ti panid:',
+	'spam-blacklist-desc' => 'Naibantay ti regex kontra-spam a ramit: [[MediaWiki:Spam-blacklist]] ken [[MediaWiki:Spam-whitelist]]',
+);
+
 /** Italian (Italiano)
  * @author BrokenArrow
  */
