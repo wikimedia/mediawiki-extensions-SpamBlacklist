@@ -375,7 +375,7 @@ class SpamRegexBatch {
 		//$regex = 'https?://+[a-z0-9_\-.]*(' . implode( '|', $lines ) . ')';
 		//return '/' . str_replace( '/', '\/', preg_replace('|\\\*/|', '/', $regex) ) . '/Sim';
 		$regexes = array();
-		$regexStart = '/https?:\/\/+[a-z0-9_\-.]*(';
+		$regexStart = '/(?:https?:)?\/\/+[a-z0-9_\-.]*(';
 		$regexEnd = ($batchSize > 0 ) ? ')/Sim' : ')/im';
 		$build = false;
 		foreach( $lines as $line ) {
