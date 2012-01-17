@@ -18,90 +18,34 @@ $wgExtensionCredits[version_compare($wgVersion, '1.17alpha', '>=') ? 'antispam' 
 $dir = dirname(__FILE__) . '/';
 $wgExtensionMessagesFiles['SpamBlackList'] = $dir . 'SpamBlacklist.i18n.php';
 
-global $wgSpamBlacklistFiles;
-global $wgSpamBlacklistSettings;
-
-$wgSpamBlacklistFiles = false;
-$wgSpamBlacklistSettings = array();
-
-$wgHooks['EditFilterMerged'][] = 'wfSpamBlacklistFilterMerged';
-$wgHooks['EditFilter'][] = 'wfSpamBlacklistValidate';
-$wgHooks['ArticleSaveComplete'][] = 'wfSpamBlacklistArticleSave';
-$wgHooks['APIEditBeforeSave'][] = 'wfSpamBlacklistFilterAPIEditBeforeSave';
+/**
+ * Array of settings for blacklist classes
+ */
+$wgBlacklistSettings = array(
+	'spam' => array(
+		'files' => array(),
+	),
+);
 
 /**
- * Get an instance of SpamBlacklist and do some first-call initialisation.
- * All actual functionality is implemented in that object
+ * @deprecated
  */
-function wfSpamBlacklistObject() {
-	global $wgSpamBlacklistFiles, $wgSpamBlacklistSettings;
-	static $spamObj;
-	if ( !$spamObj ) {
-		require_once( "SpamBlacklist_body.php" );
-		$spamObj = new SpamBlacklist( $wgSpamBlacklistSettings );
-		if( $wgSpamBlacklistFiles ) {
-			$spamObj->files = $wgSpamBlacklistFiles;
-		}
-	}
-	return $spamObj;
-}
+$wgSpamBlacklistFiles =& $wgBlacklistSettings['spam']['files'];
 
 /**
- * Hook function for EditFilterMerged
+ * @deprecated
  */
-function wfSpamBlacklistFilterMerged( $editPage, $text, &$hookErr, $editSummary ) {
-	global $wgTitle;
-	if( is_null( $wgTitle ) ) {
-		# API mode
-		# wfSpamBlacklistFilterAPIEditBeforeSave already checked the blacklist
-		return true;
-	}
+$wgSpamBlacklistSettings =& $wgBlacklistSettings['spam'];
 
-	$spamObj = wfSpamBlacklistObject();
-	$title = $editPage->mArticle->getTitle();
-	$ret = $spamObj->filter( $title, $text, '', $editSummary, $editPage );
-	if ( $ret !== false ) {
-		// spamPageWithContent() method was added in MW 1.17
-		if ( method_exists( $editPage, 'spamPageWithContent' ) ) {
-			$editPage->spamPageWithContent( $ret );
-		} else {
-			$editPage->spamPage( $ret );
-		}
-	}
-	// Return convention for hooks is the inverse of $wgFilterCallback
-	return ( $ret === false );
-}
+$wgHooks['EditFilterMerged'][] = 'SpamBlacklistHooks::filterMerged';
+$wgHooks['APIEditBeforeSave'][] = 'SpamBlacklistHooks::filterAPIEditBeforeSave';
+$wgHooks['EditFilter'][] = 'SpamBlacklistHooks::validate';
+$wgHooks['ArticleSaveComplete'][] = 'SpamBlacklistHooks::articleSave';
 
-/**
- * Hook function for APIEditBeforeSave
- */
-function wfSpamBlacklistFilterAPIEditBeforeSave( $editPage, $text, &$resultArr ) {
-	$spamObj = wfSpamBlacklistObject();
-	$title = $editPage->mArticle->getTitle();
-	$ret = $spamObj->filter( $title, $text, '', '', $editPage );
-	if ( $ret!==false ) {
-		$resultArr['spamblacklist'] = $ret;
-	}
-	// Return convention for hooks is the inverse of $wgFilterCallback
-	return ( $ret === false );
-}
+$wgAutoloadClasses['BaseBlacklist'] = $dir . 'BaseBlacklist.php';
+$wgAutoloadClasses['SpamBlacklistHooks'] = $dir . 'SpamBlacklistHooks.php';
+$wgAutoloadClasses['SpamBlacklist'] = $dir . 'SpamBlacklist_body.php';
+$wgAutoloadClasses['SpamRegexBatch'] = $dir . 'SpamRegexBatch.php';
 
-/**
- * Hook function for EditFilter
- * Confirm that a local blacklist page being saved is valid,
- * and toss back a warning to the user if it isn't.
- */
-function wfSpamBlacklistValidate( $editPage, $text, $section, &$hookError ) {
-	$spamObj = wfSpamBlacklistObject();
-	return $spamObj->validate( $editPage, $text, $section, $hookError );
-}
 
-/**
- * Hook function for ArticleSaveComplete
- * Clear local spam blacklist caches on page save.
- */
-function wfSpamBlacklistArticleSave( &$article, &$user, $text, $summary, $isminor, $iswatch, $section ) {
-	$spamObj = wfSpamBlacklistObject();
-	return $spamObj->onArticleSave( $article, $user, $text, $summary, $isminor, $iswatch, $section );
-}
 
