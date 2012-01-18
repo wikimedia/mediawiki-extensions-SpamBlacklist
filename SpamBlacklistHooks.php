@@ -57,6 +57,43 @@ class SpamBlacklistHooks {
 	}
 
 	/**
+	 * Verify that the user can send emails
+	 *
+	 * @param $user User
+	 * @param $hookErr array
+	 * @return bool
+	 */
+	public static function userCanSendEmail( &$user, &$hookErr ) {
+		/** @var $blacklist EmailBlacklist */
+		$blacklist = BaseBlacklist::getInstance( 'email' );
+		if ( $blacklist->checkUser( $user ) ) {
+			return true;
+		}
+
+		$hookErr = array( 'spam-blacklisted-email', 'spam-blacklisted-email-text', null );
+
+		return false;
+	}
+
+	/**
+	 * Processes new accounts for valid emails
+	 *
+	 * @param $user User
+	 * @param $abortError
+	 * @return bool
+	 */
+	public static function abortNewAccount( $user, &$abortError ) {
+		/** @var $blacklist EmailBlacklist */
+		$blacklist = BaseBlacklist::getInstance( 'email' );
+		if ( $blacklist->checkUser( $user ) ) {
+			return true;
+		}
+
+		$abortError = wfMessage( 'spam-blacklisted-email-signup' )->escaped();
+		return false;
+	}
+
+	/**
 	 * Hook function for EditFilter
 	 * Confirm that a local blacklist page being saved is valid,
 	 * and toss back a warning to the user if it isn't.
@@ -75,9 +112,14 @@ class SpamBlacklistHooks {
 			return true;
 		}
 
+		$type = BaseBlacklist::getTypeFromTitle( $editPage->mTitle );
+		if ( $type === false ) {
+			return true;
+		}
+
 		$lines = explode( "\n", $text );
 
-		$badLines = SpamRegexBatch::getBadLines( $lines );
+		$badLines = SpamRegexBatch::getBadLines( $lines, BaseBlacklist::getInstance( $type ) );
 		if( $badLines ) {
 			wfDebugLog( 'SpamBlacklist', "Spam blacklist validator: [[$thisPageName]] given invalid input lines: " .
 				implode( ', ', $badLines ) . "\n" );
@@ -92,11 +134,11 @@ class SpamBlacklistHooks {
 					$badList .
 					"</div>\n" .
 					"<br clear='all' />\n";
-			return true;
 		} else {
 			wfDebugLog( 'SpamBlacklist', "Spam blacklist validator: [[$thisPageName]] ok or empty blacklist\n" );
-			return true;
 		}
+
+		return true;
 	}
 
 	/**

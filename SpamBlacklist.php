@@ -10,7 +10,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits[version_compare($wgVersion, '1.17alpha', '>=') ? 'antispam' : 'other'][] = array(
 	'path'           => __FILE__,
 	'name'           => 'SpamBlacklist',
-	'author'         => 'Tim Starling',
+	'author'         => array( 'Tim Starling', 'John Du Hart' ),
 	'url'            => 'https://www.mediawiki.org/wiki/Extension:SpamBlacklist',
 	'descriptionmsg' => 'spam-blacklist-desc',
 );
@@ -41,8 +41,11 @@ $wgHooks['EditFilterMerged'][] = 'SpamBlacklistHooks::filterMerged';
 $wgHooks['APIEditBeforeSave'][] = 'SpamBlacklistHooks::filterAPIEditBeforeSave';
 $wgHooks['EditFilter'][] = 'SpamBlacklistHooks::validate';
 $wgHooks['ArticleSaveComplete'][] = 'SpamBlacklistHooks::articleSave';
+$wgHooks['UserCanSendEmail'][] = 'SpamBlacklistHooks::userCanSendEmail';
+$wgHooks['AbortNewAccount'][] = 'SpamBlacklistHooks::abortNewAccount';
 
 $wgAutoloadClasses['BaseBlacklist'] = $dir . 'BaseBlacklist.php';
+$wgAutoloadClasses['EmailBlacklist'] = $dir . 'EmailBlacklist.php';
 $wgAutoloadClasses['SpamBlacklistHooks'] = $dir . 'SpamBlacklistHooks.php';
 $wgAutoloadClasses['SpamBlacklist'] = $dir . 'SpamBlacklist_body.php';
 $wgAutoloadClasses['SpamRegexBatch'] = $dir . 'SpamRegexBatch.php';

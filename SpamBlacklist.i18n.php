@@ -23,11 +23,30 @@ $messages['en'] = array(
 # External URLs matching this list will *not* be blocked even if they would
 # have been blocked by blacklist entries.
 #
+ #</pre> <!-- leave this line exactly as it is -->',
+	'email-blacklist' => ' # Emails matching this list will be blocked from registering or sending email
+ # This list affects only this wiki; refer also to the global blacklist.
+ # For documentation see http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- leave this line exactly as it is --> <pre>
+#
 # Syntax is as follows:
 #   * Everything from a "#" character to the end of the line is a comment
 #   * Every non-blank line is a regex fragment which will only match hosts inside URLs
 
  #</pre> <!-- leave this line exactly as it is -->',
+	'email-whitelist' => ' #<!-- leave this line exactly as it is --> <pre>
+# Emails matching this list will *not* be blocked even if they would
+# have been blocked by blacklist entries.
+#
+ #</pre> <!-- leave this line exactly as it is -->',
+# Syntax is as follows:
+#   * Everything from a "#" character to the end of the line is a comment
+#   * Every non-blank line is a regex fragment which will only match hosts inside URLs
+
+	'spam-blacklisted-email' => 'Blacklisted E-mail',
+	'spam-blacklisted-email-text' => 'Your e-mail address is currently blacklisted from sending e-mails to other users.',
+	'spam-blacklisted-email-signup' => 'The e-mail address given is currently blacklisted from use.',
+
 	'spam-invalid-lines' =>	"The following spam blacklist {{PLURAL:$1|line is an|lines are}} invalid regular {{PLURAL:$1|expression|expressions}} and {{PLURAL:$1|needs|need}} to be corrected before saving the page:",
 	'spam-blacklist-desc' => 'Regex-based anti-spam tool: [[MediaWiki:Spam-blacklist]] and [[MediaWiki:Spam-whitelist]]',
 );
@@ -40,6 +59,11 @@ $messages['en'] = array(
 $messages['qqq'] = array(
 	'spam-blacklist' => "See also: [[MediaWiki:spam-whitelist]] and [[MediaWiki:captcha-addurl-whitelist]]. You can translate the text, including 'Leave this line exactly as it is'. Some lines of this messages have one (1) leading space.",
 	'spam-whitelist' => "See also: [[MediaWiki:spam-blacklist]] and [[MediaWiki:captcha-addurl-whitelist]]. You can translate the text, including 'Leave this line exactly as it is'. Some lines of this messages have one (1) leading space.",
+
+	'spam-blacklisted-email' => 'Title of errorpage when trying to send an email with a blacklisted email',
+	'spam-blacklisted-email-text' => 'Text of errorpage when trying to send an email with a blacklisted email',
+	'spam-blacklisted-email-signup' => 'Error when trying to create an account with an invalid email',
+
 	'spam-blacklist-desc' => '{{desc}}',
 );
 

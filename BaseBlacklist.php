@@ -43,6 +43,7 @@ abstract class BaseBlacklist {
 	 */
 	private static $blacklistTypes = array(
 		'spam' => 'SpamBlacklist',
+		'email' => 'EmailBlacklist',
 	);
 
 	/**
@@ -121,7 +122,7 @@ abstract class BaseBlacklist {
 	 * @param Title $title
 	 * @return bool
 	 */
-	public static function isLocalSource( $title ) {
+	public static function isLocalSource( Title $title ) {
 		global $wgDBname, $wgBlacklistSettings;
 
 		if( $title->getNamespace() == NS_MEDIAWIKI ) {
@@ -168,6 +169,23 @@ abstract class BaseBlacklist {
 	}
 
 	/**
+	 * Returns the type of blacklist from the given title
+	 *
+	 * @param Title $title
+	 * @return bool|string
+	 */
+	public static function getTypeFromTitle( Title $title ) {
+		$types = array_map( 'preg_quote', array_keys( self::$blacklistTypes ), array( '/' ) );
+		$regex = '/(' . implode( '|', $types ).  ')-(?:Blacklist|Whitelist)/';
+
+		if ( preg_match( $regex, $title->getDBkey(), $m ) ) {
+			return strtolower( $m[1] );
+		}
+
+		return false;
+	}
+
+	/**
 	 * Fetch local and (possibly cached) remote blacklists.
 	 * Will be cached locally across multiple invocations.
 	 * @return array set of regular expressions, potentially empty.
@@ -187,7 +205,7 @@ abstract class BaseBlacklist {
 	 * @return array Regular expressions
 	 */
 	public function getLocalBlacklists() {
-		return SpamRegexBatch::regexesFromMessage( "{$this->getBlacklistType()}-blacklist" );
+		return SpamRegexBatch::regexesFromMessage( "{$this->getBlacklistType()}-blacklist", $this );
 	}
 
 	/**
@@ -196,7 +214,7 @@ abstract class BaseBlacklist {
 	 * @return array Regular expressions
 	 */
 	public function getWhitelists() {
-		return SpamRegexBatch::regexesFromMessage( "{$this->getBlacklistType()}-whitelist" );
+		return SpamRegexBatch::regexesFromMessage( "{$this->getBlacklistType()}-whitelist", $this );
 	}
 
 	/**
@@ -263,7 +281,7 @@ abstract class BaseBlacklist {
 			// there's a bad line in one of them we'll gain more
 			// from only having to break that set into smaller pieces.
 			$regexes = array_merge( $regexes,
-				SpamRegexBatch::regexesFromText( $text, $fileName ) );
+				SpamRegexBatch::regexesFromText( $text, $this, $fileName ) );
 		}
 
 		return $regexes;
@@ -331,6 +349,25 @@ abstract class BaseBlacklist {
 		}
 		$dbr->selectDB( $wgDBname );
 		return strval( $text );
+	}
+
+	/**
+	 * Returns the start of the regex for matches
+	 *
+	 * @return string
+	 */
+	public function getRegexStart() {
+		return '/[a-z0-9_\-.]*';
+	}
+
+	/**
+	 * Returns the end of the regex for matches
+	 *
+	 * @param $batchSize
+	 * @return string
+	 */
+	public function getRegexEnd( $batchSize ) {
+		return ($batchSize > 0 ) ? '/Sim' : '/im';
 	}
 
 }

@@ -98,7 +98,7 @@ class SpamBlacklist extends BaseBlacklist {
 					$ip = wfGetIP();
 					wfDebugLog( 'SpamBlacklistHit', "$ip caught submitting spam: {$matches[0]}\n" );
 					$retVal = $matches[0];
-					break;
+				break;
 				}
 			}
 		} else {
@@ -127,5 +127,24 @@ class SpamBlacklist extends BaseBlacklist {
 			$links[] = $row->el_to;
 		}
 		return $links;
+	}
+
+	/**
+	 * Returns the start of the regex for matches
+	 *
+	 * @return string
+	 */
+	public function getRegexStart() {
+		return '/(?:https?:)?\/\/+[a-z0-9_\-.]*(';
+	}
+
+	/**
+	 * Returns the end of the regex for matches
+	 *
+	 * @param $batchSize
+	 * @return string
+	 */
+	public function getRegexEnd( $batchSize ) {
+		return ')' . parent::getRegexEnd( $batchSize );
 	}
 }
