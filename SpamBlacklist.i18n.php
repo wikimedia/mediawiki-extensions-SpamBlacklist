@@ -71,7 +71,7 @@ $messages['qqq'] = array(
 $messages['an'] = array(
 	'spam-blacklist' => " # As URLs externas que concuerden con ista lista serán bloqueyatas quan s'encluyan en una pachina.
  # Ista lista afecta sólo ta ista wiki; mire-se tamién a lista negra global.
- # Más decumentación en http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Más decumentación en https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- leave this line exactly as it is --> <pre>
 #
 # A sintaxi ye asinas:
@@ -99,7 +99,7 @@ $messages['an'] = array(
 $messages['ar'] = array(
 	'spam-blacklist' => ' # الوصلات الخارجية التي تطابق هذه القائمة سيتم منعها عند إضافتها لصفحة.
  # هذه القائمة تؤثر فقط على هذه الويكي؛ ارجع أيضا للقائمة السوداء العامة.
- # للوثائق انظر http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # للوثائق انظر https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- اترك هذا السطر تماما كما هو --> <pre>
 #
 # الصيغة كالتالي:
@@ -127,7 +127,7 @@ $messages['ar'] = array(
 $messages['arz'] = array(
 	'spam-blacklist' => ' # اللينكات الخارجية اللى بتطابق الليستة دى ح تتمنع لما تضاف لصفحة.
  # اللستة دى بتأثر بس على الويكى دى؛ ارجع كمان للبلاك ليست العامة.
- # للوثايق شوف http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # للوثايق شوف https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- سيب السطر دا زى ما هو كدا بالظبط--> <pre>
 #
 # الصيغة كدا:
@@ -150,18 +150,19 @@ $messages['arz'] = array(
 
 /** Asturian (Asturianu)
  * @author Esbardu
+ * @author Xuacu
  */
 $messages['ast'] = array(
-	'spam-blacklist' => " # Les URLs esternes d'esta llista sedrán bloquiaes cuando s'añadan a una páxina.
+	'spam-blacklist' => ' # Les URLs que casen con esta llista se bloquiarán cuando s\'añadan a una páxina.
  # Esta llista afeuta namái a esta wiki; mira tamién la llista negra global.
- # Pa obtener documentación vete a http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Pa ver la documentación visita https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- dexa esta llinia exautamente como ta --> <pre>
 #
 # La sintaxis ye ésta:
-#  * Tol testu dende un caráuter \"#\" hasta lo cabero la llina ye un comentariu
-#  * Toa llinia non vacia ye un fragmentu regex qu'afeuta namái a les URLs especificaes
+#  * Tol testu dende un caráuter "#" hasta lo cabero la llinia ye un comentariu
+#  * Toa llinia non balera ye un fragmentu regex qu\'afeuta namái a los sirvidores de les URLs
 
- #</pre> <!-- dexa esta llinia exautamente como ta -->",
+ #</pre> <!-- dexa esta llinia exautamente como ta -->',
 	'spam-whitelist' => " #<!-- dexa esta llinia exautamente como ta --> <pre>
 # Les URLs esternes d'esta llista *nun* sedrán bloquiaes inda si lo fueron per aciu
 # d'una entrada na llista negra.
@@ -171,6 +172,23 @@ $messages['ast'] = array(
 #  * Toa llinia non vacia ye un fragmentu regex qu'afeuta namái a les URLs especificaes
 
  #</pre> <!-- dexa esta llinia exautamente como ta -->",
+	'email-blacklist' => ' # Los correos que casen con esta llista tendrán torgao rexistrase o unviar corréu.
+ # Esta llista afeuta namái a esta wiki; mira tamién la llista negra global.
+ # Pa ver la documentación visita https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- dexa esta llinia exautamente como ta --> <pre>
+#
+# La sintaxis ye esta:
+#  * Tol testu dende un caráuter "#" hasta lo cabero la llinia ye un comentariu
+#  * Toa llinia non balera ye un fragmentu regex qu\'afeuta namái a los sirvidores de les URLs
+
+ #</pre> <!-- dexa esta llinia exautamente como ta -->',
+	'email-whitelist' => ' #<!-- Dexa esta llinia tal y como ta --> <pre>
+# Los correos que casen con esta llista *nun* se bloquiarán, incluío si
+# los hubieren bloquiao entraes de la llista negra.
+#
+ #</pre> <!-- Dexa esta llinia tal y como ta -->',
+	'spam-blacklisted-email' => 'Corréu electrónicu de la llista negra',
+	'spam-blacklisted-email-text' => 'El to corréu electrónicu anguaño ta na llista negra y nun pue unviar correos electrónicos a otros usuarios.',
 	'spam-invalid-lines' => '{{PLURAL:$1|La siguiente llinia|Les siguientes llinies}} de la llista negra de spam {{PLURAL:$1|ye una espresión regular non válida|son espresiones regulares non válides}} y {{PLURAL:$1|necesita ser correxida|necesiten ser correxíes}} enantes de guardar la páxina:',
 	'spam-blacklist-desc' => "Ferramienta antispam basada n'espresiones regulares: [[MediaWiki:Spam-blacklist]] y [[MediaWiki:Spam-whitelist]]",
 );
@@ -181,7 +199,7 @@ $messages['ast'] = array(
 $messages['ba'] = array(
 	'spam-blacklist' => ' # Был исемлеккә тап килгән тышҡы һылтанмаларҙы биттәргә өҫтәү тыйыласаҡ.
  # Был исемлек ошо вики өсөн генә ғәмәлгә эйә, шулай уҡ дөйөм ҡара исемлек бар.
- # Тулыраҡ мәғлүмәт өсөн http://www.mediawiki.org/wiki/Extension:SpamBlacklist ҡарағыҙ
+ # Тулыраҡ мәғлүмәт өсөн https://www.mediawiki.org/wiki/Extension:SpamBlacklist ҡарағыҙ
  #<!-- был юлды үҙгәртмәгеҙ --><pre>
 #
 # Синтаксис:
@@ -215,7 +233,7 @@ $messages['be-tarask'] = array(
 	'spam-blacklist' => ' # Вонкавыя спасылкі, якія будуць адпавядаць гэтаму сьпісу, будуць блякавацца пры 
  # спробе даданьня на старонку.
  # Гэты сьпіс будзе дзейнічаць толькі ў гэтай вікі; існуе таксама і глябальны чорны сьпіс.
- # Дакумэнтацыю гэтай функцыі глядзіце на http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Дакумэнтацыю гэтай функцыі глядзіце на https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- пакіньце гэты радок такім, які ён ёсьць --> <pre>
 #
 # Сынтаксіс наступны:
@@ -234,6 +252,30 @@ $messages['be-tarask'] = array(
 # ў дачыненьні да назваў сэрвэраў у вонкавых спасылках
 
  #</pre> <!-- пакіньце гэты радок такім, які ён ёсьць -->',
+	'email-blacklist' => ' # Электронныя лісты, якія будуць адпавядаць гэтаму сьпісу, будуць блякавацца пры 
+ # спробе адпраўкі.
+ # Гэты сьпіс будзе дзейнічаць толькі ў гэтай вікі; існуе таксама і глябальны чорны сьпіс.
+ # Дакумэнтацыю гэтай функцыі глядзіце на https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- пакіньце гэты радок такім, які ён ёсьць --> <pre>
+#
+# Сынтаксіс наступны:
+#  * Усё, што пачынаецца з «#» і да канца радку, зьяўляецца камэнтарам
+#  * Усе непустыя радкі зьяўляюцца часткамі рэгулярнага выразу, які будзе выкарыстоўвацца толькі
+# ў дачыненьні да назваў сэрвэраў у электронных лістах
+
+ #</pre> <!-- пакіньце гэты радок такім, які ён ёсьць -->',
+	'email-whitelist' => ' #<!-- пакіньце гэты радок такім, які ён ёсьць --> <pre>
+ # Электронныя лісты, якія будуць адпавядаць гэтаму сьпісу, ня будуць блякавацца, нават  
+ # калі яны будуць у чорным сьпісе. 
+ #
+ #</pre> <!-- пакіньце гэты радок такім, які ён ёсьць -->
+# Сынтаксіс наступны:
+#  * Усё, што пачынаецца з «#» і да канца радку, зьяўляецца камэнтарам
+#  * Усе непустыя радкі зьяўляюцца часткамі рэгулярнага выразу, які будзе выкарыстоўвацца толькі
+# ў дачыненьні да назваў сэрвэраў у электронных лістах',
+	'spam-blacklisted-email' => 'Адрасы электроннай пошты з чорнага сьпісу',
+	'spam-blacklisted-email-text' => 'З Вашага адрасу электроннай пошты ў цяперашні момант забаронена дасылаць электронныя лісты іншым удзельнікам.',
+	'spam-blacklisted-email-signup' => 'Пададзены Вамі адрас электроннай пошты ў цяперашні момант знаходзіцца ў чорным сьпісе.',
 	'spam-invalid-lines' => '{{PLURAL:$1|Наступны радок чорнага сьпісу ўтрымлівае няслушны рэгулярны выраз|Наступныя радкі чорнага сьпісу ўтрымліваюць няслушныя рэгулярныя выразы}} і {{PLURAL:$1|павінен быць|павінныя быць}} выпраўлены перад захаваньнем старонкі:',
 	'spam-blacklist-desc' => 'Антыспамавы інструмэнт, які базуецца на рэгулярных выразах: [[MediaWiki:Spam-blacklist]] і [[MediaWiki:Spam-whitelist]]',
 );
@@ -261,7 +303,7 @@ $messages['bn'] = array(
 	'spam-blacklist' => '
  # এই তালিকার সাথে মিলে যায় এমন বহিঃসংযোগ URLগুলি পাতায় যোগ করতে বাধা দেয়া হবে।
  # এই তালিকাটি কেবল এই উইকির ক্ষেত্রে প্রযোজ্য; সামগ্রিক কালোতালিকাও দেখতে পারেন।
- # ডকুমেন্টেশনের জন্য http://www.mediawiki.org/wiki/Extension:SpamBlacklist দেখুন
+ # ডকুমেন্টেশনের জন্য https://www.mediawiki.org/wiki/Extension:SpamBlacklist দেখুন
  #<!-- leave this line exactly as it is --> <pre>
 #
 # সিনট্যাক্স নিচের মত:
@@ -288,7 +330,7 @@ $messages['bn'] = array(
 $messages['br'] = array(
 	'spam-blacklist' => '  # Stanket e vo an URLoù diavaez a glot gant ar roll-mañ ma vezont ouzhpennet en ur bajenn.
   # Ne sell ar roll-mañ nemet ouzh ar wiki-mañ ; sellit ivez ouzh al listenn zu hollek.
-  # Aze emañ an titouroù http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  # Aze emañ an titouroù https://www.mediawiki.org/wiki/Extension:SpamBlacklist
   #<!-- leave this line exactly as it is --> <pre>
 #
 # Setu doare an ereadur :
@@ -315,7 +357,7 @@ $messages['br'] = array(
 $messages['bs'] = array(
 	'spam-blacklist' => '# Vanjski URLovi koji odgovaraju ovom spisku će biti blokirani ako se dodaju na stranicu.
  # Ovaj spisak će biti aktivan samo na ovoj wiki; a poziva se i na globalni zabranjeni spisak.
- # Za objašenjenja i dokumentaciju pogledajte http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Za objašenjenja i dokumentaciju pogledajte https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- ostavite ovaj red tačno onako kakav je --> <pre>
 #
 # Sintaksa je slijedeća:
@@ -344,7 +386,7 @@ $messages['bs'] = array(
 $messages['ca'] = array(
 	'spam-blacklist' => ' # Les URLs externes coincidents amb aquesta llista seran bloquejades en ser afegides a una pàgina.
  # Aquesta llista afecta només a aquesta wiki; vegeu també la llista negra global.
- # Per a més informació vegeu http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Per a més informació vegeu https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- deixeu aquesta línia exactament com està --> <pre>
 #
 # La sintaxi és com segueix:
@@ -373,7 +415,7 @@ $messages['ca'] = array(
 $messages['cs'] = array(
 	'spam-blacklist' => ' # Externí URL odpovídající tomuto seznamu budou zablokovány při pokusu přidat je na stránku.
  # Tento seznam ovlivňuje jen tuto wiki; podívejte se také na globální černou listinu.
- # Dokumentaci najdete na http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Dokumentaci najdete na https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Nechte tento řádek přesně tak jak je --> <pre>
 #
 # Syntaxe je následující:
@@ -390,23 +432,27 @@ $messages['cs'] = array(
 #  * Každý neprázdný řádek je část regulárního výrazu, kterému budou odpovídat pouze domény z URL
 
  #</pre> <!-- nechejte tento řádek přesně tak jak je -->',
-	'email-blacklist' => ' # E-mailům vyhovující tomuto seznamu nebude možno zaregistrovat ani odesílat e-mail.
+	'email-blacklist' => ' # Z e-mailů vyhovujících tomuto seznamu nebude možno zaregistrovat účet ani odesílat e-mail.
  # Tento seznam ovlivňuje jen tuto wiki; vizte také globální černou listinu.
- # Dokumentaci najdete na http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Dokumentaci najdete na https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- tuto řádku ponechte přesně tak, jak je --> <pre>
 #
 # Syntaxe je následující:
 #  * Všechno od znaku „#“ do konce řádku je komentář
-#  * Každý neprázdný řádek je část regulárního výrazu, kterému budou odpovídat pouze domény z URL
+#  * Každý neprázdný řádek je část regulárního výrazu, kterému budou odpovídat pouze domény v e-mailových adresách
 
  #</pre> <!-- tuto řádku ponechte přesně tak, jak je -->',
 	'email-whitelist' => ' #<!-- tuto řádku ponechte přesně tak, jak je --> <pre>
 # E-maily vyhovující tomuto seznamu *nebudou* blokovány, i kdyby
 # odpovídaly záznamům v černé listině.
 #
+# Syntaxe je následující:
+#  * Všechno od znaku „#“ do konce řádku je komentář
+#  * Každý neprázdný řádek je část regulárního výrazu, kterému budou odpovídat pouze domény v e-mailových adresách
  #</pre> <!-- tuto řádku ponechte přesně tak, jak je -->',
 	'spam-blacklisted-email' => 'E-mail na černé listině',
 	'spam-blacklisted-email-text' => 'Vaše e-mailová adresa je momentálně uvedena na černé listině, takže ostatním uživatelům nemůžete posílat e-maily.',
+	'spam-blacklisted-email-signup' => 'Uvedená e-mailová adresa je v současné době na černé listině.',
 	'spam-invalid-lines' => 'Na černé listině spamu {{PLURAL:$1|je následující řádka neplatný regulární výraz|jsou následující řádky neplatné regulární výrazy|jsou následující řádky regulární výrazy}} a je nutné {{PLURAL:$1|ji|je|je}} před uložením stránky opravit :',
 	'spam-blacklist-desc' => 'Antispamový nástroj na základě regulárních výrazů: [[MediaWiki:Spam-blacklist]] a [[MediaWiki:Spam-whitelist]]',
 );
@@ -417,7 +463,7 @@ $messages['cs'] = array(
 $messages['cy'] = array(
 	'spam-blacklist' => "# Dyma restr o gyfeiriadau URL allanol; os osodir un o'r rhain ar dudalen fe gaiff ei flocio.
  # Ar gyfer y wici hwn yn unig mae'r rhestr hon; mae rhestr gwaharddedig led-led yr holl wicïau i'w gael.
- # Gweler http://www.mediawiki.org/wiki/Extension:SpamBlacklist am ragor o wybodaeth.
+ # Gweler https://www.mediawiki.org/wiki/Extension:SpamBlacklist am ragor o wybodaeth.
  #<!-- leave this line exactly as it is --> <pre>
 #
 # Dyma'r gystrawen:
@@ -501,7 +547,7 @@ $messages['de-formal'] = array(
 $messages['diq'] = array(
 	'spam-blacklist' => '  #gıreyê teber ê ke na liste de zêpi bi bloke beni.
   # na liste tena no wiki re tesir beno.
-  # Dokümantasyon: http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  # Dokümantasyon: https://www.mediawiki.org/wiki/Extension:SpamBlacklist
   #<!-- no satır zey xo verdê --> <pre>
 #
 # rêzvateyê ey zey cêr o.:
@@ -528,7 +574,7 @@ $messages['diq'] = array(
 $messages['dsb'] = array(
 	'spam-blacklist' => ' # Eksterne URL, kótarež su w toś tej lisćinje, blokěruju se, gaž pśidawaju se bokoju.
  # Toś ta lisćina nastupa jano toś ten wiki; glědaj teke globalnu cornu lisćinu.
- # Za dokumentaciju glědaj http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Za dokumentaciju glědaj https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Wóstaj toś tu smužka rowno tak ako jo --><pre>
 #
 # Syntaksa jo ako slědujo:
@@ -555,7 +601,7 @@ $messages['dsb'] = array(
 $messages['el'] = array(
 	'spam-blacklist' => ' # Εξωτερικά URLs που ταιριάζουν σε αυτή τη λίστα θα φραγούν όταν προστίθενται σε μία σελίδα.
  # Αυτή η λίστα επηρεάζει μόνο αυτό το wiki· αναφερθείτε επίσης στην καθολική μαύρη λίστα.
- # Για τεκμηρίωση δείτε τον σύνδεσμο http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Για τεκμηρίωση δείτε τον σύνδεσμο https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- leave this line exactly as it is --> <pre>
 #
 # Η σύνταξη είναι ως ακολούθως:
@@ -586,7 +632,7 @@ $messages['eo'] = array(
  #<!-- ne ŝanĝu ĉi tiun linion iel ajn --> <pre>
 # Eksteraj URL-oj kongruante al ĉi tiuj listanoj estos forbarita kiam aldonita al paĝo.
 # Ĉi tiu listo nur regnas ĉi tiun vikion; ankaux aktivas la ĝenerala nigralisto.
- # Por dokumentaro, rigardu http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Por dokumentaro, rigardu https://www.mediawiki.org/wiki/Extension:SpamBlacklist
 #
 # Jen la sintakso:
 #  * Ĉio ekde "#" signo al la fino de linio estas komento
@@ -612,7 +658,7 @@ $messages['eo'] = array(
 $messages['es'] = array(
 	'spam-blacklist' => ' # Enlaces externos que coincidan con esta lista serán bloqueados al añadirse a una página
  # Esta lista afecta sólo a esta wiki; 
- # Para documentación mire http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Para documentación mire https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Deje esta línea exactamente como está --> <pre>
 #
 # La sintaxis es:
@@ -639,7 +685,7 @@ $messages['es'] = array(
 $messages['et'] = array(
 	'spam-blacklist' => ' # Sellele nimekirjale vastavad internetiaadressid blokeeritakse.
  # See nimekiri puudutab ainult seda vikit; uuri ka globaalse musta nimekirja kohta.
- # Dokumentatsioon on asukohas http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Dokumentatsioon on asukohas https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Jäta see rida muutmata kujule. --> <pre>
 #
 # Süntaks on järgmine:
@@ -668,7 +714,7 @@ $messages['et'] = array(
 $messages['fa'] = array(
 	'spam-blacklist' => ' # از درج پیوندهای بیرونی که با این فهرست مطابقت کنند جلوگیری می‌شود.
  # این فهرست فقط روی همین ویکی اثر دارد؛ به فهرست سیاه سراسری نیز مراجعه کنید.
- # برای مستندات به http://www.mediawiki.org/wiki/Extension:SpamBlacklist مراجعه کنید
+ # برای مستندات به https://www.mediawiki.org/wiki/Extension:SpamBlacklist مراجعه کنید
  #<!-- این سطر را همان‌گونه که هست رها کنید --> <pre>
 # دستورات به این شکل هستند:
 #  * همه چیز از «#» تا پایان سطر به عنوان توضیح در نظر گرفته می‌شود
@@ -695,7 +741,7 @@ $messages['fa'] = array(
 $messages['fi'] = array(
 	'spam-blacklist' => ' # Tämän listan säännöillä voi estää ulkopuolisiin sivustoihin viittaavien osoitteiden lisäämisen.
  # Tämä lista koskee vain tätä wikiä. Tutustu myös globaaliin mustaan listaan.
- # Lisätietoja on osoitteessa http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Lisätietoja on osoitteessa https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Älä koske tähän riviin lainkaan --> <pre>
 #
 # Syntaksi on seuraavankaltainen:
@@ -723,7 +769,7 @@ $messages['fi'] = array(
 $messages['fr'] = array(
 	'spam-blacklist' => ' # Les liens externes faisant partie de cette liste seront bloqués lors de leur insertion dans une page.
  # Cette liste n’affecte que ce wiki ; référez-vous aussi à la liste noire globale.
- # La documentation se trouve à l’adresse suivante : http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # La documentation se trouve à l’adresse suivante : https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Laissez cette ligne telle quelle --><pre>
 #
 # La syntaxe est la suivante :
@@ -742,7 +788,7 @@ $messages['fr'] = array(
  #</pre> <!--Laissez cette ligne telle quelle -->',
 	'email-blacklist' => " # Les adresses de courriel correspondant à cette liste seront bloquées lors l'enregistrement ou de l'envoi d'un courriel
  # Cette liste n’affecte que ce wiki ; référez-vous aussi à la liste noire globale.
- # La documentation se trouve à l’adresse suivante : http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # La documentation se trouve à l’adresse suivante : https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Laissez cette ligne telle quelle --><pre>
 #
 # La syntaxe est la suivante :
@@ -768,7 +814,7 @@ $messages['fr'] = array(
 $messages['frp'] = array(
 	'spam-blacklist' => ' # Los lims hipèrtèxtos de defôr que sont dens ceta lista seront blocâs pendent lor entrebetâ dens una pâge.
  # Ceta lista afècte ren que ceti vouiqui ; refèrâd-vos asse-ben a la lista nêre globâla.
- # La documentacion sè trove a ceta adrèce : http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # La documentacion sè trove a ceta adrèce : https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- lèssiéd ceta legne justo d’ense --> <pre>
 #
 # La sintaxa est ceta :
@@ -797,7 +843,7 @@ $messages['frp'] = array(
 $messages['gl'] = array(
 	'spam-blacklist' => ' # As ligazóns externas que coincidan na súa totalidade ou en parte con algún rexistro desta lista serán bloqueadas cando se intenten engadir a unha páxina.
  # Esta lista afecta unicamente a este wiki; tamén existe unha lista global.
- # Para obter máis documentación vaia a http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Para obter máis documentación vaia a https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Deixe esta liña tal e como está --> <pre>
 #
 # A sintaxe é a seguinte:
@@ -816,19 +862,23 @@ $messages['gl'] = array(
  #</pre> <!-- Deixe esta liña tal e como está -->',
 	'email-blacklist' => ' # Os enderezos de correo electrónico que coincidan na súa totalidade ou en parte con algún rexistro desta lista serán bloqueadas cando se intenten rexistrar ou se intente enviar un correo desde eles.
  # Esta lista afecta unicamente a este wiki; tamén existe unha lista global.
- # Para obter máis documentación vaia a http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Para obter máis documentación vaia a https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Deixe esta liña tal e como está --> <pre>
 #
 # A sintaxe é a seguinte:
 #   * Todo o que vaia despois dun carácter "#" ata o final da liña é un comentario
-#   * Toda liña que non estea en branco é un fragmento de expresión regular que só coincide con dominios dentro de enderezos URL
+#   * Toda liña que non estea en branco é un fragmento de expresión regular que só coincide con dominios dentro de enderezos de correo electrónico
 
  #</pre> <!-- Deixe esta liña tal e como está -->',
 	'email-whitelist' => ' #<!-- Deixe esta liña tal e como está --> <pre>
 # Os enderezos de correo electrónico que coincidan con algún desta lista *non* serán bloqueados,
 # mesmo se foron bloqueados por entradas da lista negra.
 #
- #</pre> <!-- Deixe esta liña tal e como está -->',
+ #</pre> <!-- Deixe esta liña tal e como está -->
+#
+# A sintaxe é a seguinte:
+#   * Todo o que vaia despois dun carácter "#" ata o final da liña é un comentario
+#   * Toda liña que non estea en branco é un fragmento de expresión regular que só coincide con dominios dentro de enderezos de correo electrónico',
 	'spam-blacklisted-email' => 'Enderezo de correo electrónico presente na lista negra',
 	'spam-blacklisted-email-text' => 'O seu enderezo de correo electrónico atópase na lista negra e non pode enviar correos electrónicos aos outros usuarios.',
 	'spam-blacklisted-email-signup' => 'O enderezo de correo electrónico especificado está na lista negra e non se pode empregar.',
@@ -842,7 +892,7 @@ $messages['gl'] = array(
 $messages['gsw'] = array(
 	'spam-blacklist' => ' # Externi URL, wu in däre Lischt sin, blockiere s Spychere vu dr Syte.
  # Die Lischt giltet nume fir des Wiki; lueg au di wältwyt Blacklist.
- # Fir d Dokumentation lueg http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Fir d Dokumentation lueg https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Die Zyylete derf nit gänderet wäre! --> <pre>
 #
 # Syntax:
@@ -869,7 +919,7 @@ $messages['gsw'] = array(
 $messages['he'] = array(
 	'spam-blacklist' => ' # כתובות URL חיצוניות התואמות לרשימה זו ייחסמו בעת הוספתן לדף.
  # רשימה זו משפיעה על אתר זה בלבד; שימו לב גם לרשימה הכללית.
- # לתיעוד ראו http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # לתיעוד ראו https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- נא להשאיר שורה זו בדיוק כפי שהיא --> <pre>
 #
 # התחביר הוא כדלקמן:
@@ -887,7 +937,7 @@ $messages['he'] = array(
  #</pre> <!-- נא להשאיר שורה זו בדיוק כפי שהיא -->',
 	'email-blacklist' => '  # עבור כתובות הדואר האלקטרוני המתאימות לרשימה זו תיחסם האפשרות להירשם ולשלוח דואר אלקטרוני
  # רשימה זו משפיעה רק על ויקי זה; שימו לב גם לרשימה הגלובלית.
- # לתיעוד ראו http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # לתיעוד ראו https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- leave this line exactly as it is --> <pre>
 #
 # התחביר הוא כדלקמן:
@@ -907,7 +957,7 @@ $messages['he'] = array(
 $messages['hi'] = array(
 	'spam-blacklist' => ' #इस सूची में मौजूद कडियाँ जब एक पृष्ठ में जोड़ी गई बाहरी URLs से मेल खाती है तब वह पृष्ठ संपादन से बाधित हो जायेगा।
  #यह सूची केवल इस विकी पर ही प्रभावी है, विश्वव्यापी ब्लैकलिस्ट को भी उद्धृत करें।
- #प्रलेखन के लिए http://www.mediawiki.org/wiki/Extension:SpamBlacklist देखें
+ #प्रलेखन के लिए https://www.mediawiki.org/wiki/Extension:SpamBlacklist देखें
  #<!-- इस पंक्तीं को ऐसे के ऐसे ही रहने दें --> <pre>
 #
 #वाक्य विश्लेषण निम्नांकित है:
@@ -935,7 +985,7 @@ $messages['hi'] = array(
 $messages['hr'] = array(
 	'spam-blacklist' => ' # Vanjske URLovi koji budu pronađeni pomoću ovog popisa nije moguće snimiti na stranicu wikija.
  # Ovaj popis utiče samo na ovaj wiki; provjerite globalnu "crnu listu".
- # Za dokumentaciju pogledajte http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Za dokumentaciju pogledajte https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- leave this line exactly as it is --> <pre>
 #
 # Rabi se slijedeća sintaksa:
@@ -962,7 +1012,7 @@ $messages['hr'] = array(
 $messages['hsb'] = array(
 	'spam-blacklist' => ' # Eksterne URL, kotrež su w lisćinje wobsahowane, blokuja składowanje strony.
  # Tuta lisćina nastupa jenož tutón Wiki; hlej tež globalnu čornu lisćinu.
- # Za dokumentaciju hlej http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Za dokumentaciju hlej https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Tuta linka njesmě so změnić! --> <pre>
 #
 # Syntaksa:
@@ -979,21 +1029,24 @@ $messages['hsb'] = array(
 #   * Kóžda njeprózdna linka je regularny wuraz, kotryž so přećiwo mjenu hosta w URL pruwuje.
 
  #</pre> <!-- Tuta linka njesmě so změnić! -->',
-	'email-blacklist' => ' # E-mejlowe adresy, kotrež su w lisćinje wobsahowane, blokuja registrowanje a słanje e-mejlkow.
+	'email-blacklist' => '# E-mejlowe adresy, kotrež su w lisćinje wobsahowane, blokuja registrowanje a słanje e-mejlkow.
  # Tuta lisćina nastupa jenož tutón Wiki; hlej tež globalnu čornu lisćinu.
- # Za dokumentaciju hlej http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Za dokumentaciju hlej https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Tuta linka njesmě so změnić! --> <pre>
 #
 # Syntaksa:
 #   * Wšitko wot znamjenja "#" hač ke kóncej linki je komentar
-#   * Kóžda njeprózdna linka je regularny wuraz, kotryž so přećiwo mjenu hosta w URL pruwuje.
+#   * Kóžda njeprózdna linka je regularny wuraz, kotryž so přećiwo mjenu hosta w e-mejlach pruwuje.
 
  #</pre> <!-- Tuta linka njesmě so změnić! -->',
-	'email-whitelist' => ' #<!-- Tuta linka njesmě so změnić! --> <pre>
+	'email-whitelist' => '#<!-- Tuta linka njesmě so změnić! --> <pre>
 # E-mejlowe adresy, kotrež su w tutej lisćinje, *nje*blokuja so, byrnjež so 
 # přez zapiski čornje lisćiny blokowali.
 #
- #</pre> <!-- Tuta linka njesmě so změnić! -->',
+ #</pre> <!-- Tuta linka njesmě so změnić! -->
+# Syntaksa je slědowaca:
+# * Wšitko wot znamješka "#" ke kóncej linki je komentar
+# * Kóžda njeprózdna linka je regularny wuraz, kotryž jenož hostam znutřka e-mejlow wotpowěduje',
 	'spam-blacklisted-email' => 'E-mejlowe adresy w čornej lisćinje',
 	'spam-blacklisted-email-text' => 'Twoja e-mejlowa adresa je tuchwilu w čornej lisćinje a tohodla za słanje e-mejlow do druhich wužiwarjow zablokowana.',
 	'spam-blacklisted-email-signup' => 'Podata e-mejlowa adresa je tuchwilu přećiwo wužiwanju zablokowana.',
@@ -1007,7 +1060,7 @@ $messages['hsb'] = array(
 $messages['hu'] = array(
 	'spam-blacklist' => ' # A lista elemeire illeszkedő külső hivatkozások blokkolva lesznek
  # A lista csak erre a wikire vonatkozik; a globális feketelistába is tedd bele.
- # Dokumentációhoz lásd a http://www.mediawiki.org/wiki/Extension:SpamBlacklist oldalt (angolul)
+ # Dokumentációhoz lásd a https://www.mediawiki.org/wiki/Extension:SpamBlacklist oldalt (angolul)
  #<!-- ezen a soron ne változtass --> <pre>
 #
 # A szintaktika a következő:
@@ -1032,7 +1085,7 @@ $messages['hu'] = array(
 $messages['ia'] = array(
 	'spam-blacklist' => ' # Le adresses URL externe correspondente a iste lista es blocate de esser addite a un pagina.
  # Iste lista ha effecto solmente in iste wiki; refere te etiam al lista nigre global.
- # Pro documentation vide http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Pro documentation vide https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- non modificar in alcun modo iste linea --> <pre>
 #
 # Le syntaxe es lo sequente:
@@ -1051,7 +1104,7 @@ $messages['ia'] = array(
  #</pre> <!-- non modificar in alcun modo iste linea -->',
 	'email-blacklist' => ' # Le adresses de e-mail correspondente a iste lista es blocate de crear contos o inviar e-mail.
  # Iste lista ha effecto solmente in iste wiki; refere te etiam al lista nigre global.
- # Pro documentation vide http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Pro documentation vide https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- non modificar in alcun modo iste linea --> <pre>
 #
 # Le syntaxe es lo sequente:
@@ -1079,7 +1132,7 @@ $messages['id'] = array(
 	'spam-blacklist' => '
  # URL eksternal yang cocok dengan daftar berikut akan diblokir jika ditambahkan pada suatu halaman.
  # Daftar ini hanya berpengaruh pada wiki ini; rujuklah juga daftar hitam global.
- # Untuk dokumentasi, lihat http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Untuk dokumentasi, lihat https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- biarkan baris ini seperti adanya --> <pre>
 #
 # Sintaksnya adalah sebagai berikut:
@@ -1106,7 +1159,7 @@ $messages['id'] = array(
 $messages['ilo'] = array(
 	'spam-blacklist' => ' # Dagiti akinruar a URL a maipada iti daytoy a listaan ket maserraan to no mainayon ditoy a panid.
  # Daytoy a listaan ket tignayen na laeng daytoy a wiki; kitaen pay ti sangalubongan a blacklist.
- # Para iti dokumentasion kitaen ti http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Para iti dokumentasion kitaen ti https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- baybayan daytoy a linia --> <pre>
 #
 # Ti gramatika ket kasla dagiti sumaganad:
@@ -1133,7 +1186,7 @@ $messages['ilo'] = array(
 $messages['it'] = array(
 	'spam-blacklist' => ' # Le URL esterne al sito che corrispondono alla lista seguente verranno bloccate.
  # La lista è valida solo per questo sito; fare riferimento anche alla blacklist globale.
- # Per la documentazione si veda http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Per la documentazione si veda https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- non modificare in alcun modo questa riga --> <pre>
 # La sintassi è la seguente:
 #  * Tutto ciò che segue un carattere "#" è un commento, fino al termine della riga
@@ -1161,7 +1214,7 @@ $messages['it'] = array(
 $messages['ja'] = array(
 	'spam-blacklist' => ' # この一覧に掲載されている外部URLをページに追加すると編集をブロックします。
  # この一覧はこのウィキでのみ有効です。グローバル・ブラックリストも参照してください。
- # 利用方法は http://www.mediawiki.org/wiki/Extension:SpamBlacklist/ja をご覧ください。
+ # 利用方法は https://www.mediawiki.org/wiki/Extension:SpamBlacklist/ja をご覧ください。
  #<!-- この行は変更しないでください --> <pre>
 #
 # 構文は以下のとおりです:
@@ -1195,7 +1248,7 @@ $messages['jut'] = array(
 $messages['jv'] = array(
 	'spam-blacklist' => ' # URL eksternal sing cocog karo daftar iki bakal diblokir yèn ditambahaké ing sawijining kaca.
  # Daftar iki namung nduwé pangaruh ing wiki iki; ngrujuka uga daftar ireng global.
- # Kanggo dokumentasi, delengen http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Kanggo dokumentasi, delengen https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- lirwakna baris iki apa anané --> <pre>
 #
 # Sintaksisé kaya mengkéné:
@@ -1222,7 +1275,7 @@ $messages['jv'] = array(
 $messages['ka'] = array(
 	'spam-blacklist' => '  # ამ სიის შესაბამისი გარე ბმულები აიკრძალება გვერდებში შესატანად.
   # ეს სია მოქმედებს მარტო ამ ვიკისთვის, თუმცა არსებობს ასევე საერთო შავი სია.
-  # დამატებით ინფორმაცია გვერდზე http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  # დამატებით ინფორმაცია გვერდზე https://www.mediawiki.org/wiki/Extension:SpamBlacklist
   #<!-- არ შეასწოროთ ეს ხაზი --> <pre>
 #
 # სინტაქსისი:
@@ -1246,7 +1299,7 @@ $messages['ka'] = array(
 $messages['kk-arab'] = array(
 	'spam-blacklist' => ' # وسى تىزىمگە سايكەس سىرتقى URL جايلار بەتكە ۇستەۋدەن بۇعاتتالادى.
  # بۇل ٴتىزىم تەك مىنداعى ۋىيكىيگە اسەر ەتەدى; تاعى دا عالامدىق قارا ٴتىزىمدى قاراپ شىعىڭىز.
- # قۇجاتتاما ٴۇشىن http://www.mediawiki.org/wiki/Extension:SpamBlacklist بەتىن قاراڭىز
+ # قۇجاتتاما ٴۇشىن https://www.mediawiki.org/wiki/Extension:SpamBlacklist بەتىن قاراڭىز
  #<!-- بۇل جولدى بولعان جاعدايىمەن قالدىرىڭىز --> <pre>
 #
 # سىينتاكسىيسى كەلەسىدەي:
@@ -1272,7 +1325,7 @@ $messages['kk-arab'] = array(
 $messages['kk-cyrl'] = array(
 	'spam-blacklist' => ' # Осы тізімге сәйкес сыртқы URL жайлар бетке үстеуден бұғатталады.
  # Бұл тізім тек мындағы уикиге әсер етеді; тағы да ғаламдық қара тізімді қарап шығыңыз.
- # Құжаттама үшін http://www.mediawiki.org/wiki/Extension:SpamBlacklist бетін қараңыз
+ # Құжаттама үшін https://www.mediawiki.org/wiki/Extension:SpamBlacklist бетін қараңыз
  #<!-- бұл жолды болған жағдайымен қалдырыңыз --> <pre>
 #
 # Синтаксисі келесідей:
@@ -1296,7 +1349,7 @@ $messages['kk-cyrl'] = array(
 $messages['kk-latn'] = array(
 	'spam-blacklist' => ' # Osı tizimge säýkes sırtqı URL jaýlar betke üstewden buğattaladı.
  # Bul tizim tek mındağı wïkïge äser etedi; tağı da ğalamdıq qara tizimdi qarap şığıñız.
- # Qujattama üşin http://www.mediawiki.org/wiki/Extension:SpamBlacklist betin qarañız
+ # Qujattama üşin https://www.mediawiki.org/wiki/Extension:SpamBlacklist betin qarañız
  #<!-- bul joldı bolğan jağdaýımen qaldırıñız --> <pre>
 #
 # Sïntaksïsi kelesideý:
@@ -1324,7 +1377,7 @@ $messages['kk-latn'] = array(
 $messages['ko'] = array(
 	'spam-blacklist' => ' # 이 필터에 해당하는 URL을 문서에 넣을 경우 해당 편집의 저장을 자동으로 막습니다.
  # 이 필터는 여기 위키 내에서만 적용됩니다. 광역 블랙리스트 기능이 있을 경우 해당 목록도 작동합니다.
- # 자세한 내용은 http://www.mediawiki.org/wiki/Extension:SpamBlacklist (영어) 문서를 참고해 주세요.
+ # 자세한 내용은 https://www.mediawiki.org/wiki/Extension:SpamBlacklist (영어) 문서를 참고해 주세요.
  #<!-- 이 줄은 편집하지 말아 주세요. 문서 모양을 위한 줄입니다.--> <pre>
 # 
 # 문법은 다음과 같습니다.
@@ -1350,7 +1403,7 @@ $messages['ko'] = array(
 $messages['ksh'] = array(
 	'spam-blacklist' => ' # URLs noh ußerhallef uß dä Leß wäde nit zojelohße, wann se einer in en Sigg erin don well.
  # He di Liß eß bloß för dat Wiki joot. Loor Der och de jemeinsame „schwazze Leß“ aan.
- # Dokkementeet is dat op http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Dokkementeet is dat op https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Loß di Reih hee jenou esu wi se es --> <pre>
 # Dä Opbou es:
 # * Alles fun enem #-Zeiche bes an et Engk fun ene Reih es ene Kommentaa för de Minsche
@@ -1385,7 +1438,7 @@ $messages['li'] = array(
 	'spam-blacklist' => " # Externe URL's die voldoen aan deze lijst waere geweigerd bie 't
  # toevoege aan 'n pagina. Deze lijst haet allein invloed op deze wiki.
  # Er bestaot ouk 'n globale zwarte lijst.
- # Documentatie: http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Documentatie: https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- laot deze lien --> <pre>
 #
 # De syntax is as volg:
@@ -1414,7 +1467,7 @@ $messages['li'] = array(
 $messages['mk'] = array(
 	'spam-blacklist' => '# Надворешните URL адреси кои одговараат на наведеното на овој список ќе бидат блокирани кога ќе се постават на страница.
   # Овој список важи само за ова вики; погледајте ја и глобалниот црн список.
-  # За документација, видете http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  # За документација, видете https://www.mediawiki.org/wiki/Extension:SpamBlacklist
   #<!-- leave this line exactly as it is --> <pre>
 #
 # Синтаксата е следнава:
@@ -1433,7 +1486,7 @@ $messages['mk'] = array(
   #</pre> <!-- leave this line exactly as it is -->',
 	'email-blacklist' => ' # # На е-поштенските адреси што ќе се совпаднат со списоков *нема* ќе им биде забрането регистрирањето и испраќањето на пошта
  # Списоков важи само за ова вики; погледајте го и глобалниот црн список.
- # Документација ќе најдете на http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Документација ќе најдете на https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- не менувајте го овој ред --> <pre>
 #
 # Синтаксата е следнава:
@@ -1459,7 +1512,7 @@ $messages['mk'] = array(
 $messages['ml'] = array(
 	'spam-blacklist' => '# ഈ ലിസ്റ്റുമായി ഒത്തുപോകുന്ന പുറത്തേയ്ക്കുള്ള യൂ.ആർ.എല്ലുകൾ താളിൽ ചേർക്കപ്പെട്ടാൽ തടയുന്നതായിരിക്കും.
   # ഈ ലിസ്റ്റ് ഈ വിക്കിയ്ക്കു മാത്രം ബാധകമായ ഒന്നാണ്; ആഗോള കരിമ്പട്ടികയും പരിശോധിക്കുക.
-  # ഉപയോഗ സഹായിയ്ക്കായി http://www.mediawiki.org/wiki/Extension:SpamBlacklist കാണുക
+  # ഉപയോഗ സഹായിയ്ക്കായി https://www.mediawiki.org/wiki/Extension:SpamBlacklist കാണുക
   #<!-- ഈ വരിയിൽ മാറ്റം വരുത്തരുത് --> <pre>
 #
 # എഴുതേണ്ട രീതി താഴെ കൊടുക്കുന്നു:
@@ -1476,6 +1529,7 @@ $messages['ml'] = array(
 #  * റെജെക്സ് ഘടകത്തിലെ ശൂന്യമല്ലാത്ത വരികൾ എല്ലാം ആന്തരിക യൂ.ആർ.എല്ലുമായി ഒത്തു നോക്കുകയുള്ളു
 
   #</pre> <!-- ഈ വരി ഇതുപോലെ തന്നെ സൂക്ഷിക്കുക -->',
+	'spam-blacklisted-email' => 'കരിമ്പട്ടികയിൽ പെട്ട ഇമെയിൽ',
 	'spam-invalid-lines' => 'താഴെ കൊടുത്തിരിക്കുന്ന പാഴെഴുത്ത് കരിമ്പട്ടികയിലെ {{PLURAL:$1|വരി ഒരു|വരികൾ}} അസാധുവായ റെഗുലർ {{PLURAL:$1|എക്സ്‌‌പ്രെഷൻ|എക്സ്‌‌പ്രെഷനുകൾ}} ആണ്, താൾ സേവ് ചെയ്യുന്നതിനു മുമ്പ് {{PLURAL:$1|അത്|അവ}} ശരിയാക്കേണ്ടതുണ്ട്:',
 	'spam-blacklist-desc' => 'റെജെക്സ്-അധിഷ്ഠിത പാഴെഴുത്ത് തടയൽ ഉപകരണം: [[MediaWiki:Spam-blacklist]] ഒപ്പം [[MediaWiki:Spam-whitelist]]',
 );
@@ -1486,7 +1540,7 @@ $messages['ml'] = array(
 $messages['mr'] = array(
 	'spam-blacklist' => ' # या यादीशी जुळणारे बाह्य दुवे एखाद्या पानावर दिल्यास ब्लॉक केले जातील.
  # ही यादी फक्त या विकिसाठी आहे, सर्व विकिंसाठीची यादी सुद्धा तपासा.
- # अधिक माहिती साठी पहा http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # अधिक माहिती साठी पहा https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- leave this line exactly as it is --> <pre>
 #
 # रुपरेषा खालीलप्रमाणे:
@@ -1516,7 +1570,7 @@ $messages['ms'] = array(
 	'spam-blacklist' => ' # URL luar yang sepadan dengan mana-mana entri dalam senarai ini akan disekat
  # daripada ditambah ke dalam sesebuah laman. Senarai ini digunakan pada wiki
  # ini sahaja. Anda juga boleh merujuk senarai hitam sejagat. Sila baca
- # dokumentasi di http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # dokumentasi di https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- jangan ubah baris ini --> <pre>
 #
 # Sintaks:
@@ -1571,7 +1625,7 @@ $messages['nb'] = array(
 $messages['nds'] = array(
 	'spam-blacklist' => '  # URLs na buten de Websteed in disse List stoppt dat Spiekern vun de Sied.
   # Disse List gellt blot för dit Wiki; kiek ok na de globale Swartlist.
-  # För mehr Infos kiek op http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  # För mehr Infos kiek op https://www.mediawiki.org/wiki/Extension:SpamBlacklist
   #<!-- Disse Reeg dröff nich ännert warrn! --> <pre>
 #
 # Syntax:
@@ -1600,7 +1654,7 @@ $messages['nl'] = array(
 	'spam-blacklist' => ' # Externe URL\'s die voldoen aan deze lijst worden geweigerd bij het
  # toevoegen aan een pagina. Deze lijst heeft alleen invloed op deze wiki.
  # Er bestaat ook een globale zwarte lijst.
- # Documentatie: http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Documentatie: https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- laat deze lijn zoals hij is --> <pre>
 #
 # De syntax is als volgt:
@@ -1629,7 +1683,7 @@ $messages['nl'] = array(
 $messages['nn'] = array(
 	'spam-blacklist' => ' # Eksterne URL-ar som finnst på denne lista vil ikkje kunne leggast til på ei side.
  # Denne lista gjeld berre denne wikien; sjå òg den globale svartelistinga.
- # For dokumentasjon, sjå http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # For dokumentasjon, sjå https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- La denne linja vere nøyaktig som ho er --> <pre>
 #
 # Syntaksen er som følgjer:
@@ -1675,7 +1729,7 @@ $messages['oc'] = array(
 $messages['or'] = array(
 	'spam-blacklist' => ' # ଏକ ଫୃଷ୍ଠାରେ ଯୋଡ଼ାଯାଉଥିବା ବାହାର URL ଏହି ତାଲିକା ସହ ମେଳ ଖାଇଲେ ତାହାକୁ ଅଟକାଇଦିଆଯିବ ।
  # ଏହି ତାଲିକା କେବଳ କେବଳ ଏହି ଉଇକିକୁ ପ୍ରଭାବିତ କରିଥାଏ; ଜଗତ ଅଟକତାଲିକା ମଧ୍ୟ ଦେଖିପାରନ୍ତି ।
- # ଦଲିଲକରଣ ନିମନ୍ତେ ଦୟାକରି http://www.mediawiki.org/wiki/Extension:SpamBlacklist ଦେଖନ୍ତୁ ।
+ # ଦଲିଲକରଣ ନିମନ୍ତେ ଦୟାକରି https://www.mediawiki.org/wiki/Extension:SpamBlacklist ଦେଖନ୍ତୁ ।
  #<!-- ଏହି ଧାଡ଼ିଟି ଯେଉଁପରି ଅଛି ଅବିକଳ ସେହିପରି ଛାଡ଼ି ଦିଅନ୍ତୁ --> <pre>
 #
 # ସିଣ୍ଟାକ୍ସ:
@@ -1703,7 +1757,7 @@ $messages['or'] = array(
 $messages['pl'] = array(
 	'spam-blacklist' => '  # Dodawanie w treści stron linków zewnętrznych pasujących do tej listy będzie blokowane.
   # Lista dotyczy wyłącznie tej wiki; istnieje też globalna czarna lista.
-  # Dokumentacja znajduje się na stronie http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  # Dokumentacja znajduje się na stronie https://www.mediawiki.org/wiki/Extension:SpamBlacklist
   #<!-- zostaw tę linię dokładnie tak, jak jest --> <pre>
 #
 # Składnia jest następująca:
@@ -1741,7 +1795,7 @@ $messages['pms'] = array(
 $messages['pnb'] = array(
 	'spam-blacklist' => '# بارلے یو آر ایل جیہڑے ایس لسٹ نال رلدے ہون جدوں اوناں ایس صفے نال جوڑیا جاۓ گا تے اوناں نوں روک دتا جاؤکا۔
 # ایہ لسٹ صرف ایس وکی نال جڑی اے؛ جگت روکلسٹ نوں وی ویکھو۔
-# ڈوکومنٹیشن ل‏ی ویکھو  http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+# ڈوکومنٹیشن ل‏ی ویکھو  https://www.mediawiki.org/wiki/Extension:SpamBlacklist
 # <!-- ایس لین نوں اینج ای چھوڑ جنج اے ہے --> <pre>
 #
 # سینٹیکس ایہ اے:
@@ -1770,7 +1824,7 @@ $messages['pt'] = array(
 	'spam-blacklist' => '  # URLs externas que coincidam com esta lista serão bloqueadas quando forem
   # adicionadas a uma página.
   # Esta lista aplica-se apenas a esta wiki. Consulte também a lista-negra global.
-  # Veja a documentação em http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  # Veja a documentação em https://www.mediawiki.org/wiki/Extension:SpamBlacklist
   #<!-- mantenha esta linha exatamente assim --> <pre>
 #
 # A sintaxe é a seguinte:
@@ -1799,7 +1853,7 @@ $messages['pt-br'] = array(
 	'spam-blacklist' => '# URLs externas que coincidam com esta lista serão bloqueadas quando
  # quando alguém tentar adicioná-las em alguma página.
  # Esta lista refere-se apenas a este wiki. Consulte também a lista-negra global.
- # Veja a documentação em http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Veja a documentação em https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- mantenha esta linha exatamente assim --> <pre>
 #
 # A sintaxe é a seguinte:
@@ -1826,7 +1880,7 @@ $messages['pt-br'] = array(
 $messages['roa-tara'] = array(
 	'spam-blacklist' => " # Le URL esterne ca se iacchiane jndr'à st'elenghe avènene bloccate quanne avènene aggiunde jndr'à 'na pàgene.
   # St'elenghe tène effette sulamende sus a sta Uicchi; se pò refèrì pure a 'a lista gnore globale.
-  # Pe documendazione vide http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  # Pe documendazione vide https://www.mediawiki.org/wiki/Extension:SpamBlacklist
   #<!-- leave this line exactly as it is --> <pre>
 #
 # 'A sindasse jè a cumme segue:
@@ -1857,7 +1911,7 @@ $messages['roa-tara'] = array(
 $messages['ru'] = array(
 	'spam-blacklist' => ' # Внешние ссылки, соответствующие этому списку, будут запрещены для внесения на страницы.
  # Этот список действует только для данной вики, существует также общий чёрный список.
- # Подробнее на странице http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Подробнее на странице https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- не изменяйте эту строку --> <pre>
 #
 # Синтаксис:
@@ -1883,7 +1937,7 @@ $messages['ru'] = array(
 $messages['rue'] = array(
 	'spam-blacklist' => ' # Екстерны URL одповідаючі тому списку будуть заблокованы при пробі придати їх на сторінку.
  # Тот список овпливнює лем тоту вікі; посмотьте ся тыж на ґлоналну чорну листину.
- # Документацію найдете на http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Документацію найдете на https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Охабте тот рядок точно як є --> <pre>
 #
 # Сінтаксіс є наступный:
@@ -1910,7 +1964,7 @@ $messages['rue'] = array(
 $messages['sah'] = array(
 	'spam-blacklist' => " # Бу испииһэккэ баар тас сигэлэр бобуллуохтара.
  # Бу испииһэк бу эрэ бырайыакка үлэлиир, уопсай ''хара испииһэк'' эмиэ баарын умнума.
- # Сиһилии манна көр http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Сиһилии манна көр https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- бу строканы уларытыма --> <pre>
 #
 # Синтаксис:
@@ -1936,7 +1990,7 @@ $messages['sah'] = array(
 $messages['scn'] = array(
 	'spam-blacklist' => ' # Li URL fora dû sito ca currispùnnunu a la lista di sècutu vènunu bluccati.
  # La lista vali sulu pi stu situ; fari rifirimentu macari a la blacklist glubbali.
- # Pâ ducumentazzioni talìa http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Pâ ducumentazzioni talìa https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- nun mudificari pi nenti chista riga --> <pre>
 # La sintassi è  chista:
 #  * Tuttu chiddu ca veni doppu nu caràttiri "#" è nu cummentu, nzinu ca finisci la riga
@@ -1961,7 +2015,7 @@ $messages['scn'] = array(
 $messages['si'] = array(
 	'spam-blacklist' => ' # External URLs matching this list will be blocked when added to a page.
  # This list affects only this wiki; refer also to the global blacklist.
- # For documentation see http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # For documentation see https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- leave this line exactly as it is --> <pre>
 #
 # Syntax is as follows:
@@ -1988,7 +2042,7 @@ $messages['si'] = array(
 $messages['sk'] = array(
 	'spam-blacklist' => '# Externé URLs zodpovedajúce tomuto zoznamu budú zablokované pri pokuse pridať ich na stránku.
 # Tento zoznam ovplyvňuje iba túto wiki; pozrite sa tiež na globálnu čiernu listinu.
- # Dokumentáciu nájdete na  http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Dokumentáciu nájdete na  https://www.mediawiki.org/wiki/Extension:SpamBlacklist
 #<!-- nechajte tento riadok presne ako je --> <pre>
 #
 # Syntax je nasledovná:
@@ -2015,7 +2069,7 @@ $messages['sk'] = array(
 $messages['sl'] = array(
 	'spam-blacklist' => ' # Zunanji URL-ji, ki se ujemajo s tem seznamom, bodo blokirani, ko bodo dodani na stran.
  # Seznam vpliva samo na ta wiki; oglejte si tudi globalni črni seznam.
- # Za dokumentacijo si oglejte http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Za dokumentacijo si oglejte https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- pustite to vrstico takšno, kot je --> <pre>
 #
 # Skladnja je sledeča:
@@ -2042,7 +2096,7 @@ $messages['sl'] = array(
 $messages['sq'] = array(
 	'spam-blacklist' => ' # URL-të e jashtme që përputhen me këtë listë do të bllokohen kur shtohen tek një faqe.
  # Kjo listë ndikon vetëm në këtë wiki; referojuni gjithashtu listës së zezë globale.
- # Për dokumentacionin shiko http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Për dokumentacionin shiko https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- leave this line exactly as it is --> <pre>
 #
 # Sintaksa është si më poshtë:
@@ -2083,7 +2137,7 @@ $messages['sr-el'] = array(
 $messages['stq'] = array(
 	'spam-blacklist' => ' # Externe URLs, do der in disse Lieste äntheelden sunt, blokkierje dät Spiekerjen fon ju Siede.
  # Disse Lieste beträft bloot dit Wiki; sjuch uk ju globoale Blacklist.
- # Tou ju Dokumenation sjuch http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Tou ju Dokumenation sjuch https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Disse Riege duur nit ferannerd wäide! --> <pre>
 #
 # Syntax:
@@ -2113,7 +2167,7 @@ $messages['sv'] = array(
 	'spam-blacklist' => '
  # Den här listan stoppar matchande externa URL:er från att läggas till på sidor.
  # Listan påverkar bara den här wikin; se även den globala svarta listan för spam.
- # För dokumentation se http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # För dokumentation se https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- ändra inte den här raden --> <pre>
 #
 # Syntaxen är följande:
@@ -2142,7 +2196,7 @@ $messages['te'] = array(
 	'spam-blacklist' => '
  # ఓ పేజీకి చేర్చిన బయటి లింకులు గనక ఈ జాబితాతో సరిపోలితే వాటిని నిరోధిస్తాం.
  # ఈ జాబితా ఈ వికీకి మాత్రమే సంబంధించినది; మహా నిరోధపు జాబితాని కూడా చూడండి.
- # పత్రావళి కొరకు ఇక్కడ చూడండి: http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # పత్రావళి కొరకు ఇక్కడ చూడండి: https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- leave this line exactly as it is --> <pre>
 #
 # Syntax is as follows:
@@ -2171,7 +2225,7 @@ $messages['tg-cyrl'] = array(
 	'spam-blacklist' => ' # Нишониҳои URL берунаи ба ин феҳрист мутобиқатшуда вақте, ки ба саҳифае илова мешаванд, 
  # баста хоҳанд шуд.
  # Ин феҳрист фақат рӯи ҳамин вики таъсир мекунад; ба феҳристи сиёҳи саросар низ муроҷиат кунед.
- # Барои мустанадот, нигаред ба http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Барои мустанадот, нигаред ба https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!--  ин сатрро ҳамонгуна, ки ҳаст раҳо кунед --> <pre>
 #
  # Дастурот ба ин шакл ҳастанд:
@@ -2200,7 +2254,7 @@ $messages['tg-latn'] = array(
 	'spam-blacklist' => ' # Nişonihoi URL berunai ba in fehrist mutobiqatşuda vaqte, ki ba sahifae ilova meşavand, 
  # basta xohand şud.
  # In fehrist faqat rūi hamin viki ta\'sir mekunad; ba fehristi sijohi sarosar niz muroçiat kuned.
- # Baroi mustanadot, nigared ba http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Baroi mustanadot, nigared ba https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!--  in satrro hamonguna, ki hast raho kuned --> <pre>
 #
  # Dasturot ba in şakl hastand:
@@ -2236,7 +2290,7 @@ $messages['tk'] = array(
 $messages['tl'] = array(
 	'spam-blacklist' => " # Ang panlabas na mga URL na tumutugma sa talaang ito ay hahadlangan/haharangin kapag idinagdag sa isang pahina.
  # Nakakaapekto lamang ang talaang ito sa wiking ito; sumangguni rin sa pandaigdigang talaan ng pinagbabawalan.
- # Para sa kasulatan tingnan ang http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Para sa kasulatan tingnan ang https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- leave this line exactly as it is --> <pre>
 #
 # Ang palaugnayan ay ayon sa mga sumusunod:
@@ -2263,7 +2317,7 @@ $messages['tl'] = array(
 $messages['tr'] = array(
 	'spam-blacklist' => ' # Bu listeyle eşleşen dış bağlantılar, bir sayfaya eklendiğinde engellenecektir. 
  # Bu liste sadece bu vikiyi etkiler; ayrıca küresel karalisteye de bakın.
- # Dokümantasyon için http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Dokümantasyon için https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- bu satırı olduğu gibi bırakın --> <pre>
 #
 # Sözdizimi aşağıdaki gibidir:
@@ -2291,7 +2345,7 @@ $messages['tr'] = array(
 $messages['uk'] = array(
 	'spam-blacklist' => '# Зовнішні посилання, що відповідають цьому списку, будуть заборонені для внесення на стоірнки.
  # Цей список діє лише для цієї вікі, існує також загальний чорний список.
- # Докладніше на сторінці http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Докладніше на сторінці https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- не змінюйте цей рядок --> <pre>
 #
 # Синтаксис:
@@ -2317,7 +2371,7 @@ $messages['uk'] = array(
 $messages['vec'] = array(
 	'spam-blacklist' => ' # Le URL esterne al sito che corisponde a la lista seguente le vegnarà blocà.
  # La lista la xe valida solo par sto sito qua; far riferimento anca a la blacklist globale.
- # Par la documentazion vardar http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Par la documentazion vardar https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- no sta modificar in alcun modo sta riga --> <pre>
 # La sintassi la xe la seguente:
 #  * Tuto quel che segue un caràtere "#" el xe un comento, fin a la fine de la riga
@@ -2340,9 +2394,9 @@ $messages['vec'] = array(
  * @author Minh Nguyen
  */
 $messages['vi'] = array(
-	'spam-blacklist' => ' # Các đị chỉ URL ngoài trùng với một khoản trong danh sách này bị cấm không được thêm vào trang nào.
+	'spam-blacklist' => ' # Các địa chỉ URL ngoài trùng với một khoản trong danh sách này bị cấm không được thêm vào trang nào.
  # Danh sách này chỉ có hiệu lực ở wiki này; hãy xem thêm “danh sách đen toàn cầu”.
- # Có tài liệu hướng dẫn tại http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Có tài liệu hướng dẫn tại https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- leave this line exactly as it is --> <pre>
 #
 # Cú pháp:
@@ -2358,6 +2412,26 @@ $messages['vi'] = array(
 #  * Các dòng không để trống là một mảnh biểu thức chính quy, nó chỉ trùng với tên máy chủ trong địa chỉ URL.
 
  #</pre> <!-- leave this line exactly as it is -->',
+	'email-blacklist' => ' # Các địa chỉ thư điện tử trùng với danh sách này bị cấm không được đăng ký hoặc gửi thư điện tử.
+ # Danh sách này chỉ có hiệu lực ở wiki này; hãy xem thêm “danh sách đen toàn cầu”.
+ # Có tài liệu hướng dẫn tại https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- leave this line exactly as it is --> <pre>
+#
+# Cú pháp:
+#   * Các lời ghi chú bắt đầu với ký tự “#” và tiếp tục cho đến cuối dòng.
+#   * Các dòng không để trống là một mảnh biểu thức chính quy, nó chỉ trùng với tên máy chủ trong địa chỉ thư điện tử.
+
+ #</pre> <!-- leave this line exactly as it is -->',
+	'email-whitelist' => ' #<!-- leave this line exactly as it is --> <pre>
+# Các địa chỉ thư điện tử trùng với danh sách này *không* bị cấm, dù có nó trong danh sách đen.
+#
+ #</pre> <!-- leave this line exactly as it is -->
+# Cú pháp:
+#   * Các lời ghi chú bắt đầu với ký tự “#” và tiếp tục cho đến cuối dòng.
+#   * Các dòng không để trống là một mảnh biểu thức chính quy, nó chỉ trùng với tên máy chủ trong địa chỉ thư điện tử.',
+	'spam-blacklisted-email' => 'Địa chỉ thư điện tử bị đưa vào danh sách đen',
+	'spam-blacklisted-email-text' => 'Địa chỉ thư điện tử của bạn đã được đưa vào danh sách đen nên bị cấm không được gửi thư điện tử cho người dùng khác.',
+	'spam-blacklisted-email-signup' => 'Địa chỉ thư điện tử được cung cấp đã được đưa vào danh sách đen nên bị cấm không được sử dụng.',
 	'spam-invalid-lines' => '{{PLURAL:$1|Dòng|Những dòng}} sau đây trong danh sách đen về spam không hợp lệ; xin hãy sửa chữa {{PLURAL:$1|nó|chúng}} để tuân theo cú pháp biểu thức chính quy trước khi lưu trang:',
 	'spam-blacklist-desc' => 'Công cụ dùng biểu thức chính quy để chống spam: [[MediaWiki:Spam-blacklist]] và [[MediaWiki:Spam-whitelist]]',
 );
@@ -2366,7 +2440,7 @@ $messages['vi'] = array(
 $messages['yue'] = array(
 	'spam-blacklist' => ' # 同呢個表合符嘅外部 URL 當加入嗰陣會被封鎖。
  # 呢個表只係會影響到呢個wiki；請同時參閱全域黑名單。
- # 要睇註解請睇 http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # 要睇註解請睇 https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- 請完全噉留番呢行 --> <pre>
 #
 # 語法好似下面噉:
@@ -2393,7 +2467,7 @@ $messages['yue'] = array(
 $messages['zh-hans'] = array(
 	'spam-blacklist' => ' # 跟这个表合符的外部 URL 当加入时会被封锁。
  # 这个表只是会影响到这个wiki；请同时参阅全域黑名单。
- # 要参看注解请看 http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # 要参看注解请看 https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- 请完全地留下这行 --> <pre>
 #
 # 语法像下面这样:
@@ -2420,7 +2494,7 @@ $messages['zh-hans'] = array(
 $messages['zh-hant'] = array(
 	'spam-blacklist' => ' # 跟這個表符合的外部 URL 當加入時會被封鎖。
  # 這個表只是會影響到這個 wiki；請同時參閱全域黑名單。
- # 要參看註解請看 http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # 要參看註解請看 https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- 請完全地留下這行 --> <pre>
 #
 # 語法像下面這樣:
