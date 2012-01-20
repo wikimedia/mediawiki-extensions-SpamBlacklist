@@ -11,7 +11,7 @@ $messages = array();
 $messages['en'] = array(
 	'spam-blacklist' => ' # External URLs matching this list will be blocked when added to a page.
  # This list affects only this wiki; refer also to the global blacklist.
- # For documentation see http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # For documentation see https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- leave this line exactly as it is --> <pre>
 #
 # Syntax is as follows:
@@ -26,22 +26,22 @@ $messages['en'] = array(
  #</pre> <!-- leave this line exactly as it is -->',
 	'email-blacklist' => ' # Emails matching this list will be blocked from registering or sending email
  # This list affects only this wiki; refer also to the global blacklist.
- # For documentation see http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # For documentation see https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- leave this line exactly as it is --> <pre>
 #
 # Syntax is as follows:
 #   * Everything from a "#" character to the end of the line is a comment
-#   * Every non-blank line is a regex fragment which will only match hosts inside URLs
+#   * Every non-blank line is a regex fragment which will only match hosts inside e-mails
 
  #</pre> <!-- leave this line exactly as it is -->',
 	'email-whitelist' => ' #<!-- leave this line exactly as it is --> <pre>
 # Emails matching this list will *not* be blocked even if they would
 # have been blocked by blacklist entries.
 #
- #</pre> <!-- leave this line exactly as it is -->',
+ #</pre> <!-- leave this line exactly as it is -->
 # Syntax is as follows:
 #   * Everything from a "#" character to the end of the line is a comment
-#   * Every non-blank line is a regex fragment which will only match hosts inside URLs
+#   * Every non-blank line is a regex fragment which will only match hosts inside e-mails',
 
 	'spam-blacklisted-email' => 'Blacklisted E-mail',
 	'spam-blacklisted-email-text' => 'Your e-mail address is currently blacklisted from sending e-mails to other users.',
