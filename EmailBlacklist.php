@@ -15,7 +15,7 @@ class EmailBlacklist extends BaseBlacklist {
 	}
 
 	/**
-	 * Checks a User object for a blacklisted email
+	 * Checks a User object for a blacklisted e-mail address
 	 *
 	 * @param User $user
 	 * @return bool True on valid email
@@ -32,9 +32,9 @@ class EmailBlacklist extends BaseBlacklist {
 			return true;
 		}
 
-		// Check for whitelisted emails
+		// Check for whitelisted e-mail addresses
 		if ( is_array( $whitelists ) ) {
-			wfDebugLog( 'SpamBlacklist', "Excluding whitelisted emails from " . count( $whitelists ) .
+			wfDebugLog( 'SpamBlacklist', "Excluding whitelisted e-mail addresses from " . count( $whitelists ) .
 				" regexes: " . implode( ', ', $whitelists ) . "\n" );
 			foreach ( $whitelists as $regex ) {
 				if ( preg_match( $regex, $email ) )  {
@@ -46,7 +46,7 @@ class EmailBlacklist extends BaseBlacklist {
 
 
 		# Do the match
-		wfDebugLog( 'SpamBlacklist', "Checking email against " . count( $blacklists ) .
+		wfDebugLog( 'SpamBlacklist', "Checking e-mail address against " . count( $blacklists ) .
 			" regexes: " . implode( ', ', $blacklists ) . "\n" );
 		foreach ( $blacklists as $regex ) {
 			if ( preg_match( $regex, $email ) ) {
