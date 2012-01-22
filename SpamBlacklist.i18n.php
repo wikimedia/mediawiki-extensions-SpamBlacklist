@@ -1115,13 +1115,16 @@ $messages['ia'] = array(
 #
 # Le syntaxe es lo sequente:
 #  * Toto a partir de un character "#" usque al fin del linea es un commento
-#  * Cata linea non vacue es un fragmento de regex que se applica solmente al nomines de host intra adresses URL
+#  * Cata linea non vacue es un fragmento de regex que se applica solmente al nomines de host in adresses de e-mail
 
  #</pre> <!-- non modificar in alcun modo iste linea -->',
 	'email-whitelist' => ' #<!-- non modificar in alcun modo iste linea --> <pre>
 # Le adresses de e-mail correspondente a iste lista *non* essera blocate
 # mesmo si illos haberea essite blocate per entratas de lista nigre.
 #
+# Le syntaxe es lo sequente:
+#  * Toto a partir de un character "#" usque al fin del linea es un commento
+#  * Cata linea non vacue es un fragmento de regex que se applica solmente al nomines de host in adresses de e-mail
  #</pre> <!-- non modificar in alcun modo iste linea -->',
 	'spam-blacklisted-email' => 'Adresse de e-mail in lista nigre',
 	'spam-blacklisted-email-text' => 'Tu adresse de e-mail es actualmente blocate de inviar messages a altere usatores.',
@@ -1598,6 +1601,7 @@ $messages['ms'] = array(
 
  #</pre> <!-- jangan ubah baris ini -->',
 	'spam-blacklisted-email' => 'E-mel yang Disenaraihitamkan',
+	'spam-blacklisted-email-text' => 'Alamat e-mel anda kini disenaraihitamkan daripada menghantar e-mel kepada pengguna lain.',
 	'spam-invalid-lines' => '{{PLURAL:$1|Baris|Baris-baris}} berikut menggunakan ungkapan nalar yang tidak sah. Sila baiki senarai hitam ini sebelum menyimpannya:',
 	'spam-blacklist-desc' => 'Alat anti-spam berdasarkan ungkapan nalar: [[MediaWiki:Spam-blacklist]] dan [[MediaWiki:Spam-whitelist]]',
 );
