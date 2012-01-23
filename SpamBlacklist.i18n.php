@@ -768,6 +768,7 @@ $messages['fi'] = array(
 
 /** French (Français)
  * @author Gomoko
+ * @author Sherbrooke
  * @author Urhixidur
  * @author Verdy p
  */
@@ -791,7 +792,7 @@ $messages['fr'] = array(
 #  * toute ligne non vide est un fragment d’expression rationnelle qui n’analysera que les hôtes dans les liens hypertextes.
 
  #</pre> <!--Laissez cette ligne telle quelle -->',
-	'email-blacklist' => " # Les adresses de courriel correspondant à cette liste seront bloquées lors l'enregistrement ou de l'envoi d'un courriel
+	'email-blacklist' => "# Les adresses de courriel correspondant à cette liste seront bloquées lors l'enregistrement ou de l'envoi d'un courriel
  # Cette liste n’affecte que ce wiki ; référez-vous aussi à la liste noire globale.
  # La documentation se trouve à l’adresse suivante : https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Laissez cette ligne telle quelle --><pre>
@@ -801,11 +802,14 @@ $messages['fr'] = array(
 #  * toute ligne non vide est un fragment d’expression rationnelle qui n’analysera que les hôtes correspondant dans les URLs.
 
  #</pre><!-- Laissez cette ligne telle quelle -->",
-	'email-whitelist' => " #<!-- laissez cette ligne telle quelle --> <pre>
-# Les courriels correspondant à cette liste ne seront *pas* bloqués même s'ils auraient
+	'email-whitelist' => "<!-- laissez cette ligne telle quelle --> <pre>
+# Les adresses de courriels correspondant à cette liste ne seront *pas* bloqués même s'ils auraient
 # dû l'être par les entrées de la liste noire.
 #
- #</pre> <!-- laissez cette ligne telle quelle -->",
+ #</pre> <!-- laissez cette ligne telle quelle -->
+# La syntaxe est comme suit :
+#  * Tout texte à partir du caractère « # » jusqu'à la fin de la ligne est un commentaire.
+#  * Chaque ligne non vide est un morceau de regex (expression rationnelle) qui sera mis en correspondance avec la partie « hosts » des adresses de courriels",
 	'spam-blacklisted-email' => 'Adresses courriel et liste noire',
 	'spam-blacklisted-email-text' => "Votre adresse de courriel est actuellement sur une liste noire d'envoi de courriel aux autres utilisateurs.",
 	'spam-blacklisted-email-signup' => "L'adresse de courriel fournie est actuellement sur une liste noire d'utilisation.",
@@ -941,16 +945,19 @@ $messages['he'] = array(
 #   * כל שורה לא ריקה היא קטע מביטוי רגולרי שיתאים לשמות המתחם של כתובות URL
 
  #</pre> <!-- נא להשאיר שורה זו בדיוק כפי שהיא -->',
-	'email-blacklist' => '  # עבור כתובות הדואר האלקטרוני המתאימות לרשימה זו תיחסם האפשרות להירשם ולשלוח דואר אלקטרוני
+	'email-blacklist' => ' # עבור כתובות הדואר האלקטרוני המתאימות לרשימה זו תיחסם האפשרות להירשם ולשלוח דואר אלקטרוני
  # רשימה זו משפיעה רק על ויקי זה; שימו לב גם לרשימה הגלובלית.
  # לתיעוד ראו https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- leave this line exactly as it is --> <pre>
 #
 # התחביר הוא כדלקמן:
-# * הכל החל מהתו "#" עד לסוף השורה הוא הערה
-# * כל שורה לא ריקה היא ביטוי רגולרי שתתאים רק לשרתים בתוך הדואר האלקטרוני
+# * הכול החל מהתו "#" עד סוף השורה הוא הערה
+# * כל שורה לא ריקה היא ביטוי רגולרי חלקי שתתאים רק לשרתים בתוך הדואר האלקטרוני
 
  #</pre> <!-- leave this line exactly as it is -->',
+	'spam-blacklisted-email' => 'כתובות דוא"ל ברשימה השחורה',
+	'spam-blacklisted-email-text' => 'כתובת הדוא"ל שלך נמצאת כרגע ברשימה השחורה של כתובות שלא ניתן לשלוח מהן הודעות למשמתמשים אחרים.',
+	'spam-blacklisted-email-signup' => 'כתובת הדוא"ל הזאת נמצאת כרגע ברשימה השחורה של כתובות אסורות לשימוש.',
 	'spam-invalid-lines' => '{{PLURAL:$1|השורה הבאה|השורות הבאות}} ברשימת כתובות ה־URL האסורות
 	{{PLURAL:$1|היא ביטוי רגולרי בלתי תקין ויש לתקנה|הן ביטויים רגולריים בלתי תקינים ויש לתקנן}} לפני שמירת הדף:',
 	'spam-blacklist-desc' => 'כלי אנטי־ספאם מבוסס ביטוי רגולרי: [[MediaWiki:Spam-blacklist]] ו־[[MediaWiki:Spam-whitelist]]',
@@ -1548,6 +1555,7 @@ $messages['ml'] = array(
 );
 
 /** Marathi (मराठी)
+ * @author Hiteshgotarane
  * @author Kaustubh
  */
 $messages['mr'] = array(
@@ -1571,6 +1579,7 @@ $messages['mr'] = array(
 #  * प्रत्येक रिकामी नसलेली ओळ अंतर्गत URL जुळविणारी regex फ्रॅगमेंट आहे
 
  #</pre> <!-- leave this line exactly as it is -->',
+	'spam-blacklisted-email-text' => 'तुमचा ई-पत्ता काळ्या यादीत समाविष्ट करण्यात आला आहे. इतर सदस्यांना संपर्क करणे शक्य नाही.',
 	'spam-invalid-lines' => 'हे पान जतन करण्यापूर्वी खालील {{PLURAL:$1|ओळ जी चुकीची|ओळी ज्या चुकीच्या}} एक्स्प्रेशन {{PLURAL:$1|आहे|आहेत}}, दुरुस्त करणे गरजेचे आहे:',
 	'spam-blacklist-desc' => 'रेजएक्स वर चालणारे स्पॅम थांबविणारे उपकरण: [[MediaWiki:Spam-blacklist]] व [[MediaWiki:Spam-whitelist]]',
 );
