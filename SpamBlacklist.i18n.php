@@ -955,6 +955,13 @@ $messages['he'] = array(
 # * כל שורה לא ריקה היא ביטוי רגולרי חלקי שתתאים רק לשרתים בתוך הדואר האלקטרוני
 
  #</pre> <!-- leave this line exactly as it is -->',
+	'email-whitelist' => ' #<!-- leave this line exactly as it is --> <pre>
+# כתובות הדואר האלקטרוני המתאימות לרשימה זו *לא* תיחסמנה אף אם הן מתאימות לרשימה השחורה.
+#
+ #</pre> <!-- leave this line exactly as it is -->
+# התחביר הוא כדלקמן:
+# * הכול החל מהתו "#" עד סוף השורה הוא הערה
+# * כל שורה לא ריקה היא ביטוי רגולרי חלקי שתתאים רק לשרתים בתוך הדואר האלקטרוני',
 	'spam-blacklisted-email' => 'כתובות דוא"ל ברשימה השחורה',
 	'spam-blacklisted-email-text' => 'כתובת הדוא"ל שלך נמצאת כרגע ברשימה השחורה של כתובות שלא ניתן לשלוח מהן הודעות למשמתמשים אחרים.',
 	'spam-blacklisted-email-signup' => 'כתובת הדוא"ל הזאת נמצאת כרגע ברשימה השחורה של כתובות אסורות לשימוש.',
@@ -2509,6 +2516,7 @@ $messages['yue'] = array(
 );
 
 /** Simplified Chinese (‪中文(简体)‬)
+ * @author Hzy980512
  * @author PhiLiP
  */
 $messages['zh-hans'] = array(
@@ -2531,6 +2539,9 @@ $messages['zh-hans'] = array(
 #  * 非空白的每行则是正则表达式片段，将只与内含该URL的链接相匹配
 
  #</pre> <!-- 请完整地保留此行 -->',
+	'spam-blacklisted-email' => '黑名单中的电邮地址',
+	'spam-blacklisted-email-text' => '您的电子邮件地址目前已被列入黑名单以防止您发送邮件。',
+	'spam-blacklisted-email-signup' => '所给电邮地址已被列入黑名单。',
 	'spam-invalid-lines' => '下列垃圾链接黑名单有{{PLURAL:$1|一行|多行}}含有无效的正则表示式，请在保存该页前修正之：',
 	'spam-blacklist-desc' => '基于正则表达式的反垃圾链接工具：[[MediaWiki:Spam-blacklist]]和[[MediaWiki:Spam-whitelist]]',
 );
