@@ -352,6 +352,9 @@ $messages['br'] = array(
 #  * Kement linenn anc'houllo zo un darnad skrid poellek na zielfennno nemet an ostizien el liammoù gourskrid
 
   #</pre> <!-- lezel al linenn-mañ tre evel m'emañ -->",
+	'spam-blacklisted-email' => "Chomlec'hioù postel ha listenn zu",
+	'spam-blacklisted-email-text' => "Evit ar mare emañ ho chomlec'h postel war ul listenn zu ha n'haller ket kas posteloù drezañ d'an implijerien all.",
+	'spam-blacklisted-email-signup' => "War ul listenn zu emañ ar chomlec'h postel pourchaset. N'hall ket bezañ implijet.",
 	'spam-invalid-lines' => '{{PLURAL:$1|Ul lavarenn|Lavarennoù}} reoliek direizh eo {{PLURAL:$1|al linenn|al linennoù}} da-heul eus roll du ar stroboù ha ret eo {{PLURAL:$1|he reizhañ|o reizhañ}} a-raok enrollañ ar bajenn :',
 	'spam-blacklist-desc' => 'Ostilh enep-strob diazezet war lavarennoù reoliek (Regex) : [[MediaWiki:Spam-blacklist]] ha [[MediaWiki:Spam-whitelist]]',
 );
