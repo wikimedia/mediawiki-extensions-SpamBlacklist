@@ -1599,15 +1599,14 @@ $messages['mr'] = array(
  * @author Aviator
  */
 $messages['ms'] = array(
-	'spam-blacklist' => ' # URL luar yang sepadan dengan mana-mana entri dalam senarai ini akan disekat
- # daripada ditambah ke dalam sesebuah laman. Senarai ini digunakan pada wiki
- # ini sahaja. Anda juga boleh merujuk senarai hitam sejagat. Sila baca
- # dokumentasi di https://www.mediawiki.org/wiki/Extension:SpamBlacklist
- #<!-- jangan ubah baris ini --> <pre>
+	'spam-blacklist' => '# URL luar yang sepadan dengan mana-mana entri dalam senarai ini akan disekat daripada ditambah ke dalam sesebuah laman.
+# Senarai ini melibatkan wiki ini sahaja; sila rujuk juga senarai hitam sejagat. 
+# Sila baca dokumentasi di https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+#<!-- jangan ubah baris ini --> <pre>
 #
-# Sintaks:
-#  * Aksara "#" sampai akhir baris diabaikan
-#  * Ungkapan nalar dibaca daripada setiap baris dan dipadankan dengan nama hos sahaja
+# Sintaks adalah seperti berikut:
+#  * Semuanya mulai aksara "#" hingga akhir baris merupakan komen
+#  * Setiap baris yang tidak kosong meruakan pecahan ungkapan nalar yang hanya akan berpadan dengan hos-hos dalam alamat e-mel
 
  #</pre> <!-- jangan ubah baris ini -->',
 	'spam-whitelist' => ' #<!-- jangan ubah baris ini --> <pre>
@@ -1619,8 +1618,19 @@ $messages['ms'] = array(
 #  * Ungkapan nalar dibaca daripada setiap baris dan dipadankan dengan nama hos sahaja
 
  #</pre> <!-- jangan ubah baris ini -->',
+	'email-blacklist' => ' # Alamat-alamat e-mel yang berpadanan dengan senarai ini akan disekat daripada mendaftar atau menghantar e-mel
+ # Senarai ini melibatkan wiki ini sahaja; sila rujuk juga senarai hitam sejagat.
+ # Untuk dokumentasi, rujuk https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- jangan ubah baris ini --> <pre>
+#
+# Sintaks adalah seperti berikut:
+#   * Semuanya mulai aksara "#" hingga akhir baris merupakan komen
+#   * Setiap baris yang tidak kosong meruakan pecahan ungkapan nalar yang hanya akan berpadan dengan hos-hos dalam alamat e-mel
+
+ #</pre> <!-- jangan ubah baris ini -->',
 	'spam-blacklisted-email' => 'E-mel yang Disenaraihitamkan',
 	'spam-blacklisted-email-text' => 'Alamat e-mel anda kini disenaraihitamkan daripada menghantar e-mel kepada pengguna lain.',
+	'spam-blacklisted-email-signup' => 'Alamat e-mel yang diberikan ini kini disenaraihitamkan.',
 	'spam-invalid-lines' => '{{PLURAL:$1|Baris|Baris-baris}} berikut menggunakan ungkapan nalar yang tidak sah. Sila baiki senarai hitam ini sebelum menyimpannya:',
 	'spam-blacklist-desc' => 'Alat anti-spam berdasarkan ungkapan nalar: [[MediaWiki:Spam-blacklist]] dan [[MediaWiki:Spam-whitelist]]',
 );
