@@ -1419,6 +1419,28 @@ $messages['ko'] = array(
 # * 모든 줄은 URL의 호스트와 일치하는 정규 표현식의 일부분입니다.
 
  #</pre> <!-- 이 부분은 편집하지 말아 주세요. -->',
+	'email-blacklist' => ' # 이 리스트와 일치하는 이메일 주소는 등록과 이메일 발송이 금지됩니다.
+ # 이 리스트는 이 위키에만 적용됩니다; 글로벌 블랙리스트도 함께 참조하십시오.
+ # 설명 문서를 보시려면 https://www.mediawiki.org/wiki/Extension:SpamBlacklist 를 방문해주세요.
+ #<!-- 이 줄은 그대로 두십시오 --> <pre>
+#
+# 문법은 다음과 같습니다:
+# * "#" 다음부터 줄의 끝까지는 주석으로 취급됩니다
+# * 빈 줄이 아닌 모든 줄은 이메일 주소의 호스트만 검사하는 정규 표현식입니다.
+
+ #<!-- 이 줄은 그대로 두십시오 --> </pre>',
+	'email-whitelist' => ' #<!-- 이 줄은 그대로 두십시오 --> <pre>
+ # 이 리스트와 일치하는 이메일 주소는 블랙리스트에 올라가 있을지라도
+ # 사용이 금지되지 않습니다.
+ #
+ #<!-- 이 줄은 그대로 두십시오 --> </pre>
+#
+ # 문법은 다음과 같습니다:
+ # * "#" 다음부터 줄의 끝까지는 주석으로 취급됩니다
+ # * 빈 줄이 아닌 모든 줄은 이메일 주소의 호스트만 검사하는 정규 표현식입니다.',
+	'spam-blacklisted-email' => '이메일 주소가 블랙리스트됨',
+	'spam-blacklisted-email-text' => '당신의 이메일 주소는 다른 사용자가 이메일을 보내지 못하도록 블랙리스트에 올라와 있습니다.',
+	'spam-blacklisted-email-signup' => '입력한 이메일 주소는 사용할 수 없도록 블랙리스트되어 있습니다.',
 	'spam-invalid-lines' => '스팸 블랙리스트의 다음 {{PLURAL:$1|줄}}에 잘못된 정규 표현식이 사용되어 저장하기 전에 바르게 고쳐져야 합니다:',
 	'spam-blacklist-desc' => '정규 표현식을 이용해 스팸을 막습니다: [[MediaWiki:Spam-blacklist]]와 [[MediaWiki:Spam-whitelist]]를 사용합니다.',
 );
@@ -1628,6 +1650,14 @@ $messages['ms'] = array(
 #   * Setiap baris yang tidak kosong meruakan pecahan ungkapan nalar yang hanya akan berpadan dengan hos-hos dalam alamat e-mel
 
  #</pre> <!-- jangan ubah baris ini -->',
+	'email-whitelist' => ' #<!-- jangan ubah baris ini --> <pre>
+# Alamat-alamat e-mel yang berpadanan dengan senarai ini *tidak* akan disekat sungguhpun boleh
+# disekat oleh entri senarai hitam.
+#
+ #</pre> <!-- jangan ubah baris ini -->
+# Sintaks adalah seperti berikut:
+#   * Segalanya mulai aksara "#" hingga akhir baris ialah komen
+#   * Setiap baris yang tidak kosong meruakan pecahan ungkapan nalar yang hanya akan berpadan dengan hos-hos dalam alamat e-mel',
 	'spam-blacklisted-email' => 'E-mel yang Disenaraihitamkan',
 	'spam-blacklisted-email-text' => 'Alamat e-mel anda kini disenaraihitamkan daripada menghantar e-mel kepada pengguna lain.',
 	'spam-blacklisted-email-signup' => 'Alamat e-mel yang diberikan ini kini disenaraihitamkan.',
@@ -1852,6 +1882,27 @@ $messages['pl'] = array(
 $messages['pms'] = array(
 	'spam-blacklist' => "# J'adrësse esterne ch'as treuva ant sta lista-sì a vniran blocà se cheidun a jë gionta ansima a na pàgina. # Sta lista a l'ha valor mach an sta wiki-sì; ch'a-j fasa arferiment ëdcò a la lista nèira global. # Për dla documentassion ch'a varda http://www.MediaWiki.org/wiki/Extension:SpamBlacklist #<!-- ch'a lassa sta riga-sì giusta 'me ch'a l'é --> <pre> # # La sintassi a l'é: # * Tut lòn ch'as anandia con na \"#\" fin a la fin dla riga as ten coma coment # * Qualsëssìa riga nen veuja a resta un tòch d'espression regolar ch'as paragon-a a ij nòm ëd servent andrinta a j'adrësse #</pre> <!-- ch'a lassa sta riga-sì giusta 'me ch'a l'é -->",
 	'spam-whitelist' => "#<!-- ch'a lassa sta riga-sì giusta 'me ch'a l'é --> <pre> # J'adrësse esterne coma cole dë sta lista a vniran NEN blocà, ëdcò fin-a # s'a fusso da bloché conforma a le régole dla lista nèira. # # La sintassi a l'é: # * Tut lòn ch'as anandia con na \"#\" fin a la fin dla riga as ten coma coment # * Qualsëssìa riga nen veuja a resta un tòch d'espression regolar ch'as paragon-a a ij nòm ëd servent andrinta a j'adrësse #</pre> <!-- ch'a lassa sta riga-sì giusta 'me ch'a l'é -->",
+	'email-blacklist' => "# J'adrësse e-mail ch'as treuva ant sta lista-sì a vniran blocà da registresse o mandé e-mai. 
+# Sta lista a l'ha valor mach an sta wiki-sì; ch'a-j fasa arferiment ëdcò a la lista nèira global. 
+# Për dla documentassion ch'a varda http://www.mediawiki.org/wiki/Extension:SpamBlacklist 
+#<!-- ch'a lassa sta riga-sì giusta 'me ch'a l'é --> <pre> 
+# 
+# La sintassi a l'é: 
+# * Tut lòn ch'as anandia con na \"#\" fin a la fin dla riga as ten coma coment # 
+* Qualsëssìa riga nen veujda a resta un tòch d'espression regolar ch'as paragon-a a ij nòm ëd servent andrinta a j'adrësse 
+
+#</pre> <!-- ch'a lassa sta riga-sì giusta 'me ch'a l'é -->",
+	'email-whitelist' => "#<!-- ch'a lassa sta riga-sì giusta 'me ch'a l'é --> <pre> 
+# J'adrësse e-mail ch'as treuva ant sta lista-sì a vniran *pa* blocà combin ch'a sio
+# stàite blocà da vos ëd lista nèira.
+# 
+#</pre> <!-- ch'a lassa sta riga-sì giusta 'me ch'a l'é -->
+# La sintassi a l'é: 
+# * Tut lòn ch'as anandia con na \"#\" fin a la fin dla riga as ten coma coment 
+# * Qualsëssìa riga nen veujda a resta un tòch d'espression regolar ch'as paragon-a a ij nòm ëd servent andrinta a j'adrësse",
+	'spam-blacklisted-email' => 'Adrëssa e-mail an lista nèira',
+	'spam-blacklisted-email-text' => "Toa adrëssa e-mail a l'é al moment an lista nèira për mandé e-mail a àutri utent.",
+	'spam-blacklisted-email-signup' => "L'adrëssa e-mail dàita a l'é a moment an ista nèira për l'usagi.",
 	'spam-invalid-lines' => "{{PLURAL:$1|St'|Sti}} element dla lista nèira dla rumenta ëd reclam a {{PLURAL:$1|l'é|son}} {{PLURAL:$1|n'|dj'}}espression regolar nen {{PLURAL:$1|bon-a|bon-e}} e a l'{{PLURAL:$1|ha|han}} da manca d'esse coregiùe anans che salvé la pàgina:",
 	'spam-blacklist-desc' => 'Strument anti-spam basà an dzora a Regex: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
 );
