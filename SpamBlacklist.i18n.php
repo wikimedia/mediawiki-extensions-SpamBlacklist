@@ -660,6 +660,7 @@ $messages['eo'] = array(
 );
 
 /** Spanish (Español)
+ * @author Armando-Martin
  * @author Drini
  * @author Sanbec
  */
@@ -683,6 +684,26 @@ $messages['es'] = array(
 #  * Toda línea que no esté en blanco es una expresión regular que sólo se cotejará con URLs
 
  #</pre> <!-- Deje esta línea exactamente como está -->',
+	'email-blacklist' => '# Las direcciones de correo electrónico que coincidan con esta lista serán bloqueadas para el registro o envío de e-mails!
+# Esta lista afecta a sólo este wiki; Consulte también la lista negra global.
+# Para documentación vea https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+#<!-- Deje esta línea exactamente como está --> <pre>
+#
+# La sintaxis es la siguiente:
+ #   * Todo texto a la derecha del carácter "#" hasta el final de la línea es un comentario
+ #   * Cada línea que no esté en blanco es un fragmento de código que sólo cotejarán los servidores (hosts) con las direcciones de correo electrónico
+#</pre> <!-- Deje esta línea exactamente como está -->',
+	'email-whitelist' => ' #<!-- Deje esta línea exactamente como está --> <pre>
+# Las direcciones de correo electrónico que aparecen en esta lista*no* serán bloqueadas incluso si hubieran
+# debido ser bloqueadas por aparecer en la lista negra.
+#
+ #</pre> <!-- Deje esta línea exactamente como está-->
+# La sintaxis es la siguiente:
+#  * Todo texto a la derecha del carácter "#" hasta el final de la línea es un comentario
+#  * Cada línea que no esté en blanco es un fragmento de código que será cotejada por los servidores (hosts) con las direcciones de correo electrónico',
+	'spam-blacklisted-email' => 'Dirección de correo electrónico de la lista negra',
+	'spam-blacklisted-email-text' => 'Su dirección de correo electrónico está actualmente en la lista negra y no puede enviar e-mails a otros usuarios.',
+	'spam-blacklisted-email-signup' => 'La dirección de correo electrónico dada está actualmente en la lista negra de uso.',
 	'spam-invalid-lines' => '{{PLURAL:$1|La siguiente línea|Las siguientes líneas}} de la lista negra de spam {{PLURAL:$1|es una expresión regular inválida|son expresiones regulares inválidas}} y es necesario {{PLURAL:$1|corregirla|corregirlas}} antes de guardar la página:',
 	'spam-blacklist-desc' => 'Herramienta anti-spam basada en expresiones regulares [[MediaWiki:Spam-blacklist]] y [[MediaWiki:Spam-whitelist]]',
 );
@@ -1476,6 +1497,8 @@ för em Afspeichere eets en Odenung jebraat wäde:',
  */
 $messages['lb'] = array(
 	'spam-blacklisted-email' => 'Gespaart Mail-Adressen',
+	'spam-blacklisted-email-text' => 'Är Mailadress ass elo gespaart fir anere Benotzer Mailen ze schécken.',
+	'spam-blacklisted-email-signup' => "D'Mailadress déi Dir uginn hutt ass elo gespaart fir anere Benotzer Mailen ze schécken.",
 	'spam-blacklist-desc' => 'Op regulären Ausdréck (Regex) opgebauten Tool: [[MediaWiki:Spam-blacklist]] a [[MediaWiki:Spam-whitelist]]',
 );
 
@@ -1589,6 +1612,7 @@ $messages['ml'] = array(
 /** Marathi (मराठी)
  * @author Hiteshgotarane
  * @author Kaustubh
+ * @author Rahuldeshmukh101
  */
 $messages['mr'] = array(
 	'spam-blacklist' => ' # या यादीशी जुळणारे बाह्य दुवे एखाद्या पानावर दिल्यास ब्लॉक केले जातील.
@@ -1611,7 +1635,9 @@ $messages['mr'] = array(
 #  * प्रत्येक रिकामी नसलेली ओळ अंतर्गत URL जुळविणारी regex फ्रॅगमेंट आहे
 
  #</pre> <!-- leave this line exactly as it is -->',
+	'spam-blacklisted-email' => 'प्रतिबंधित  विपत्र पत्ता',
 	'spam-blacklisted-email-text' => 'तुमचा ई-पत्ता काळ्या यादीत समाविष्ट करण्यात आला आहे. इतर सदस्यांना संपर्क करणे शक्य नाही.',
+	'spam-blacklisted-email-signup' => 'दिलेला विपत्र पत्ता सद्य वापरण्यास प्रतिबंधित केलेला आहे',
 	'spam-invalid-lines' => 'हे पान जतन करण्यापूर्वी खालील {{PLURAL:$1|ओळ जी चुकीची|ओळी ज्या चुकीच्या}} एक्स्प्रेशन {{PLURAL:$1|आहे|आहेत}}, दुरुस्त करणे गरजेचे आहे:',
 	'spam-blacklist-desc' => 'रेजएक्स वर चालणारे स्पॅम थांबविणारे उपकरण: [[MediaWiki:Spam-blacklist]] व [[MediaWiki:Spam-whitelist]]',
 );
