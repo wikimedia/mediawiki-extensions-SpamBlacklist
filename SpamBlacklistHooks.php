@@ -164,5 +164,6 @@ class SpamBlacklistHooks {
 		foreach ( BaseBlacklist::getBlacklistTypes() as $type => $class ) {
 			$wgMemc->delete( "$wgDBname:{$type}_blacklist_regexes" );
 		}
+		return true;
 	}
 }
