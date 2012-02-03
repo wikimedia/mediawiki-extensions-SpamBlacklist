@@ -135,7 +135,7 @@ class SpamBlacklist extends BaseBlacklist {
 	 * @return string
 	 */
 	public function getRegexStart() {
-		return '/(?:https?:)?\/\/+[a-z0-9_\-.]*(';
+		return '/(?:https?:)\/\/+[a-z0-9_\-.]*(';
 	}
 
 	/**
