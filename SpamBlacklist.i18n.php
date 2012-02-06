@@ -945,6 +945,16 @@ $messages['gsw'] = array(
 	'spam-blacklist-desc' => 'Regex-basiert Anti-Spam-Wärchzyyg: [[MediaWiki:Spam-blacklist]] un [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Gujarati (ગુજરાતી)
+ * @author KartikMistry
+ * @author Sushant savla
+ */
+$messages['gu'] = array(
+	'spam-blacklisted-email' => 'પ્રતિબંધિત ઈ-મેલ સરનામું',
+	'spam-blacklisted-email-text' => 'તમારા ઈ-મેલ સરનામાં પર હાલમાં પ્રતિબંધ લગાડેલો છે આથી તમે ઈ-મેલ મોકલી  નહીં શકો.',
+	'spam-blacklisted-email-signup' => 'આ ઈ-મેલ પર હાલમાં વપરાશ પ્રતિબંધ લાગેલો છે.',
+);
+
 /** Hebrew (עברית)
  * @author Amire80
  * @author Ofekalef
