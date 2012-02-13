@@ -371,6 +371,24 @@ $messages['br'] = array(
 #  * Kement linenn anc'houllo zo un darnad skrid poellek na zielfennno nemet an ostizien el liammoù gourskrid
 
   #</pre> <!-- lezel al linenn-mañ tre evel m'emañ -->",
+	'email-blacklist' => "  # Miret e vo ouzh ar chomlec'hioù postel a glot gant ar roll-mañ da enrollañ pe da gas posteloù
+  # Ne sell ar roll-mañ nemet ouzh ar wiki-mañ ; sellit ivez ouzh al listenn zu hollek.
+  # Aze emañ an titouroù http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+  #<!-- lezel al linenn-mañ tre evel m'emañ  --> <pre>
+#
+# Setu doare an ereadur :
+#  * Kement testenn zo war-lerc'h un arouezenn \"#\" betek dibenn al linenn a vez sellet outi evel un evezhiadenn
+#  * Kement linenn n'eo ket goullo zo un tamm eus ul lavarenn reoliek na gloto nemet gant an ostizien el liammoù gourskrid
+
+  #</pre> <!-- lezel al linenn-mañ tre evel m'emañ -->",
+	'email-whitelist' => " #<!-- lezel al linenn-mañ tre evel m'emañ --> <pre>
+# *Ne vo ket* stanket ar chomlec'hioù postel zo er roll-mañ ha pa oant da vezañ
+# diouzh enmontoù al listenn zu.
+#
+ #</pre> <!-- lezel al linenn-mañ tre evel m'emañ -->
+# Setu an ereadur :
+#   * Kement tra zo war-lerc'h un arouezenn \"#\" betek dibenn al linenn zo un evezhiadenn
+#   * Kement linenn n'eo ket goullo zo un tamm regex (lavarenn reoliek) a vo lakaet a-geñver gant al lodenn \"ostiz\" e diabarzh ar chomlec'hioù postel",
 	'spam-blacklisted-email' => "Chomlec'hioù postel ha listenn zu",
 	'spam-blacklisted-email-text' => "Evit ar mare emañ ho chomlec'h postel war ul listenn zu ha n'haller ket kas posteloù drezañ d'an implijerien all.",
 	'spam-blacklisted-email-signup' => "War ul listenn zu emañ ar chomlec'h postel pourchaset. N'hall ket bezañ implijet.",
@@ -969,6 +987,39 @@ $messages['gsw'] = array(
  * @author Sushant savla
  */
 $messages['gu'] = array(
+	'spam-blacklist' => ' # જ્યારે કોઈ પાનામાં આ યાદીને મળતા બાહ્ય URLs ઉમેરાશે ત્યારે તેમને રોકી દેવાશે. 
+ # આ યાદી માત્ર આ વિકિ પરજ કાર્યાન્વીત છે.; વૈશ્વીક પ્રતિબંધ યાદી જોવા પણ વિનંતી. 
+ # દસ્તાવજ માટે  https://www.mediawiki.org/wiki/Extension:SpamBlacklist જુઓ.
+ #<!-- leave this line exactly as it is --> <pre>
+#
+# સૂત્ર લેખન (સિન્ટેક્સ) આ પ્રમાણે છે:
+#   * Everything from a "#" character to the end of the line is a comment
+#   * Every non-blank line is a regex fragment which will only match hosts inside URLs
+
+ #</pre> <!-- leave this line exactly as it is -->',
+	'spam-whitelist' => ' #<!-- આ લાઈનને એમની એમ જ રહેવા દેશો --> <pre>
+# યાદીને મળતા અવતા બાહ્ય URLs નેપ્રતિબંધિત  *નહીં* કરાય  પછી ભલે તેમના
+# પ્રતિબંધીત યાદીને ઍંટ્રીમાં રોક લગાડેલી હોય.
+#
+ #</pre> <!-- આ લાઈનને એમની એમ જ રહેવા દેશો  -->',
+	'email-blacklist' => ' # આ યાદીને મળતા ઈ-મેલની નોંધણી કે તેમના દ્વારા મેલ આવાગમનને રોકી દેવાશે. 
+ # આ યાદી માત્ર આ વિકિ પરજ કાર્યાન્વીત છે.; વૈશ્વીક પ્રતિબંધ યાદી જોવા પણ વિનંતી. 
+ # દસ્તાવજ માટે  https://www.mediawiki.org/wiki/Extension:SpamBlacklist જુઓ.
+ #<!-- leave this line exactly as it is --> <pre>
+#
+# સૂત્ર લેખન (સિન્ટેક્સ) આ પ્રમાણે છે:
+#   * Everything from a "#" character to the end of the line is a comment
+#   * Every non-blank line is a regex fragment which will only match hosts inside URLs
+
+ #</pre> <!-- leave this line exactly as it is -->',
+	'email-whitelist' => ' #<!-- leave this line exactly as it is --> <pre>
+# આ યાદીને મળતાં ઈ-મેલ ને પ્રતિબંધિત *નહીં* કરી શકાય પછી ભલે તેમના પર
+# પ્રતિબંધીત સૂચિ દ્વારા રોક લગાવાઈ હોય. 
+#
+ #</pre> <!-- leave this line exactly as it is -->
+# સૂત્ર રચના આમુજબ હશે.:
+#   * Everything from a "#" character to the end of the line is a comment
+#   * Every non-blank line is a regex fragment which will only match hosts inside e-mail addresses',
 	'spam-blacklisted-email' => 'પ્રતિબંધિત ઈ-મેલ સરનામું',
 	'spam-blacklisted-email-text' => 'તમારા ઈ-મેલ સરનામાં પર હાલમાં પ્રતિબંધ લગાડેલો છે આથી તમે ઈ-મેલ મોકલી  નહીં શકો.',
 	'spam-blacklisted-email-signup' => 'આ ઈ-મેલ પર હાલમાં વપરાશ પ્રતિબંધ લાગેલો છે.',
