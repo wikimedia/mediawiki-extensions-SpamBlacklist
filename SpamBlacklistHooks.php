@@ -156,7 +156,7 @@ class SpamBlacklistHooks {
 	 */
 	static function articleSave( &$article, &$user, $text, $summary, $isminor, $iswatch, $section ) {
 		if( !BaseBlacklist::isLocalSource( $article->getTitle() ) ) {
-			return false;
+			return true;
 		}
 		global $wgMemc, $wgDBname;
 
