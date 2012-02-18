@@ -183,15 +183,14 @@ $messages['ast'] = array(
 #  * Toa llinia non balera ye un fragmentu regex qu\'afeuta namái a los sirvidores de les URLs
 
  #</pre> <!-- dexa esta llinia exautamente como ta -->',
-	'spam-whitelist' => " #<!-- dexa esta llinia exautamente como ta --> <pre>
-# Les URLs esternes d'esta llista *nun* sedrán bloquiaes inda si lo fueron per aciu
-# d'una entrada na llista negra.
+	'spam-whitelist' => ' #<!-- dexa esta llinia exautamente como ta --> <pre>
+# Les URLs esternes d\'esta llista *nun* se bloquiarán inda si quedaríen bloquiaes
+# por una entrada na llista negra.
 #
-# La sintaxis ye ésta:
-#  * Tol testu dende un caráuter \"#\" hasta lo cabero la llina ye un comentariu
-#  * Toa llinia non vacia ye un fragmentu regex qu'afeuta namái a les URLs especificaes
-
- #</pre> <!-- dexa esta llinia exautamente como ta -->",
+# La sintaxis ye esta:
+#  * Tol testu dende un caráuter "#" hasta lo cabero la llinia ye un comentariu
+#  * Toa llinia non balera ye un fragmentu regex qu\'afeuta namái a les URLs especificaes
+ #</pre> <!-- dexa esta llinia exautamente como ta -->',
 	'email-blacklist' => ' # Los correos que casen con esta llista tendrán torgao rexistrase o unviar corréu.
  # Esta llista afeuta namái a esta wiki; mira tamién la llista negra global.
  # Pa ver la documentación visita https://www.mediawiki.org/wiki/Extension:SpamBlacklist
@@ -788,15 +787,31 @@ $messages['fa'] = array(
 
  #</pre> <!-- این سطر را همان‌گونه که هست رها کنید -->',
 	'spam-whitelist' => ' #<!-- این سطر را همان‌گونه که هست رها کنید --> <pre>
-# از درج پیوندهای بیرونی که با این فهرست مطابقت کنند جلوگیری نمی‌شود حتی اگر
+# از درج پیوندهای بیرونی که با این فهرست مطابقت کنند جلوگیری *نمی‌شود* حتی اگر
 # در فهرست سیاه قرار داشته باشند.
 #
+ #</pre> <!-- این سطر را همان‌گونه که هست رها کنید -->',
+	'email-blacklist' => ' # از ثبت نام یا ارسال نامه توسط نشانی‌های پست الکترونیکی که با این فهرست مطابقت کنند جلوگیری می‌شود.
+ # این فهرست فقط روی همین ویکی اثر دارد؛ به فهرست سیاه سراسری نیز مراجعه کنید.
+ # برای مستندات به https://www.mediawiki.org/wiki/Extension:SpamBlacklist مراجعه کنید
+ #<!-- این سطر را همان‌گونه که هست رها کنید --> <pre>
 # دستورات به این شکل هستند:
 #  * همه چیز از «#» تا پایان سطر به عنوان توضیح در نظر گرفته می‌شود
-#  * هر سطر از متن به عنوان یک دستور از نوع عبارت باقاعده در نظر گرفته می‌شود که فقط  با نام میزبان در نشانی اینترنتی مطابقت داده می‌شود
+#  * هر سطر از متن به عنوان یک دستور از نوع عبارت باقاعده در نظر گرفته می‌شود که فقط با نام میزبان در نشانی پست الکترونیکی مطابقت داده می‌شود
 
  #</pre> <!-- این سطر را همان‌گونه که هست رها کنید -->',
-	'spam-invalid-lines' => '{{PLURAL:$1|سطر|سطرهای}} زیر در فهرست سیاه هرزنگاری دستورات regular expression غیر مجاز {{PLURAL:$1|است|هستند}} و قبل از ذخیره کردن صفحه باید اصلاح {{PLURAL:$1|شود|شوند}}:',
+	'email-whitelist' => ' #<!-- این سطر را همان‌گونه که هست رها کنید --> <pre>
+# نشانی‌های پست الکترونیکی که با این فهرست مطابقت کنند محدود *نمی‌شوند* حتی اگر
+# با فهرست سیاه مطابقت داشته باشند.
+#
+ #</pre> <!-- این سطر را همان‌گونه که هست رها کنید -->
+# دستورات به این شکل هستند:
+#  * همه چیز از «#» تا پایان سطر به عنوان توضیح در نظر گرفته می‌شود
+#  * هر سطر از متن به عنوان یک دستور از نوع عبارت باقاعده در نظر گرفته می‌شود که فقط با نام میزبان در نشانی پست الکترونیکی مطابقت داده می‌شود',
+	'spam-blacklisted-email' => 'نشانی پست الکترونیکی موجود در لیست سیاه',
+	'spam-blacklisted-email-text' => 'نشانی پست الکترونیکی شما در حال حاضر در فهرست سیاه قرار دارد و نمی‌توانید به دیگر کاربران نامه بفرستید.',
+	'spam-blacklisted-email-signup' => 'نشانی پست الکترونیکی داده شده در حال حاضر در فهرست سیاه است و قابل استفاده نیست.',
+	'spam-invalid-lines' => '{{PLURAL:$1|سطر|سطرهای}} زیر در فهرست سیاه هرزنگاری، عبارات باقاعدهٔ غیر مجاز {{PLURAL:$1|است|هستند}} و قبل از ذخیره کردن صفحه باید اصلاح {{PLURAL:$1|شود|شوند}}:',
 	'spam-blacklist-desc' => 'ابزار ضد هرزنویسی مبتنی بر regular expressions: [[MediaWiki:Spam-blacklist]] و [[MediaWiki:Spam-whitelist]]',
 );
 
@@ -2313,6 +2328,7 @@ $messages['sl'] = array(
 #   * Vsaka neprazna vrstica je delec regularnega izraza, ki se bo ujemal samo z gostitelji v URL-jih
 
  #</pre> <!-- pustite to vrstico takšno, kot je -->',
+	'spam-blacklisted-email' => 'E-poštni naslov na črnem seznamu',
 	'spam-invalid-lines' => '{{PLURAL:$1|Naslednja vrstica|Naslednji vrstici|Naslednje vrstice}} črnega seznama smetja {{PLURAL:$1|je neveljavni regularni izraz in ga|sta neveljavna regularna izraza in ju|so neveljavni regularni izrazi in jih}} je pred shranjevanjem strani potrebno popraviti:',
 	'spam-blacklist-desc' => 'Orodje proti smetju, temelječe na regularnih izrazih: [[MediaWiki:Spam-blacklist]] in [[MediaWiki:Spam-whitelist]]',
 );
