@@ -767,6 +767,27 @@ $messages['et'] = array(
 #   * Iga rida, mis ei ole tühi, on regulaaravaldise osa, milleks sobib internetiaadressi osadest ainult hostinimi
 
  #</pre> <!-- Jäta see rida muutmata kujule. -->',
+	'email-blacklist' => ' # Sellele nimekirjale vastavatel e-posti aadressidel blokeeritakse registreerumine ja e-kirjade saatmine.
+ # See nimekiri puudutab ainult seda vikit; uuri ka globaalse musta nimekirja kohta.
+ # Dokumentatsioon on asukohas https://www.mediawiki.org/wiki/Extension:SpamBlacklist.
+ #<!-- Jäta see rida muutmata kujule. --> <pre>
+#
+# Süntaks on järgmine:
+#   * Kõik alates märgist "#" kuni rea lõpuni on kommentaar.
+#   * Iga rida, mis ei ole tühi, on regulaaravaldise osa, mis vastab ainult e-posti aadressides sisalduvatele hostinimedele.
+
+ #</pre> <!-- Jäta see rida muutmata kujule. -->',
+	'email-whitelist' => ' #<!-- Jäta see rida muutmata kujule. --> <pre>
+# Sellele nimekirjale vastavaid e-posti aadresse *ei* blokeerita isegi mitte siis,
+# kui musta nimekirja sissekande järgi võiks nad olla blokeeritud.
+#
+ #</pre> <!-- Jäta see rida muutmata kujule. -->
+# Süntaks on järgmine:
+#   * Kõik alates märgist "#" kuni rea lõpuni on kommentaar.
+#   * Iga rida, mis ei ole tühi, on regulaaravaldise osa, mis vastab ainult e-posti aadressides sisalduvatele hostinimedele.',
+	'spam-blacklisted-email' => 'Musta nimekirja kantud e-posti aadress',
+	'spam-blacklisted-email-text' => 'Musta nimekirja sissekande tõttu on sinu e-posti aadressilt teistele kasutajatele e-kirjade saatmine praegu keelatud.',
+	'spam-blacklisted-email-signup' => 'Selle e-posti aadressi kasutamine praegu musta nimekirja sissekandega keelatud.',
 	'spam-invalid-lines' => '{{PLURAL:$1|Järgmine rida|Järgmised read}} rämpspostituste mustas nimekirjas on {{PLURAL:$1|vigane regulaaravaldis|vigased regulaaravaldised}} ja {{PLURAL:$1|see|need}} tuleb enne lehekülje salvestamist parandada:',
 	'spam-blacklist-desc' => 'Regulaaravaldisel põhinev tööriist: [[MediaWiki:Spam-blacklist]] ja [[MediaWiki:Spam-whitelist]]',
 );
