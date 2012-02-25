@@ -1375,6 +1375,7 @@ $messages['it'] = array(
  * @author Fryed-peach
  * @author JtFuruhata
  * @author Marine-Blue
+ * @author Whym
  */
 $messages['ja'] = array(
 	'spam-blacklist' => ' # この一覧に掲載されている外部URLをページに追加すると編集をブロックします。
@@ -1396,6 +1397,9 @@ $messages['ja'] = array(
 #  * 空白を含んでいない行は、URLに含まれるホスト名との一致を検出する正規表現です
 
  #</pre> <!-- この行は変更しないでください -->',
+	'spam-blacklisted-email' => '拒否リストにある電子メールアドレス',
+	'spam-blacklisted-email-text' => '電子メールアドレスが拒否リストの中に入っており、他の利用者に電子メールを送ることができなくなっています。',
+	'spam-blacklisted-email-signup' => '与えられた電子メールアドレスは現在拒否リストに入っており、使用できません。',
 	'spam-invalid-lines' => 'このスパムブラックリストには、不正な{{PLURAL:$1|正規表現}}の含まれている{{PLURAL:$1|行}}があります。保存する前に問題部分を修正してください:',
 	'spam-blacklist-desc' => '正規表現を用いたスパム対策ツール: [[MediaWiki:Spam-blacklist|スパムブラックリスト]]および[[MediaWiki:Spam-whitelist|スパムホワイトリスト]]',
 );
@@ -2080,6 +2084,7 @@ $messages['pnb'] = array(
 
 /** Portuguese (Português)
  * @author 555
+ * @author Giro720
  * @author Hamilton Abreu
  * @author Malafaya
  */
@@ -2105,6 +2110,7 @@ $messages['pt'] = array(
 #  * Todas as linhas que não estiverem em branco são um fragmento de expressão regular (regex) que abrangem apenas a URL especificada
 
  #</pre> <!-- mantenha esta linha exatamente assim -->',
+	'spam-blacklisted-email' => 'Endereço de correio electrónico da lista negra',
 	'spam-invalid-lines' => "{{PLURAL:$1|A entrada|As entradas}} abaixo {{PLURAL:$1|é uma expressão regular|são expressões regulares}}  ''(regex)'' {{PLURAL:$1|inválida e precisa|inválidas e precisam}} de ser {{PLURAL:$1|corrigida|corrigidas}} antes de gravar a página:",
 	'spam-blacklist-desc' => 'Ferramenta anti-"spam" baseada em Regex: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
 );
