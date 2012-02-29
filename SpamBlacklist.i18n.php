@@ -1996,6 +1996,7 @@ $messages['or'] = array(
 );
 
 /** Polish (Polski)
+ * @author BeginaFelicysym
  * @author Derbeth
  * @author Sp5uhe
  */
@@ -2019,6 +2020,27 @@ $messages['pl'] = array(
 #   * Każda niepusta linia jest fragmentem wyrażenia regularnego, które będzie dopasowywane jedynie do hostów wewnątrz linków
 
  #</pre> <!-- zostaw tę linię dokładnie tak, jak jest -->',
+	'email-blacklist' => ' # Adresy e-mail pasujące do tej listy będą blokowane przed rejestracją i wysyłaniem maili
+ # Ta lista dotyczy tylko tej wiki; przejrzyj również globalną czarną listę.
+ # Dokumentacja znajduje się na https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- leave this line exactly as it is --> <pre>
+#
+# Składnia opisana jest poniżej:
+#   * Wszystko znajdujące się za znakiem "#" do końca linii jest komentarzem
+#   * Każda niepusta linia jest fragmentem wyrażenia regularnego, które będzie dopasowywane do hosta z adresu e-mail
+
+ #</pre> <!-- leave this line exactly as it is -->',
+	'email-whitelist' => ' #<!-- leave this line exactly as it is --> <pre>
+# Adresy e-mail pasujące do tej listy *nie* będą blokowane, nawet jeśli zostaną
+# zablokowane przez wpisy z czarnej listy.
+#
+ #</pre> <!-- leave this line exactly as it is -->
+# Składnia jest następująca:
+#   * Wszystko począwszy od znaku "#" do końca linii jest komentarzem
+#   * Każda niepusta linia jest fragmentem wyrażenia regularnego dopasowywanego tylko do nazw hpstów z adresów e-mail',
+	'spam-blacklisted-email' => 'Niedozwolone adresy e-mail',
+	'spam-blacklisted-email-text' => 'Twój adres e-mail jest obecnie umieszczony na czarnej liście i nie można z niego wysyłać wiadomości e-mail do innych użytkowników.',
+	'spam-blacklisted-email-signup' => 'Podany adres e-mail jest obecnie na czarnej liście blokującej przed użyciem.',
 	'spam-invalid-lines' => '{{PLURAL:$1|Następująca linia jest niepoprawnym wyrażeniem regularnym i musi być poprawiona przed zapisaniem strony:|Następujące linie są niepoprawnymi wyrażeniami regularnymi i muszą być poprawione przed zapisaniem strony:}}',
 	'spam-blacklist-desc' => 'Narzędzie antyspamowe oparte o wyrażenia regularne: [[MediaWiki:Spam-blacklist|spam – lista zabronionych]] oraz [[MediaWiki:Spam-whitelist|spam – lista dozwolonych]]',
 );
