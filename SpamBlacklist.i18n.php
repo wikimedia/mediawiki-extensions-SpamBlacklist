@@ -1651,6 +1651,30 @@ $messages['li'] = array(
 #    allein van toepassing is op hosts binne URL's.
 
  #</pre> <!-- laot deze lien -->",
+	'email-blacklist' => " # E-mailadresse die voldoon aan dees lies waere geblokkeerd bie 't registrere of 't versjikke van e-mails.
+ # Dees lis haet allein invlood op deze wiki. d'r Besteit ouch 'n wikiwiej zwarte lies.
+ # Documentatie: https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- laot dees lien wie zie is --> <pre>
+#
+# De syntax is es volg:
+#   * Alles vanaaf 't karakter \"#\" toet 't ènj vanne regel is 'n opmèrking
+#   * Edere neet-laege regel is e fragment van 'n regulier oetdrökking die
+#     allein van toepassing is op óngerbringers binne e-mailadresse.
+
+ #</pre> <!-- laot dees lien wie zie is -->",
+	'email-whitelist' => " #<!-- laot dees lien wie zie is --> <pre>
+# E-mailadresse die voldoon aan dees lies, waere *noeatj* geweigerd, al
+# zówwe ze geblokkeerd mótte waere door regels oete zwarte lies.
+#
+# De syntaxis is es volg:
+#   * Alles vanaaf 't karakter \"#\" toet 't ènj vanne regel is opmèrking
+#   * Edere neet-laege regel is e fragment van 'n regulier oetdrökking die
+#     allein van toepassing is op óngerbringers binne e-mailadresse.
+
+ #</pre> <!-- laot dees lien wie zie is -->",
+	'spam-blacklisted-email' => 'E-mailadres oppe zwarte lies',
+	'spam-blacklisted-email-text' => 'Dien e-mailadres steit momenteel oppe zwarte lies wodoor se gein e-mails nao anger gebroekers kins versjikke.',
+	'spam-blacklisted-email-signup' => "'t Opgegaeve e-mailadres steit momenteel oppe zwarte lies.",
 	'spam-invalid-lines' => "De volgende {{PLURAL:$1|regel|regel}} van de zwarte lies {{PLURAL:$1|is 'n|zeen}} onzjuuste reguliere {{PLURAL:$1|oetdrukking|oetdrukkinge}}  en {{PLURAL:$1|mót|mótte}} verbaeterd waere alveures de pazjena kin waere opgeslage:",
 	'spam-blacklist-desc' => 'Antispamfunctionaliteit via reguliere expressies: [[MediaWiki:Spam-blacklist]] en [[MediaWiki:Spam-whitelist]]',
 );
@@ -2196,6 +2220,7 @@ $messages['roa-tara'] = array(
 
 /** Russian (Русский)
  * @author Ahonc
+ * @author Express2000
  * @author HalanTul
  * @author Kaganer
  * @author Александр Сигачёв
@@ -2217,6 +2242,16 @@ $messages['ru'] = array(
 # Синтаксис:
 #   * Всё, начиная с символа "#" и до конца строки, считается комментарием
 #   * Каждая непуская строка является фрагментом регулярного выражения, применяемого только к узлу в URL
+
+ #</pre> <!-- не изменяйте эту строку -->',
+	'email-blacklist' => ' # Адреса электронной почты, соответствующие этому списку, будут заблокированы от регистрации или посылки эл. почты.
+ # Этот список действует только для данной вики, существует также общий чёрный список.
+ # Подробнее на странице https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- не изменяйте эту строку --> <pre>
+#
+# Синтаксис:
+#   * Всё, начиная с символа "#" и до конца строки, считается комментарием
+#   * Каждая непустая строка является фрагментом регулярного выражения, применяемого только к узлам внутри адресов эл. почты
 
  #</pre> <!-- не изменяйте эту строку -->',
 	'spam-blacklisted-email' => 'Адреса электронной почты, занесённые в чёрный список',
