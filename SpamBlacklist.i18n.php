@@ -2806,6 +2806,7 @@ $messages['yue'] = array(
 
 /** Simplified Chinese (‪中文(简体)‬)
  * @author Hzy980512
+ * @author Linforest
  * @author PhiLiP
  */
 $messages['zh-hans'] = array(
@@ -2828,6 +2829,16 @@ $messages['zh-hans'] = array(
 #  * 非空白的每行则是正则表达式片段，将只与内含该URL的链接相匹配
 
  #</pre> <!-- 请完整地保留此行 -->',
+	'email-blacklist' => ' # 将会把那些与该列表相匹配的电子邮件地址从注册或发生电子邮件地址当中屏蔽掉。
+ # 该列表仅仅影响本维基站点；请另见全局黑名单。
+ # 有关文档请参见 https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- leave this line exactly as it is --> <pre>
+#
+# 语法如下：
+#   * 从字符"#"开始直至行尾的所有内容称为一条注释
+#   * 每个非空白行都是一个regex片段，它将仅仅匹配电子邮件地址当中的主机
+
+ #</pre> <!-- leave this line exactly as it is -->',
 	'spam-blacklisted-email' => '黑名单中的电邮地址',
 	'spam-blacklisted-email-text' => '您的电子邮件地址目前已被列入黑名单以防止您发送邮件。',
 	'spam-blacklisted-email-signup' => '所给电邮地址已被列入黑名单。',
