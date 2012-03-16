@@ -2409,6 +2409,8 @@ $messages['sk'] = array(
 
 /** Slovenian (Slovenščina)
  * @author Dbc334
+ * @author Eleassar
+ * @author Yerpo
  */
 $messages['sl'] = array(
 	'spam-blacklist' => ' # Zunanji URL-ji, ki se ujemajo s tem seznamom, bodo blokirani, ko bodo dodani na stran.
@@ -2430,7 +2432,27 @@ $messages['sl'] = array(
 #   * Vsaka neprazna vrstica je delec regularnega izraza, ki se bo ujemal samo z gostitelji v URL-jih
 
  #</pre> <!-- pustite to vrstico takšno, kot je -->',
+	'email-blacklist' => '# Registracija in pošiljanje z e-poštnih naslovov, ki se ujemajo s spodnjim seznamom, bosta preprečena
+ # Seznam vpliva samo na ta wiki; glejte tudi globalni črni seznam.
+ # Za dokumentacijo glejte https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- to vrstico pustite natančno takšno, kakršna je --> <pre>
+#
+# Opis skladnje:
+#  * Vse od znaka "#" do konca vrstice je komentar  *
+# Vsaka neprazna vrstica je regularni izraz, ki se lahko ujema le z imeni gostiteljev v e-poštnih naslovih
+
+ #</pre> <!-- to vrstico pustite natančno takšno, kakršna je -->',
+	'email-whitelist' => '#<!-- to vrstico pustite natančno takšno, kakršna je --> <pre>
+# E-poštni naslovi, ki se ujemajo s tem seznamom, *ne* bodo blokirani, tudi če bi
+# bili blokirani z vnosi na črnem seznamu.
+#
+ #</pre> <!-- to vrstico pustite natančno takšno, kakršna je -->
+# Opis skladnje:
+#  * Vse od znaka "#" do konca vrstice je komentar
+#  * Vsaka neprazna vrstica je regularni izraz, ki se lahko ujema le z imenom gostitelja v e-poštnem naslovu',
 	'spam-blacklisted-email' => 'E-poštni naslov na črnem seznamu',
+	'spam-blacklisted-email-text' => 'Vaš e-poštni naslov je trenutno na črnem seznamu, zato ne morete pošiljati pošte drugim uporabnikom.',
+	'spam-blacklisted-email-signup' => 'Ta e-mail naslov je trenutno na črnem seznamu.',
 	'spam-invalid-lines' => '{{PLURAL:$1|Naslednja vrstica|Naslednji vrstici|Naslednje vrstice}} črnega seznama smetja {{PLURAL:$1|je neveljavni regularni izraz in ga|sta neveljavna regularna izraza in ju|so neveljavni regularni izrazi in jih}} je pred shranjevanjem strani potrebno popraviti:',
 	'spam-blacklist-desc' => 'Orodje proti smetju, temelječe na regularnih izrazih: [[MediaWiki:Spam-blacklist]] in [[MediaWiki:Spam-whitelist]]',
 );
