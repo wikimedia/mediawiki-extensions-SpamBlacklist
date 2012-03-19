@@ -2452,7 +2452,7 @@ $messages['sl'] = array(
 #  * Vsaka neprazna vrstica je regularni izraz, ki se lahko ujema le z imenom gostitelja v e-poštnem naslovu',
 	'spam-blacklisted-email' => 'E-poštni naslov na črnem seznamu',
 	'spam-blacklisted-email-text' => 'Vaš e-poštni naslov je trenutno na črnem seznamu, zato ne morete pošiljati pošte drugim uporabnikom.',
-	'spam-blacklisted-email-signup' => 'Ta e-mail naslov je trenutno na črnem seznamu.',
+	'spam-blacklisted-email-signup' => 'E-poštni naslov je trenutno na črnem seznamu.',
 	'spam-invalid-lines' => '{{PLURAL:$1|Naslednja vrstica|Naslednji vrstici|Naslednje vrstice}} črnega seznama smetja {{PLURAL:$1|je neveljavni regularni izraz in ga|sta neveljavna regularna izraza in ju|so neveljavni regularni izrazi in jih}} je pred shranjevanjem strani potrebno popraviti:',
 	'spam-blacklist-desc' => 'Orodje proti smetju, temelječe na regularnih izrazih: [[MediaWiki:Spam-blacklist]] in [[MediaWiki:Spam-whitelist]]',
 );
