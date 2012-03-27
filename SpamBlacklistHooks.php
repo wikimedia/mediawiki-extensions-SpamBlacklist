@@ -50,7 +50,7 @@ class SpamBlacklistHooks {
 		$title = $editPage->mArticle->getTitle();
 		$ret = $spamObj->filter( $title, $text, '', '', $editPage );
 		if ( $ret!==false ) {
-			$resultArr['spamblacklist'] = $ret;
+			$resultArr['spamblacklist'] = implode( '|', $ret );
 		}
 		// Return convention for hooks is the inverse of $wgFilterCallback
 		return ( $ret === false );
