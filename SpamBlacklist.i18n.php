@@ -635,6 +635,7 @@ $messages['dsb'] = array(
  #  * Kužda smužka, kótaraž njejo prozna, jo fragment regularanego wuraza, kótaryž wótpowědujo jano hostam w URL
 
  #</pre> <!-- wóstaj toś tu smužku rowno tak ako jo -->',
+	'spam-blacklisted-email' => 'Blokěrowana e-mailowa adresa',
 	'spam-invalid-lines' => '{{PLURAL:$1|Slědujuca smužka|Slědujucej smužce|Slědujuce smužki|Slědujuce smužki}} corneje lisćiny spama {{PLURAL:$1|jo njepłaśiwy regularny wuraz|stej njepłaśiwej regularnej wuraza|su njepłaśiwe regularne wuraze|su njepłaśiwe regularne wuraze}} a {{PLURAL:$1|musy|musytej|muse|muse}} se korigěrowaś, pjerwjej až składujoš bok:',
 	'spam-blacklist-desc' => 'Antispamowy rěd na zakłaźe regularnych wurazow: [[MediaWiki:Spam-blacklist]] a [[MediaWiki:Spam-whitelist]]',
 );
@@ -1461,6 +1462,24 @@ $messages['ka'] = array(
 #  * ყველა არაცარიელი ხაზი არის რეგულარული გამოთქმის ნაწილი, რომელიც მხოლოდ URL-თან ერთად გამოიყენება
 
   #</pre> <!--არ შეასწოროთ ეს ხაზი-->',
+	'email-blacklist' => ' # ამ სიის შესაბამისი ელ.ფოსტის მისამართები დაიბლოკება რეგისტრაციისაგან, ან ელ.ფოსტის გაგზავნისაგან
+ # ეს სია მოქმედებს მარტო ამ ვიკისთვის, თუმცა არსებობს ასევე საერთო შავი სია.
+ # დამატებითი ინფორმაციისათვის იხილეთ https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- არ შეასწოროთ ეს ხაზი --> <pre>
+#
+# სინტაქსი:
+#   * ყველაფერი დაწყებული სიმბოლოთი "#" ხაზის ბოლომდე კომენტარად ითვლება
+#   * ყველა არაცარიელი ხაზი არის რეგულარული გამოთქმის ფრაგმენტი, რომელიც გამოიყენება, მხოლოდ ელ.ფოსტის შიდა მისამართების კვანძებთან
+
+ #</pre> <!-- არ შეასწოროთ ეს ხაზი -->',
+	'email-whitelist' => ' #<!-- ეს ხაზი არ შეცვალოთ --> <pre>
+# ამ სიის შესაბამისი ელ.ფოსტის მისამართები *არ* დაიბლოკება
+# იმ შემთხვევაშიც კი, თუ ისინი შავ სიაშია შეტანილი.
+#
+ #</pre> <!-- ეს ხაზი არ შეცვალოთ --> 
+# სინტაქსი:
+#   * ყველა, დაწყებული სიმბლოთი "#" და ხაზის ბოლომდე ითვლება კომენტარად
+#   * ყველა არაცარიელი ხაზი წარმოადგენს რეგულარული გამოხატვის ფრაგმენტს, რომელიც გამოიყენება მხოლოდ ელ.ფოსტის მისამართების შიდა კვანძებისათვის',
 	'spam-blacklisted-email' => 'შავ სიაში შეტანილი ელ.ფოსტის მისამართები',
 	'spam-blacklisted-email-text' => 'ამჟამად თქვენი ელ.ფოსტის მისამართი შეტანილია შავ სიაში, ამიტომ თქვენ არ შეგიძლიათ სხვა მომხმარებლებისათვის შეტყობინებების გაგზავნა.',
 	'spam-blacklisted-email-signup' => 'მითითებული ელ.ფოსტის მისამართი შეტანილია შავ სიაში და მისი გამოყენება შეუძლებელია.',
