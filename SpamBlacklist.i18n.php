@@ -2851,6 +2851,7 @@ $messages['yue'] = array(
  * @author Hzy980512
  * @author Linforest
  * @author PhiLiP
+ * @author Supaiku
  */
 $messages['zh-hans'] = array(
 	'spam-blacklist' => ' # 跟这个表合符的外部 URL 当加入时会被封锁。
@@ -2882,6 +2883,14 @@ $messages['zh-hans'] = array(
 #   * 每个非空白行都是一个regex片段，它将仅仅匹配电子邮件地址当中的主机
 
  #</pre> <!-- leave this line exactly as it is -->',
+	'email-whitelist' => '#<!-- leave this line exactly as it is --> <pre>
+ # 和此系列相配的Email 的地址*不会*被阻止即使它将会
+ # 被黑名单条目阻止。 
+ #
+  #</pre> <!-- leave this line exactly as it is -->
+ # Syntax 如下所示：
+ # ＊ 一切从"#"字符到行末尾是注释
+ # ＊ 每一个非空白行是一个 regex 部份将仅匹配主机内部的电子邮件地址',
 	'spam-blacklisted-email' => '黑名单中的电邮地址',
 	'spam-blacklisted-email-text' => '您的电子邮件地址目前已被列入黑名单以防止您发送邮件。',
 	'spam-blacklisted-email-signup' => '所给电邮地址已被列入黑名单。',
