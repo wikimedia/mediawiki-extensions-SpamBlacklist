@@ -1376,16 +1376,17 @@ $messages['it'] = array(
  * @author Fryed-peach
  * @author JtFuruhata
  * @author Marine-Blue
+ * @author Shirayuki
  * @author Whym
  */
 $messages['ja'] = array(
 	'spam-blacklist' => ' # この一覧に掲載されている外部URLをページに追加すると編集をブロックします。
- # この一覧はこのウィキでのみ有効です。グローバル・ブラックリストも参照してください。
+ # この一覧はこのウィキでのみ有効です。グローバル ブラックリストも参照してください。
  # 利用方法は https://www.mediawiki.org/wiki/Extension:SpamBlacklist/ja をご覧ください。
  #<!-- この行は変更しないでください --> <pre>
 #
 # 構文は以下のとおりです:
-#  * "#"文字から行末まではコメントとして扱われます
+#  * 「#」以降行末まではコメントです
 #  * 空白を含んでいない行は、URLに含まれるホスト名との一致を検出する正規表現です
 
  #</pre> <!-- この行は変更しないでください -->',
