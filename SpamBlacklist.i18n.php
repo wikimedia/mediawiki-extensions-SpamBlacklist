@@ -1399,9 +1399,9 @@ $messages['ja'] = array(
 #  * 空白を含んでいない行は、URLに含まれるホスト名との一致を検出する正規表現です
 
  #</pre> <!-- この行は変更しないでください -->',
-	'spam-blacklisted-email' => '拒否リストにある電子メールアドレス',
-	'spam-blacklisted-email-text' => '電子メールアドレスが拒否リストの中に入っており、他の利用者に電子メールを送ることができなくなっています。',
-	'spam-blacklisted-email-signup' => '与えられた電子メールアドレスは現在拒否リストに入っており、使用できません。',
+	'spam-blacklisted-email' => '拒否リストにあるメールアドレス',
+	'spam-blacklisted-email-text' => 'メールアドレスが拒否リストの中に入っており、他の利用者にメールを送信できなくなっています。',
+	'spam-blacklisted-email-signup' => '指定されたメールアドレスは現在拒否リストに入っており、使用できません。',
 	'spam-invalid-lines' => 'このスパムブラックリストには、不正な{{PLURAL:$1|正規表現}}の含まれている{{PLURAL:$1|行}}があります。保存する前に問題部分を修正してください:',
 	'spam-blacklist-desc' => '正規表現を用いたスパム対策ツール: [[MediaWiki:Spam-blacklist|スパムブラックリスト]]および[[MediaWiki:Spam-whitelist|スパムホワイトリスト]]',
 );
