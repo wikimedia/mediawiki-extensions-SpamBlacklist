@@ -1015,6 +1015,28 @@ $messages['gsw'] = array(
 #  * Jede Zyylete, wu nit läär isch, isch e reguläre Usdruck, wu gege d Host-Näme in dr URL prieft wird.
 
  #</pre> <!-- Die Zyylete derf nit gänderet wäre! -->',
+	'email-blacklist' => ' # E-Mail-Adrässe, wu s nume in däre Lischt het, blockiere d Regischtrierig un s Sände vu E-Mail-Nochrichte.
+ # Die Lischt giltet nume fir des Wiki; lueg au di wältwyt Blacklist.
+ # Fir d Dokumentation lueg https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- Die Zyylete derf nit gänderet wäre! --> <pre>
+#
+# Syntax:
+#  * Alles ab em "#"-Zeiche bis zum Änd vu dr Zyylete isch e Kommentar
+#  * Jede Zyylete, wu nit läär isch, isch e reguläre Usdruck, wu gege d Host-Näme in dr URL prieft wird.
+
+ #</pre> <!-- Die Zyylete derf nit gänderet wäre! -->',
+	'email-whitelist' => ' #<!-- Die Zyylete derf nit gänderet wäre! -->
+# E-Mail-Adrässe, wu s nume in däre Lischt het, blockiere d Regischtrierig un 
+# s Sände vu E-Mail-Nochrichte *nit*, au wänn si in dr 
+# lokale oder villicht au globale Blockierlischt din sin.
+# 
+ #<!-- Die Zyylete derf nit gänderet wäre! --> <pre>
+# Syntax:
+#  * Alles ab em "#"-Zeiche bis zum Änd vu dr Zyylete isch e Kommentar
+#  * Jede Zyylete, wu nit läär isch, isch e reguläre Usdruck, wu gege d Host-Näme in dr URL prieft wird.',
+	'spam-blacklisted-email' => 'Blockierti E-Mail-Adrässe',
+	'spam-blacklisted-email-text' => 'Dyy E-Mail-Adräss isch zurzyt fir s Sände vu E-Mail-Nochrichte an anderi Benutzer blockiert.',
+	'spam-blacklisted-email-signup' => 'Di aagee E-Mail-Adräss isch zurzyt fir s Sände vu E-Mail-Nochrichte an anderi Benutzer blockiert.',
 	'spam-invalid-lines' => 'Die {{PLURAL:$1|Zyylete|Zyylete}} in dr Spam-Blacklist {{PLURAL:$1|isch e nit giltige reguläre Usdruck|sin nit giltigi reguläri Usdrick}}. Si {{PLURAL:$1|muess|mien}} vor em Spychere vu dr Syte korrigiert wäre:',
 	'spam-blacklist-desc' => 'Regex-basiert Anti-Spam-Wärchzyyg: [[MediaWiki:Spam-blacklist]] un [[MediaWiki:Spam-whitelist]]',
 );
