@@ -2571,6 +2571,7 @@ $messages['stq'] = array(
 
 /** Swedish (Svenska)
  * @author Lejonel
+ * @author WikiPhoenix
  */
 $messages['sv'] = array(
 	'spam-blacklist' => '
@@ -2594,6 +2595,7 @@ $messages['sv'] = array(
 #   * Alla icke-tomma rader används som reguljära uttryck för att matcha domännamn i URL:er
 
  #</pre> <!-- ändra inte den här raden -->',
+	'spam-blacklisted-email' => 'Svartlistad e-postadress',
 	'spam-invalid-lines' => 'Följande {{PLURAL:$1|rad|rader}} i svarta listan för spam innehåller inte något giltigt reguljärt uttryck  och måste rättas innan sidan sparas:',
 	'spam-blacklist-desc' => 'Antispamverktyg baserat på reguljära uttryck: [[MediaWiki:Spam-blacklist]] och [[MediaWiki:Spam-whitelist]]',
 );
@@ -2656,7 +2658,7 @@ $messages['tg-cyrl'] = array(
 	'spam-blacklist-desc' => 'Абзори зидди ҳарзнигорӣ дар асоси Regex: [[MediaWiki:Spam-blacklist]] ва [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Tajik (Latin script) (tojikī)
+/** Tajik (Latin script) (Tojikī)
  * @author Liangent
  */
 $messages['tg-latn'] = array(
