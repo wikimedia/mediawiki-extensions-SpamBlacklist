@@ -1369,6 +1369,7 @@ $messages['ilo'] = array(
 );
 
 /** Italian (Italiano)
+ * @author Beta16
  * @author BrokenArrow
  * @author Ximo17
  */
@@ -1390,20 +1391,20 @@ $messages['it'] = array(
 #  * Tutte le righe non vuote sono frammenti di espressioni regolari che si applicano al solo nome dell\'host nelle URL
 
  #</pre> <!-- non modificare in alcun modo questa riga -->',
-	'email-blacklist' => ' # Gli indirizzi e-mail che corrispondono a quelli nella lista saranno bloccati, non sarà possibile salvare o inviare e-mail.
+	'email-blacklist' => ' # Gli indirizzi e-mail che corrispondono alla lista seguente saranno bloccati, non sarà possibile salvare o inviare e-mail.
  # La lista è valida solo per questo wiki; fare riferimento anche alla blacklist globale.
  # Per la documentazione si veda https://www.mediawiki.org/wiki/Extension:SpamBlacklist
- #</pre> <!-- non modificare questa linea --> <pre>
+ # <!-- non modificare questa linea --> <pre>
 # La sintassi è la seguente:
 #  * Tutto ciò che è compreso tra un carattere "#" e la fine della riga è un commento
 #  * Tutte le righe non vuote sono frammenti di espressioni regolari che si applicano al solo nome dell\'host degli indirizzi e-mail
- #</pre> <!-- non modificare questa linea --> <pre>',
-	'email-whitelist' => '#<!-- non modificare questa linea--> <pre>
- # Gli indirizzi e-mail compresi in questa *non* saranno bloccati anche se si dovrebbe
- # sono stati bloccati dalle voci presenti nella lista nera.
- #
- #</pre> <!-- non modificare questa linea-->
- # La sintassi è la seguente:
+ #</pre> <!-- non modificare questa linea -->',
+	'email-whitelist' => ' #<!-- non modificare questa linea --> <pre>
+# Gli indirizzi e-mail compresi in questa lista *non* saranno bloccati anche se dovrebbero
+# essere stati bloccati dagli elementi presenti nella lista nera.
+#
+ #</pre> <!-- non modificare questa linea -->
+# La sintassi è la seguente:
 #  * Tutto ciò che è compreso tra un carattere "#" e la fine della riga è un commento
 #  * Tutte le righe non vuote sono frammenti di espressioni regolari che si applicano al solo nome dell\'host degli indirizzi e-mail',
 	'spam-invalid-lines' => "{{PLURAL:$1|La seguente riga|Le seguenti righe}} della blacklist dello spam {{PLURAL:$1|non è un'espressione regolare valida|non sono espressioni regolari valide}}; si prega di correggere {{PLURAL:$1|l'errore|gli errori}} prima di salvare la pagina.",
