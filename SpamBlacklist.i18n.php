@@ -503,10 +503,11 @@ $messages['cs'] = array(
 
 /** Welsh (Cymraeg)
  * @author Lloffiwr
+ * @author Xxglennxx
  */
 $messages['cy'] = array(
 	'spam-blacklist' => "# Dyma restr o gyfeiriadau URL allanol; os osodir un o'r rhain ar dudalen fe gaiff ei flocio.
- # Ar gyfer y wici hwn yn unig mae'r rhestr hon; mae rhestr gwaharddedig led-led yr holl wicïau i'w gael.
+ # Ar gyfer y wici hwn yn unig mae'r rhestr hon; mae rhestr waharddedig led-led yr holl wicïau i'w gael.
  # Gweler https://www.mediawiki.org/wiki/Extension:SpamBlacklist am ragor o wybodaeth.
  #<!-- leave this line exactly as it is --> <pre>
 #
@@ -1407,6 +1408,9 @@ $messages['it'] = array(
 # La sintassi è la seguente:
 #  * Tutto ciò che è compreso tra un carattere "#" e la fine della riga è un commento
 #  * Tutte le righe non vuote sono frammenti di espressioni regolari che si applicano al solo nome dell\'host degli indirizzi e-mail',
+	'spam-blacklisted-email' => 'Indirizzo di posta elettronica bloccato',
+	'spam-blacklisted-email-text' => "Il tuo indirizzo di posta elettronica è attualmente nella lista nera per l'invio di email verso altri utenti.",
+	'spam-blacklisted-email-signup' => "L'indirizzo di posta elettronica indicato è attualmente nella lista nera.",
 	'spam-invalid-lines' => "{{PLURAL:$1|La seguente riga|Le seguenti righe}} della blacklist dello spam {{PLURAL:$1|non è un'espressione regolare valida|non sono espressioni regolari valide}}; si prega di correggere {{PLURAL:$1|l'errore|gli errori}} prima di salvare la pagina.",
 	'spam-blacklist-desc' => 'Strumento antispam basato sulle espressioni regolari [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
 );
@@ -1814,6 +1818,24 @@ $messages['ml'] = array(
 #  * റെജെക്സ് ഘടകത്തിലെ ശൂന്യമല്ലാത്ത വരികൾ എല്ലാം ആന്തരിക യൂ.ആർ.എല്ലുമായി ഒത്തു നോക്കുകയുള്ളു
 
   #</pre> <!-- ഈ വരി ഇതുപോലെ തന്നെ സൂക്ഷിക്കുക -->',
+	'email-blacklist' => ' # ഈ പട്ടികയോട് സദൃശമായ ഇമെയിൽ വിലാസങ്ങൾ രജിസ്റ്റർ ചെയ്യുന്നതും ഇമെയിലുകൾ അയയ്ക്കുന്നതും തടയപ്പെടുന്നതാണ്
+ # ഈ പട്ടിക ഈ വിക്കിയിൽ മാത്രമേ പ്രാവർത്തികമാകൂ; ആഗോള കരിമ്പട്ടികയും കാണുക.
+ # വിവരണത്തിനായി https://www.mediawiki.org/wiki/Extension:SpamBlacklist കാണുക
+ #<!-- ഈ വരിയിൽ മാറ്റം വരുത്താൻ പാടില്ല --> <pre>
+#
+# എഴുത്തുരീതി താഴെക്കൊടുക്കുന്നു:
+#   * "#" അക്ഷരത്തിൽ തുടങ്ങി വരിയുടെ അവസാനം വരെയുള്ളവ കുറിപ്പായിരിക്കും
+#   * എല്ലാ ശൂന്യമല്ലാത്ത വരികളും ഇമെയിൽ വിലാസത്തിലെ ഹോസ്റ്റുമായി ഒത്തുനോക്കപ്പെടുന്ന രെജെക്സ് ഘടകമായിരിക്കും
+
+ #</pre> <!-- ഈ വരിയിൽ മാറ്റം വരുത്താൻ പാടില്ല -->',
+	'email-whitelist' => ' #<!-- ഈ വരിയിൽ മാറ്റം വരുത്താൻ പാടില്ല --> <pre>
+# ഈ പട്ടികയോട് സദൃശമായ ഇമെയിൽ വിലാസങ്ങൾ, അവ കരിമ്പട്ടികയിലെ ഉൾപ്പെടുത്തലുകളുമായി
+# സദൃശമാണെങ്കിൽ പോലും *തടയപ്പെടില്ല*.
+#
+ #</pre> <!-- ഈ വരിയിൽ മാറ്റം വരുത്താൻ പാടില്ല -->
+# എഴുത്തുരീതി താഴെക്കൊടുക്കുന്നു:
+#   * "#" അക്ഷരത്തിൽ തുടങ്ങി വരിയുടെ അവസാനം വരെയുള്ളവ കുറിപ്പായിരിക്കും
+#   * എല്ലാ ശൂന്യമല്ലാത്ത വരികളും ഇമെയിൽ വിലാസത്തിലെ ഹോസ്റ്റുമായി ഒത്തുനോക്കപ്പെടുന്ന രെജെക്സ് ഘടകമായിരിക്കും',
 	'spam-blacklisted-email' => 'കരിമ്പട്ടികയിൽ പെട്ട ഇമെയിൽ',
 	'spam-blacklisted-email-text' => 'താങ്കളുടെ ഇമെയിൽ വിലാസം ഇപ്പോൾ മറ്റുള്ളവർക്ക് എഴുത്തയക്കാനാവാത്ത കരിമ്പട്ടികയിൽ ഉൾപ്പെട്ടിരിക്കുന്നു.',
 	'spam-blacklisted-email-signup' => 'നൽകിയ ഇമെയിൽ വിലാസം ഇപ്പോൾ കരിമ്പട്ടികയിൽ പെട്ടിരിക്കുന്ന ഒന്നാണ്.',
@@ -2944,6 +2966,7 @@ $messages['zh-hans'] = array(
 /** Traditional Chinese (‪中文(繁體)‬)
  * @author Mark85296341
  * @author Oapbtommy
+ * @author Waihorace
  */
 $messages['zh-hant'] = array(
 	'spam-blacklist' => ' # 跟這個表符合的外部 URL 當加入時會被封鎖。
@@ -2965,7 +2988,26 @@ $messages['zh-hant'] = array(
 #   * 每個非空白行是一個標準表示式碎片，只是跟裡面的 URL 端核對
 
  #</pre> <!-- 請完全地留下這行 -->',
+	'email-blacklist' => ' # 與本列表匹配的電郵地址將被禁止註冊或發送電郵
+ # 本列表只影響本站；另見全域黑名單。
+ # 說明文檔在 https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- leave this line exactly as it is --> <pre>
+#
+# 語法如下：
+#   * 以字符"#"開始直至行尾的所有内容稱為一條註腳
+#   * 每個非空白行都是一個regex片段，它將只匹配電子郵件的主機
+
+ #</pre> <!-- leave this line exactly as it is -->',
+	'email-whitelist' => '#<!-- leave this line exactly as it is --> <pre>
+ # 和此列表相配的Email 的地址*不會*被阻止，即使它被列入黑名單
+ #
+  #</pre> <!-- leave this line exactly as it is -->
+ # 代號如下所示：
+ # ＊ 一切從"#"字符到行末尾是註解
+ # ＊ 每個非空白行是一個 regex 部份，將只匹配電郵地址的主機部份',
 	'spam-blacklisted-email' => '被列入黑名單的電子郵件地址',
+	'spam-blacklisted-email-text' => '您的電郵地址目前已列入黑名單以防止您發送電郵予其他用戶。',
+	'spam-blacklisted-email-signup' => '此電郵地址目前被禁止使用。',
 	'spam-invalid-lines' => '以下在灌水黑名單的{{PLURAL:$1|一行|多行}}有無效的表示式，請在儲存這頁前先將{{PLURAL:$1|它|它們}}修正：',
 	'spam-blacklist-desc' => '以正則表達式為本的防灌水工具：[[MediaWiki:Spam-blacklist]] 與 [[MediaWiki:Spam-whitelist]]',
 );
