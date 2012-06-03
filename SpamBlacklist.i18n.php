@@ -168,6 +168,14 @@ $messages['arz'] = array(
 	'spam-blacklist-desc' => 'اداة انتي-سبام مبنية على اساس ريجيكس: [[MediaWiki:Spam-blacklist]] و [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Assamese (অসমীয়া)
+ * @author Gitartha.bordoloi
+ */
+$messages['as'] = array(
+	'spam-blacklisted-email' => 'ব্লেকলিষ্টেড ই-মেইল ঠিকনা',
+	'spam-blacklisted-email-text' => 'আন সদস্যলৈ ই-মেইল পঠিয়াব নোৱাৰাকৈ আপোনাৰ ই-মেইল ঠিকনা ব্লেকলিষ্টেড কৰা হৈছে।',
+);
+
 /** Asturian (Asturianu)
  * @author Esbardu
  * @author Xuacu
