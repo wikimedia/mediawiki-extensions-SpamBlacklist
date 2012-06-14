@@ -176,7 +176,7 @@ $messages['as'] = array(
 	'spam-blacklisted-email-text' => 'আন সদস্যলৈ ই-মেইল পঠিয়াব নোৱাৰাকৈ আপোনাৰ ই-মেইল ঠিকনা ব্লেকলিষ্টেড কৰা হৈছে।',
 );
 
-/** Asturian (Asturianu)
+/** Asturian (asturianu)
  * @author Esbardu
  * @author Xuacu
  */
@@ -311,7 +311,7 @@ $messages['be-tarask'] = array(
 	'spam-blacklist-desc' => 'Антыспамавы інструмэнт, які базуецца на рэгулярных выразах: [[MediaWiki:Spam-blacklist]] і [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Bulgarian (Български)
+/** Bulgarian (български)
  * @author Spiritia
  */
 $messages['bg'] = array(
@@ -355,7 +355,7 @@ $messages['bn'] = array(
 	'spam-blacklist-desc' => 'রেজেক্স-ভিত্তিক স্প্যামরোধী সরঞ্জাম: [[MediaWiki:Spam-blacklist]] এবং [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Breton (Brezhoneg)
+/** Breton (brezhoneg)
  * @author Fulup
  */
 $messages['br'] = array(
@@ -403,7 +403,7 @@ $messages['br'] = array(
 	'spam-blacklist-desc' => 'Ostilh enep-strob diazezet war lavarennoù reoliek (Regex) : [[MediaWiki:Spam-blacklist]] ha [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Bosnian (Bosanski)
+/** Bosnian (bosanski)
  * @author CERminator
  */
 $messages['bs'] = array(
@@ -430,7 +430,7 @@ $messages['bs'] = array(
 	'spam-blacklist-desc' => 'Alati protiv spama zasnovani na regexu: [[MediaWiki:Spam-blacklist]] i [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Catalan (Català)
+/** Catalan (català)
  * @author Aleator
  * @author Jordi Roqué
  * @author SMP
@@ -459,7 +459,7 @@ $messages['ca'] = array(
 	'spam-blacklist-desc' => 'Eina anti-spam basada en regexp: [[MediaWiki:Spam-blacklist]] i [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Czech (Česky)
+/** Czech (česky)
  * @author Li-sung
  * @author Matěj Grabovský
  * @author Mormegil
@@ -705,7 +705,7 @@ $messages['eo'] = array(
 	'spam-blacklist-desc' => 'Regex-bazita kontraŭspamilo: [[MediaWiki:Spam-blacklist]] kaj [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Spanish (Español)
+/** Spanish (español)
  * @author Armando-Martin
  * @author Drini
  * @author Sanbec
@@ -754,7 +754,7 @@ $messages['es'] = array(
 	'spam-blacklist-desc' => 'Herramienta anti-spam basada en expresiones regulares [[MediaWiki:Spam-blacklist]] y [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Estonian (Eesti)
+/** Estonian (eesti)
  * @author Pikne
  */
 $messages['et'] = array(
@@ -846,7 +846,7 @@ $messages['fa'] = array(
 	'spam-blacklist-desc' => 'ابزار ضد هرزنویسی مبتنی بر regular expressions: [[MediaWiki:Spam-blacklist]] و [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Finnish (Suomi)
+/** Finnish (suomi)
  * @author Cimon Avaro
  * @author Nike
  */
@@ -873,7 +873,7 @@ $messages['fi'] = array(
 	'spam-blacklist-desc' => 'Säännöllisiä lausekkeita tukeva mainossuodatin: [[MediaWiki:Spam-blacklist|estolista]] ja [[MediaWiki:Spam-whitelist|poikkeuslista]].',
 );
 
-/** French (Français)
+/** French (français)
  * @author Gomoko
  * @author Sherbrooke
  * @author Urhixidur
@@ -924,7 +924,7 @@ $messages['fr'] = array(
 	'spam-blacklist-desc' => "Outil anti-pourriel basé sur des expressions rationnelles : ''[[MediaWiki:Spam-blacklist]]'' et ''[[MediaWiki:Spam-whitelist]]''",
 );
 
-/** Franco-Provençal (Arpetan)
+/** Franco-Provençal (arpetan)
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
@@ -1172,7 +1172,7 @@ $messages['hi'] = array(
 	'spam-blacklist-desc' => 'रेजएक्स पर आधारित स्पॅम रोकनेवाला उपकरण:[[MediaWiki:Spam-blacklist]] और [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Croatian (Hrvatski)
+/** Croatian (hrvatski)
  * @author Dnik
  * @author SpeedyGonsales
  */
@@ -1248,7 +1248,7 @@ $messages['hsb'] = array(
 	'spam-blacklist-desc' => 'Přećiwospamowy nastroj na zakładźe Regex: [[MediaWiki:Spam-blacklist]] a [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Hungarian (Magyar)
+/** Hungarian (magyar)
  * @author Dani
  */
 $messages['hu'] = array(
@@ -1273,7 +1273,7 @@ $messages['hu'] = array(
 	'spam-blacklist-desc' => 'Regex-alapú spamellenes eszköz: [[MediaWiki:Spam-blacklist]] és [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Interlingua (Interlingua)
+/** Interlingua (interlingua)
  * @author McDutchie
  */
 $messages['ia'] = array(
@@ -1377,7 +1377,7 @@ $messages['ilo'] = array(
 	'spam-blacklist-desc' => 'Naibantay ti regex kontra-spam a ramit: [[MediaWiki:Spam-blacklist]] ken [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Italian (Italiano)
+/** Italian (italiano)
  * @author Beta16
  * @author BrokenArrow
  * @author Ximo17
@@ -1458,7 +1458,7 @@ $messages['ja'] = array(
 	'spam-blacklist-desc' => '正規表現を用いたスパム対策ツール: [[MediaWiki:Spam-blacklist|スパムブラックリスト]]および[[MediaWiki:Spam-whitelist|スパムホワイトリスト]]',
 );
 
-/** Jutish (Jysk)
+/** Jutish (jysk)
  * @author Ælsån
  */
 $messages['jut'] = array(
@@ -1756,7 +1756,7 @@ $messages['li'] = array(
 	'spam-blacklist-desc' => 'Antispamfunctionaliteit via reguliere expressies: [[MediaWiki:Spam-blacklist]] en [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Macedonian (Македонски)
+/** Macedonian (македонски)
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
@@ -2043,7 +2043,7 @@ $messages['nl'] = array(
 	'spam-blacklist-desc' => 'Antispamfunctionaliteit via reguliere expressies: [[MediaWiki:Spam-blacklist]] en [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
  * @author Frokor
  */
 $messages['nn'] = array(
@@ -2070,7 +2070,7 @@ $messages['nn'] = array(
 	'spam-blacklist-desc' => 'Antispamverktøy basert på regulære uttrykk: [[MediaWiki:Spam-blacklist]] og [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Occitan (Occitan)
+/** Occitan (occitan)
  * @author Cedric31
  */
 $messages['oc'] = array(
@@ -2116,7 +2116,7 @@ $messages['or'] = array(
 	'spam-blacklist-desc' => 'Regex-ଭିତ୍ତିକ ସ୍ପାମ-ବିରୋଧୀ ଉପକରଣ: [[MediaWiki:Spam-blacklist]] ଓ [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Polish (Polski)
+/** Polish (polski)
  * @author BeginaFelicysym
  * @author Derbeth
  * @author Sp5uhe
@@ -2225,7 +2225,7 @@ $messages['pnb'] = array(
 	'spam-blacklist-desc' => 'ریجیکس تے بنیا سپام ویری اوزار: [[MediaWiki:Spam-blacklist]] تے [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Portuguese (Português)
+/** Portuguese (português)
  * @author 555
  * @author Giro720
  * @author Hamilton Abreu
@@ -2258,7 +2258,7 @@ $messages['pt'] = array(
 	'spam-blacklist-desc' => 'Ferramenta anti-"spam" baseada em Regex: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Brazilian Portuguese (Português do Brasil)
+/** Brazilian Portuguese (português do Brasil)
  * @author Eduardo.mps
  */
 $messages['pt-br'] = array(
@@ -2286,7 +2286,7 @@ $messages['pt-br'] = array(
 	'spam-blacklist-desc' => 'Ferramenta anti-"spam" baseada em Regex: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Tarandíne (Tarandíne)
+/** tarandíne (tarandíne)
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
@@ -2315,7 +2315,7 @@ $messages['roa-tara'] = array(
 	'spam-blacklist-desc' => "'U strumende andi-spam basate sus a le regex: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]",
 );
 
-/** Russian (Русский)
+/** Russian (русский)
  * @author Ahonc
  * @author Express2000
  * @author HalanTul
@@ -2393,7 +2393,7 @@ $messages['rue'] = array(
 	'spam-blacklist-desc' => 'Антіспамовый інштрумент на базї реґуларных выразів: [[MediaWiki:Spam-blacklist]] і [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Sakha (Саха тыла)
+/** Sakha (саха тыла)
  * @author HalanTul
  */
 $messages['sah'] = array(
@@ -2419,7 +2419,7 @@ $messages['sah'] = array(
 	'spam-blacklist-desc' => 'Анти-спам үстүрүмүөнэ: [[MediaWiki:Spam-blacklist]] уонна [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Sicilian (Sicilianu)
+/** Sicilian (sicilianu)
  * @author Santu
  */
 $messages['scn'] = array(
@@ -2471,7 +2471,7 @@ $messages['si'] = array(
 	'spam-blacklist-desc' => 'Regex-පාදක ප්‍රති-ස්පෑම ආවුදය: [[MediaWiki:Spam-blacklist]] සහ [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Slovak (Slovenčina)
+/** Slovak (slovenčina)
  * @author Helix84
  */
 $messages['sk'] = array(
@@ -2498,7 +2498,7 @@ $messages['sk'] = array(
 	'spam-blacklist-desc' => 'Antispamový nástroj na základe regulárnych výrazov: [[MediaWiki:Spam-blacklist|Čierna listina]] a [[MediaWiki:Spam-whitelist|Biela listina]]',
 );
 
-/** Slovenian (Slovenščina)
+/** Slovenian (slovenščina)
  * @author Dbc334
  * @author Eleassar
  * @author Yerpo
@@ -2548,7 +2548,7 @@ $messages['sl'] = array(
 	'spam-blacklist-desc' => 'Orodje proti smetju, temelječe na regularnih izrazih: [[MediaWiki:Spam-blacklist]] in [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Albanian (Shqip)
+/** Albanian (shqip)
  * @author Olsi
  */
 $messages['sq'] = array(
@@ -2575,14 +2575,14 @@ $messages['sq'] = array(
 	'spam-blacklist-desc' => 'Mjeti anti-spam regex i bazuar: [[MediaWiki:Spam-blacklist]] dhe [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
  * @author Millosh
  */
 $messages['sr-ec'] = array(
 	'spam-blacklist-desc' => 'Антиспам оруђе засновано на регуларним изразима: [[MediaWiki:Spam-blacklist]] и [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Serbian (Latin script) (‪Srpski (latinica)‬)
+/** Serbian (Latin script) (‪srpski (latinica)‬)
  * @author Michaello
  */
 $messages['sr-el'] = array(
@@ -2618,7 +2618,7 @@ $messages['stq'] = array(
 	'spam-blacklist-desc' => 'Regex-basierde Anti-Spam-Reewe: [[MediaWiki:Spam-blacklist]] un [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Swedish (Svenska)
+/** Swedish (svenska)
  * @author Lejonel
  * @author WikiPhoenix
  */
@@ -2678,7 +2678,7 @@ $messages['te'] = array(
 	'spam-blacklist-desc' => 'Regex-ఆధారిత స్పామ్ నిరోధక పనిముట్టు: [[MediaWiki:Spam-blacklist]] మరియు [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Tajik (Cyrillic script) (Тоҷикӣ)
+/** Tajik (Cyrillic script) (тоҷикӣ)
  * @author Ibrahim
  */
 $messages['tg-cyrl'] = array(
@@ -2707,7 +2707,7 @@ $messages['tg-cyrl'] = array(
 	'spam-blacklist-desc' => 'Абзори зидди ҳарзнигорӣ дар асоси Regex: [[MediaWiki:Spam-blacklist]] ва [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Tajik (Latin script) (Tojikī)
+/** Tajik (Latin script) (tojikī)
  * @author Liangent
  */
 $messages['tg-latn'] = array(
@@ -2798,7 +2798,7 @@ $messages['tr'] = array(
 	'spam-blacklist-desc' => 'Regex-tabanlı anti-spam aracı: [[MediaWiki:Spam-blacklist]] ve [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Ukrainian (Українська)
+/** Ukrainian (українська)
  * @author AS
  * @author Ahonc
  */
@@ -2825,7 +2825,7 @@ $messages['uk'] = array(
 	'spam-blacklist-desc' => 'Протиспамовий засіб, що базується на регулярних виразах: [[MediaWiki:Spam-blacklist]] та [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Vèneto (Vèneto)
+/** vèneto (vèneto)
  * @author Candalua
  */
 $messages['vec'] = array(
@@ -2921,7 +2921,7 @@ $messages['yue'] = array(
 	'spam-blacklist-desc' => '以正規表達式為本嘅防灌水工具: [[MediaWiki:Spam-blacklist]] 同 [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Simplified Chinese (‪中文(简体)‬)
+/** Simplified Chinese (‪中文（简体）‬)
  * @author Hzy980512
  * @author Linforest
  * @author PhiLiP
@@ -2972,7 +2972,7 @@ $messages['zh-hans'] = array(
 	'spam-blacklist-desc' => '基于正则表达式的反垃圾链接工具：[[MediaWiki:Spam-blacklist]]和[[MediaWiki:Spam-whitelist]]',
 );
 
-/** Traditional Chinese (‪中文(繁體)‬)
+/** Traditional Chinese (‪中文（繁體）‬)
  * @author Mark85296341
  * @author Oapbtommy
  * @author Waihorace
