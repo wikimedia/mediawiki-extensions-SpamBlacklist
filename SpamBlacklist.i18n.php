@@ -172,8 +172,44 @@ $messages['arz'] = array(
  * @author Gitartha.bordoloi
  */
 $messages['as'] = array(
+	'spam-blacklist' => '# এই তালিকাৰ লগত মিলা বাহিৰা URLবোৰ পৃষ্ঠাত যোগ কৰোঁতে অৱৰোধ কৰা হ\'ব।
+# এই তালিকাই কেৱল এই ৱিকিত প্ৰভাৱ পেলায়; গোলকীয় ব্লেকলিষ্টখনো চাওক।
+# নথিকৰণৰ বাবে https://www.mediawiki.org/wiki/Extension:SpamBlacklist চাওক।
+# <!-- leave this line exactly as it is --> <pre>
+#
+# বিন্যাস তলত দিয়া ধৰণৰ:
+# * "#" চিহ্নৰ পৰা শাৰীৰ শেষলৈকে সকলোখিনিয়েই মন্তব্য।
+# * প্ৰতিটো অশূন্য শাৰী একোটা ৰেজেক্স খণ্ডাংশ যি কেৱল URLৰ ভিতৰৰ hostৰ লগত মিলিব
+
+#</pre> <!-- leave this line exactly as it is -->',
+	'spam-whitelist' => " #<!-- leave this line exactly as it is --> <pre>
+# এই তালিকাৰ লগত মিলা বাহিৰা URLসমূহ অৱৰোধ কৰা *নহ'ব* যদিও সেইবোৰ
+# ব্লেকলিষ্ট ভুক্তিৰ দ্বাৰা অৱৰোধ হ'ব।
+#
+ #</pre> <!-- leave this line exactly as it is -->",
+	'email-blacklist' => '# এই তালিকাৰ লগত মিলা ই-মেইল ঠিকনাৰ পৰা পঞ্জীয়ন বা ই-মেইল পঠিওৱা অৱৰোধ কৰা হ\'ব।
+# এই তালিকাই কেৱল ঐ ৱিকিত প্ৰভাৱ পেলায়; গোলকীয় ব্লেকলিষ্টখনো চাওক।
+# নথিকৰণৰ বাবে https://www.mediawiki.org/wiki/Extension:SpamBlacklist চাওক।
+#<!-- leave this line exactly as it is --> <pre>
+#
+# বিন্যাস তলত দিয়া ধৰণৰ:
+# * "#" চিহ্নৰ পৰা শাৰীৰ শেষলৈকে সকলোখিনিয়েই মন্তব্য।
+# * প্ৰতিটো অশূন্য শাৰী এটা ৰেজেক্স খণ্ডাংশ যি কেৱল ই-মেইল ঠিকনাবোৰৰ ভিতৰৰ হ\'ষ্টৰ লগত মিলিব।
+
+#</pre> <!-- leave this line exactly as it is -->',
+	'email-whitelist' => " #<!-- leave this line exactly as it is --> <pre>
+# এই তালিকাৰ লগত মিলা বাহিৰা ই-মেইলসমূহ অৱৰোধ কৰা *নহ'ব* যদিও সেইবোৰ
+# ব্লেকলিষ্ট ভুক্তিৰ দ্বাৰা অৱৰোধ হ'ব পাৰে।
+#
+ #</pre> <!-- leave this line exactly as it is -->
+# বিন্যাস তলত দিয়া ধৰণৰ:
+# * \"#\" চিহ্নৰ পৰা শাৰীৰ শেষলৈকে সকলোখিনি মন্তব্য।
+3 * প্ৰতিটো অশূন্য শাৰী এটা ৰেজেক্স খণ্ডাংশ যি কেৱল ই-মেইল ঠিকনাৰ ভিতৰৰ হ'ষ্টৰ লগত মিলিব।",
 	'spam-blacklisted-email' => 'ব্লেকলিষ্টেড ই-মেইল ঠিকনা',
 	'spam-blacklisted-email-text' => 'আন সদস্যলৈ ই-মেইল পঠিয়াব নোৱাৰাকৈ আপোনাৰ ই-মেইল ঠিকনা ব্লেকলিষ্টেড কৰা হৈছে।',
+	'spam-blacklisted-email-signup' => 'ই-মেইল ঠিকনাটো ব্যৱহাৰৰ পৰা ব্লেকলিষ্টেড কৰা হৈছে।',
+	'spam-invalid-lines' => 'তলৰ স্পাম ব্লেকলিষ্টৰ {{PLURAL:$1|শাৰীটোত|শাৰীসমূহত}} অবৈধ নিয়মিত {{PLURAL:$1|এক্সপ্ৰেছন|এক্সপ্ৰেছন}} আছে আৰু সেইবোৰ পৃষ্ঠা সাঁচি থোৱাৰ আগতেই ঠিক কৰাটো {{PLURAL:$1|প্ৰয়োজন|প্ৰয়োজন}}:',
+	'spam-blacklist-desc' => 'ৰেজেক্স-ভিত্তিক স্পামবিৰোধী সঁজুলি: [[MediaWiki:Spam-blacklist]] আৰু [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Asturian (asturianu)
