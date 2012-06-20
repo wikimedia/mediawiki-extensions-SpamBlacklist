@@ -745,6 +745,7 @@ $messages['eo'] = array(
  * @author Armando-Martin
  * @author Drini
  * @author Sanbec
+ * @author Vivaelcelta
  */
 $messages['es'] = array(
 	'spam-blacklist' => ' # Enlaces externos que coincidan con esta lista serán bloqueados al añadirse a una página
@@ -766,7 +767,7 @@ $messages['es'] = array(
 #  * Toda línea que no esté en blanco es una expresión regular que sólo se cotejará con URLs
 
  #</pre> <!-- Deje esta línea exactamente como está -->',
-	'email-blacklist' => '# Las direcciones de correo electrónico que coincidan con esta lista serán bloqueadas para el registro o envío de e-mails!
+	'email-blacklist' => '# Las direcciones de correo electrónico que coincidan con esta lista serán bloqueadas para el registro o envío de correos electrónicos!
 # Esta lista afecta a sólo este wiki; Consulte también la lista negra global.
 # Para documentación vea https://www.mediawiki.org/wiki/Extension:SpamBlacklist
 #<!-- Deje esta línea exactamente como está --> <pre>
@@ -784,7 +785,7 @@ $messages['es'] = array(
 #  * Todo texto a la derecha del carácter "#" hasta el final de la línea es un comentario
 #  * Cada línea que no esté en blanco es un fragmento de código que será cotejada por los servidores (hosts) con las direcciones de correo electrónico',
 	'spam-blacklisted-email' => 'Dirección de correo electrónico de la lista negra',
-	'spam-blacklisted-email-text' => 'Su dirección de correo electrónico está actualmente en la lista negra y no puede enviar e-mails a otros usuarios.',
+	'spam-blacklisted-email-text' => 'Su dirección de correo electrónico está actualmente en la lista negra y no puede enviar correos electrónicos a otros usuarios.',
 	'spam-blacklisted-email-signup' => 'La dirección de correo electrónico dada está actualmente en la lista negra de uso.',
 	'spam-invalid-lines' => '{{PLURAL:$1|La siguiente línea|Las siguientes líneas}} de la lista negra de spam {{PLURAL:$1|es una expresión regular inválida|son expresiones regulares inválidas}} y es necesario {{PLURAL:$1|corregirla|corregirlas}} antes de guardar la página:',
 	'spam-blacklist-desc' => 'Herramienta anti-spam basada en expresiones regulares [[MediaWiki:Spam-blacklist]] y [[MediaWiki:Spam-whitelist]]',
@@ -1391,25 +1392,41 @@ $messages['id'] = array(
  */
 $messages['ilo'] = array(
 	'spam-blacklist' => ' # Dagiti akinruar a URL a maipada iti daytoy a listaan ket maserraan to no mainayon ditoy a panid.
- # Daytoy a listaan ket tignayen na laeng daytoy a wiki; kitaen pay ti sangalubongan a blacklist.
+ # Daytoy a listaan ket apektaranna laeng daytoy a wiki; kitaen pay ti sangalubongan a naiparit.
  # Para iti dokumentasion kitaen ti https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- baybayan daytoy a linia --> <pre>
 #
 # Ti gramatika ket kasla dagiti sumaganad:
 #   * Amin manipud iti "#" a karakter iti gibus ti linia ket komentario
-#   * Amin ti saan a blanko a linia ket regex a fragment a maipada laeng ti nagsangaili iti uneg dagiti URL
+#   * Amin a saan a blanko a linia ket regex a pedaso a maipada laeng ti nagsangaili ti uneg dagiti URL
 
  #</pre> <!-- baybayan daytoy a linia -->',
 	'spam-whitelist' => ' #<!-- baybayan daytoy a linia --> <pre>
-# Dagiti akinruar a panilpo a maipada iti daytoy a listaan ket *saan* a maserraan uray no
-# naseraanen babaen ti blacklista naikabil.
+# Dagiti akinruar a panilpo a maipada iti daytoy a listaan ket *saan* a maserraan urayno
+# naseraanen babaen ti naikabil kadagiti panagiparitan a listaan.
 #
-# Ti gramatika ket kasla dagitii sumaganad:
-#   * Amin manipud iti  "#" a karakter iti gibus ti linia ket komentario
-#   * Amin a saan a blanko a linia ket regex a fragment a maipada laeng ti nagsangaili ti uneg dagiti URL
-
  #</pre> <!-- baybayan daytoy a linia -->',
-	'spam-invalid-lines' => 'Ti sumaganad a spam blacklist {{PLURAL:$1|linia ket|dagiti linia ket}} imbalido a kadawyan {{PLURAL:$1|panangisao|dagiti panangisao}} ken {{PLURAL:$1|masapsapol|masapol}} a mapudnuan sakbay nga idulin ti panid:',
+	'email-blacklist' => ' # Dagiti e-surat a pagtaengan a maipada iti daytoy a listaan ket maseraanto manipud ti panagrehistro wenno panagitulod kadagiti e-surat
+ # Daytoy a listaan ket apektarannna laeng daytoy a wiki; mangiturong pay ti sangalubongan a naiparit.
+ # Para iti dokumentasion kitaen ti https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- baybayan daytoy a linia --> <pre>
+#
+# Ti gramatika ket kasla dagiti sumaganad:
+#   * Amin manipud iti "#" a karakter iti gibus ti linia ket komentario
+#   * Amin ti saan a blanko a linia ket regex a pedaso a maipada laeng ti nagsangaili iti uneg dagiti e-surat a pagtaengan
+
+ #</pre> <!--baybayan daytoy a linia-->',
+	'email-whitelist' => ' #<!-- baybayan daytoy a linia --> <pre>
+# Dagiti e-surat a pagtaengan a maipada iti daytoy a listaan ket *saant* a maserraan urayno 
+# naserraanda babaen dagiti naikabil a naiparit.
+ #</pre> <!-- baybayan daytoy a linia -->
+# Ti gramatika ket kasla dagiti sumaganad:
+#   * Amin manipud ti "#" a karakter aginggana ti gibus iti linia ket maysa a komentario
+#   * Amin a saan a blanko a linia ket regex a pedaso a mangipada laeng ti nagsangaili ti uneg dagiti e-surat a pagtaengan',
+	'spam-blacklisted-email' => 'Dagiti naiparit nga e-surat a pagtaengan',
+	'spam-blacklisted-email-text' => 'Ti e-suratmo a pagtaengan ket agdama a naiparit manipud ti panagipatulod kadagiti e-surat kadagiti sabsabali nga agar-aramat.',
+	'spam-blacklisted-email-signup' => 'Ti naited nga e-surat a pagatengan ket agdama a naiparit manipud ti panagusar.',
+	'spam-invalid-lines' => 'Ti sumaganad a spam blacklist {{PLURAL:$1| a linia ket|kadagiti linia ket}} imbalido a kadawyan {{PLURAL:$1|a nangisao|kadagiti panangisao}} ken {{PLURAL:$1|masapsapol|masapol}} a mapudnuan sakbay nga idulin ti panid:',
 	'spam-blacklist-desc' => 'Naibantay ti regex kontra-spam a ramit: [[MediaWiki:Spam-blacklist]] ken [[MediaWiki:Spam-whitelist]]',
 );
 
