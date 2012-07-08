@@ -1722,8 +1722,8 @@ $messages['ko'] = array(
  * @author Purodha
  */
 $messages['ksh'] = array(
-	'spam-blacklist' => ' # URLs noh ußerhallef uß dä Leß wäde nit zojelohße, wann se einer in en Sigg erin don well.
- # He di Liß eß bloß för dat Wiki joot. Loor Der och de jemeinsame „schwazze Leß“ aan.
+	'spam-blacklist' => ' # URLs noh ußerhallef uß dä Leß wäde nit zojelohße, wann se einer en en Sigg erin donn well.
+ # Heh di Liß eß bloß för heh dat Wiki joot. Loor Der och de jemeinsame „schwazze Leß“ aan.
  # Dokkementeet is dat op https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Loß di Reih hee jenou esu wi se es --> <pre>
 # Dä Opbou es:
@@ -1738,6 +1738,26 @@ $messages['ksh'] = array(
 # * Alles fun enem #-Zeiche bes an et Engk fun ene Reih es ene Kommentaa för de Minsche
 # * Jede Reih met jet dren es en Stöck regular Expression, wat alleins Domains en URLs treffe kann
  #</pre> <!-- Lohß di Reih he jenou esu wi se es -->',
+	'email-blacklist' => ' # e-mail-Addräße uß dä Leß wäde nit zojelohße beim Aanmälde un beim e-mail-Verschecke.
+ # Heh di Liß eß bloß för heh dat Wiki joot. Loor Der och de jemeinsame „schwazze Leß“ aan.
+ # Dokkementeet is dat op https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- Loß di Reih hee jenou esu wi se es --> <pre>
+# Dä Opbou es:
+# * Alles fun enem #-Zeiche bes an et Engk fun ene Reih es ene Kommentaa för de Minsche
+# * Jede Reih met jet dren es en regular Expression, wohmet dä Name vum Rääschner en de e-mail-Addräße jeprööf wääde kann.
+
+ #</pre> <!-- Lohß di Reih he jenou esu wi se es -->',
+	'email-whitelist' => ' #<!-- Loß di Reih hee jenou esu wi se es --> <pre>
+# e-mail-Addräße uß dä Leß wäde  zojelohße beim Aanmälde un beim e-mail-Verschecke,
+# och wann se op en „schwazze Leß“ schtonn.
+#
+ #</pre> <!-- Lohß di Reih he jenou esu wi se es -->
+# Dä Opbou es:
+# * Alles fun enem #-Zeiche bes an et Engk fun ene Reih es ene Kommentaa för de Minsche
+# * Jede Reih met jet dren es en regular Expression, wohmet dä Name vum Rääschner en de e-mail-Addräße jeprööf wääde kann.',
+	'spam-blacklisted-email' => 'Di <i lang="en">e-mail</i>-Addräß es op der „schwazze Lėß“',
+	'spam-blacklisted-email-text' => 'Ding <i lang="en">e-mail</i>-Addräß es em Momang op dä „schwazze Lėß“ un De kanns dermet kein <i lang="en">e-mail</i> aan ander Metmaacher verschecke.',
+	'spam-blacklisted-email-signup' => 'Di aanjejovve Addräß för de <i lang="en">e-mail</i> es em Momang op dä „schwazze Lėß“ un kann nit jebruch wääde.',
 	'spam-invalid-lines' => 'Mer han Fääler en <i lang="en">regular expressions</i> jefonge.
 {{PLURAL:$1|De Reih unge stemmp nit un moß|Di $1 Reije unge stimme nit un möße|Dat he sull}}
 för em Afspeichere eets en Odenung jebraat wäde:',
