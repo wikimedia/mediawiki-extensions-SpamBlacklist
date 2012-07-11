@@ -260,7 +260,7 @@ $messages['ast'] = array(
 	'spam-blacklist-desc' => "Ferramienta antispam basada n'espresiones regulares: [[MediaWiki:Spam-blacklist]] y [[MediaWiki:Spam-whitelist]]",
 );
 
-/** Bashkir (Башҡортса)
+/** Bashkir (башҡортса)
  * @author Assele
  */
 $messages['ba'] = array(
@@ -1617,7 +1617,7 @@ $messages['kk-arab'] = array(
 	'spam-invalid-lines' => 'سپام قارا تىزىمىندەگى كەلەسى {{PLURAL:$1|جولدا|جولداردا}} جارامسىز جۇيەلى {{PLURAL:$1|ايتىلىم|ايتىلىمدار}} بار, جانە بەتتى ساقتاۋدىڭ {{PLURAL:$1|بۇنى|بۇلاردى}}  دۇرىستاۋ كەرەك.',
 );
 
-/** Kazakh (Cyrillic script) (‪Қазақша (кирил)‬)
+/** Kazakh (Cyrillic script) (‪қазақша (кирил)‬)
  * @author AlefZet
  */
 $messages['kk-cyrl'] = array(
@@ -1643,7 +1643,7 @@ $messages['kk-cyrl'] = array(
 	'spam-invalid-lines' => 'Спам қара тізіміндегі келесі {{PLURAL:$1|жолда|жолдарда}} жарамсыз жүйелі {{PLURAL:$1|айтылым|айтылымдар}} бар, және бетті сақтаудың {{PLURAL:$1|бұны|бұларды}}  дұрыстау керек.',
 );
 
-/** Kazakh (Latin script) (‪Qazaqşa (latın)‬) */
+/** Kazakh (Latin script) (‪qazaqşa (latın)‬) */
 $messages['kk-latn'] = array(
 	'spam-blacklist' => ' # Osı tizimge säýkes sırtqı URL jaýlar betke üstewden buğattaladı.
  # Bul tizim tek mındağı wïkïge äser etedi; tağı da ğalamdıq qara tizimdi qarap şığıñız.
@@ -2007,13 +2007,11 @@ $messages['ms'] = array(
 	'spam-blacklist-desc' => 'Alat anti-spam berdasarkan ungkapan nalar: [[MediaWiki:Spam-blacklist]] dan [[MediaWiki:Spam-whitelist]]',
 );
 
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Jon Harald Søby
- */
+/** Norwegian Bokmål (‪norsk (bokmål)‬) */
 $messages['nb'] = array(
 	'spam-blacklist' => ' # Eksterne URL-er som finnes på denne lista vil ikke kunne legges til på en side.
  # Denne listen gjelder kun denne wikien; se også den globale svartelistinga.
- # For dokumentasjon, se http://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # For dokumentasjon, se https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- La denne linja være nøyaktig som den er --> <pre>
 #
 # Syntaksen er som følgende:
@@ -2030,6 +2028,27 @@ $messages['nb'] = array(
 #  * Alle ikke-blanke linjer er et regex-fragment som kun vil passe med domenenavn i URL-er
 
  #</pre> <!-- la denne linja være nøyaktig som den er -->',
+	'email-blacklist' => '# E-postadresser som matcher adresser på denne listen vil ikke kunne registrere seg eller sende e-post
+# Denne listen påvirker kun denne wikien; sjekk også den globale svartelista.
+# For dokumentasjon, se https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+#<!-- la denne linja være som den er --> <pre>
+#
+# Syntaksen er som følger:
+# * Alt fra et «#»-tegn til sluttan av linje er kommentarer
+# * Hver ikke-blank linje er et regex-fragment som kun matcher domenenavn i e-postadresser
+
+#</pre> <!-- la denne linja være som den er -->',
+	'email-whitelist' => '#<!-- la denne linja være som den er --> <pre>
+# E-postadresser som matcher denne listen vil *ikke* blokkeres selv om
+# de er blokkert av poster på svartelista.
+#
+#</pre> <!-- la denne linja være som den er -->
+# Syntaksen er som følger:
+# * Alt fra et «#»-tegn til slutten av linja er kommentarer
+# * Hver ikke-blank linje er et regex-fragment som kun matcher domener i e-postadresser',
+	'spam-blacklisted-email' => 'Svartelistede e-postadresser',
+	'spam-blacklisted-email-text' => 'E-postadressen din er svartelistes, så du kan ikke sende e-post til andre brukere.',
+	'spam-blacklisted-email-signup' => 'Den angitte e-postadressen er svartelistet.',
 	'spam-invalid-lines' => 'Følgende {{PLURAL:$1|linje|linjer}} i spamsvartelista er {{PLURAL:$1|et ugyldig regulært uttrykk|ugyldige regulære uttrykk}} og må rettes før lagring av siden:',
 	'spam-blacklist-desc' => 'Antispamverktøy basert på regulære uttrykk: [[MediaWiki:Spam-blacklist]] og [[MediaWiki:Spam-whitelist]]',
 );
