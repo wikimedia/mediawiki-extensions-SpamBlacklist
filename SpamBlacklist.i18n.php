@@ -743,14 +743,15 @@ $messages['eo'] = array(
 
 /** Spanish (español)
  * @author Armando-Martin
+ * @author Dferg
  * @author Drini
  * @author Sanbec
  * @author Vivaelcelta
  */
 $messages['es'] = array(
 	'spam-blacklist' => ' # Enlaces externos que coincidan con esta lista serán bloqueados al añadirse a una página
- # Esta lista afecta sólo a esta wiki; 
- # Para documentación mire https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Esta lista afecta sólo a esta wiki. Existe asímismo una lista global en Meta para todos los proyectos. 
+ # Para documentación mire: https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Deje esta línea exactamente como está --> <pre>
 #
 # La sintaxis es:
@@ -767,15 +768,16 @@ $messages['es'] = array(
 #  * Toda línea que no esté en blanco es una expresión regular que sólo se cotejará con URLs
 
  #</pre> <!-- Deje esta línea exactamente como está -->',
-	'email-blacklist' => '# Las direcciones de correo electrónico que coincidan con esta lista serán bloqueadas para el registro o envío de correos electrónicos!
-# Esta lista afecta a sólo este wiki; Consulte también la lista negra global.
-# Para documentación vea https://www.mediawiki.org/wiki/Extension:SpamBlacklist
-#<!-- Deje esta línea exactamente como está --> <pre>
+	'email-blacklist' => ' # Las direcciones de correo electrónico que coincidan con las de esta lista no podrán registrar cuentas ni enviar correos electrónicos
+ # Esta lista sólo afecta a este proyecto aunque existe una lista global para todos los proyectos.
+ # Documentación: https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- leave this line exactly as it is --> <pre>
 #
-# La sintaxis es la siguiente:
- #   * Todo texto a la derecha del carácter "#" hasta el final de la línea es un comentario
- #   * Cada línea que no esté en blanco es un fragmento de código que sólo cotejarán los servidores (hosts) con las direcciones de correo electrónico
-#</pre> <!-- Deje esta línea exactamente como está -->',
+# Sintaxis como sigue:
+#   * Todo lo que sigue a un "#" se interpreta como un comentario
+#   * Toda línea no en blanco es un fragmento de expresión regular (regex) que sólo coincidirá con los "host" de la dirección de correo electrónico.
+
+ #</pre> <!-- leave this line exactly as it is -->',
 	'email-whitelist' => ' #<!-- Deje esta línea exactamente como está --> <pre>
 # Las direcciones de correo electrónico que aparecen en esta lista*no* serán bloqueadas incluso si hubieran
 # debido ser bloqueadas por aparecer en la lista negra.
@@ -885,6 +887,7 @@ $messages['fa'] = array(
 
 /** Finnish (suomi)
  * @author Cimon Avaro
+ * @author Linnea
  * @author Nike
  */
 $messages['fi'] = array(
@@ -906,6 +909,9 @@ $messages['fi'] = array(
 #  * Muut ei-tyhjät rivit tulkitaan säännöllisen lausekkeen osaksi, joka tutkii vain osoitteissa olevia verkko-osoitteita.
 
  #</pre> <!-- älä koske tähän riviin -->',
+	'spam-blacklisted-email' => 'Mustalla listalla oleva sähköpostiosoite',
+	'spam-blacklisted-email-text' => 'Sähköpostisi on tällä hetkellä mustalla listalla, etkä voi lähettää sähköpostia muille käyttäjille.',
+	'spam-blacklisted-email-signup' => 'Annettu sähköpostiosoite on tällä hetkellä mustalla listalla.',
 	'spam-invalid-lines' => 'Listalla on {{PLURAL:$1|seuraava virheellinen säännöllinen lauseke, joka|seuraavat virheelliset säännölliset lausekkeet, jotka}} on korjattava ennen tallentamista:',
 	'spam-blacklist-desc' => 'Säännöllisiä lausekkeita tukeva mainossuodatin: [[MediaWiki:Spam-blacklist|estolista]] ja [[MediaWiki:Spam-whitelist|poikkeuslista]].',
 );
@@ -2859,6 +2865,27 @@ $messages['tl'] = array(
 #  * Bawat hindi/walang patlang na guhit/hanay ay isang piraso ng karaniwang pagsasaad (''regex'') na tutugma lamang sa mga tagapagpasinaya sa loob ng mga URL
 
  #</pre> <!-- leave this line exactly as it is -->",
+	'email-blacklist' => " # Ang mga tirahan ng e-liham na tumutugma sa talaang ito ay hahadlangan mula sa pagpaparehistro o pagpapadala ng mga e-liham.
+ # Nakakaapekto lamang ang talaang ito sa wiking ito; sumangguni rin sa pandaigdigang talaan ng pinagbabawalan.
+ # Para sa kasulatan tingnan ang https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- leave this line exactly as it is --> <pre>
+#
+# Ang palaugnayan ay ayon sa mga sumusunod:
+#  * Lahat ng bagay mula sa isang panitik na \"#\" magpahanggang sa wakas ng isang guhit ay isang puna
+#  * Bawat guhit na mayroong laman ay isang piraso ng karaniwang pagsasaad (''regex'') na tutugma lamang sa mga tagapagpasinaya sa loob ng mga tirahan ng e-liham
+
+ #</pre> <!-- leave this line exactly as it is -->",
+	'email-whitelist' => " #<!-- leave this line exactly as it is --> <pre>
+# Ang mga tirahan ng e-liham na tumutugma sa listahang ito ay *hindi* haharangin kahit na gawin nila ito
+# ay naharang ng mga lahot sa talaan ng pinagbabawalan.
+#
+ #</pre> <!-- leave this line exactly as it is -->
+# Ang palaugnayan ay ang mga sumusunod:
+#   * Ang lahat ng mga bagay magmula sa isang panitik na \"#\" magpahanggang sa wakas ng guhit ay isang puna
+#   * Bawat linya na mayroong laman ay isang piraso ng karaniwang pagsasaad (''regex'') na tutugma lamang sa mga tagapagpasinayang nasa loob ng mga tirahan ng e-liham",
+	'spam-blacklisted-email' => 'Pinagbabawalang mga tirahan ng e-liham',
+	'spam-blacklisted-email-text' => 'Kasalukuyang pinagbabawalan ang iyong tirahan ng e-liham na makapagpadala ng mga e-liham papunta sa ibang mga tagagamit.',
+	'spam-blacklisted-email-signup' => 'Kasalukuyang ipinagbabawal ang paggamit ng ibinigay na tirahan ng e-liham.',
 	'spam-invalid-lines' => 'Ang sumusunod na {{PLURAL:$1|isang hanay/guhit|mga hanay/guhit}} ng talaan ng pinagbabawalang "manlulusob" (\'\'spam\'\') ay hindi tanggap na karaniwang {{PLURAL:$1|pagsasaad|mga pagsasaad}} at {{PLURAL:$1|kinakailangang|kinakailangang}} maitama muna bago sagipin ang pahina:',
 	'spam-blacklist-desc' => "Kasangkapang panlaban sa \"manlulusob\" (''spam'') na nakabatay sa karaniwang pagsasaad (''regex''): [[MediaWiki:Spam-blacklist]] at [[MediaWiki:Spam-whitelist]]",
 );
@@ -3016,6 +3043,7 @@ $messages['yue'] = array(
 /** Simplified Chinese (‪中文（简体）‬)
  * @author Hzy980512
  * @author Linforest
+ * @author Mys 721tx
  * @author PhiLiP
  * @author Supaiku
  */
@@ -3049,14 +3077,13 @@ $messages['zh-hans'] = array(
 #   * 每个非空白行都是一个regex片段，它将仅仅匹配电子邮件地址当中的主机
 
  #</pre> <!-- leave this line exactly as it is -->',
-	'email-whitelist' => '#<!-- leave this line exactly as it is --> <pre>
- # 和此系列相配的Email 的地址*不会*被阻止即使它将会
- # 被黑名单条目阻止。 
- #
-  #</pre> <!-- leave this line exactly as it is -->
- # Syntax 如下所示：
- # ＊ 一切从"#"字符到行末尾是注释
- # ＊ 每一个非空白行是一个 regex 部份将仅匹配主机内部的电子邮件地址',
+	'email-whitelist' => ' #<!-- leave this line exactly as it is --> <pre>
+# 在此页面中列出的电子邮件地址即便匹配黑名单中条目也不会被封锁。
+#
+ #</pre> <!-- leave this line exactly as it is -->
+# 格式如下：
+#   *注释以#开头并延续到一行末位。
+#   *非空白行都是一个匹配电子邮箱地址中主机地址的正则表达式片段。',
 	'spam-blacklisted-email' => '黑名单中的电邮地址',
 	'spam-blacklisted-email-text' => '您的电子邮件地址目前已被列入黑名单以防止您发送邮件。',
 	'spam-blacklisted-email-signup' => '所给电邮地址已被列入黑名单。',
