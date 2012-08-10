@@ -1313,6 +1313,7 @@ $messages['hsb'] = array(
 
 /** Hungarian (magyar)
  * @author Dani
+ * @author Dj
  */
 $messages['hu'] = array(
 	'spam-blacklist' => ' # A lista elemeire illeszkedő külső hivatkozások blokkolva lesznek
@@ -1332,6 +1333,7 @@ $messages['hu'] = array(
 #  * Minden nem üres sor egy reguláris kifejezés darabja, amely csak az URL-ekben található kiszolgálókra illeszkedik
 
  #</pre> <!-- ezen a soron ne változtass -->',
+	'spam-blacklisted-email-signup' => 'A megadott email cím jelenleg feketelistán van, és nem lehet használni.',
 	'spam-invalid-lines' => 'Az alábbi {{PLURAL:$1|sor hibás|sorok hibásak}} a spam elleni feketelistában; {{PLURAL:$1|javítsd|javítsd őket}} mentés előtt:',
 	'spam-blacklist-desc' => 'Regex-alapú spamellenes eszköz: [[MediaWiki:Spam-blacklist]] és [[MediaWiki:Spam-whitelist]]',
 );
@@ -1457,6 +1459,51 @@ $messages['ilo'] = array(
 	'spam-blacklisted-email-signup' => 'Ti naited nga e-surat a pagatengan ket agdama a naiparit manipud ti panagusar.',
 	'spam-invalid-lines' => 'Ti sumaganad a spam blacklist {{PLURAL:$1| a linia ket|kadagiti linia ket}} imbalido a kadawyan {{PLURAL:$1|a nangisao|kadagiti panangisao}} ken {{PLURAL:$1|masapsapol|masapol}} a mapudnuan sakbay nga idulin ti panid:',
 	'spam-blacklist-desc' => 'Naibantay ti regex kontra-spam a ramit: [[MediaWiki:Spam-blacklist]] ken [[MediaWiki:Spam-whitelist]]',
+);
+
+/** Icelandic (íslenska)
+ * @author Snævar
+ */
+$messages['is'] = array(
+	'spam-blacklist' => ' # Ytri tenglar sem passa við þennan lista er ekki hægt að bæta við á síður.
+ # Þessi bannlisti hefur aðeins áhrif á þennan wiki. 
+ # Einnig er til altækur bannlisti sem hefur áhrif á öll wiki verkefni Wikimedia. Hann er að finna á http://meta.wikimedia.org/wiki/Spam_blacklist
+ # Leiðbeiningar eru á https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- ekki breyta þessari línu --> <pre>
+#
+# Málskipan listans er eftirfarandi:
+#   * Allar línur sem byrja á "#" eru athugasemdir
+#   * Allar síður sem eru ekki tómar eru reglulegar segðir sem verða aðeins bornar saman við vefsvæði tengilsins
+
+ #</pre> <!-- ekki breyta þessari línu -->',
+	'spam-whitelist' => ' #<!-- ekki breyta þessari línu --> <pre>
+# Ytri tenglar sem passa við þennan lista verður *hægt* að bæta við á síður, þrátt fyrir að
+# þeir séu á bannlistanum.
+#
+ #</pre> <!-- ekki breyta þessari línu -->',
+	'email-blacklist' => ' # Netföng á þessum lista verður ekki hægt að nota til þess að skrá notenda eða senda tölvupost á notendur
+ # Þessi bannlisti hefur eingöngu áhrif á þennan wiki, en einning er til altækur bannlisti sem hefur áhrif á öll wiki verkefni Wikimedia.
+ # Leiðbeiningar eru á https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- ekki breyta þessari línu --> <pre>
+#
+# Málskipan listans er eftirfarandi:
+#  * Allar línur sem byrja á "#" eru athugasemdir
+#  * Allar síður sem eru ekki tómar eru reglulegar segðir sem verða aðeins bornar saman við vefsvæði netfangsins
+
+ #</pre> <!-- ekki breyta þessari línu -->',
+	'email-whitelist' => ' #<!-- leave this line exactly as it is --> <pre>
+# Netföng sem passa við þennan lista verður *hægt* að bæta við á síður, þrátt fyrir að
+# þau séu á bannlistanum.
+#
+ #</pre> <!-- leave this line exactly as it is -->
+# Málskipan listans er eftirfarandi:
+#  * Allar línur sem byrja á "#" eru athugasemdir
+#  * Allar síður sem eru ekki tómar eru reglulegar segðir sem verða aðeins bornar saman við vefsvæði netfangsins',
+	'spam-blacklisted-email' => 'Netfangið er á bannlista',
+	'spam-blacklisted-email-text' => 'Netfangið þitt er skráð á bannlista og ekki er hægt að senda tölfupóst frá því til annara notenda.',
+	'spam-blacklisted-email-signup' => 'Netfangið sem þú tilgreindir er á bannlista og er ekki hægt að nota.',
+	'spam-invalid-lines' => 'Eftirfarandi bannlista {{PLURAL:$1|færsla er ógild regluleg segð|færslur eru ógildar reglulegar segðir}} og leiðrétta þarf {{PLURAL:$1|hana|þær}} áður en síðan er vistuð:',
+	'spam-blacklist-desc' => 'Kæfuvörn byggð á reglulegum segðum: [[MediaWiki:Spam-blacklist]] og [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Italian (italiano)
@@ -2517,7 +2564,27 @@ $messages['rue'] = array(
 #  * каждый непорожній рядок є часть реґуларного выразу, котрому будурь одповідати лем домены з URL
 
  #</pre> <!-- Охабте тот рядок точно як є -->',
+	'email-blacklist' => ' # З імейлів одповідных гевсёму списку не буде годен зареґістровати ни конто ни послати імейл.
+ # Гевсесь список мать вплыв лем на гевсю вікі; посмотьте тыж ґлобалных чорный список.
+ # Документацію найдете на https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- тот рядок охабте актуално так як він є теперь --> <pre>
+#
+# Сінтакс є в наступных рядках:
+#  * Вшытко од сімвола „#“ до кінце рядка є коментарь
+#  * Каждый непорожнїй рядок є часть реґуларного выразу, котрому будуть одповідати лем домены в імейловых адресах
+
+ #</pre> <!-- тот рядок охабте актуално так як він є теперь -->',
+	'email-whitelist' => ' #<!-- тот рядок охабте актуално так як він є теперь --> <pre>
+# Імейлы одповідны тому списку *не будуть* заблокованы, хоць бы
+# одповідали записам в чорнім списку.
+#
+# Сінтакс є в наступныха рядках:
+#  * Вшытко од сімвола „#“ до кінце рядка є коментарь
+#  * Каждый непорожнїй рядок є часть реґуларного выразу, котрому будуть одповідати лем домены в імейловых адресах
+ #</pre> <!-- тот рядок охабте актуално так як він є теперь -->',
 	'spam-blacklisted-email' => 'Імейл на чорнім списку',
+	'spam-blacklisted-email-text' => 'Ваша імейлова адреса є моментално уведжена на чорнім списку, та же другым хоснователям не можете послати імейл.',
+	'spam-blacklisted-email-signup' => 'Уведжена імейлова адреса є моментално на чорнім списку.',
 	'spam-invalid-lines' => 'На чорній листинї спаму {{PLURAL:$1|є наступный рядок неправилный реґуларный выраз|суть наступны рядкы неправилны реґуларны выразы|суть наступны рядкы неправилны реґуларны выразы}} і є треба {{PLURAL:$1|го|їх|їх}} перед уложінём сторінкы справити:',
 	'spam-blacklist-desc' => 'Антіспамовый інштрумент на базї реґуларных выразів: [[MediaWiki:Spam-blacklist]] і [[MediaWiki:Spam-whitelist]]',
 );
@@ -2776,6 +2843,14 @@ $messages['sv'] = array(
 	'spam-blacklisted-email' => 'Svartlistad e-postadress',
 	'spam-invalid-lines' => 'Följande {{PLURAL:$1|rad|rader}} i svarta listan för spam innehåller inte något giltigt reguljärt uttryck  och måste rättas innan sidan sparas:',
 	'spam-blacklist-desc' => 'Antispamverktyg baserat på reguljära uttryck: [[MediaWiki:Spam-blacklist]] och [[MediaWiki:Spam-whitelist]]',
+);
+
+/** Tamil (தமிழ்)
+ * @author Karthi.dr
+ */
+$messages['ta'] = array(
+	'spam-blacklisted-email' => 'தடை செய்யப்பட்டுள்ள மின்னஞ்சல் முகவரிகள்',
+	'spam-blacklisted-email-text' => 'மற்ற பயனர்களுக்கு மின்னஞ்சல் செய்ய இயலாதபடி உங்கள் மின்னஞ்சல் முகவரி தடை செய்யப்பட்டுள்ளது.',
 );
 
 /** Telugu (తెలుగు)
