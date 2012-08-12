@@ -468,6 +468,7 @@ $messages['bs'] = array(
 
 /** Catalan (català)
  * @author Aleator
+ * @author Arnaugir
  * @author Jordi Roqué
  * @author SMP
  */
@@ -491,6 +492,7 @@ $messages['ca'] = array(
 #   * Cada línia no buida és un fragment d'expressió regular (regex) que només marcarà hosts dins les URL
 
  #</pre> <!-- deixeu aquesta línia tal com està -->",
+	'spam-blacklisted-email' => 'Adreces de correu electrònic a la llista negra',
 	'spam-invalid-lines' => "{{PLURAL:$1|La línia següent no es considera una expressió correcta|Les línies següents no es consideren expressions correctes}} {{PLURAL:$1|perquè recull|perquè recullen}} SPAM que està vetat. Heu d'esmenar-ho abans de salvar la pàgina:",
 	'spam-blacklist-desc' => 'Eina anti-spam basada en regexp: [[MediaWiki:Spam-blacklist]] i [[MediaWiki:Spam-whitelist]]',
 );
@@ -746,7 +748,24 @@ $messages['eo'] = array(
 #  * Ĉio ekde "#" signo al la fino de linio estas komento
 #  * Ĉiu nemalplena linio estas regex kodero kiu nur kongruas retnodojn ene de URL-oj
  #</pre> <!-- ne ŝanĝu ĉi tiun linion iel ajn -->',
+	'email-blacklist' => ' # Retadresoj kongruante de ĉi tiu listo estos forbarita de reĝistrado aŭ sendado de retpoŝtoj
+ # Ĉi tiu listo nur funkciigas ĉi tiun vikion; ankaŭ rigardu la ĝeneralan nigraliston.
+ # Por dokumentado, vidu https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- leave this line exactly as it is --> <pre>
+# Jen la sintakso:
+#  * Ĉio ekde "#" signo al la fino de linio estas komento
+#  * Ĉiu ne-malplena linio estas regex kodero kiu nur kongruas retnodojn ene de URL-oj
+
+ #</pre> <!-- ne ŝanĝu ĉi tiun linion iel ajn -->',
+	'email-whitelist' => ' #<!-- leave this line exactly as it is --> <pre>
+# Retadresoj kongruante de ĉi tiu listo *ne* estos forbarita se ili estus forbarita de nigralisto.
+# 
+ #</pre> <!-- leave this line exactly as it is -->
+# Jen la sintakso:
+#  * Ĉio ekde "#" signo al la fino de linio estas komento
+#  * Ĉiu ne-malplena linio estas regex kodero kiu nur kongruas retnodojn ene de URL-oj',
 	'spam-blacklisted-email' => 'Retpoŝtadreso en nigra listo',
+	'spam-blacklisted-email-text' => 'Via retpoŝtadreso estas nune membro de nigralisto forbarita de sendante retpoŝtojn al aliaj uzantoj.',
 	'spam-invalid-lines' => 'La {{PLURAL:$1|jena linio|jenaj linioj}} de spama nigralisto estas {{PLURAL:$1|nevlidaj regularaj esprimoj|nevlidaj regularaj esprimoj}} kaj devas esti {{PLURAL:$1|korektigita|korektigitaj}} antaŭ savante la paĝon:',
 	'spam-blacklist-desc' => 'Regex-bazita kontraŭspamilo: [[MediaWiki:Spam-blacklist]] kaj [[MediaWiki:Spam-whitelist]]',
 );
@@ -1315,6 +1334,7 @@ $messages['hsb'] = array(
 /** Hungarian (magyar)
  * @author Dani
  * @author Dj
+ * @author TK-999
  */
 $messages['hu'] = array(
 	'spam-blacklist' => ' # A lista elemeire illeszkedő külső hivatkozások blokkolva lesznek
@@ -1334,6 +1354,7 @@ $messages['hu'] = array(
 #  * Minden nem üres sor egy reguláris kifejezés darabja, amely csak az URL-ekben található kiszolgálókra illeszkedik
 
  #</pre> <!-- ezen a soron ne változtass -->',
+	'spam-blacklisted-email' => 'Feketelistás e-mail cím',
 	'spam-blacklisted-email-signup' => 'A megadott email cím jelenleg feketelistán van, és nem lehet használni.',
 	'spam-invalid-lines' => 'Az alábbi {{PLURAL:$1|sor hibás|sorok hibásak}} a spam elleni feketelistában; {{PLURAL:$1|javítsd|javítsd őket}} mentés előtt:',
 	'spam-blacklist-desc' => 'Regex-alapú spamellenes eszköz: [[MediaWiki:Spam-blacklist]] és [[MediaWiki:Spam-whitelist]]',
@@ -2746,6 +2767,7 @@ $messages['sl'] = array(
 );
 
 /** Albanian (shqip)
+ * @author FatosMorina
  * @author Olsi
  */
 $messages['sq'] = array(
@@ -2768,6 +2790,9 @@ $messages['sq'] = array(
 #   * Çdo rresht jobosh është një fragment që vetëm do të përputhë hostet brenda URL-ve
 
  #</pre> <!-- leave this line exactly as it is -->',
+	'spam-blacklisted-email' => 'E-mail adresa e vendosur në listën e zezë',
+	'spam-blacklisted-email-text' => 'E-mail adresa juaj është për momentin në penguar nga dërgimi i e-mailave tek përdoruesit e tjerë.',
+	'spam-blacklisted-email-signup' => 'E-mail adresa e dhënë për momentin është ndaluuar nga përdorimi',
 	'spam-invalid-lines' => 'Lista e zezë e mëposhtme spam {{PLURAL:$1|rreshti është një|rreshtat janë}} {{PLURAL:$1|shprehje|shprehje}} të rregullta të pavlefshme dhe {{PLURAL:$1|nevojitet|nevojitet}} të korrigjohen përpara ruajtjes së faqes:',
 	'spam-blacklist-desc' => 'Mjeti anti-spam regex i bazuar: [[MediaWiki:Spam-blacklist]] dhe [[MediaWiki:Spam-whitelist]]',
 );
@@ -2848,10 +2873,12 @@ $messages['sv'] = array(
 
 /** Tamil (தமிழ்)
  * @author Karthi.dr
+ * @author மதனாஹரன்
  */
 $messages['ta'] = array(
 	'spam-blacklisted-email' => 'தடை செய்யப்பட்டுள்ள மின்னஞ்சல் முகவரிகள்',
 	'spam-blacklisted-email-text' => 'மற்ற பயனர்களுக்கு மின்னஞ்சல் செய்ய இயலாதபடி உங்கள் மின்னஞ்சல் முகவரி தடை செய்யப்பட்டுள்ளது.',
+	'spam-blacklisted-email-signup' => 'வழங்கப்பட்ட மின்னஞ்சல் முகவரியானது இப்போது பயன்பாட்டிலிருநது விலக்கப்பட்டுக் கறுப்புப் பட்டியலிலுள்ளது.',
 );
 
 /** Telugu (తెలుగు)
