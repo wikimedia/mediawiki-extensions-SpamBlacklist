@@ -471,6 +471,7 @@ $messages['bs'] = array(
  * @author Arnaugir
  * @author Jordi Roqué
  * @author SMP
+ * @author Vriullop
  */
 $messages['ca'] = array(
 	'spam-blacklist' => ' # Les URLs externes coincidents amb aquesta llista seran bloquejades en ser afegides a una pàgina.
@@ -493,6 +494,8 @@ $messages['ca'] = array(
 
  #</pre> <!-- deixeu aquesta línia tal com està -->",
 	'spam-blacklisted-email' => 'Adreces de correu electrònic a la llista negra',
+	'spam-blacklisted-email-text' => "La vostra adreça de correu electrònic està actualment en la llista negra d'enviament de correus a altres usuaris.",
+	'spam-blacklisted-email-signup' => "L'adreça de correu electrònic proporcionada està actualment en la llista negra d'ús.",
 	'spam-invalid-lines' => "{{PLURAL:$1|La línia següent no es considera una expressió correcta|Les línies següents no es consideren expressions correctes}} {{PLURAL:$1|perquè recull|perquè recullen}} SPAM que està vetat. Heu d'esmenar-ho abans de salvar la pàgina:",
 	'spam-blacklist-desc' => 'Eina anti-spam basada en regexp: [[MediaWiki:Spam-blacklist]] i [[MediaWiki:Spam-whitelist]]',
 );
@@ -766,6 +769,7 @@ $messages['eo'] = array(
 #  * Ĉiu ne-malplena linio estas regex kodero kiu nur kongruas retnodojn ene de URL-oj',
 	'spam-blacklisted-email' => 'Retpoŝtadreso en nigra listo',
 	'spam-blacklisted-email-text' => 'Via retpoŝtadreso estas nune membro de nigralisto forbarita de sendante retpoŝtojn al aliaj uzantoj.',
+	'spam-blacklisted-email-signup' => 'Tiu retpoŝtadreso estas nune forbarita de uzado.',
 	'spam-invalid-lines' => 'La {{PLURAL:$1|jena linio|jenaj linioj}} de spama nigralisto estas {{PLURAL:$1|nevlidaj regularaj esprimoj|nevlidaj regularaj esprimoj}} kaj devas esti {{PLURAL:$1|korektigita|korektigitaj}} antaŭ savante la paĝon:',
 	'spam-blacklist-desc' => 'Regex-bazita kontraŭspamilo: [[MediaWiki:Spam-blacklist]] kaj [[MediaWiki:Spam-whitelist]]',
 );
@@ -2609,6 +2613,15 @@ $messages['rue'] = array(
 	'spam-blacklisted-email-signup' => 'Уведжена імейлова адреса є моментално на чорнім списку.',
 	'spam-invalid-lines' => 'На чорній листинї спаму {{PLURAL:$1|є наступный рядок неправилный реґуларный выраз|суть наступны рядкы неправилны реґуларны выразы|суть наступны рядкы неправилны реґуларны выразы}} і є треба {{PLURAL:$1|го|їх|їх}} перед уложінём сторінкы справити:',
 	'spam-blacklist-desc' => 'Антіспамовый інштрумент на базї реґуларных выразів: [[MediaWiki:Spam-blacklist]] і [[MediaWiki:Spam-whitelist]]',
+);
+
+/** Sanskrit (संस्कृतम्)
+ * @author Shubha
+ */
+$messages['sa'] = array(
+	'spam-blacklisted-email' => 'निन्द्यः ईपत्रसङ्केतः',
+	'spam-blacklisted-email-text' => 'भवतः ईपत्रसङ्केतः सम्प्रति निन्द्यसङ्केतानाम् आवल्यां प्रवेशितः । अतः अन्येभ्यः योजकेभ्यः ईपत्रप्रेषणं नानुमन्यते ।',
+	'spam-blacklisted-email-signup' => 'प्रदत्तः निन्द्यः ईपत्रसङ्केतः सम्प्रति उपयोगे नास्ति ।',
 );
 
 /** Sakha (саха тыла)
