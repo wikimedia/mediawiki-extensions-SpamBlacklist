@@ -1649,6 +1649,8 @@ $messages['jv'] = array(
 
  #</pre> <!-- lirwakna baris iki apa anané -->',
 	'spam-blacklisted-email' => 'Alamat layang èlèktronik kalebu nèng daptar ireng',
+	'spam-blacklisted-email-text' => 'Alamat layang èlèktronik Sampéyan saiki didaptarirengaké saka ngirim layang èlèktronik nèng panganggi liya.',
+	'spam-blacklisted-email-signup' => 'Alamat layang èlèktronik sing diawèhaké saiki ora dililakaké.',
 	'spam-invalid-lines' => '{{PLURAL:$1|Baris|Baris-baris}} daftar ireng spam ing ngisor iki yaiku {{PLURAL:$1|èksprèsi|èksprèsi}} regulèr sing ora absah lan {{PLURAL:$1|perlu|perlu}} dikorèksi sadurungé disimpen:',
 	'spam-blacklist-desc' => 'Piranti anti-spam adhedhasar regex: [[MediaWiki:Spam-blacklist]] lan [[MediaWiki:Spam-whitelist]]',
 );
@@ -2243,6 +2245,13 @@ $messages['nl'] = array(
 	'spam-blacklist-desc' => 'Antispamfunctionaliteit via reguliere expressies: [[MediaWiki:Spam-blacklist]] en [[MediaWiki:Spam-whitelist]]',
 );
 
+/** ‪Nederlands (informeel)‬ (‪Nederlands (informeel)‬)
+ * @author Siebrand
+ */
+$messages['nl-informal'] = array(
+	'spam-blacklisted-email-text' => 'Je e-mailadres staat momenteel op de zwarte lijst waardoor je geen e-mails naar andere gebruikers kunt verzenden.',
+);
+
 /** Norwegian Nynorsk (‪norsk (nynorsk)‬)
  * @author Frokor
  */
@@ -2628,6 +2637,7 @@ $messages['sa'] = array(
 	'spam-blacklisted-email' => 'निन्द्यः ईपत्रसङ्केतः',
 	'spam-blacklisted-email-text' => 'भवतः ईपत्रसङ्केतः सम्प्रति निन्द्यसङ्केतानाम् आवल्यां प्रवेशितः । अतः अन्येभ्यः योजकेभ्यः ईपत्रप्रेषणं नानुमन्यते ।',
 	'spam-blacklisted-email-signup' => 'प्रदत्तः निन्द्यः ईपत्रसङ्केतः सम्प्रति उपयोगे नास्ति ।',
+	'spam-blacklist-desc' => 'रेजेक्स्-आधारितम् अनिष्टसन्देशविरोधि उपकरणम्: [[MediaWiki:Spam-blacklist]]  [[MediaWiki:Spam-whitelist]] च',
 );
 
 /** Sakha (саха тыла)
