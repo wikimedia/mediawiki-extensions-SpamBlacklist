@@ -4,7 +4,6 @@
  * Hooks for the spam blacklist extension
  */
 class SpamBlacklistHooks {
-
 	/**
 	 * Hook function for EditFilterMerged
 	 *
@@ -26,12 +25,7 @@ class SpamBlacklistHooks {
 		$title = $editPage->mArticle->getTitle();
 		$ret = $spamObj->filter( $title, $text, '', $editSummary, $editPage );
 		if ( $ret !== false ) {
-			// spamPageWithContent() method was added in MW 1.17
-			if ( method_exists( $editPage, 'spamPageWithContent' ) ) {
-				$editPage->spamPageWithContent( $ret );
-			} else {
-				$editPage->spamPage( $ret );
-			}
+			$editPage->spamPageWithContent( $ret );
 		}
 		// Return convention for hooks is the inverse of $wgFilterCallback
 		return ( $ret === false );
@@ -124,13 +118,13 @@ class SpamBlacklistHooks {
 			wfDebugLog( 'SpamBlacklist', "Spam blacklist validator: [[$thisPageName]] given invalid input lines: " .
 				implode( ', ', $badLines ) . "\n" );
 
-			$badList = "*<tt>" .
-				implode( "</tt>\n*<tt>",
+			$badList = "*<code>" .
+				implode( "</code>\n*<code>",
 					array_map( 'wfEscapeWikiText', $badLines ) ) .
-				"</tt>\n";
+				"</code>\n";
 			$hookError =
 				"<div class='errorbox'>" .
-					wfMsgExt( 'spam-invalid-lines', array( 'parsemag' ), count( $badLines ) ) . "<br />" .
+					wfMessage( 'spam-invalid-lines' )->numParams( $badLines )->text() . "<br />" .
 					$badList .
 					"</div>\n" .
 					"<br clear='all' />\n";

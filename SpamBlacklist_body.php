@@ -21,7 +21,7 @@ class SpamBlacklist extends BaseBlacklist {
 	 * @param Title $title
 	 * @param string $text Text of section, or entire text if $editPage!=false
 	 * @param string $section Section number or name
-	 * @param EditSummary $editSummary Edit summary if one exists, some people use urls there too
+	 * @param string $editsummary Edit summary if one exists, some people use urls there too
 	 * @param EditPage $editPage EditPage if EditFilterMerged was called, null otherwise
 	 * @return Array Matched text(s) if the edit should not be allowed, false otherwise
 	 */
@@ -95,7 +95,8 @@ class SpamBlacklist extends BaseBlacklist {
 				wfRestoreWarnings();
 				if( $check ) {
 					wfDebugLog( 'SpamBlacklist', "Match!\n" );
-					$ip = wfGetIP();
+					global $wgRequest;
+					$ip = $wgRequest->getIP();
 					$imploded = implode( ' ', $matches[0] );
 					wfDebugLog( 'SpamBlacklistHit', "$ip caught submitting spam: $imploded\n" );
 					if( $retVal === false ){

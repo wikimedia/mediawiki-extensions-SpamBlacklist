@@ -4,7 +4,6 @@
  * Base class for different kinds of blacklists
  */
 abstract class BaseBlacklist {
-
 	/**
 	 * Array of blacklist sources
 	 *
@@ -369,5 +368,4 @@ abstract class BaseBlacklist {
 	public function getRegexEnd( $batchSize ) {
 		return ($batchSize > 0 ) ? '/Sim' : '/im';
 	}
-
 }

@@ -15,7 +15,7 @@ $wgExtensionCredits['antispam'][] = array(
 	'descriptionmsg' => 'spam-blacklist-desc',
 );
 
-$dir = dirname(__FILE__) . '/';
+$dir = __DIR__ . '/';
 $wgExtensionMessagesFiles['SpamBlackList'] = $dir . 'SpamBlacklist.i18n.php';
 
 /**
@@ -45,6 +45,3 @@ $wgAutoloadClasses['EmailBlacklist'] = $dir . 'EmailBlacklist.php';
 $wgAutoloadClasses['SpamBlacklistHooks'] = $dir . 'SpamBlacklistHooks.php';
 $wgAutoloadClasses['SpamBlacklist'] = $dir . 'SpamBlacklist_body.php';
 $wgAutoloadClasses['SpamRegexBatch'] = $dir . 'SpamRegexBatch.php';
-
-
-

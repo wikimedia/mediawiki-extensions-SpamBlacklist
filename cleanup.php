@@ -12,7 +12,7 @@ require_once( 'SpamBlacklist_body.php' );
 /**
  * Find the latest revision of the article that does not contain spam and revert to it
  */
-function cleanupArticle( $rev, $regexes, $match ) {
+function cleanupArticle( Revision $rev, $regexes, $match ) {
 	$title = $rev->getTitle();
 	$revId = $rev->getId();
 	while ( $rev ) {
@@ -51,8 +51,8 @@ function cleanupArticle( $rev, $regexes, $match ) {
 		$text = $rev->getText();
 		$comment = "Cleaning up links to $match";
 	}
-	$article = new Article( $title );
-	$article->doEdit( $text, $comment );
+	$wikiPage = new WikiPage( $title );
+	$wikiPage->doEdit( $text, $comment );
 	$dbw->commit();
 }
 

@@ -9,6 +9,7 @@ class SpamRegexBatch {
 	 * Returns an empty list if the input list is empty.
 	 *
 	 * @param array $lines list of fragments which will match in URLs
+	 * @param BaseBlacklist $blacklist
 	 * @param int $batchSize largest allowed batch regex;
 	 *                       if 0, will produce one regex per line
 	 * @return array
@@ -87,7 +88,8 @@ class SpamRegexBatch {
 	 * Do a sanity check on the batch regex.
 	 *
 	 * @param $lines string unsanitized input lines
-	 * @param $fileName string optional for debug reporting
+	 * @param $blacklist BaseBlacklist
+	 * @param $fileName bool|string optional for debug reporting
 	 * @return array of regexes
 	 */
 	static function buildSafeRegexes( $lines, BaseBlacklist $blacklist, $fileName=false ) {
@@ -110,6 +112,7 @@ class SpamRegexBatch {
 	 * Returns an array of invalid lines
 	 *
 	 * @param array $lines
+	 * @param $blacklist BaseBlacklist
 	 * @return array of input lines which produce invalid input, or empty array if no problems
 	 */
 	static function getBadLines( $lines, BaseBlacklist $blacklist ) {
@@ -144,6 +147,7 @@ class SpamRegexBatch {
 	 * with empty lines and comments stripped.
 	 *
 	 * @param $source string
+	 * @param $blacklist BaseBlacklist
 	 * @param $fileName bool|string optional, for reporting of bad files
 	 * @return array of regular expressions, potentially empty
 	 */
@@ -157,15 +161,15 @@ class SpamRegexBatch {
 	 * Will be correctly empty if the message isn't present.
 	 *
 	 * @param $message string
+	 * @param $blacklist BaseBlacklist
 	 * @return array of regular expressions, potentially empty
 	 */
 	static function regexesFromMessage( $message, BaseBlacklist $blacklist ) {
-		$source = wfMsgForContent( $message );
-		if( $source && !wfEmptyMsg( $message, $source ) ) {
-			return SpamRegexBatch::regexesFromText( $source, $blacklist );
+		$source = wfMessage( $message )->inContentLanguage();
+		if( !$source->isDisabled() ) {
+			return SpamRegexBatch::regexesFromText( $source->plain(), $blacklist );
 		} else {
 			return array();
 		}
 	}
 }
-
