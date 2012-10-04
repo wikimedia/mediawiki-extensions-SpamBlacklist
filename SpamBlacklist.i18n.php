@@ -649,6 +649,7 @@ $messages['de-formal'] = array(
 /** Zazaki (Zazaki)
  * @author Aspar
  * @author Erdemaslancan
+ * @author Olvörg
  */
 $messages['diq'] = array(
 	'spam-blacklist' => '  #gıreyê teber ê ke na liste de zêpi bi bloke beni.
@@ -671,6 +672,7 @@ $messages['diq'] = array(
 
   #</pre> <!--no satır zey xo verdê -->',
 	'spam-blacklisted-email' => 'E-posta deyayo teni liste',
+	'spam-blacklisted-email-text' => 'Nıka adresa e-postayê to qande karberê bini ra mesac riştene listeyê siya dero.',
 	'spam-invalid-lines' => 'na qerelisteya spami {{PLURAL:$1|satır|satıran}}  {{PLURAL:$1|nemeqbulo|nemeqbuli}};',
 	'spam-blacklist-desc' => 'Regex-tabanlı anti-spam aracı: [[MediaWiki:Spam-blacklist]] ve [[MediaWiki:Spam-whitelist]]',
 );
