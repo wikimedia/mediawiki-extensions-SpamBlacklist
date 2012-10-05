@@ -926,19 +926,20 @@ $messages['fa'] = array(
 
 /** Finnish (suomi)
  * @author Cimon Avaro
+ * @author Crt
  * @author Linnea
  * @author Nike
  * @author Olli
  */
 $messages['fi'] = array(
 	'spam-blacklist' => ' # Tämän listan säännöillä voi estää ulkopuolisiin sivustoihin viittaavien osoitteiden lisäämisen.
- # Tämä lista koskee vain tätä wikiä. Tutustu myös globaaliin mustaan listaan.
- # Lisätietoja on osoitteessa https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # Tämä lista koskee vain tätä wikiä. Tutustu myös järjestelmänlaajuiseen mustaan listaan.
+ # Lisätietoja on osoitteessa http://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- Älä koske tähän riviin lainkaan --> <pre>
 #
 # Syntaksi on seuraavankaltainen:
-#  * Kaikki #-merkistä lähtien rivin loppuun asti on kommenttia
-#  * Jokainen ei-tyhjä rivi on säännöllisen lausekkeen osa, joka tunnistaa vain osoitteissa olevat verkkotunnukset.
+#   * Kaikki #-merkistä lähtien rivin loppuun asti on kommenttia
+#   * Jokainen ei-tyhjä rivi on säännöllisen lausekkeen osa, joka tunnistaa vain osoitteissa olevat verkkotunnukset.
 
  #</pre> <!-- Älä koske tähän riviin lainkaan -->',
 	'spam-whitelist' => ' #<!-- älä koske tähän riviin --> <pre>
@@ -950,15 +951,15 @@ $messages['fi'] = array(
 
  #</pre> <!-- älä koske tähän riviin -->',
 	'email-blacklist' => ' # Tällä listalla olevat sähköpostit estetään rekisteröitymästä tai lähettämästä sähköpostia
- # Tämä lista vaikuttaa vain tähän wikiin; katso myös globaali estolista.
- # Ohjeet saatavissa https://www.mediawiki.org/wiki/Extension:SpamBlacklist
- #<!-- jätä tämä rivi tällaiseksi --> <pre>
+ # Tämä lista koskee vain tätä wikiä. Tutustu myös järjestelmänlaajuiseen mustaan listaan.
+ # Lisätietoja on osoitteessa https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ #<!-- Älä koske tähän riviin lainkaan --> <pre>
 #
-# Syntaksi on seuraava
-#   * Kaikki sanat alkaen merkistä "#" rivin loppuun ovat kommentteja
-#   * Jokainen epätyhjä rivi on säännöllinen lauseke sähköpostien estoon
+# Syntaksi on seuraavankaltainen:
+#   * Kaikki #-merkistä lähtien rivin loppuun asti on kommenttia
+#   * Jokainen ei-tyhjä rivi on säännöllisen lausekkeen osa, joka tunnistaa vain sähköpostiosoitteissa olevat verkkotunnukset.
 
- #</pre> <!-- jätä tämä rivi tällaiseksi -->',
+ #</pre> <!-- Älä koske tähän riviin lainkaan -->',
 	'spam-blacklisted-email' => 'Mustalla listalla oleva sähköpostiosoite',
 	'spam-blacklisted-email-text' => 'Sähköpostisi on tällä hetkellä mustalla listalla, etkä voi lähettää sähköpostia muille käyttäjille.',
 	'spam-blacklisted-email-signup' => 'Annettu sähköpostiosoite on tällä hetkellä mustalla listalla.',
