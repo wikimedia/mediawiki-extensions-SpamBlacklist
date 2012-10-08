@@ -17,10 +17,10 @@ function cleanupArticle( Revision $rev, $regexes, $match ) {
 	$revId = $rev->getId();
 	while ( $rev ) {
 		$matches = false;
-		foreach( $regexes as $regex ) {
+		foreach ( $regexes as $regex ) {
 			$matches = $matches || preg_match( $regex, $rev->getText() );
 		}
-		if( !$matches ) {
+		if ( !$matches ) {
 			// Didn't find any spam
 			break;
 		}
@@ -37,11 +37,11 @@ function cleanupArticle( Revision $rev, $regexes, $match ) {
 	$dbw->begin();
 	if ( !$rev ) {
 		// Didn't find a non-spammy revision, delete the page
-/*
+		/*
 		print "All revisions are spam, deleting...\n";
 		$article = new Article( $title );
 		$article->doDeleteArticle( "All revisions matched the spam blacklist" );
-*/
+		*/
 		// Too scary, blank instead
 		print "All revisions are spam, blanking...\n";
 		$text = '';
@@ -62,10 +62,12 @@ $username = 'Spam cleanup script';
 $wgUser = User::newFromName( $username );
 if ( $wgUser->idForName() == 0 ) {
 	// Create the user
-	$wgUser->addToDatabase();
-	$dbw = wfGetDB( DB_MASTER );
-	$dbw->update( 'user', array( 'user_password' => 'nologin' ), 
-		array( 'user_name' => $username ), $username );
+	$status = $wgUser->addToDatabase();
+	if ( $status === null || $status->isOK() ) {
+		$dbw = wfGetDB( DB_MASTER );
+		$dbw->update( 'user', array( 'user_password' => 'nologin' ),
+			array( 'user_name' => $username ), $username );
+	}
 }
 
 if ( isset( $options['n'] ) ) {
@@ -81,7 +83,7 @@ if ( $wgSpamBlacklistFiles ) {
 $regexes = $sb->getBlacklists();
 if ( !$regexes ) {
 	print "Invalid regex, can't clean up spam\n";
-	exit(1);
+	exit( 1 );
 }
 
 $dbr = wfGetDB( DB_SLAVE );
@@ -94,7 +96,7 @@ if ( $dryRun ) {
 	print "Dry run only\n";
 }
 
-for ( $id=1; $id <= $maxID; $id++ ) {
+for ( $id = 1; $id <= $maxID; $id++ ) {
 	if ( $id % $reportingInterval == 0 ) {
 		printf( "%-8d  %-5.2f%%\r", $id, $id / $maxID * 100 );
 	}
@@ -102,7 +104,7 @@ for ( $id=1; $id <= $maxID; $id++ ) {
 	if ( $revision ) {
 		$text = $revision->getText();
 		if ( $text ) {
-			foreach( $regexes as $regex ) {
+			foreach ( $regexes as $regex ) {
 				if ( preg_match( $regex, $text, $matches ) ) {
 					$title = $revision->getTitle();
 					$titleText = $title->getPrefixedText();
@@ -110,7 +112,7 @@ for ( $id=1; $id <= $maxID; $id++ ) {
 						print "\nFound spam in [[$titleText]]\n";
 					} else {
 						print "\nCleaning up links to {$matches[0]} in [[$titleText]]\n";
-						$match = str_replace('http://', '', $matches[0] );
+						$match = str_replace( 'http://', '', $matches[0] );
 						cleanupArticle( $revision, $regexes, $match );
 					}
 				}
@@ -119,5 +121,5 @@ for ( $id=1; $id <= $maxID; $id++ ) {
 	}
 }
 // Just for satisfaction
-printf( "%-8d  %-5.2f%%\n", $id-1, ($id-1) / $maxID * 100 );
+printf( "%-8d  %-5.2f%%\n", $id - 1, ( $id - 1 ) / $maxID * 100 );
 
