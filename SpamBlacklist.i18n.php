@@ -671,6 +671,21 @@ $messages['diq'] = array(
 #  * Her satıro dekerde, pêşkeşwan ê ke zerreyê URLlyi de tena parçeyê regexê .
 
   #</pre> <!--no satır zey xo verdê -->',
+	'email-blacklist' => '#Adresê e-postay ke eno liste de esto qandê starkerdış ya zi rusnayış rê blokeyo.
+# eno liste tenya aidê eno wikiyo.Siyalisteyê globali rê bıwane.
+#Qandê dokumentasyon  https://www.mediawiki.org/wiki/Extension:SpamBlacklist rê bıwane.
+#
+#Syntax zey cerêni;Hame yew karakterê "#" ra qediyeno u pêyê kommenti izahato. 
+#Her satırê ke veng niyo yew fragmano nızamiyo u tenya qandê e-postayo.
+ #</pre> <!-- Ena satıri bınuse -->',
+	'email-whitelist' => "#<!-- pêroyi en satır bınuse --> <pre>
+#Adresê e-postay ke eno liste de dero bloke ''nêbeno'' eke ravêr i biyê.
+# Cı kewtışi terefê siyaliste biyo bloke.
+#
+ #</pre> <!-- pêroyî in satır bınuse ,satır ino-->
+# Syntax zey ino:
+#  * Hame ke be yew karakterê a \"#\" qediyeno kommentê peyêni yew izahato:
+#  * Her satırê ke veng niyo yew fragmano nızamiyo u tenya qandê e-postayo.",
 	'spam-blacklisted-email' => 'E-posta deyayo teni liste',
 	'spam-blacklisted-email-text' => 'Nıka adresa e-postayê to qande karberê bini ra mesac riştene listeyê siya dero.',
 	'spam-blacklisted-email-signup' => 'E-posta adresiyo ke deyayo karkerdışe cı newke groto siyaliste.',
