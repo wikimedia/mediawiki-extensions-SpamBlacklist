@@ -2457,6 +2457,7 @@ $messages['pnb'] = array(
  * @author 555
  * @author Giro720
  * @author Hamilton Abreu
+ * @author Helder.wiki
  * @author Malafaya
  */
 $messages['pt'] = array(
@@ -2473,12 +2474,13 @@ $messages['pt'] = array(
 
   #</pre> <!-- mantenha esta linha exatamente assim -->',
 	'spam-whitelist' => ' #<!-- mantenha esta linha exatamente assim --> <pre>
-# URLs externas que coincidam com esta lista *não* serão bloqueadas mesmo
-# se tiverem sido bloqueadas por entradas presentes nas listas negras.
+# URLs externas que coincidam com esta lista *não* serão bloqueadas mesmo se
+# teriam sido bloqueadas por entradas presentes na lista negra.
 #
 # A sintaxe é a seguinte:
-#  * Tudo o que estiver após um "#" até o final de uma linha será tido como um comentário
-#  * Todas as linhas que não estiverem em branco são um fragmento de expressão regular (regex) que abrangem apenas a URL especificada
+#  * Tudo o que estiver após um "#" até o final de uma linha é um comentário
+#  * Todas as linhas que não estiverem em branco são um fragmento de expressão regular
+#    (regex) de busca, que só poderão coincidir com hosts na URL
 
  #</pre> <!-- mantenha esta linha exatamente assim -->',
 	'spam-blacklisted-email' => 'Endereço de correio electrónico da lista negra',
@@ -2488,17 +2490,18 @@ $messages['pt'] = array(
 
 /** Brazilian Portuguese (português do Brasil)
  * @author Eduardo.mps
+ * @author Helder.wiki
  */
 $messages['pt-br'] = array(
-	'spam-blacklist' => '# URLs externas que coincidam com esta lista serão bloqueadas quando
- # quando alguém tentar adicioná-las em alguma página.
+	'spam-blacklist' => ' # URLs externas que coincidam com esta lista serão bloqueadas quando forem
+ # adicionadas a uma página.
  # Esta lista refere-se apenas a este wiki. Consulte também a lista-negra global.
  # Veja a documentação em https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- mantenha esta linha exatamente assim --> <pre>
 #
 # A sintaxe é a seguinte:
-#  * Tudo o que estiver após um "#" até o final de uma linha será tido como um comentário
-#  * Todas as linhas que não estiverem em branco são um fragmento de expressão regular (regex) que abrangem apenas a URL especificada
+#   * Tudo o que estiver após um "#" até o final de uma linha será tido como um comentário
+#   * Todas as linhas que não estiverem em branco são um fragmento de expressão regular (regex) que abrangem apenas a URL especificada
 
  #</pre> <!-- mantenha esta linha exatamente assim -->',
 	'spam-whitelist' => ' #<!-- mantenha esta linha exatamente assim --> <pre>
