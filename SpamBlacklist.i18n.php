@@ -585,10 +585,11 @@ $messages['cy'] = array(
 );
 
 /** Danish (dansk)
+ * @author Christian List
  * @author Hylle
  */
 $messages['da'] = array(
-	'spam-blacklisted-email' => 'Sortlistede e-mail adresser',
+	'spam-blacklisted-email' => 'Sortlistet e-mailadresse',
 );
 
 /** German (Deutsch)
