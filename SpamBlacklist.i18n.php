@@ -9,10 +9,10 @@
 $messages = array();
 
 $messages['en'] = array(
-	'spam-blacklist' => ' # External URLs matching this list will be blocked when added to a page.
- # This list affects only this wiki; refer also to the global blacklist.
- # For documentation see https://www.mediawiki.org/wiki/Extension:SpamBlacklist
- #<!-- leave this line exactly as it is --> <pre>
+	'spam-blacklist' => ' #<!-- leave this line exactly as it is --> <pre>
+# External URLs matching this list will be blocked when added to a page.
+# This list affects only this wiki; refer also to the global blacklist.
+# For documentation see https://www.mediawiki.org/wiki/Extension:SpamBlacklist
 #
 # Syntax is as follows:
 #   * Everything from a "#" character to the end of the line is a comment
@@ -23,11 +23,15 @@ $messages['en'] = array(
 # External URLs matching this list will *not* be blocked even if they would
 # have been blocked by blacklist entries.
 #
+# Syntax is as follows:
+#   * Everything from a "#" character to the end of the line is a comment
+#   * Every non-blank line is a regex fragment which will only match hosts inside URLs
+
  #</pre> <!-- leave this line exactly as it is -->',
-	'email-blacklist' => ' # E-mail addresses matching this list will be blocked from registering or sending e-mails
- # This list affects only this wiki; refer also to the global blacklist.
- # For documentation see https://www.mediawiki.org/wiki/Extension:SpamBlacklist
- #<!-- leave this line exactly as it is --> <pre>
+	'email-blacklist' => ' #<!-- leave this line exactly as it is --> <pre>
+# E-mail addresses matching this list will be blocked from registering or sending e-mails
+# This list affects only this wiki; refer also to the global blacklist.
+# For documentation see https://www.mediawiki.org/wiki/Extension:SpamBlacklist
 #
 # Syntax is as follows:
 #   * Everything from a "#" character to the end of the line is a comment
@@ -38,10 +42,11 @@ $messages['en'] = array(
 # Email addresses matching this list will *not* be blocked even if they would
 # have been blocked by blacklist entries.
 #
- #</pre> <!-- leave this line exactly as it is -->
 # Syntax is as follows:
 #   * Everything from a "#" character to the end of the line is a comment
-#   * Every non-blank line is a regex fragment which will only match hosts inside e-mail addresses',
+#   * Every non-blank line is a regex fragment which will only match hosts inside e-mail addresses
+
+ #</pre> <!-- leave this line exactly as it is -->',
 
 	'spam-blacklisted-email' => 'Blacklisted e-mail address',
 	'spam-blacklisted-email-text' => 'Your e-mail address is currently blacklisted from sending e-mails to other users.',
