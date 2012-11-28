@@ -1616,10 +1616,10 @@ $messages['it'] = array(
  * @author Whym
  */
 $messages['ja'] = array(
-	'spam-blacklist' => ' # この一覧に掲載されている外部URLをページに追加すると編集をブロックします。
- # この一覧はこのウィキでのみ有効です。グローバル ブラックリストも参照してください。
- # 利用方法は https://www.mediawiki.org/wiki/Extension:SpamBlacklist/ja をご覧ください。
- #<!-- この行は変更しないでください --> <pre>
+	'spam-blacklist' => ' #<!-- この行は変更しないでください --> <pre>
+# この一覧に掲載されている外部URLをページに追加すると編集をブロックします。
+# この一覧はこのウィキでのみ有効です。グローバル ブラックリストも参照してください。
+# 利用方法は https://www.mediawiki.org/wiki/Extension:SpamBlacklist/ja をご覧ください。
 #
 # 構文は以下の通りです:
 #  * 「#」以降行末まではコメントです
