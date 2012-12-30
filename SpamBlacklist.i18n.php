@@ -2796,6 +2796,7 @@ $messages['scn'] = array(
 
 /** Sinhala (සිංහල)
  * @author Budhajeewa
+ * @author පසිඳු කාවින්ද
  */
 $messages['si'] = array(
 	'spam-blacklist' => ' # External URLs matching this list will be blocked when added to a page.
@@ -2817,6 +2818,7 @@ $messages['si'] = array(
 #   * Every non-blank line is a regex fragment which will only match hosts inside URLs
 
  #</pre> <!-- leave this line exactly as it is -->',
+	'spam-blacklisted-email' => 'අපලේඛනගත විද්‍යුත්-තැපැල් ලිපින',
 	'spam-invalid-lines' => 'පහත දැක්වෙන කළු ලයිස්තු {{PLURAL:$1|පේලිය|පේලි}} වැරදි regular {{PLURAL:$1|expression|expressions}} වන අතර, පිටුව සුරැකීමට පෙර නිවැරදි කළ යුතුය:',
 	'spam-blacklist-desc' => 'Regex-පාදක ප්‍රති-ස්පෑම ආවුදය: [[MediaWiki:Spam-blacklist]] සහ [[MediaWiki:Spam-whitelist]]',
 );
