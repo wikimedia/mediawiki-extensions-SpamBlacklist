@@ -2500,24 +2500,22 @@ $messages['pt'] = array(
 /** Brazilian Portuguese (português do Brasil)
  * @author Eduardo.mps
  * @author Helder.wiki
+ * @author Tuliouel
  * @author 555
  */
 $messages['pt-br'] = array(
 	'spam-blacklist' => ' #<!-- mantenha esta linha exatamente assim --> <pre>
- # URLs externas que coincidam com esta lista serão
- # bloqueadas quando forem adicionadas a uma página.
- # Esta lista refere-se apenas a este wiki. Consulte também a lista negra global.
- # Veja a documentação em https://www.mediawiki.org/wiki/Extension:SpamBlacklist
- #<!-- mantenha esta linha exatamente assim --> <pre>
- #
- # A sintaxe é a seguinte:
- #  * Tudo o que estiver após um "#" até o final de uma 
- # linha será tido como um comentário
- #  * Todas as linhas que não estiverem em branco são um
- # fragmento de expressão regular (regex) que abrangem apenas
- # a URL especificada
+# URLs externas que coincidam com esta lista serão bloqueadas quando forem
+# adicionadas a uma página.
+# Esta lista refere-se apenas a este wiki. Consulte também a lista-negra global.
+# Veja a documentação em https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+#
+# A sintaxe é a seguinte:
+#  * Tudo o que estiver após um "#" até o final de uma linha será tido como um comentário
+#  * Todas as linhas que não estiverem em branco são um fragmento de expressão 
+# regular (regex) que abrangem apenas a URL especificada
 
-  #</pre> <!-- mantenha esta linha exatamente assim -->',
+ #</pre> <!-- mantenha esta linha exatamente assim -->',
 	'spam-whitelist' => ' #<!-- mantenha esta linha exatamente assim --> <pre>
  # URLs externas que coincidam com esta lista *não* serão
  # bloqueadas mesmo se tiverem sido bloqueadas por entradas
@@ -2543,25 +2541,25 @@ $messages['pt-br'] = array(
  # linha será tido como um comentário
  #  * Todas as linhas que não estiverem em branco são um
  # fragmento de expressão regular (regex) que abrangem apenas
- # o host do endereço de e-mail
+ # o domínio do endereço de e-mail
 
   #</pre> <!-- mantenha esta linha exatamente assim -->',
 	'email-whitelist' => ' #<!-- mantenha esta linha exatamente assim --> <pre>
  # Endereços de e-mail que coincidam com esta lista *não*
- # serão restringidos mesmo se tiverem sido restringidos
- # por entradas presentes nas listas negras.
+ # serão bloqueados mesmo que tenham sofrido bloqueio
+ # por instruções presentes nas listas negras.
  #
  # A sintaxe é a seguinte:
  #  * Tudo o que estiver após um "#" até o final de uma linha
  # será tido como um comentário
  #  * Todas as linhas que não estiverem em branco são um
  # fragmento de expressão regular (regex) que abrangem apenas
- # o host do endereço de e-mail
+ # os domínios dos endereços de e-mail
 
   #</pre> <!-- mantenha esta linha exatamente assim -->',
-	'spam-blacklisted-email' => 'E-mail em lista negra',
-	'spam-blacklisted-email-text' => 'O seu endereço de e-mail se encontra impedido de enviar mensagens para outros usuários.',
-	'spam-blacklisted-email-signup' => 'O endereço de e-mail fornecido encontra-se em lista negra, impedido de ser usado.',
+	'spam-blacklisted-email' => 'Endereço eletrônico na lista negra',
+	'spam-blacklisted-email-text' => 'O seu endereço de correio eletrônico está proibido de enviar mensagens para outros usuários.',
+	'spam-blacklisted-email-signup' => 'O endereço fornecido encontra-se na lista negra.',
 	'spam-invalid-lines' => '{{PLURAL:$1|A linha|As linhas}} a seguir {{PLURAL:$1|é uma expressão regular|são expressões regulares}} (regex) {{PLURAL:$1|inválida e precisa|inválidas e precisam}} ser {{PLURAL:$1|corrigida|corrigidas}} antes de salvar a página:',
 	'spam-blacklist-desc' => 'Ferramenta anti-"spam" baseada em Regex: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
 );
