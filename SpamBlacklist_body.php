@@ -102,7 +102,7 @@ class SpamBlacklist extends BaseBlacklist {
 					if( $retVal === false ){
 						$retVal = array();
 					}
-					$retVal = array_merge( $retVal, $matches[0] );
+					$retVal = array_merge( $retVal, $matches[1] );
 				}
 			}
 		} else {
