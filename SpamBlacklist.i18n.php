@@ -3239,6 +3239,7 @@ $messages['uk'] = array(
 
 /** vèneto (vèneto)
  * @author Candalua
+ * @author GatoSelvadego
  */
 $messages['vec'] = array(
 	'spam-blacklist' => ' # Le URL esterne al sito che corisponde a la lista seguente le vegnarà blocà.
@@ -3258,6 +3259,25 @@ $messages['vec'] = array(
 #  * Tute le righe mìa vode le xe framenti de espressioni regolari che se àplica al solo nome de l\'host ne le URL
 
  #</pre> <!-- no sta modificar in alcun modo sta riga -->',
+	'email-blacklist' => ' # I indirisi e-mail che corisponde a ła lista seguente i sarà blocai, nó sarà posibiłe salvar o inviar e-mail.
+ # Ła lista ła xe vałida soło che pa\' sta wiki; far riferimento anca a ła blacklist globałe.
+ # Pa\' ła documentasion se varde https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+ # <!-- nó modifegar sta linea --> <pre>
+# Ła sintasi ła xe ła seguente:
+#  * Tuto chel che xe conprexo intrà un caratere "#" e ła fine de ła riga el xe un comento
+#  * Tute łe righe nó vode i xe tochi de espresion regołari che se aplica soło che al nome del host de i indirisi e-mail
+ #</pre> <!-- nó modifegar sta linea -->',
+	'email-whitelist' => ' #<!-- nó modifegar sta linea --> <pre>
+# I indirisi e-mail conprexi in sta lista *nó* i sarà blocai anca se i dovaria
+# eser stai blocai da i elementi prexenti inte ła lista nera.
+#
+ #</pre> <!-- nó modifegar sta linea -->
+# Ła sintasi ła xe ła seguente:
+#  * Tuto chel che xe conprexo intrà un caratere "#" e ła fine de ła riga el xe un comento
+#  * Tute łe righe nó vode i xe tochi de espresion regołari che se aplica soło che al nome del host de i indirisi e-mail',
+	'spam-blacklisted-email' => 'Indiriso de posta eletronega blocà',
+	'spam-blacklisted-email-text' => "El to indiriso de posta eletronega el xe atualmente inte ła lista nera par 'l invio de e-mail verso altri utenti.",
+	'spam-blacklisted-email-signup' => 'El indiriso de posta eletronega indicà el xe atualmente inte ła lista nera.',
 	'spam-invalid-lines' => "{{PLURAL:$1|La seguente riga|Le seguenti righe}} de la lista nera del spam {{PLURAL:$1|no la xe na espression regolare valida|no le xe espressioni regolari valide}}; se prega de corègiar {{PLURAL:$1|l'eror|i erori}} prima de salvar la pagina.",
 	'spam-blacklist-desc' => 'Strumento antispam basà su le espressioni regolari [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]',
 );
