@@ -29,13 +29,13 @@ $messages['en'] = array(
 
  #</pre> <!-- leave this line exactly as it is -->',
 	'email-blacklist' => ' #<!-- leave this line exactly as it is --> <pre>
-# E-mail addresses matching this list will be blocked from registering or sending e-mails
+# Email addresses matching this list will be blocked from registering or sending emails
 # This list affects only this wiki; refer also to the global blacklist.
 # For documentation see https://www.mediawiki.org/wiki/Extension:SpamBlacklist
 #
 # Syntax is as follows:
 #   * Everything from a "#" character to the end of the line is a comment
-#   * Every non-blank line is a regex fragment which will only match hosts inside e-mail addresses
+#   * Every non-blank line is a regex fragment which will only match hosts inside email addresses
 
  #</pre> <!-- leave this line exactly as it is -->',
 	'email-whitelist' => ' #<!-- leave this line exactly as it is --> <pre>
@@ -44,13 +44,13 @@ $messages['en'] = array(
 #
 # Syntax is as follows:
 #   * Everything from a "#" character to the end of the line is a comment
-#   * Every non-blank line is a regex fragment which will only match hosts inside e-mail addresses
+#   * Every non-blank line is a regex fragment which will only match hosts inside email addresses
 
  #</pre> <!-- leave this line exactly as it is -->',
 
-	'spam-blacklisted-email' => 'Blacklisted e-mail address',
-	'spam-blacklisted-email-text' => 'Your e-mail address is currently blacklisted from sending e-mails to other users.',
-	'spam-blacklisted-email-signup' => 'The given e-mail address is currently blacklisted from use.',
+	'spam-blacklisted-email' => 'Blacklisted email address',
+	'spam-blacklisted-email-text' => 'Your email address is currently blacklisted from sending emails to other users.',
+	'spam-blacklisted-email-signup' => 'The given email address is currently blacklisted from use.',
 
 	'spam-invalid-lines' =>	"The following spam blacklist {{PLURAL:$1|line is an|lines are}} invalid regular {{PLURAL:$1|expression|expressions}} and {{PLURAL:$1|needs|need}} to be corrected before saving the page:",
 	'spam-blacklist-desc' => 'Regex-based anti-spam tool: [[MediaWiki:Spam-blacklist]] and [[MediaWiki:Spam-whitelist]]',

@@ -70,7 +70,7 @@ class SpamBlacklistHooks {
 	}
 
 	/**
-	 * Processes new accounts for valid e-mail addresses
+	 * Processes new accounts for valid email addresses
 	 *
 	 * @param $user User
 	 * @param $abortError
