@@ -103,7 +103,7 @@ Stability
 This extension has not been widely tested outside Wikimedia. Although it has
 been in production on Wikimedia websites since December 2004, it should be 
 considered experimental. Its design is simple, with little input validation, so
-unexpected behaviour due to incorrect regular expression input or non-standard 
+unexpected behavior due to incorrect regular expression input or non-standard
 configuration is entirely possible.
 
 Obtaining or making blacklists
