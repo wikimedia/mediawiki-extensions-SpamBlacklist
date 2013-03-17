@@ -592,10 +592,13 @@ $messages['cy'] = array(
 
 /** Danish (dansk)
  * @author Christian List
+ * @author HenrikKbh
  * @author Hylle
  */
 $messages['da'] = array(
 	'spam-blacklisted-email' => 'Sortlistet e-mailadresse',
+	'spam-blacklisted-email-text' => 'Din e-mail-adresse er i øjeblikket blokeret for at sende emails til andre brugere.',
+	'spam-blacklisted-email-signup' => 'Den angivne e-mail-adresse er i øjeblikket blokeret for brug.',
 );
 
 /** German (Deutsch)
