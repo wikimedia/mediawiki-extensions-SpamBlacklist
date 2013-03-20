@@ -69,6 +69,12 @@ $messages['qqq'] = array(
 	'spam-blacklisted-email' => 'Title of errorpage when trying to send an email with a blacklisted e-mail address',
 	'spam-blacklisted-email-text' => 'Text of errorpage when trying to send an e-mail with a blacklisted e-mail address',
 	'spam-blacklisted-email-signup' => 'Error when trying to create an account with an invalid e-mail address',
+	'spam-invalid-lines' => 'Used as error message.
+
+This message is followed by list of bad lines.
+
+Parameters:
+* $1 - number of bad lines',
 	'spam-blacklist-desc' => '{{desc|name=Spam Blacklist|url=http://www.mediawiki.org/wiki/Extension:SpamBlacklist}}',
 );
 
