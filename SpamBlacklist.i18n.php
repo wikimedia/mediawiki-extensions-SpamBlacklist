@@ -645,6 +645,7 @@ $messages['da'] = array(
 );
 
 /** German (Deutsch)
+ * @author Geitost
  * @author Kghbln
  * @author Raimond Spekking
  * @author Umherirrender
@@ -669,14 +670,14 @@ $messages['de'] = array(
 #   * Jede nicht-leere Zeile ist ein regulärer Ausdruck, der gegen die Host-Namen in den URLs geprüft wird.
 
  #</pre> <!-- Diese Zeile darf nicht verändert werden! -->',
-	'email-blacklist' => ' # E-Mail-Adressen, die in dieser Liste enthalten sind, blockieren die Registrierung sowie das Senden von E-Mail-Nachrichten.
- # Diese Liste hat nur Auswirkungen auf dieses Wiki. Siehe ggf. auch die globale Blockierliste.
- # Siehe auch https://www.mediawiki.org/wiki/Extension:SpamBlacklist für die Dokumentation dieser Funktion.
- #<!-- Diese Zeile darf nicht verändert werden! --> <pre>
+	'email-blacklist' => ' #<!-- Diese Zeile darf nicht verändert werden! --> <pre>
+ # E-Mail-Adressen, die in dieser Liste enthalten sind, werden bei der Registrierung sowie beim Senden von E-Mail-Nachrichten geblockt.
+ # Diese Liste hat nur Auswirkungen auf dieses Wiki. Siehe gegebenenfalls auch die globale Blockierliste.
+ # Zur Dokumentation dieser Funktion siehe auch https://www.mediawiki.org/wiki/Extension:SpamBlacklist.
 #
-# Syntax:
-#   * Alles ab dem „#“-Zeichen bis zum Ende der Zeile ist ein Kommentar
-#   * Jede nicht-leere Zeile ist ein regulärer Ausdruck, der gegen die Host-Namen in den E-Mail-Adressen geprüft wird.
+# Syntax wie folgt:
+#   * Alles ab dem „#“-Zeichen bis zum Ende der Zeile ist ein Kommentar.
+#   * Jede nicht-leere Zeile ist ein regulärer Ausdruck, der gegen die Host-Namen in den E-Mail-Adressen abgeglichen wird.
 
  #</pre> <!-- Diese Zeile darf nicht verändert werden! -->',
 	'email-whitelist' => ' #<!-- Diese Zeile darf nicht verändert werden! --> <pre>
@@ -690,6 +691,22 @@ $messages['de'] = array(
 	'spam-blacklisted-email-signup' => 'Die angegebene E-Mail-Adresse ist derzeit für das Senden von E-Mail-Nachrichten an andere Benutzer blockiert.',
 	'spam-invalid-lines' => 'Die {{PLURAL:$1|folgende Zeile|folgenden Zeilen}} in der Blockierliste {{PLURAL:$1|ist ein ungültiger regulärer Ausdruck|sind ungültige reguläre Ausdrücke}}. Sie {{PLURAL:$1|muss|müssen}} vor dem Speichern der Seite korrigiert werden:',
 	'spam-blacklist-desc' => 'Ermöglicht ein, durch reguläre Ausdrücke gestütztes, Anti-Spam-Werkzeug: [[MediaWiki:Spam-blacklist]] und [[MediaWiki:Spam-whitelist]]',
+);
+
+/** Swiss High German (Schweizer Hochdeutsch)
+ * @author Geitost
+ */
+$messages['de-ch'] = array(
+	'email-blacklist' => ' #<!-- Diese Zeile darf nicht verändert werden! --> <pre>
+ # E-Mail-Adressen, die in dieser Liste enthalten sind, werden bei der Registrierung sowie beim Senden von E-Mail-Nachrichten geblockt.
+ # Diese Liste hat nur Auswirkungen auf dieses Wiki. Siehe gegebenenfalls auch die globale Blockierliste.
+ # Zur Dokumentation dieser Funktion siehe auch https://www.mediawiki.org/wiki/Extension:SpamBlacklist.
+#
+# Syntax wie folgt:
+#   * Alles ab dem «#»-Zeichen bis zum Ende der Zeile ist ein Kommentar.
+#   * Jede nicht-leere Zeile ist ein regulärer Ausdruck, der gegen die Host-Namen in den E-Mail-Adressen abgeglichen wird.
+
+ #</pre> <!-- Diese Zeile darf nicht verändert werden! -->',
 );
 
 /** German (formal address) (Deutsch (Sie-Form)‎)
