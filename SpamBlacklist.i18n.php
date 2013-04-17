@@ -2690,7 +2690,27 @@ $messages['roa-tara'] = array(
 #  * Ogne linèe ca non g'è vacande jè 'nu frammende de regex ca vè face le combronde cu le host jndr'à l'URL
 
   #</pre> <!-- leave this line exactly as it is -->",
+	'email-blacklist' => " #<!-- leave this line exactly as it is --> <pre>
+# Le indirizze email ca iessene jndr'à ste elenghe onna essere bloccate da 'a reggistrazzione e da mannà le email
+# Ste elenghe tène cunde sole de sta uicchi; referite pure a 'a lista gnore globbale.
+# Pe documendazione 'ndruche https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+#
+# 'A sindasse jè 'a seguende:
+#   * Ognecose ca tène 'u carattere \"#\" 'mbonde a fine d'a linèe jè 'nu commende
+#   * Ogne linèe ca non g'è vacande jè 'nu frammende de regex ca vè face le combronde cu le host jndr'à le indirizze email
+
+ #</pre> <!-- leave this line exactly as it is -->",
+	'email-whitelist' => " #<!-- leave this line exactly as it is --> <pre>
+# Le indirizze email ca iessene jndr'à ste elenghe *NON* ge onna essere bloccate pure ce lore ponne sta jndr'à le vôsce d'a lista gnore
+#
+# 'A sindasse jè 'a seguende:
+#   * Ognecose ca tène 'u carattere \"#\" 'mbonde a fine d'a linèe jè 'nu commende
+#   * Ogne linèe ca non g'è vacande jè 'nu frammende de regex ca vè face le combronde cu le host jndr'à le indirizze email
+
+ #</pre> <!-- leave this line exactly as it is -->",
 	'spam-blacklisted-email' => 'Indirizze email da ignorà',
+	'spam-blacklisted-email-text' => "L'indirizze email tune jè mo jndr'à lista gnore pe mannà email a otre utinde.",
+	'spam-blacklisted-email-signup' => "L'indirizze email ca è date pe mò ste jndr'à lista gnore.",
 	'spam-invalid-lines' => "{{PLURAL:$1|'A seguende linèe d'a blacklist de spam jè|Le seguende linèe d'a blacklist de spam sonde}} {{PLURAL:$1|espressione|espressiune}} regolare invalide e {{PLURAL:$1|abbesogne|abbesognane}} de avenè corrette apprime de reggistrà 'a pàgene:",
 	'spam-blacklist-desc' => "'U strumende andi-spam basate sus a le regex: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]",
 );
