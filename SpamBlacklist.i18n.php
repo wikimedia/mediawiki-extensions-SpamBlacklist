@@ -71,12 +71,12 @@ $messages['qqq'] = array(
 	'spam-blacklisted-email' => 'Title of errorpage when trying to send an email with a blacklisted e-mail address',
 	'spam-blacklisted-email-text' => 'Text of errorpage when trying to send an e-mail with a blacklisted e-mail address',
 	'spam-blacklisted-email-signup' => 'Error when trying to create an account with an invalid e-mail address',
-	'spam-invalid-lines' => 'Used as error message.
+	'spam-invalid-lines' => 'Used as an error message.
 
-This message is followed by list of bad lines.
+This message is followed by a list of bad lines.
 
 Parameters:
-* $1 - number of bad lines',
+* $1 - the number of bad lines',
 	'spam-blacklist-desc' => '{{desc|name=Spam Blacklist|url=http://www.mediawiki.org/wiki/Extension:SpamBlacklist}}',
 );
 
@@ -1929,7 +1929,7 @@ $messages['ksh'] = array(
  #<!-- Loß di Reih hee jenou esu wi se es --> <pre>
 # Dä Opbou es:
 # * Alles fun enem #-Zeiche bes an et Engk fun ene Reih es ene Kommentaa för de Minsche
-# * Jede Reih met jet dren es en Stöck regular Expression, wat alleins Domains en URLs treffe kann
+# * Jede Reih met jet dren es e Stöck rejolähre Ußdrok, wat alleins Domains en URLs treffe kann
 
  #</pre> <!-- Lohß di Reih he jenou esu wi se es -->',
 	'spam-whitelist' => ' #<!-- Loß di Reih hee jenou esu wi se es --> <pre>
@@ -1937,7 +1937,7 @@ $messages['ksh'] = array(
 # sellefts wann se op en „schwazze Leß“ shtonn
 # Dä Opbou es:
 # * Alles fun enem #-Zeiche bes an et Engk fun ene Reih es ene Kommentaa för de Minsche
-# * Jede Reih met jet dren es en Stöck regular Expression, wat alleins Domains en URLs treffe kann
+# * Jede Reih met jet dren es e Stöck rejolähre Ußdrok, wat alleins Domains en URLs treffe kann
  #</pre> <!-- Lohß di Reih he jenou esu wi se es -->',
 	'email-blacklist' => ' # e-mail-Addräße uß dä Leß wäde nit zojelohße beim Aanmälde un beim e-mail-Verschecke.
  # Heh di Liß eß bloß för heh dat Wiki joot. Loor Der och de jemeinsame „schwazze Leß“ aan.
@@ -1945,7 +1945,7 @@ $messages['ksh'] = array(
  #<!-- Loß di Reih hee jenou esu wi se es --> <pre>
 # Dä Opbou es:
 # * Alles fun enem #-Zeiche bes an et Engk fun ene Reih es ene Kommentaa för de Minsche
-# * Jede Reih met jet dren es en regular Expression, wohmet dä Name vum Rääschner en de e-mail-Addräße jeprööf wääde kann.
+# * Jede Reih met jet dren es ene rejolähre Ußdrok, wohmet dä Name vum Rääschner en de e-mail-Addräße jeprööf wääde kann.
 
  #</pre> <!-- Lohß di Reih he jenou esu wi se es -->',
 	'email-whitelist' => ' #<!-- Loß di Reih hee jenou esu wi se es --> <pre>
@@ -1955,14 +1955,14 @@ $messages['ksh'] = array(
  #</pre> <!-- Lohß di Reih he jenou esu wi se es -->
 # Dä Opbou es:
 # * Alles fun enem #-Zeiche bes an et Engk fun ene Reih es ene Kommentaa för de Minsche
-# * Jede Reih met jet dren es en regular Expression, wohmet dä Name vum Rääschner en de e-mail-Addräße jeprööf wääde kann.',
+# * Jede Reih met jet dren es ene rejolähre Ußdrok, wohmet dä Name vum Rääschner en de e-mail-Addräße jeprööf wääde kann.',
 	'spam-blacklisted-email' => 'Di <i lang="en">e-mail</i>-Addräß es op der „schwazze Lėß“',
 	'spam-blacklisted-email-text' => 'Ding <i lang="en">e-mail</i>-Addräß es em Momang op dä „schwazze Lėß“ un De kanns dermet kein <i lang="en">e-mail</i> aan ander Metmaacher verschecke.',
 	'spam-blacklisted-email-signup' => 'Di aanjejovve Addräß för de <i lang="en">e-mail</i> es em Momang op dä „schwazze Lėß“ un kann nit jebruch wääde.',
-	'spam-invalid-lines' => 'Mer han Fääler en <i lang="en">regular expressions</i> jefonge.
-{{PLURAL:$1|De Reih unge stemmp nit un moß|Di $1 Reije unge stimme nit un möße|Dat he sull}}
-för em Afspeichere eets en Odenung jebraat wäde:',
-	'spam-blacklist-desc' => 'Jäje SPAM met <i lang="en">regular expressions</i> — övver en [[MediaWiki:Spam-blacklist|„schwazze Leß“]] un en [[MediaWiki:Spam-whitelist|Leß met Ußnahme dofun]].',
+	'spam-invalid-lines' => 'Mer han Fähler en rejolähre Ußdröck jefonge.
+{{PLURAL:$1|De Reih onge schtemmp nit un moß|Di $1 Reije onge schtemme nit un möße|Dat sull}}
+för em Afschpeischere eets en Oodenong jebraat wääde:',
+	'spam-blacklist-desc' => 'Met rejolähre Ußdröck jääje der <i lang="en">SPAM<i> — övver en [[MediaWiki:Spam-blacklist|„schwazze Leß“]] un en [[MediaWiki:Spam-whitelist|Leß met Ußnahme dohfun]].',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
