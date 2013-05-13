@@ -1354,17 +1354,18 @@ $messages['hi'] = array(
 
 /** Croatian (hrvatski)
  * @author Dnik
+ * @author Roberta F.
  * @author SpeedyGonsales
  */
 $messages['hr'] = array(
 	'spam-blacklist' => ' # Vanjske URLovi koji budu pronađeni pomoću ovog popisa nije moguće snimiti na stranicu wikija.
- # Ovaj popis utiče samo na ovaj wiki; provjerite globalnu "crnu listu".
+ # Ovaj popis utječe samo na ovaj wiki; provjerite globalnu "crnu listu".
  # Za dokumentaciju pogledajte https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- leave this line exactly as it is --> <pre>
 #
-# Rabi se slijedeća sintaksa:
+# Rabi se sljedeća sintaksa:
 #   * Sve poslije "#" znaka do kraja linije je komentar
-#   * svaki neprazni redak je dio regularnog izraza (\'\'regex fragment\'\') koji odgovara imenu poslužitelja u URL-u
+#   * svaki redak koji nije prazan dio je regularnog izraza (\'\'regex fragment\'\') koji odgovara imenu poslužitelja u URL-u
 
  #</pre> <!-- leave this line exactly as it is -->',
 	'spam-whitelist' => ' #<!-- leave this line exactly as it is --> <pre>
