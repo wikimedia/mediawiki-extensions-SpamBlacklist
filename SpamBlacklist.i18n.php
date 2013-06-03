@@ -57,6 +57,7 @@ $messages['en'] = array(
 );
 
 /** Message documentation (Message documentation)
+ * @author Fryed-peach
  * @author Purodha
  * @author SPQRobin
  * @author Shirayuki
@@ -66,8 +67,8 @@ $messages['en'] = array(
 $messages['qqq'] = array(
 	'spam-blacklist' => "See also: [[MediaWiki:spam-whitelist]] and [[MediaWiki:captcha-addurl-whitelist]]. You can translate the text, including 'Leave this line exactly as it is'. Some lines of this messages have one (1) leading space.",
 	'spam-whitelist' => "See also: [[MediaWiki:spam-blacklist]] and [[MediaWiki:captcha-addurl-whitelist]]. You can translate the text, including 'Leave this line exactly as it is'. Some lines of this messages have one (1) leading space.",
-	'email-blacklist' => "See also: [[MediaWiki:email-whitelist]] and [[MediaWiki:captcha-addurl-whitelist]]. You can translate the text, including 'Leave this line exactly as it is'. Some lines of this messages have one (1) leading space.",
-	'email-whitelist' => "See also: [[MediaWiki:email-blacklist]] and [[MediaWiki:captcha-addurl-whitelist]]. You can translate the text, including 'Leave this line exactly as it is'. Some lines of this messages have one (1) leading space.",
+	'email-blacklist' => "See also: [[MediaWiki:email-whitelist]] and [[MediaWiki:Spam-blacklist]]. You can translate the text, including 'Leave this line exactly as it is'. Some lines of this messages have one (1) leading space.",
+	'email-whitelist' => "See also: [[MediaWiki:email-blacklist]] and [[MediaWiki:Spam-whitelist]]. You can translate the text, including 'Leave this line exactly as it is'. Some lines of this messages have one (1) leading space.",
 	'spam-blacklisted-email' => 'Title of errorpage when trying to send an email with a blacklisted e-mail address',
 	'spam-blacklisted-email-text' => 'Text of errorpage when trying to send an e-mail with a blacklisted e-mail address',
 	'spam-blacklisted-email-signup' => 'Error when trying to create an account with an invalid e-mail address',
@@ -1688,7 +1689,7 @@ $messages['ja'] = array(
 #
 # 構文は以下の通りです:
 #  * 「#」以降行末まではコメントです
-#  * 空白を含まない行は、URLに含まれるホスト名との一致を検出する正規表現です
+#  * 空でない行は、URLに含まれるホスト名との一致を検出する正規表現です
 
  #</pre> <!-- この行は変更しないでください -->',
 	'spam-whitelist' => ' #<!-- この行は変更しないでください --> <pre>
@@ -1697,7 +1698,26 @@ $messages['ja'] = array(
 #
 # 構文は以下の通りです:
 #  * 「#」文字から行末まではコメントとして扱われます
-#  * 空白を含まない行は、URLに含まれるホスト名との一致を検出する正規表現です
+#  * 空でない行は、URLに含まれるホスト名との一致を検出する正規表現です
+
+ #</pre> <!-- この行は変更しないでください -->',
+	'email-blacklist' => ' #<!-- この行は変更しないでください --> <pre>
+# この一覧と一致するメールアドレスはその登録とそこからのメール送信がブロックされます。
+# この一覧はこのウィキでのみ有効です。グローバル ブラックリストも参照してください。
+# 利用方法は https://www.mediawiki.org/wiki/Extension:SpamBlacklist/ja をご覧ください。
+#
+# 構文は以下の通りです:
+#  * 「#」以降行末まではコメントです
+#  * 空でない行は、URLに含まれるホスト名との一致を検出する正規表現です
+
+ #</pre> <!-- この行は変更しないでください -->',
+	'email-whitelist' => ' #<!-- この行は変更しないでください --> <pre>
+# この一覧と一致するメールアドレスはたとえブラックリストに
+# 掲載されていたとしても、ブロック*されません*。
+#
+# 構文は以下の通りです:
+#  * 「#」文字から行末まではコメントとして扱われます
+#  * 空でない行は、URLに含まれるホスト名との一致を検出する正規表現です
 
  #</pre> <!-- この行は変更しないでください -->',
 	'spam-blacklisted-email' => '拒否リストにあるメールアドレス',
