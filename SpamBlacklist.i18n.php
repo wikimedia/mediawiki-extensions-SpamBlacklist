@@ -54,6 +54,10 @@ $messages['en'] = array(
 
 	'spam-invalid-lines' =>	"The following spam blacklist {{PLURAL:$1|line is an|lines are}} invalid regular {{PLURAL:$1|expression|expressions}} and {{PLURAL:$1|needs|need}} to be corrected before saving the page:",
 	'spam-blacklist-desc' => 'Regex-based anti-spam tool: [[MediaWiki:Spam-blacklist]] and [[MediaWiki:Spam-whitelist]]',
+	'log-name-spamblacklist' => 'Spam blacklist log',
+	'log-description-spamblacklist' => 'These events track spam blacklist hits.',
+	'logentry-spamblacklist-hit' => '$1 caused a spam blacklist hit on $3 by attempting to add $4.',
+	'right-spamblacklistlog' => 'View spam blacklist log',
 );
 
 /** Message documentation (Message documentation)
@@ -79,6 +83,15 @@ This message is followed by a list of bad lines.
 Parameters:
 * $1 - the number of bad lines',
 	'spam-blacklist-desc' => '{{desc|name=Spam Blacklist|url=http://www.mediawiki.org/wiki/Extension:SpamBlacklist}}',
+	'log-name-spamblacklist' => 'Name of log that appears on [[Special:Log]].',
+	'log-description-spamblacklist' => 'Description of spam blacklist log',
+	'logentry-spamblacklist-hit' => 'Log entry that is created when a user adds a link that is blacklisted on the spam blacklist. Parameters:
+* $1 is a user link, for example "Jane Doe (Talk | contribs)".
+* $2 is a username. Can be used for GENDER.
+* $3 is the page the user attempted to edit.
+* $4 is the url the user tried to add.',
+	'right-spamblacklistlog' => '{{doc-right|spamblacklistlog}}',
+
 );
 
 /** Aragonese (aragonés)

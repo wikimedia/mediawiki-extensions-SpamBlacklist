@@ -99,6 +99,7 @@ class SpamBlacklist extends BaseBlacklist {
 					$ip = $wgRequest->getIP();
 					$imploded = implode( ' ', $matches[0] );
 					wfDebugLog( 'SpamBlacklistHit', "$ip caught submitting spam: $imploded\n" );
+					$this->logFilterHit( $title, $imploded ); // Log it
 					if( $retVal === false ){
 						$retVal = array();
 					}
@@ -149,5 +150,25 @@ class SpamBlacklist extends BaseBlacklist {
 	 */
 	public function getRegexEnd( $batchSize ) {
 		return ')' . parent::getRegexEnd( $batchSize );
+	}
+	/**
+	 * Logs the filter hit to Special:Log if
+	 * $wgLogSpamBlacklistHits is enabled.
+	 *
+	 * @param Title $title
+	 * @param string $url URL that the user attempted to add
+	 */
+	public function logFilterHit( $title, $url ) {
+		global $wgUser, $wgLogSpamBlacklistHits;
+		if ( $wgLogSpamBlacklistHits ) {
+			$logEntry = new ManualLogEntry( 'spamblacklist', 'hit' );
+			$logEntry->setPerformer( $wgUser );
+			$logEntry->setTarget( $title );
+			$logEntry->setParameters( array(
+				'4::url' => $url,
+			) );
+			$logid = $logEntry->insert();
+			$logEntry->publish( $logid, "rc" );
+		}
 	}
 }
