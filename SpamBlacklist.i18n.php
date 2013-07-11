@@ -307,6 +307,54 @@ $messages['bcc'] = array(
 	'spam-blacklist-desc' => 'وسیله په ضد اسپم په اساس عبارات منظم:  [[MediaWiki:Spam-blacklist]] و [[MediaWiki:Spam-whitelist]]',
 );
 
+/** Bikol Central (Bikol Central)
+ * @author Geopoet
+ */
+$messages['bcl'] = array(
+	'spam-blacklist' => '#</pre><!-- pakiwalat ining linya na eksaktong siring kaiyan -->
+# Mga panluwas na pangilyaw na minatampad kaining listahan ipagkukubkob kunsoarin na ipagdugang ini sa sarong pahina.
+# Ining listahan mina-apekto sana sa wiking ini; pakihiling man sa pankinabanong pinagbaraduhan.
+# Para sa dokumentasyon hilngon tabi sa https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+# 
+#An sintaks iyo an mga minasunod:
+# *An gabos magpoon sa "#" na karakter sagkod sa tapos kan linya iyo an komento
+# *An lambang bako na blankong linya iyo an sarong kapedasohan kan regex na makakapagtampad sana kan mga parabunsod na yaon sa laog kan mga pangilyaw
+
+#</pre><!-- pakiwalat ining linya na eksaktong siring kaiyan -->',
+	'spam-whitelist' => '#<!-- pakiwalat ining linya na eksaktong siring kaiyan  --> <pre>
+#An panluwas na mga pangilyaw na nagtatampad kaining listahn *dae* ipagkukubkob dawa ngani na sinda #ipinagkubkob kan mga pinagbarahang entrada.
+#
+#An sintaks iyo an mga minasunod:
+# *An gabos magpoon sa "#" na karakter sagkod sa tapos kan linya iyo an komento
+# *An lambang bako na blankong linya iyo an sarong kapedasohan kan regex na makakapagtampad sana kan mga parabunsod na yaon sa laog kan mga pangilyaw
+
+#</pre><!-- pakiwalat ining linya na eksaktong siring kaiyan -->',
+	'email-blacklist' => '#<!-- pakiwalat ining linya na eksaktong siring kaiyan  --> <pre>
+#An mga e-surat na nagtatampad kaining listahan ipagkukubkob sa pagpaparehistro o sa pagpapadara kan me e-surat
+#Ining listahan mina-apekto sana kaining wiki; pakihiling man sa pankinabanong pinagbarahan.
+#Para sa dokumentasyon pakihiling sa https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+#
+#An sintaks iyo an mga minasunod:
+# *An gabos magpoon sa "#" na karakter sagkod sa tapos kan linya iyo an komento
+# *An lambang bako na blankong linya iyo an sarong kapedasohan kan regex na makakapagtampad sana kan mga parabunsod na yaon sa laog kan mga estada kan e-surat
+
+#</pre><!-- pakiwalat ining linya na eksaktong siring kaiyan -->',
+	'email-whitelist' => '#<!-- pakiwalat ining linya na eksaktong siring kaiyan  --> <pre>
+#An mga e-surat na nagtatampad kaining listahan *dae* ipagkukubkob dawa ngani sinda
+#pinagkubkob kan mga pingbarahang entrada.
+#
+#An sintaks iyo an mga minasunod:
+# *An gabos magpoon sa "#" na karakter sagkod sa tapos kan linya iyo an komento
+# *An lambang bako na blankong linya iyo an sarong kapedasohan kan regex na makakapagtampad sana kan mga parabunsod na yaon sa laog kan mga estada kan e-surat
+
+#</pre><!-- pakiwalat ining linya na eksaktong siring kaiyan -->',
+	'spam-blacklisted-email' => 'Pinagbaraduhang estada kan e-surat',
+	'spam-blacklisted-email-text' => 'An saimong estada kan e-surat sa ngunyan pinagbaraduhan sa pagpapadara nin mga e-surat pasiring sa ibang mga paragamit.',
+	'spam-blacklisted-email-signup' => 'An ipinagtaong estada kan e-surat sa ngunyan pinagbaraduhan na magamit.',
+	'spam-invalid-lines' => 'An minasunod na pinagbarahang espam {{PLURAL:$1|linya iyo an|mga linya iyo an}} imbalidong regular na {{PLURAL:$1|ekspresyon|mga ekspresyon}} asin {{PLURAL:$1|minakaipuhan|minakaipuhan}} na pinagkorihiran bago pa itagama an pahina:', # Fuzzy
+	'spam-blacklist-desc' => 'Nakabase sa Regex na gamit sa anti-espam:[[MediaWiki:Spam-blacklist]] asin [[MediaWiki:Spam-whitelist]]',
+);
+
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author EugeneZelenko
  * @author Jim-by
