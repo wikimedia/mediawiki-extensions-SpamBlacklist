@@ -351,7 +351,7 @@ $messages['bcl'] = array(
 	'spam-blacklisted-email' => 'Pinagbaraduhang estada kan e-surat',
 	'spam-blacklisted-email-text' => 'An saimong estada kan e-surat sa ngunyan pinagbaraduhan sa pagpapadara nin mga e-surat pasiring sa ibang mga paragamit.',
 	'spam-blacklisted-email-signup' => 'An ipinagtaong estada kan e-surat sa ngunyan pinagbaraduhan na magamit.',
-	'spam-invalid-lines' => 'An minasunod na pinagbarahang espam {{PLURAL:$1|linya iyo an|mga linya iyo an}} imbalidong regular na {{PLURAL:$1|ekspresyon|mga ekspresyon}} asin {{PLURAL:$1|minakaipuhan|minakaipuhan}} na pinagkorihiran bago pa itagama an pahina:', # Fuzzy
+	'spam-invalid-lines' => 'An minasunod na pinagbarahan na espam {{PLURAL:$1|linya iyo an|mga linya iyo an}} ordinaryong imbalido na {{PLURAL:$1|ekspresyon|mga ekspresyon}} asin {{PLURAL:$1|minakaipo|minakaipo}} na pagkokorihiran bago tabi itatagama an pahina:', # Fuzzy
 	'spam-blacklist-desc' => 'Nakabase sa Regex na gamit sa anti-espam:[[MediaWiki:Spam-blacklist]] asin [[MediaWiki:Spam-whitelist]]',
 );
 
