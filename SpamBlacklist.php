@@ -10,7 +10,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['antispam'][] = array(
 	'path'           => __FILE__,
 	'name'           => 'SpamBlacklist',
-	'author'         => array( 'Tim Starling', 'John Du Hart' ),
+	'author'         => array( 'Tim Starling', 'John Du Hart', 'Daniel Kinzler' ),
 	'url'            => 'https://www.mediawiki.org/wiki/Extension:SpamBlacklist',
 	'descriptionmsg' => 'spam-blacklist-desc',
 );
@@ -37,10 +37,19 @@ $wgSpamBlacklistFiles =& $wgBlacklistSettings['spam']['files'];
  */
 $wgSpamBlacklistSettings =& $wgBlacklistSettings['spam'];
 
-$wgHooks['EditFilterMerged'][] = 'SpamBlacklistHooks::filterMerged';
+if ( !defined( 'MW_SUPPORTS_CONTENTHANDLER' ) ) {
+	die( "This version of SpamBlacklist requires a version of MediaWiki that supports the ContentHandler facility (supported since MW 1.21)." );
+}
+
+// filter pages on save
+$wgHooks['EditFilterMergedContent'][] = 'SpamBlacklistHooks::filterMergedContent';
 $wgHooks['APIEditBeforeSave'][] = 'SpamBlacklistHooks::filterAPIEditBeforeSave';
+
+// editing filter rules
 $wgHooks['EditFilter'][] = 'SpamBlacklistHooks::validate';
-$wgHooks['ArticleSaveComplete'][] = 'SpamBlacklistHooks::articleSave';
+$wgHooks['PageContentSaveComplete'][] = 'SpamBlacklistHooks::pageSaveContent';
+
+// email filters
 $wgHooks['UserCanSendEmail'][] = 'SpamBlacklistHooks::userCanSendEmail';
 $wgHooks['AbortNewAccount'][] = 'SpamBlacklistHooks::abortNewAccount';
 
