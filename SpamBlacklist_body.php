@@ -5,7 +5,6 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 class SpamBlacklist extends BaseBlacklist {
-	var $files = array( "http://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1" );
 	var $ignoreEditSummary = false;
 
 	/**

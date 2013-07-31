@@ -21,7 +21,11 @@ $wgExtensionMessagesFiles['SpamBlackList'] = $dir . 'SpamBlacklist.i18n.php';
 /**
  * Array of settings for blacklist classes
  */
-$wgBlacklistSettings = array();
+$wgBlacklistSettings = array(
+	'spam' => array(
+		'files' => array( "http://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1" )
+	)
+);
 
 /**
  * @deprecated
