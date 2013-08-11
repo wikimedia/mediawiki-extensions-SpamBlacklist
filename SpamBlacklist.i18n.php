@@ -53,7 +53,7 @@ $messages['en'] = array(
 	'spam-blacklisted-email-signup' => 'The given email address is currently blacklisted from use.',
 
 	'spam-invalid-lines' =>	"The following spam blacklist {{PLURAL:$1|line is an|lines are}} invalid regular {{PLURAL:$1|expression|expressions}} and {{PLURAL:$1|needs|need}} to be corrected before saving the page:",
-	'spam-blacklist-desc' => 'Regex-based anti-spam tool: [[MediaWiki:Spam-blacklist]] and [[MediaWiki:Spam-whitelist]]',
+	'spam-blacklist-desc' => 'Regex-based anti-spam tool allowing to blacklist URLs in pages and email addresses for registered users',
 	'log-name-spamblacklist' => 'Spam blacklist log',
 	'log-description-spamblacklist' => 'These events track spam blacklist hits.',
 	'logentry-spamblacklist-hit' => '$1 caused a spam blacklist hit on $3 by attempting to add $4.',
