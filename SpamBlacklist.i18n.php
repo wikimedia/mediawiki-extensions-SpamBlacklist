@@ -1964,7 +1964,7 @@ $messages['ko'] = array(
 # * 모든 줄은 URL의 호스트와 일치하는 정규 표현식의 일부분입니다.
  #</pre> <!-- 이 줄은 그대로 두십시오 -->',
 	'email-blacklist' => ' # 이 리스트와 일치하는 이메일 주소는 등록과 이메일 발송이 금지됩니다.
- # 이 리스트는 이 위키에만 적용됩니다; 글로벌 블랙리스트도 함께 참조하십시오.
+ # 이 리스트는 이 위키에만 적용됩니다; 전역 블랙리스트도 함께 참조하십시오.
  # 설명 문서를 보시려면 https://www.mediawiki.org/wiki/Extension:SpamBlacklist 를 방문해주세요.
  #<!-- 이 줄은 그대로 두십시오 --> <pre>
 #
@@ -1986,7 +1986,7 @@ $messages['ko'] = array(
 	'spam-blacklisted-email-text' => '이메일 주소는 다른 사용자가 이메일을 보내지 못하도록 블랙리스트에 올라와 있습니다.',
 	'spam-blacklisted-email-signup' => '입력한 이메일 주소는 사용할 수 없도록 블랙리스트되어 있습니다.',
 	'spam-invalid-lines' => '스팸 블랙리스트의 다음 {{PLURAL:$1|줄}}에 잘못된 정규 {{PLURAL:$1|표현식}}이 사용되어 문서를 저장하기 전에 바르게 고쳐져{{PLURAL:$1|야 합니다}}:',
-	'spam-blacklist-desc' => '정규 표현식을 이용해 스팸을 막습니다: [[MediaWiki:Spam-blacklist]]와 [[MediaWiki:Spam-whitelist]]를 사용합니다.',
+	'spam-blacklist-desc' => '정규 표현식을 사용해 스팸을 막는 도구: [[MediaWiki:Spam-blacklist]]와 [[MediaWiki:Spam-whitelist]]',
 );
 
 /** Colognian (Ripoarisch)
