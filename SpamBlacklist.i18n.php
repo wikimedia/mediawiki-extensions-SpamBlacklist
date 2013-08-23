@@ -643,8 +643,30 @@ $messages['cy'] = array(
 #   * gwesteiwyr tu mewn i gyfeiriadau URL
 
  #</pre> <!-- leave this line exactly as it is -->',
+	'email-blacklist' => "#<!-- leave this line exactly as it is --> <pre>
+# Fe gaiff cyfeiriadau ebost sydd yn cyfateb i'r rhestr hon eu blocio rhag iddynt gofrestru neu anfon ebyst
+# Ar gyfer y wici hwn yn unig mae'r rhestr hon; mae rhestr waharddedig led-led yr holl wicïau i'w gael.
+# Gweler https://www.mediawiki.org/wiki/Extension:SpamBlacklist am ragor o wybodaeth.
+#
+# Dyma'r gystrawen:
+#   * Mae popeth o nod \"#\" hyd at ddiwedd y llinell yn sylwad
+#   * Mae pob llinell nad yw'n wag yn ddarn regex sydd ddim ond yn cydweddu gwesteiwyr tu mewn i gyfeiriadau ebost
+
+ #</pre> <!-- leave this line exactly as it is -->",
+	'email-whitelist' => ' #<!-- leave this line exactly as it is --> <pre>
+# *Ni fydd* cyfeiriadau ebost sydd ar y rhestr hon yn cael eu blocio
+# hyd yn oed pan ydynt ar restr arall o gyfeiriadau ebost gwaharaddedig.
+#
+# Dyma\'r gystrawen:
+#   * Mae popeth o nod "#" hyd at ddiwedd y llinell yn sylwad
+#   * Mae pob llinell nad yw\'n wag yn ddarn regex sydd ddim ond yn cydweddu 
+#   * gwesteiwyr tu mewn i gyfeiriadau ebost
+
+ #</pre> <!-- leave this line exactly as it is -->',
 	'spam-blacklisted-email' => 'Cyfeiriad ebost ar y rhestr waharddedig',
-	'spam-invalid-lines' => "Mae'r {{PLURAL:$1|llinell|llinell|llinellau|llinellau|llinellau|llinellau}} canlynol ar y rhestr spam gwaharddedig yn {{PLURAL:$1|fynegiad|fynegiad|fynegiadau|fynegiadau|fynegiadau|fynegiadau}} rheolaidd annilys; rhaid {{PLURAL:ei gywiro|ei gywiro|eu cywiro|eu cywiro|eu cywiro|eu cywiro}} cyn rhoi'r dudalen ar gadw:",
+	'spam-blacklisted-email-text' => 'Mae eich cyfeiriad ebost wedi ei wahardd rhag anfon ebyst at ddefnyddwyr eraill ar hyn o bryd.',
+	'spam-blacklisted-email-signup' => "Mae'r cyfeiriad ebost a roddwyd wedi ei wahardd rhag ei ddefnyddio ar hyn o bryd.",
+	'spam-invalid-lines' => "Mae'r {{PLURAL:$1|llinell|llinell|llinellau}} canlynol ar y rhestr spam gwaharddedig yn {{PLURAL:$1|fynegiad|fynegiad|fynegiadau}} rheolaidd annilys; rhaid {{PLURAL:ei gywiro|ei gywiro|eu cywiro}} cyn rhoi'r dudalen ar gadw:",
 	'spam-blacklist-desc' => 'Teclyn gwrth-spam yn seiliedig ar regex: [[MediaWiki:Spam-blacklist]] a [[MediaWiki:Spam-whitelist]]',
 );
 
