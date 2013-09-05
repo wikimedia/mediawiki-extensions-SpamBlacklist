@@ -1210,10 +1210,10 @@ $messages['frp'] = array(
  * @author Xosé
  */
 $messages['gl'] = array(
-	'spam-blacklist' => ' # As ligazóns externas que coincidan na súa totalidade ou en parte con algún rexistro desta lista serán bloqueadas cando se intenten engadir a unha páxina.
- # Esta lista afecta unicamente a este wiki; tamén existe unha lista global.
- # Para obter máis documentación vaia a https://www.mediawiki.org/wiki/Extension:SpamBlacklist
- #<!-- Deixe esta liña tal e como está --> <pre>
+	'spam-blacklist' => ' #<!-- Deixe esta liña tal e como está --> <pre>
+# As ligazóns externas que coincidan na súa totalidade ou en parte con algún rexistro desta lista serán bloqueadas cando se intenten engadir a unha páxina.
+# Esta lista afecta unicamente a este wiki; tamén existe unha lista global.
+# Para obter máis documentación vaia a https://www.mediawiki.org/wiki/Extension:SpamBlacklist
 #
 # A sintaxe é a seguinte:
 #   * Todo o que vaia despois dun carácter "#" ata o final da liña é un comentario
@@ -1221,18 +1221,18 @@ $messages['gl'] = array(
 
  #</pre> <!-- Deixe esta liña tal e como está -->',
 	'spam-whitelist' => ' #<!-- Deixe esta liña tal e como está --> <pre>
- # As ligazóns externas que coincidan con esta lista *non* serán bloqueadas mesmo se
- # fosen bloqueadas mediante entradas na lista negra.
+# As ligazóns externas que coincidan con esta lista *non* serán bloqueadas mesmo se
+# fosen bloqueadas mediante entradas na lista negra.
 #
-# A sintaxe é a que segue:
+# A sintaxe é a seguinte:
 #   * Todo o que vaia despois dun carácter "#" ata o final da liña é un comentario
 #   * Toda liña que non estea en branco é un fragmento de expresión regular que só coincide con dominios dentro de enderezos URL
 
  #</pre> <!-- Deixe esta liña tal e como está -->',
-	'email-blacklist' => ' # Os enderezos de correo electrónico que coincidan na súa totalidade ou en parte con algún rexistro desta lista serán bloqueadas cando se intenten rexistrar ou se intente enviar un correo desde eles.
- # Esta lista afecta unicamente a este wiki; tamén existe unha lista global.
- # Para obter máis documentación vaia a https://www.mediawiki.org/wiki/Extension:SpamBlacklist
- #<!-- Deixe esta liña tal e como está --> <pre>
+	'email-blacklist' => ' #<!-- Deixe esta liña tal e como está --> <pre>
+# Os enderezos de correo electrónico que coincidan na súa totalidade ou en parte con algún rexistro desta lista serán bloqueadas cando se intenten rexistrar ou se intente enviar un correo desde eles.
+# Esta lista afecta unicamente a este wiki; tamén existe unha lista global.
+# Para obter máis documentación vaia a https://www.mediawiki.org/wiki/Extension:SpamBlacklist
 #
 # A sintaxe é a seguinte:
 #   * Todo o que vaia despois dun carácter "#" ata o final da liña é un comentario
@@ -1243,11 +1243,11 @@ $messages['gl'] = array(
 # Os enderezos de correo electrónico que coincidan con algún desta lista *non* serán bloqueados,
 # mesmo se foron bloqueados por entradas da lista negra.
 #
- #</pre> <!-- Deixe esta liña tal e como está -->
-#
 # A sintaxe é a seguinte:
 #   * Todo o que vaia despois dun carácter "#" ata o final da liña é un comentario
-#   * Toda liña que non estea en branco é un fragmento de expresión regular que só coincide con dominios dentro de enderezos de correo electrónico',
+#   * Toda liña que non estea en branco é un fragmento de expresión regular que só coincide con dominios dentro de enderezos de correo electrónico
+
+ #</pre> <!-- Deixe esta liña tal e como está -->',
 	'spam-blacklisted-email' => 'Enderezo de correo electrónico presente na lista negra',
 	'spam-blacklisted-email-text' => 'O seu enderezo de correo electrónico atópase na lista negra e non pode enviar correos electrónicos aos outros usuarios.',
 	'spam-blacklisted-email-signup' => 'O enderezo de correo electrónico especificado está na lista negra e non se pode empregar.',
