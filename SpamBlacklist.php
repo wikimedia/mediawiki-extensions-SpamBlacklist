@@ -28,6 +28,11 @@ $wgBlacklistSettings = array(
 );
 
 /**
+ * Log blacklist hits to Special:Log
+ */
+$wgLogSpamBlacklistHits = false;
+
+/**
  * @deprecated
  */
 $wgSpamBlacklistFiles =& $wgBlacklistSettings['spam']['files'];
@@ -58,3 +63,8 @@ $wgAutoloadClasses['EmailBlacklist'] = $dir . 'EmailBlacklist.php';
 $wgAutoloadClasses['SpamBlacklistHooks'] = $dir . 'SpamBlacklistHooks.php';
 $wgAutoloadClasses['SpamBlacklist'] = $dir . 'SpamBlacklist_body.php';
 $wgAutoloadClasses['SpamRegexBatch'] = $dir . 'SpamRegexBatch.php';
+
+$wgLogTypes[] = 'spamblacklist';
+$wgLogActionsHandlers['spamblacklist/*'] = 'LogFormatter';
+$wgLogRestrictions['spamblacklist'] = 'spamblacklistlog';
+$wgGroupPermissions['sysop']['spamblacklistlog'] = true;
