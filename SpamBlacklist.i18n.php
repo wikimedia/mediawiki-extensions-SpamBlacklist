@@ -58,6 +58,7 @@ $messages['en'] = array(
 	'log-description-spamblacklist' => 'These events track spam blacklist hits.',
 	'logentry-spamblacklist-hit' => '$1 caused a spam blacklist hit on $3 by attempting to add $4.',
 	'right-spamblacklistlog' => 'View spam blacklist log',
+	'action-spamblacklistlog' => 'view the spam blacklist log',
 );
 
 /** Message documentation (Message documentation)
@@ -91,7 +92,7 @@ Parameters:
 * $3 is the page the user attempted to edit.
 * $4 is the url the user tried to add.',
 	'right-spamblacklistlog' => '{{doc-right|spamblacklistlog}}',
-
+	'action-spamblacklistlog' => '{{doc-action|spamblacklistlog}}',
 );
 
 /** Aragonese (aragonés)
