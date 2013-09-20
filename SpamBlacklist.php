@@ -68,3 +68,5 @@ $wgLogTypes[] = 'spamblacklist';
 $wgLogActionsHandlers['spamblacklist/*'] = 'LogFormatter';
 $wgLogRestrictions['spamblacklist'] = 'spamblacklistlog';
 $wgGroupPermissions['sysop']['spamblacklistlog'] = true;
+
+$wgAvailableRights[] = 'spamblacklistlog';
