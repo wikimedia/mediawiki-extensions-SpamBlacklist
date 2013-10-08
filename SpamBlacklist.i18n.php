@@ -1366,6 +1366,7 @@ $messages['gsw'] = array(
 );
 
 /** Gujarati (ગુજરાતી)
+ * @author Ashok modhvadia
  * @author KartikMistry
  * @author Sushant savla
  */
@@ -1407,7 +1408,7 @@ $messages['gu'] = array(
 	'spam-blacklisted-email-text' => 'તમારા ઈ-મેલ સરનામાં પર હાલમાં પ્રતિબંધ લગાડેલો છે આથી તમે ઈ-મેલ મોકલી  નહીં શકો.',
 	'spam-blacklisted-email-signup' => 'આ ઈ-મેલ પર હાલમાં વપરાશ પ્રતિબંધ લાગેલો છે.',
 	'spam-invalid-lines' => 'નીચેને સ્પૅમ બ્લેકલીસ્ટમાં {{PLURAL:$1| લાઈન|લાઈનો}} અમાન્ય છે. નિયમીત {{PLURAL:$1|expression|expressions}} અને પાનુમ્ સાચવ્યાં પહેલા તેને સુધારી લેશો.',
-	'spam-blacklist-desc' => 'Regex-આધારિત ઍન્ટી સ્પૅમ સાધનl: [[MediaWiki:Spam-blacklist]] અને [[MediaWiki:Spam-whitelist]]', # Fuzzy
+	'spam-blacklist-desc' => 'Regex-આધારિત ઍન્ટી સ્પૅમ સાધનો પાનાઓ અને નોંધાયેલા સભ્યોનાં ઇમેલ સરનામાઓમાં URLs ને બ્લેકલિસ્ટ કરવા દે છે.',
 );
 
 /** Hebrew (עברית)
