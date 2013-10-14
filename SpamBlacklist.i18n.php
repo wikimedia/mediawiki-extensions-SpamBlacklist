@@ -2085,7 +2085,7 @@ $messages['ko'] = array(
 	'spam-blacklisted-email-text' => '이메일 주소는 다른 사용자가 이메일을 보내지 못하도록 블랙리스트에 올라와 있습니다.',
 	'spam-blacklisted-email-signup' => '입력한 이메일 주소는 사용할 수 없도록 블랙리스트되어 있습니다.',
 	'spam-invalid-lines' => '스팸 블랙리스트의 다음 {{PLURAL:$1|줄}}에 잘못된 정규 {{PLURAL:$1|표현식}}이 사용되어 문서를 저장하기 전에 바르게 고쳐져{{PLURAL:$1|야 합니다}}:',
-	'spam-blacklist-desc' => '정규 표현식을 사용해 문서에 들어 있는 URL과 계정 사용자의 이메일 주소를 블랙리스트 처리하여 스팸을 막는 도구입니다',
+	'spam-blacklist-desc' => '정규 표현식을 사용해 문서에 있는 URL과 등록된 사용자의 이메일 주소를 블랙리스트 처리하여 스팸을 막는 도구',
 	'log-name-spamblacklist' => '스팸 블랙리스트 기록',
 	'log-description-spamblacklist' => '이 사건은 스팸 블랙리스트의 일치를 추적합니다.',
 	'logentry-spamblacklist-hit' => '$1 사용자가 $3 문서에 $4(을)를 추가하려고 했을 때에 스팸 블랙리스트의 일치가 발생했습니다.',
@@ -2766,7 +2766,7 @@ $messages['pt'] = array(
 
  #</pre> <!-- mantenha esta linha exatamente assim -->',
 	'spam-blacklisted-email' => 'Endereço de correio electrónico da lista negra',
-	'spam-blacklisted-email-text' => 'Atualmente o seu endereço de e-mail está na lista negra que impede o envio de e-mails a outros usuários.',
+	'spam-blacklisted-email-text' => 'Atualmente o seu endereço de e-mail está na lista negra que impede o envio de e-mails a outros utilizadores.',
 	'spam-blacklisted-email-signup' => 'O endereço de e-mail fornecido não pode ser utilizado pois está na lista negra.',
 	'spam-invalid-lines' => "{{PLURAL:$1|A entrada|As entradas}} abaixo {{PLURAL:$1|é uma expressão regular|são expressões regulares}}  ''(regex)'' {{PLURAL:$1|inválida e precisa|inválidas e precisam}} de ser {{PLURAL:$1|corrigida|corrigidas}} antes de gravar a página:",
 	'spam-blacklist-desc' => 'Ferramenta anti-"spam" baseada em Regex: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]', # Fuzzy
@@ -2849,9 +2849,19 @@ $messages['pt-br'] = array(
 
 /** Romanian (română)
  * @author Firilacroco
+ * @author Minisarm
  */
 $messages['ro'] = array(
-	'spam-blacklisted-email' => 'Adresă de e-mail în lista neagră',
+	'spam-blacklisted-email' => 'Adresă de e-mail inclusă în lista neagră',
+	'spam-blacklisted-email-text' => 'Adresa dumneavoastră de e-mail este actualmente inclusă în lista neagră, neputând expedia e-mailuri altor utilizatori.',
+	'spam-blacklisted-email-signup' => 'Adresa de e-mail specificată este actualmente inclusă în lista neagră, neputând fi utilizată.',
+	'spam-invalid-lines' => '{{PLURAL:$1|Următorul rând|Următoarele rânduri}} din lista neagră de spam {{PLURAL:$1|este|sunt}} {{PLURAL:$1|o expresie regulată invalidă|expresii regulate invalide}} și trebuie {{PLURAL:$1|corectat|corectate}} înainte de a salva pagina:',
+	'spam-blacklist-desc' => 'Unealtă antispam bazată pe regex care permite includerea adreselor URL introduse în pagini și a adreselor de e-mail ale utilizatorilor înregistrați în lista neagră',
+	'log-name-spamblacklist' => 'Jurnal listă neagră spam',
+	'log-description-spamblacklist' => 'Aceste evenimente urmăresc declanșarea listei negre de spam.',
+	'logentry-spamblacklist-hit' => '$1 a provocat declanșarea listei negre de spam în pagina $3, încercând să adauge $4.',
+	'right-spamblacklistlog' => 'Vizualizează jurnalul listei negre de spam',
+	'action-spamblacklistlog' => 'vizualizați jurnalul listei negre de spam',
 );
 
 /** tarandíne (tarandíne)
@@ -3315,7 +3325,7 @@ $messages['sv'] = array(
  #</pre> <!-- ändra inte den här raden -->',
 	'spam-blacklisted-email' => 'Svartlistad e-postadress',
 	'spam-invalid-lines' => 'Följande {{PLURAL:$1|rad|rader}} i svarta listan för spam innehåller inte något giltigt reguljärt uttryck  och måste rättas innan sidan sparas:',
-	'spam-blacklist-desc' => 'Antispamverktyg baserat på reguljära uttryck: [[MediaWiki:Spam-blacklist]] och [[MediaWiki:Spam-whitelist]]', # Fuzzy
+	'spam-blacklist-desc' => 'Antispamverktyg baserat på reguljära uttryck som gör det möjligt att svartlista webbadresser på sidor och e-postadresser för registrerade användare',
 );
 
 /** Tamil (தமிழ்)
@@ -3622,7 +3632,7 @@ $messages['vi'] = array(
 #  * Các dòng không để trống là một mảnh biểu thức chính quy, nó chỉ trùng với tên máy chủ trong địa chỉ URL.
 
  #</pre> <!-- leave this line exactly as it is -->',
-	'email-blacklist' => ' # Các địa chỉ thư điện tử trùng với danh sách này bị cấm không được đăng ký hoặc gửi thư điện tử.
+	'email-blacklist' => ' # Các địa chỉ thư điện tử trùng với danh sách này bị cấm không được mở tài khoản hoặc gửi thư điện tử.
  # Danh sách này chỉ có hiệu lực ở wiki này; hãy xem thêm “danh sách đen toàn cầu”.
  # Có tài liệu hướng dẫn tại https://www.mediawiki.org/wiki/Extension:SpamBlacklist
  #<!-- leave this line exactly as it is --> <pre>
