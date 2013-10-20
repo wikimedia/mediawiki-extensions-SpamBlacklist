@@ -1457,9 +1457,12 @@ $messages['he'] = array(
 	'spam-blacklisted-email-signup' => 'כתובת הדוא"ל הזאת נמצאת כרגע ברשימה השחורה של כתובות אסורות לשימוש.',
 	'spam-invalid-lines' => '{{PLURAL:$1|השורה הבאה|השורות הבאות}} ברשימת כתובות ה־URL האסורות
 	{{PLURAL:$1|היא ביטוי רגולרי בלתי תקין ויש לתקנה|הן ביטויים רגולריים בלתי תקינים ויש לתקנן}} לפני שמירת הדף:',
-	'spam-blacklist-desc' => 'כלי נגד זבל מבוסס ביטויים רגולריים: [[MediaWiki:Spam-blacklist]] ו־[[MediaWiki:Spam-whitelist]]', # Fuzzy
+	'spam-blacklist-desc' => 'כלי נגד זבל מבוסס ביטויים רגולריים ליצירת רשימה שחורה של URL־ים בדפים וכתובות דוא"ל למשתמשים רשומים',
 	'log-name-spamblacklist' => 'יומן רשימה שחורה של ספאם',
 	'log-description-spamblacklist' => 'האירועים האלה עוקבים אחרי הפעלות של רשימה שחורה של ספאם.',
+	'logentry-spamblacklist-hit' => '$1 {{GENDER:$1|גרם|גרמה}} לפעולת רשימה שחורה בדף $3 תוך כדי ניסיון להוסיף את הכתובת $4.',
+	'right-spamblacklistlog' => 'תצוגת יומן רשימה שחורה של ספאם',
+	'action-spamblacklistlog' => 'תצוגת יומן רשימה שחורה של ספאם',
 );
 
 /** Hindi (हिन्दी)
