@@ -3301,7 +3301,9 @@ $messages['stq'] = array(
 );
 
 /** Swedish (svenska)
+ * @author Ainali
  * @author Lejonel
+ * @author Lokal Profil
  * @author Skalman
  * @author WikiPhoenix
  */
@@ -3327,8 +3329,15 @@ $messages['sv'] = array(
 
  #</pre> <!-- ändra inte den här raden -->',
 	'spam-blacklisted-email' => 'Svartlistad e-postadress',
+	'spam-blacklisted-email-text' => 'Din e-postadress är för närvarande svartlistad från att skicka e-post till andra användare.',
+	'spam-blacklisted-email-signup' => 'Den angivna e-postadressen är förnärvarande svartlistad från användning.',
 	'spam-invalid-lines' => 'Följande {{PLURAL:$1|rad|rader}} i svarta listan för spam innehåller inte något giltigt reguljärt uttryck  och måste rättas innan sidan sparas:',
 	'spam-blacklist-desc' => 'Antispamverktyg baserat på reguljära uttryck som gör det möjligt att svartlista webbadresser på sidor och e-postadresser för registrerade användare',
+	'log-name-spamblacklist' => 'Svartlistningslogg för spam',
+	'log-description-spamblacklist' => 'Dessa händelser spårar träffar is svartlistningsloggen för spam.',
+	'logentry-spamblacklist-hit' => '$1 orsakade en träff i svartlistningsloggen för spam på $3 genom att försöka lägga till $4.',
+	'right-spamblacklistlog' => 'Visa svartlistningslogg för spam',
+	'action-spamblacklistlog' => 'visa svartlistningsloggen för spam',
 );
 
 /** Tamil (தமிழ்)
