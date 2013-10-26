@@ -3328,6 +3328,23 @@ $messages['sv'] = array(
 #   * Alla icke-tomma rader används som reguljära uttryck för att matcha domännamn i URL:er
 
  #</pre> <!-- ändra inte den här raden -->',
+	'email-blacklist' => ' #<!-- ändra inte den här raden --> <pre>
+# E-postadresser som matchar den här listan kommer att hindras att registrera och skicka e-post
+# Denna lista gäller endast denna wiki; se även den globala svartlistan.
+# För dokumentation se https://www.mediawiki.org/wiki/Extension:SpamBlacklist
+#
+# Syntaxen är följande:
+#   * Allt från ett "#"-tecken till slutet av raden är en kommentar
+#   * Varje icke-tom rad är ett regex-fragment som endast kommer att matcha värdnamn i e-postadresser
+ #</pre> <!-- ändra inte den här raden -->',
+	'email-whitelist' => ' #<!-- ändra inte den här raden --> <pre>
+# E-postadresser som matchar den här listan kommer *inte* att blockeras, även om de skulle ha blivit blockerade av svartlistan.
+#
+# Syntaxen är följande:
+#   * Allt från ett "#"-tecken till slutet av raden är en kommentar
+#   * Varje icke-tom rad är ett regex-fragment som endast kommer att matcha värdnamn i e-postadresser
+
+ #</pre> <!-- ändra inte den här raden -->',
 	'spam-blacklisted-email' => 'Svartlistad e-postadress',
 	'spam-blacklisted-email-text' => 'Din e-postadress är för närvarande svartlistad från att skicka e-post till andra användare.',
 	'spam-blacklisted-email-signup' => 'Den angivna e-postadressen är förnärvarande svartlistad från användning.',
