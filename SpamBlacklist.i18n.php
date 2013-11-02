@@ -1125,7 +1125,14 @@ $messages['fa'] = array(
 	'spam-blacklisted-email-text' => 'نشانی پست الکترونیکی شما در حال حاضر در فهرست سیاه قرار دارد و نمی‌توانید به دیگر کاربران نامه بفرستید.',
 	'spam-blacklisted-email-signup' => 'نشانی پست الکترونیکی داده شده در حال حاضر در فهرست سیاه است و قابل استفاده نیست.',
 	'spam-invalid-lines' => '{{PLURAL:$1|سطر|سطرهای}} زیر در فهرست سیاه هرزنگاری، عبارات باقاعدهٔ نامجاز {{PLURAL:$1|است|هستند}} و قبل از ذخیره کردن صفحه باید اصلاح {{PLURAL:$1|شود|شوند}}:',
-	'spam-blacklist-desc' => 'ابزار ضد هرزنویسی مبتنی بر regular expressions: [[MediaWiki:Spam-blacklist]] و [[MediaWiki:Spam-whitelist]]', # Fuzzy
+	'spam-blacklist-desc' => 'Regex-based anti-spam tool allowing to blacklist URLs in pages and email addresses for registered users
+
+ابزار بر پایهٔ عبارت باقاعده ضدهرزنگاری اجازهٔ فهرست سیاه‌کردن نشانی‌های اینترنتی در صفحه‌ها و نشانی‌های رایانامه برای کاربران ثبت نام کرده',
+	'log-name-spamblacklist' => 'سیاههٔ فهرست سیاه هرزنگاری',
+	'log-description-spamblacklist' => 'این رویدادها وقوع فهرست سیاه هزنگاری را دنبال می‌کند.',
+	'logentry-spamblacklist-hit' => '$1 در $3 با تلاش در افزودن $4 باعث برخورد به فهرست سیاه هرزنامه شده‌است.',
+	'right-spamblacklistlog' => 'دیدن یک سیاههٔ فهرست سیاه هرزنامه',
+	'action-spamblacklistlog' => 'دیدن سیاههٔ فهرست سیاه هرزنامه',
 );
 
 /** Finnish (suomi)
@@ -2714,7 +2721,12 @@ $messages['pms'] = array(
 	'spam-blacklisted-email-text' => "Soa adrëssa ëd pòsta eletrònica a l'é al moment an na lista nèira për mandé dij mëssagi a j'àutri utent.",
 	'spam-blacklisted-email-signup' => "L'adrëssa ëd pòsta eletrònica dàita a l'é al moment an na lista nèira për l'utilisassion.",
 	'spam-invalid-lines' => "{{PLURAL:$1|St'|Sti}} element dla lista nèira dla rumenta ëd reclam a {{PLURAL:$1|l'é|son}} {{PLURAL:$1|n'|dj'}}espression regolar nen {{PLURAL:$1|bon-a|bon-e}} e a l'{{PLURAL:$1|ha|han}} da manca d'esse coregiùe anans che salvé la pàgina:",
-	'spam-blacklist-desc' => 'Strument anti-spam basà an dzora a Regex: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]', # Fuzzy
+	'spam-blacklist-desc' => "Utiss contra la rumenta basà su dj'espression regolar ch'a permëtto ëd buté an sla lista nèira dj'adrësse an sl'Aragnà ant le pàgine e dj'adrësse ëd pòsta eletrònica për j'utent argistrà.",
+	'log-name-spamblacklist' => 'Argistr dla lista nèira dla rumenta',
+	'log-description-spamblacklist' => 'Costi eveniment a marco le rëspondense con la lista nèira dla rumenta.',
+	'logentry-spamblacklist-hit' => "$1 a l'ha causà na rëspondensa con la lista nèira dla rumenta su $3 an sërcand ëd gionté $4.",
+	'right-spamblacklistlog' => "Smon-e l'argistr dla lista nèira dla rumenta",
+	'action-spamblacklistlog' => "vëdde l'argistr dla lista nèira dla rumenta",
 );
 
 /** Western Punjabi (پنجابی)
