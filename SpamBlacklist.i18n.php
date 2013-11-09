@@ -3851,8 +3851,9 @@ $messages['zh-hant'] = array(
 	'spam-blacklisted-email-text' => '您的電郵地址目前已列入黑名單以防止您發送電郵予其他用戶。',
 	'spam-blacklisted-email-signup' => '此電郵地址目前被禁止使用。',
 	'spam-invalid-lines' => '以下在灌水黑名單的{{PLURAL:$1|一行|多行}}有無效的表示式，請在儲存這頁前先將{{PLURAL:$1|它|它們}}修正：',
-	'spam-blacklist-desc' => '以正則表達式為本的防灌水工具：[[MediaWiki:Spam-blacklist]] 與 [[MediaWiki:Spam-whitelist]]', # Fuzzy
+	'spam-blacklist-desc' => '基於正則表達式的反垃圾電郵工具，允許加入濫發電郵的URL和/或註冊用戶於此頁面',
 	'log-name-spamblacklist' => '垃圾連結黑名單日誌',
+	'log-description-spamblacklist' => '這些事件已被垃圾郵件黑名單觸發。',
 	'right-spamblacklistlog' => '查閱垃圾電郵黑名單日誌',
 	'action-spamblacklistlog' => '查閱垃圾電郵黑名單日誌',
 );
