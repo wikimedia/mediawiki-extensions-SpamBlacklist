@@ -1726,7 +1726,12 @@ $messages['ilo'] = array(
 	'spam-blacklisted-email-text' => 'Ti e-suratmo a pagtaengan ket agdama a naiparit manipud ti panagipatulod kadagiti e-surat kadagiti sabsabali nga agar-aramat.',
 	'spam-blacklisted-email-signup' => 'Ti naited nga e-surat a pagatengan ket agdama a naiparit manipud ti panagusar.',
 	'spam-invalid-lines' => 'Ti sumaganad a spam blacklist {{PLURAL:$1| a linia ket|kadagiti linia ket}} imbalido a kadawyan {{PLURAL:$1|a nangisao|kadagiti panangisao}} ken {{PLURAL:$1|masapsapol|masapol}} a mapudnuan sakbay nga idulin ti panid:',
-	'spam-blacklist-desc' => 'Naibantay ti regex kontra-spam a ramit: [[MediaWiki:Spam-blacklist]] ken [[MediaWiki:Spam-whitelist]]', # Fuzzy
+	'spam-blacklist-desc' => 'Naibatay ti regex a ramit ti kontra-spam a mangpalubos a mangiparit kadagiti URL kadagiti panid ken dagiti esurat a pagtaengan para kadagiti nakarehistro nga agar-aramat',
+	'log-name-spamblacklist' => 'Listaan ti naiparit para iti spam',
+	'log-description-spamblacklist' => 'Dagitoy a pasamak ket surotenna dagiti naiparit a listaan a napuntaan ti spam.',
+	'logentry-spamblacklist-hit' => 'Ti $1 ket gapuanan ti pannakapunta ti naiparit a listaan ti spam iti $3 babaen ti panagpadas nga aginayon iti $4.',
+	'right-spamblacklistlog' => 'Kitaen ti naiparit a listaan ti spam',
+	'action-spamblacklistlog' => 'kitaen ti naiparit a listaan ti spam',
 );
 
 /** Icelandic (íslenska)
