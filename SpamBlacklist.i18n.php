@@ -1123,7 +1123,7 @@ $messages['fa'] = array(
 #  * هر سطر از متن به عنوان یک دستور از نوع عبارت باقاعده در نظر گرفته می‌شود که فقط با نام میزبان در نشانی پست الکترونیکی مطابقت داده می‌شود',
 	'spam-blacklisted-email' => 'نشانی پست الکترونیکی موجود در لیست سیاه',
 	'spam-blacklisted-email-text' => 'نشانی پست الکترونیکی شما در حال حاضر در فهرست سیاه قرار دارد و نمی‌توانید به دیگر کاربران نامه بفرستید.',
-	'spam-blacklisted-email-signup' => 'نشانی پست الکترونیکی داده شده در حال حاضر در فهرست سیاه است و قابل استفاده نیست.',
+	'spam-blacklisted-email-signup' => 'نشانی رایانامه داده‌شده در حال حاضر در فهرست سیاه است.',
 	'spam-invalid-lines' => '{{PLURAL:$1|سطر|سطرهای}} زیر در فهرست سیاه هرزنگاری، عبارات باقاعدهٔ نامجاز {{PLURAL:$1|است|هستند}} و قبل از ذخیره کردن صفحه باید اصلاح {{PLURAL:$1|شود|شوند}}:',
 	'spam-blacklist-desc' => 'Regex-based anti-spam tool allowing to blacklist URLs in pages and email addresses for registered users
 
