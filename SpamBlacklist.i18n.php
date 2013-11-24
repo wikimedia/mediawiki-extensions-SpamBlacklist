@@ -447,6 +447,7 @@ $messages['bjn'] = array(
 );
 
 /** Bengali (বাংলা)
+ * @author Aftab1995
  * @author Bellayet
  * @author Nasir8891
  * @author Zaheen
@@ -477,6 +478,10 @@ $messages['bn'] = array(
 	'spam-blacklisted-email-signup' => 'আপনার লেখা ইমেইল ঠিকানাটি কালোতালিকাভুক্ত।',
 	'spam-invalid-lines' => 'নিচের স্প্যাম কালোতালিকার {{PLURAL:$1|লাইন|লাইনগুলি}} অবৈধ রেগুলার {{PLURAL:$1|এক্সপ্রেশন|এক্সপ্রেশন}} ধারণ করছে এবং পাতাটি সংরক্ষণের আগে এগুলি ঠিক করা {{PLURAL:$1|প্রয়োজন|প্রয়োজন}}:',
 	'spam-blacklist-desc' => 'রেজেক্স-ভিত্তিক স্প্যামরোধী সরঞ্জাম: [[MediaWiki:Spam-blacklist]] এবং [[MediaWiki:Spam-whitelist]]', # Fuzzy
+	'log-name-spamblacklist' => 'স্প্যাম কালোতালিকা লগ',
+	'log-description-spamblacklist' => 'এই ঘটনাগুলি স্প্যাম কালোতালিকার হিট অনুসরণ।',
+	'right-spamblacklistlog' => 'স্প্যাম কালোতালিকা লগ দেখুন',
+	'action-spamblacklistlog' => 'স্প্যাম কালোতালিকা লগ দেখুন',
 );
 
 /** Breton (brezhoneg)
