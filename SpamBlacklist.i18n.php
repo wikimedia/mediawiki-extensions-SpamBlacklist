@@ -841,6 +841,7 @@ $messages['de-formal'] = array(
 /** Zazaki (Zazaki)
  * @author Aspar
  * @author Erdemaslancan
+ * @author Marmase
  * @author Olvörg
  */
 $messages['diq'] = array(
@@ -882,7 +883,7 @@ $messages['diq'] = array(
 	'spam-blacklisted-email-text' => 'Nıka adresa e-postayê to qande karberê bini ra mesac riştene listeyê siya dero.',
 	'spam-blacklisted-email-signup' => 'E-posta adresiyo ke deyayo karkerdışe cı newke groto siyaliste.',
 	'spam-invalid-lines' => 'na qerelisteya spami {{PLURAL:$1|satır|satıran}}  {{PLURAL:$1|nemeqbulo|nemeqbuli}};',
-	'spam-blacklist-desc' => 'Regex-tabanlı anti-spam aracı: [[MediaWiki:Spam-blacklist]] ve [[MediaWiki:Spam-whitelist]]', # Fuzzy
+	'spam-blacklist-desc' => "Regex-tabanın haleta anti-spami URL'ya perer u adresa e-posta qande  karberande qeydınan geriyayo",
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -1084,9 +1085,14 @@ $messages['et'] = array(
 #   * Iga rida, mis ei ole tühi, on regulaaravaldise osa, mis vastab ainult e-posti aadressides sisalduvatele hostinimedele.',
 	'spam-blacklisted-email' => 'Musta nimekirja kantud e-posti aadress',
 	'spam-blacklisted-email-text' => 'Musta nimekirja sissekande tõttu on sinu e-posti aadressilt teistele kasutajatele e-kirjade saatmine praegu keelatud.',
-	'spam-blacklisted-email-signup' => 'Selle e-posti aadressi kasutamine praegu musta nimekirja sissekandega keelatud.',
+	'spam-blacklisted-email-signup' => 'Selle e-posti aadressi kasutamine on praegu musta nimekirja sissekandega keelatud.',
 	'spam-invalid-lines' => '{{PLURAL:$1|Järgmine rida|Järgmised read}} rämpspostituste mustas nimekirjas on {{PLURAL:$1|vigane regulaaravaldis|vigased regulaaravaldised}} ja {{PLURAL:$1|see|need}} tuleb enne lehekülje salvestamist parandada:',
 	'spam-blacklist-desc' => 'Regulaaravaldisel põhinev tööriist, mis võimaldab lisada musta nimekirja lehekülgedel toodud internetiaadresse ning registreeritud kasutajate e-posti aadresse.',
+	'log-name-spamblacklist' => 'Rämpsu musta nimekirja logi',
+	'log-description-spamblacklist' => 'Siin on loetletud rämpspostituse musta nimekirja tabamused.',
+	'logentry-spamblacklist-hit' => '$1 püüdis lisada leheküljele $3 rämpspostituse mustas nimekirjas olevat linki $4.',
+	'right-spamblacklistlog' => 'Vaadata rämpsu musta nimekirja',
+	'action-spamblacklistlog' => 'vaadata rämpsu musta nimekirja',
 );
 
 /** Persian (فارسی)
