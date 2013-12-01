@@ -2960,6 +2960,7 @@ $messages['roa-tara'] = array(
  * @author Express2000
  * @author HalanTul
  * @author Kaganer
+ * @author NBS
  * @author Okras
  * @author Александр Сигачёв
  */
@@ -3007,7 +3008,7 @@ $messages['ru'] = array(
 	'spam-blacklist-desc' => 'Основанный на регулярных выражениях анти-спам инструмент позволяет добавлять в чёрный список URL на страницах и адреса электронной почты для зарегистрированных пользователей',
 	'log-name-spamblacklist' => 'Журнал чёрного списка по спаму',
 	'log-description-spamblacklist' => 'Эти события отслеживают срабатывание чёрного списка по спаму.',
-	'logentry-spamblacklist-hit' => '$1 вызвал срабатывание чёрного списка по спами на странице $3 из-за попытки добавить $4.',
+	'logentry-spamblacklist-hit' => '$1 вызвал срабатывание спам-листа на странице $3 из-за попытки добавить $4.',
 	'right-spamblacklistlog' => 'Просмотр журнала чёрного списка по спаму',
 	'action-spamblacklistlog' => 'просмотр журнала чёрного списка по спаму',
 );
