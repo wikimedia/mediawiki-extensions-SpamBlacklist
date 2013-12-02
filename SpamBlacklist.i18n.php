@@ -2552,6 +2552,11 @@ $messages['nl'] = array(
 	'spam-blacklisted-email-signup' => 'Het opgegeven e-mailadres staat momenteel op de zwarte lijst.',
 	'spam-invalid-lines' => 'De volgende {{PLURAL:$1|regel|regels}} van de zwarte lijst {{PLURAL:$1|is een|zijn}} onjuiste reguliere {{PLURAL:$1|expressie|expressies}}  en {{PLURAL:$1|moet|moeten}} verbeterd worden alvorens de pagina kan worden opgeslagen:',
 	'spam-blacklist-desc' => "Op reguliere expressies gebaseed antispamhulpprogramma dat het mogelijk maakt URL's in pagina's te blokkeren en e-mailadressen voor geblokkeerde gebruikers",
+	'log-name-spamblacklist' => 'Logboek zwarte lijst',
+	'log-description-spamblacklist' => 'Deze lijst bevat gebeurtenissen met betrekking tot de zwarte lijst.',
+	'logentry-spamblacklist-hit' => '{{GENDER:$2|$1}} heeft geprobeerd $4 van de zwarte lijst toe te voegen op $3', # Fuzzy
+	'right-spamblacklistlog' => 'Logboek zwarte lijst bekijken',
+	'action-spamblacklistlog' => 'logboek zwarte lijst te bekijken',
 );
 
 /** Nederlands (informeel)‎ (Nederlands (informeel)‎)
@@ -3006,8 +3011,8 @@ $messages['ru'] = array(
 	'spam-blacklisted-email-signup' => 'Указанный адрес электронной почты в настоящее время занесён в чёрный список и не может быть использован.',
 	'spam-invalid-lines' => '{{PLURAL:$1|Следующая строка чёрного списка ссылок содержит ошибочное регулярное выражение и должна быть исправлена|Следующие строки чёрного списка ссылок содержат ошибочные регулярные выражения и должны быть исправлены}} перед сохранением:',
 	'spam-blacklist-desc' => 'Основанный на регулярных выражениях анти-спам инструмент позволяет добавлять в чёрный список URL на страницах и адреса электронной почты для зарегистрированных пользователей',
-	'log-name-spamblacklist' => 'Журнал чёрного списка по спаму',
-	'log-description-spamblacklist' => 'Эти события отслеживают срабатывание чёрного списка по спаму.',
+	'log-name-spamblacklist' => 'Журнал спам-листа',
+	'log-description-spamblacklist' => 'Это журнал, отслеживающий срабатывание спам-листа.',
 	'logentry-spamblacklist-hit' => '$1 вызвал срабатывание спам-листа на странице $3 из-за попытки добавить $4.',
 	'right-spamblacklistlog' => 'Просмотр журнала чёрного списка по спаму',
 	'action-spamblacklistlog' => 'просмотр журнала чёрного списка по спаму',
