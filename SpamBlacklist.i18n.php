@@ -3876,6 +3876,7 @@ $messages['zh-hant'] = array(
 	'spam-blacklist-desc' => '基於正則表達式的反垃圾電郵工具，允許加入濫發電郵的URL和/或註冊用戶於此頁面',
 	'log-name-spamblacklist' => '垃圾連結黑名單日誌',
 	'log-description-spamblacklist' => '這些事件已被垃圾郵件黑名單觸發。',
+	'logentry-spamblacklist-hit' => '$1於$3嘗試加入$4而觸發垃圾電郵黑名單。',
 	'right-spamblacklistlog' => '查閱垃圾電郵黑名單日誌',
 	'action-spamblacklistlog' => '查閱垃圾電郵黑名單日誌',
 );
