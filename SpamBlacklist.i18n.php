@@ -593,6 +593,13 @@ $messages['ca'] = array(
 	'spam-blacklist-desc' => 'Eina anti-spam basada en regexp: [[MediaWiki:Spam-blacklist]] i [[MediaWiki:Spam-whitelist]]', # Fuzzy
 );
 
+/** Chechen (нохчийн)
+ * @author Умар
+ */
+$messages['ce'] = array(
+	'log-name-spamblacklist' => 'Спам-кехатан тептар',
+);
+
 /** Sorani Kurdish (کوردی)
  * @author Calak
  */
@@ -600,7 +607,7 @@ $messages['ckb'] = array(
 	'right-spamblacklistlog' => 'دیتنی لۆگی پێرستی ڕەشی ڕیکلام',
 );
 
-/** Czech (česky)
+/** Czech (čeština)
  * @author Li-sung
  * @author Matěj Grabovský
  * @author Mormegil
