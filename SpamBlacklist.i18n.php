@@ -56,7 +56,7 @@ $messages['en'] = array(
 	'spam-blacklist-desc' => 'Regex-based anti-spam tool allowing to blacklist URLs in pages and email addresses for registered users',
 	'log-name-spamblacklist' => 'Spam blacklist log',
 	'log-description-spamblacklist' => 'These events track spam blacklist hits.',
-	'logentry-spamblacklist-hit' => '$1 caused a spam blacklist hit on $3 by attempting to add $4.',
+	'logentry-spamblacklist-hit' => '{{GENDER:$2|$1}} caused a spam blacklist hit on $3 by attempting to add $4.',
 	'right-spamblacklistlog' => 'View spam blacklist log',
 	'action-spamblacklistlog' => 'view the spam blacklist log',
 );
