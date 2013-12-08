@@ -88,10 +88,8 @@ Parameters:
 	'log-description-spamblacklist' => 'Description of spam blacklist log',
 	'logentry-spamblacklist-hit' => 'Log entry that is created when a user adds a link that is blacklisted on the spam blacklist.
 
-Parameters:
-* $1 - a user link, for example "Jane Doe (Talk | contribs)"
-* $2 - (Optional) a username. Can be used for GENDER
-* $3 - the page the user attempted to edit
+{{logentry}}
+Additional parameters:
 * $4 - the URL the user tried to add',
 	'right-spamblacklistlog' => '{{doc-right|spamblacklistlog}}',
 	'action-spamblacklistlog' => '{{doc-action|spamblacklistlog}}',
@@ -1903,7 +1901,7 @@ $messages['ja'] = array(
 	'spam-blacklist-desc' => 'ページ内の URL や登録利用者のメールアドレスをブラックリスト化できるようにする、正規表現に基づいたスパム対策ツール',
 	'log-name-spamblacklist' => 'スパムブラックリスト記録',
 	'log-description-spamblacklist' => 'これらのイベントはスパムブラックリストとの一致を追跡します。',
-	'logentry-spamblacklist-hit' => '$1 が $3 に $4 を追加しようとした際にスパムブラックリストが発動しました。',
+	'logentry-spamblacklist-hit' => '{{GENDER:$2|$1}} が $3 に $4 を追加しようとした際にスパムブラックリストが発動しました。',
 	'right-spamblacklistlog' => 'スパムブラックリストを閲覧',
 	'action-spamblacklistlog' => 'スパムブラックリスト記録の閲覧',
 );
@@ -2561,7 +2559,7 @@ $messages['nl'] = array(
 	'spam-blacklist-desc' => "Op reguliere expressies gebaseed antispamhulpprogramma dat het mogelijk maakt URL's in pagina's te blokkeren en e-mailadressen voor geblokkeerde gebruikers",
 	'log-name-spamblacklist' => 'Logboek zwarte lijst',
 	'log-description-spamblacklist' => 'Deze lijst bevat gebeurtenissen met betrekking tot de zwarte lijst.',
-	'logentry-spamblacklist-hit' => '{{GENDER:$2|$1}} heeft geprobeerd $4 van de zwarte lijst toe te voegen op $3', # Fuzzy
+	'logentry-spamblacklist-hit' => '{{GENDER:$2|$1}} heeft geprobeerd $4 van de zwarte lijst toe te voegen op $3',
 	'right-spamblacklistlog' => 'Logboek zwarte lijst bekijken',
 	'action-spamblacklistlog' => 'logboek zwarte lijst te bekijken',
 );
