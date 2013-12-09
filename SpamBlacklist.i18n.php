@@ -1252,7 +1252,7 @@ $messages['fr'] = array(
 	'spam-blacklist-desc' => 'Outil anti-pourriel basé sur des expressions rationnelles permettant de mettre en liste noire des URLs dans les pages et des adresses de courriel pour les utilisateurs enregistrés',
 	'log-name-spamblacklist' => 'Journal de liste noire des pourriels',
 	'log-description-spamblacklist' => 'Ces événements tracent les correspondances avec la liste noire des pourriels.',
-	'logentry-spamblacklist-hit' => '$1 a provoqué un correspondance avec la liste noire des pourriels sur $3 en essayant d’ajouter $4.',
+	'logentry-spamblacklist-hit' => '{{GENDER:$2|$1}} a provoqué une correspondance avec la liste noire des pourriels sur $3 en essayant d’ajouter $4.',
 	'right-spamblacklistlog' => 'Afficher le journal de la liste noire des pourriels',
 	'action-spamblacklistlog' => 'afficher le journal de la liste noir des pourriels',
 );
