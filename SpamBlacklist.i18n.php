@@ -2893,6 +2893,13 @@ $messages['pt-br'] = array(
 	'action-spamblacklistlog' => 'ver os registros da lista negra de spam',
 );
 
+/** Romansh (rumantsch)
+ * @author Kazu89
+ */
+$messages['rm'] = array(
+	'log-name-spamblacklist' => 'Protocol da la glista naira da spam',
+);
+
 /** Romanian (română)
  * @author Firilacroco
  * @author Minisarm
