@@ -652,7 +652,12 @@ $messages['cs'] = array(
 	'spam-blacklisted-email-text' => 'Vaše e-mailová adresa je momentálně uvedena na černé listině, takže ostatním uživatelům nemůžete posílat e-maily.',
 	'spam-blacklisted-email-signup' => 'Uvedená e-mailová adresa je v současné době na černé listině.',
 	'spam-invalid-lines' => 'Na černé listině spamu {{PLURAL:$1|je následující řádka neplatný regulární výraz|jsou následující řádky neplatné regulární výrazy|jsou následující řádky regulární výrazy}} a je nutné {{PLURAL:$1|ji|je|je}} před uložením stránky opravit :',
-	'spam-blacklist-desc' => 'Antispamový nástroj na základě regulárních výrazů: [[MediaWiki:Spam-blacklist]] a [[MediaWiki:Spam-whitelist]]', # Fuzzy
+	'spam-blacklist-desc' => 'Antispamový nástroj na základě regulárních výrazů umožňující zakázat URL ve stránkách a e-mailových adresách registrovaných uživatelů',
+	'log-name-spamblacklist' => 'Kniha protispamové černé listiny',
+	'log-description-spamblacklist' => 'Tyto události sledují zásahy protispamové černé listiny.',
+	'logentry-spamblacklist-hit' => '{{GENDER:$2|Uživateli|Uživatelce}} $1 zabránila protispamová černá listina přidat $4.', # Fuzzy
+	'right-spamblacklistlog' => 'Prohlížení knihy protispamové černé listiny',
+	'action-spamblacklistlog' => 'prohlížet knihu protispamové černé listiny',
 );
 
 /** Welsh (Cymraeg)
