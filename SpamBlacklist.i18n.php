@@ -655,7 +655,7 @@ $messages['cs'] = array(
 	'spam-blacklist-desc' => 'Antispamový nástroj na základě regulárních výrazů umožňující zakázat URL ve stránkách a e-mailových adresách registrovaných uživatelů',
 	'log-name-spamblacklist' => 'Kniha protispamové černé listiny',
 	'log-description-spamblacklist' => 'Tyto události sledují zásahy protispamové černé listiny.',
-	'logentry-spamblacklist-hit' => '{{GENDER:$2|Uživateli|Uživatelce}} $1 zabránila protispamová černá listina přidat $4.', # Fuzzy
+	'logentry-spamblacklist-hit' => '{{GENDER:$2|Uživateli|Uživatelce}} $1 zabránila protispamová černá listina přidat $4 na $3.',
 	'right-spamblacklistlog' => 'Prohlížení knihy protispamové černé listiny',
 	'action-spamblacklistlog' => 'prohlížet knihu protispamové černé listiny',
 );
