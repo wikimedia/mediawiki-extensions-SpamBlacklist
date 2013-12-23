@@ -655,7 +655,7 @@ $messages['cs'] = array(
 	'spam-blacklist-desc' => 'Antispamový nástroj na základě regulárních výrazů umožňující zakázat URL ve stránkách a e-mailových adresách registrovaných uživatelů',
 	'log-name-spamblacklist' => 'Kniha protispamové černé listiny',
 	'log-description-spamblacklist' => 'Tyto události sledují zásahy protispamové černé listiny.',
-	'logentry-spamblacklist-hit' => '{{GENDER:$2|Uživateli|Uživatelce}} $1 zabránila protispamová černá listina přidat $4 na $3.',
+	'logentry-spamblacklist-hit' => '{{GENDER:$2|Uživateli|Uživatelce}} $1 zabránila protispamová černá listina přidat $4 na stránku $3.',
 	'right-spamblacklistlog' => 'Prohlížení knihy protispamové černé listiny',
 	'action-spamblacklistlog' => 'prohlížet knihu protispamové černé listiny',
 );
@@ -921,7 +921,7 @@ $messages['dsb'] = array(
  #</pre> <!-- wóstaj toś tu smužku rowno tak ako jo -->',
 	'spam-blacklisted-email' => 'Blokěrowana e-mailowa adresa',
 	'spam-invalid-lines' => '{{PLURAL:$1|Slědujuca smužka|Slědujucej smužce|Slědujuce smužki|Slědujuce smužki}} corneje lisćiny spama {{PLURAL:$1|jo njepłaśiwy regularny wuraz|stej njepłaśiwej regularnej wuraza|su njepłaśiwe regularne wuraze|su njepłaśiwe regularne wuraze}} a {{PLURAL:$1|musy|musytej|muse|muse}} se korigěrowaś, pjerwjej až składujoš bok:',
-	'spam-blacklist-desc' => 'Antispamowy rěd na zakłaźe regularnych wurazow: [[MediaWiki:Spam-blacklist]] a [[MediaWiki:Spam-whitelist]]', # Fuzzy
+	'spam-blacklist-desc' => 'Pśeśiwospamowy rěd na zakłaźe Regex, kótaryž zmóznja URL na bokach a e-mailowe adresy za zregistrěrowanych wužywarjow do carneje lisćiny stajiś',
 );
 
 /** Greek (Ελληνικά)
@@ -1595,7 +1595,7 @@ $messages['hsb'] = array(
 	'spam-blacklisted-email-text' => 'Twoja e-mejlowa adresa je tuchwilu w čornej lisćinje a tohodla za słanje e-mejlow do druhich wužiwarjow zablokowana.',
 	'spam-blacklisted-email-signup' => 'Podata e-mejlowa adresa je tuchwilu přećiwo wužiwanju zablokowana.',
 	'spam-invalid-lines' => '{{PLURAL:$1|slědowaca linka je njepłaćiwy regularny wuraz|slědowacych linkow je regularny wuraz|slědowace linki su regularne wurazy|slědowacej lince stej regularnej wurazaj}} a {{PLURAL:$1|dyrbi|dyrbi|dyrbja|dyrbjetej}} so korigować, prjedy hač so strona składuje:',
-	'spam-blacklist-desc' => 'Přećiwospamowy nastroj na zakładźe Regex: [[MediaWiki:Spam-blacklist]] a [[MediaWiki:Spam-whitelist]]', # Fuzzy
+	'spam-blacklist-desc' => 'Přećiwospamowy nastroj na zakładźe Regex, kotryž zmóznja URL na stronach a e-mejlowe adresy za zregistrowanych wužiwarjow do čorneje lisćiny stajić',
 );
 
 /** Hungarian (magyar)
