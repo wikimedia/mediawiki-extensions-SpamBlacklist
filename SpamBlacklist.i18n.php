@@ -596,6 +596,7 @@ $messages['ca'] = array(
  */
 $messages['ce'] = array(
 	'log-name-spamblacklist' => 'Спам-кехатан тептар',
+	'log-description-spamblacklist' => 'Спам-кехато зулам долоре хьожу тептар.',
 );
 
 /** Sorani Kurdish (کوردی)
