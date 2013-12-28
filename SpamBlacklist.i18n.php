@@ -716,6 +716,7 @@ $messages['cy'] = array(
 	'log-description-spamblacklist' => "Mae'r digwyddiadau hyn yn cofnodi trawiadau ar y rhestr sbam waharddedig.",
 	'logentry-spamblacklist-hit' => 'Fe geisiodd $1 ychwanegu $4 sydd ar y rhestr waharddedig $3.',
 	'right-spamblacklistlog' => 'Gallu gweld lòg y rhestr sbam waharddedig',
+	'action-spamblacklistlog' => 'gweld lòg rhestr y sbam gwaharddedig',
 );
 
 /** Danish (dansk)
