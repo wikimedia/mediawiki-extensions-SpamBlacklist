@@ -759,7 +759,7 @@ $messages['da'] = array(
 #  * hver ikke-tomme linjer anvendes som regulære udtryk for at matcha domænenavne i webadresser
 #</pre> <!-- lad denne linje være nøjagtig som den er -->',
 	'spam-blacklisted-email' => 'Sortlistet e-mailadresse',
-	'spam-blacklisted-email-text' => 'Din e-mailadresse er i øjeblikket blokeret for at sende e-mails til andre brugere.',
+	'spam-blacklisted-email-text' => 'Din e-mailadresse er i øjeblikket blokeret fra at sende e-mails til andre brugere.',
 	'spam-blacklisted-email-signup' => 'Den angivne e-mailadresse er i øjeblikket blokeret for brug.',
 	'spam-invalid-lines' => 'Følgende {{PLURAL:$1|linje|linjer}} i spamsortelisten er {{PLURAL:$1|et ugyldigt regulært udtryk|ugyldige regulære udtryk}} og må rettes før lagring af siden:',
 	'spam-blacklist-desc' => 'Antispamværktøj baseret på regulære udtryk der giver mulighed for at sortliste URLs i sider og e-mailadresser for registrerede brugere',
