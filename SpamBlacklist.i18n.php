@@ -1674,7 +1674,7 @@ $messages['ia'] = array(
 	'spam-blacklisted-email-text' => 'Tu adresse de e-mail es actualmente blocate de inviar messages a altere usatores.',
 	'spam-blacklisted-email-signup' => 'Le adresse de e-mail specificate es actualmente blocate per le lista nigre.',
 	'spam-invalid-lines' => 'Le sequente {{PLURAL:$1|linea|lineas}} del lista nigre antispam es {{PLURAL:$1|un expression|expressiones}} regular invalide e debe esser corrigite ante que tu immagazina le pagina:',
-	'spam-blacklist-desc' => 'Instrumento antispam a base de regex: [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]', # Fuzzy
+	'spam-blacklist-desc' => 'Instrumento antispam a base de regex que permitte blocar URLs in paginas e adresses de e-mail pro usatores registrate',
 );
 
 /** Indonesian (Bahasa Indonesia)
