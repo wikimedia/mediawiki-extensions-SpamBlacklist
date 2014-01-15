@@ -1675,6 +1675,11 @@ $messages['ia'] = array(
 	'spam-blacklisted-email-signup' => 'Le adresse de e-mail specificate es actualmente blocate per le lista nigre.',
 	'spam-invalid-lines' => 'Le sequente {{PLURAL:$1|linea|lineas}} del lista nigre antispam es {{PLURAL:$1|un expression|expressiones}} regular invalide e debe esser corrigite ante que tu immagazina le pagina:',
 	'spam-blacklist-desc' => 'Instrumento antispam a base de regex que permitte blocar URLs in paginas e adresses de e-mail pro usatores registrate',
+	'log-name-spamblacklist' => 'Registro del lista nigre de spam',
+	'log-description-spamblacklist' => 'Iste eventos tracia le activationes del lista nigre de spam.',
+	'logentry-spamblacklist-hit' => '{{GENDER:$2|$1}} ha provocate un activation del lista nigre de spam sur $3 con su tentativa de inserer $4.',
+	'right-spamblacklistlog' => 'Vider le registro del lista nigre de spam',
+	'action-spamblacklistlog' => 'vider le registro del lista nigre de spam',
 );
 
 /** Indonesian (Bahasa Indonesia)
