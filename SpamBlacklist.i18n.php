@@ -2247,6 +2247,15 @@ $messages['li'] = array(
 	'spam-blacklist-desc' => 'Antispamfunctionaliteit via reguliere expressies: [[MediaWiki:Spam-blacklist]] en [[MediaWiki:Spam-whitelist]]', # Fuzzy
 );
 
+/** لوری (لوری)
+ * @author Bonevarluri
+ */
+$messages['lrc'] = array(
+	'log-name-spamblacklist' => 'پهرستنومه نوم گه سئ اسپم',
+	'right-spamblacklistlog' => 'دیئن پهرستنومه نوم گه سئ اسپم',
+	'action-spamblacklistlog' => 'دیئن پهرستنومه نوم گه سئ اسپم',
+);
+
 /** Minangkabau (Baso Minangkabau)
  * @author Iwan Novirion
  */
