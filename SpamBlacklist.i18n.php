@@ -595,6 +595,7 @@ $messages['ca'] = array(
  * @author Умар
  */
 $messages['ce'] = array(
+	'spam-blacklist-desc' => 'Анти-спам гӀирс URL дӀакъовла таро хуьлуьйту агӀонашкахь а электронан почтехь а дӀабазбелачу декъашхошна',
 	'log-name-spamblacklist' => 'Спам-кехатан тептар',
 	'log-description-spamblacklist' => 'Спам-кехато зулам долоре хьожу тептар.',
 );
