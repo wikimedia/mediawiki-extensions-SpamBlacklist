@@ -250,16 +250,16 @@ $messages['as'] = array(
  * @author Xuacu
  */
 $messages['ast'] = array(
-	'spam-blacklist' => ' # Les URLs que casen con esta llista se bloquiarán cuando s\'añadan a una páxina.
- # Esta llista afeuta namái a esta wiki; mira tamién la llista negra global.
- # Pa ver la documentación visita https://www.mediawiki.org/wiki/Extension:SpamBlacklist
- #<!-- dexa esta llinia exautamente como ta --> <pre>
+	'spam-blacklist' => '#<!-- dexe esta llinia exautamente como ta --> <pre>
+# Les URLs esternes que casen con esta llista bloquiaránse cuando s\'amiesten a una páxina.
+# Esta llista afeuta namái a esta wiki; mire tamién la llista negra global.
+# Pa ver la documentación vea https://www.mediawiki.org/wiki/Extension:SpamBlacklist
 #
 # La sintaxis ye ésta:
 #  * Tol testu dende un caráuter "#" hasta lo cabero la llinia ye un comentariu
 #  * Toa llinia non balera ye un fragmentu regex qu\'afeuta namái a los sirvidores de les URLs
 
- #</pre> <!-- dexa esta llinia exautamente como ta -->',
+#</pre> <!-- dexe esta llinia exautamente como ta -->',
 	'spam-whitelist' => ' #<!-- dexa esta llinia exautamente como ta --> <pre>
 # Les URLs esternes d\'esta llista *nun* se bloquiarán inda si quedaríen bloquiaes
 # por una entrada na llista negra.
