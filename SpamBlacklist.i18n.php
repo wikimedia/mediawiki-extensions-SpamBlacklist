@@ -2746,6 +2746,7 @@ $messages['pl'] = array(
 	'spam-invalid-lines' => '{{PLURAL:$1|Następująca linia jest niepoprawnym wyrażeniem regularnym i musi być poprawiona przed zapisaniem strony:|Następujące linie są niepoprawnymi wyrażeniami regularnymi i muszą być poprawione przed zapisaniem strony:}}',
 	'spam-blacklist-desc' => 'Narzędzie antyspamowe oparte o wyrażenia regularne: [[MediaWiki:Spam-blacklist|spam – lista zabronionych]] oraz [[MediaWiki:Spam-whitelist|spam – lista dozwolonych]]', # Fuzzy
 	'logentry-spamblacklist-hit' => '$1 {{GENDER:$2|uruchomił|uruchomiła}} filtr antyspamowy na stronie $3 próbując dodać $4.',
+	'right-spamblacklistlog' => 'Podgląd rejestru czarnej listy spamu',
 );
 
 /** Piedmontese (Piemontèis)
