@@ -219,4 +219,12 @@ class SpamBlacklistHooks {
 		}
 		return true;
 	}
+
+	static function parserAfterParse( $parser, $text, $stripState ) {
+		$links = $parser->getOutput()->getExternalLinks();
+		if ( $links && BaseBlacklist::getInstance( 'spam' )->filter( array_keys( $links ), null, true ) ) {
+			$parser->addTrackingCategory( 'spam-blacklisted-category' );
+		}
+		return true;
+	}
 }

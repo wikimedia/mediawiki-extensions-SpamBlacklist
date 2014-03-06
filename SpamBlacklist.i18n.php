@@ -52,6 +52,8 @@ $messages['en'] = array(
 	'spam-blacklisted-email-text' => 'Your email address is currently blacklisted from sending emails to other users.',
 	'spam-blacklisted-email-signup' => 'The given email address is currently blacklisted from use.',
 
+	'spam-blacklisted-category' => 'Pages containing blacklisted links',
+
 	'spam-invalid-lines' =>	"The following spam blacklist {{PLURAL:$1|line is an|lines are}} invalid regular {{PLURAL:$1|expression|expressions}} and {{PLURAL:$1|needs|need}} to be corrected before saving the page:",
 	'spam-blacklist-desc' => 'Regex-based anti-spam tool allowing to blacklist URLs in pages and email addresses for registered users',
 	'log-name-spamblacklist' => 'Spam blacklist log',
@@ -77,6 +79,7 @@ $messages['qqq'] = array(
 	'spam-blacklisted-email' => 'Title of errorpage when trying to send an email with a blacklisted e-mail address',
 	'spam-blacklisted-email-text' => 'Text of errorpage when trying to send an e-mail with a blacklisted e-mail address',
 	'spam-blacklisted-email-signup' => 'Error when trying to create an account with an invalid e-mail address',
+	'spam-blacklisted-category' => 'The category to place pages containing blacklisted links into',
 	'spam-invalid-lines' => 'Used as an error message.
 
 This message is followed by a list of bad lines.
