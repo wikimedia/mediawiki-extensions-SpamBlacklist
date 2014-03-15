@@ -606,6 +606,7 @@ $messages['ca'] = array(
  * @author Умар
  */
 $messages['ce'] = array(
+	'spam-blacklisted-category' => 'Ӏаьржа могӀам чура хьажоргаш чохь йолу агӀонаш',
 	'spam-blacklist-desc' => 'Анти-спам гӀирс URL дӀакъовла таро хуьлуьйту агӀонашкахь а электронан почтехь а дӀабазбелачу декъашхошна',
 	'log-name-spamblacklist' => 'Спам-кехатан тептар',
 	'log-description-spamblacklist' => 'Спам-кехато зулам долоре хьожу тептар.',
@@ -830,6 +831,7 @@ $messages['de'] = array(
 	'spam-blacklisted-email' => 'Blockierte E-Mail-Adressen',
 	'spam-blacklisted-email-text' => 'Deine E-Mail-Adresse ist derzeit für das Senden von E-Mail-Nachrichten an andere Benutzer blockiert.',
 	'spam-blacklisted-email-signup' => 'Die angegebene E-Mail-Adresse ist derzeit für das Senden von E-Mail-Nachrichten an andere Benutzer blockiert.',
+	'spam-blacklisted-category' => 'Seiten mit schwarzgelisteten Links',
 	'spam-invalid-lines' => 'Die {{PLURAL:$1|folgende Zeile|folgenden Zeilen}} in der Blockierliste {{PLURAL:$1|ist ein ungültiger regulärer Ausdruck|sind ungültige reguläre Ausdrücke}}. Sie {{PLURAL:$1|muss|müssen}} vor dem Speichern der Seite korrigiert werden:',
 	'spam-blacklist-desc' => 'Ergänzt ein auf reguläre Ausdrücke gestütztes Anti-Spam-Werkzeug zum Sperren von URLs und E-Mail-Adressen für das Einfügen durch registrierte Benutzer',
 	'log-name-spamblacklist' => 'Spam-Blacklist-Logbuch',
@@ -1211,6 +1213,7 @@ $messages['fi'] = array(
 	'spam-blacklisted-email' => 'Mustalla listalla oleva sähköpostiosoite',
 	'spam-blacklisted-email-text' => 'Sähköpostisi on tällä hetkellä mustalla listalla, etkä voi lähettää sähköpostia muille käyttäjille.',
 	'spam-blacklisted-email-signup' => 'Annettu sähköpostiosoite on tällä hetkellä mustalla listalla.',
+	'spam-blacklisted-category' => 'Kiellettyjä linkkejä sisältävät sivut',
 	'spam-invalid-lines' => 'Listalla on {{PLURAL:$1|seuraava virheellinen säännöllinen lauseke, joka|seuraavat virheelliset säännölliset lausekkeet, jotka}} on korjattava ennen tallentamista:',
 	'spam-blacklist-desc' => 'Säännöllisiä lausekkeita (reg-ex) tukeva roskalinkkejä torjuva työkalu, jonka avulla internet-osoitteita (URL) sivuilla ja sähköpostiosoitteissa voidaan asettaa mustalle listalle. Tarkoitettu kirjautuneille käyttäjille.',
 	'log-name-spamblacklist' => 'Roskalinkkien torjuntalistan loki',
@@ -1267,6 +1270,7 @@ $messages['fr'] = array(
 	'spam-blacklisted-email' => 'Adresses courriel et liste noire',
 	'spam-blacklisted-email-text' => "Votre adresse de courriel est actuellement sur une liste noire d'envoi de courriel aux autres utilisateurs.",
 	'spam-blacklisted-email-signup' => "L'adresse de courriel fournie est actuellement sur une liste noire d'utilisation.",
+	'spam-blacklisted-category' => 'Pages contenant des liens en liste noire',
 	'spam-invalid-lines' => '{{PLURAL:$1|La ligne suivante|Les lignes suivantes}} de la liste noire des polluriels {{PLURAL:$1|est une expression rationnelle invalide|sont des expressions rationnelles invalides}} et doi{{PLURAL:$1||ven}}t être corrigée{{PLURAL:$1||s}} avant d’enregistrer la page :',
 	'spam-blacklist-desc' => 'Outil anti-pourriel basé sur des expressions rationnelles permettant de mettre en liste noire des URLs dans les pages et des adresses de courriel pour les utilisateurs enregistrés',
 	'log-name-spamblacklist' => 'Journal de liste noire des pourriels',
@@ -1497,6 +1501,7 @@ $messages['he'] = array(
 	'spam-blacklisted-email' => 'כתובות דוא"ל ברשימה השחורה',
 	'spam-blacklisted-email-text' => 'כתובת הדוא"ל שלך נמצאת כרגע ברשימה השחורה של כתובות שלא ניתן לשלוח מהן הודעות למשמתמשים אחרים.',
 	'spam-blacklisted-email-signup' => 'כתובת הדוא"ל הזאת נמצאת כרגע ברשימה השחורה של כתובות אסורות לשימוש.',
+	'spam-blacklisted-category' => 'דפים עם קישורים שכלולים ברשימה השחורה',
 	'spam-invalid-lines' => '{{PLURAL:$1|השורה הבאה|השורות הבאות}} ברשימת כתובות ה־URL האסורות
 	{{PLURAL:$1|היא ביטוי רגולרי בלתי תקין ויש לתקנה|הן ביטויים רגולריים בלתי תקינים ויש לתקנן}} לפני שמירת הדף:',
 	'spam-blacklist-desc' => 'כלי נגד זבל מבוסס ביטויים רגולריים ליצירת רשימה שחורה של URL־ים בדפים וכתובות דוא"ל למשתמשים רשומים',
@@ -2094,6 +2099,7 @@ $messages['kk-latn'] = array(
 
 /** Korean (한국어)
  * @author Albamhandae
+ * @author Hym411
  * @author Klutzy
  * @author Kwj2772
  * @author 아라
@@ -2139,6 +2145,7 @@ $messages['ko'] = array(
 	'spam-blacklisted-email' => '이메일 주소가 블랙리스트됨',
 	'spam-blacklisted-email-text' => '이메일 주소는 다른 사용자가 이메일을 보내지 못하도록 블랙리스트에 올라와 있습니다.',
 	'spam-blacklisted-email-signup' => '입력한 이메일 주소는 사용할 수 없도록 블랙리스트되어 있습니다.',
+	'spam-blacklisted-category' => '문서가 블랙리스트에 있는 링크를 포함합니다.',
 	'spam-invalid-lines' => '스팸 블랙리스트의 다음 {{PLURAL:$1|줄}}에 잘못된 정규 {{PLURAL:$1|표현식}}이 사용되어 문서를 저장하기 전에 바르게 고쳐져{{PLURAL:$1|야 합니다}}:',
 	'spam-blacklist-desc' => '정규 표현식을 사용해 문서에 있는 URL과 등록된 사용자의 이메일 주소를 블랙리스트 처리하여 스팸을 막는 도구',
 	'log-name-spamblacklist' => '스팸 블랙리스트 기록',
@@ -2319,6 +2326,7 @@ $messages['mk'] = array(
 	'spam-blacklisted-email' => 'Забранета адреса',
 	'spam-blacklisted-email-text' => 'На вашата адреса моментално не ѝ е дозволено да испраќа е-пошта на други корисници.',
 	'spam-blacklisted-email-signup' => 'Употребата на дадената адреса е моментално забранета.',
+	'spam-blacklisted-category' => 'Страници што содржат забранети врски',
 	'spam-invalid-lines' => '{{PLURAL:$1|Следниов ред во црниот список на спам е|Следниве редови во црниот список на спам се}} {{PLURAL:$1|погрешен регуларен израз|погрешни регуларни изрази}} и {{PLURAL:$1|треба да се поправи|треба да се поправат}} пред да се зачува страницата:',
 	'spam-blacklist-desc' => 'Алатка против спам на основа на регуларни изрази што овозможува забрана на URL и е-поштенски адреси за корисници',
 	'log-name-spamblacklist' => 'Дневник за спам од црниот список',
@@ -3058,6 +3066,7 @@ $messages['ru'] = array(
 	'spam-blacklisted-email' => 'Адреса электронной почты, занесённые в чёрный список',
 	'spam-blacklisted-email-text' => 'Ваш адрес электронной почты в настоящее время находится в чёрном списке, поэтому вы не можете отправлять сообщения другим пользователям.',
 	'spam-blacklisted-email-signup' => 'Указанный адрес электронной почты в настоящее время занесён в чёрный список и не может быть использован.',
+	'spam-blacklisted-category' => 'Страницы, содержащие ссылки из чёрного списка',
 	'spam-invalid-lines' => '{{PLURAL:$1|1=Следующая строка чёрного списка ссылок содержит ошибочное регулярное выражение и должна быть исправлена|Следующие строки чёрного списка ссылок содержат ошибочные регулярные выражения и должны быть исправлены}} перед сохранением:',
 	'spam-blacklist-desc' => 'Основанный на регулярных выражениях анти-спам инструмент позволяет добавлять в чёрный список URL на страницах и адреса электронной почты для зарегистрированных пользователей',
 	'log-name-spamblacklist' => 'Журнал спам-листа',
@@ -3206,6 +3215,13 @@ $messages['scn'] = array(
  #</pre> <!-- non mudificari nta nudda manera sta riga -->',
 	'spam-invalid-lines' => '{{PLURAL:$1|La riga di sècutu|Li righi di sècutu}} di la blacklist dô spam {{PLURAL:$1|nun è na sprissioni riulari boni|nun sunnu sprissioni riulari boni}}; currèggiri {{PLURAL:$1|lu sbagghiu|li sbagghi}} prima di sarvari la pàggina.',
 	'spam-blacklist-desc' => 'Strumentu antispam basatu supra li sprissioni riulari [[MediaWiki:Spam-blacklist]] e [[MediaWiki:Spam-whitelist]]', # Fuzzy
+);
+
+/** Scots (Scots)
+ * @author John Reid
+ */
+$messages['sco'] = array(
+	'spam-blacklisted-category' => 'Pages containin blaickleetit links',
 );
 
 /** Sinhala (සිංහල)
@@ -3441,6 +3457,7 @@ $messages['sv'] = array(
 	'spam-blacklisted-email' => 'Svartlistad e-postadress',
 	'spam-blacklisted-email-text' => 'Din e-postadress är för närvarande svartlistad från att skicka e-post till andra användare.',
 	'spam-blacklisted-email-signup' => 'Den angivna e-postadressen är förnärvarande svartlistad från användning.',
+	'spam-blacklisted-category' => 'Sidor som innehåller svartlistade länkar',
 	'spam-invalid-lines' => 'Följande {{PLURAL:$1|rad|rader}} i svarta listan för spam innehåller inte något giltigt reguljärt uttryck  och måste rättas innan sidan sparas:',
 	'spam-blacklist-desc' => 'Antispamverktyg baserat på reguljära uttryck som gör det möjligt att svartlista webbadresser på sidor och e-postadresser för registrerade användare',
 	'log-name-spamblacklist' => 'Svartlistningslogg för spam',
@@ -3678,6 +3695,7 @@ $messages['uk'] = array(
 	'spam-blacklisted-email' => 'Адреса електронної пошти з чорного списку',
 	'spam-blacklisted-email-text' => 'Ваша адреса електронної пошти в даний час знаходиться в чорному списку, тому ви не можете надсилати повідомлення іншим користувачам.',
 	'spam-blacklisted-email-signup' => 'Вказана Вами адреса електронної пошти наразі занесена до чорного списку і не може бути використаною.',
+	'spam-blacklisted-category' => 'Сторінки, що містять посилання з чорного списку',
 	'spam-invalid-lines' => '{{PLURAL:$1|1=Наступний рядок із чорного списку посилань містить помилковий регулярний вираз і його треба виправити|Наступні рядки із чорного списку посилань містять помилкові регулярні вирази і їх треба виправити}} перед збереженням:',
 	'spam-blacklist-desc' => 'Засновану на регулярних виразах антиспам інструмент, який дозволяє кидати у чорний список URL сторінки і адреси електронної пошти для зареєстрованих користувачів',
 	'log-name-spamblacklist' => 'Журнал чорного списку спамерів',
@@ -3865,6 +3883,7 @@ $messages['zh-hans'] = array(
 	'spam-blacklisted-email' => '黑名单中的电邮地址',
 	'spam-blacklisted-email-text' => '您的电子邮件地址目前已被列入黑名单以防止您发送邮件。',
 	'spam-blacklisted-email-signup' => '所给电邮地址已被列入黑名单。',
+	'spam-blacklisted-category' => '页面包含黑名单链接',
 	'spam-invalid-lines' => '下列垃圾链接黑名单有{{PLURAL:$1|一行|多行}}含有无效的正则表示式，请在保存该页前修正之：',
 	'spam-blacklist-desc' => '基于正则表达式的反垃圾邮件工具，允许列入黑名单的网页的URL和电子邮件地址注册用户',
 	'log-name-spamblacklist' => '垃圾链接黑名单日志',
@@ -3921,6 +3940,7 @@ $messages['zh-hant'] = array(
 	'spam-blacklisted-email' => '被列入黑名單的電子郵件地址',
 	'spam-blacklisted-email-text' => '您的電郵地址目前已列入黑名單以防止您發送電郵予其他用戶。',
 	'spam-blacklisted-email-signup' => '此電郵地址目前被禁止使用。',
+	'spam-blacklisted-category' => '包含黑名單連結頁面',
 	'spam-invalid-lines' => '以下在灌水黑名單的{{PLURAL:$1|一行|多行}}有無效的表示式，請在儲存這頁前先將{{PLURAL:$1|它|它們}}修正：',
 	'spam-blacklist-desc' => '基於正則表達式的反垃圾電郵工具，允許加入濫發電郵的URL和/或註冊用戶於此頁面',
 	'log-name-spamblacklist' => '垃圾連結黑名單日誌',
