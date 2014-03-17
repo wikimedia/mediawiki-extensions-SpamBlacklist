@@ -1021,6 +1021,7 @@ $messages['eo'] = array(
  * @author Drini
  * @author MarcoAurelio
  * @author Sanbec
+ * @author Savh
  * @author Vivaelcelta
  */
 $messages['es'] = array(
@@ -1066,6 +1067,8 @@ $messages['es'] = array(
 	'spam-blacklisted-email-signup' => 'La dirección de correo electrónico dada está actualmente en la lista negra de uso.',
 	'spam-invalid-lines' => '{{PLURAL:$1|La siguiente línea|Las siguientes líneas}} de la lista negra de spam {{PLURAL:$1|es una expresión regular inválida|son expresiones regulares inválidas}} y es necesario {{PLURAL:$1|corregirla|corregirlas}} antes de guardar la página:',
 	'spam-blacklist-desc' => 'Herramienta anti-spam basada en expresiones regulares [[MediaWiki:Spam-blacklist]] y [[MediaWiki:Spam-whitelist]]', # Fuzzy
+	'log-name-spamblacklist' => 'Registro de la lista negra de spam',
+	'log-description-spamblacklist' => 'Este registro muestra acciones bloqueadas por la lista negra de spam.',
 );
 
 /** Estonian (eesti)
@@ -1122,6 +1125,7 @@ $messages['et'] = array(
 );
 
 /** Persian (فارسی)
+ * @author Armin1392
  * @author Ebraminio
  * @author Huji
  * @author Meisam
@@ -1161,6 +1165,7 @@ $messages['fa'] = array(
 	'spam-blacklisted-email' => 'نشانی رایانامه موجود در فهرست سیاه',
 	'spam-blacklisted-email-text' => 'نشانی رایانامهٔ شما در حال حاضر در فهرست سیاه قرار دارد و نمی‌توانید به دیگر کاربران نامه بفرستید.',
 	'spam-blacklisted-email-signup' => 'نشانی رایانامه داده‌شده در حال حاضر در فهرست سیاه است.',
+	'spam-blacklisted-category' => 'صفحات حاوی لینک‌های فهرست سیاه شده',
 	'spam-invalid-lines' => '{{PLURAL:$1|سطر|سطرهای}} زیر در فهرست سیاه هرزنگاری، عبارات باقاعدهٔ نامجاز {{PLURAL:$1|است|هستند}} و قبل از ذخیره کردن صفحه باید اصلاح {{PLURAL:$1|شود|شوند}}:',
 	'spam-blacklist-desc' => 'Regex-based anti-spam tool allowing to blacklist URLs in pages and email addresses for registered users
 
@@ -1770,6 +1775,7 @@ $messages['ilo'] = array(
 	'spam-blacklisted-email' => 'Dagiti naiparit nga e-surat a pagtaengan',
 	'spam-blacklisted-email-text' => 'Ti e-suratmo a pagtaengan ket agdama a naiparit manipud ti panagipatulod kadagiti e-surat kadagiti sabsabali nga agar-aramat.',
 	'spam-blacklisted-email-signup' => 'Ti naited nga e-surat a pagatengan ket agdama a naiparit manipud ti panagusar.',
+	'spam-blacklisted-category' => 'Pampanid nga aglaon kadagiti naiparit a silsilpo',
 	'spam-invalid-lines' => 'Ti sumaganad a spam blacklist {{PLURAL:$1| a linia ket|kadagiti linia ket}} imbalido a kadawyan {{PLURAL:$1|a nangisao|kadagiti panangisao}} ken {{PLURAL:$1|masapsapol|masapol}} a mapudnuan sakbay nga idulin ti panid:',
 	'spam-blacklist-desc' => 'Naibatay ti regex a ramit ti kontra-spam a mangpalubos a mangiparit kadagiti URL kadagiti panid ken dagiti esurat a pagtaengan para kadagiti nakarehistro nga agar-aramat',
 	'log-name-spamblacklist' => 'Listaan ti naiparit para iti spam',
@@ -1867,6 +1873,7 @@ $messages['it'] = array(
 	'spam-blacklisted-email' => 'Indirizzo di posta elettronica bloccato',
 	'spam-blacklisted-email-text' => "Il tuo indirizzo di posta elettronica è attualmente nella lista nera per l'invio di email verso altri utenti.",
 	'spam-blacklisted-email-signup' => "L'indirizzo di posta elettronica indicato è attualmente nella lista nera.",
+	'spam-blacklisted-category' => 'Pagine contenenti collegamenti nella lista nera',
 	'spam-invalid-lines' => "{{PLURAL:$1|La seguente riga|Le seguenti righe}} della blacklist dello spam {{PLURAL:$1|non è un'espressione regolare valida|non sono espressioni regolari valide}}; si prega di correggere {{PLURAL:$1|l'errore|gli errori}} prima di salvare la pagina.",
 	'spam-blacklist-desc' => 'Strumento antispam basato sulle espressioni regolari per bloccare URL e indirizzi email di utenti registrati',
 	'log-name-spamblacklist' => 'Spam blacklist',
@@ -2713,6 +2720,7 @@ $messages['or'] = array(
  * @author Chrumps
  * @author Derbeth
  * @author Sp5uhe
+ * @author WTM
  */
 $messages['pl'] = array(
 	'spam-blacklist' => '  # Dodawanie w treści stron linków zewnętrznych pasujących do tej listy będzie blokowane.
@@ -2755,10 +2763,13 @@ $messages['pl'] = array(
 	'spam-blacklisted-email' => 'Niedozwolone adresy e-mail',
 	'spam-blacklisted-email-text' => 'Twój adres e-mail jest obecnie umieszczony na czarnej liście i nie można z niego wysyłać wiadomości e-mail do innych użytkowników.',
 	'spam-blacklisted-email-signup' => 'Podany adres e-mail jest obecnie na czarnej liście blokującej przed użyciem.',
+	'spam-blacklisted-category' => 'Strony, które zawierają linki z czarnej listy',
 	'spam-invalid-lines' => '{{PLURAL:$1|Następująca linia jest niepoprawnym wyrażeniem regularnym i musi być poprawiona przed zapisaniem strony:|Następujące linie są niepoprawnymi wyrażeniami regularnymi i muszą być poprawione przed zapisaniem strony:}}',
-	'spam-blacklist-desc' => 'Narzędzie antyspamowe oparte o wyrażenia regularne: [[MediaWiki:Spam-blacklist|spam – lista zabronionych]] oraz [[MediaWiki:Spam-whitelist|spam – lista dozwolonych]]', # Fuzzy
+	'spam-blacklist-desc' => 'Narzędzie antyspamowe oparte o wyrażenia regularne pozwalające dodawać na czarną listę adresy URL na stronach i adresy e-mail użytkowników',
+	'log-name-spamblacklist' => 'Rejestr filtru antyspamowego',
 	'logentry-spamblacklist-hit' => '$1 {{GENDER:$2|uruchomił|uruchomiła}} filtr antyspamowy na stronie $3 próbując dodać $4.',
 	'right-spamblacklistlog' => 'Podgląd rejestru czarnej listy spamu',
+	'action-spamblacklistlog' => 'przeglądania rejestru filtru antyspamowego',
 );
 
 /** Piedmontese (Piemontèis)
