@@ -296,6 +296,7 @@ $messages['ast'] = array(
 	'spam-blacklisted-email' => 'Corréu electrónicu de la llista negra',
 	'spam-blacklisted-email-text' => 'El to corréu electrónicu anguaño ta na llista negra y nun pue unviar correos electrónicos a otros usuarios.',
 	'spam-blacklisted-email-signup' => "La direición de corréu electrónicu que se dio tien torgáu l'usu por tar anguaño na llista negra.",
+	'spam-blacklisted-category' => 'Páxines que contienen enllaces na llista prieta',
 	'spam-invalid-lines' => '{{PLURAL:$1|La siguiente llinia|Les siguientes llinies}} de la llista negra de spam {{PLURAL:$1|ye una espresión regular non válida|son espresiones regulares non válides}} y {{PLURAL:$1|necesita ser correxida|necesiten ser correxíes}} enantes de guardar la páxina:',
 	'spam-blacklist-desc' => "Ferramienta antispam basada n'espresiones regulares que permite a los usuarios rexistraos poner nuna llista prieta URLs de páxines y direiciones de corréu electrónicu",
 	'log-name-spamblacklist' => 'Rexistru de la llista prieta de spam',
@@ -491,6 +492,13 @@ $messages['bn'] = array(
 	'log-description-spamblacklist' => 'এই ঘটনাগুলি স্প্যাম কালোতালিকার হিট অনুসরণ।',
 	'right-spamblacklistlog' => 'স্প্যাম কালোতালিকা লগ দেখুন',
 	'action-spamblacklistlog' => 'স্প্যাম কালোতালিকা লগ দেখুন',
+);
+
+/** Tibetan (བོད་ཡིག)
+ * @author Phurbutsering
+ */
+$messages['bo'] = array(
+	'spam-blacklisted-category' => 'ཤོག་ངོས་ནང་དོན་ལ་ཐོ་གཞུང་ནག་པོའི་སྦྲེལ་མཐུད་འདུག་',
 );
 
 /** Breton (brezhoneg)
@@ -3803,6 +3811,7 @@ $messages['vi'] = array(
 	'spam-blacklisted-email' => 'Địa chỉ thư điện tử bị đưa vào danh sách đen',
 	'spam-blacklisted-email-text' => 'Địa chỉ thư điện tử của bạn đã được đưa vào danh sách đen nên bị cấm không được gửi thư điện tử cho người dùng khác.',
 	'spam-blacklisted-email-signup' => 'Địa chỉ thư điện tử được cung cấp đã được đưa vào danh sách đen nên bị cấm không được sử dụng.',
+	'spam-blacklisted-category' => 'Trang chứa liên kết bị ghi vào danh sách đen',
 	'spam-invalid-lines' => '{{PLURAL:$1|Dòng|Những dòng}} sau đây trong danh sách đen về spam không hợp lệ; xin hãy sửa chữa {{PLURAL:$1|nó|chúng}} để tuân theo cú pháp biểu thức chính quy trước khi lưu trang:',
 	'spam-blacklist-desc' => 'Công cụ cho phép chống spam bằng cách cấm những URL trong trang và địa chỉ thư điện tử của thành viên đăng ký khớp với các biểu thức chính quy trong danh sách đen',
 	'log-name-spamblacklist' => 'Nhật trình chặn spam vì danh sách đen',
