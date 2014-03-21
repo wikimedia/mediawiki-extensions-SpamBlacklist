@@ -172,6 +172,7 @@ $messages['ar'] = array(
 	'spam-blacklisted-email' => 'هذا البريد الإلكتروني مدرج في القائمة السوداء',
 	'spam-blacklisted-email-text' => 'بريدك الإلكتروني مدرج في القائمة السوداء وبناءً على ذلك لا يمكنك استخدامه لإرسال رسائل للمستخدمين الأخرين.',
 	'spam-blacklisted-email-signup' => 'هذا البريد الإلكتروني مدرج في القائمة السوداء وممنوع من الإستخدام.',
+	'spam-blacklisted-category' => 'الصفحات التي تحتوي على روابط من القائمة السوداء.',
 	'spam-invalid-lines' => '{{PLURAL:$1||السطر التالي|السطران التاليان|السطور التالية}} في قائمة السبام السوداء {{PLURAL:$1|ليس تعبيرًا منتظمًا صحيحًا|ليسا تعبيرين منتظمين صحيحين|ليست تعبيرات منتظمة صحيحة}}  و{{PLURAL:$1||يحتاج|يحتاجان|تحتاج}} إلى أن {{PLURAL:$1||يصحح|يصححان|تصحح}} قبل حفظ الصفحة:',
 	'spam-blacklist-desc' => 'أداة ضد السخام تعتمد على التعبيرات النمطية وتسمح بمنع روابط في الصفحات وعنواين البريد الإلكتروني للمستخدمين المسجلين',
 	'log-name-spamblacklist' => 'سجل السخام المدرج على القائمة السوداء',
@@ -209,6 +210,7 @@ $messages['arz'] = array(
 );
 
 /** Assamese (অসমীয়া)
+ * @author Bishnu Saikia
  * @author Gitartha.bordoloi
  */
 $messages['as'] = array(
@@ -250,6 +252,7 @@ $messages['as'] = array(
 	'spam-blacklisted-email-signup' => 'ই-মেইল ঠিকনাটো ব্যৱহাৰৰ পৰা ব্লেকলিষ্টেড কৰা হৈছে।',
 	'spam-invalid-lines' => 'তলৰ স্পাম ব্লেকলিষ্টৰ {{PLURAL:$1|শাৰীটোত|শাৰীসমূহত}} অবৈধ নিয়মিত {{PLURAL:$1|এক্সপ্ৰেছন|এক্সপ্ৰেছন}} আছে আৰু সেইবোৰ পৃষ্ঠা সাঁচি থোৱাৰ আগতেই ঠিক কৰাটো {{PLURAL:$1|প্ৰয়োজন|প্ৰয়োজন}}:',
 	'spam-blacklist-desc' => 'ৰেজেক্স-ভিত্তিক স্পামবিৰোধী সঁজুলি: [[MediaWiki:Spam-blacklist]] আৰু [[MediaWiki:Spam-whitelist]]', # Fuzzy
+	'right-spamblacklistlog' => 'স্পাম কলাতালিকা অভিলেখ চাওক',
 );
 
 /** Asturian (asturianu)
@@ -1027,6 +1030,7 @@ $messages['eo'] = array(
  * @author Armando-Martin
  * @author Dferg
  * @author Drini
+ * @author Fitoschido
  * @author MarcoAurelio
  * @author Sanbec
  * @author Savh
@@ -1077,6 +1081,7 @@ $messages['es'] = array(
 	'spam-blacklist-desc' => 'Herramienta anti-spam basada en expresiones regulares [[MediaWiki:Spam-blacklist]] y [[MediaWiki:Spam-whitelist]]', # Fuzzy
 	'log-name-spamblacklist' => 'Registro de la lista negra de spam',
 	'log-description-spamblacklist' => 'Este registro muestra acciones bloqueadas por la lista negra de spam.',
+	'right-spamblacklistlog' => "Ver registro de la lista negra de ''spam''",
 );
 
 /** Estonian (eesti)
@@ -3241,6 +3246,7 @@ $messages['scn'] = array(
  */
 $messages['sco'] = array(
 	'spam-blacklisted-category' => 'Pages containin blaickleetit links',
+	'right-spamblacklistlog' => 'See the spam blaickleet log',
 );
 
 /** Sinhala (සිංහල)
