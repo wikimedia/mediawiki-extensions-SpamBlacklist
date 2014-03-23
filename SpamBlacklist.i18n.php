@@ -2616,6 +2616,7 @@ $messages['nl'] = array(
 	'spam-blacklisted-email' => 'E-mailadres op de zwarte lijst',
 	'spam-blacklisted-email-text' => 'Uw e-mailadres staat momenteel op de zwarte lijst waardoor u geen e-mails naar andere gebruikers kunt verzenden.',
 	'spam-blacklisted-email-signup' => 'Het opgegeven e-mailadres staat momenteel op de zwarte lijst.',
+	'spam-blacklisted-category' => "Pagina's die koppelingen op de zwarte lijst bevatten",
 	'spam-invalid-lines' => 'De volgende {{PLURAL:$1|regel|regels}} van de zwarte lijst {{PLURAL:$1|is een|zijn}} onjuiste reguliere {{PLURAL:$1|expressie|expressies}}  en {{PLURAL:$1|moet|moeten}} verbeterd worden alvorens de pagina kan worden opgeslagen:',
 	'spam-blacklist-desc' => "Op reguliere expressies gebaseed antispamhulpprogramma dat het mogelijk maakt URL's in pagina's te blokkeren en e-mailadressen voor geblokkeerde gebruikers",
 	'log-name-spamblacklist' => 'Logboek zwarte lijst',
