@@ -3246,7 +3246,7 @@ $messages['scn'] = array(
  * @author John Reid
  */
 $messages['sco'] = array(
-	'spam-blacklisted-category' => 'Pages containin blaickleetit links',
+	'spam-blacklisted-category' => 'Pages containin blaickleetit airtins',
 	'right-spamblacklistlog' => 'See the spam blaickleet log',
 );
 
