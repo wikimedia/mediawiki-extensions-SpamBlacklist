@@ -13,6 +13,7 @@
     "spam-blacklisted-email": "Enderezo de correo electrónico presente na lista negra",
     "spam-blacklisted-email-text": "O seu enderezo de correo electrónico atópase na lista negra e non pode enviar correos electrónicos aos outros usuarios.",
     "spam-blacklisted-email-signup": "O enderezo de correo electrónico especificado está na lista negra e non se pode empregar.",
+    "spam-blacklisted-category": "Páxinas que conteñen ligazóns na lista negra",
     "spam-invalid-lines": "{{PLURAL:$1|A seguinte liña|As seguintes}} da lista negra de spam {{PLURAL:$1|é unha expresión regular inválida|son expresións regulares inválidas}} e {{PLURAL:$1|haina|hainas}} que corrixir antes de gardar a páxina:",
     "spam-blacklist-desc": "Ferramenta antispam baseada en expresións regulares que permite incluír enderezos URL e enderezos de correo electrónico nunha lista negra para os usuarios rexistrados",
     "log-name-spamblacklist": "Rexistro da lista negra de spam",
