@@ -92,11 +92,11 @@ class SpamBlacklist extends BaseBlacklist {
 				wfRestoreWarnings();
 				if( $check ) {
 					wfDebugLog( 'SpamBlacklist', "Match!\n" );
+					global $wgRequest;
+					$ip = $wgRequest->getIP();
+					$imploded = implode( ' ', $matches[0] );
+					wfDebugLog( 'SpamBlacklistHit', "$ip caught submitting spam: $imploded\n" );
 					if( !$preventLog ) {
-						global $wgRequest;
-						$ip = $wgRequest->getIP();
-						$imploded = implode( ' ', $matches[0] );
-						wfDebugLog( 'SpamBlacklistHit', "$ip caught submitting spam: $imploded\n" );
 						$this->logFilterHit( $title, $imploded ); // Log it
 					}
 					if( $retVal === false ){

@@ -59,9 +59,6 @@ $wgHooks['APIEditBeforeSave'][] = 'SpamBlacklistHooks::filterAPIEditBeforeSave';
 $wgHooks['EditFilter'][] = 'SpamBlacklistHooks::validate';
 $wgHooks['PageContentSaveComplete'][] = 'SpamBlacklistHooks::pageSaveContent';
 
-// categorize pages containing blacklisted links
-$wgHooks['ParserAfterParse'][] = 'SpamBlacklistHooks::parserAfterParse';
-
 // email filters
 $wgHooks['UserCanSendEmail'][] = 'SpamBlacklistHooks::userCanSendEmail';
 $wgHooks['AbortNewAccount'][] = 'SpamBlacklistHooks::abortNewAccount';
