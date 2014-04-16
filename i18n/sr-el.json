@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Michaello"
-        ]
-    },
-    "spam-blacklist-desc": "Antispam oruđe zasnovano na regularnim izrazima: [[MediaWiki:Spam-blacklist]] i [[MediaWiki:Spam-whitelist]]"
+	"@metadata": {
+		"authors": [
+			"Michaello"
+		]
+	},
+	"spam-blacklist-desc": "Antispam oruđe zasnovano na regularnim izrazima: [[MediaWiki:Spam-blacklist]] i [[MediaWiki:Spam-whitelist]]"
 }
