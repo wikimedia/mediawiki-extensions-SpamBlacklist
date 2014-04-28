@@ -6,7 +6,8 @@
 			"Lokal Profil",
 			"Skalman",
 			"WikiPhoenix",
-			"Hangsna"
+			"Hangsna",
+			"NH"
 		]
 	},
 	"spam-blacklist": " #<!-- ändra inte den här raden --> <pre>\n# Den här listan stoppar matchande externa URL:er från att läggas till på sidor.\n# Listan påverkar bara den här wikin; se även den globala svartlistan.\n# För dokumentation se https://www.mediawiki.org/wiki/Extension:SpamBlacklist\n#\n# Syntaxen är följande:\n#   * All text från ett #-tecken till radens slut är en kommentar\n#   * Alla icke-tomma rader används som reguljära uttryck för att matcha domännamn i URL:er\n\n #</pre> <!-- ändra inte den här raden -->",
@@ -18,8 +19,8 @@
 	"spam-blacklisted-email-signup": "Den angivna e-postadressen är förnärvarande svartlistad från användning.",
 	"spam-invalid-lines": "Följande {{PLURAL:$1|rad|rader}} i svarta listan för spam innehåller inte något giltigt reguljärt uttryck  och måste rättas innan sidan sparas:",
 	"spam-blacklist-desc": "Antispamverktyg baserat på reguljära uttryck som gör det möjligt att svartlista webbadresser på sidor och e-postadresser för registrerade användare",
-	"log-name-spamblacklist": "Svartlistningslogg för spam",
-	"log-description-spamblacklist": "Dessa händelser spårar träffar i svartlistningsloggen för spam.",
+	"log-name-spamblacklist": "Spamfilterlogg",
+	"log-description-spamblacklist": "Här visas händelser som utlöst spamfiltret",
 	"logentry-spamblacklist-hit": "$1 orsakade en träff i svartlistningsloggen för spam på $3 genom att försöka lägga till $4.",
 	"right-spamblacklistlog": "Visa svartlistningslogg för spam",
 	"action-spamblacklistlog": "visa svartlistningsloggen för spam"
