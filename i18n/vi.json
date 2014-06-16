@@ -15,7 +15,7 @@
 	"spam-blacklist-desc": "Công cụ cho phép chống spam bằng cách cấm những URL trong trang và địa chỉ thư điện tử của thành viên đăng ký khớp với các biểu thức chính quy trong danh sách đen",
 	"log-name-spamblacklist": "Nhật trình chặn spam vì danh sách đen",
 	"log-description-spamblacklist": "Nhật trình này ghi các lần chặn spam vì nằm vào danh sách đen.",
-	"logentry-spamblacklist-hit": "$1 bị danh sách đen chống spam ngăn không được thêm $4 vào $3",
+	"logentry-spamblacklist-hit": "{{GENDER:$2}}$1 bị danh sách đen chống spam ngăn không được thêm $4 vào $3.",
 	"right-spamblacklistlog": "Xem nhật trình chặn spam vì danh sách đen",
 	"action-spamblacklistlog": "xem nhật trình chặn spam vì danh sách đen"
 }
