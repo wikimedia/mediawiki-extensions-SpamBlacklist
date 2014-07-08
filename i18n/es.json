@@ -8,7 +8,8 @@
 			"MarcoAurelio",
 			"Sanbec",
 			"Savh",
-			"Vivaelcelta"
+			"Vivaelcelta",
+			"Macofe"
 		]
 	},
 	"spam-blacklist": " # Enlaces externos que coincidan con esta lista serán bloqueados al añadirse a una página\n # Esta lista afecta sólo a esta wiki. Existe asímismo una lista global en Meta para todos los proyectos. \n # Para documentación mire: https://www.mediawiki.org/wiki/Extension:SpamBlacklist\n #<!-- Deje esta línea exactamente como está --> <pre>\n#\n# La sintaxis es:\n#  * Todo lo que aparezca desde un caracter \"#\" hasta el fin de la línea es un comentario\n#  * Toda línea que no esté en blanco es una expresión regular que sólo se cotejará con URLs\n\n #</pre> <!-- Deje esta línea exactamente como está -->",
@@ -19,7 +20,7 @@
 	"spam-blacklisted-email-text": "Su dirección de correo electrónico está actualmente en la lista negra y no puede enviar correos electrónicos a otros usuarios.",
 	"spam-blacklisted-email-signup": "La dirección de correo electrónico dada está actualmente en la lista negra de uso.",
 	"spam-invalid-lines": "{{PLURAL:$1|La siguiente línea|Las siguientes líneas}} de la lista negra de spam {{PLURAL:$1|es una expresión regular inválida|son expresiones regulares inválidas}} y es necesario {{PLURAL:$1|corregirla|corregirlas}} antes de guardar la página:",
-	"spam-blacklist-desc": "Herramienta anti-spam basada en expresiones regulares [[MediaWiki:Spam-blacklist]] y [[MediaWiki:Spam-whitelist]]",
+	"spam-blacklist-desc": "Herramienta anti-spam basada en expresiones regulares que permite filtrar URLs en páginas y direcciones de correo electrónico para usuarios registrados",
 	"log-name-spamblacklist": "Registro de la lista negra de spam",
 	"log-description-spamblacklist": "Este registro muestra acciones bloqueadas por la lista negra de spam.",
 	"right-spamblacklistlog": "Ver registro de la lista negra de ''spam''"
