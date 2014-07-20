@@ -12,5 +12,5 @@
 	"spam-blacklisted-email-text": "Netfangið þitt er skráð á bannlista og ekki er hægt að senda tölfupóst frá því til annara notenda.",
 	"spam-blacklisted-email-signup": "Netfangið sem þú tilgreindir er á bannlista og er ekki hægt að nota.",
 	"spam-invalid-lines": "Eftirfarandi bannlista {{PLURAL:$1|færsla er ógild regluleg segð|færslur eru ógildar reglulegar segðir}} og leiðrétta þarf {{PLURAL:$1|hana|þær}} áður en síðan er vistuð:",
-	"spam-blacklist-desc": "Kæfuvörn byggð á reglulegum segðum: [[MediaWiki:Spam-blacklist]] og [[MediaWiki:Spam-whitelist]]"
+	"spam-blacklist-desc": "Kæfuvörn byggð á reglulegum segðum sem gerir kleift að loka á vefslóðir á síðum og netföng skráðra notenda"
 }
