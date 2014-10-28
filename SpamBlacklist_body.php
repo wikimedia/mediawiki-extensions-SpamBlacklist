@@ -94,7 +94,10 @@ class SpamBlacklist extends BaseBlacklist {
 					wfDebugLog( 'SpamBlacklist', "Match!\n" );
 					global $wgRequest;
 					$ip = $wgRequest->getIP();
-					$imploded = implode( ' ', $matches[0] );
+					$fullUrls = array();
+					$fullLineRegex = substr( $regex, 0, strrpos( $regex, '/' ) ) . '.*/Sim';
+					preg_match_all( $fullLineRegex, $links, $fullUrls );
+					$imploded = implode( ' ', $fullUrls[0] );
 					wfDebugLog( 'SpamBlacklistHit', "$ip caught submitting spam: $imploded\n" );
 					if( !$preventLog ) {
 						$this->logFilterHit( $title, $imploded ); // Log it
@@ -102,7 +105,7 @@ class SpamBlacklist extends BaseBlacklist {
 					if( $retVal === false ){
 						$retVal = array();
 					}
-					$retVal = array_merge( $retVal, $matches[1] );
+					$retVal = array_merge( $retVal, $fullUrls[1] );
 				}
 			}
 			if ( is_array( $retVal ) ) {
