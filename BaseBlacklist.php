@@ -87,11 +87,11 @@ abstract class BaseBlacklist {
 	 *
 	 * @param $type string Code for the blacklist
 	 * @return BaseBlacklist
-	 * @throws MWException
+	 * @throws Exception
 	 */
 	public static function getInstance( $type ) {
 		if ( !isset( self::$blacklistTypes[$type] ) ) {
-			throw new MWException( "Invalid blacklist type '$type' passed to " . __METHOD__ );
+			throw new Exception( "Invalid blacklist type '$type' passed to " . __METHOD__ );
 		}
 
 		if ( !isset( self::$instances[$type] ) ) {
