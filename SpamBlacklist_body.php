@@ -41,9 +41,6 @@ class SpamBlacklist extends BaseBlacklist {
 	 * @return Array Matched text(s) if the edit should not be allowed, false otherwise
 	 */
 	function filter( array $links, Title $title = null, $preventLog = false ) {
-		$fname = 'wfSpamBlacklistFilter';
-		wfProfileIn( $fname );
-
 		$blacklists = $this->getBlacklists();
 		$whitelists = $this->getWhitelists();
 
@@ -114,7 +111,7 @@ class SpamBlacklist extends BaseBlacklist {
 		} else {
 			$retVal = false;
 		}
-		wfProfileOut( $fname );
+
 		return $retVal;
 	}
 

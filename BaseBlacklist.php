@@ -223,15 +223,12 @@ abstract class BaseBlacklist {
 	function getSharedBlacklists() {
 		global $wgMemc, $wgDBname;
 		$listType = $this->getBlacklistType();
-		$fname = 'SpamBlacklist::getRegex';
-		wfProfileIn( $fname );
 
 		wfDebugLog( 'SpamBlacklist', "Loading $listType regex..." );
 
 		if ( count( $this->files ) == 0 ){
 			# No lists
 			wfDebugLog( 'SpamBlacklist', "no files specified\n" );
-			wfProfileOut( $fname );
 			return array();
 		}
 
@@ -240,7 +237,6 @@ abstract class BaseBlacklist {
 		$cachedRegexes = $wgMemc->get( "$wgDBname:{$listType}_blacklist_regexes" );
 		if( is_array( $cachedRegexes ) ) {
 			wfDebugLog( 'SpamBlacklist', "Got shared spam regexes from cache\n" );
-			wfProfileOut( $fname );
 			return $cachedRegexes;
 		}
 
