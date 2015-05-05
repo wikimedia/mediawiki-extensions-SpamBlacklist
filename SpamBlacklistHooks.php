@@ -212,11 +212,12 @@ class SpamBlacklistHooks {
 		if( !BaseBlacklist::isLocalSource( $wikiPage->getTitle() ) ) {
 			return true;
 		}
-		global $wgMemc, $wgDBname;
+		global $wgDBname;
 
+		$cache = ObjectCache::getMainWANInstance();
 		// This sucks because every Blacklist needs to be cleared
 		foreach ( BaseBlacklist::getBlacklistTypes() as $type => $class ) {
-			$wgMemc->delete( "$wgDBname:{$type}_blacklist_regexes" );
+			$cache->delete( "$wgDBname:{$type}_blacklist_regexes" );
 		}
 		return true;
 	}
