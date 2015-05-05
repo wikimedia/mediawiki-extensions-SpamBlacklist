@@ -4,6 +4,30 @@
  * Hooks for the spam blacklist extension
  */
 class SpamBlacklistHooks {
+
+    /**
+     * T99257: Extension registration does not properly support 2d arrays so set it as a global for now
+     */
+	public static function registerExtension() {
+		global $wgSpamBlacklistFiles, $wgBlacklistSettings, $wgSpamBlacklistSettings;
+
+		$wgBlacklistSettings = array(
+			'spam' => array(
+				'files' => array( "https://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1" )
+			)
+		);
+
+		/**
+		 * @deprecated
+		 */
+		$wgSpamBlacklistFiles =& $wgBlacklistSettings['spam']['files'];
+
+		/**
+		 * @deprecated
+		 */
+		$wgSpamBlacklistSettings =& $wgBlacklistSettings['spam'];
+	}
+
 	/**
 	 * Hook function for EditFilterMergedContent
 	 *
