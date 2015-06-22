@@ -64,6 +64,14 @@ abstract class BaseBlacklist {
 	}
 
 	/**
+	 * @param array $links
+	 * @param Title $title
+	 * @param bool $preventLog
+	 * @return mixed
+	 */
+	abstract public function filter( array $links, Title $title, $preventLog = false );
+
+	/**
 	 * Adds a blacklist class to the registry
 	 *
 	 * @param $type string
