@@ -212,7 +212,16 @@ abstract class BaseBlacklist {
 	 * @return array Regular expressions
 	 */
 	public function getLocalBlacklists() {
-		return SpamRegexBatch::regexesFromMessage( "{$this->getBlacklistType()}-blacklist", $this );
+		$that = $this;
+		$type = $this->getBlacklistType();
+
+		return ObjectCache::getMainWANInstance()->getWithSetCallback(
+			wfMemcKey( 'spamblacklist', $type, 'blacklist-regex' ),
+			function () use ( $that, $type ) {
+				return SpamRegexBatch::regexesFromMessage( "{$type}-blacklist", $that );
+			},
+			$this->expiryTime
+		);
 	}
 
 	/**
@@ -221,7 +230,16 @@ abstract class BaseBlacklist {
 	 * @return array Regular expressions
 	 */
 	public function getWhitelists() {
-		return SpamRegexBatch::regexesFromMessage( "{$this->getBlacklistType()}-whitelist", $this );
+		$that = $this;
+		$type = $this->getBlacklistType();
+
+		return ObjectCache::getMainWANInstance()->getWithSetCallback(
+			wfMemcKey( 'spamblacklist', $type, 'whitelist-regex' ),
+			function () use ( $that, $type ) {
+				return SpamRegexBatch::regexesFromMessage( "{$type}-whitelist", $that );
+			},
+			$this->expiryTime
+		);
 	}
 
 	/**
@@ -229,7 +247,6 @@ abstract class BaseBlacklist {
 	 * @return array
 	 */
 	function getSharedBlacklists() {
-		global $wgDBname;
 		$listType = $this->getBlacklistType();
 
 		wfDebugLog( 'SpamBlacklist', "Loading $listType regex..." );
@@ -240,27 +257,40 @@ abstract class BaseBlacklist {
 			return array();
 		}
 
-		$cache = ObjectCache::getMainWANInstance();
-		// This used to be cached per-site, but that could be bad on a shared
-		// server where not all wikis have the same configuration.
-		$cachedRegexes = $cache->get( "$wgDBname:{$listType}_blacklist_regexes" );
-		if( is_array( $cachedRegexes ) ) {
-			wfDebugLog( 'SpamBlacklist', "Got shared spam regexes from cache\n" );
-			return $cachedRegexes;
-		}
+		$miss = false;
 
-		$regexes = $this->buildSharedBlacklists();
-		$cache->set( "$wgDBname:{$listType}_blacklist_regexes", $regexes, $this->expiryTime );
+		$that = $this;
+		$regexes = ObjectCache::getMainWANInstance()->getWithSetCallback(
+			// This used to be cached per-site, but that could be bad on a shared
+			// server where not all wikis have the same configuration.
+			wfMemcKey( 'spamblacklist', $listType, 'shared-blacklist-regex' ),
+			function () use ( $that, &$miss ) {
+				$miss = true;
+				return $that->buildSharedBlacklists();
+			},
+			$this->expiryTime
+		);
+
+		if ( !$miss ) {
+			wfDebugLog( 'SpamBlacklist', "Got shared spam regexes from cache\n" );
+		}
 
 		return $regexes;
 	}
 
+	/**
+	 * Clear all primary blacklist cache keys
+	 *
+	 * @note: this method is unused atm
+	 */
 	function clearCache() {
-		global $wgDBname;
 		$listType = $this->getBlacklistType();
 
 		$cache = ObjectCache::getMainWANInstance();
-		$cache->delete( "$wgDBname:{$listType}_blacklist_regexes" );
+		$cache->delete( wfMemcKey( 'spamblacklist', $listType, 'shared-blacklist-regex' ) );
+		$cache->delete( wfMemcKey( 'spamblacklist', $listType, 'blacklist-regex' ) );
+		$cache->delete( wfMemcKey( 'spamblacklist', $listType, 'whitelist-regex' ) );
+
 		wfDebugLog( 'SpamBlacklist', "$listType blacklist local cache cleared.\n" );
 	}
 
