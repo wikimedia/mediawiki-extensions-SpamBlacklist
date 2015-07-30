@@ -327,33 +327,35 @@ abstract class BaseBlacklist {
 	 * Fetch an article from this or another local MediaWiki database.
 	 * This is probably *very* fragile, and shouldn't be used perhaps.
 	 *
-	 * @param string $db
+	 * @param string $wiki
 	 * @param string $article
 	 * @return string
 	 */
-	function getArticleText( $db, $article ) {
-		wfDebugLog( 'SpamBlacklist', "Fetching {$this->getBlacklistType()} spam blacklist from '$article' on '$db'...\n" );
-		global $wgDBname;
-		$dbr = wfGetDB( DB_READ );
-		$dbr->selectDB( $db );
-		$text = false;
-		if ( $dbr->tableExists( 'page' ) ) {
-			// 1.5 schema
-			$dbw = wfGetDB( DB_READ );
-			$dbw->selectDB( $db );
-			$revision = Revision::newFromTitle( Title::newFromText( $article ) );
-			if ( $revision ) {
-				$text = $revision->getText();
-			}
-			$dbw->selectDB( $wgDBname );
-		} else {
-			// 1.4 schema
-			$title = Title::newFromText( $article );
-			$text = $dbr->selectField( 'cur', 'cur_text', array( 'cur_namespace' => $title->getNamespace(),
-				'cur_title' => $title->getDBkey() ), __METHOD__ );
-		}
-		$dbr->selectDB( $wgDBname );
-		return strval( $text );
+	function getArticleText( $wiki, $article ) {
+		wfDebugLog( 'SpamBlacklist',
+			"Fetching {$this->getBlacklistType()} blacklist from '$article' on '$wiki'...\n" );
+
+		$title = Title::newFromText( $article );
+		// Load all the relevant tables from the correct DB.
+		// This assumes that old_text is the actual text or
+		// that the external store system is at least unified.
+		$row = wfGetDB( DB_SLAVE, array(), $wiki )->selectRow(
+			array( 'page', 'revision', 'text' ),
+			array_merge(
+				Revision::selectFields(),
+				Revision::selectPageFields(),
+				Revision::selectTextFields()
+			),
+			array(
+				'page_namespace' => $title->getNamespace(), // assume NS IDs match
+				'page_title' => $title->getDBkey(), // assume same case rules
+				'rev_id=page_latest',
+				'old_id=rev_text_id'
+			),
+			__METHOD__
+		);
+
+		return $row ? Revision::newFromRow( $row )->getText() : false;
 	}
 
 	/**
