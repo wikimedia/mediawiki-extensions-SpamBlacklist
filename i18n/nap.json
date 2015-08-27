@@ -4,6 +4,7 @@
 			"C.R."
 		]
 	},
+	"spam-blacklist": " #<!-- lassa sta linea comm'è mo' --> <pre>\n# Ll'url esterne ca s'azzeccano dint'a st'elenco sarranno bluccate quanno s'azzecarranno a na paggena.\n# St'elenco s'apprecase surtanto a sta wiki; si vulite vedite l'elenco niro globbale.\n# Pe' documentazione vedite https://www.mediawiki.org/wiki/Extension:SpamBlacklist\n#\n# 'A sintassi sta ccà abbascio:\n#   * Tuttuquante 'e nu carattere \"#\" a 'o fine d' 'a linea è nu commento\n#   * Tuttuquante linee 'n bianco songo nu fragmento regex ca mmustarrà surtanto 'e host dint'a n'URL\n\n #</pre> <!-- lassa sta linea tale quale comm'è mo' -->",
 	"spam-blacklisted-email": "Elenco 'email a gnurà",
 	"spam-blacklisted-email-text": "'O ndirizzo mail d' 'o vuosto è mo' mo' dint'a na lista nira pe' nun putè mannà mmasciate a ll'ati utente",
 	"spam-blacklisted-email-signup": "'O indirizzo e-mail dato è dint'a lista nira pe' nun 'o puté ausà.",
