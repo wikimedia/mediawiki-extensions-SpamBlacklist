@@ -9,6 +9,9 @@
 	"descriptionmsg": "spam-blacklist-desc",
 	"type": "antispam",
 	"callback": "SpamBlacklistHooks::registerExtension",
+	"requires": {
+		"MediaWiki": ">= 1.26.0"
+	},
 	"GroupPermissions": {
 		"sysop": {
 			"spamblacklistlog": true
