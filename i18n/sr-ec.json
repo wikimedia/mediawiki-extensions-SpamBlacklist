@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Millosh"
+			"Millosh",
+			"Milicevic01"
 		]
 	},
-	"spam-blacklist-desc": "Антиспам оруђе засновано на регуларним изразима: [[MediaWiki:Spam-blacklist]] и [[MediaWiki:Spam-whitelist]]"
+	"spam-blacklist-desc": "Антиспам оруђе засновано на регуларним изразима које онемогућава унос URL адреса односно имејл адреса које се налазе у црном списку"
 }
