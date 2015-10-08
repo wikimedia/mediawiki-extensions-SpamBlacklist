@@ -217,10 +217,10 @@ abstract class BaseBlacklist {
 
 		return ObjectCache::getMainWANInstance()->getWithSetCallback(
 			wfMemcKey( 'spamblacklist', $type, 'blacklist-regex' ),
+			$this->expiryTime,
 			function () use ( $that, $type ) {
 				return SpamRegexBatch::regexesFromMessage( "{$type}-blacklist", $that );
-			},
-			$this->expiryTime
+			}
 		);
 	}
 
@@ -235,10 +235,10 @@ abstract class BaseBlacklist {
 
 		return ObjectCache::getMainWANInstance()->getWithSetCallback(
 			wfMemcKey( 'spamblacklist', $type, 'whitelist-regex' ),
+			$this->expiryTime,
 			function () use ( $that, $type ) {
 				return SpamRegexBatch::regexesFromMessage( "{$type}-whitelist", $that );
-			},
-			$this->expiryTime
+			}
 		);
 	}
 
@@ -264,11 +264,11 @@ abstract class BaseBlacklist {
 			// This used to be cached per-site, but that could be bad on a shared
 			// server where not all wikis have the same configuration.
 			wfMemcKey( 'spamblacklist', $listType, 'shared-blacklist-regex' ),
+			$this->expiryTime,
 			function () use ( $that, &$miss ) {
 				$miss = true;
 				return $that->buildSharedBlacklists();
-			},
-			$this->expiryTime
+			}
 		);
 
 		if ( !$miss ) {
