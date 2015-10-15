@@ -4,7 +4,8 @@
 			"Aftab1995",
 			"Bellayet",
 			"Nasir8891",
-			"Zaheen"
+			"Zaheen",
+			"Aftabuzzaman"
 		]
 	},
 	"spam-blacklist": "\n # এই তালিকার সাথে মিলে যায় এমন বহিঃসংযোগ URLগুলি পাতায় যোগ করতে বাধা দেয়া হবে।\n # এই তালিকাটি কেবল এই উইকির ক্ষেত্রে প্রযোজ্য; সামগ্রিক কালোতালিকাও দেখতে পারেন।\n # ডকুমেন্টেশনের জন্য https://www.mediawiki.org/wiki/Extension:SpamBlacklist দেখুন\n #<!-- leave this line exactly as it is --> <pre>\n#\n# সিনট্যাক্স নিচের মত:\n#  * \"#\" ক্যারেক্টার থেকে শুরু করে লাইনের শেষ পর্যন্ত সবকিছু একটি মন্তব্য\n#  * প্রতিটি অশূন্য লাইন একটি রেজেক্স খণ্ডাংশ যেটি কেবল URLগুলির ভেতরের hostগুলির সাথে মিলে যাবে\n\n #</pre> <!-- leave this line exactly as it is -->",
