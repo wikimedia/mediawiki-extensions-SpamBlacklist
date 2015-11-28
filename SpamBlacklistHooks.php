@@ -53,9 +53,13 @@ class SpamBlacklistHooks {
 		$pout = $editInfo->output;
 		$links = array_keys( $pout->getExternalLinks() );
 
-		// HACK: treat the edit summary as a link
-		if ( $summary !== '' ) {
+		// HACK: treat the edit summary as a link if it contains anything
+		// that looks like it could be a URL or e-mail address.
+		if ( preg_match( '/\S(\.[^\s\d]{2,}|[\/@]\S)/', $summary ) ) {
 			$links[] = $summary;
+		}
+		if ( !$links ) {
+			return true;
 		}
 
 		$spamObj = BaseBlacklist::getInstance( 'spam' );
