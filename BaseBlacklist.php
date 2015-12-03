@@ -110,7 +110,8 @@ abstract class BaseBlacklist {
 				$wgBlacklistSettings[$type] = array();
 			}
 
-			self::$instances[$type] = new self::$blacklistTypes[$type]( $wgBlacklistSettings[$type] );
+			$class = self::$blacklistTypes[$type];
+			self::$instances[$type] = new $class( $wgBlacklistSettings[$type] );
 		}
 
 		return self::$instances[$type];
