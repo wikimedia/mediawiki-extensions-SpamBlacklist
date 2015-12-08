@@ -33,8 +33,6 @@ function cleanupArticle( Revision $rev, $regexes, $match ) {
 			$rev = false;
 		}
 	}
-	$dbw = wfGetDB( DB_MASTER );
-	$dbw->begin();
 	if ( !$rev ) {
 		// Didn't find a non-spammy revision, delete the page
 		/*
@@ -53,7 +51,6 @@ function cleanupArticle( Revision $rev, $regexes, $match ) {
 	}
 	$wikiPage = new WikiPage( $title );
 	$wikiPage->doEdit( $text, $comment );
-	$dbw->commit();
 }
 
 //------------------------------------------------------------------------------
