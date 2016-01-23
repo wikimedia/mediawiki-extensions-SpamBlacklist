@@ -8,6 +8,7 @@
 	"url": "https://www.mediawiki.org/wiki/Extension:SpamBlacklist",
 	"descriptionmsg": "spam-blacklist-desc",
 	"type": "antispam",
+	"license-name": "GPL-2.0+",
 	"callback": "SpamBlacklistHooks::registerExtension",
 	"requires": {
 		"MediaWiki": ">= 1.26.0"
