@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Michaello"
+			"Michaello",
+			"Milicevic01"
 		]
 	},
-	"spam-blacklist-desc": "Antispam oruđe zasnovano na regularnim izrazima: [[MediaWiki:Spam-blacklist]] i [[MediaWiki:Spam-whitelist]]"
+	"spam-blacklist-desc": "Antispam oruđe zasnovano na regularnim izrazima: [[MediaWiki:Spam-blacklist]] i [[MediaWiki:Spam-whitelist]]",
+	"log-name-spamblacklist": "Dnevnik crnog spiska spama",
+	"logentry-spamblacklist-hit": "$1 je {{GENDER:$2|napravio|napravila}} pogodak u crnom spisku spama na stranici $3 pokušavajući da doda $4.",
+	"right-spamblacklistlog": "pregled dnevnika crnog spiska spama",
+	"action-spamblacklistlog": "pregled dnevnika crnog spiska spama"
 }
