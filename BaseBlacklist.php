@@ -407,4 +407,11 @@ abstract class BaseBlacklist {
 	public function getRegexEnd( $batchSize ) {
 		return ($batchSize > 0 ) ? '/Sim' : '/im';
 	}
+
+	/**
+	 * @param $title Title
+	 */
+	public function warmCachesForFilter( Title $title ) {
+		// subclass this
+	}
 }

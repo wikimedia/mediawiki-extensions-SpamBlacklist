@@ -64,6 +64,9 @@
 		],
 		"AbortNewAccount": [
 			"SpamBlacklistHooks::abortNewAccount"
+		],
+		"ParserOutputStashForEdit": [
+			"SpamBlacklistHooks::onParserOutputStashForEdit"
 		]
 	},
 	"config": {

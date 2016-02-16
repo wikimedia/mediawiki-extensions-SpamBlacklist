@@ -123,16 +123,28 @@ class SpamBlacklist extends BaseBlacklist {
 	 * @param $title Title
 	 * @return array
 	 */
-	function getCurrentLinks( $title ) {
-		$dbr = wfGetDB( DB_SLAVE );
-		$id = $title->getArticleID(); // should be zero queries
-		$res = $dbr->select( 'externallinks', array( 'el_to' ),
-			array( 'el_from' => $id ), __METHOD__ );
-		$links = array();
-		foreach ( $res as $row ) {
-			$links[] = $row->el_to;
-		}
-		return $links;
+	function getCurrentLinks( Title $title ) {
+		$cache = ObjectCache::getMainWANInstance();
+		return $cache->getWithSetCallback(
+			// Key is warmed via warmCachesForFilter() from ApiStashEdit
+			$cache->makeKey( 'external-link-list', $title->getLatestRevID() ),
+			$cache::TTL_MINUTE,
+			function ( $oldValue, &$ttl, array &$setOpts ) use ( $title ) {
+				$dbr = wfGetDB( DB_SLAVE );
+				$setOpts += Database::getCacheSetOptions( $dbr );
+
+				return $dbr->selectFieldValues(
+					'externallinks',
+					'el_to',
+					array( 'el_from' => $title->getArticleID() ), // should be zero queries
+					__METHOD__
+				);
+			}
+		);
+	}
+
+	public function warmCachesForFilter( Title $title ) {
+		$this->getCurrentLinks( $title );
 	}
 
 	/**

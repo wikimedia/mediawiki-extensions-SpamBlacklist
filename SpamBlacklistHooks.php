@@ -77,6 +77,11 @@ class SpamBlacklistHooks {
 		return true;
 	}
 
+	public static function onParserOutputStashForEdit( WikiPage $page ) {
+		$spamObj = BaseBlacklist::getInstance( 'spam' );
+		$spamObj->warmCachesForFilter( $page->getTitle() );
+	}
+
 	/**
 	 * Hook function for APIEditBeforeSave.
 	 * This allows blacklist matches to be reported directly in the result structure
