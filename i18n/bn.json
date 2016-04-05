@@ -17,6 +17,7 @@
 	"spam-blacklist-desc": "রেজেক্স-ভিত্তিক স্প্যামরোধী সরঞ্জাম: [[MediaWiki:Spam-blacklist]] এবং [[MediaWiki:Spam-whitelist]]",
 	"log-name-spamblacklist": "স্প্যাম কালোতালিকা লগ",
 	"log-description-spamblacklist": "এই ঘটনাগুলি স্প্যাম কালোতালিকার হিট অনুসরণ।",
+	"logentry-spamblacklist-hit": "{{GENDER:$2|$1}} $4 যোগ করতে যেয়ে $3-এ একটি স্প্যাম কালোতালিকা সক্রিয় করেছেন।",
 	"right-spamblacklistlog": "স্প্যাম কালোতালিকা লগ দেখুন",
 	"action-spamblacklistlog": "স্প্যাম কালোতালিকা লগ দেখুন"
 }
