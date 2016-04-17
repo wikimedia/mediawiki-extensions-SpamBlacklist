@@ -24,6 +24,7 @@
 	"spam-blacklist-desc": "Herramienta anti-spam basada en expresiones regulares que permite filtrar URLs en páginas y direcciones de correo electrónico para usuarios registrados",
 	"log-name-spamblacklist": "Registro de la lista negra de spam",
 	"log-description-spamblacklist": "Este registro muestra acciones bloqueadas por la lista negra de spam.",
+	"logentry-spamblacklist-hit": "{{GENDER:$2|$1}} causó una lista negra de spam golpe en $3 por intentar agregar $4.",
 	"right-spamblacklistlog": "Ver registro de la lista negra de ''spam''",
 	"action-spamblacklistlog": "ver la lista negra de spam de registro"
 }
