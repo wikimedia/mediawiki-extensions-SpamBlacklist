@@ -223,7 +223,7 @@ class SpamBlacklistHooks {
 	 * @param bool     $isWatch
 	 * @param string   $section
 	 * @param int      $flags
-	 * @param int      $revision
+	 * @param Revision|null $revision
 	 * @param Status   $status
 	 * @param int      $baseRevId
 	 *
@@ -250,6 +250,11 @@ class SpamBlacklistHooks {
 		foreach ( BaseBlacklist::getBlacklistTypes() as $type => $class ) {
 			$blacklist = BaseBlacklist::getInstance( $type );
 			$blacklist->clearCache();
+		}
+
+		if ( $revision ) {
+			BaseBlacklist::getInstance( 'spam' )
+				->doLogging( $user, $wikiPage->getTitle(), $revision );
 		}
 
 		return true;

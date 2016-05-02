@@ -7,6 +7,11 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 class SpamBlacklist extends BaseBlacklist {
 
 	/**
+	 * @var array[]
+	 */
+	private $urlChanges = array();
+
+	/**
 	 * Returns the code for the blacklist implementation
 	 *
 	 * @return string
@@ -61,6 +66,8 @@ class SpamBlacklist extends BaseBlacklist {
 			wfDebugLog( 'SpamBlacklist', "New URLs: " . implode( ', ', $newLinks ) );
 			wfDebugLog( 'SpamBlacklist', "Added URLs: " . implode( ', ', $addedLinks ) );
 
+			$this->logUrlChanges( $oldLinks, $newLinks, $addedLinks );
+
 			$links = implode( "\n", $addedLinks );
 
 			# Strip whitelisted URLs from the match
@@ -113,6 +120,86 @@ class SpamBlacklist extends BaseBlacklist {
 		}
 
 		return $retVal;
+	}
+
+	private function doEventLogging() {
+		global $wgSpamBlacklistEventLogging;
+		return $wgSpamBlacklistEventLogging && class_exists( 'EventLogging' );
+	}
+
+	/**
+	 * Diff added/removed urls and generate events for them
+	 *
+	 * @param string[] $oldLinks
+	 * @param string[] $newLinks
+	 * @param string[] $addedLinks
+	 */
+	private function logUrlChanges( $oldLinks, $newLinks, $addedLinks ) {
+		if ( !$this->doEventLogging() ) {
+			return;
+		}
+
+		$removedLinks = array_diff( $oldLinks, $newLinks );
+		foreach ( $addedLinks as $url ) {
+			$this->logUrlChange( $url, 'insert' );
+		}
+
+		foreach ( $removedLinks as $url ) {
+			$this->logUrlChange( $url, 'remove' );
+		}
+	}
+
+	/**
+	 * Actually push the url change events post-save
+	 *
+	 * @param User $user
+	 * @param Title $title
+	 * @param Revision $rev
+	 */
+	public function doLogging( User $user, Title $title, Revision $rev ) {
+		if ( !$this->doEventLogging() ) {
+			return;
+		}
+
+		$baseInfo = array(
+			'revId' => $rev->getId(),
+			'pageId' => $title->getArticleID(),
+			'pageNamespace' => $title->getNamespace(),
+			'userId' => $user->getId(),
+			'userText' => $user->getName(),
+		);
+		$changes = $this->urlChanges;
+
+		DeferredUpdates::addCallableUpdate( function() use ( $changes, $baseInfo ) {
+			foreach ( $changes as $change ) {
+				EventLogging::logEvent(
+					'ExtenalLinksChange',
+					14148461,
+					$baseInfo + $change
+				);
+			}
+		} );
+	}
+
+	/**
+	 * Generate events for each url addition or removal
+	 *
+	 * @param string $url
+	 * @param string $type 'insert' or 'remove'
+	 */
+	private function logUrlChange( $url, $type ) {
+		$parsed = wfParseUrl( $url );
+		$domain = $parsed['host'];
+		$info = array(
+			'action' => $type,
+			'protocol' => $parsed['scheme'],
+			'domain' => $domain,
+			'path' => $parsed['path'],
+			'query' => $parsed['query'],
+			'fragment' => $parsed['fragment'],
+		);
+
+		$this->urlChanges[] = $info;
 	}
 
 	/**
