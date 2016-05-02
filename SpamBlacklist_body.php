@@ -173,8 +173,8 @@ class SpamBlacklist extends BaseBlacklist {
 		DeferredUpdates::addCallableUpdate( function() use ( $changes, $baseInfo ) {
 			foreach ( $changes as $change ) {
 				EventLogging::logEvent(
-					'ExtenalLinksChange',
-					14148461,
+					'ExternalLinksChange',
+					15573909,
 					$baseInfo + $change
 				);
 			}
