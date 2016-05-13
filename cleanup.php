@@ -56,14 +56,18 @@ function cleanupArticle( Revision $rev, $regexes, $match ) {
 //------------------------------------------------------------------------------
 
 $username = 'Spam cleanup script';
-$wgUser = User::newFromName( $username );
-if ( $wgUser->idForName() == 0 ) {
-	// Create the user
-	$status = $wgUser->addToDatabase();
-	if ( $status === null || $status->isOK() ) {
-		$dbw = wfGetDB( DB_MASTER );
-		$dbw->update( 'user', array( 'user_password' => 'nologin' ),
-			array( 'user_name' => $username ), $username );
+if ( method_exists( 'User', 'newSystemUser' ) ) {
+	$wgUser = User::newSystemUser( $username, array( 'steal' => true ) );
+} else {
+	$wgUser = User::newFromName( $username );
+	if ( $wgUser->idForName() == 0 ) {
+		// Create the user
+		$status = $wgUser->addToDatabase();
+		if ( $status === null || $status->isOK() ) {
+			$dbw = wfGetDB( DB_MASTER );
+			$dbw->update( 'user', array( 'user_password' => 'nologin' ),
+				array( 'user_name' => $username ), $username );
+		}
 	}
 }
 
