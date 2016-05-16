@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Auth\AuthManager;
+
 /**
  * Hooks for the spam blacklist extension
  */
@@ -10,6 +12,7 @@ class SpamBlacklistHooks {
      */
 	public static function registerExtension() {
 		global $wgSpamBlacklistFiles, $wgBlacklistSettings, $wgSpamBlacklistSettings;
+		global $wgDisableAuthManager, $wgAuthManagerAutoConfig;
 
 		$wgBlacklistSettings = array(
 			'spam' => array(
@@ -26,6 +29,13 @@ class SpamBlacklistHooks {
 		 * @deprecated
 		 */
 		$wgSpamBlacklistSettings =& $wgBlacklistSettings['spam'];
+
+		if ( class_exists( AuthManager::class ) && !$wgDisableAuthManager ) {
+			$wgAuthManagerAutoConfig['preauth'][SpamBlacklistPreAuthenticationProvider::class] =
+				[ 'class' => SpamBlacklistPreAuthenticationProvider::class ];
+		} else {
+			Hooks::register( 'AbortNewAccount', 'SpamBlacklistHooks::abortNewAccount' );
+		}
 	}
 
 	/**

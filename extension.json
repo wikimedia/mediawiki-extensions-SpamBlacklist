@@ -44,7 +44,8 @@
 		"EmailBlacklist": "EmailBlacklist.php",
 		"SpamBlacklistHooks": "SpamBlacklistHooks.php",
 		"SpamBlacklist": "SpamBlacklist_body.php",
-		"SpamRegexBatch": "SpamRegexBatch.php"
+		"SpamRegexBatch": "SpamRegexBatch.php",
+		"SpamBlacklistPreAuthenticationProvider": "SpamBlacklistPreAuthenticationProvider.php"
 	},
 	"Hooks": {
 		"EditFilterMergedContent": [
@@ -61,9 +62,6 @@
 		],
 		"UserCanSendEmail": [
 			"SpamBlacklistHooks::userCanSendEmail"
-		],
-		"AbortNewAccount": [
-			"SpamBlacklistHooks::abortNewAccount"
 		],
 		"ParserOutputStashForEdit": [
 			"SpamBlacklistHooks::onParserOutputStashForEdit"
