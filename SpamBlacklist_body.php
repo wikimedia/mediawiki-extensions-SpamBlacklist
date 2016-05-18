@@ -10,7 +10,7 @@ class SpamBlacklist extends BaseBlacklist {
 	 * Changes to external links, for logging purposes
 	 * @var array[]
 	 */
-	private $urlChanges = array();
+	private $urlChangeLog = array();
 
 	/**
 	 * Returns the code for the blacklist implementation
@@ -123,7 +123,7 @@ class SpamBlacklist extends BaseBlacklist {
 		return $retVal;
 	}
 
-	private function shouldDoEventLogging() {
+	private function isLoggingEnabled() {
 		global $wgSpamBlacklistEventLogging;
 		return $wgSpamBlacklistEventLogging && class_exists( 'EventLogging' );
 	}
@@ -136,7 +136,7 @@ class SpamBlacklist extends BaseBlacklist {
 	 * @param string[] $addedLinks
 	 */
 	private function logUrlChanges( $oldLinks, $newLinks, $addedLinks ) {
-		if ( !$this->shouldDoEventLogging() ) {
+		if ( !$this->isLoggingEnabled() ) {
 			return;
 		}
 
@@ -158,7 +158,7 @@ class SpamBlacklist extends BaseBlacklist {
 	 * @param Revision $rev
 	 */
 	public function doLogging( User $user, Title $title, Revision $rev ) {
-		if ( !$this->shouldDoEventLogging() ) {
+		if ( !$this->isLoggingEnabled() ) {
 			return;
 		}
 
@@ -169,7 +169,9 @@ class SpamBlacklist extends BaseBlacklist {
 			'userId' => $user->getId(),
 			'userText' => $user->getName(),
 		);
-		$changes = $this->urlChanges;
+		$changes = $this->urlChangeLog;
+		// Empty the changes queue in case this function gets called more than once
+		$this->urlChangeLog = array();
 
 		DeferredUpdates::addCallableUpdate( function() use ( $changes, $baseInfo ) {
 			foreach ( $changes as $change ) {
@@ -180,30 +182,26 @@ class SpamBlacklist extends BaseBlacklist {
 				);
 			}
 		} );
-
-		// Empty the changes queue in case this function gets called more than once
-		$this->urlChanges = array();
 	}
 
 	/**
-	 * Generate events for each url addition or removal
+	 * Queue log data about change for a url addition or removal
 	 *
 	 * @param string $url
-	 * @param string $type 'insert' or 'remove'
+	 * @param string $action 'insert' or 'remove'
 	 */
-	private function logUrlChange( $url, $type ) {
+	private function logUrlChange( $url, $action ) {
 		$parsed = wfParseUrl( $url );
-		$domain = $parsed['host'];
 		$info = array(
-			'action' => $type,
+			'action' => $action,
 			'protocol' => $parsed['scheme'],
-			'domain' => $domain,
+			'domain' => $parsed['host'],
 			'path' => $parsed['path'],
 			'query' => $parsed['query'],
 			'fragment' => $parsed['fragment'],
 		);
 
-		$this->urlChanges[] = $info;
+		$this->urlChangeLog[] = $info;
 	}
 
 	/**
