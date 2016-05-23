@@ -7,6 +7,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 class SpamBlacklist extends BaseBlacklist {
 
 	/**
+	 * Changes to external links, for logging purposes
 	 * @var array[]
 	 */
 	private $urlChanges = array();
@@ -122,7 +123,7 @@ class SpamBlacklist extends BaseBlacklist {
 		return $retVal;
 	}
 
-	private function doEventLogging() {
+	private function shouldDoEventLogging() {
 		global $wgSpamBlacklistEventLogging;
 		return $wgSpamBlacklistEventLogging && class_exists( 'EventLogging' );
 	}
@@ -135,7 +136,7 @@ class SpamBlacklist extends BaseBlacklist {
 	 * @param string[] $addedLinks
 	 */
 	private function logUrlChanges( $oldLinks, $newLinks, $addedLinks ) {
-		if ( !$this->doEventLogging() ) {
+		if ( !$this->shouldDoEventLogging() ) {
 			return;
 		}
 
@@ -157,7 +158,7 @@ class SpamBlacklist extends BaseBlacklist {
 	 * @param Revision $rev
 	 */
 	public function doLogging( User $user, Title $title, Revision $rev ) {
-		if ( !$this->doEventLogging() ) {
+		if ( !$this->shouldDoEventLogging() ) {
 			return;
 		}
 
@@ -179,6 +180,9 @@ class SpamBlacklist extends BaseBlacklist {
 				);
 			}
 		} );
+
+		// Empty the changes queue in case this function gets called more than once
+		$this->urlChanges = array();
 	}
 
 	/**
