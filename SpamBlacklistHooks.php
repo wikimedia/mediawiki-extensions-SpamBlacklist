@@ -252,6 +252,11 @@ class SpamBlacklistHooks {
 		Status $status,
 		$baseRevId
 	) {
+		if ( $revision ) {
+			BaseBlacklist::getInstance( 'spam' )
+				->doLogging( $user, $wikiPage->getTitle(), $revision );
+		}
+
 		if ( !BaseBlacklist::isLocalSource( $wikiPage->getTitle() ) ) {
 			return true;
 		}
@@ -262,10 +267,6 @@ class SpamBlacklistHooks {
 			$blacklist->clearCache();
 		}
 
-		if ( $revision ) {
-			BaseBlacklist::getInstance( 'spam' )
-				->doLogging( $user, $wikiPage->getTitle(), $revision );
-		}
 
 		return true;
 	}
