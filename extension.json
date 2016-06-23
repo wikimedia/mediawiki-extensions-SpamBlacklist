@@ -51,9 +51,6 @@
 		"EditFilterMergedContent": [
 			"SpamBlacklistHooks::filterMergedContent"
 		],
-		"APIEditBeforeSave": [
-			"SpamBlacklistHooks::filterAPIEditBeforeSave"
-		],
 		"EditFilter": [
 			"SpamBlacklistHooks::validate"
 		],

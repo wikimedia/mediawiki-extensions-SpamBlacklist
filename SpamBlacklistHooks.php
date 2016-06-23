@@ -53,11 +53,6 @@ class SpamBlacklistHooks {
 	static function filterMergedContent( IContextSource $context, Content $content, Status $status, $summary, User $user, $minoredit ) {
 		$title = $context->getTitle();
 
-		if ( isset( $title->spamBlackListFiltered ) && $title->spamBlackListFiltered ) {
-			// already filtered
-			return true;
-		}
-
 		// get the link from the not-yet-saved page content.
 		$editInfo = $context->getWikiPage()->prepareContentForEdit( $content );
 		$pout = $editInfo->output;
@@ -81,6 +76,10 @@ class SpamBlacklistHooks {
 			foreach ( $matches as $match ) {
 				$status->fatal( 'spamprotectionmatch', $match );
 			}
+
+			$status->apiHookResult = [
+				'spamblacklist' => implode( '|', $matches ),
+			];
 		}
 
 		// Always return true, EditPage will look at $status->isOk().
@@ -90,50 +89,6 @@ class SpamBlacklistHooks {
 	public static function onParserOutputStashForEdit( WikiPage $page ) {
 		$spamObj = BaseBlacklist::getInstance( 'spam' );
 		$spamObj->warmCachesForFilter( $page->getTitle() );
-	}
-
-	/**
-	 * Hook function for APIEditBeforeSave.
-	 * This allows blacklist matches to be reported directly in the result structure
-	 * of the API call.
-	 *
-	 * @param $editPage EditPage
-	 * @param $text string
-	 * @param $resultArr array
-	 * @return bool
-	 */
-	static function filterAPIEditBeforeSave( $editPage, $text, &$resultArr ) {
-		$title = $editPage->mArticle->getTitle();
-
-		// get the links from the not-yet-saved page content.
-		$content = ContentHandler::makeContent(
-			$text,
-			$editPage->getTitle(),
-			$editPage->contentModel,
-			$editPage->contentFormat
-		);
-		$editInfo = $editPage->mArticle->prepareContentForEdit( $content, null, null, $editPage->contentFormat );
-		$pout = $editInfo->output;
-		$links = array_keys( $pout->getExternalLinks() );
-
-		// HACK: treat the edit summary as a link
-		$summary = $editPage->summary;
-		if ( $summary !== '' ) {
-			$links[] = $summary;
-		}
-
-		$spamObj = BaseBlacklist::getInstance( 'spam' );
-		$matches = $spamObj->filter( $links, $title );
-
-		if ( $matches !== false ) {
-			$resultArr['spamblacklist'] = implode( '|', $matches );
-		}
-
-		// mark the title, so filterMergedContent can skip it.
-		$title->spamBlackListFiltered = true;
-
-		// return convention for hooks is the inverse of $wgFilterCallback
-		return ( $matches === false );
 	}
 
 	/**
