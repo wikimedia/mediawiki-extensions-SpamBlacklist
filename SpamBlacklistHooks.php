@@ -86,9 +86,12 @@ class SpamBlacklistHooks {
 		return true;
 	}
 
-	public static function onParserOutputStashForEdit( WikiPage $page ) {
+	public static function onParserOutputStashForEdit(
+		WikiPage $page, Content $content, ParserOutput $output
+	) {
+		$links = $output->getExternalLinks();
 		$spamObj = BaseBlacklist::getInstance( 'spam' );
-		$spamObj->warmCachesForFilter( $page->getTitle() );
+		$spamObj->warmCachesForFilter( $page->getTitle(), $links );
 	}
 
 	/**

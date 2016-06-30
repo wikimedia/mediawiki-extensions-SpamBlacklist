@@ -4,6 +4,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit;
 }
 
+use \MediaWiki\MediaWikiServices;
+
 class SpamBlacklist extends BaseBlacklist {
 
 	/**
@@ -44,9 +46,26 @@ class SpamBlacklist extends BaseBlacklist {
 	 *               the action is testing the links rather than attempting to save them
 	 *               (e.g. the API spamblacklist action)
 	 *
-	 * @return Array Matched text(s) if the edit should not be allowed, false otherwise
+	 * @return string[]|bool Matched text(s) if the edit should not be allowed; false otherwise
 	 */
 	function filter( array $links, Title $title = null, $preventLog = false ) {
+		$statsd = MediaWikiServices::getInstance()->getStatsdDataFactory();
+		$cache = ObjectCache::getLocalClusterInstance();
+		$key = $cache->makeKey(
+			'blacklist',
+			$this->getBlacklistType(),
+			'pass',
+			sha1( implode( "\n", $links ) ),
+			(string)$title
+		);
+		// Skip blacklist checks if nothing matched during edit stashing...
+		if ( $cache->get( $key ) ) {
+			$statsd->increment( 'spamblacklist.check-stash.hit' );
+			return false;
+		} else {
+			$statsd->increment( 'spamblacklist.check-stash.miss' );
+		}
+
 		$blacklists = $this->getBlacklists();
 		$whitelists = $this->getWhitelists();
 
@@ -120,6 +139,11 @@ class SpamBlacklist extends BaseBlacklist {
 			}
 		} else {
 			$retVal = false;
+		}
+
+		if ( $retVal === false ) {
+			// Cache the typical negative results
+			$cache->set( $key, 1, $cache::TTL_MINUTE );
 		}
 
 		return $retVal;
@@ -234,8 +258,8 @@ class SpamBlacklist extends BaseBlacklist {
 		);
 	}
 
-	public function warmCachesForFilter( Title $title ) {
-		$this->getCurrentLinks( $title );
+	public function warmCachesForFilter( Title $title, array $entries ) {
+		$this->filter( $entries, $title, true /* no logging */ );
 	}
 
 	/**
