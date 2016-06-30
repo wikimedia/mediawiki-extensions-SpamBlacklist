@@ -67,7 +67,9 @@ class SpamBlacklist extends BaseBlacklist {
 			wfDebugLog( 'SpamBlacklist', "New URLs: " . implode( ', ', $newLinks ) );
 			wfDebugLog( 'SpamBlacklist', "Added URLs: " . implode( ', ', $addedLinks ) );
 
-			$this->logUrlChanges( $oldLinks, $newLinks, $addedLinks );
+			if ( !$preventLog ) {
+				$this->logUrlChanges( $oldLinks, $newLinks, $addedLinks );
+			}
 
 			$links = implode( "\n", $addedLinks );
 
