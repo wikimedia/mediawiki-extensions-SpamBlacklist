@@ -179,7 +179,7 @@ class SpamBlacklist extends BaseBlacklist {
 			foreach ( $changes as $change ) {
 				EventLogging::logEvent(
 					'ExternalLinksChange',
-					15573909,
+					15716074,
 					$baseInfo + $change
 				);
 			}
@@ -194,13 +194,17 @@ class SpamBlacklist extends BaseBlacklist {
 	 */
 	private function logUrlChange( $url, $action ) {
 		$parsed = wfParseUrl( $url );
+		if ( !isset( $parsed['host'] ) ) {
+			wfDebugLog( 'SpamBlacklist', "Unable to parse $url" );
+			return;
+		}
 		$info = array(
 			'action' => $action,
 			'protocol' => $parsed['scheme'],
 			'domain' => $parsed['host'],
-			'path' => $parsed['path'],
-			'query' => $parsed['query'],
-			'fragment' => $parsed['fragment'],
+			'path' => $parsed['path'] !== null ? $parsed['path'] : '',
+			'query' => $parsed['query'] !== null ? $parsed['query'] : '',
+			'fragment' => $parsed['fragment'] !== null ? $parsed['fragment'] : '',
 		);
 
 		$this->urlChangeLog[] = $info;
