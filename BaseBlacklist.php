@@ -409,9 +409,10 @@ abstract class BaseBlacklist {
 	}
 
 	/**
-	 * @param $title Title
+	 * @param Title $title
+	 * @param string[] $entries
 	 */
-	public function warmCachesForFilter( Title $title ) {
+	public function warmCachesForFilter( Title $title, array $entries ) {
 		// subclass this
 	}
 }
