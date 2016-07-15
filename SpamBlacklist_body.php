@@ -144,6 +144,7 @@ class SpamBlacklist extends BaseBlacklist {
 		if ( $retVal === false ) {
 			// Cache the typical negative results
 			$cache->set( $key, 1, $cache::TTL_MINUTE );
+			$statsd->increment( 'spamblacklist.check-stash.store' );
 		}
 
 		return $retVal;
