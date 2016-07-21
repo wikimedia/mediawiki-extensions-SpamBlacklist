@@ -20,7 +20,7 @@
 	"spam-blacklist-desc": "정규 표현식을 사용해 문서에 있는 URL과 등록된 사용자의 이메일 주소를 블랙리스트 처리하여 스팸을 막는 도구",
 	"log-name-spamblacklist": "스팸 블랙리스트 기록",
 	"log-description-spamblacklist": "이 사건은 스팸 블랙리스트의 일치를 추적합니다.",
-	"logentry-spamblacklist-hit": "{{GENDER:$2|$1}} 사용자가 $4을(를) 추가하려고 했을 때에 $3 문서에 대한 스팸 블랙리스트의 일치가 발생했습니다.",
+	"logentry-spamblacklist-hit": "{{GENDER:$2|$1}}님이 $4을(를) 추가하려고 했을 때에 $3 문서에 대한 스팸 블랙리스트의 일치가 발생했습니다.",
 	"right-spamblacklistlog": "스팸 블랙리스트 기록 보기",
 	"action-spamblacklistlog": "스팸 블랙리스트 기록을 볼"
 }
