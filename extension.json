@@ -62,6 +62,9 @@
 		],
 		"ParserOutputStashForEdit": [
 			"SpamBlacklistHooks::onParserOutputStashForEdit"
+		],
+		"UploadVerifyUpload": [
+			"SpamBlacklistHooks::onUploadVerifyUpload"
 		]
 	},
 	"config": {

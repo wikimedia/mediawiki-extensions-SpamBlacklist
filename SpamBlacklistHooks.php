@@ -228,4 +228,45 @@ class SpamBlacklistHooks {
 
 		return true;
 	}
+
+	/**
+	 * @param UploadBase $upload
+	 * @param User $user
+	 * @param array $props
+	 * @param string $comment
+	 * @param string $pageText
+	 * @param array|ApiMessage &$error
+	 * @return bool
+	 */
+	public static function onUploadVerifyUpload( UploadBase $upload, User $user, array $props, $comment, $pageText, &$error ) {
+		$title = $upload->getTitle();
+
+		// get the link from the not-yet-saved page content.
+		$content = ContentHandler::makeContent( $pageText, $title );
+		$parserOptions = $content->getContentHandler()->makeParserOptions( 'canonical' );
+		$output = $content->getParserOutput( $title, null, $parserOptions );
+		$links = array_keys( $output->getExternalLinks() );
+
+		// HACK: treat comment as a link if it contains anything
+		// that looks like it could be a URL or e-mail address.
+		if ( preg_match( '/\S(\.[^\s\d]{2,}|[\/@]\S)/', $comment ) ) {
+			$links[] = $comment;
+		}
+		if ( !$links ) {
+			return true;
+		}
+
+		$spamObj = BaseBlacklist::getInstance( 'spam' );
+		$matches = $spamObj->filter( $links, $title );
+
+		if ( $matches !== false ) {
+			$error = new ApiMessage(
+				wfMessage( 'spamprotectiontext' ),
+				'spamblacklist',
+				array( 'spamblacklist' => array( 'matches' => $matches ) )
+			);
+		}
+
+		return true;
+	}
 }
