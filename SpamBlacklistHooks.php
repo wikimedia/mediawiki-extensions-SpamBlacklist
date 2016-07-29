@@ -7,28 +7,8 @@ use MediaWiki\Auth\AuthManager;
  */
 class SpamBlacklistHooks {
 
-    /**
-     * T99257: Extension registration does not properly support 2d arrays so set it as a global for now
-     */
 	public static function registerExtension() {
-		global $wgSpamBlacklistFiles, $wgBlacklistSettings, $wgSpamBlacklistSettings;
 		global $wgDisableAuthManager, $wgAuthManagerAutoConfig;
-
-		$wgBlacklistSettings = array(
-			'spam' => array(
-				'files' => array( "https://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1" )
-			)
-		);
-
-		/**
-		 * @deprecated
-		 */
-		$wgSpamBlacklistFiles =& $wgBlacklistSettings['spam']['files'];
-
-		/**
-		 * @deprecated
-		 */
-		$wgSpamBlacklistSettings =& $wgBlacklistSettings['spam'];
 
 		if ( class_exists( AuthManager::class ) && !$wgDisableAuthManager ) {
 			$wgAuthManagerAutoConfig['preauth'][SpamBlacklistPreAuthenticationProvider::class] =
