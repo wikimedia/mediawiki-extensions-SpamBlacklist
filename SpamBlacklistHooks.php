@@ -243,7 +243,13 @@ class SpamBlacklistHooks {
 			$error = new ApiMessage(
 				wfMessage( 'spamprotectiontext' ),
 				'spamblacklist',
-				array( 'spamblacklist' => array( 'matches' => $matches ) )
+				array(
+					'spamblacklist' => array( 'matches' => $matches ),
+					'message' => array(
+						'key' => 'spamprotectionmatch',
+						'params' => $matches[0],
+					),
+				)
 			);
 		}
 
