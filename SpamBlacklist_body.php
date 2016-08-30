@@ -7,6 +7,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 use \MediaWiki\MediaWikiServices;
 
 class SpamBlacklist extends BaseBlacklist {
+	const STASH_TTL = 60;
+	const STASH_AGE_DYING = 30;
 
 	/**
 	 * Changes to external links, for logging purposes
@@ -45,10 +47,11 @@ class SpamBlacklist extends BaseBlacklist {
 	 * @param boolean $preventLog Whether to prevent logging of hits. Set to true when
 	 *               the action is testing the links rather than attempting to save them
 	 *               (e.g. the API spamblacklist action)
+	 * @param string $mode Either 'check' or 'stash'
 	 *
 	 * @return string[]|bool Matched text(s) if the edit should not be allowed; false otherwise
 	 */
-	function filter( array $links, Title $title = null, $preventLog = false ) {
+	function filter( array $links, Title $title = null, $preventLog = false, $mode = 'check' ) {
 		$statsd = MediaWikiServices::getInstance()->getStatsdDataFactory();
 		$cache = ObjectCache::getLocalClusterInstance();
 		$key = $cache->makeKey(
@@ -59,11 +62,19 @@ class SpamBlacklist extends BaseBlacklist {
 			(string)$title
 		);
 		// Skip blacklist checks if nothing matched during edit stashing...
-		if ( $cache->get( $key ) ) {
-			$statsd->increment( 'spamblacklist.check-stash.hit' );
-			return false;
-		} else {
-			$statsd->increment( 'spamblacklist.check-stash.miss' );
+		$knownNonMatchAsOf = $cache->get( $key );
+		if ( $mode === 'check' ) {
+			if ( $knownNonMatchAsOf ) {
+				$statsd->increment( 'spamblacklist.check-stash.hit' );
+
+				return false;
+			} else {
+				$statsd->increment( 'spamblacklist.check-stash.miss' );
+			}
+		} elseif ( $mode === 'stash' ) {
+			if ( $knownNonMatchAsOf && ( time() - $knownNonMatchAsOf ) < self::STASH_AGE_DYING ) {
+				return false; // OK; not about to expire soon
+			}
 		}
 
 		$blacklists = $this->getBlacklists();
@@ -143,8 +154,10 @@ class SpamBlacklist extends BaseBlacklist {
 
 		if ( $retVal === false ) {
 			// Cache the typical negative results
-			$cache->set( $key, 1, $cache::TTL_MINUTE );
-			$statsd->increment( 'spamblacklist.check-stash.store' );
+			$cache->set( $key, time(), $cache::TTL_MINUTE );
+			if ( $mode === 'stash' ) {
+				$statsd->increment( 'spamblacklist.check-stash.store' );
+			}
 		}
 
 		return $retVal;
@@ -264,7 +277,7 @@ class SpamBlacklist extends BaseBlacklist {
 	}
 
 	public function warmCachesForFilter( Title $title, array $entries ) {
-		$this->filter( $entries, $title, true /* no logging */ );
+		$this->filter( $entries, $title, true /* no logging */, 'stash' );
 	}
 
 	/**
