@@ -7,8 +7,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 use \MediaWiki\MediaWikiServices;
 
 class SpamBlacklist extends BaseBlacklist {
-	const STASH_TTL = 60;
-	const STASH_AGE_DYING = 30;
+	const STASH_TTL = 180;
+	const STASH_AGE_DYING = 150;
 
 	/**
 	 * Changes to external links, for logging purposes
@@ -154,7 +154,7 @@ class SpamBlacklist extends BaseBlacklist {
 
 		if ( $retVal === false ) {
 			// Cache the typical negative results
-			$cache->set( $key, time(), $cache::TTL_MINUTE );
+			$cache->set( $key, time(), self::STASH_TTL );
 			if ( $mode === 'stash' ) {
 				$statsd->increment( 'spamblacklist.check-stash.store' );
 			}
