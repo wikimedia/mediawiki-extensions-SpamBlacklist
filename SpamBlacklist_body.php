@@ -54,6 +54,8 @@ class SpamBlacklist extends BaseBlacklist {
 	function filter( array $links, Title $title = null, $preventLog = false, $mode = 'check' ) {
 		$statsd = MediaWikiServices::getInstance()->getStatsdDataFactory();
 		$cache = ObjectCache::getLocalClusterInstance();
+
+		sort( $links );
 		$key = $cache->makeKey(
 			'blacklist',
 			$this->getBlacklistType(),
