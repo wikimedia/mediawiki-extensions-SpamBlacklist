@@ -50,7 +50,7 @@ function cleanupArticle( Revision $rev, $regexes, $match ) {
 		$comment = "Cleaning up links to $match";
 	}
 	$wikiPage = new WikiPage( $title );
-	$wikiPage->doEdit( $text, $comment );
+	$wikiPage->doEditContent( ContentHandler::makeContent( $text, $title ), $comment );
 }
 
 //------------------------------------------------------------------------------
