@@ -65,7 +65,9 @@
 		],
 		"UploadVerifyUpload": [
 			"SpamBlacklistHooks::onUploadVerifyUpload"
-		]
+		],
+		"ArticleDelete": "SpamBlacklistHooks::onArticleDelete",
+		"ArticleDeleteComplete": "SpamBlacklistHooks::onArticleDeleteComplete"
 	},
 	"config": {
 		"BlacklistSettings": {

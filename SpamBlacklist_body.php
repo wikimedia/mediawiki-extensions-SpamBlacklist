@@ -175,7 +175,7 @@ class SpamBlacklist extends BaseBlacklist {
 		return $retVal;
 	}
 
-	private function isLoggingEnabled() {
+	public function isLoggingEnabled() {
 		global $wgSpamBlacklistEventLogging;
 		return $wgSpamBlacklistEventLogging && class_exists( 'EventLogging' );
 	}
@@ -187,7 +187,7 @@ class SpamBlacklist extends BaseBlacklist {
 	 * @param string[] $newLinks
 	 * @param string[] $addedLinks
 	 */
-	private function logUrlChanges( $oldLinks, $newLinks, $addedLinks ) {
+	public function logUrlChanges( $oldLinks, $newLinks, $addedLinks ) {
 		if ( !$this->isLoggingEnabled() ) {
 			return;
 		}
@@ -207,15 +207,15 @@ class SpamBlacklist extends BaseBlacklist {
 	 *
 	 * @param User $user
 	 * @param Title $title
-	 * @param Revision $rev
+	 * @param int $revId
 	 */
-	public function doLogging( User $user, Title $title, Revision $rev ) {
+	public function doLogging( User $user, Title $title, $revId ) {
 		if ( !$this->isLoggingEnabled() ) {
 			return;
 		}
 
 		$baseInfo = array(
-			'revId' => $rev->getId(),
+			'revId' => $revId,
 			'pageId' => $title->getArticleID(),
 			'pageNamespace' => $title->getNamespace(),
 			'userId' => $user->getId(),
