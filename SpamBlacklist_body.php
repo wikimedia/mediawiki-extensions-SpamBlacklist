@@ -55,6 +55,16 @@ class SpamBlacklist extends BaseBlacklist {
 		$statsd = MediaWikiServices::getInstance()->getStatsdDataFactory();
 		$cache = ObjectCache::getLocalClusterInstance();
 
+		// If there are no new links, and we are logging,
+		// mark all of the current links as being removed.
+		if ( !$links && $this->isLoggingEnabled() ) {
+			$this->logUrlChanges( $this->getCurrentLinks( $title ), [], [] );
+		}
+
+		if ( !$links ) {
+			return false;
+		}
+
 		sort( $links );
 		$key = $cache->makeKey(
 			'blacklist',

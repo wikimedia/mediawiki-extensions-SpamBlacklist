@@ -43,9 +43,6 @@ class SpamBlacklistHooks {
 		if ( preg_match( '/\S(\.[^\s\d]{2,}|[\/@]\S)/', $summary ) ) {
 			$links[] = $summary;
 		}
-		if ( !$links ) {
-			return true;
-		}
 
 		$spamObj = BaseBlacklist::getInstance( 'spam' );
 		$matches = $spamObj->filter( $links, $title );
