@@ -386,7 +386,9 @@ abstract class BaseBlacklist {
 			__METHOD__
 		);
 
-		return $row ? Revision::newFromRow( $row )->getText() : false;
+		return $row
+			? ContentHandler::getContentText( Revision::newFromRow( $row )->getContent() )
+			: false;
 	}
 
 	/**
