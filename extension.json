@@ -30,6 +30,11 @@
 	"LogActionsHandlers": {
 		"spamblacklist/*": "LogFormatter"
 	},
+	"GrantPermissions": {
+		"viewrestrictedlogs": {
+			"spamblacklistlog": true
+		}
+	},
 	"APIModules": {
 		"spamblacklist": "ApiSpamBlacklist"
 	},
