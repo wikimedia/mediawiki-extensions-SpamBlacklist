@@ -12,6 +12,13 @@
 	"spam-blacklisted-email-text": "E-postadressen din er svartelistes, så du kan ikke sende e-post til andre brukere.",
 	"spam-blacklisted-email-signup": "Den angitte e-postadressen er svartelistet.",
 	"spam-invalid-lines": "Følgende {{PLURAL:$1|linje|linjer}} i spamsvartelista er {{PLURAL:$1|et ugyldig regulært uttrykk|ugyldige regulære uttrykk}} og må rettes før lagring av siden:",
-	"spam-blacklist-desc": "Antispamverktøy basert på regulære uttrykk: [[MediaWiki:Spam-blacklist]] og [[MediaWiki:Spam-whitelist]]",
+	"spam-blacklist-desc": "Antispamverktøy basert på regulære uttrykk som gjør det mulig å svarteliste URL-er i sider og epostadresser for registrerte brukere",
+	"log-name-spamblacklist": "Spamfilterlogg",
+	"log-description-spamblacklist": "Disse hendelsene sporer treff på spamsvartelista.",
+	"logentry-spamblacklist-hit": "{{GENDER:$2|$1}} forårsaket et spamsvartelistetreff på $3 ved å prøve å legge til $4.",
+	"right-spamblacklistlog": "Vise spamfilterloggen",
+	"action-spamblacklistlog": "vise spamfilterloggen",
+	"apihelp-spamblacklist-description": "Valider én eller flere URL-er mot SpamBlacklist.",
+	"apihelp-spamblacklist-param-url": "URL-er som skal valideres mot svartelista.",
 	"apihelp-spamblacklist-example-1": "Sjekk to URL-er mot svartelista"
 }
