@@ -28,7 +28,7 @@
 		"spamblacklist": "spamblacklistlog"
 	},
 	"LogActionsHandlers": {
-		"spamblacklist/*": "LogFormatter"
+		"spamblacklist/*": "SpamBlacklistLogFormatter"
 	},
 	"GrantPermissions": {
 		"viewrestrictedlogs": {
@@ -49,6 +49,7 @@
 		"EmailBlacklist": "EmailBlacklist.php",
 		"SpamBlacklistHooks": "SpamBlacklistHooks.php",
 		"SpamBlacklist": "SpamBlacklist_body.php",
+		"SpamBlacklistLogFormatter": "SpamBlacklistLogFormatter.php",
 		"SpamRegexBatch": "SpamRegexBatch.php",
 		"SpamBlacklistPreAuthenticationProvider": "SpamBlacklistPreAuthenticationProvider.php"
 	},
