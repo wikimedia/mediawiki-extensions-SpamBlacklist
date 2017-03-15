@@ -252,9 +252,9 @@ class SpamBlacklist extends BaseBlacklist {
 			'action' => $action,
 			'protocol' => $parsed['scheme'],
 			'domain' => $parsed['host'],
-			'path' => $parsed['path'] !== null ? $parsed['path'] : '',
-			'query' => $parsed['query'] !== null ? $parsed['query'] : '',
-			'fragment' => $parsed['fragment'] !== null ? $parsed['fragment'] : '',
+			'path' => isset( $parsed['path'] ) ? $parsed['path'] : '',
+			'query' => isset( $parsed['query'] ) ? $parsed['query'] : '',
+			'fragment' => isset( $parsed['fragment'] ) ? $parsed['fragment'] : '',
 		);
 
 		$this->urlChangeLog[] = $info;
