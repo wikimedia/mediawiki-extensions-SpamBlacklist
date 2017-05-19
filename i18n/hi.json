@@ -8,19 +8,9 @@
 	},
 	"spam-blacklist": " #इस सूची में मौजूद कडियाँ जब एक पृष्ठ में जोड़ी गई बाहरी URLs से मेल खाती है तब वह पृष्ठ संपादन से बाधित हो जायेगा।\n #यह सूची केवल इस विकी पर ही प्रभावी है, विश्वव्यापी ब्लैकलिस्ट को भी उद्धृत करें।\n #प्रलेखन के लिए https://www.mediawiki.org/wiki/Extension:SpamBlacklist देखें\n #<!-- इस पंक्तीं को ऐसे के ऐसे ही रहने दें --> <pre>\n#\n#वाक्य विश्लेषण निम्नांकित है:\n#  * हर जगह \"#\" संकेत से लेकर पंक्ति के अंत तक एक ही टिपण्णी है\n#  * प्रत्येक अरिक्त पंक्ति एक टुकडा है जो कि URLs के अंतर्गत केवल आयोजकों से मेल खाता है\n\n #</pre> <!-- इस पंक्तीं को ऐसे के ऐसे ही रहने दें -->",
 	"spam-whitelist": " #<!-- इस पंक्तीं को ऐसे के ऐसे ही रहने दें --> <pre>\n# बाहरी कडियाँ जो इस सूची से मेल खाती है, वह कभी भी बाधित *नहीं* होंगी\n# ब्लैकलिस्ट प्रवेशिका द्वारा बाधित कि गई हैं।\n#\n# वाक्य विश्लेषण निम्नांकित है:\n#  * हर जगह \"#\" संकेत से लेकर पंक्ति के अंत तक एक ही टिपण्णी है\n#  * प्रत्येक अरिक्त पंक्ति एक टुकडा है जो कि URLs के अंतर्गत केवल आयोजकों से मेल खाता है\n\n #</pre> <!-- इस पंक्तीं को ऐसे के ऐसे ही रहने दें -->",
-	"email-blacklist": " #<!-- leave this line exactly as it is --> <pre>\n# Email addresses matching this list will be blocked from registering or sending emails\n# This list affects only this wiki; refer also to the global blacklist.\n# For documentation see https://www.mediawiki.org/wiki/Extension:SpamBlacklist\n#\n# Syntax is as follows:\n#   * Everything from a \"#\" character to the end of the line is a comment\n#   * Every non-blank line is a regex fragment which will only match hosts inside email addresses\n\n #</pre> <!-- leave this line exactly as it is -->",
-	"email-whitelist": " #<!-- leave this line exactly as it is --> <pre>\n# Email addresses matching this list will *not* be blocked even if they would\n# have been blocked by blacklist entries.\n#\n# Syntax is as follows:\n#   * Everything from a \"#\" character to the end of the line is a comment\n#   * Every non-blank line is a regex fragment which will only match hosts inside email addresses\n\n #</pre> <!-- leave this line exactly as it is -->",
-	"spam-blacklisted-email": "Blacklisted email address",
-	"spam-blacklisted-email-text": "Your email address is currently blacklisted from sending emails to other users.",
-	"spam-blacklisted-email-signup": "The given email address is currently blacklisted from use.",
 	"spam-invalid-lines": "निम्नांकित अवांछित ब्लैकलिस्ट {{PLURAL:$1|पंक्ति|पंक्तियाँ}} अमान्य नियमित {{PLURAL:$1|अभिव्यक्ति है|अभिव्यक्तियाँ हैं}} और पृष्ठ को जमा कराने से पहले ठीक करना चाहिए:",
 	"spam-blacklist-desc": "रेजएक्स पर आधारित स्पैम रोकने वाला उपकरण है, जो पंजीकृत सदस्यों को पन्नों और ईमेल में यूआरएल डालने से रोकता है।",
 	"log-name-spamblacklist": "स्पैम कालीसूची लॉग",
-	"log-description-spamblacklist": "These events track spam blacklist hits.",
-	"logentry-spamblacklist-hit": "{{GENDER:$2|$1}} caused a spam blacklist hit on $3 by attempting to add $4.",
 	"right-spamblacklistlog": "स्पैम कालीसूची लॉग देखें",
-	"action-spamblacklistlog": "स्पैम कालीसूची लॉग देखें",
-	"apihelp-spamblacklist-description": "Validate one or more URLs against the SpamBlacklist.",
-	"apihelp-spamblacklist-param-url": "URLs to validate against the blacklist.",
-	"apihelp-spamblacklist-example-1": "Check two URLs against the blacklist"
+	"action-spamblacklistlog": "स्पैम कालीसूची लॉग देखें"
 }
