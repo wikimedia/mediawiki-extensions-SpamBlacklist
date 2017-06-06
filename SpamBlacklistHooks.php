@@ -94,7 +94,7 @@ class SpamBlacklistHooks {
 			return true;
 		}
 
-		$hookErr = array( 'spam-blacklisted-email', 'spam-blacklisted-email-text', null );
+		$hookErr = [ 'spam-blacklisted-email', 'spam-blacklisted-email-text', null ];
 
 		return false;
 	}
@@ -131,7 +131,7 @@ class SpamBlacklistHooks {
 	static function validate( $editPage, $text, $section, &$hookError ) {
 		$thisPageName = $editPage->mTitle->getPrefixedDBkey();
 
-		if( !BaseBlacklist::isLocalSource( $editPage->mTitle ) ) {
+		if ( !BaseBlacklist::isLocalSource( $editPage->mTitle ) ) {
 			wfDebugLog( 'SpamBlacklist',
 				"Spam blacklist validator: [[$thisPageName]] not a local blacklist\n"
 			);
@@ -146,7 +146,7 @@ class SpamBlacklistHooks {
 		$lines = explode( "\n", $text );
 
 		$badLines = SpamRegexBatch::getBadLines( $lines, BaseBlacklist::getInstance( $type ) );
-		if( $badLines ) {
+		if ( $badLines ) {
 			wfDebugLog( 'SpamBlacklist',
 				"Spam blacklist validator: [[$thisPageName]] given invalid input lines: " .
 					implode( ', ', $badLines ) . "\n"
@@ -217,7 +217,6 @@ class SpamBlacklistHooks {
 			$blacklist->clearCache();
 		}
 
-
 		return true;
 	}
 
@@ -262,13 +261,13 @@ class SpamBlacklistHooks {
 			$error = new ApiMessage(
 				wfMessage( 'spamprotectiontext' ),
 				'spamblacklist',
-				array(
-					'spamblacklist' => array( 'matches' => $matches ),
-					'message' => array(
+				[
+					'spamblacklist' => [ 'matches' => $matches ],
+					'message' => [
 						'key' => 'spamprotectionmatch',
 						'params' => $matches[0],
-					),
-				)
+					],
+				]
 			);
 		}
 
