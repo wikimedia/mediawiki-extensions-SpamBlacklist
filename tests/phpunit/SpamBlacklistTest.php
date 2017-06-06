@@ -21,30 +21,30 @@ class SpamBlacklistTest extends MediaWikiTestCase {
 	 * @var array
 	 */
 	protected
-		$blacklist = array( '\b01bags\.com\b', 'sytes\.net' ),
-		$whitelist = array( 'a5b\.sytes\.net' );
+		$blacklist = [ '\b01bags\.com\b', 'sytes\.net' ],
+		$whitelist = [ 'a5b\.sytes\.net' ];
 
 	public function spamProvider() {
-		return array(
-			'no spam' => array(
+		return [
+			'no spam' => [
 				[ 'https://example.com' ],
 				false,
-			),
-			'revision with spam, with additional non-spam' => array(
+			],
+			'revision with spam, with additional non-spam' => [
 				[ 'https://foo.com', 'http://01bags.com', 'http://bar.com' ],
 				[ '01bags.com' ],
-			),
+			],
 
-			'revision with spam using full width stop normalization' => array(
+			'revision with spam using full width stop normalization' => [
 				[ 'http://01bags．com' ],
 				[ '01bags.com' ],
-			),
+			],
 
-			'revision with domain blacklisted as spam, but subdomain whitelisted' => array(
+			'revision with domain blacklisted as spam, but subdomain whitelisted' => [
 				[ 'http://a5b.sytes.net' ],
 				false,
-			),
-		);
+			],
+		];
 	}
 
 	/**
@@ -61,9 +61,9 @@ class SpamBlacklistTest extends MediaWikiTestCase {
 		// create spam filter
 		$this->spamFilter = new SpamBlacklist;
 
-		$this->setMwGlobals( 'wgBlacklistSettings', array(
-			'files' => array(),
-		) );
+		$this->setMwGlobals( 'wgBlacklistSettings', [
+			'files' => [],
+		] );
 
 		\MessageCache::singleton()->enable();
 		$this->insertPage( 'MediaWiki:Spam-blacklist', implode( "\n", $this->blacklist ) );

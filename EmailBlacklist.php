@@ -53,7 +53,6 @@ class EmailBlacklist extends BaseBlacklist {
 			}
 		}
 
-
 		# Do the match
 		wfDebugLog( 'SpamBlacklist', "Checking e-mail address against " . count( $blacklists ) .
 			" regexes: " . implode( ', ', $blacklists ) . "\n" );
