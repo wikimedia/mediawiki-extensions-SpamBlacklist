@@ -10,19 +10,27 @@ class SpamBlacklistTest extends MediaWikiTestCase {
 	protected $spamFilter;
 
 	/**
-	 * Spam blacklist & whitelist regexes. Examples taken from:
+	 * Spam blacklist regexes. Examples taken from:
 	 *
 	 * @see http://meta.wikimedia.org/wiki/Spam_blacklist
 	 * @see http://en.wikipedia.org/wiki/MediaWiki:Spam-blacklist
+	 *
+	 * via Flow extension
+	 *
+	 * @var array
+	 */
+	protected $blacklist = [ '\b01bags\.com\b', 'sytes\.net' ];
+
+	/**
+	 * Spam whitelist regexes. Examples taken from:
+	 *
 	 * @see http://en.wikipedia.org/wiki/MediaWiki:Spam-whitelist
 	 *
 	 * via Flow extension
 	 *
 	 * @var array
 	 */
-	protected
-		$blacklist = [ '\b01bags\.com\b', 'sytes\.net' ],
-		$whitelist = [ 'a5b\.sytes\.net' ];
+	protected $whitelist = [ 'a5b\.sytes\.net' ];
 
 	public function spamProvider() {
 		return [
