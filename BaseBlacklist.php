@@ -179,12 +179,15 @@ abstract class BaseBlacklist {
 	/**
 	 * Returns the type of blacklist from the given title
 	 *
+	 * @todo building a regex for this is pretty overkill
 	 * @param Title $title
 	 * @return bool|string
 	 */
 	public static function getTypeFromTitle( Title $title ) {
-		$types = array_map( 'preg_quote', array_keys( self::$blacklistTypes ), [ '/' ] );
-		$regex = '/(' . implode( '|', $types ).  ')-(?:Blacklist|Whitelist)/';
+		global $wgContLang;
+
+		$types = array_map( [ $wgContLang, 'ucfirst' ], array_keys( self::$blacklistTypes ) );
+		$regex = '/(' . implode( '|', $types ).  ')-(?:blacklist|whitelist)/';
 
 		if ( preg_match( $regex, $title->getDBkey(), $m ) ) {
 			return strtolower( $m[1] );
