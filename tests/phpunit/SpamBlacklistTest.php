@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @group Flow
+ * @group SpamBlacklist
  */
 class SpamBlacklistTest extends MediaWikiTestCase {
 	/**
