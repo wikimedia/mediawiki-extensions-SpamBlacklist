@@ -255,7 +255,7 @@ abstract class BaseBlacklist {
 
 		wfDebugLog( 'SpamBlacklist', "Loading $listType regex..." );
 
-		if ( count( $this->files ) == 0 ){
+		if ( count( $this->files ) == 0 ) {
 			# No lists
 			wfDebugLog( 'SpamBlacklist', "no files specified\n" );
 			return [];

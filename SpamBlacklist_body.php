@@ -151,7 +151,7 @@ class SpamBlacklist extends BaseBlacklist {
 					if ( !$preventLog ) {
 						$this->logFilterHit( $title, $imploded ); // Log it
 					}
-					if ( $retVal === false ){
+					if ( $retVal === false ) {
 						$retVal = [];
 					}
 					$retVal = array_merge( $retVal, $fullUrls[1] );
@@ -225,7 +225,7 @@ class SpamBlacklist extends BaseBlacklist {
 		// Empty the changes queue in case this function gets called more than once
 		$this->urlChangeLog = [];
 
-		DeferredUpdates::addCallableUpdate( function() use ( $changes, $baseInfo ) {
+		DeferredUpdates::addCallableUpdate( function () use ( $changes, $baseInfo ) {
 			foreach ( $changes as $change ) {
 				EventLogging::logEvent(
 					'ExternalLinksChange',
