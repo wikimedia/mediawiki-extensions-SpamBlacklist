@@ -20,9 +20,12 @@
 	"spam-invalid-lines": "{{PLURAL:$1|A linha|As linhas}} a seguir {{PLURAL:$1|é uma expressão regular|são expressões regulares}} (regex) {{PLURAL:$1|inválida e precisa|inválidas e precisam}} ser {{PLURAL:$1|corrigida|corrigidas}} antes de salvar a página:",
 	"spam-blacklist-desc": "Ferramenta anti-spam baseada em expressões regulares que permite adicionar URLs numa lista negra, barrando-os em páginas e também em emails enviados a usuários registrados",
 	"log-name-spamblacklist": "Registro da lista negra de spam",
+	"log-description-spamblacklist": "Esses eventos rastreiam hits na lista negra de spam.",
 	"logentry-spamblacklist-hit": "{{GENDER:$2|$1}} causou uma correspondência na lista negra de spam em $3, tentando adicionar $4.",
 	"right-spamblacklistlog": "Ver os registros da lista negra de spam",
 	"action-spamblacklistlog": "ver os registros da lista negra de spam",
 	"apihelp-spamblacklist-description": "Valide um ou mais URLs contra o SpamBlacklist.",
-	"apihelp-spamblacklist-summary": "Valide um ou mais URLs contra o SpamBlacklist."
+	"apihelp-spamblacklist-summary": "Valide um ou mais URLs contra o SpamBlacklist.",
+	"apihelp-spamblacklist-param-url": "URLs para validar contra a lista negra.",
+	"apihelp-spamblacklist-example-1": "Verifique dois URLs contra a lista negra"
 }
