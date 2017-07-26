@@ -93,9 +93,9 @@ class SpamRegexBatch {
 	 * @return array of regexes
 	 */
 	static function buildSafeRegexes( $lines, BaseBlacklist $blacklist, $fileName=false ) {
-		$lines = SpamRegexBatch::stripLines( $lines );
-		$regexes = SpamRegexBatch::buildRegexes( $lines, $blacklist );
-		if ( SpamRegexBatch::validateRegexes( $regexes ) ) {
+		$lines = self::stripLines( $lines );
+		$regexes = self::buildRegexes( $lines, $blacklist );
+		if ( self::validateRegexes( $regexes ) ) {
 			return $regexes;
 		} else {
 			// _Something_ broke... rebuild line-by-line; it'll be
@@ -104,7 +104,7 @@ class SpamRegexBatch {
 			if ( $fileName ) {
 				wfDebugLog( 'SpamBlacklist', "Spam blacklist warning: bogus line in $fileName\n" );
 			}
-			return SpamRegexBatch::buildRegexes( $lines, $blacklist, 0 );
+			return self::buildRegexes( $lines, $blacklist, 0 );
 		}
 	}
 
@@ -116,7 +116,7 @@ class SpamRegexBatch {
 	 * @return array of input lines which produce invalid input, or empty array if no problems
 	 */
 	static function getBadLines( $lines, BaseBlacklist $blacklist ) {
-		$lines = SpamRegexBatch::stripLines( $lines );
+		$lines = self::stripLines( $lines );
 
 		$badLines = [];
 		foreach ( $lines as $line ) {
@@ -126,16 +126,16 @@ class SpamRegexBatch {
 			}
 		}
 
-		$regexes = SpamRegexBatch::buildRegexes( $lines, $blacklist );
-		if ( SpamRegexBatch::validateRegexes( $regexes ) ) {
+		$regexes = self::buildRegexes( $lines, $blacklist );
+		if ( self::validateRegexes( $regexes ) ) {
 			// No other problems!
 			return $badLines;
 		}
 
 		// Something failed in the batch, so check them one by one.
 		foreach ( $lines as $line ) {
-			$regexes = SpamRegexBatch::buildRegexes( [ $line ], $blacklist );
-			if ( !SpamRegexBatch::validateRegexes( $regexes ) ) {
+			$regexes = self::buildRegexes( [ $line ], $blacklist );
+			if ( !self::validateRegexes( $regexes ) ) {
 				$badLines[] = $line;
 			}
 		}
@@ -153,7 +153,7 @@ class SpamRegexBatch {
 	 */
 	static function regexesFromText( $source, BaseBlacklist $blacklist, $fileName=false ) {
 		$lines = explode( "\n", $source );
-		return SpamRegexBatch::buildSafeRegexes( $lines, $blacklist, $fileName );
+		return self::buildSafeRegexes( $lines, $blacklist, $fileName );
 	}
 
 	/**
@@ -167,7 +167,7 @@ class SpamRegexBatch {
 	static function regexesFromMessage( $message, BaseBlacklist $blacklist ) {
 		$source = wfMessage( $message )->inContentLanguage();
 		if ( !$source->isDisabled() ) {
-			return SpamRegexBatch::regexesFromText( $source->plain(), $blacklist );
+			return self::regexesFromText( $source->plain(), $blacklist );
 		} else {
 			return [];
 		}
