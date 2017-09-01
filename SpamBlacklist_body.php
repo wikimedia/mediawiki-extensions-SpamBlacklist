@@ -40,11 +40,11 @@ class SpamBlacklist extends BaseBlacklist {
 
 	/**
 	 * @param string[] $links An array of links to check against the blacklist
-	 * @param Title  $title The title of the page to which the filter shall be applied.
+	 * @param Title $title The title of the page to which the filter shall be applied.
 	 *               This is used to load the old links already on the page, so
 	 *               the filter is only applied to links that got added. If not given,
 	 *               the filter is applied to all $links.
-	 * @param boolean $preventLog Whether to prevent logging of hits. Set to true when
+	 * @param bool $preventLog Whether to prevent logging of hits. Set to true when
 	 *               the action is testing the links rather than attempting to save them
 	 *               (e.g. the API spamblacklist action)
 	 * @param string $mode Either 'check' or 'stash'

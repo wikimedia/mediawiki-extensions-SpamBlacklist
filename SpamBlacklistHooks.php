@@ -22,11 +22,11 @@ class SpamBlacklistHooks {
 	 * Hook function for EditFilterMergedContent
 	 *
 	 * @param IContextSource $context
-	 * @param Content        $content
-	 * @param Status         $status
-	 * @param string         $summary
-	 * @param User           $user
-	 * @param bool           $minoredit
+	 * @param Content $content
+	 * @param Status $status
+	 * @param string $summary
+	 * @param User $user
+	 * @param bool $minoredit
 	 *
 	 * @return bool
 	 */
@@ -176,16 +176,16 @@ class SpamBlacklistHooks {
 	 * Clear local spam blacklist caches on page save.
 	 *
 	 * @param Page $wikiPage
-	 * @param User     $user
-	 * @param Content  $content
-	 * @param string   $summary
-	 * @param bool     $isMinor
-	 * @param bool     $isWatch
-	 * @param string   $section
-	 * @param int      $flags
+	 * @param User $user
+	 * @param Content $content
+	 * @param string $summary
+	 * @param bool $isMinor
+	 * @param bool $isWatch
+	 * @param string $section
+	 * @param int $flags
 	 * @param Revision|null $revision
-	 * @param Status   $status
-	 * @param int      $baseRevId
+	 * @param Status $status
+	 * @param int $baseRevId
 	 *
 	 * @return bool
 	 */
