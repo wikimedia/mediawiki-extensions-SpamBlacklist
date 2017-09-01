@@ -122,23 +122,24 @@ class SpamBlacklistHooks {
 	 * Confirm that a local blacklist page being saved is valid,
 	 * and toss back a warning to the user if it isn't.
 	 *
-	 * @param $editPage EditPage
-	 * @param $text string
-	 * @param $section string
-	 * @param $hookError string
+	 * @param EditPage $editPage
+	 * @param string $text
+	 * @param string $section
+	 * @param string $hookError
 	 * @return bool
 	 */
-	static function validate( $editPage, $text, $section, &$hookError ) {
-		$thisPageName = $editPage->mTitle->getPrefixedDBkey();
+	static function validate( EditPage $editPage, $text, $section, &$hookError ) {
+		$title = $editPage->getTitle();
+		$thisPageName = $title->getPrefixedDBkey();
 
-		if ( !BaseBlacklist::isLocalSource( $editPage->mTitle ) ) {
+		if ( !BaseBlacklist::isLocalSource( $title ) ) {
 			wfDebugLog( 'SpamBlacklist',
 				"Spam blacklist validator: [[$thisPageName]] not a local blacklist\n"
 			);
 			return true;
 		}
 
-		$type = BaseBlacklist::getTypeFromTitle( $editPage->mTitle );
+		$type = BaseBlacklist::getTypeFromTitle( $title );
 		if ( $type === false ) {
 			return true;
 		}
