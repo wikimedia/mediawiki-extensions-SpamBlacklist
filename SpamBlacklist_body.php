@@ -275,7 +275,7 @@ class SpamBlacklist extends BaseBlacklist {
 			$cache->makeKey( 'external-link-list', $title->getLatestRevID() ),
 			$cache::TTL_MINUTE,
 			function ( $oldValue, &$ttl, array &$setOpts ) use ( $title ) {
-				$dbr = wfGetDB( DB_SLAVE );
+				$dbr = wfGetDB( DB_REPLICA );
 				$setOpts += Database::getCacheSetOptions( $dbr );
 
 				return $dbr->selectFieldValues(

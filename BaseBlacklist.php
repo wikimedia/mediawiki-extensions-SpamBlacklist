@@ -372,7 +372,7 @@ abstract class BaseBlacklist {
 		// Load all the relevant tables from the correct DB.
 		// This assumes that old_text is the actual text or
 		// that the external store system is at least unified.
-		$row = wfGetDB( DB_SLAVE, [], $wiki )->selectRow(
+		$row = wfGetDB( DB_REPLICA, [], $wiki )->selectRow(
 			[ 'page', 'revision', 'text' ],
 			array_merge(
 				Revision::selectFields(),

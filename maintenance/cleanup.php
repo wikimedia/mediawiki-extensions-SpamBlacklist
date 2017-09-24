@@ -91,7 +91,7 @@ if ( !$regexes ) {
 	exit( 1 );
 }
 
-$dbr = wfGetDB( DB_SLAVE );
+$dbr = wfGetDB( DB_REPLICA );
 $maxID = $dbr->selectField( 'page', 'MAX(page_id)' );
 $reportingInterval = 100;
 
