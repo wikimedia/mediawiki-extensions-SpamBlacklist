@@ -74,8 +74,8 @@ abstract class BaseBlacklist {
 	/**
 	 * Adds a blacklist class to the registry
 	 *
-	 * @param $type string
-	 * @param $class string
+	 * @param string $type
+	 * @param string $class
 	 */
 	public static function addBlacklistType( $type, $class ) {
 		self::$blacklistTypes[$type] = $class;
@@ -93,7 +93,7 @@ abstract class BaseBlacklist {
 	/**
 	 * Returns an instance of the given blacklist
 	 *
-	 * @param $type string Code for the blacklist
+	 * @param string $type Code for the blacklist
 	 * @return BaseBlacklist
 	 * @throws Exception
 	 */
@@ -405,7 +405,7 @@ abstract class BaseBlacklist {
 	/**
 	 * Returns the end of the regex for matches
 	 *
-	 * @param $batchSize
+	 * @param int $batchSize
 	 * @return string
 	 */
 	public function getRegexEnd( $batchSize ) {

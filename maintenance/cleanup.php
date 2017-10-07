@@ -11,6 +11,9 @@ require_once 'SpamBlacklist_body.php';
 
 /**
  * Find the latest revision of the article that does not contain spam and revert to it
+ * @param Revision $rev
+ * @param array $regexes
+ * @param array $match
  */
 function cleanupArticle( Revision $rev, $regexes, $match ) {
 	$title = $rev->getTitle();

@@ -83,8 +83,8 @@ class SpamBlacklistHooks {
 	/**
 	 * Verify that the user can send emails
 	 *
-	 * @param $user User
-	 * @param $hookErr array
+	 * @param User &$user
+	 * @param array &$hookErr
 	 * @return bool
 	 */
 	public static function userCanSendEmail( &$user, &$hookErr ) {
@@ -102,8 +102,8 @@ class SpamBlacklistHooks {
 	/**
 	 * Processes new accounts for valid email addresses
 	 *
-	 * @param $user User
-	 * @param $abortError
+	 * @param User $user
+	 * @param string &$abortError
 	 * @return bool
 	 */
 	public static function abortNewAccount( $user, &$abortError ) {
@@ -125,7 +125,7 @@ class SpamBlacklistHooks {
 	 * @param EditPage $editPage
 	 * @param string $text
 	 * @param string $section
-	 * @param string $hookError
+	 * @param string &$hookError
 	 * @return bool
 	 */
 	static function validate( EditPage $editPage, $text, $section, &$hookError ) {
@@ -276,10 +276,10 @@ class SpamBlacklistHooks {
 	}
 
 	/**
-	 * @param WikiPage $article
-	 * @param User $user
-	 * @param $reason
-	 * @param $error
+	 * @param WikiPage &$article
+	 * @param User &$user
+	 * @param string &$reason
+	 * @param string &$error
 	 */
 	public static function onArticleDelete( WikiPage &$article, User &$user, &$reason, &$error ) {
 		/** @var SpamBlacklist $spam */
@@ -295,10 +295,10 @@ class SpamBlacklistHooks {
 	}
 
 	/**
-	 * @param WikiPage $page
-	 * @param User $user
-	 * @param $reason
-	 * @param $id
+	 * @param WikiPage &$page
+	 * @param User &$user
+	 * @param string $reason
+	 * @param int $id
 	 * @param Content|null $content
 	 * @param LogEntry $logEntry
 	 */

@@ -265,7 +265,7 @@ class SpamBlacklist extends BaseBlacklist {
 	 * ignore them on a second run.
 	 *
 	 * WARNING: I can add more *of the same link* with no problem here.
-	 * @param $title Title
+	 * @param Title $title
 	 * @return array
 	 */
 	function getCurrentLinks( Title $title ) {
@@ -304,7 +304,7 @@ class SpamBlacklist extends BaseBlacklist {
 	/**
 	 * Returns the end of the regex for matches
 	 *
-	 * @param $batchSize
+	 * @param int $batchSize
 	 * @return string
 	 */
 	public function getRegexEnd( $batchSize ) {

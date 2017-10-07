@@ -55,7 +55,7 @@ class SpamRegexBatch {
 	/**
 	 * Confirm that a set of regexes is either empty or valid.
 	 *
-	 * @param $regexes array set of regexes
+	 * @param array $regexes set of regexes
 	 * @return bool true if ok, false if contains invalid lines
 	 */
 	static function validateRegexes( $regexes ) {
@@ -74,7 +74,7 @@ class SpamRegexBatch {
 	/**
 	 * Strip comments and whitespace, then remove blanks
 	 *
-	 * @param $lines array
+	 * @param array $lines
 	 * @return array
 	 */
 	static function stripLines( $lines ) {
@@ -87,9 +87,9 @@ class SpamRegexBatch {
 	/**
 	 * Do a sanity check on the batch regex.
 	 *
-	 * @param $lines string unsanitized input lines
-	 * @param $blacklist BaseBlacklist
-	 * @param $fileName bool|string optional for debug reporting
+	 * @param string $lines unsanitized input lines
+	 * @param BaseBlacklist $blacklist
+	 * @param bool|string $fileName optional for debug reporting
 	 * @return array of regexes
 	 */
 	static function buildSafeRegexes( $lines, BaseBlacklist $blacklist, $fileName=false ) {
@@ -112,7 +112,7 @@ class SpamRegexBatch {
 	 * Returns an array of invalid lines
 	 *
 	 * @param array $lines
-	 * @param $blacklist BaseBlacklist
+	 * @param BaseBlacklist $blacklist
 	 * @return array of input lines which produce invalid input, or empty array if no problems
 	 */
 	static function getBadLines( $lines, BaseBlacklist $blacklist ) {
@@ -146,9 +146,9 @@ class SpamRegexBatch {
 	 * Build a set of regular expressions from the given multiline input text,
 	 * with empty lines and comments stripped.
 	 *
-	 * @param $source string
-	 * @param $blacklist BaseBlacklist
-	 * @param $fileName bool|string optional, for reporting of bad files
+	 * @param string $source
+	 * @param BaseBlacklist $blacklist
+	 * @param bool|string $fileName optional, for reporting of bad files
 	 * @return array of regular expressions, potentially empty
 	 */
 	static function regexesFromText( $source, BaseBlacklist $blacklist, $fileName=false ) {
@@ -160,8 +160,8 @@ class SpamRegexBatch {
 	 * Build a set of regular expressions from a MediaWiki message.
 	 * Will be correctly empty if the message isn't present.
 	 *
-	 * @param $message string
-	 * @param $blacklist BaseBlacklist
+	 * @param string $message
+	 * @param BaseBlacklist $blacklist
 	 * @return array of regular expressions, potentially empty
 	 */
 	static function regexesFromMessage( $message, BaseBlacklist $blacklist ) {
