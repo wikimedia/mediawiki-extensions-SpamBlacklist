@@ -9,9 +9,8 @@
 	"descriptionmsg": "spam-blacklist-desc",
 	"type": "antispam",
 	"license-name": "GPL-2.0+",
-	"callback": "SpamBlacklistHooks::registerExtension",
 	"requires": {
-		"MediaWiki": ">= 1.26.0"
+		"MediaWiki": ">= 1.27.0"
 	},
 	"GroupPermissions": {
 		"sysop": {
@@ -84,6 +83,13 @@
 		},
 		"LogSpamBlacklistHits": false,
 		"SpamBlacklistEventLogging": false
+	},
+	"AuthManagerAutoConfig": {
+		"preauth": {
+			"SpamBlacklistPreAuthenticationProvider": {
+				"class": "SpamBlacklistPreAuthenticationProvider"
+			}
+		}
 	},
 	"manifest_version": 1
 }

@@ -1,22 +1,9 @@
 <?php
 
-use MediaWiki\Auth\AuthManager;
-
 /**
  * Hooks for the spam blacklist extension
  */
 class SpamBlacklistHooks {
-
-	public static function registerExtension() {
-		global $wgDisableAuthManager, $wgAuthManagerAutoConfig;
-
-		if ( class_exists( AuthManager::class ) && !$wgDisableAuthManager ) {
-			$wgAuthManagerAutoConfig['preauth'][SpamBlacklistPreAuthenticationProvider::class] =
-				[ 'class' => SpamBlacklistPreAuthenticationProvider::class ];
-		} else {
-			Hooks::register( 'AbortNewAccount', 'SpamBlacklistHooks::abortNewAccount' );
-		}
-	}
 
 	/**
 	 * Hook function for EditFilterMergedContent
@@ -96,24 +83,6 @@ class SpamBlacklistHooks {
 
 		$hookErr = [ 'spam-blacklisted-email', 'spam-blacklisted-email-text', null ];
 
-		return false;
-	}
-
-	/**
-	 * Processes new accounts for valid email addresses
-	 *
-	 * @param User $user
-	 * @param string &$abortError
-	 * @return bool
-	 */
-	public static function abortNewAccount( $user, &$abortError ) {
-		/** @var $blacklist EmailBlacklist */
-		$blacklist = BaseBlacklist::getInstance( 'email' );
-		if ( $blacklist->checkUser( $user ) ) {
-			return true;
-		}
-
-		$abortError = wfMessage( 'spam-blacklisted-email-signup' )->escaped();
 		return false;
 	}
 
