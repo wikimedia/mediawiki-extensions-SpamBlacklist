@@ -12,6 +12,7 @@
 	"spam-blacklisted-email": "pasilsil tuway milangat piazihan-tu-sulit a imyiyo(email) puenengan",
 	"spam-blacklisted-email-text": "numisuay imyiyo(email) puenengan ayza mapacumud tu malangat  piazihan tu sulit, a mitena’ tunumisu pabahel tu imyiyo (email) pabeli tu zumaay a misaungayay.",
 	"spam-blacklisted-email-signup": "nipabeliay a imyiyo(email) puenengan ayzasa mapasilsil tu malangat piazihan tu sulit，la’cus pisaungay",
+	"spam-invalid-lines": "isasa’ patahtah a langat piazihan-tu-sulit izaw ku{{PLURAL:$1|cacay|yadah}} pisaungay tu la’cusay a tatungusay pakatineng a zateng, kanca misumad kyu kapah misuped tina kasabelih.",
 	"spam-blacklist-desc": "i tatungusay pakatineng a zateng tu palana’an a mitena’ patahtah sakaluk, taneng malangat ku kasabelih labu’ay URL atu pangangan tu misaungayay a Email ngangan nu luma’.",
 	"log-name-spamblacklist": "patahtah a malangat ku nasulitan",
 	"log-description-spamblacklist": "tina belih nasulit tu sacahamin matatungus patahtah malangat piazihan-tu-sulit a sikawaw.",
