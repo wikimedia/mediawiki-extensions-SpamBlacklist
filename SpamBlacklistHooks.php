@@ -145,7 +145,7 @@ class SpamBlacklistHooks {
 	 * Hook function for PageContentSaveComplete
 	 * Clear local spam blacklist caches on page save.
 	 *
-	 * @param Page $wikiPage
+	 * @param WikiPage $wikiPage
 	 * @param User $user
 	 * @param Content $content
 	 * @param string $summary
@@ -160,7 +160,7 @@ class SpamBlacklistHooks {
 	 * @return bool
 	 */
 	static function pageSaveContent(
-		Page $wikiPage,
+		WikiPage $wikiPage,
 		User $user,
 		Content $content,
 		$summary,
