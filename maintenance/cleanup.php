@@ -95,7 +95,7 @@ if ( !$regexes ) {
 }
 
 $dbr = wfGetDB( DB_REPLICA );
-$maxID = $dbr->selectField( 'page', 'MAX(page_id)' );
+$maxID = (int)$dbr->selectField( 'page', 'MAX(page_id)' );
 $reportingInterval = 100;
 
 print "Regexes are " . implode( ', ', array_map( 'count', $regexes ) ) . " bytes\n";
