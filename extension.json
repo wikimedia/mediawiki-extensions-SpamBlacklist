@@ -43,14 +43,14 @@
 		]
 	},
 	"AutoloadClasses": {
-		"ApiSpamBlacklist": "api/ApiSpamBlacklist.php",
-		"BaseBlacklist": "BaseBlacklist.php",
-		"EmailBlacklist": "EmailBlacklist.php",
-		"SpamBlacklistHooks": "SpamBlacklistHooks.php",
-		"SpamBlacklist": "SpamBlacklist_body.php",
-		"SpamBlacklistLogFormatter": "SpamBlacklistLogFormatter.php",
-		"SpamRegexBatch": "SpamRegexBatch.php",
-		"SpamBlacklistPreAuthenticationProvider": "SpamBlacklistPreAuthenticationProvider.php"
+		"ApiSpamBlacklist": "includes/ApiSpamBlacklist.php",
+		"BaseBlacklist": "includes/BaseBlacklist.php",
+		"EmailBlacklist": "includes/EmailBlacklist.php",
+		"SpamBlacklistHooks": "includes/SpamBlacklistHooks.php",
+		"SpamBlacklist": "includes/SpamBlacklist.php",
+		"SpamBlacklistLogFormatter": "includes/SpamBlacklistLogFormatter.php",
+		"SpamRegexBatch": "includes/SpamRegexBatch.php",
+		"SpamBlacklistPreAuthenticationProvider": "includes/SpamBlacklistPreAuthenticationProvider.php"
 	},
 	"Hooks": {
 		"EditFilterMergedContent": [
