@@ -5,6 +5,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 }
 
 use \MediaWiki\MediaWikiServices;
+use Wikimedia\Rdbms\Database;
 
 class SpamBlacklist extends BaseBlacklist {
 	const STASH_TTL = 180;

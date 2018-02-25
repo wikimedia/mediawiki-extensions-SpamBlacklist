@@ -38,7 +38,7 @@ class SpamBlacklistHooks {
 			$links[] = $summary;
 		}
 
-		$spamObj = BaseBlacklist::getInstance( 'spam' );
+		$spamObj = BaseBlacklist::getSpamBlacklist();
 		$matches = $spamObj->filter( $links, $title );
 
 		if ( $matches !== false ) {
@@ -63,7 +63,7 @@ class SpamBlacklistHooks {
 		ParserOutput $output
 	) {
 		$links = array_keys( $output->getExternalLinks() );
-		$spamObj = BaseBlacklist::getInstance( 'spam' );
+		$spamObj = BaseBlacklist::getSpamBlacklist();
 		$spamObj->warmCachesForFilter( $page->getTitle(), $links );
 	}
 
@@ -75,8 +75,7 @@ class SpamBlacklistHooks {
 	 * @return bool
 	 */
 	public static function userCanSendEmail( &$user, &$hookErr ) {
-		/** @var $blacklist EmailBlacklist */
-		$blacklist = BaseBlacklist::getInstance( 'email' );
+		$blacklist = BaseBlacklist::getEmailBlacklist();
 		if ( $blacklist->checkUser( $user ) ) {
 			return true;
 		}
@@ -173,7 +172,7 @@ class SpamBlacklistHooks {
 		$baseRevId
 	) {
 		if ( $revision ) {
-			BaseBlacklist::getInstance( 'spam' )
+			BaseBlacklist::getSpamBlacklist()
 				->doLogging( $user, $wikiPage->getTitle(), $revision->getId() );
 		}
 
@@ -224,7 +223,7 @@ class SpamBlacklistHooks {
 			return true;
 		}
 
-		$spamObj = BaseBlacklist::getInstance( 'spam' );
+		$spamObj = BaseBlacklist::getSpamBlacklist();
 		$matches = $spamObj->filter( $links, $title );
 
 		if ( $matches !== false ) {
@@ -251,8 +250,7 @@ class SpamBlacklistHooks {
 	 * @param string &$error
 	 */
 	public static function onArticleDelete( WikiPage &$article, User &$user, &$reason, &$error ) {
-		/** @var SpamBlacklist $spam */
-		$spam = BaseBlacklist::getInstance( 'spam' );
+		$spam = BaseBlacklist::getSpamBlacklist();
 		if ( !$spam->isLoggingEnabled() ) {
 			return;
 		}
@@ -279,8 +277,7 @@ class SpamBlacklistHooks {
 		Content $content = null,
 		LogEntry $logEntry
 	) {
-		/** @var SpamBlacklist $spam */
-		$spam = BaseBlacklist::getInstance( 'spam' );
+		$spam = BaseBlacklist::getSpamBlacklist();
 		$spam->doLogging( $user, $page->getTitle(), $page->getLatest() );
 	}
 }

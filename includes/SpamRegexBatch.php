@@ -87,7 +87,7 @@ class SpamRegexBatch {
 	/**
 	 * Do a sanity check on the batch regex.
 	 *
-	 * @param string $lines unsanitized input lines
+	 * @param array $lines unsanitized input lines
 	 * @param BaseBlacklist $blacklist
 	 * @param bool|string $fileName optional for debug reporting
 	 * @return array of regexes

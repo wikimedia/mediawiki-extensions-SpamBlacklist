@@ -91,8 +91,23 @@ abstract class BaseBlacklist {
 	}
 
 	/**
+	 * @return SpamBlacklist
+	 */
+	public static function getSpamBlacklist() {
+		return self::getInstance( 'spam' );
+	}
+
+	/**
+	 * @return EmailBlacklist
+	 */
+	public static function getEmailBlacklist() {
+		return self::getInstance( 'email' );
+	}
+
+	/**
 	 * Returns an instance of the given blacklist
 	 *
+	 * @deprecated Use getSpamBlacklist() or getEmailBlacklist() instead
 	 * @param string $type Code for the blacklist
 	 * @return BaseBlacklist
 	 * @throws Exception
