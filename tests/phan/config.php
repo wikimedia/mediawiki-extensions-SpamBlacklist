@@ -15,6 +15,5 @@ $cfg['exclude_analysis_directory_list'] = array_merge(
 		'./../../extensions/EventLogging',
 	]
 );
-$cfg['suppress_issue_types'][] = 'PhanDeprecatedFunction';
 
 return $cfg;
