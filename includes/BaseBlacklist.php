@@ -233,9 +233,10 @@ abstract class BaseBlacklist {
 	public function getLocalBlacklists() {
 		$that = $this;
 		$type = $this->getBlacklistType();
+		$cache = ObjectCache::getMainWANInstance();
 
-		return ObjectCache::getMainWANInstance()->getWithSetCallback(
-			wfMemcKey( 'spamblacklist', $type, 'blacklist-regex' ),
+		return $cache->getWithSetCallback(
+			$cache->makeKey( 'spamblacklist', $type, 'blacklist-regex' ),
 			$this->expiryTime,
 			function () use ( $that, $type ) {
 				return SpamRegexBatch::regexesFromMessage( "{$type}-blacklist", $that );
@@ -251,9 +252,10 @@ abstract class BaseBlacklist {
 	public function getWhitelists() {
 		$that = $this;
 		$type = $this->getBlacklistType();
+		$cache = ObjectCache::getMainWANInstance();
 
-		return ObjectCache::getMainWANInstance()->getWithSetCallback(
-			wfMemcKey( 'spamblacklist', $type, 'whitelist-regex' ),
+		return $cache->getWithSetCallback(
+			$cache->makeKey( 'spamblacklist', $type, 'whitelist-regex' ),
 			$this->expiryTime,
 			function () use ( $that, $type ) {
 				return SpamRegexBatch::regexesFromMessage( "{$type}-whitelist", $that );
@@ -279,10 +281,11 @@ abstract class BaseBlacklist {
 		$miss = false;
 
 		$that = $this;
-		$regexes = ObjectCache::getMainWANInstance()->getWithSetCallback(
+		$cache = ObjectCache::getMainWANInstance();
+		$regexes = $cache->getWithSetCallback(
 			// This used to be cached per-site, but that could be bad on a shared
 			// server where not all wikis have the same configuration.
-			wfMemcKey( 'spamblacklist', $listType, 'shared-blacklist-regex' ),
+			$cache->makeKey( 'spamblacklist', $listType, 'shared-blacklist-regex' ),
 			$this->expiryTime,
 			function () use ( $that, &$miss ) {
 				$miss = true;
@@ -306,9 +309,9 @@ abstract class BaseBlacklist {
 		$listType = $this->getBlacklistType();
 
 		$cache = ObjectCache::getMainWANInstance();
-		$cache->delete( wfMemcKey( 'spamblacklist', $listType, 'shared-blacklist-regex' ) );
-		$cache->delete( wfMemcKey( 'spamblacklist', $listType, 'blacklist-regex' ) );
-		$cache->delete( wfMemcKey( 'spamblacklist', $listType, 'whitelist-regex' ) );
+		$cache->delete( $cache->makeKey( 'spamblacklist', $listType, 'shared-blacklist-regex' ) );
+		$cache->delete( $cache->makeKey( 'spamblacklist', $listType, 'blacklist-regex' ) );
+		$cache->delete( $cache->makeKey( 'spamblacklist', $listType, 'whitelist-regex' ) );
 
 		wfDebugLog( 'SpamBlacklist', "$listType blacklist local cache cleared.\n" );
 	}
