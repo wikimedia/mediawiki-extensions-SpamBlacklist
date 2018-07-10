@@ -72,7 +72,7 @@ class SpamBlacklist extends BaseBlacklist {
 			$this->getBlacklistType(),
 			'pass',
 			sha1( implode( "\n", $links ) ),
-			(string)$title
+			md5( (string)$title )
 		);
 		// Skip blacklist checks if nothing matched during edit stashing...
 		$knownNonMatchAsOf = $cache->get( $key );
