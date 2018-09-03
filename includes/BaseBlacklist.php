@@ -202,7 +202,7 @@ abstract class BaseBlacklist {
 		global $wgContLang;
 
 		$types = array_map( [ $wgContLang, 'ucfirst' ], array_keys( self::$blacklistTypes ) );
-		$regex = '/(' . implode( '|', $types ).  ')-(?:blacklist|whitelist)/';
+		$regex = '/(' . implode( '|', $types ) . ')-(?:blacklist|whitelist)/';
 
 		if ( preg_match( $regex, $title->getDBkey(), $m ) ) {
 			return strtolower( $m[1] );
