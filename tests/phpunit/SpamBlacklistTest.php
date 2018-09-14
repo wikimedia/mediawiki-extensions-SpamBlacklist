@@ -2,6 +2,7 @@
 
 /**
  * @group SpamBlacklist
+ * @group Database
  * @covers SpamBlacklist
  */
 class SpamBlacklistTest extends MediaWikiTestCase {
