@@ -271,11 +271,12 @@ class SpamBlacklist extends BaseBlacklist {
 	 */
 	function getCurrentLinks( Title $title ) {
 		$cache = ObjectCache::getMainWANInstance();
+		$fname = __METHOD__;
 		return $cache->getWithSetCallback(
 			// Key is warmed via warmCachesForFilter() from ApiStashEdit
 			$cache->makeKey( 'external-link-list', $title->getLatestRevID() ),
 			$cache::TTL_MINUTE,
-			function ( $oldValue, &$ttl, array &$setOpts ) use ( $title ) {
+			function ( $oldValue, &$ttl, array &$setOpts ) use ( $title, $fname ) {
 				$dbr = wfGetDB( DB_REPLICA );
 				$setOpts += Database::getCacheSetOptions( $dbr );
 
@@ -283,7 +284,7 @@ class SpamBlacklist extends BaseBlacklist {
 					'externallinks',
 					'el_to',
 					[ 'el_from' => $title->getArticleID() ], // should be zero queries
-					__METHOD__
+					$fname
 				);
 			}
 		);
