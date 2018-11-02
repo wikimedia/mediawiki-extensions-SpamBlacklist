@@ -52,7 +52,7 @@ class SpamBlacklist extends BaseBlacklist {
 	 *
 	 * @return string[]|bool Matched text(s) if the edit should not be allowed; false otherwise
 	 */
-	function filter( array $links, Title $title = null, $preventLog = false, $mode = 'check' ) {
+	public function filter( array $links, Title $title = null, $preventLog = false, $mode = 'check' ) {
 		$statsd = MediaWikiServices::getInstance()->getStatsdDataFactory();
 		$cache = ObjectCache::getLocalClusterInstance();
 
@@ -269,7 +269,7 @@ class SpamBlacklist extends BaseBlacklist {
 	 * @param Title $title
 	 * @return array
 	 */
-	function getCurrentLinks( Title $title ) {
+	public function getCurrentLinks( Title $title ) {
 		$cache = ObjectCache::getMainWANInstance();
 		$fname = __METHOD__;
 		return $cache->getWithSetCallback(

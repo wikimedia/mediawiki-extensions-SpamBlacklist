@@ -57,7 +57,7 @@ abstract class BaseBlacklist {
 	 *
 	 * @param array $settings
 	 */
-	function __construct( $settings = [] ) {
+	public function __construct( $settings = [] ) {
 		foreach ( $settings as $name => $value ) {
 			$this->$name = $value;
 		}
@@ -216,7 +216,7 @@ abstract class BaseBlacklist {
 	 * Will be cached locally across multiple invocations.
 	 * @return array set of regular expressions, potentially empty.
 	 */
-	function getBlacklists() {
+	public function getBlacklists() {
 		if ( $this->regexes === false ) {
 			$this->regexes = array_merge(
 				$this->getLocalBlacklists(),
@@ -267,7 +267,7 @@ abstract class BaseBlacklist {
 	 * Fetch (possibly cached) remote blacklists.
 	 * @return array
 	 */
-	function getSharedBlacklists() {
+	private function getSharedBlacklists() {
 		$listType = $this->getBlacklistType();
 
 		wfDebugLog( 'SpamBlacklist', "Loading $listType regex..." );
@@ -305,7 +305,7 @@ abstract class BaseBlacklist {
 	 *
 	 * @note this method is unused atm
 	 */
-	function clearCache() {
+	public function clearCache() {
 		$listType = $this->getBlacklistType();
 
 		$cache = ObjectCache::getMainWANInstance();
@@ -316,7 +316,7 @@ abstract class BaseBlacklist {
 		wfDebugLog( 'SpamBlacklist', "$listType blacklist local cache cleared.\n" );
 	}
 
-	function buildSharedBlacklists() {
+	private function buildSharedBlacklists() {
 		$regexes = [];
 		$listType = $this->getBlacklistType();
 		# Load lists
@@ -344,7 +344,7 @@ abstract class BaseBlacklist {
 		return $regexes;
 	}
 
-	function getHttpText( $fileName ) {
+	private function getHttpText( $fileName ) {
 		global $wgDBname, $messageMemc;
 		$listType = $this->getBlacklistType();
 
@@ -382,7 +382,7 @@ abstract class BaseBlacklist {
 	 * @param string $article
 	 * @return string
 	 */
-	function getArticleText( $wiki, $article ) {
+	private function getArticleText( $wiki, $article ) {
 		wfDebugLog( 'SpamBlacklist',
 			"Fetching {$this->getBlacklistType()} blacklist from '$article' on '$wiki'...\n" );
 

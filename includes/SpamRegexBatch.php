@@ -14,7 +14,7 @@ class SpamRegexBatch {
 	 *                       if 0, will produce one regex per line
 	 * @return array
 	 */
-	static function buildRegexes( $lines, BaseBlacklist $blacklist, $batchSize = 4096 ) {
+	private static function buildRegexes( $lines, BaseBlacklist $blacklist, $batchSize = 4096 ) {
 		# Make regex
 		# It's faster using the S modifier even though it will usually only be run once
 		// $regex = 'https?://+[a-z0-9_\-.]*(' . implode( '|', $lines ) . ')';
@@ -58,7 +58,7 @@ class SpamRegexBatch {
 	 * @param array $regexes set of regexes
 	 * @return bool true if ok, false if contains invalid lines
 	 */
-	static function validateRegexes( $regexes ) {
+	private static function validateRegexes( $regexes ) {
 		foreach ( $regexes as $regex ) {
 			wfSuppressWarnings();
 			$ok = preg_match( $regex, '' );
@@ -77,7 +77,7 @@ class SpamRegexBatch {
 	 * @param array $lines
 	 * @return array
 	 */
-	static function stripLines( $lines ) {
+	private static function stripLines( $lines ) {
 		return array_filter(
 			array_map( 'trim',
 				preg_replace( '/#.*$/', '',
@@ -92,7 +92,7 @@ class SpamRegexBatch {
 	 * @param bool|string $fileName optional for debug reporting
 	 * @return array of regexes
 	 */
-	static function buildSafeRegexes( $lines, BaseBlacklist $blacklist, $fileName = false ) {
+	private static function buildSafeRegexes( $lines, BaseBlacklist $blacklist, $fileName = false ) {
 		$lines = self::stripLines( $lines );
 		$regexes = self::buildRegexes( $lines, $blacklist );
 		if ( self::validateRegexes( $regexes ) ) {
@@ -115,7 +115,7 @@ class SpamRegexBatch {
 	 * @param BaseBlacklist $blacklist
 	 * @return array of input lines which produce invalid input, or empty array if no problems
 	 */
-	static function getBadLines( $lines, BaseBlacklist $blacklist ) {
+	public static function getBadLines( $lines, BaseBlacklist $blacklist ) {
 		$lines = self::stripLines( $lines );
 
 		$badLines = [];
@@ -151,7 +151,7 @@ class SpamRegexBatch {
 	 * @param bool|string $fileName optional, for reporting of bad files
 	 * @return array of regular expressions, potentially empty
 	 */
-	static function regexesFromText( $source, BaseBlacklist $blacklist, $fileName = false ) {
+	public static function regexesFromText( $source, BaseBlacklist $blacklist, $fileName = false ) {
 		$lines = explode( "\n", $source );
 		return self::buildSafeRegexes( $lines, $blacklist, $fileName );
 	}
@@ -164,7 +164,7 @@ class SpamRegexBatch {
 	 * @param BaseBlacklist $blacklist
 	 * @return array of regular expressions, potentially empty
 	 */
-	static function regexesFromMessage( $message, BaseBlacklist $blacklist ) {
+	public static function regexesFromMessage( $message, BaseBlacklist $blacklist ) {
 		$source = wfMessage( $message )->inContentLanguage();
 		if ( !$source->isDisabled() ) {
 			return self::regexesFromText( $source->plain(), $blacklist );
