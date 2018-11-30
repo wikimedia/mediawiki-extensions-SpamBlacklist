@@ -52,6 +52,18 @@
 		"SpamRegexBatch": "includes/SpamRegexBatch.php",
 		"SpamBlacklistPreAuthenticationProvider": "includes/SpamBlacklistPreAuthenticationProvider.php"
 	},
+	"ResourceModules": {
+		"ext.spamBlacklist.visualEditor": {
+			"scripts": "ve-spamblacklist/ve.init.mw.SpamBlacklistSaveErrorHandler.js"
+		}
+	},
+	"VisualEditorPluginModules": [
+		"ext.spamBlacklist.visualEditor"
+	],
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "SpamBlacklist/modules"
+	},
 	"Hooks": {
 		"EditFilterMergedContent": [
 			"SpamBlacklistHooks::filterMergedContent"
