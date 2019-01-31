@@ -21,9 +21,5 @@
 	"log-description-spamblacklist": "هذا الأحداث توثق مشاهدات القائمة السوداء للسخام.",
 	"logentry-spamblacklist-hit": "أدى التعديل الذي {{GENDER:$2|قام|قامت}} به $1 إلى تفعيل القائمة السوداء لوصلات السبام في $3 عندما {{GENDER:$2|حاول|حاولت}} إضافة $4.",
 	"right-spamblacklistlog": "اعرض سجل السخام المدرج على القائمة السوداء",
-	"action-spamblacklistlog": "اعرض سجل السخام المدرج على القائمة السوداء",
-	"apihelp-spamblacklist-description": "تحقق من مسار واحد أو أكثر ضد قائمة السبام السوداء.",
-	"apihelp-spamblacklist-summary": "تحقق من مسار واحد أو أكثر ضد قائمة السبام السوداء.",
-	"apihelp-spamblacklist-param-url": "المسارات للتحقيق ضد القائمة السوداء.",
-	"apihelp-spamblacklist-example-1": "تحقق من مسارين في القائمة السوداء"
+	"action-spamblacklistlog": "اعرض سجل السخام المدرج على القائمة السوداء"
 }
