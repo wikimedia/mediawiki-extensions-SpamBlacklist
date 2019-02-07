@@ -18,5 +18,6 @@
 	"log-name-spamblacklist": "Журнал спам-сьпісу",
 	"log-description-spamblacklist": "Гэтыя падзеі адсочваюць супадзеньні з чорным сьпісам спамэраў.",
 	"logentry-spamblacklist-hit": "$1 {{GENDER:$2|выклікаў|выклікала}} спрацоўваньне чорнага сьпісу спамэраў на старонцы $3 пры спробе дадаць $4.",
-	"right-spamblacklistlog": "прагляд журнала спам-сьпісу"
+	"right-spamblacklistlog": "прагляд журнала спам-сьпісу",
+	"action-spamblacklistlog": "прагляд журнала чорнага сьпісу спамэраў"
 }
