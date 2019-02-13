@@ -60,9 +60,9 @@ class SpamRegexBatch {
 	 */
 	private static function validateRegexes( $regexes ) {
 		foreach ( $regexes as $regex ) {
-			wfSuppressWarnings();
+			Wikimedia\suppressWarnings();
 			$ok = preg_match( $regex, '' );
-			wfRestoreWarnings();
+			Wikimedia\restoreWarnings();
 
 			if ( $ok === false ) {
 				return false;
