@@ -121,9 +121,9 @@ class SpamBlacklist extends BaseBlacklist {
 				wfDebugLog( 'SpamBlacklist', "Excluding whitelisted URLs from " . count( $whitelists ) .
 					" regexes: " . implode( ', ', $whitelists ) . "\n" );
 				foreach ( $whitelists as $regex ) {
-					wfSuppressWarnings();
+					Wikimedia\suppressWarnings();
 					$newLinks = preg_replace( $regex, '', $links );
-					wfRestoreWarnings();
+					Wikimedia\restoreWarnings();
 					if ( is_string( $newLinks ) ) {
 						// If there wasn't a regex error, strip the matching URLs
 						$links = $newLinks;
@@ -136,10 +136,10 @@ class SpamBlacklist extends BaseBlacklist {
 				" regexes: " . implode( ', ', $blacklists ) . "\n" );
 			$retVal = false;
 			foreach ( $blacklists as $regex ) {
-				wfSuppressWarnings();
+				Wikimedia\suppressWarnings();
 				$matches = [];
 				$check = ( preg_match_all( $regex, $links, $matches ) > 0 );
-				wfRestoreWarnings();
+				Wikimedia\restoreWarnings();
 				if ( $check ) {
 					wfDebugLog( 'SpamBlacklist', "Match!\n" );
 					global $wgRequest;
