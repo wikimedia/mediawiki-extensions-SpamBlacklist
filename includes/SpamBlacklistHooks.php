@@ -171,11 +171,6 @@ class SpamBlacklistHooks {
 		Status $status,
 		$baseRevId
 	) {
-		if ( $revision ) {
-			BaseBlacklist::getSpamBlacklist()
-				->doLogging( $user, $wikiPage->getTitle(), $revision->getId() );
-		}
-
 		if ( !BaseBlacklist::isLocalSource( $wikiPage->getTitle() ) ) {
 			return true;
 		}
@@ -241,44 +236,5 @@ class SpamBlacklistHooks {
 		}
 
 		return true;
-	}
-
-	/**
-	 * @param WikiPage &$article
-	 * @param User &$user
-	 * @param string &$reason
-	 * @param string &$error
-	 */
-	public static function onArticleDelete( WikiPage &$article, User &$user, &$reason, &$error ) {
-		$spam = BaseBlacklist::getSpamBlacklist();
-		if ( !$spam->isLoggingEnabled() ) {
-			return;
-		}
-
-		// Log the changes, but we only commit them once the deletion has happened.
-		// We do that since the external links table could get cleared before the
-		// ArticleDeleteComplete hook runs
-		$spam->logUrlChanges( $spam->getCurrentLinks( $article->getTitle() ), [], [] );
-	}
-
-	/**
-	 * @param WikiPage &$page
-	 * @param User &$user
-	 * @param string $reason
-	 * @param int $id
-	 * @param Content|null $content
-	 * @param LogEntry $logEntry
-	 * @suppress PhanParamReqAfterOpt
-	 */
-	public static function onArticleDeleteComplete(
-		&$page,
-		User &$user,
-		$reason,
-		$id,
-		Content $content = null,
-		LogEntry $logEntry
-	) {
-		$spam = BaseBlacklist::getSpamBlacklist();
-		$spam->doLogging( $user, $page->getTitle(), $page->getLatest() );
 	}
 }
