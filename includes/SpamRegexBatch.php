@@ -61,6 +61,7 @@ class SpamRegexBatch {
 	private static function validateRegexes( $regexes ) {
 		foreach ( $regexes as $regex ) {
 			Wikimedia\suppressWarnings();
+			// @phan-suppress-next-line PhanParamSuspiciousOrder False positive
 			$ok = preg_match( $regex, '' );
 			Wikimedia\restoreWarnings();
 
