@@ -178,7 +178,8 @@ class SpamBlacklist extends BaseBlacklist {
 
 	public function isLoggingEnabled() {
 		global $wgSpamBlacklistEventLogging;
-		return $wgSpamBlacklistEventLogging && class_exists( 'EventLogging' );
+		return $wgSpamBlacklistEventLogging &&
+			ExtensionRegistry::getInstance()->isLoaded( 'EventLogging' );
 	}
 
 	/**
@@ -334,7 +335,7 @@ class SpamBlacklist extends BaseBlacklist {
 				// Make sure checkusers can see this action if the log is restricted
 				// (which is the default)
 				if ( ExtensionRegistry::getInstance()->isLoaded( 'CheckUser' )
-					&& class_exists( 'CheckUserHooks' )
+					&& class_exists( CheckUserHooks::class )
 				) {
 					$rc = $logEntry->getRecentChange( $logid );
 					CheckUserHooks::updateCheckUserData( $rc );
