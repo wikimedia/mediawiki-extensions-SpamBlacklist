@@ -268,6 +268,7 @@ class SpamBlacklistHooks {
 	 * @param int $id
 	 * @param Content|null $content
 	 * @param LogEntry $logEntry
+	 * @suppress PhanParamReqAfterOpt
 	 */
 	public static function onArticleDeleteComplete(
 		&$page,
