@@ -192,7 +192,7 @@ class SpamBlacklistHooks {
 	/**
 	 * @param UploadBase $upload
 	 * @param User $user
-	 * @param array $props
+	 * @param array|null $props
 	 * @param string $comment
 	 * @param string $pageText
 	 * @param array|ApiMessage &$error
@@ -201,7 +201,7 @@ class SpamBlacklistHooks {
 	public static function onUploadVerifyUpload(
 		UploadBase $upload,
 		User $user,
-		array $props,
+		$props,
 		$comment,
 		$pageText,
 		&$error
