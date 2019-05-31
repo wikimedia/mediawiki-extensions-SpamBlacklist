@@ -303,8 +303,6 @@ abstract class BaseBlacklist {
 
 	/**
 	 * Clear all primary blacklist cache keys
-	 *
-	 * @note this method is unused atm
 	 */
 	public function clearCache() {
 		$listType = $this->getBlacklistType();
