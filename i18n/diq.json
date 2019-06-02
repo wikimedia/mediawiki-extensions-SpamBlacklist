@@ -5,7 +5,8 @@
 			"Erdemaslancan",
 			"Marmase",
 			"Olvörg",
-			"Kumkumuk"
+			"Kumkumuk",
+			"Mirzali"
 		]
 	},
 	"spam-blacklist": "  #gıreyê teber ê ke na liste de zêpi bi bloke beni.\n  # na liste tena no wiki re tesir beno.\n  # Dokümantasyon: https://www.mediawiki.org/wiki/Extension:SpamBlacklist\n  #<!-- no satır zey xo verdê --> <pre>\n#\n# rêzvateyê ey zey cêr o.:\n#  * \"#\" karakteri ra heta satıro peyin her çi mışoreyo\n#  * Her satıro dekerde, pêşkeşwan ê ke zerreyê URLlyi de tena parçeyê regexê .\n\n  #</pre> <!-- no satır zey xo verdê -->",
@@ -17,5 +18,6 @@
 	"spam-blacklisted-email-signup": "E-posta adresiyo ke deyayo karkerdışe cı newke groto siyaliste.",
 	"spam-invalid-lines": "na qerelisteya spami {{PLURAL:$1|satır|satıran}}  {{PLURAL:$1|nemeqbulo|nemeqbuli}};",
 	"spam-blacklist-desc": "Regex-tabanın haleta anti-spami URL'ya perer u adresa e-posta qande  karberande qeydınan geriyayo",
-	"log-name-spamblacklist": "Qeydê siyaliste ya spami"
+	"log-name-spamblacklist": "Qeydê siyaliste ya spami",
+	"log-description-spamblacklist": "Nê weqeyi isabetanê lista spamiya siyaye teqib kenê."
 }
