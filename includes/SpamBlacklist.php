@@ -271,7 +271,7 @@ class SpamBlacklist extends BaseBlacklist {
 	 * @return array
 	 */
 	public function getCurrentLinks( Title $title ) {
-		$cache = ObjectCache::getMainWANInstance();
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$fname = __METHOD__;
 		return $cache->getWithSetCallback(
 			// Key is warmed via warmCachesForFilter() from ApiStashEdit

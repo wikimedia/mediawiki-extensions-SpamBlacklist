@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * Base class for different kinds of blacklists
  */
@@ -234,7 +236,7 @@ abstract class BaseBlacklist {
 	public function getLocalBlacklists() {
 		$that = $this;
 		$type = $this->getBlacklistType();
-		$cache = ObjectCache::getMainWANInstance();
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		return $cache->getWithSetCallback(
 			$cache->makeKey( 'spamblacklist', $type, 'blacklist-regex' ),
@@ -253,7 +255,7 @@ abstract class BaseBlacklist {
 	public function getWhitelists() {
 		$that = $this;
 		$type = $this->getBlacklistType();
-		$cache = ObjectCache::getMainWANInstance();
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		return $cache->getWithSetCallback(
 			$cache->makeKey( 'spamblacklist', $type, 'whitelist-regex' ),
@@ -282,7 +284,7 @@ abstract class BaseBlacklist {
 		$miss = false;
 
 		$that = $this;
-		$cache = ObjectCache::getMainWANInstance();
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$regexes = $cache->getWithSetCallback(
 			// This used to be cached per-site, but that could be bad on a shared
 			// server where not all wikis have the same configuration.
@@ -307,7 +309,7 @@ abstract class BaseBlacklist {
 	public function clearCache() {
 		$listType = $this->getBlacklistType();
 
-		$cache = ObjectCache::getMainWANInstance();
+		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$cache->delete( $cache->makeKey( 'spamblacklist', $listType, 'shared-blacklist-regex' ) );
 		$cache->delete( $cache->makeKey( 'spamblacklist', $listType, 'blacklist-regex' ) );
 		$cache->delete( $cache->makeKey( 'spamblacklist', $listType, 'whitelist-regex' ) );
