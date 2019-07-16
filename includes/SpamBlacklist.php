@@ -211,6 +211,7 @@ class SpamBlacklist extends BaseBlacklist {
 	public function getRegexEnd( $batchSize ) {
 		return ')' . parent::getRegexEnd( $batchSize );
 	}
+
 	/**
 	 * Logs the filter hit to Special:Log if
 	 * $wgLogSpamBlacklistHits is enabled.
