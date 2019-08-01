@@ -42,12 +42,7 @@ class SpamBlacklistHooks {
 		$matches = $spamObj->filter( $links, $title );
 
 		if ( $matches !== false ) {
-			$status->fatal( 'spamprotectiontext' );
-
-			foreach ( $matches as $match ) {
-				$status->fatal( 'spamprotectionmatch', $match );
-			}
-
+			$status->fatal( 'spam-blacklisted-link', $context->getLanguage()->listToText( $matches ) );
 			$status->apiHookResult = [
 				'spamblacklist' => implode( '|', $matches ),
 			];
@@ -223,7 +218,7 @@ class SpamBlacklistHooks {
 
 		if ( $matches !== false ) {
 			$error = new ApiMessage(
-				wfMessage( 'spamprotectiontext' ),
+				wfMessage( 'spam-blacklisted-link', Message::listParam( $matches ) ),
 				'spamblacklist',
 				[
 					'spamblacklist' => [ 'matches' => $matches ],
