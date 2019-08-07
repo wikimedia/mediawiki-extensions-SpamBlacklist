@@ -1,9 +1,5 @@
 <?php
 
-if ( !defined( 'MEDIAWIKI' ) ) {
-	exit;
-}
-
 use \MediaWiki\MediaWikiServices;
 use Wikimedia\Rdbms\Database;
 
