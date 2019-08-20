@@ -42,10 +42,14 @@ class SpamBlacklistHooks {
 		$matches = $spamObj->filter( $links, $title );
 
 		if ( $matches !== false ) {
-			$status->fatal( 'spam-blacklisted-link', $context->getLanguage()->listToText( $matches ) );
-			$status->apiHookResult = [
-				'spamblacklist' => implode( '|', $matches ),
-			];
+			$error = new ApiMessage(
+				wfMessage( 'spam-blacklisted-link', Message::listParam( $matches ) ),
+				'spamblacklist',
+				[
+					'spamblacklist' => [ 'matches' => $matches ],
+				]
+			);
+			$status->fatal( $error );
 		}
 
 		// Always return true, EditPage will look at $status->isOk().
@@ -222,10 +226,6 @@ class SpamBlacklistHooks {
 				'spamblacklist',
 				[
 					'spamblacklist' => [ 'matches' => $matches ],
-					'message' => [
-						'key' => 'spamprotectionmatch',
-						'params' => $matches[0],
-					],
 				]
 			);
 		}
