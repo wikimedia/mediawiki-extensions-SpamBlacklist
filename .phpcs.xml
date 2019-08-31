@@ -11,11 +11,6 @@
 			<property name="ignoreList" type="array" value="$messageMemc" />
 		</properties>
 	</rule>
-	<rule ref="MediaWiki.NamingConventions.PrefixedGlobalFunctions">
-		<properties>
-			<property name="ignoreList" type="array" value="cleanupArticle" />
-		</properties>
-	</rule>
 	<file>.</file>
 	<arg name="extensions" value="php,php5,inc"/>
 	<arg name="encoding" value="UTF-8"/>
