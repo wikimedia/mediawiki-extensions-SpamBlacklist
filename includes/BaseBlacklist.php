@@ -202,9 +202,9 @@ abstract class BaseBlacklist {
 	 * @return bool|string
 	 */
 	public static function getTypeFromTitle( Title $title ) {
-		global $wgContLang;
+		$contLang = MediaWikiServices::getInstance()->getContentLanguage();
 
-		$types = array_map( [ $wgContLang, 'ucfirst' ], array_keys( self::$blacklistTypes ) );
+		$types = array_map( [ $contLang, 'ucfirst' ], array_keys( self::$blacklistTypes ) );
 		$regex = '/(' . implode( '|', $types ) . ')-(?:blacklist|whitelist)/';
 
 		if ( preg_match( $regex, $title->getDBkey(), $m ) ) {
