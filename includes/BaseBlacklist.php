@@ -391,21 +391,7 @@ abstract class BaseBlacklist {
 		// Load all the relevant tables from the correct DB.
 		// This assumes that old_text is the actual text or
 		// that the external store system is at least unified.
-		if ( is_callable( [ Revision::class, 'getQueryInfo' ] ) ) {
-			$revQuery = Revision::getQueryInfo( [ 'page', 'text' ] );
-		} else {
-			$revQuery = [
-				'tables' => [ 'revision', 'page', 'text' ],
-				'fields' => array_merge(
-					Revision::selectFields(),
-					Revision::selectPageFields(),
-					Revision::selectTextFields()
-				),
-				'joins' => [
-					'text' => [ 'JOIN', 'old_id=rev_text_id' ]
-				],
-			];
-		}
+		$revQuery = Revision::getQueryInfo( [ 'page', 'text' ] );
 		$row = wfGetDB( DB_REPLICA, [], $wiki )->selectRow(
 			$revQuery['tables'],
 			$revQuery['fields'],
