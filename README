@@ -12,29 +12,24 @@ LocalSettings.php:
 
     wfLoadExtension ( 'SpamBlacklist' );
 
-To users running MediaWiki 1.24 or earlier:
-
-The instructions above describe the new way of installing this extension using wfLoadExtension().
-If you need to install this extension on these earlier versions (MediaWiki 1.24 and earlier),
-instead of `wfLoadExtension( 'SpamBlacklist' );`, you need to use:
-
-    require_once "$IP/extensions/SpamBlacklist/SpamBlacklist.php";
-
 The list of bad URLs can be drawn from multiple sources. These sources are
-configured with the $wgSpamBlacklistFiles global variable. This global variable
-can be set in LocalSettings.php, AFTER including SpamBlacklist.php.
+configured with the $wgBlacklistSettings global variable. This global variable
+can be set in LocalSettings.php.
 
-$wgSpamBlacklistFiles is an array, each value containing either a URL, a filename
-or a database location. Specifying a database location allows you to draw the
+$wgBlacklistSettings is an array, where first key is either spam or email and
+their value containing either a URL, a filename or a database location.
+Specifying a database location allows you to draw the
 blacklist from a page on your wiki. The format of the database location
 specifier is "DB: <db name> <title>".
 
 Example:
 
     wfLoadExtension ( 'SpamBlacklist' );
-    $wgSpamBlacklistFiles = [
-    	"$IP/extensions/SpamBlacklist/wikimedia_blacklist", // Wikimedia's list
-    	"DB: wikidb My_spam_blacklist", // database (wikidb), title (My_spam_blacklist)
+    $wgBlacklistSettings = [
+        'spam' => [
+            "$IP/extensions/SpamBlacklist/wikimedia_blacklist", // Wikimedia's list
+            "DB: wikidb My_spam_blacklist", // database (wikidb), title (My_spam_blacklist)
+        ]
     ];
 
 The local pages [[MediaWiki:Spam-blacklist]] and [[MediaWiki:Spam-whitelist]]
@@ -44,17 +39,10 @@ Compatibility
 -----------
 
 This extension is primarily maintained to run on the latest release version
-of MediaWiki (1.22.x as of this writing) and development versions, however
-the current version should work up to 1.21.
+of MediaWiki (1.33.x as of this writing) and development versions.
 
 If you are using an older version of MediaWiki, you can checkout an
 older release branch, for example MediaWiki 1.20 would use REL1_20.
-
-For even older versions, you may be able to dig older versions out of the
-Git repository which work, but if using Wikimedia's blacklist file
-you will likely have problems with failure due to the large size of the
-blacklist not being handled by old versions of the code.
-
 
 File format
 -----------
@@ -104,7 +92,6 @@ too-frequent fetches if your site is frequently used and staying up to date.
 Fully-processed blacklist data may be cached in memcached or another shared
 memory cache if it's been configured in MediaWiki.
 
-
 Stability
 ---------
 
@@ -134,7 +121,7 @@ You may suggest modifications to the Wikimedia blacklist at:
     https://meta.wikimedia.org/wiki/Talk:Spam_blacklist
 
 To make maintenance of local lists easier, you may wish to add a DB: source to
-$wgSpamBlacklistFiles and hence create a blacklist on your wiki. If you do this,
+$wgBlacklistSettings and hence create a blacklist on your wiki. If you do this,
 it is strongly recommended that you protect the page from general editing.
 Besides the obvious danger that someone may add a regex that matches everything,
 please note that an attacker with the ability to input arbitrary regular
