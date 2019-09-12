@@ -4,7 +4,6 @@
  * Hooks for the spam blacklist extension
  */
 class SpamBlacklistHooks {
-
 	/**
 	 * Hook function for EditFilterMergedContent
 	 *

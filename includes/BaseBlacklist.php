@@ -150,7 +150,7 @@ abstract class BaseBlacklist {
 	public static function isLocalSource( Title $title ) {
 		global $wgDBname, $wgBlacklistSettings;
 
-		if ( $title->getNamespace() == NS_MEDIAWIKI ) {
+		if ( $title->inNamespace( NS_MEDIAWIKI ) ) {
 			$sources = [];
 			foreach ( self::$blacklistTypes as $type => $class ) {
 				$type = ucfirst( $type );
@@ -179,8 +179,8 @@ abstract class BaseBlacklist {
 		foreach ( $files as $fileName ) {
 			$matches = [];
 			if ( preg_match( '/^DB: (\w*) (.*)$/', $fileName, $matches ) ) {
-				if ( $wgDBname == $matches[1] ) {
-					if ( $matches[2] == $title->getPrefixedDbKey() ) {
+				if ( $wgDBname === $matches[1] ) {
+					if ( $matches[2] === $title->getPrefixedDbKey() ) {
 						// Local DB fetch of this page...
 						return true;
 					}
@@ -223,7 +223,8 @@ abstract class BaseBlacklist {
 		if ( $this->regexes === false ) {
 			$this->regexes = array_merge(
 				$this->getLocalBlacklists(),
-				$this->getSharedBlacklists() );
+				$this->getSharedBlacklists()
+			);
 		}
 		return $this->regexes;
 	}
@@ -275,7 +276,7 @@ abstract class BaseBlacklist {
 
 		wfDebugLog( 'SpamBlacklist', "Loading $listType regex..." );
 
-		if ( count( $this->files ) == 0 ) {
+		if ( !$this->files ) {
 			# No lists
 			wfDebugLog( 'SpamBlacklist', "no files specified\n" );
 			return [];
@@ -338,8 +339,10 @@ abstract class BaseBlacklist {
 			// out of combining multiple sources in one regex, if
 			// there's a bad line in one of them we'll gain more
 			// from only having to break that set into smaller pieces.
-			$regexes = array_merge( $regexes,
-				SpamRegexBatch::regexesFromText( $text, $this, $fileName ) );
+			$regexes = array_merge(
+				$regexes,
+				SpamRegexBatch::regexesFromText( $text, $this, $fileName )
+			);
 		}
 
 		return $regexes;
@@ -380,14 +383,14 @@ abstract class BaseBlacklist {
 	 * This is probably *very* fragile, and shouldn't be used perhaps.
 	 *
 	 * @param string $wiki
-	 * @param string $article
+	 * @param string $pagename
 	 * @return string
 	 */
-	private function getArticleText( $wiki, $article ) {
+	private function getArticleText( $wiki, $pagename ) {
 		wfDebugLog( 'SpamBlacklist',
-			"Fetching {$this->getBlacklistType()} blacklist from '$article' on '$wiki'...\n" );
+			"Fetching {$this->getBlacklistType()} blacklist from '$pagename' on '$wiki'...\n" );
 
-		$title = Title::newFromText( $article );
+		$title = Title::newFromText( $pagename );
 		// Load all the relevant tables from the correct DB.
 		// This assumes that old_text is the actual text or
 		// that the external store system is at least unified.
