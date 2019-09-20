@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Storage\SlotRecord;
 
 /**
  * Base class for different kinds of blacklists
@@ -380,17 +381,53 @@ abstract class BaseBlacklist {
 
 	/**
 	 * Fetch an article from this or another local MediaWiki database.
-	 * This is probably *very* fragile, and shouldn't be used perhaps.
 	 *
 	 * @param string $wiki
 	 * @param string $pagename
-	 * @return string
+	 * @return bool|string|null
 	 */
 	private function getArticleText( $wiki, $pagename ) {
 		wfDebugLog( 'SpamBlacklist',
 			"Fetching {$this->getBlacklistType()} blacklist from '$pagename' on '$wiki'...\n" );
 
-		$title = Title::newFromText( $pagename );
+		$services = MediaWikiServices::getInstance();
+
+		// Compat with MW < 1.32
+		if ( !method_exists( $services, 'getRevisionStoreFactory' ) ) {
+			return $this->getArticleTextMWv1dot31( $wiki, $pagename );
+		}
+
+		// XXX: We do not know about custom namespaces on the target wiki here!
+		$title = $services->getTitleParser()->parseTitle( $pagename );
+		$store = $services->getRevisionStoreFactory()->getRevisionStore( $wiki );
+		$rev = $store->getRevisionByTitle( $title );
+
+		$content = $rev ? $rev->getContent( SlotRecord::MAIN ) : null;
+
+		if ( !( $content instanceof TextContent ) ) {
+			return false;
+		}
+
+		// Compat with MW < 1.33
+		if ( !method_exists( $content, 'getText' ) ) {
+			return $content->getNativeData();
+		}
+
+		return $content->getText();
+	}
+
+	/**
+	 * Cross-wiki content fetching for MediaWiki 1.31.
+	 * Very fragile.
+	 *
+	 * @param string|false $wiki
+	 * @param string $article
+	 *
+	 * @return bool|string|null
+	 * @throws MWException
+	 */
+	private function getArticleTextMWv1dot31( $wiki, $article ) {
+		$title = Title::newFromText( $article );
 		// Load all the relevant tables from the correct DB.
 		// This assumes that old_text is the actual text or
 		// that the external store system is at least unified.
