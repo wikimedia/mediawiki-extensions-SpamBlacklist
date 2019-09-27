@@ -392,11 +392,6 @@ abstract class BaseBlacklist {
 
 		$services = MediaWikiServices::getInstance();
 
-		// Compat with MW < 1.32
-		if ( !method_exists( $services, 'getRevisionStoreFactory' ) ) {
-			return $this->getArticleTextMWv1dot31( $wiki, $pagename );
-		}
-
 		// XXX: We do not know about custom namespaces on the target wiki here!
 		$title = $services->getTitleParser()->parseTitle( $pagename );
 		$store = $services->getRevisionStoreFactory()->getRevisionStore( $wiki );
@@ -408,45 +403,7 @@ abstract class BaseBlacklist {
 			return false;
 		}
 
-		// Compat with MW < 1.33
-		if ( !method_exists( $content, 'getText' ) ) {
-			return $content->getNativeData();
-		}
-
 		return $content->getText();
-	}
-
-	/**
-	 * Cross-wiki content fetching for MediaWiki 1.31.
-	 * Very fragile.
-	 *
-	 * @param string|false $wiki
-	 * @param string $article
-	 *
-	 * @return bool|string|null
-	 * @throws MWException
-	 */
-	private function getArticleTextMWv1dot31( $wiki, $article ) {
-		$title = Title::newFromText( $article );
-		// Load all the relevant tables from the correct DB.
-		// This assumes that old_text is the actual text or
-		// that the external store system is at least unified.
-		$revQuery = Revision::getQueryInfo( [ 'page', 'text' ] );
-		$row = wfGetDB( DB_REPLICA, [], $wiki )->selectRow(
-			$revQuery['tables'],
-			$revQuery['fields'],
-			[
-				'page_namespace' => $title->getNamespace(), // assume NS IDs match
-				'page_title' => $title->getDBkey(), // assume same case rules
-			],
-			__METHOD__,
-			[],
-			[ 'page' => [ 'JOIN', 'rev_id=page_latest' ] ] + $revQuery['joins']
-		);
-
-		return $row
-			? ContentHandler::getContentText( Revision::newFromRow( $row )->getContent() )
-			: false;
 	}
 
 	/**
