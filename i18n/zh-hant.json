@@ -8,7 +8,8 @@
 			"Waihorace",
 			"Cwlin0416",
 			"LNDDYL",
-			"A2093064"
+			"A2093064",
+			"Xiplus"
 		]
 	},
 	"spam-blacklist": " #<!-- 請勿更動此行 --> <pre>\n# 任何加入到頁面的外部 URL 於此清單之中將會被封鎖。\n# 此清單有效範圍僅在本 Wiki，詳情請參考全域封鎖清單。\n# 相關文件請參考 https://www.mediawiki.org/wiki/Extension:SpamBlacklist\n#\n# 語法格式如下：\n#   * 任何以 \"#\" 字元開頭的行皆為註解\n#   * 任何非空白的行會被作為正規表示法用來比對 URL 中的主機名稱\n #</pre> <!-- 請勿更動此行 -->",
