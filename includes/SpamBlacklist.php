@@ -1,6 +1,6 @@
 <?php
 
-use \MediaWiki\MediaWikiServices;
+use MediaWiki\MediaWikiServices;
 use Wikimedia\Rdbms\Database;
 
 class SpamBlacklist extends BaseBlacklist {
