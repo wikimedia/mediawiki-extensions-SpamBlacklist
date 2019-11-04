@@ -31,7 +31,7 @@ class SpamBlacklist extends BaseBlacklist {
 
 	/**
 	 * @param string[] $links An array of links to check against the blacklist
-	 * @param Title|null $title The title of the page to which the filter shall be applied.
+	 * @param ?Title $title The title of the page to which the filter shall be applied.
 	 *               This is used to load the old links already on the page, so
 	 *               the filter is only applied to links that got added. If not given,
 	 *               the filter is applied to all $links.
@@ -42,7 +42,7 @@ class SpamBlacklist extends BaseBlacklist {
 	 *
 	 * @return string[]|bool Matched text(s) if the edit should not be allowed; false otherwise
 	 */
-	public function filter( array $links, Title $title = null, $preventLog = false, $mode = 'check' ) {
+	public function filter( array $links, ?Title $title, $preventLog = false, $mode = 'check' ) {
 		$statsd = MediaWikiServices::getInstance()->getStatsdDataFactory();
 		$cache = ObjectCache::getLocalClusterInstance();
 
