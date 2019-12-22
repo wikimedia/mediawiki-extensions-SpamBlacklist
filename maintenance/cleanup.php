@@ -95,16 +95,16 @@ class Cleanup extends Maintenance {
 		if ( !$rev ) {
 			// Didn't find a non-spammy revision, blank the page
 			$this->output( "All revisions are spam, blanking...\n" );
-			$text = '';
+			$content = ContentHandler::makeContent( '', $title );
 			$comment = "All revisions matched the spam blacklist ($match), blanking";
 		} else {
 			// Revert to this revision
-			$text = ContentHandler::getContentText( $rev->getContent() );
+			$content = $rev->getContent() ?: ContentHandler::makeContent( '', $title );
 			$comment = "Cleaning up links to $match";
 		}
 		$wikiPage = new WikiPage( $title );
 		$wikiPage->doEditContent(
-			ContentHandler::makeContent( $text, $title ), $comment,
+			$content, $comment,
 			0, false, $user
 		);
 	}

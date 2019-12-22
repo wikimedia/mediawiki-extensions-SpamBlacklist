@@ -129,7 +129,7 @@ class SpamBlacklist extends BaseBlacklist {
 					preg_match_all( $fullLineRegex, $links, $fullUrls );
 					$imploded = implode( ' ', $fullUrls[0] );
 					wfDebugLog( 'SpamBlacklistHit', "$ip caught submitting spam: $imploded\n" );
-					if ( !$preventLog ) {
+					if ( !$preventLog && $title ) {
 						$this->logFilterHit( $title, $imploded ); // Log it
 					}
 					if ( $retVal === false ) {

@@ -155,10 +155,8 @@ abstract class BaseBlacklist {
 			$sources = [];
 			foreach ( self::$blacklistTypes as $type => $class ) {
 				$type = ucfirst( $type );
-				$sources += [
-					"$type-blacklist",
-					"$type-whitelist"
-				];
+				$sources[] = "$type-blacklist";
+				$sources[] = "$type-whitelist";
 			}
 
 			if ( in_array( $title->getDBkey(), $sources ) ) {
@@ -335,15 +333,17 @@ abstract class BaseBlacklist {
 				wfDebugLog( 'SpamBlacklist', "got from file $fileName\n" );
 			}
 
-			// Build a separate batch of regexes from each source.
-			// While in theory we could squeeze a little efficiency
-			// out of combining multiple sources in one regex, if
-			// there's a bad line in one of them we'll gain more
-			// from only having to break that set into smaller pieces.
-			$regexes = array_merge(
-				$regexes,
-				SpamRegexBatch::regexesFromText( $text, $this, $fileName )
-			);
+			if ( $text ) {
+				// Build a separate batch of regexes from each source.
+				// While in theory we could squeeze a little efficiency
+				// out of combining multiple sources in one regex, if
+				// there's a bad line in one of them we'll gain more
+				// from only having to break that set into smaller pieces.
+				$regexes = array_merge(
+					$regexes,
+					SpamRegexBatch::regexesFromText( $text, $this, $fileName )
+				);
+			}
 		}
 
 		return $regexes;
