@@ -35,7 +35,7 @@ class SpamBlacklist extends BaseBlacklist {
 	 *               This is used to load the old links already on the page, so
 	 *               the filter is only applied to links that got added. If not given,
 	 *               the filter is applied to all $links.
-	 * @param User|null $user Relevant user, only optional for backwards compatibility
+	 * @param User $user Relevant user
 	 * @param bool $preventLog Whether to prevent logging of hits. Set to true when
 	 *               the action is testing the links rather than attempting to save them
 	 *               (e.g. the API spamblacklist action)
@@ -46,7 +46,7 @@ class SpamBlacklist extends BaseBlacklist {
 	public function filter(
 		array $links,
 		?Title $title,
-		User $user = null,
+		User $user,
 		$preventLog = false,
 		$mode = 'check'
 	) {
@@ -55,11 +55,6 @@ class SpamBlacklist extends BaseBlacklist {
 
 		if ( !$links ) {
 			return false;
-		}
-
-		if ( $user === null ) {
-			wfDebugLog( 'SpamBlacklist', 'filter called without user specified' );
-			$user = RequestContext::getMain()->getUser();
 		}
 
 		sort( $links );

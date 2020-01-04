@@ -69,14 +69,14 @@ abstract class BaseBlacklist {
 	/**
 	 * @param array $links
 	 * @param ?Title $title
-	 * @param User|null $user
+	 * @param User $user
 	 * @param bool $preventLog
 	 * @return mixed
 	 */
 	abstract public function filter(
 		array $links,
 		?Title $title,
-		User $user = null,
+		User $user,
 		$preventLog = false
 	);
 
