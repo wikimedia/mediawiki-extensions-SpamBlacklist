@@ -35,20 +35,20 @@ class SpamBlacklist extends BaseBlacklist {
 	 *               This is used to load the old links already on the page, so
 	 *               the filter is only applied to links that got added. If not given,
 	 *               the filter is applied to all $links.
+	 * @param User|null $user Relevant user, only optional for backwards compatibility
 	 * @param bool $preventLog Whether to prevent logging of hits. Set to true when
 	 *               the action is testing the links rather than attempting to save them
 	 *               (e.g. the API spamblacklist action)
 	 * @param string $mode Either 'check' or 'stash'
-	 * @param User|null $user Relevant user, only optional for backwards compatibility
 	 *
 	 * @return string[]|bool Matched text(s) if the edit should not be allowed; false otherwise
 	 */
 	public function filter(
 		array $links,
 		?Title $title,
+		User $user = null,
 		$preventLog = false,
-		$mode = 'check',
-		User $user = null
+		$mode = 'check'
 	) {
 		$statsd = MediaWikiServices::getInstance()->getStatsdDataFactory();
 		$cache = ObjectCache::getLocalClusterInstance();
@@ -196,8 +196,14 @@ class SpamBlacklist extends BaseBlacklist {
 		);
 	}
 
-	public function warmCachesForFilter( Title $title, array $entries ) {
-		$this->filter( $entries, $title, true /* no logging */, 'stash' );
+	public function warmCachesForFilter( Title $title, array $entries, User $user ) {
+		$this->filter(
+			$entries,
+			$title,
+			$user,
+			true /* no logging */,
+			'stash'
+		);
 	}
 
 	/**

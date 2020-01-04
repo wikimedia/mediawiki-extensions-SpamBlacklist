@@ -69,10 +69,16 @@ abstract class BaseBlacklist {
 	/**
 	 * @param array $links
 	 * @param ?Title $title
+	 * @param User|null $user
 	 * @param bool $preventLog
 	 * @return mixed
 	 */
-	abstract public function filter( array $links, ?Title $title, $preventLog = false );
+	abstract public function filter(
+		array $links,
+		?Title $title,
+		User $user = null,
+		$preventLog = false
+	);
 
 	/**
 	 * Adds a blacklist class to the registry
@@ -431,8 +437,9 @@ abstract class BaseBlacklist {
 	/**
 	 * @param Title $title
 	 * @param string[] $entries
+	 * @param User $user
 	 */
-	public function warmCachesForFilter( Title $title, array $entries ) {
+	public function warmCachesForFilter( Title $title, array $entries, User $user ) {
 		// subclass this
 	}
 }

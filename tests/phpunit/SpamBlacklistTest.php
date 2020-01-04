@@ -63,7 +63,11 @@ class SpamBlacklistTest extends MediaWikiTestCase {
 	 * @dataProvider spamProvider
 	 */
 	public function testSpam( $links, $expected ) {
-		$returnValue = $this->spamFilter->filter( $links, Title::newMainPage() );
+		$returnValue = $this->spamFilter->filter(
+			$links,
+			Title::newMainPage(),
+			$this->createMock( User::class )
+		);
 		$this->assertEquals( $expected, $returnValue );
 	}
 
