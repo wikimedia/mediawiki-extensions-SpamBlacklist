@@ -174,7 +174,6 @@ abstract class BaseBlacklist {
 			}
 		}
 
-		// @phan-suppress-next-line PhanTypeMismatchForeach += makes Phan think $files is a number
 		foreach ( $files as $fileName ) {
 			$matches = [];
 			if ( preg_match( '/^DB: (\w*) (.*)$/', $fileName, $matches ) ) {
