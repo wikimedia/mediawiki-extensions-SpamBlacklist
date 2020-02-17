@@ -19,7 +19,7 @@
 	"spam-blacklist-desc": "Düzenli ifade tabanlı anti-spam kayıtlı kullanıcılar için sayfaları ve e-posta adresleri kara listeye URL için izin aracı",
 	"log-name-spamblacklist": "Reklam kara listesi günlüğü",
 	"log-description-spamblacklist": "Bu olaylar, spam kara liste, hit parça.",
-	"logentry-spamblacklist-hit": "{{CİNSİYET:$2|$1}} neden bir spam kara liste, vurmak $3 tarafından eklemeye $4.",
+	"logentry-spamblacklist-hit": "{{GENDER:$2|$1}}, $4 eklemeye çalışarak $3 bir spam kara listesine neden oldu.",
 	"right-spamblacklistlog": "Reklam kara listesini gör",
 	"action-spamblacklistlog": "reklam kara listesi günlüğünü gör"
 }
