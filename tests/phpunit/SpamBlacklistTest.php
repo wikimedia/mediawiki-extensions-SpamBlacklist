@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * @group SpamBlacklist
  * @group Database
@@ -75,7 +77,7 @@ class SpamBlacklistTest extends MediaWikiTestCase {
 			'files' => [],
 		] );
 
-		\MessageCache::singleton()->enable();
+		MediaWikiServices::getInstance()->getMessageCache()->enable();
 		$this->insertPage( 'MediaWiki:Spam-blacklist', implode( "\n", $this->blacklist ) );
 		$this->insertPage( 'MediaWiki:Spam-whitelist', implode( "\n", $this->whitelist ) );
 
@@ -87,7 +89,7 @@ class SpamBlacklistTest extends MediaWikiTestCase {
 	}
 
 	protected function tearDown() : void {
-		\MessageCache::singleton()->disable();
+		MediaWikiServices::getInstance()->getMessageCache()->disable();
 		parent::tearDown();
 	}
 }
