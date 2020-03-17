@@ -23,6 +23,6 @@
 	"log-name-spamblacklist": "Журнал чорного списку спамерів",
 	"log-description-spamblacklist": "Ці події відстежують потрапляння у чорний список спамерів.",
 	"logentry-spamblacklist-hit": "$1 спричинив потрапляння у чорний список спамерів на $3, намагаючись додати $4.",
-	"right-spamblacklistlog": "перегляд журналу чорного списку спамерів",
-	"action-spamblacklistlog": "перегляд журналу \"чорний список\" спамерів"
+	"right-spamblacklistlog": "Перегляд журналу чорного списку спаму",
+	"action-spamblacklistlog": "перегляд журналу чорного списку спаму"
 }
