@@ -2,8 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Arystanbek",
-			"Incelemeelemani",
-			"BaRaN6161 TURK"
+			"BaRaN6161 TURK",
+			"Incelemeelemani"
 		]
 	},
 	"apihelp-spamblacklist-description": "Bu SpamBlacklist karşı bir veya daha fazla URL doğrula.",

@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yekrats",
-			"Robin van der Vliet"
+			"Robin van der Vliet",
+			"Yekrats"
 		]
 	},
 	"spam-blacklist": "\n #<!-- ne ŝanĝu ĉi tiun linion iel ajn --> <pre>\n# Eksteraj URL-oj kongruante al ĉi tiuj listanoj estos forbarita kiam aldonita al paĝo.\n# Ĉi tiu listo nur regnas ĉi tiun vikion; ankaux aktivas la ĝenerala nigralisto.\n # Por dokumentaro, rigardu https://www.mediawiki.org/wiki/Extension:SpamBlacklist\n#\n# Jen la sintakso:\n#  * Ĉio ekde \"#\" signo al la fino de linio estas komento\n#  * Ĉiu ne-malplena linio estas regex kodero kiu nur kongruas retnodojn ene de URL-oj\n\n #</pre> <!-- ne ŝanĝu ĉi tiun linion iel ajn -->",
