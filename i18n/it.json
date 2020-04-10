@@ -3,6 +3,7 @@
 		"authors": [
 			"Beta16",
 			"BrokenArrow",
+			"Giromin Cangiaxo",
 			"Ximo17"
 		]
 	},
@@ -17,7 +18,7 @@
 	"spam-blacklist-desc": "Strumento antispam basato sulle espressioni regolari per bloccare URL e indirizzi email di utenti registrati",
 	"log-name-spamblacklist": "Spam blacklist",
 	"log-description-spamblacklist": "Questi eventi tengono traccia delle attivazioni della lista nera dello spam.",
-	"logentry-spamblacklist-hit": "$1 ha causato l'attivazione della spam blacklist su $3 tentando di aggiungere $4.",
+	"logentry-spamblacklist-hit": "{{GENDER:$2|$1}}  ha causato l'attivazione della spam blacklist su $3 tentando di aggiungere $4.",
 	"right-spamblacklistlog": "Visualizza registro della spam blacklist",
 	"action-spamblacklistlog": "vedere il registro della spam blacklist"
 }
