@@ -56,12 +56,19 @@
 	"ResourceModules": {
 		"ext.spamBlacklist.visualEditor": {
 			"scripts": "ve-spamblacklist/ve.init.mw.SpamBlacklistSaveErrorHandler.js",
-			"targets": [ "desktop", "mobile" ]
+			"targets": [
+				"desktop",
+				"mobile"
+			]
 		}
 	},
-	"VisualEditorPluginModules": [
-		"ext.spamBlacklist.visualEditor"
-	],
+	"attributes": {
+		"VisualEditor": {
+			"PluginModules": [
+				"ext.spamBlacklist.visualEditor"
+			]
+		}
+	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "modules",
 		"remoteExtPath": "SpamBlacklist/modules"
@@ -88,12 +95,19 @@
 	},
 	"config": {
 		"BlacklistSettings": {
-			"spam": {
-				"files": [ "https://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1" ]
+			"value": {
+				"spam": {
+					"files": [
+						"https://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1"
+					]
+				},
+				"_merge_strategy": "array_plus_2d"
 			},
-			"_merge_strategy": "array_plus_2d"
+			"merge_strategy": "array_plus_2d"
 		},
-		"LogSpamBlacklistHits": false
+		"LogSpamBlacklistHits": {
+			"value": false
+		}
 	},
 	"AuthManagerAutoConfig": {
 		"preauth": {
@@ -102,5 +116,5 @@
 			}
 		}
 	},
-	"manifest_version": 1
+	"manifest_version": 2
 }
