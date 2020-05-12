@@ -100,8 +100,7 @@
 					"files": [
 						"https://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1"
 					]
-				},
-				"_merge_strategy": "array_plus_2d"
+				}
 			},
 			"merge_strategy": "array_plus_2d"
 		},
