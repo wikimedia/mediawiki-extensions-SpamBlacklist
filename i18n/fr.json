@@ -17,7 +17,7 @@
 	"spam-blacklisted-email-text": "Votre adresse courriel est actuellement interdite pour envoyer des courriels aux autres utilisateurs.",
 	"spam-blacklisted-email-signup": "L’adresse courriel fournie est actuellement interdite à l'utilisation.",
 	"spam-invalid-lines": "{{PLURAL:$1|La ligne suivante|Les lignes suivantes}} de la liste noire de pourriels {{PLURAL:$1|est une expression rationnelle non valide|sont des expressions rationnelles non valides}} et doi{{PLURAL:$1||ven}}t être corrigée{{PLURAL:$1||s}} avant d’enregistrer la page :",
-	"spam-blacklist-desc": "Outil anti-pourriel basé sur les expressions régulières permettant d'interdire les URL dans les pages et les adresses courriel pour les utilisateurs enregistrés",
+	"spam-blacklist-desc": "Outil anti-pourriel basé sur les expressions rationnelles permettant d’interdire les URL dans les pages et les adresses courriel pour les utilisateurs enregistrés",
 	"log-name-spamblacklist": "Journal de liste noire de pourriels",
 	"log-description-spamblacklist": "Ces événements tracent les correspondances avec la liste noire de pourriels.",
 	"logentry-spamblacklist-hit": "{{GENDER:$2|$1}} a provoqué une correspondance avec la liste noire de pourriels sur $3 en essayant d’ajouter $4.",
