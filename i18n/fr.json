@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Gomoko",
+			"Pols12",
 			"Sherbrooke",
 			"Thibaut120094",
 			"Urhixidur",
@@ -18,9 +19,9 @@
 	"spam-blacklisted-email-signup": "L’adresse courriel fournie est actuellement interdite à l'utilisation.",
 	"spam-invalid-lines": "{{PLURAL:$1|La ligne suivante|Les lignes suivantes}} de la liste noire de pourriels {{PLURAL:$1|est une expression rationnelle non valide|sont des expressions rationnelles non valides}} et doi{{PLURAL:$1||ven}}t être corrigée{{PLURAL:$1||s}} avant d’enregistrer la page :",
 	"spam-blacklist-desc": "Outil anti-pourriel basé sur les expressions rationnelles permettant d’interdire les URL dans les pages et les adresses courriel pour les utilisateurs enregistrés",
-	"log-name-spamblacklist": "Journal de liste noire de pourriels",
+	"log-name-spamblacklist": "Journal de la liste noire antipourriels",
 	"log-description-spamblacklist": "Ces événements tracent les correspondances avec la liste noire de pourriels.",
-	"logentry-spamblacklist-hit": "{{GENDER:$2|$1}} a provoqué une correspondance avec la liste noire de pourriels sur $3 en essayant d’ajouter $4.",
+	"logentry-spamblacklist-hit": "{{GENDER:$2|$1}} a essayé d’ajouter $4 sur $3 mais cela a été bloqué par la liste noire antipourriels.",
 	"right-spamblacklistlog": "Afficher le journal de la liste noire de pourriels",
 	"action-spamblacklistlog": "afficher le journal de la liste noir de pourriels"
 }
