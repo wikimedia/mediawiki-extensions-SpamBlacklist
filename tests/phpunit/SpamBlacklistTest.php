@@ -70,12 +70,14 @@ class SpamBlacklistTest extends MediaWikiTestCase {
 	protected function setUp() : void {
 		parent::setUp();
 
-		// create spam filter
-		$this->spamFilter = new SpamBlacklist;
-
 		$this->setMwGlobals( 'wgBlacklistSettings', [
 			'files' => [],
 		] );
+
+		BaseBlacklist::clearInstanceCache();
+
+		// create spam filter
+		$this->spamFilter = new SpamBlacklist;
 
 		MediaWikiServices::getInstance()->getMessageCache()->enable();
 		$this->insertPage( 'MediaWiki:Spam-blacklist', implode( "\n", $this->blacklist ) );

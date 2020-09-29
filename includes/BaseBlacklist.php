@@ -136,6 +136,13 @@ abstract class BaseBlacklist {
 	}
 
 	/**
+	 * Clear instance cache. For use during testing.
+	 */
+	public static function clearInstanceCache() {
+		self::$instances = [];
+	}
+
+	/**
 	 * Returns the code for the blacklist implementation
 	 *
 	 * @return string
