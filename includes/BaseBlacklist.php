@@ -240,15 +240,14 @@ abstract class BaseBlacklist {
 	 * @return array Regular expressions
 	 */
 	public function getLocalBlacklists() {
-		$that = $this;
 		$type = $this->getBlacklistType();
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		return $cache->getWithSetCallback(
 			$cache->makeKey( 'spamblacklist', $type, 'blacklist-regex' ),
 			$this->expiryTime,
-			function () use ( $that, $type ) {
-				return SpamRegexBatch::regexesFromMessage( "{$type}-blacklist", $that );
+			function () use ( $type ) {
+				return SpamRegexBatch::regexesFromMessage( "{$type}-blacklist", $this );
 			}
 		);
 	}
@@ -259,15 +258,14 @@ abstract class BaseBlacklist {
 	 * @return array Regular expressions
 	 */
 	public function getWhitelists() {
-		$that = $this;
 		$type = $this->getBlacklistType();
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 
 		return $cache->getWithSetCallback(
 			$cache->makeKey( 'spamblacklist', $type, 'whitelist-regex' ),
 			$this->expiryTime,
-			function () use ( $that, $type ) {
-				return SpamRegexBatch::regexesFromMessage( "{$type}-whitelist", $that );
+			function () use ( $type ) {
+				return SpamRegexBatch::regexesFromMessage( "{$type}-whitelist", $this );
 			}
 		);
 	}
@@ -288,17 +286,15 @@ abstract class BaseBlacklist {
 		}
 
 		$miss = false;
-
-		$that = $this;
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$regexes = $cache->getWithSetCallback(
 			// This used to be cached per-site, but that could be bad on a shared
 			// server where not all wikis have the same configuration.
 			$cache->makeKey( 'spamblacklist', $listType, 'shared-blacklist-regex' ),
 			$this->expiryTime,
-			function () use ( $that, &$miss ) {
+			function () use ( &$miss ) {
 				$miss = true;
-				return $that->buildSharedBlacklists();
+				return $this->buildSharedBlacklists();
 			}
 		);
 
