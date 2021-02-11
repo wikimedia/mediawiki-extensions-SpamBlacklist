@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\CheckUser\Hooks;
 use MediaWiki\MediaWikiServices;
 use Wikimedia\Rdbms\Database;
 
@@ -242,11 +243,9 @@ class SpamBlacklist extends BaseBlacklist {
 			if ( $log->isRestricted() ) {
 				// Make sure checkusers can see this action if the log is restricted
 				// (which is the default)
-				if ( ExtensionRegistry::getInstance()->isLoaded( 'CheckUser' )
-					&& class_exists( CheckUserHooks::class )
-				) {
+				if ( ExtensionRegistry::getInstance()->isLoaded( 'CheckUser' ) ) {
 					$rc = $logEntry->getRecentChange( $logid );
-					CheckUserHooks::updateCheckUserData( $rc );
+					Hooks::updateCheckUserData( $rc );
 				}
 			} else {
 				// If the log is unrestricted, publish normally to RC,
