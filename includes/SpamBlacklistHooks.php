@@ -7,7 +7,15 @@ use MediaWiki\User\UserIdentity;
 /**
  * Hooks for the spam blacklist extension
  */
-class SpamBlacklistHooks {
+class SpamBlacklistHooks implements
+	\MediaWiki\Hook\EditFilterHook,
+	\MediaWiki\Hook\EditFilterMergedContentHook,
+	\MediaWiki\Hook\UploadVerifyUploadHook,
+	\MediaWiki\Storage\Hook\PageSaveCompleteHook,
+	\MediaWiki\Storage\Hook\ParserOutputStashForEditHook,
+	\MediaWiki\User\Hook\UserCanSendEmailHook
+{
+
 	/**
 	 * Hook function for EditFilterMergedContent
 	 *
@@ -20,7 +28,7 @@ class SpamBlacklistHooks {
 	 *
 	 * @return bool
 	 */
-	public static function filterMergedContent(
+	public function onEditFilterMergedContent(
 		IContextSource $context,
 		Content $content,
 		Status $status,
@@ -59,12 +67,19 @@ class SpamBlacklistHooks {
 		return true;
 	}
 
-	public static function onParserOutputStashForEdit(
-		WikiPage $page,
-		Content $content,
-		ParserOutput $output,
+	/**
+	 * @param WikiPage $page
+	 * @param Content $content
+	 * @param ParserOutput $output
+	 * @param string $summary
+	 * @param User $user
+	 */
+	public function onParserOutputStashForEdit(
+		$page,
+		$content,
+		$output,
 		$summary,
-		User $user
+		$user
 	) {
 		$links = array_keys( $output->getExternalLinks() );
 		$spamObj = BaseBlacklist::getSpamBlacklist();
@@ -74,11 +89,11 @@ class SpamBlacklistHooks {
 	/**
 	 * Verify that the user can send emails
 	 *
-	 * @param User &$user
+	 * @param User $user
 	 * @param array &$hookErr
 	 * @return bool
 	 */
-	public static function userCanSendEmail( &$user, &$hookErr ) {
+	public function onUserCanSendEmail( $user, &$hookErr ) {
 		$blacklist = BaseBlacklist::getEmailBlacklist();
 		if ( $blacklist->checkUser( $user ) ) {
 			return true;
@@ -86,6 +101,7 @@ class SpamBlacklistHooks {
 
 		$hookErr = [ 'spam-blacklisted-email', 'spam-blacklisted-email-text', null ];
 
+		// No other hook handler should run
 		return false;
 	}
 
@@ -98,9 +114,9 @@ class SpamBlacklistHooks {
 	 * @param string $text
 	 * @param string $section
 	 * @param string &$hookError
-	 * @return bool
+	 * @param string $summary
 	 */
-	public static function validate( EditPage $editPage, $text, $section, &$hookError ) {
+	public function onEditFilter( $editPage, $text, $section, &$hookError, $summary ) {
 		$title = $editPage->getTitle();
 		$thisPageName = $title->getPrefixedDBkey();
 
@@ -108,12 +124,12 @@ class SpamBlacklistHooks {
 			wfDebugLog( 'SpamBlacklist',
 				"Spam blacklist validator: [[$thisPageName]] not a local blacklist\n"
 			);
-			return true;
+			return;
 		}
 
 		$type = BaseBlacklist::getTypeFromTitle( $title );
 		if ( $type === false ) {
-			return true;
+			return;
 		}
 
 		$lines = explode( "\n", $text );
@@ -140,8 +156,6 @@ class SpamBlacklistHooks {
 				"Spam blacklist validator: [[$thisPageName]] ok or empty blacklist\n"
 			);
 		}
-
-		return true;
 	}
 
 	/**
@@ -154,19 +168,17 @@ class SpamBlacklistHooks {
 	 * @param int $flags
 	 * @param RevisionRecord $revisionRecord
 	 * @param EditResult $editResult
-	 *
-	 * @return bool
 	 */
-	public static function pageSaveContent(
-		WikiPage $wikiPage,
-		UserIdentity $userIdentity,
-		string $summary,
-		int $flags,
-		RevisionRecord $revisionRecord,
-		EditResult $editResult
+	public function onPageSaveComplete(
+		$wikiPage,
+		$userIdentity,
+		$summary,
+		$flags,
+		$revisionRecord,
+		$editResult
 	) {
 		if ( !BaseBlacklist::isLocalSource( $wikiPage->getTitle() ) ) {
-			return true;
+			return;
 		}
 
 		// This sucks because every Blacklist needs to be cleared
@@ -174,8 +186,6 @@ class SpamBlacklistHooks {
 			$blacklist = BaseBlacklist::getInstance( $type );
 			$blacklist->clearCache();
 		}
-
-		return true;
 	}
 
 	/**
@@ -184,13 +194,12 @@ class SpamBlacklistHooks {
 	 * @param array|null $props
 	 * @param string $comment
 	 * @param string $pageText
-	 * @param array|ApiMessage &$error
-	 * @return bool
+	 * @param array|MessageSpecifier &$error
 	 */
-	public static function onUploadVerifyUpload(
+	public function onUploadVerifyUpload(
 		UploadBase $upload,
 		User $user,
-		$props,
+		?array $props,
 		$comment,
 		$pageText,
 		&$error
@@ -209,7 +218,7 @@ class SpamBlacklistHooks {
 			$links[] = $comment;
 		}
 		if ( !$links ) {
-			return true;
+			return;
 		}
 
 		$spamObj = BaseBlacklist::getSpamBlacklist();
@@ -224,7 +233,5 @@ class SpamBlacklistHooks {
 				]
 			);
 		}
-
-		return true;
 	}
 }
