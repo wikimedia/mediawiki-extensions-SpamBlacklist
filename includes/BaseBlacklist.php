@@ -167,6 +167,9 @@ abstract class BaseBlacklist {
 		if ( $title->inNamespace( NS_MEDIAWIKI ) ) {
 			$sources = [];
 			foreach ( self::$blacklistTypes as $type => $class ) {
+				// For the built in types, this results in the use of:
+				// spam-blacklist, spam-whitelist
+				// email-blacklist, email-whitelist
 				$type = ucfirst( $type );
 				$sources[] = "$type-blacklist";
 				$sources[] = "$type-whitelist";
@@ -190,11 +193,9 @@ abstract class BaseBlacklist {
 		foreach ( $files as $fileName ) {
 			$matches = [];
 			if ( preg_match( '/^DB: (\w*) (.*)$/', $fileName, $matches ) ) {
-				if ( $wgDBname === $matches[1] ) {
-					if ( $matches[2] === $title->getPrefixedDbKey() ) {
-						// Local DB fetch of this page...
-						return true;
-					}
+				if ( $wgDBname === $matches[1] && $matches[2] === $title->getPrefixedDbKey() ) {
+					// Local DB fetch of this page...
+					return true;
 				}
 			} elseif ( preg_match( $thisHttpRegex, $fileName ) ) {
 				// Raw view of this page
