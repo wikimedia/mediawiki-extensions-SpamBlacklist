@@ -39,7 +39,7 @@ class SpamBlacklistHooks implements
 		$title = $context->getTitle();
 
 		// get the link from the not-yet-saved page content.
-		$editInfo = $context->getWikiPage()->prepareContentForEdit( $content );
+		$editInfo = $context->getWikiPage()->prepareContentForEdit( $content, null, $user );
 		$pout = $editInfo->output;
 		$links = array_keys( $pout->getExternalLinks() );
 
