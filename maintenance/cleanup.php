@@ -118,10 +118,7 @@ class Cleanup extends Maintenance {
 			$comment = "Cleaning up links to $match";
 		}
 		$wikiPage = new WikiPage( $title );
-		$wikiPage->doEditContent(
-			$content, $comment,
-			0, false, $user
-		);
+		$wikiPage->doUserEditContent( $content, $user, $comment );
 	}
 }
 
