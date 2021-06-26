@@ -61,9 +61,11 @@ class SpamBlacklistHooks implements
 				]
 			);
 			$status->fatal( $error );
+			// @todo Remove this line after this extension do not support mediawiki version 1.36 and before
+			$status->value = EditPage::AS_HOOK_ERROR_EXPECTED;
+			return false;
 		}
 
-		// Always return true, EditPage will look at $status->isOk().
 		return true;
 	}
 
