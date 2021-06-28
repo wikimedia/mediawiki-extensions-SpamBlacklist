@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Storage\EditResult;
 use MediaWiki\User\UserIdentity;
@@ -39,7 +40,8 @@ class SpamBlacklistHooks implements
 		$title = $context->getTitle();
 
 		// get the link from the not-yet-saved page content.
-		$editInfo = $context->getWikiPage()->prepareContentForEdit( $content, null, $user );
+		$wikiPage = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $title );
+		$editInfo = $wikiPage->prepareContentForEdit( $content, null, $user );
 		$pout = $editInfo->output;
 		$links = array_keys( $pout->getExternalLinks() );
 
