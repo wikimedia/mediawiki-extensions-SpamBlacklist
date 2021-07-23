@@ -71,7 +71,7 @@ class SpamBlacklistTest extends MediaWikiTestCase {
 		$this->assertEquals( $expected, $returnValue );
 	}
 
-	protected function setUp() : void {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->setMwGlobals( 'wgBlacklistSettings', [
@@ -94,7 +94,7 @@ class SpamBlacklistTest extends MediaWikiTestCase {
 		$reflProp->setValue( $instance, false );
 	}
 
-	protected function tearDown() : void {
+	protected function tearDown(): void {
 		MediaWikiServices::getInstance()->getMessageCache()->disable();
 		parent::tearDown();
 	}
