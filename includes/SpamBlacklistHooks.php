@@ -1,6 +1,5 @@
 <?php
 
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Storage\EditResult;
 use MediaWiki\User\UserIdentity;
@@ -38,11 +37,7 @@ class SpamBlacklistHooks implements
 		$minoredit
 	) {
 		$title = $context->getTitle();
-
-		// get the link from the not-yet-saved page content.
-		$wikiPage = MediaWikiServices::getInstance()->getWikiPageFactory()->newFromTitle( $title );
-		$editInfo = $wikiPage->prepareContentForEdit( $content, null, $user );
-		$pout = $editInfo->output;
+		$pout = $content->getParserOutput( $title );
 		$links = array_keys( $pout->getExternalLinks() );
 
 		// HACK: treat the edit summary as a link if it contains anything
