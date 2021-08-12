@@ -37,7 +37,7 @@ class SpamBlacklistHooks implements
 		$minoredit
 	) {
 		$title = $context->getTitle();
-		$pout = $content->getParserOutput( $title );
+		$pout = $content->getParserOutput( $title, null, null, false );
 		$links = array_keys( $pout->getExternalLinks() );
 
 		// HACK: treat the edit summary as a link if it contains anything
