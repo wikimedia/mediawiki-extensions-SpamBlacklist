@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Storage\EditResult;
 use MediaWiki\User\UserIdentity;
@@ -37,7 +38,17 @@ class SpamBlacklistHooks implements
 		$minoredit
 	) {
 		$title = $context->getTitle();
-		$pout = $content->getParserOutput( $title, null, null, false );
+		$stashedEdit = MediaWikiServices::getInstance()->getPageEditStash()->checkCache(
+			$title,
+			$content,
+			$user
+		);
+		if ( $stashedEdit ) {
+			/** @var ParserOutput $output */
+			$pout = $stashedEdit->output;
+		} else {
+			$pout = $content->getParserOutput( $title, null, null, false );
+		}
 		$links = array_keys( $pout->getExternalLinks() );
 
 		// HACK: treat the edit summary as a link if it contains anything
