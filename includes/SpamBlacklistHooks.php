@@ -38,7 +38,8 @@ class SpamBlacklistHooks implements
 		$minoredit
 	) {
 		$title = $context->getTitle();
-		$stashedEdit = MediaWikiServices::getInstance()->getPageEditStash()->checkCache(
+		$services = MediaWikiServices::getInstance();
+		$stashedEdit = $services->getPageEditStash()->checkCache(
 			$title,
 			$content,
 			$user
@@ -47,7 +48,8 @@ class SpamBlacklistHooks implements
 			/** @var ParserOutput $output */
 			$pout = $stashedEdit->output;
 		} else {
-			$pout = $content->getParserOutput( $title, null, null, false );
+			$contentRenderer = $services->getContentRenderer();
+			$pout = $contentRenderer->getParserOutput( $content, $title, null, null, false );
 		}
 		$links = array_keys( $pout->getExternalLinks() );
 
@@ -219,7 +221,8 @@ class SpamBlacklistHooks implements
 		// get the link from the not-yet-saved page content.
 		$content = ContentHandler::makeContent( $pageText, $title );
 		$parserOptions = ParserOptions::newCanonical( 'canonical' );
-		$output = $content->getParserOutput( $title, null, $parserOptions );
+		$contentRenderer = MediaWikiServices::getInstance()->getContentRenderer();
+		$output = $contentRenderer->getParserOutput( $content, $title, null, $parserOptions );
 		$links = array_keys( $output->getExternalLinks() );
 
 		// HACK: treat comment as a link if it contains anything
