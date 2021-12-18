@@ -220,7 +220,7 @@ class SpamBlacklistHooks implements
 
 		// get the link from the not-yet-saved page content.
 		$content = ContentHandler::makeContent( $pageText, $title );
-		$parserOptions = ParserOptions::newCanonical( 'canonical' );
+		$parserOptions = ParserOptions::newFromAnon();
 		$contentRenderer = MediaWikiServices::getInstance()->getContentRenderer();
 		$output = $contentRenderer->getParserOutput( $content, $title, null, $parserOptions );
 		$links = array_keys( $output->getExternalLinks() );
