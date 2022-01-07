@@ -4,6 +4,7 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Storage\EditResult;
 use MediaWiki\User\UserIdentity;
+use Wikimedia\Assert\PreconditionException;
 
 /**
  * Hooks for the spam blacklist extension
@@ -45,14 +46,28 @@ class SpamBlacklistHooks implements
 			$user
 		);
 		if ( $stashedEdit ) {
+			// Try getting the value from edit stash
 			/** @var ParserOutput $output */
 			$pout = $stashedEdit->output;
 		} else {
-			$contentRenderer = $services->getContentRenderer();
-			$pout = $contentRenderer->getParserOutput( $content, $title, null, null, false );
+			try {
+				// Try getting the update directly
+				$updater = $context->getWikiPage()->getCurrentUpdate();
+				$pout = $updater->getParserOutputForMetaData();
+			} catch ( PreconditionException $exception ) {
+				// Last resort, parse the page.
+				$contentRenderer = $services->getContentRenderer();
+				$pout = $contentRenderer->getParserOutput(
+					$content,
+					$title,
+					null,
+					null,
+					false
+				);
+			}
+
 		}
 		$links = array_keys( $pout->getExternalLinks() );
-
 		// HACK: treat the edit summary as a link if it contains anything
 		// that looks like it could be a URL or e-mail address.
 		if ( preg_match( '/\S(\.[^\s\d]{2,}|[\/@]\S)/', $summary ) ) {
