@@ -39,22 +39,22 @@ class SpamBlacklistHooks implements
 		$minoredit
 	) {
 		$title = $context->getTitle();
-		$services = MediaWikiServices::getInstance();
-		$stashedEdit = $services->getPageEditStash()->checkCache(
-			$title,
-			$content,
-			$user
-		);
-		if ( $stashedEdit ) {
-			// Try getting the value from edit stash
-			/** @var ParserOutput $output */
-			$pout = $stashedEdit->output;
-		} else {
-			try {
-				// Try getting the update directly
-				$updater = $context->getWikiPage()->getCurrentUpdate();
-				$pout = $updater->getParserOutputForMetaData();
-			} catch ( PreconditionException $exception ) {
+		try {
+			// Try getting the update directly
+			$updater = $context->getWikiPage()->getCurrentUpdate();
+			$pout = $updater->getParserOutputForMetaData();
+		} catch ( PreconditionException $exception ) {
+			$services = MediaWikiServices::getInstance();
+			$stashedEdit = $services->getPageEditStash()->checkCache(
+				$title,
+				$content,
+				$user
+			);
+			if ( $stashedEdit ) {
+				// Try getting the value from edit stash
+				/** @var ParserOutput $output */
+				$pout = $stashedEdit->output;
+			} else {
 				// Last resort, parse the page.
 				$contentRenderer = $services->getContentRenderer();
 				$pout = $contentRenderer->getParserOutput(
@@ -65,7 +65,6 @@ class SpamBlacklistHooks implements
 					false
 				);
 			}
-
 		}
 		$links = array_keys( $pout->getExternalLinks() );
 		// HACK: treat the edit summary as a link if it contains anything
