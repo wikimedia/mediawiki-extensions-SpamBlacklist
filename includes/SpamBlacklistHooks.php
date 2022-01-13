@@ -43,7 +43,7 @@ class SpamBlacklistHooks implements
 			// Try getting the update directly
 			$updater = $context->getWikiPage()->getCurrentUpdate();
 			$pout = $updater->getParserOutputForMetaData();
-		} catch ( PreconditionException $exception ) {
+		} catch ( PreconditionException | LogicException $exception ) {
 			$services = MediaWikiServices::getInstance();
 			$stashedEdit = $services->getPageEditStash()->checkCache(
 				$title,
