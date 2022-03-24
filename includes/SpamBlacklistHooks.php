@@ -172,11 +172,11 @@ class SpamBlacklistHooks implements
 					array_map( 'wfEscapeWikiText', $badLines ) ) .
 				"</code>\n";
 			$hookError =
-				"<div class='errorbox'>" .
+				Html::errorBox(
 					wfMessage( 'spam-invalid-lines' )->numParams( $badLines )->text() . "<br />" .
-					$badList .
-					"</div>\n" .
-					"<br clear='all' />\n";
+					$badList
+					) .
+					"\n<br clear='all' />\n";
 		} else {
 			wfDebugLog( 'SpamBlacklist',
 				"Spam blacklist validator: [[$thisPageName]] ok or empty blacklist\n"
