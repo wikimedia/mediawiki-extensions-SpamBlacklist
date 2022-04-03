@@ -22,6 +22,8 @@
  * http://www.gnu.org/copyleft/gpl.html
  */
 
+use Wikimedia\ParamValidator\ParamValidator;
+
 /**
  * Query module check a URL against the blacklist
  *
@@ -53,8 +55,8 @@ class ApiSpamBlacklist extends ApiBase {
 	public function getAllowedParams() {
 		return [
 			'url' => [
-				ApiBase::PARAM_REQUIRED => true,
-				ApiBase::PARAM_ISMULTI => true,
+				ParamValidator::PARAM_REQUIRED => true,
+				ParamValidator::PARAM_ISMULTI => true,
 			]
 		];
 	}
