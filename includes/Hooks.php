@@ -1,21 +1,44 @@
 <?php
 
+namespace MediaWiki\Extension\SpamBlacklist;
+
+use ApiMessage;
+use Content;
+use ContentHandler;
+use EditPage;
+use Html;
+use IContextSource;
+use LogicException;
+use MediaWiki\Hook\EditFilterHook;
+use MediaWiki\Hook\EditFilterMergedContentHook;
+use MediaWiki\Hook\UploadVerifyUploadHook;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Storage\EditResult;
+use MediaWiki\Storage\Hook\PageSaveCompleteHook;
+use MediaWiki\Storage\Hook\ParserOutputStashForEditHook;
+use MediaWiki\User\Hook\UserCanSendEmailHook;
 use MediaWiki\User\UserIdentity;
+use Message;
+use MessageSpecifier;
+use ParserOptions;
+use ParserOutput;
+use Status;
+use UploadBase;
+use User;
 use Wikimedia\Assert\PreconditionException;
+use WikiPage;
 
 /**
  * Hooks for the spam blacklist extension
  */
-class SpamBlacklistHooks implements
-	\MediaWiki\Hook\EditFilterHook,
-	\MediaWiki\Hook\EditFilterMergedContentHook,
-	\MediaWiki\Hook\UploadVerifyUploadHook,
-	\MediaWiki\Storage\Hook\PageSaveCompleteHook,
-	\MediaWiki\Storage\Hook\ParserOutputStashForEditHook,
-	\MediaWiki\User\Hook\UserCanSendEmailHook
+class Hooks implements
+	EditFilterHook,
+	EditFilterMergedContentHook,
+	UploadVerifyUploadHook,
+	PageSaveCompleteHook,
+	ParserOutputStashForEditHook,
+	UserCanSendEmailHook
 {
 
 	/**

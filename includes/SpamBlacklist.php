@@ -1,7 +1,16 @@
 <?php
 
-use MediaWiki\CheckUser\Hooks;
+namespace MediaWiki\Extension\SpamBlacklist;
+
+use ExtensionRegistry;
+use LogPage;
+use ManualLogEntry;
+use MediaWiki\CheckUser\Hooks as CUHooks;
 use MediaWiki\MediaWikiServices;
+use ObjectCache;
+use RequestContext;
+use Title;
+use User;
 use Wikimedia\AtEase\AtEase;
 use Wikimedia\Rdbms\Database;
 
@@ -246,7 +255,7 @@ class SpamBlacklist extends BaseBlacklist {
 				// (which is the default)
 				if ( ExtensionRegistry::getInstance()->isLoaded( 'CheckUser' ) ) {
 					$rc = $logEntry->getRecentChange( $logid );
-					Hooks::updateCheckUserData( $rc );
+					CUHooks::updateCheckUserData( $rc );
 				}
 			} else {
 				// If the log is unrestricted, publish normally to RC,

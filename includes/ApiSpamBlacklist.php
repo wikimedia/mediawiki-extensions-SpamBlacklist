@@ -22,6 +22,10 @@
  * http://www.gnu.org/copyleft/gpl.html
  */
 
+namespace MediaWiki\Extension\SpamBlacklist;
+
+use ApiBase;
+use ApiResult;
 use Wikimedia\ParamValidator\ParamValidator;
 
 /**
@@ -44,7 +48,7 @@ class ApiSpamBlacklist extends ApiBase {
 		if ( $matches !== false ) {
 			// this url is blacklisted.
 			$res->addValue( 'spamblacklist', 'result', 'blacklisted' );
-			$res->setIndexedTagName( $matches, 'match' );
+			ApiResult::setIndexedTagName( $matches, 'match' );
 			$res->addValue( 'spamblacklist', 'matches', $matches );
 		} else {
 			// not blacklisted

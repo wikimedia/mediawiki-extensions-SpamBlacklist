@@ -6,6 +6,7 @@
  * If all revisions contain spam, blanks the page
  */
 
+use MediaWiki\Extension\SpamBlacklist\BaseBlacklist;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\Revision\RevisionRecord;
