@@ -3,6 +3,7 @@
 		"authors": [
 			"Artsiom91",
 			"Chadyka",
+			"No Sleep till Krupki",
 			"Tomato Cream"
 		]
 	},
@@ -19,5 +20,5 @@
 	"log-description-spamblacklist": "Гэта журнал, які адсочвае спрацоўванне спам-спісу.",
 	"logentry-spamblacklist-hit": "{{GENDER:$2|$1 выклікаў|$1 выклікала}} спрацоўванне спам-спісу на старонцы $3 з-за спробы дадаць $4.",
 	"right-spamblacklistlog": "Прагляд журнала спам-спісу",
-	"action-spamblacklistlog": "прагляд журнала спам-спісу"
+	"action-spamblacklistlog": "праглядаць журнал спам-спісу"
 }
