@@ -24,6 +24,6 @@
 	"log-name-spamblacklist": "スパムブロックリスト記録",
 	"log-description-spamblacklist": "これらのイベントはスパムブラックリストとの一致を追跡します。",
 	"logentry-spamblacklist-hit": "{{GENDER:$2|$1}} が $3 に $4 を追加しようとした際にスパムブラックリストが発動しました。",
-	"right-spamblacklistlog": "スパムブロックリスト記録の閲覧",
+	"right-spamblacklistlog": "スパムブロックリスト記録を閲覧",
 	"action-spamblacklistlog": "スパムブロックリスト記録の閲覧"
 }
