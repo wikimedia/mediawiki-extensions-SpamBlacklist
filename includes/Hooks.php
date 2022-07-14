@@ -61,6 +61,12 @@ class Hooks implements
 		User $user,
 		$minoredit
 	) {
+		if ( MediaWikiServices::getInstance()->getPermissionManager()
+			->userHasRight( $user, 'sboverride' )
+		) {
+			return true;
+		}
+
 		$title = $context->getTitle();
 		try {
 			// Try getting the update directly
@@ -251,6 +257,12 @@ class Hooks implements
 		$pageText,
 		&$error
 	) {
+		if ( MediaWikiServices::getInstance()->getPermissionManager()
+			->userHasRight( $user, 'sboverride' )
+		) {
+			return;
+		}
+
 		$title = $upload->getTitle();
 
 		// get the link from the not-yet-saved page content.

@@ -18,7 +18,8 @@
 		}
 	},
 	"AvailableRights": [
-		"spamblacklistlog"
+		"spamblacklistlog",
+		"sboverride"
 	],
 	"LogTypes": [
 		"spamblacklist"
