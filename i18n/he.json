@@ -21,5 +21,7 @@
 	"log-description-spamblacklist": "האירועים האלה עוקבים אחרי הפעלות של רשימת חסימת ספאם.",
 	"logentry-spamblacklist-hit": "$1 {{GENDER:$2|גרם|גרמה}} לפעולת רשימת חסימת ספאם בדף $3 תוך כדי ניסיון להוסיף את הכתובת $4.",
 	"right-spamblacklistlog": "צפייה ביומן רשימת חסימת הספאם",
-	"action-spamblacklistlog": "לצפות ביומן רשימת חסימת הספאם"
+	"action-spamblacklistlog": "לצפות ביומן רשימת חסימת הספאם",
+	"right-sboverride": "עקיפת רשימת חסימת הספאם",
+	"action-sboverride": "לעקוף את רשימת חסימת הספאם"
 }
