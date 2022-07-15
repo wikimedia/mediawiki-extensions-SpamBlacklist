@@ -33,6 +33,9 @@
 	"GrantPermissions": {
 		"viewrestrictedlogs": {
 			"spamblacklistlog": true
+		},
+		"editprotected": {
+			"sboverride": true
 		}
 	},
 	"APIModules": {
