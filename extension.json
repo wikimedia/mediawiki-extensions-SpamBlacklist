@@ -84,7 +84,13 @@
 	},
 	"HookHandlers": {
 		"SpamBlacklistHookHandler": {
-			"class": "MediaWiki\\Extension\\SpamBlacklist\\Hooks"
+			"class": "MediaWiki\\Extension\\SpamBlacklist\\Hooks",
+			"services": [
+				"PermissionManager",
+				"PageEditStash",
+				"ContentRenderer",
+				"ContentHandlerFactory"
+			]
 		}
 	},
 	"config": {
