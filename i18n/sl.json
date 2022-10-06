@@ -19,5 +19,7 @@
 	"log-description-spamblacklist": "Ti dogodki sledijo zadetke seznama blokiranja smetja.",
 	"logentry-spamblacklist-hit": "$1 je {{GENDER:$2|povzročil|povzročila|povzročil(-a)}} zadetek na seznamu blokiranja smetja na strani $3 ob dodajanju povezave $4",
 	"right-spamblacklistlog": "Prikaz dnevnika seznama blokiranja smetja",
-	"action-spamblacklistlog": "ogled dnevnika s seznamom blokiranja smetja"
+	"action-spamblacklistlog": "ogled dnevnika s seznamom blokiranja smetja",
+	"right-sboverride": "Izognitev seznamu blokiranega smetja",
+	"action-sboverride": "izogniti se seznamu blokiranega smetja"
 }
