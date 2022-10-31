@@ -47,10 +47,6 @@
 			"i18n/api"
 		]
 	},
-	"AutoloadClasses": {
-		"BaseBlacklist": "includes/BaseBlacklist.php",
-		"MediaWiki\\Extension\\SpamBlacklist\\BaseBlacklist": "includes/BaseBlacklist.php"
-	},
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\SpamBlacklist\\": "includes/"
 	},
