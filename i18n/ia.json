@@ -17,5 +17,7 @@
 	"log-description-spamblacklist": "Iste eventos tracia le actiones blocate per le lista de blocadas antispam.",
 	"logentry-spamblacklist-hit": "{{GENDER:$2|$1}} ha provocate un activation del lista de blocadas antispam sur $3 con su tentativa de inserer $4.",
 	"right-spamblacklistlog": "Vider le registro del lista de blocadas antispam",
-	"action-spamblacklistlog": "vider le registro del lista de blocadas antispam"
+	"action-spamblacklistlog": "vider le registro del lista de blocadas antispam",
+	"right-sboverride": "Contornar le lista de blocage de spam",
+	"action-sboverride": "contornar le lista de blocage de spam"
 }
