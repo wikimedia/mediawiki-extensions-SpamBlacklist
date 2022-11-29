@@ -451,5 +451,3 @@ abstract class BaseBlacklist {
 		// subclass this
 	}
 }
-
-class_alias( BaseBlacklist::class, 'BaseBlacklist' );
