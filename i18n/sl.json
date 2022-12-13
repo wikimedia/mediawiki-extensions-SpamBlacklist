@@ -17,7 +17,7 @@
 	"spam-blacklist-desc": "Orodje proti smetju, temelječe na regularnih izrazih, ki omogoča blokiranje seznama spletnih naslovov na straneh in v e-poštnih naslovih za registrirane uporabnike",
 	"log-name-spamblacklist": "Dnevnik seznama blokiranja smetja",
 	"log-description-spamblacklist": "Ti dogodki sledijo zadetke seznama blokiranja smetja.",
-	"logentry-spamblacklist-hit": "$1 je {{GENDER:$2|povzročil|povzročila|povzročil(-a)}} zadetek na seznamu blokiranja smetja na strani $3 ob dodajanju povezave $4",
+	"logentry-spamblacklist-hit": "$1 je {{GENDER:$2|povzročil|povzročila|povzročil_a}} zadetek na seznamu blokiranja smetja na strani $3 ob dodajanju povezave $4",
 	"right-spamblacklistlog": "Prikaz dnevnika seznama blokiranja smetja",
 	"action-spamblacklistlog": "ogled dnevnika s seznamom blokiranja smetja",
 	"right-sboverride": "Izognitev seznamu blokiranega smetja",
