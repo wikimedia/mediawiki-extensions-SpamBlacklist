@@ -15,7 +15,7 @@
 	"spam-blacklisted-email-signup": "Mae'r cyfeiriad ebost a roddwyd wedi ei wahardd rhag ei ddefnyddio ar hyn o bryd.",
 	"spam-invalid-lines": "Mae'r {{PLURAL:$1|llinell|llinell|llinellau}} canlynol ar y rhestr spam gwaharddedig yn {{PLURAL:$1|fynegiad|fynegiad|fynegiadau}} rheolaidd annilys; rhaid {{PLURAL:ei gywiro|ei gywiro|eu cywiro}} cyn rhoi'r dudalen ar gadw:",
 	"spam-blacklist-desc": "Teclyn gwrth-sbam yn seiliedig ar regex, sy'n galluogi gwahardd y canlynol - URLs o fewn tudalennau a chyfeiriadau ebost defnyddwyr cofrestredig",
-	"log-name-spamblacklist": "Log rhestr rhwystro sbam",
+	"log-name-spamblacklist": "Log rhestr blocio sbam",
 	"log-description-spamblacklist": "Mae'r digwyddiadau hyn yn cofnodi trawiadau ar y rhestr sbam waharddedig.",
 	"logentry-spamblacklist-hit": "Fe geisiodd $1 ychwanegu $4 sydd ar y rhestr waharddedig $3.",
 	"right-spamblacklistlog": "Gweld log rhestr rwystro sbam",
