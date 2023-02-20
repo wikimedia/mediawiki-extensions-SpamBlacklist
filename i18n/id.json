@@ -7,6 +7,7 @@
 			"Hidayatsrf",
 			"IvanLanin",
 			"Meursault2004",
+			"Rachmat04",
 			"Veracious"
 		]
 	},
@@ -19,7 +20,7 @@
 	"spam-blacklisted-email-signup": "Alamat surel yang dimasukkan saat ini sedang tidak boleh digunakan.",
 	"spam-invalid-lines": "{{PLURAL:$1|Baris|Baris-baris}} daftar hitam spam berikut adalah {{PLURAL:$1|ekspresi|ekspresi}} regular yang tak valid dan {{PLURAL:$1|perlu|perlu}} dikoreksi sebelum disimpan:",
 	"spam-blacklist-desc": "Perkakas anti-spam berbasis regex membolehkan melarang keberadaan URL tertentu di halaman dan penggunaan alamat surel tertentu untuk pengguna terdaftar",
-	"log-name-spamblacklist": "Catatan daftar hitam spam",
-	"right-spamblacklistlog": "Melihat catatan daftar hitam spam",
+	"log-name-spamblacklist": "Log daftar hitam spam",
+	"right-spamblacklistlog": "Lihat log daftar hitam spam",
 	"action-spamblacklistlog": "melihat log daftar hitam spam"
 }
