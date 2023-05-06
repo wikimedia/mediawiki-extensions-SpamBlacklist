@@ -4,12 +4,12 @@ namespace MediaWiki\Extension\SpamBlacklist;
 
 use ApiMessage;
 use Content;
-use EditPage;
 use Html;
 use IContextSource;
 use LogicException;
 use MediaWiki\Content\IContentHandlerFactory;
 use MediaWiki\Content\Renderer\ContentRenderer;
+use MediaWiki\EditPage\EditPage;
 use MediaWiki\Hook\EditFilterHook;
 use MediaWiki\Hook\EditFilterMergedContentHook;
 use MediaWiki\Hook\UploadVerifyUploadHook;
