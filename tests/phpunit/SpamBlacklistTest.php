@@ -39,7 +39,7 @@ class SpamBlacklistTest extends MediaWikiIntegrationTestCase {
 	 */
 	protected $whitelist = [ 'a5b\.sytes\.net' ];
 
-	public function spamProvider() {
+	public static function spamProvider() {
 		return [
 			'no spam' => [
 				[ 'https://example.com' ],
@@ -74,7 +74,7 @@ class SpamBlacklistTest extends MediaWikiIntegrationTestCase {
 		$this->assertEquals( $expected, $returnValue );
 	}
 
-	public function spamEditProvider() {
+	public static function spamEditProvider() {
 		return [
 			'no spam' => [
 				'https://example.com',
