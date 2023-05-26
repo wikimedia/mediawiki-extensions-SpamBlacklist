@@ -10,6 +10,7 @@ use LogicException;
 use MediaWiki\Content\IContentHandlerFactory;
 use MediaWiki\Content\Renderer\ContentRenderer;
 use MediaWiki\EditPage\EditPage;
+use MediaWiki\ExternalLinks\LinkFilter;
 use MediaWiki\Hook\EditFilterHook;
 use MediaWiki\Hook\EditFilterMergedContentHook;
 use MediaWiki\Hook\UploadVerifyUploadHook;
@@ -123,7 +124,7 @@ class Hooks implements
 				);
 			}
 		}
-		$links = array_keys( $pout->getExternalLinks() );
+		$links = LinkFilter::getIndexedUrlsNonReversed( array_keys( $pout->getExternalLinks() ) );
 		// HACK: treat the edit summary as a link if it contains anything
 		// that looks like it could be a URL or e-mail address.
 		if ( preg_match( '/\S(\.[^\s\d]{2,}|[\/@]\S)/', $summary ) ) {
@@ -162,7 +163,7 @@ class Hooks implements
 		$summary,
 		$user
 	) {
-		$links = array_keys( $output->getExternalLinks() );
+		$links = LinkFilter::getIndexedUrlsNonReversed( array_keys( $output->getExternalLinks() ) );
 		$spamObj = BaseBlacklist::getSpamBlacklist();
 		$spamObj->warmCachesForFilter( $page->getTitle(), $links, $user );
 	}
@@ -296,7 +297,7 @@ class Hooks implements
 			->unserializeContent( $pageText );
 		$parserOptions = ParserOptions::newFromAnon();
 		$output = $this->contentRenderer->getParserOutput( $content, $title, null, $parserOptions );
-		$links = array_keys( $output->getExternalLinks() );
+		$links = LinkFilter::getIndexedUrlsNonReversed( array_keys( $output->getExternalLinks() ) );
 
 		// HACK: treat comment as a link if it contains anything
 		// that looks like it could be a URL or e-mail address.
