@@ -15,6 +15,9 @@
 	"GroupPermissions": {
 		"user": {
 			"spamblacklistlog": true
+		},
+		"bot": {
+			"sboverride": true
 		}
 	},
 	"AvailableRights": [
