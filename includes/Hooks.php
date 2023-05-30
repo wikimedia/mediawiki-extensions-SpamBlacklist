@@ -176,6 +176,9 @@ class Hooks implements
 	 * @return bool
 	 */
 	public function onUserCanSendEmail( $user, &$hookErr ) {
+		if ( $this->permissionManager->userHasRight( $user, 'sboverride' ) ) {
+			return true;
+		}
 		$blacklist = BaseBlacklist::getEmailBlacklist();
 		if ( $blacklist->checkUser( $user ) ) {
 			return true;
