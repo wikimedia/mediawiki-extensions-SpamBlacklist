@@ -5,6 +5,9 @@
 			"NMW03"
 		]
 	},
+	"spam-blacklisted-email": "Qadağan edilmiş e-poçt ünvanı",
+	"spam-blacklisted-email-text": "Sizin e-poçt ünvanınızın hal-hazırda digər istifadəçilərə e-poçt göndərməsi bloklanıb.",
+	"spam-blacklisted-email-signup": "Göstərilən e-poçt ünvanından hazırda istifadə etmək qadağan edilib.",
 	"log-name-spamblacklist": "Spam qara siyahısı qeydləri",
 	"log-description-spamblacklist": "Bu qeydlər spam qara siyahısı əməliyyatları izləyir.",
 	"logentry-spamblacklist-hit": "{{GENDER:$2|$1}} $3 səhifəsinə $4 əlavə etməyə çalışarkən spam filtrini işə saldı"
