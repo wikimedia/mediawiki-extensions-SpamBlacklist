@@ -299,6 +299,11 @@ abstract class BaseBlacklist {
 			return [];
 		}
 
+		if ( defined( 'MW_PHPUNIT_TEST' ) ) {
+			wfDebugLog( 'SpamBlacklist', 'remote loading disabled during PHPUnit test' );
+			return [];
+		}
+
 		$miss = false;
 		$cache = MediaWikiServices::getInstance()->getMainWANObjectCache();
 		$regexes = $cache->getWithSetCallback(
