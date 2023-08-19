@@ -5,9 +5,9 @@ namespace MediaWiki\Extension\SpamBlacklist;
 use Exception;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\SlotRecord;
+use MediaWiki\Title\Title;
 use ObjectCache;
 use TextContent;
-use Title;
 use User;
 
 /**
