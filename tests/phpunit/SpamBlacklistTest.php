@@ -121,10 +121,10 @@ class SpamBlacklistTest extends MediaWikiIntegrationTestCase {
 
 		$status = $ep->attemptSave( $result );
 
-		$this->assertSame( $ok, $status->isOK() );
-
-		if ( !$ok ) {
-			$this->assertTrue( $status->hasMessage( 'spam-blacklisted-link' ) );
+		if ( $ok ) {
+			$this->assertStatusOK( $status );
+		} else {
+			$this->assertStatusError( 'spam-blacklisted-link', $status );
 		}
 	}
 
