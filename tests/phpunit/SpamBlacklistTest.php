@@ -4,7 +4,9 @@ use MediaWiki\EditPage\EditPage;
 use MediaWiki\Extension\SpamBlacklist\BaseBlacklist;
 use MediaWiki\Extension\SpamBlacklist\SpamBlacklist;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Request\FauxRequest;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 
 /**
  * @group SpamBlacklist

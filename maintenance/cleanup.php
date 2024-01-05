@@ -13,6 +13,8 @@ use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Title\Title;
+use MediaWiki\Title\TitleFormatter;
+use MediaWiki\User\User;
 
 $IP = getenv( 'MW_INSTALL_PATH' );
 if ( $IP === false ) {

@@ -9,9 +9,9 @@ use MediaWiki\CheckUser\Hooks as CUHooks;
 use MediaWiki\ExternalLinks\ExternalLinksLookup;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use ObjectCache;
 use RequestContext;
-use User;
 use Wikimedia\AtEase\AtEase;
 use Wikimedia\Rdbms\Database;
 

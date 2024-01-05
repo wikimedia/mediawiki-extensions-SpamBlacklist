@@ -6,9 +6,9 @@ use Exception;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use ObjectCache;
 use TextContent;
-use User;
 
 /**
  * Base class for different kinds of blacklists
