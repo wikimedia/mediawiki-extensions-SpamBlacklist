@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\SpamBlacklist;
 
-use Exception;
+use InvalidArgumentException;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Title\Title;
@@ -126,11 +126,10 @@ abstract class BaseBlacklist {
 	 * @deprecated Use getSpamBlacklist() or getEmailBlacklist() instead
 	 * @param string $type Code for the blacklist
 	 * @return BaseBlacklist
-	 * @throws Exception
 	 */
 	public static function getInstance( $type ) {
 		if ( !isset( self::$blacklistTypes[$type] ) ) {
-			throw new Exception( "Invalid blacklist type '$type' passed to " . __METHOD__ );
+			throw new InvalidArgumentException( "Invalid blacklist type '$type' passed to " . __METHOD__ );
 		}
 
 		if ( !isset( self::$instances[$type] ) ) {
