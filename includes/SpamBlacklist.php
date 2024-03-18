@@ -191,7 +191,7 @@ class SpamBlacklist extends BaseBlacklist {
 			$cache->makeKey( 'external-link-list', $title->getLatestRevID() ),
 			$cache::TTL_MINUTE,
 			static function ( $oldValue, &$ttl, array &$setOpts ) use ( $title, $fname ) {
-				$dbr = wfGetDB( DB_REPLICA );
+				$dbr = MediaWikiServices::getInstance()->getConnectionProvider()->getReplicaDatabase();
 				$setOpts += Database::getCacheSetOptions( $dbr );
 				return ExternalLinksLookup::getExternalLinksForPage(
 					$title->getArticleID(),

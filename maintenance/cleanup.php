@@ -50,7 +50,7 @@ class Cleanup extends Maintenance {
 		}
 		$dryRun = $this->hasOption( 'dry-run' );
 
-		$dbr = wfGetDB( DB_REPLICA );
+		$dbr = $this->getReplicaDB();
 		$maxID = (int)$dbr->selectField( 'page', 'MAX(page_id)', [], __METHOD__ );
 		$reportingInterval = 100;
 
