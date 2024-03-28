@@ -75,7 +75,10 @@ class SpamBlacklistTest extends MediaWikiIntegrationTestCase {
 		$this->enableAutoCreateTempUser();
 		$this->prepareGlobals();
 		$tempUserCreator = MediaWikiServices::getInstance()->getTempUserCreator();
-		$user = $tempUserCreator->create()->getUser();
+		$user = $tempUserCreator->create(
+			null,
+			new FauxRequest()
+		)->getUser();
 		$returnValue = $this->spamFilter->filter(
 			$links,
 			Title::newMainPage(),
