@@ -51,7 +51,11 @@ class Cleanup extends Maintenance {
 		$dryRun = $this->hasOption( 'dry-run' );
 
 		$dbr = $this->getReplicaDB();
-		$maxID = (int)$dbr->selectField( 'page', 'MAX(page_id)', [], __METHOD__ );
+		$maxID = (int)$dbr->newSelectQueryBuilder()
+			->select( 'MAX(page_id)' )
+			->from( 'page' )
+			->caller( __METHOD__ )
+			->fetchField();
 		$reportingInterval = 100;
 
 		$this->output( "Regexes are " . implode( ', ', array_map( 'strlen', $regexes ) ) . " bytes\n" );
