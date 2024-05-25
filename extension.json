@@ -74,6 +74,7 @@
 		"EditFilter": "SpamBlacklistHookHandler",
 		"PageSaveComplete": "SpamBlacklistHookHandler",
 		"UserCanSendEmail": "SpamBlacklistHookHandler",
+		"UserCanChangeEmail": "SpamBlacklistHookHandler",
 		"ParserOutputStashForEdit": "SpamBlacklistHookHandler",
 		"UploadVerifyUpload": "SpamBlacklistHookHandler"
 	},

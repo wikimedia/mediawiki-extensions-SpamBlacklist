@@ -13,6 +13,7 @@ use MediaWiki\ExternalLinks\LinkFilter;
 use MediaWiki\Hook\EditFilterHook;
 use MediaWiki\Hook\EditFilterMergedContentHook;
 use MediaWiki\Hook\UploadVerifyUploadHook;
+use MediaWiki\Hook\UserCanChangeEmailHook;
 use MediaWiki\Html\Html;
 use MediaWiki\Message\Message;
 use MediaWiki\Page\WikiPage;
@@ -41,7 +42,8 @@ class Hooks implements
 	UploadVerifyUploadHook,
 	PageSaveCompleteHook,
 	ParserOutputStashForEditHook,
-	UserCanSendEmailHook
+	UserCanSendEmailHook,
+	UserCanChangeEmailHook
 {
 
 	public function __construct(
@@ -165,6 +167,21 @@ class Hooks implements
 		$hookErr = [ 'spam-blacklisted-email', 'spam-blacklisted-email-text', null ];
 
 		// No other hook handler should run
+		return false;
+	}
+
+	/** @inheritDoc */
+	public function onUserCanChangeEmail( $user, $oldaddr, $newaddr, &$status ) {
+		if ( $this->permissionManager->userHasRight( $user, 'sboverride' ) ) {
+			return true;
+		}
+
+		$blacklist = BaseBlacklist::getEmailBlacklist();
+		if ( $blacklist->checkUser( $user ) ) {
+			return true;
+		}
+
+		$status = Status::newFatal( 'spam-blacklisted-email-change' );
 		return false;
 	}
 
