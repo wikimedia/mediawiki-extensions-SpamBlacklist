@@ -10,7 +10,6 @@ use MediaWiki\ExternalLinks\ExternalLinksLookup;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
-use ObjectCache;
 use RequestContext;
 use Wikimedia\AtEase\AtEase;
 use Wikimedia\Rdbms\Database;
@@ -62,8 +61,9 @@ class SpamBlacklist extends BaseBlacklist {
 		$preventLog = false,
 		$mode = 'check'
 	) {
-		$statsd = MediaWikiServices::getInstance()->getStatsdDataFactory();
-		$cache = ObjectCache::getLocalClusterInstance();
+		$services = MediaWikiServices::getInstance();
+		$statsd = $services->getStatsdDataFactory();
+		$cache = $services->getObjectCacheFactory()->getLocalClusterInstance();
 
 		if ( !$links ) {
 			return false;
