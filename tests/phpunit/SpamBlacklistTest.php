@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Context\RequestContext;
 use MediaWiki\EditPage\EditPage;
 use MediaWiki\Extension\SpamBlacklist\BaseBlacklist;
 use MediaWiki\Extension\SpamBlacklist\SpamBlacklist;
