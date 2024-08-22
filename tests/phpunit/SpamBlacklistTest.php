@@ -161,7 +161,7 @@ class SpamBlacklistTest extends MediaWikiIntegrationTestCase {
 	}
 
 	private function prepareGlobals(): void {
-		$this->setMwGlobals( 'wgBlacklistSettings', [
+		$this->overrideConfigValue( 'BlacklistSettings', [
 			'files' => [],
 		] );
 
