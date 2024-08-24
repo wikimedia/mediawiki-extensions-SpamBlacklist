@@ -232,7 +232,7 @@ class Hooks implements
 				"</code>\n";
 			$hookError =
 				Html::errorBox(
-					wfMessage( 'spam-invalid-lines' )->numParams( $badLines )->text() . "<br />" .
+					wfMessage( 'spam-invalid-lines' )->numParams( $badLines )->parse() . "<br />" .
 					$badList
 					) .
 					"\n<br clear='all' />\n";
