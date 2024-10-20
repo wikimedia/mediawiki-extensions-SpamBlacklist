@@ -3,11 +3,11 @@
 namespace MediaWiki\Extension\SpamBlacklist;
 
 use InvalidArgumentException;
+use MediaWiki\Content\TextContent;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
-use TextContent;
 
 /**
  * Base class for different kinds of blacklists

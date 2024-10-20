@@ -2,13 +2,13 @@
 
 namespace MediaWiki\Extension\SpamBlacklist;
 
-use ExtensionRegistry;
 use LogPage;
 use ManualLogEntry;
 use MediaWiki\CheckUser\Hooks as CUHooks;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\ExternalLinks\ExternalLinksLookup;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
 use Wikimedia\AtEase\AtEase;
