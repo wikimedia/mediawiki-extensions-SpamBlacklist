@@ -368,6 +368,10 @@ abstract class BaseBlacklist {
 		return $regexes;
 	}
 
+	/**
+	 * @param string $fileName
+	 * @return string|null|false
+	 */
 	private function getHttpText( $fileName ) {
 		global $wgMessageCacheType;
 		// FIXME: This is a hack to use Memcached where possible (incl. WMF),
