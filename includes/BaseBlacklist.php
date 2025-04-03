@@ -336,7 +336,7 @@ abstract class BaseBlacklist {
 		wfDebugLog( 'SpamBlacklist', "$listType blacklist local cache cleared.\n" );
 	}
 
-	private function buildSharedBlacklists() {
+	private function buildSharedBlacklists(): array {
 		$regexes = [];
 		$listType = $this->getBlacklistType();
 		# Load lists
