@@ -185,8 +185,9 @@ abstract class BaseBlacklist {
 			}
 		}
 
-		$thisHttp = wfExpandUrl( $title->getFullUrl( 'action=raw' ), PROTO_HTTP );
-		$thisHttpRegex = '/^' . preg_quote( $thisHttp, '/' ) . '(?:&.*)?$/';
+		$thisHttp = MediaWikiServices::getInstance()->getUrlUtils()
+			->expand( $title->getFullUrl( 'action=raw' ), PROTO_HTTP );
+		$thisHttpRegex = '/^' . preg_quote( (string)$thisHttp, '/' ) . '(?:&.*)?$/';
 
 		$files = [];
 		foreach ( self::$blacklistTypes as $type => $class ) {
