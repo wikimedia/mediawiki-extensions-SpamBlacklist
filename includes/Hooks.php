@@ -103,7 +103,7 @@ class Hooks implements
 			// Try getting the update directly
 			$updater = $context->getWikiPage()->getCurrentUpdate();
 			$pout = $updater->getParserOutputForMetaData();
-		} catch ( PreconditionException | LogicException $exception ) {
+		} catch ( PreconditionException | LogicException ) {
 			$stashedEdit = $this->pageEditStash->checkCache(
 				$title,
 				$content,
