@@ -13,5 +13,7 @@
 	"spam-blacklist-desc": "रेजएक्स पर आधारित स्पैम रोकने वाला उपकरण है, जो पंजीकृत सदस्यों को पन्नों और ईमेल में यूआरएल डालने से रोकता है।",
 	"log-name-spamblacklist": "स्पैम कालीसूची लॉग",
 	"right-spamblacklistlog": "स्पैम ब्लैकलिस्ट लॉग देखना",
-	"action-spamblacklistlog": "स्पैम ब्लैकलिस्ट लॉग देखने"
+	"action-spamblacklistlog": "स्पैम ब्लैकलिस्ट लॉग देखने",
+	"right-sboverride": "स्पैम अवरोध सूची बाइपास करना",
+	"action-sboverride": "स्पैम अवरोध सूची बाइपास करने"
 }
