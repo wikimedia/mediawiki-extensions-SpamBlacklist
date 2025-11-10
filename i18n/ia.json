@@ -11,6 +11,7 @@
 	"spam-blacklisted-email": "Adresse de e-mail prohibite",
 	"spam-blacklisted-email-text": "Tu adresse de e-mail es actualmente blocate pro le invio de messages a altere usatores.",
 	"spam-blacklisted-email-signup": "Le adresse de e-mail specificate es actualmente prohibite e non pote esser usate.",
+	"spam-blacklisted-email-change": "Le adresse de e-mail specificate es actualmente prohibite e non pote esser usate.",
 	"spam-invalid-lines": "Le sequente {{PLURAL:$1|linea|lineas}} del lista de blocadas antispam es {{PLURAL:$1|un expression|expressiones}} regular invalide e debe esser corrigite ante que tu salveguarda le pagina:",
 	"spam-blacklist-desc": "Instrumento antispam a base de regex que permitte prohiber URLs in paginas e adresses de e-mail pro usatores registrate",
 	"log-name-spamblacklist": "Registro del lista de blocadas antispam",
