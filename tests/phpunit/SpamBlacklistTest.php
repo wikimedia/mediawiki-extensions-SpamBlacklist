@@ -209,6 +209,11 @@ class SpamBlacklistTest extends MediaWikiIntegrationTestCase {
 				->willReturn( false );
 			$this->setService( 'ExtensionRegistry', $mockExtensionRegistry );
 
+			$serviceContainer = $this->getServiceContainer();
+			if ( !$serviceContainer->hasService( 'CheckUserInsert' ) ) {
+				// define as no-op and override afterwards to use MediaWikiIntegrationTestCase service reset
+				$serviceContainer->defineService( 'CheckUserInsert', static fn () => null );
+			}
 			$this->setService(
 				'CheckUserInsert',
 				fn () => $this->fail( 'The CheckUserInsert service was expected to not be called' )
