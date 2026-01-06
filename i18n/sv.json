@@ -19,11 +19,13 @@
 	"spam-blacklisted-email": "Svartlistad e-postadress",
 	"spam-blacklisted-email-text": "Din e-postadress är för närvarande svartlistad från att skicka e-post till andra användare.",
 	"spam-blacklisted-email-signup": "Den angivna e-postadressen är förnärvarande svartlistad från användning.",
-	"spam-invalid-lines": "Följande spamblockeringslista {{PLURAL:$1|rad är ett|rader är}} ogiltiga reguljära {{PLURAL:$1| uttryck|uttryck}} och {{PLURAL:$1| behöver korrigeras innan sidan sparas:",
+	"spam-invalid-lines": "Följande spamblockeringslista {{PLURAL:$1|rad är ett|rader är}} ogiltiga reguljära {{PLURAL:$1|uttryck}} och {{PLURAL:$1|behöver}} korrigeras innan sidan sparas:",
 	"spam-blacklist-desc": "Regex-baserat antispamverktyg som gör det möjligt att blockera webbadresser (URL:er) på sidor och e-postadresser för registrerade användare",
 	"log-name-spamblacklist": "Logg för spamfiltret",
 	"log-description-spamblacklist": "Här visas händelser som utlöst spamfiltret",
 	"logentry-spamblacklist-hit": "{{GENDER:$2|$1}} utlöste spamfiltret vid redigering av $3 genom att försöka lägga till $4.",
 	"right-spamblacklistlog": "Visa loggen för spamblockeringslistan",
-	"action-spamblacklistlog": "visa spamfiltrloggen"
+	"action-spamblacklistlog": "visa spamfiltrloggen",
+	"right-sboverride": "Kringgå listan över spamblockeringar",
+	"action-sboverride": "kringgå listan över spamblockeringar"
 }
