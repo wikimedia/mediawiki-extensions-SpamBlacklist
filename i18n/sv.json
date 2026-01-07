@@ -25,5 +25,7 @@
 	"log-description-spamblacklist": "Här visas händelser som utlöst spamfiltret",
 	"logentry-spamblacklist-hit": "{{GENDER:$2|$1}} utlöste spamfiltret vid redigering av $3 genom att försöka lägga till $4.",
 	"right-spamblacklistlog": "Visa loggen för spamblockeringslistan",
-	"action-spamblacklistlog": "visa spamfiltrloggen"
+	"action-spamblacklistlog": "visa spamfiltrloggen",
+	"right-sboverride": "Kringgå listan över spamblockeringar",
+	"action-sboverride": "kringgå listan över spamblockeringar"
 }
