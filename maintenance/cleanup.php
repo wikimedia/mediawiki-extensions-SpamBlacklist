@@ -105,7 +105,7 @@ class Cleanup extends Maintenance {
 	 * @param User $user
 	 */
 	private function cleanupArticle( RevisionRecord $rev, $regexes, $match, User $user ) {
-		$title = Title::newFromLinkTarget( $rev->getPageAsLinkTarget() );
+		$title = Title::newFromPageIdentity( $rev->getPage() );
 		while ( $rev ) {
 			$matches = false;
 			$content = $rev->getContent( SlotRecord::MAIN );

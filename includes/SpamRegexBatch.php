@@ -28,7 +28,7 @@ class SpamRegexBatch {
 		$regexEnd = $blacklist->getRegexEnd( $batchSize );
 		$build = false;
 		foreach ( $lines as $line ) {
-			if ( substr( $line, -1, 1 ) == "\\" ) {
+			if ( str_ends_with( $line, '\\' ) ) {
 				// Final \ will break silently on the batched regexes.
 				// Skip it here to avoid breaking the next line;
 				// warnings from getBadLines() will still trigger on
@@ -127,7 +127,7 @@ class SpamRegexBatch {
 
 		$badLines = [];
 		foreach ( $lines as $line ) {
-			if ( substr( $line, -1, 1 ) == "\\" ) {
+			if ( str_ends_with( $line, '\\' ) ) {
 				// Final \ will break silently on the batched regexes.
 				$badLines[] = $line;
 			}

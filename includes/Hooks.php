@@ -91,7 +91,7 @@ class Hooks implements
 			);
 			if ( $stashedEdit ) {
 				// Try getting the value from edit stash
-				/** @var ParserOutput $output */
+				/** @var ParserOutput $pout */
 				$pout = $stashedEdit->output;
 			} else {
 				// Last resort, parse the page.
