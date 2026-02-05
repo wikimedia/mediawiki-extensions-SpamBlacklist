@@ -11,7 +11,6 @@ use MediaWiki\Logging\ManualLogEntry;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
-use Wikimedia\AtEase\AtEase;
 use Wikimedia\Rdbms\Database;
 
 class SpamBlacklist extends BaseBlacklist {
@@ -121,9 +120,8 @@ class SpamBlacklist extends BaseBlacklist {
 				wfDebugLog( 'SpamBlacklist', "Excluding whitelisted URLs from " . count( $whitelists ) .
 					" regexes: " . implode( ', ', $whitelists ) . "\n" );
 				foreach ( $whitelists as $regex ) {
-					AtEase::suppressWarnings();
-					$newLinks = preg_replace( $regex, '', $links );
-					AtEase::restoreWarnings();
+					// phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
+					$newLinks = @preg_replace( $regex, '', $links );
 					if ( is_string( $newLinks ) ) {
 						// If there wasn't a regex error, strip the matching URLs
 						$links = $newLinks;
@@ -136,11 +134,8 @@ class SpamBlacklist extends BaseBlacklist {
 				" regexes: " . implode( ', ', $blacklists ) . "\n" );
 			$retVal = false;
 			foreach ( $blacklists as $regex ) {
-				AtEase::suppressWarnings();
-				$matches = [];
-				$check = ( preg_match_all( $regex, $links, $matches ) > 0 );
-				AtEase::restoreWarnings();
-				if ( $check ) {
+				// phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
+				if ( @preg_match_all( $regex, $links, $matches ) > 0 ) {
 					wfDebugLog( 'SpamBlacklist', "Match!\n" );
 					$ip = RequestContext::getMain()->getRequest()->getIP();
 					$fullUrls = [];
