@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\SpamBlacklist;
 
-use Wikimedia\AtEase\AtEase;
+use Wikimedia\StringUtils\StringUtils;
 
 /**
  * Utility class for working with blacklists
@@ -64,12 +64,7 @@ class SpamRegexBatch {
 	 */
 	private static function validateRegexes( $regexes ) {
 		foreach ( $regexes as $regex ) {
-			AtEase::suppressWarnings();
-			// @phan-suppress-next-line PhanParamSuspiciousOrder False positive
-			$ok = preg_match( $regex, '' );
-			AtEase::restoreWarnings();
-
-			if ( $ok === false ) {
+			if ( !StringUtils::isValidPCRERegex( $regex ) ) {
 				return false;
 			}
 		}
