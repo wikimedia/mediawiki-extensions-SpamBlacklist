@@ -113,7 +113,7 @@ class Cleanup extends Maintenance {
 				$matches = $matches
 					|| preg_match(
 						$regex,
-						( $content instanceof TextContent ) ? $content->getText() : null
+						( $content instanceof TextContent ) ? $content->getText() : ''
 					);
 			}
 			if ( !$matches ) {
