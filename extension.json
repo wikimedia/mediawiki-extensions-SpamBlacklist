@@ -71,7 +71,7 @@
 	},
 	"Hooks": {
 		"EditFilterMergedContent": "SpamBlacklistHookHandler",
-		"EditFilter": "SpamBlacklistHookHandler",
+		"MultiContentSave": "SpamBlacklistHookHandler",
 		"PageSaveComplete": "SpamBlacklistHookHandler",
 		"UserCanSendEmail": "SpamBlacklistHookHandler",
 		"UserCanChangeEmail": "SpamBlacklistHookHandler",
