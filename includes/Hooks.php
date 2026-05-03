@@ -25,7 +25,6 @@ use MediaWiki\Storage\Hook\MultiContentSaveHook;
 use MediaWiki\Storage\Hook\PageSaveCompleteHook;
 use MediaWiki\Storage\Hook\ParserOutputStashForEditHook;
 use MediaWiki\Storage\PageEditStash;
-use MediaWiki\Title\Title;
 use MediaWiki\Upload\Hook\UploadVerifyUploadHook;
 use MediaWiki\Upload\UploadBase;
 use MediaWiki\User\Hook\UserCanSendEmailHook;
@@ -191,17 +190,16 @@ class Hooks implements
 	 * @inheritDoc
 	 */
 	public function onMultiContentSave( $renderedRevision, $user, $summary, $flags, $status ): bool {
-		$title = Title::newFromPageIdentity( $renderedRevision->getRevision()->getPage() );
-		$thisPageName = $title->getPrefixedDBkey();
+		$page = $renderedRevision->getRevision()->getPage();
 
-		if ( !BaseBlacklist::isLocalSource( $title ) ) {
+		if ( !BaseBlacklist::isLocalSource( $page ) ) {
 			wfDebugLog( 'SpamBlacklist',
-				"Spam blacklist validator: [[$thisPageName]] not a local blacklist\n"
+				"Spam blacklist validator: [[$page]] not a local blacklist\n"
 			);
 			return true;
 		}
 
-		$type = BaseBlacklist::getTypeFromTitle( $title );
+		$type = BaseBlacklist::getTypeFromPage( $page );
 		if ( $type === false ) {
 			return true;
 		}
@@ -216,7 +214,7 @@ class Hooks implements
 		$badLines = SpamRegexBatch::getBadLines( $lines, BaseBlacklist::getInstance( $type ) );
 		if ( $badLines ) {
 			wfDebugLog( 'SpamBlacklist',
-				"Spam blacklist validator: [[$thisPageName]] given invalid input lines: " .
+				"Spam blacklist validator: [[$page]] given invalid input lines: " .
 				implode( ', ', $badLines ) . "\n"
 			);
 
@@ -235,7 +233,7 @@ class Hooks implements
 			return false;
 		} else {
 			wfDebugLog( 'SpamBlacklist',
-				"Spam blacklist validator: [[$thisPageName]] ok or empty blacklist\n"
+				"Spam blacklist validator: [[$page]] ok or empty blacklist\n"
 			);
 		}
 		return true;
@@ -260,7 +258,7 @@ class Hooks implements
 		$revisionRecord,
 		$editResult
 	) {
-		if ( !BaseBlacklist::isLocalSource( $wikiPage->getTitle() ) ) {
+		if ( !BaseBlacklist::isLocalSource( $wikiPage ) ) {
 			return;
 		}
 

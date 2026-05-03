@@ -20,35 +20,30 @@
  */
 
 use MediaWiki\Extension\SpamBlacklist\BaseBlacklist;
-use MediaWiki\Title\Title;
+use MediaWiki\Page\PageReferenceValue;
 
 /**
  * @covers \MediaWiki\Extension\SpamBlacklist\BaseBlacklist
  */
 class BaseBlacklistTest extends MediaWikiIntegrationTestCase {
 
-	/**
-	 * @return array
-	 */
-	public static function provideGetTypeFromTitle() {
+	public static function provideGetTypeFromPage(): array {
 		return [
-			[ 'MediaWiki:Spam-blacklist', 'spam' ],
-			[ 'MediaWiki:Spam-whitelist', 'spam' ],
-			[ 'MediaWiki:Email-whitelist', 'email' ],
-			[ 'MediaWiki:Email-blacklist', 'email' ],
-			[ 'MediaWiki:A random page', false ],
-			[ 'Another random page', false ],
+			[ NS_MEDIAWIKI, 'Spam-blacklist', 'spam' ],
+			[ NS_MEDIAWIKI, 'Spam-whitelist', 'spam' ],
+			[ NS_MEDIAWIKI, 'Email-whitelist', 'email' ],
+			[ NS_MEDIAWIKI, 'Email-blacklist', 'email' ],
+			[ NS_MEDIAWIKI, 'A random page', false ],
+			[ NS_MAIN, 'Another random page', false ],
 		];
 	}
 
 	/**
-	 * @dataProvider provideGetTypeFromTitle
-	 * @param string $title
-	 * @param string|bool $expected
+	 * @dataProvider provideGetTypeFromPage
 	 */
-	public function testGetTypeFromTitle( $title, $expected ) {
-		$title = Title::newFromText( $title );
-		$output = BaseBlacklist::getTypeFromTitle( $title );
+	public function testGetTypeFromPage( int $namespace, string $dbKey, string|false $expected ) {
+		$page = PageReferenceValue::localReference( $namespace, $dbKey );
+		$output = BaseBlacklist::getTypeFromPage( $page );
 		$this->assertEquals( $expected, $output );
 	}
 }

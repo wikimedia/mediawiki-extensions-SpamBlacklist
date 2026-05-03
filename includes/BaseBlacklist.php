@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\SpamBlacklist;
 use InvalidArgumentException;
 use MediaWiki\Content\TextContent;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Page\PageReference;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
@@ -161,15 +162,12 @@ abstract class BaseBlacklist {
 	abstract protected function getBlacklistType();
 
 	/**
-	 * Check if the given local page title is a spam regex source.
-	 *
-	 * @param Title $title
-	 * @return bool
+	 * Check if the given local page is a spam regex source.
 	 */
-	public static function isLocalSource( Title $title ) {
+	public static function isLocalSource( PageReference $page ): bool {
 		global $wgDBname, $wgBlacklistSettings;
 
-		if ( $title->inNamespace( NS_MEDIAWIKI ) ) {
+		if ( $page->getNamespace() === NS_MEDIAWIKI ) {
 			$sources = [];
 			foreach ( self::$blacklistTypes as $type => $class ) {
 				// For the built in types, this results in the use of:
@@ -180,11 +178,12 @@ abstract class BaseBlacklist {
 				$sources[] = "$type-whitelist";
 			}
 
-			if ( in_array( $title->getDBkey(), $sources ) ) {
+			if ( in_array( $page->getDBkey(), $sources ) ) {
 				return true;
 			}
 		}
 
+		$title = Title::newFromPageReference( $page );
 		$thisHttp = MediaWikiServices::getInstance()->getUrlUtils()
 			->expand( $title->getFullUrl( 'action=raw' ), PROTO_HTTP );
 		$thisHttpRegex = '/^' . preg_quote( (string)$thisHttp, '/' ) . '(?:&.*)?$/';
@@ -213,19 +212,17 @@ abstract class BaseBlacklist {
 	}
 
 	/**
-	 * Returns the type of blacklist from the given title
+	 * Returns the type of blacklist from the given page
 	 *
 	 * @todo building a regex for this is pretty overkill
-	 * @param Title $title
-	 * @return bool|string
 	 */
-	public static function getTypeFromTitle( Title $title ) {
+	public static function getTypeFromPage( PageReference $page ): string|false {
 		$contLang = MediaWikiServices::getInstance()->getContentLanguage();
 
 		$types = array_map( [ $contLang, 'ucfirst' ], array_keys( self::$blacklistTypes ) );
 		$regex = '/(' . implode( '|', $types ) . ')-(?:blacklist|whitelist)/';
 
-		if ( preg_match( $regex, $title->getDBkey(), $m ) ) {
+		if ( preg_match( $regex, $page->getDBkey(), $m ) ) {
 			return strtolower( $m[1] );
 		}
 
