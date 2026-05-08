@@ -16,6 +16,5 @@
 	"spam-blacklisted-email": "E-mel yang dilarang",
 	"spam-blacklisted-email-text": "Alamat e-mel anda kini dilarang daripada menghantar e-mel kepada pengguna lain.",
 	"spam-blacklisted-email-signup": "Alamat e-mel yang diberikan dilarang digunakan buat masa ini.",
-	"spam-invalid-lines": "{{PLURAL:$1|Baris|Beberapa baris}} senarai sekatan spam berikut terdiri daripada {{PLURAL:$1|ungkapan nalar}} yang tidak sah dan {{PLURAL:$1|perlu}} dibetulkan sebelum laman tersebut disimpan:",
 	"spam-blacklist-desc": "Alat anti-spam berasaskan regex yang membolehkan penyekatan URL tersenarai dalam laman dan alamat e-mel untuk pengguna berdaftar"
 }
