@@ -150,11 +150,11 @@ class SpamBlacklistTest extends MediaWikiIntegrationTestCase {
 		$articleContext->setUser( $this->getTestUser()->getUser() );
 
 		$article = new Article( $title );
+		$article->setContext( $articleContext );
 		$ep = new EditPage( $article );
 		$ep->setContextTitle( $title );
-		$ep->getContext()->setUser( $articleContext->getUser() );
 
-		$ep->importFormData( $req );
+		$ep->importFormData();
 
 		$status = $ep->attemptSave( $result );
 
