@@ -274,7 +274,7 @@ class Hooks implements
 	 * @param User $user
 	 * @param array|null $props
 	 * @param string $comment
-	 * @param string $pageText
+	 * @param string|false $pageText
 	 * @param array|MessageSpecifier &$error
 	 */
 	public function onUploadVerifyUpload(
@@ -285,7 +285,7 @@ class Hooks implements
 		$pageText,
 		&$error
 	) {
-		if ( $this->permissionManager->userHasRight( $user, 'sboverride' ) ) {
+		if ( $pageText === false || $this->permissionManager->userHasRight( $user, 'sboverride' ) ) {
 			return;
 		}
 
