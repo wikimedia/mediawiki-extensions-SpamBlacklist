@@ -8,7 +8,7 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\Page\PageReference;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Title\Title;
-use MediaWiki\User\User;
+use MediaWiki\User\UserIdentity;
 
 /**
  * Base class for different kinds of blacklists
@@ -74,14 +74,14 @@ abstract class BaseBlacklist {
 	/**
 	 * @param array $links
 	 * @param ?Title $title
-	 * @param User $user
+	 * @param UserIdentity $user
 	 * @param bool $preventLog
 	 * @return mixed
 	 */
 	abstract public function filter(
 		array $links,
 		?Title $title,
-		User $user,
+		UserIdentity $user,
 		$preventLog = false
 	);
 
@@ -451,9 +451,9 @@ abstract class BaseBlacklist {
 	/**
 	 * @param Title $title
 	 * @param string[] $entries
-	 * @param User $user
+	 * @param UserIdentity $user
 	 */
-	public function warmCachesForFilter( Title $title, array $entries, User $user ) {
+	public function warmCachesForFilter( Title $title, array $entries, UserIdentity $user ) {
 		// subclass this
 	}
 }

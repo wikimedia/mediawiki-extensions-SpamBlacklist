@@ -5,6 +5,7 @@ namespace MediaWiki\Extension\SpamBlacklist;
 use LogicException;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
+use MediaWiki\User\UserIdentity;
 
 /**
  * Email Blacklisting
@@ -14,7 +15,7 @@ class EmailBlacklist extends BaseBlacklist {
 	 * @inheritDoc
 	 * @suppress PhanPluginNeverReturnMethod LSP/ISP violation
 	 */
-	public function filter( array $links, ?Title $title, User $user, $preventLog = false ) {
+	public function filter( array $links, ?Title $title, UserIdentity $user, $preventLog = false ) {
 		throw new LogicException( __CLASS__ . ' cannot be used to filter links.' );
 	}
 

@@ -9,8 +9,9 @@ use MediaWiki\ExternalLinks\ExternalLinksLookup;
 use MediaWiki\Logging\LogPage;
 use MediaWiki\Logging\ManualLogEntry;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Page\PageReference;
 use MediaWiki\Title\Title;
-use MediaWiki\User\User;
+use MediaWiki\User\UserIdentity;
 use Wikimedia\Rdbms\Database;
 
 class SpamBlacklist extends BaseBlacklist {
@@ -45,7 +46,7 @@ class SpamBlacklist extends BaseBlacklist {
 	 *               This is used to load the old links already on the page, so
 	 *               the filter is only applied to links that got added. If not given,
 	 *               the filter is applied to all $links.
-	 * @param User $user Relevant user
+	 * @param UserIdentity $user Relevant user
 	 * @param bool $preventLog Whether to prevent logging of hits. Set to true when
 	 *               the action is testing the links rather than attempting to save them
 	 *               (e.g. the API spamblacklist action)
@@ -56,7 +57,7 @@ class SpamBlacklist extends BaseBlacklist {
 	public function filter(
 		array $links,
 		?Title $title,
-		User $user,
+		UserIdentity $user,
 		$preventLog = false,
 		$mode = 'check'
 	) {
@@ -199,7 +200,7 @@ class SpamBlacklist extends BaseBlacklist {
 		);
 	}
 
-	public function warmCachesForFilter( Title $title, array $entries, User $user ) {
+	public function warmCachesForFilter( Title $title, array $entries, UserIdentity $user ) {
 		$this->filter(
 			$entries,
 			$title,
@@ -233,11 +234,11 @@ class SpamBlacklist extends BaseBlacklist {
 	 * Logs the filter hit to Special:Log if
 	 * $wgLogSpamBlacklistHits is enabled.
 	 *
-	 * @param User $user
-	 * @param Title $title
+	 * @param UserIdentity $user
+	 * @param PageReference $title
 	 * @param string $url URL that the user attempted to add
 	 */
-	public function logFilterHit( User $user, $title, $url ) {
+	public function logFilterHit( UserIdentity $user, PageReference $title, string $url ): void {
 		$services = MediaWikiServices::getInstance();
 
 		if ( $services->getMainConfig()->get( 'LogSpamBlacklistHits' ) ) {

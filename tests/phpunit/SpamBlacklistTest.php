@@ -8,6 +8,7 @@ use MediaWiki\Extension\SpamBlacklist\SpamBlacklist;
 use MediaWiki\Logging\LogEntryBase;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Page\Article;
+use MediaWiki\Page\PageReferenceValue;
 use MediaWiki\RecentChanges\RecentChange;
 use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\Request\FauxRequest;
@@ -170,8 +171,8 @@ class SpamBlacklistTest extends MediaWikiIntegrationTestCase {
 		$this->overrideConfigValue( 'LogSpamBlacklistHits', false );
 
 		$this->spamFilter->logFilterHit(
-			$this->getTestUser()->getUser(),
-			Title::newFromText( 'Test' ),
+			$this->getTestUser()->getUserIdentity(),
+			PageReferenceValue::localReference( NS_MAIN, 'Test' ),
 			'https://test.com'
 		);
 
@@ -224,7 +225,7 @@ class SpamBlacklistTest extends MediaWikiIntegrationTestCase {
 		$performer = $this->getTestUser()->getUser();
 		$this->spamFilter->logFilterHit(
 			$performer,
-			Title::newFromText( 'Test' ),
+			PageReferenceValue::localReference( NS_MAIN, 'Test' ),
 			'https://test.com'
 		);
 
