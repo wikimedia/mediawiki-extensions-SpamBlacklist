@@ -4,7 +4,6 @@ namespace MediaWiki\Extension\SpamBlacklist;
 
 use MediaWiki\CheckUser\Services\CheckUserInsert;
 use MediaWiki\Context\RequestContext;
-use MediaWiki\Deferred\LinksUpdate\ExternalLinksTable;
 use MediaWiki\ExternalLinks\ExternalLinksLookup;
 use MediaWiki\Logging\LogPage;
 use MediaWiki\Logging\ManualLogEntry;
@@ -12,7 +11,6 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\Page\PageReference;
 use MediaWiki\Title\Title;
 use MediaWiki\User\UserIdentity;
-use Wikimedia\Rdbms\Database;
 
 class SpamBlacklist extends BaseBlacklist {
 	private const STASH_TTL = 180;
@@ -186,14 +184,10 @@ class SpamBlacklist extends BaseBlacklist {
 			// Key is warmed via warmCachesForFilter() from ApiStashEdit
 			$cache->makeKey( 'external-link-list', $title->getLatestRevID() ),
 			$cache::TTL_MINUTE,
-			static function ( $oldValue, &$ttl, array &$setOpts ) use ( $title, $fname ) {
-				$dbProvider = MediaWikiServices::getInstance()->getConnectionProvider();
-				$setOpts += Database::getCacheSetOptions(
-					$dbProvider->getReplicaDatabase( ExternalLinksTable::VIRTUAL_DOMAIN )
-				);
+			static function () use ( $title, $fname ) {
 				return ExternalLinksLookup::getExtLinksForPage(
 					$title->getArticleID(),
-					$dbProvider,
+					MediaWikiServices::getInstance()->getConnectionProvider(),
 					$fname
 				);
 			}
