@@ -10,7 +10,6 @@ use MediaWiki\Content\ContentHandler;
 use MediaWiki\Content\TextContent;
 use MediaWiki\Extension\SpamBlacklist\BaseBlacklist;
 use MediaWiki\Maintenance\Maintenance;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Page\WikiPageFactory;
 use MediaWiki\Revision\RevisionLookup;
 use MediaWiki\Revision\RevisionRecord;
@@ -37,9 +36,10 @@ class Cleanup extends Maintenance {
 
 	public function __construct() {
 		parent::__construct();
-		$this->revisionLookup = MediaWikiServices::getInstance()->getRevisionLookup();
-		$this->titleFormatter = MediaWikiServices::getInstance()->getTitleFormatter();
-		$this->wikiPageFactory = MediaWikiServices::getInstance()->getWikiPageFactory();
+		$services = $this->getServiceContainer();
+		$this->revisionLookup = $services->getRevisionLookup();
+		$this->titleFormatter = $services->getTitleFormatter();
+		$this->wikiPageFactory = $services->getWikiPageFactory();
 
 		$this->requireExtension( 'SpamBlacklist' );
 		$this->addOption( 'dry-run', 'Only do a dry run' );

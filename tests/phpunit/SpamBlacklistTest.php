@@ -6,7 +6,6 @@ use MediaWiki\EditPage\EditPage;
 use MediaWiki\Extension\SpamBlacklist\BaseBlacklist;
 use MediaWiki\Extension\SpamBlacklist\SpamBlacklist;
 use MediaWiki\Logging\LogEntryBase;
-use MediaWiki\MediaWikiServices;
 use MediaWiki\Page\Article;
 use MediaWiki\Page\PageReferenceValue;
 use MediaWiki\RecentChanges\RecentChange;
@@ -81,7 +80,7 @@ class SpamBlacklistTest extends MediaWikiIntegrationTestCase {
 	public function testSpamTempAccounts( $links, $expected ) {
 		$this->enableAutoCreateTempUser();
 		$this->prepareGlobals();
-		$tempUserCreator = MediaWikiServices::getInstance()->getTempUserCreator();
+		$tempUserCreator = $this->getServiceContainer()->getTempUserCreator();
 		$user = $tempUserCreator->create(
 			null,
 			new FauxRequest()
@@ -273,7 +272,7 @@ class SpamBlacklistTest extends MediaWikiIntegrationTestCase {
 		// create spam filter
 		$this->spamFilter = new SpamBlacklist;
 
-		MediaWikiServices::getInstance()->getMessageCache()->enable();
+		$this->getServiceContainer()->getMessageCache()->enable();
 		$this->insertPage( 'MediaWiki:Spam-blacklist', implode( "\n", $this->blacklist ) );
 		$this->insertPage( 'MediaWiki:Spam-whitelist', implode( "\n", $this->whitelist ) );
 
@@ -284,7 +283,7 @@ class SpamBlacklistTest extends MediaWikiIntegrationTestCase {
 	}
 
 	protected function tearDown(): void {
-		MediaWikiServices::getInstance()->getMessageCache()->disable();
+		$this->getServiceContainer()->getMessageCache()->disable();
 		parent::tearDown();
 	}
 }
