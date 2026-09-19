@@ -48,7 +48,7 @@ abstract class BaseBlacklist {
 	/**
 	 * Array containing blacklists that extend BaseBlacklist
 	 *
-	 * @var string[]
+	 * @var array<string,class-string<BaseBlacklist>>
 	 */
 	private static $blacklistTypes = [
 		'spam' => SpamBlacklist::class,
@@ -89,7 +89,7 @@ abstract class BaseBlacklist {
 	 * Adds a blacklist class to the registry
 	 *
 	 * @param string $type
-	 * @param string $class
+	 * @param class-string<BaseBlacklist> $class
 	 */
 	public static function addBlacklistType( $type, $class ) {
 		self::$blacklistTypes[$type] = $class;
@@ -98,7 +98,7 @@ abstract class BaseBlacklist {
 	/**
 	 * Return the array of blacklist types currently defined
 	 *
-	 * @return string[]
+	 * @return array<string,class-string<BaseBlacklist>>
 	 */
 	public static function getBlacklistTypes() {
 		return self::$blacklistTypes;
