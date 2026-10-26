@@ -60,7 +60,6 @@ class SpamBlacklist extends BaseBlacklist {
 		$mode = 'check'
 	) {
 		$services = MediaWikiServices::getInstance();
-		$statsd = $services->getStatsdDataFactory();
 		$cache = $services->getObjectCacheFactory()->getLocalClusterInstance();
 
 		if ( !$links ) {
@@ -77,19 +76,15 @@ class SpamBlacklist extends BaseBlacklist {
 		);
 		// Skip blacklist checks if nothing matched during edit stashing...
 		$knownNonMatchAsOf = $cache->get( $key );
-		if ( $mode === 'check' ) {
-			if ( $knownNonMatchAsOf ) {
-				$statsd->increment( 'spamblacklist.check-stash.hit' );
-
-				return false;
-			} else {
-				$statsd->increment( 'spamblacklist.check-stash.miss' );
-			}
-		} elseif ( $mode === 'stash' ) {
-			if ( $knownNonMatchAsOf && ( time() - $knownNonMatchAsOf ) < self::STASH_AGE_DYING ) {
-				// OK; not about to expire soon
-				return false;
-			}
+		if ( $mode === 'check' && $knownNonMatchAsOf ) {
+			return false;
+		}
+		if ( $mode === 'stash'
+			&& $knownNonMatchAsOf
+			&& ( time() - $knownNonMatchAsOf ) < self::STASH_AGE_DYING
+		) {
+			// OK; not about to expire soon
+			return false;
 		}
 
 		$blacklists = $this->getBlacklists();
@@ -161,9 +156,6 @@ class SpamBlacklist extends BaseBlacklist {
 		if ( $retVal === false ) {
 			// Cache the typical negative results
 			$cache->set( $key, time(), self::STASH_TTL );
-			if ( $mode === 'stash' ) {
-				$statsd->increment( 'spamblacklist.check-stash.store' );
-			}
 		}
 
 		return $retVal;
